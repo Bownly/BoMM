@@ -18,3 +18,12 @@ That's it for now. Holler if you have any questions or comments or concerns or c
 
 
 Oh yeah, and Snaake.hx is actually that one enemy that goes back and forth and speeds up when you're on its same y level.
+
+# FlashDevelop tricks or tips and such
+FlashDevelop tricks or tips and such
+
+-F4 on a function or class will take you to that fn or class' declaration
+-F5 will auto-compile and run
+-Switch up top to debug mode rather than release in order to skip the splash screen
+-I find building in neko to be fastest over windows, html5, or whatever
+-Ctrl + Shift + 1 on a class name will auto import that class

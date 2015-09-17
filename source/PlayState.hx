@@ -61,7 +61,7 @@ class PlayState extends FlxState
 	
 	private var dropsGroup:FlxTypedGroup<Drops>;
 	
-	private var _newEntrance:Int;  // don't make this a global var for god's sake
+	private var _newEntrance:Int;
 	
 	private var _curMapX:Float = 0;
 	private var _curMapY:Float = 0;

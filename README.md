@@ -21,7 +21,11 @@ Oh yeah, and Snaake.hx is actually that one enemy that goes back and forth and s
 # FlashDevelop tricks or tips and such
 
 -F4 on a function or class will take you to that fn or class' declaration
+
 -F5 will auto-compile and run
+
 -Switch up top to debug mode rather than release in order to skip the splash screen
+
 -I find building in neko to be fastest over windows, html5, or whatever
+
 -Ctrl + Shift + 1 on a class name will auto import that class

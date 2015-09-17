@@ -294,12 +294,16 @@ class PlayState extends FlxState
 		if (B.alive && B.exists && E.alive && E.exists)
 		{
 			E.takeDamage(B.getDamage());
+				
+		}
+		if (E.alive == false)
+		{
 			_score++;
 			var health:Int;
 			health = _player.hp;
 			_hud.updateHUD(health, _score);	
 			
-			//_hud.updateHUD(_health, _money);		
+			//_hud.updateHUD(_health, _money);	
 		}
 	}
 	private function bulletTouchLadder(B:Bullet, L:Ladder):Void 

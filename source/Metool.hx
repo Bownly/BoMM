@@ -105,5 +105,17 @@ class Metool extends EnemyTemplate
 		}
 	}
 	
-
+	public override function takeDamage(damage:Int):Void
+	{
+		if (animation.name == "open")
+		{
+			// TODO quick blinking effect
+			// TODO sound of being hurt
+			_health -= damage;
+			
+			if (_health <= 0)
+				kill();
+		}
+	}
+	
 }

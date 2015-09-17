@@ -1,5 +1,4 @@
 # BoMM
-BoMM
 
 Welcome to the Binding of Megaman code. 
 Ignore any ramblings in the comments, and also ignore the general lack of comments throught the entire rest of the code. Also, forgive the gross, universal inadherance to any particular style conventions. Chalk that up to being "my b".
@@ -20,7 +19,6 @@ That's it for now. Holler if you have any questions or comments or concerns or c
 Oh yeah, and Snaake.hx is actually that one enemy that goes back and forth and speeds up when you're on its same y level.
 
 # FlashDevelop tricks or tips and such
-FlashDevelop tricks or tips and such
 
 -F4 on a function or class will take you to that fn or class' declaration
 -F5 will auto-compile and run

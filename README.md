@@ -8,7 +8,6 @@ Here's the deal:
 
 -I have plans to completely overhaul the level stitching code, so maybe just avoid that for now.
 -Similarly, I'm thinking of possibly overhauling Ladder.hx to mirror the implementation found in that platform jumper tutorial. Maybe. That would require 2 maps for every map, which might get excessive. We'll see.
-
 -I want to organize the levels folder and the source folder, but I've thusfar been too lazy to do so. 
 
 

@@ -10,12 +10,26 @@ import flixel.tweens.FlxTween;
  */
 class Ladder extends FlxSprite
 {
-
-	public function new(X:Float=0, Y:Float=0) 
+	
+	/* Ladders todo (note: some of this pertains to player movement)
+	 * (in fact, pretty much all of it does)
+	 * 
+	 * when player is climbing a ladder and nearly reaches the top, play climbing anim...
+	 * ...and teleport the player the remaining few pixels upwards.
+	 * 
+	 * Also, what to heck is going on with the collision when the player is on top...
+	 * ...and tries to climb down? Blurgh.
+	 * */
+	
+	
+	public var top:Bool = false;
+	
+	public function new(X:Float=0, Y:Float=0, Top:Bool) 
 	{
 		super(X, Y);
 		loadGraphic(AssetPaths.ladder__png, false, 16, 16);
 		
+		top = Top;
 		
 		allowCollisions = FlxObject.CEILING;
 		

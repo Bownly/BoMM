@@ -44,7 +44,7 @@ class PlayState extends FlxState
 	private var _levelWidth:Float;
 	private var _levelHeight:Float;
 	
-	private var _map:FlxOgmoLoader;
+	/*private var _map:FlxOgmoLoader;
 	private var _mWalls:FlxTilemap;
 	private var floor:FlxSprite;
 	
@@ -53,6 +53,10 @@ class PlayState extends FlxState
 	
 	var _mapT:FlxOgmoLoader;
 	var _mWallsT:FlxTilemap;
+	*/
+	
+	var mOogmoLoader:FlxOgmoLoader;
+	var mTileMap:FlxTilemap;
 	
 	private var loader:FlxOgmoLoader;
 	private var midgroundMap:FlxTilemap;
@@ -190,88 +194,97 @@ class PlayState extends FlxState
 
 	}
 	
+	
 	private function setUpLevel():Void
 	{
+		
+		/* Stuff regarding a future level stitching overhaul
+		 * 
+		 * Uh... stuff
+		 * Limited verticality perhaps...
+		 * ...and... yeah, stuff...
+		 * */
+		
+		
+		
 		// stuff for the start room
-		_newEntrance = FlxRandom.intRanged(2, 2);
-		_mapT = new FlxOgmoLoader("assets/data/level_1_start_" + _newEntrance + ".oel");
-		_mWallsT = _mapT.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
-
-		_mWallsT.setTileProperties(104, FlxObject.NONE);  // ladders
+		_newEntrance = FlxRandom.intRanged(1, 4);
+		mOogmoLoader = new FlxOgmoLoader("assets/data/level_1_start_" + _newEntrance + ".oel");
+		mTileMap = mOogmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 		
-		_mapT.loadEntities(placeEntities, "entities");
+		mOogmoLoader.loadEntities(placeEntities, "entities");
 		
-		_levelHeight += _mWallsT.height;
-		_levelWidth += _mWallsT.width;		
-		_grpWalls.add(_mWallsT);
+		_levelHeight += mTileMap.height;
+		_levelWidth += mTileMap.width;		
+		_grpWalls.add(mTileMap);
 		
 		
 		var itemRoomPos:Int;
 		itemRoomPos = FlxRandom.intRanged(1, 5);  // Same bounds as the for loop right below, but max is one less than below's. 
 		// TODO Should make those numbers less magic later
 		
-		// stuff for the main rooms
+		// stuff for the middle rooms
 		for (i in 1...6) 
 		{
 			if (i == itemRoomPos)
 			{
 				// stuff for the item room
-				_mapT = new FlxOgmoLoader("assets/data/level_1_item_start_" + _newEntrance + ".oel");
-				_mWallsT = _mapT.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
-				setUpMaps();
+				var myOgmoLoader  = new FlxOgmoLoader("assets/data/level_1_item_start_" + _newEntrance + ".oel");
+				var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+				setUpMaps(myOgmoLoader, myTileMap);
+				
 				var endId:Int = FlxRandom.intRanged(1, 4);
-				_mapT = new FlxOgmoLoader("assets/data/level_1_item_end_" + endId + ".oel");
-				_mWallsT = _mapT.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
-				setUpMaps();
-			}			
+				myOgmoLoader = new FlxOgmoLoader("assets/data/level_1_item_end_" + endId + ".oel");
+				myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+				setUpMaps(myOgmoLoader, myTileMap);
+			}	
 			
 			var id:Int;
 			id = FlxRandom.intRanged(1, 4);
 			
-			_mapT = new FlxOgmoLoader("assets/data/level_1_" + _newEntrance + "_" + id + ".oel");
-			_mWallsT = _mapT.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
-			setUpMaps();
+			var myOgmoLoader = new FlxOgmoLoader("assets/data/level_1_" + _newEntrance + "_" + id + ".oel");
+			var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+			setUpMaps(myOgmoLoader, myTileMap);
 		}
 		
-		//stuff for the end room
-		_mapT = new FlxOgmoLoader("assets/data/level_1_end_" + _newEntrance + ".oel");
-		_mWallsT = _mapT.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
-		setUpMaps();
-		
+		// stuff for the end room
+		var myOgmoLoader = new FlxOgmoLoader("assets/data/level_1_end_" + _newEntrance + ".oel");
+		var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+		setUpMaps(myOgmoLoader, myTileMap);
 	}
-	private function setUpMaps():Void
+	
+	private function setUpMaps(ogmo:FlxOgmoLoader, map:FlxTilemap):Void
 	{
 		
-		_mWallsT.setTileProperties(104, FlxObject.NONE);  // ladders
-		
 		var previousWall:FlxTilemap = _grpWalls.members[_grpWalls.length - 1]; 
+		
 		if (_newEntrance == 1 || _newEntrance == 2)
 		{
-			_mWallsT.x += previousWall.x + previousWall.width;
-			_mWallsT.y += previousWall.y;
+			map.x += previousWall.x + previousWall.width;
+			map.y += previousWall.y;
 		}
 		else if (_newEntrance == 3)
 		{
-			_mWallsT.x += previousWall.x + previousWall.width - 96;
-			_mWallsT.y += previousWall.y + previousWall.height;
+			map.x += previousWall.x + previousWall.width - 96;
+			map.y += previousWall.y + previousWall.height;
 		}
 		else //if (_entrance == 4)
 		{
-			_mWallsT.x += previousWall.x + previousWall.width - 96;
-			_mWallsT.y += previousWall.y - previousWall.height;
+			map.x += previousWall.x + previousWall.width - 96;
+			map.y += previousWall.y - previousWall.height;
 		}
 		
-		_curMapX = _mWallsT.x;
-		_curMapY = _mWallsT.y;
+		_curMapX = map.x;
+		_curMapY = map.y;
 		
-		_mapT.loadEntities(placeEntities, "entities");
-		_mapT.loadEntities(getExit, "entities");
+		ogmo.loadEntities(placeEntities, "entities");
+		ogmo.loadEntities(getExit, "entities");
 		
-		_levelHeight += _mWallsT.height;
-		_levelWidth += _mWallsT.width;
+		_levelHeight += map.height;
+		_levelWidth += map.width;
 		
-		_grpWalls.add(_mWallsT);
-	}
+		_grpWalls.add(map);
+	} 
 	
 	private function touchEnemy(P:Player, E:EnemyTemplate):Void 
 	{
@@ -346,6 +359,14 @@ class PlayState extends FlxState
 	private function playerTouchLadder(P:Player, L:Ladder):Void
 	{
 		P.setTouchingLadder(true);
+		
+		// make it so that you can stand on top of the ladder
+		if (L.top == true && (P.y < L.y - (P.height - 3)))
+		{
+			L.immovable = true;
+			FlxG.collide(P, L);
+			
+		}
 	}
 	private function playerTouchHazard(P:Player, S:Spike):Void
 	{
@@ -371,7 +392,10 @@ class PlayState extends FlxState
 		}
 		else if (entityName == "ladder")
 		{
-			_grpLadders.add(new Ladder(x, y));
+			if (entityData.get("top") == "True")
+				_grpLadders.add(new Ladder(x, y, true));
+			else
+				_grpLadders.add(new Ladder(x, y, false));
 		}
 		else if (entityName == "door")
 		{

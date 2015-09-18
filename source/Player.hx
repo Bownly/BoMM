@@ -184,26 +184,35 @@ class Player extends FlxSprite
 
 	private function playerInputs():Void
 	{
-		if (FlxG.keys.anyPressed(["LEFT", "A"])) 
+		if (FlxG.keys.anyPressed(["LEFT", "A"]) && climbing == false) 
 		{
 			velocity.x = -XSPEED;
 			flipX = true;
 			climbing = false;
 		} 
-		else if (FlxG.keys.anyPressed(["RIGHT", "D"])) 
+		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && climbing == false) 
 		{
 			velocity.x = XSPEED;
 			flipX = false;
 			climbing = false;
 		}
 		
-		if (FlxG.keys.anyPressed(["C"]) && touchingLadder == true) {
+		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder == true) 
+		{
 			velocity.y = -100;
 			climbing = true;
 			remainingJumps = MAXJUMPS;
 		}
 		
-		if (FlxG.keys.anyJustPressed(["UP", "W"]) && remainingJumps > 0) {
+		if (FlxG.keys.anyPressed(["DOWN", "S"]) && touchingLadder == true)
+		{
+			velocity.y = 100;
+			climbing = true;
+			remainingJumps = MAXJUMPS;
+		}
+		
+		if (FlxG.keys.anyJustPressed(["UP", "J"]) && remainingJumps > 0) 
+		{
 			velocity.y = -jumpPower;
 			remainingJumps--;
 			climbing = false;

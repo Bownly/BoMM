@@ -1,11 +1,11 @@
 package;
 
-import Burd;
-import EnemyTemplate;
-import Metool;
-import Notey;
-import Snaake;
-import Snobal;
+import enemies.Burd;
+import enemies.EnemyTemplate;
+import enemies.Metool;
+import enemies.Notey;
+import enemies.Snaake;
+import enemies.Snobal;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.FlxObject;
@@ -297,7 +297,7 @@ class PlayState extends FlxState
 	} 
 	
 	
-	private function touchEnemy(P:Player, E:EnemyTemplate):Void 
+	private function touchEnemy(P:Player, E:enemies.EnemyTemplate):Void 
 	{
 		if (E.alive == true)
 		{
@@ -313,7 +313,7 @@ class PlayState extends FlxState
 			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
 		}
 	}
-	private function bulletTouchEnemy(B:weapons.Bullet, E:EnemyTemplate):Void 
+	private function bulletTouchEnemy(B:weapons.Bullet, E:enemies.EnemyTemplate):Void 
 	{
 		if (B.alive && B.exists && E.alive && E.exists)
 		{
@@ -423,15 +423,15 @@ class PlayState extends FlxState
 			switch(entityData.get("name"))
 			{
 				case "snobal":
-					_grpEnemies.add(new Snobal(x, y, _player, dropsGroup));
+					_grpEnemies.add(new enemies.Snobal(x, y, _player, dropsGroup));
 				case "snaake":
-					_grpEnemies.add(new Snaake(x, y, _player, dropsGroup));
+					_grpEnemies.add(new enemies.Snaake(x, y, _player, dropsGroup));
 				case "metool":
-					_grpEnemies.add(new Metool(x, y, _player, dropsGroup, _grpBadBullets));
+					_grpEnemies.add(new enemies.Metool(x, y, _player, dropsGroup, _grpBadBullets));
 				case "burd":
-					_grpEnemies.add(new Burd(x, y, _player, dropsGroup, _grpEnemies));
+					_grpEnemies.add(new enemies.Burd(x, y, _player, dropsGroup, _grpEnemies));
 				case "notey":
-					_grpEnemies.add(new Notey(x, y, _player, dropsGroup));
+					_grpEnemies.add(new enemies.Notey(x, y, _player, dropsGroup));
 				case "testboss":
 					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets));
 			}

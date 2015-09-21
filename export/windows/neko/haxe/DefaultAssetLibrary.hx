@@ -757,8 +757,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/data/level_1_start_2.oel", AssetType.TEXT);
 		path.set ("assets/data/level_1_start_3.oel", "assets/data/level_1_start_3.oel");
 		type.set ("assets/data/level_1_start_3.oel", AssetType.TEXT);
-		path.set ("assets/data/level_1_start_3og.oel", "assets/data/level_1_start_3og.oel");
-		type.set ("assets/data/level_1_start_3og.oel", AssetType.TEXT);
+		path.set ("assets/data/level_1_start_3airman.oel", "assets/data/level_1_start_3airman.oel");
+		type.set ("assets/data/level_1_start_3airman.oel", AssetType.TEXT);
 		path.set ("assets/data/level_1_start_4.oel", "assets/data/level_1_start_4.oel");
 		type.set ("assets/data/level_1_start_4.oel", AssetType.TEXT);
 		path.set ("assets/images/ado.png", "assets/images/ado.png");
@@ -939,7 +939,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/data/level_1_start_3.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
-		id = "assets/data/level_1_start_3og.oel";
+		id = "assets/data/level_1_start_3airman.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/data/level_1_start_4.oel";

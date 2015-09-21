@@ -16,7 +16,7 @@
     <Width>5120</Width>
     <Height>5120</Height>
   </LevelMaximumSize>
-  <Filename>C:\Users\waterbottle\Documents\HaxeFlixel Projects\BoMM\OgmoStuff.oep</Filename>
+  <Filename>C:\Projects\HaxeFlixel\BoMM\OgmoStuff.oep</Filename>
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
@@ -173,7 +173,9 @@
       <ImageDefinition DrawMode="Rectangle" ImagePath="" Tiled="false">
         <RectColor A="255" R="128" G="64" B="0" />
       </ImageDefinition>
-      <ValueDefinitions />
+      <ValueDefinitions>
+        <ValueDefinition xsi:type="BoolValueDefinition" Name="top" Default="false" />
+      </ValueDefinitions>
       <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
     </EntityDefinition>
     <EntityDefinition Name="enemy" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">

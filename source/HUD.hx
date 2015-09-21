@@ -40,7 +40,7 @@ package;
 		_txtJuice.setBorderStyle(FlxText.BORDER_SHADOW, FlxColor.GRAY, 1, 1);
 		_sprJuice = new FlxSprite(_txtHealth.x + _txtHealth.width, _txtJuice.y + (_txtJuice.height / 2) - 8, AssetPaths.juice__png);
 		
-		_txtWeapon = new FlxText(_txtJuice.x + _txtJuice.width, 2, 0, "Cur Weapon:", 8);
+		_txtWeapon = new FlxText(_txtJuice.x + _txtJuice.width, 2, 0, "Cur Weapon: ", 8);
 		_txtWeapon.setBorderStyle(FlxText.BORDER_SHADOW, FlxColor.GRAY, 1, 1);
 		_sprWeapon = new FlxSprite(_txtWeapon.x + _txtWeapon.width, _txtWeapon.y + (_txtWeapon.height / 2 - 4), AssetPaths.coin__png);
 		
@@ -65,10 +65,12 @@ package;
         });
     }
 
-    public function updateHUD(Health:Int = 0, Money:Int = 0):Void
+    public function updateHUD(Health:Int = 0, Money:Int = 0, Weapon:String):Void
     {
         _txtHealth.text = Std.string(Health) + " / 3";
         _txtMoney.text = Std.string(Money);
         _txtMoney.x = _sprMoney.x - _txtMoney.width - 4;
+		
+		_txtWeapon.text = "Cur Weapon: " + Weapon;
     }
  }

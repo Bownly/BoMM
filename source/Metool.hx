@@ -91,7 +91,7 @@ class Metool extends EnemyTemplate
 			
 			//if (bullet == null)
 			//{
-				var bullet = new Bullet(x - 8, y + 8, 500, FlxObject.LEFT, 1);
+				var bullet = new Bullet(x - 8, y + 8, 500, FlxObject.LEFT, 1, 256);
 				_bullets.add(bullet);
 			//}
 			

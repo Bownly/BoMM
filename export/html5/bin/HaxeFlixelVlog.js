@@ -29,7 +29,7 @@ ApplicationMain.create = function() {
 	types.push("TEXT");
 	urls.push("assets/data/level_1_1_1.oel");
 	types.push("TEXT");
-	urls.push("assets/data/level_1_1_1og.oel");
+	urls.push("assets/data/level_1_1_1og2.oel");
 	types.push("TEXT");
 	urls.push("assets/data/level_1_1_2.oel");
 	types.push("TEXT");
@@ -91,12 +91,18 @@ ApplicationMain.create = function() {
 	types.push("TEXT");
 	urls.push("assets/data/level_1_start_1.oel");
 	types.push("TEXT");
+	urls.push("assets/data/level_1_start_1woodman.oel");
+	types.push("TEXT");
 	urls.push("assets/data/level_1_start_2.oel");
 	types.push("TEXT");
 	urls.push("assets/data/level_1_start_3.oel");
 	types.push("TEXT");
+	urls.push("assets/data/level_1_start_3og.oel");
+	types.push("TEXT");
 	urls.push("assets/data/level_1_start_4.oel");
 	types.push("TEXT");
+	urls.push("assets/images/ado.png");
+	types.push("IMAGE");
 	urls.push("assets/images/burd.png");
 	types.push("IMAGE");
 	urls.push("assets/images/burdegg.png");
@@ -104,6 +110,8 @@ ApplicationMain.create = function() {
 	urls.push("assets/images/burdsmall.png");
 	types.push("IMAGE");
 	urls.push("assets/images/coin.png");
+	types.push("IMAGE");
+	urls.push("assets/images/crawler.png");
 	types.push("IMAGE");
 	urls.push("assets/images/drops.png");
 	types.push("IMAGE");
@@ -121,13 +129,21 @@ ApplicationMain.create = function() {
 	types.push("IMAGE");
 	urls.push("assets/images/metool.png");
 	types.push("IMAGE");
+	urls.push("assets/images/mm.png");
+	types.push("IMAGE");
+	urls.push("assets/images/nes_tiles.png");
+	types.push("IMAGE");
 	urls.push("assets/images/notey.png");
 	types.push("IMAGE");
 	urls.push("assets/images/ranger.png");
 	types.push("IMAGE");
+	urls.push("assets/images/shakuhachiman.png");
+	types.push("IMAGE");
 	urls.push("assets/images/snaake.png");
 	types.push("IMAGE");
 	urls.push("assets/images/snobal.png");
+	types.push("IMAGE");
+	urls.push("assets/images/spike.png");
 	types.push("IMAGE");
 	urls.push("assets/images/tiles.png");
 	types.push("IMAGE");
@@ -173,7 +189,7 @@ ApplicationMain.init = function() {
 	if(total == 0) ApplicationMain.start();
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "1143", company : "HaxeFlixel", file : "HaxeFlixelVlog", fps : 60, name : "HaxeFlixelVlog", orientation : "portrait", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 480, parameters : "{}", resizable : true, stencilBuffer : true, title : "HaxeFlixelVlog", vsync : true, width : 640, x : null, y : null}]};
+	ApplicationMain.config = { build : "1289", company : "HaxeFlixel", file : "HaxeFlixelVlog", fps : 60, name : "HaxeFlixelVlog", orientation : "portrait", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 480, parameters : "{}", resizable : true, stencilBuffer : true, title : "HaxeFlixelVlog", vsync : true, width : 640, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -2731,13 +2747,14 @@ flixel.FlxSprite.prototype = $extend(flixel.FlxObject.prototype,{
 	,__class__: flixel.FlxSprite
 	,__properties__: $extend(flixel.FlxObject.prototype.__properties__,{set_color:"set_color",set_blend:"set_blend",set_flipY:"set_flipY",set_flipX:"set_flipX",set_facing:"set_facing",set_alpha:"set_alpha",set_cachedGraphics:"set_cachedGraphics",set_frame:"set_frame",set_pixels:"set_pixels",get_pixels:"get_pixels"})
 });
-var EnemyTemplate = function(X,Y,ThePlayer,Health) {
+var EnemyTemplate = function(X,Y,ThePlayer,Health,DropsGrp) {
 	this._health = 2;
 	flixel.FlxSprite.call(this,X,Y);
 	this._startx = X;
 	this._starty = Y;
 	this._player = ThePlayer;
 	this._health = Health;
+	this._drops = DropsGrp;
 };
 $hxClasses["EnemyTemplate"] = EnemyTemplate;
 EnemyTemplate.__name__ = ["EnemyTemplate"];
@@ -2747,11 +2764,17 @@ EnemyTemplate.prototype = $extend(flixel.FlxSprite.prototype,{
 	,_starty: null
 	,_player: null
 	,_health: null
+	,_drops: null
 	,takeDamage: function(damage) {
 		this._health -= damage;
 		if(this._health <= 0) this.kill();
 	}
 	,kill: function() {
+		var dropChance = flixel.util.FlxRandom.intRanged(0,1);
+		var dropChance1 = 1;
+		var dropID = flixel.util.FlxRandom.intRanged(0,1) * 2;
+		var newDrop = new Drops(this.x,this.y,dropID,this._player);
+		this._drops.add(newDrop);
 		this.set_alive(false);
 		flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
 	}
@@ -2760,11 +2783,11 @@ EnemyTemplate.prototype = $extend(flixel.FlxSprite.prototype,{
 	}
 	,__class__: EnemyTemplate
 });
-var BabyBurd = function(X,Y,ThePlayer) {
+var BabyBurd = function(X,Y,ThePlayer,DropsGrp) {
 	this._HP = 1;
 	this.YSPEED = 25;
 	this.XSPEED = 50;
-	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP);
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
 	this.YSPEED = flixel.util.FlxRandom.intRanged(-10,10);
 	this.velocity.set_y(this.YSPEED);
 	this.loadGraphic("assets/images/burdsmall.png",true,8,8);
@@ -2791,13 +2814,6 @@ BabyBurd.prototype = $extend(EnemyTemplate.prototype,{
 	,update: function() {
 		this.animation.play("flap");
 		EnemyTemplate.prototype.update.call(this);
-	}
-	,kill: function() {
-		this.set_alive(false);
-		flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
-	}
-	,finishKill: function(_) {
-		this.set_exists(false);
 	}
 	,__class__: BabyBurd
 });
@@ -2832,17 +2848,17 @@ Bullet.prototype = $extend(flixel.FlxSprite.prototype,{
 	}
 	,__class__: Bullet
 });
-var Burd = function(X,Y,ThePlayer,Enemies) {
+var Burd = function(X,Y,ThePlayer,DropsGrp,Enemies) {
 	this.haveEgg = false;
 	this._HP = 1;
 	this.GRAVITY = 9800;
 	this.XSPEED = -75;
-	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP);
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
 	this.loadGraphic("assets/images/burd.png",true,16,16);
 	this.set_width(16);
 	this.set_height(16);
 	this.animation.add("flap",[0,1],5,true);
-	this.egg = new Egg(this.x,this.y + this.get_height(),ThePlayer,this.XSPEED,Enemies);
+	this.egg = new Egg(this.x,this.y + this.get_height(),ThePlayer,this._drops,this.XSPEED,Enemies);
 	Enemies.add(this.egg);
 	this.haveEgg = true;
 };
@@ -2969,7 +2985,7 @@ var DefaultAssetLibrary = function() {
 	id = "assets/data/level_1_1_1.oel";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
-	id = "assets/data/level_1_1_1og.oel";
+	id = "assets/data/level_1_1_1og2.oel";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
 	id = "assets/data/level_1_1_2.oel";
@@ -3062,15 +3078,24 @@ var DefaultAssetLibrary = function() {
 	id = "assets/data/level_1_start_1.oel";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_1woodman.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
 	id = "assets/data/level_1_start_2.oel";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
 	id = "assets/data/level_1_start_3.oel";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_3og.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
 	id = "assets/data/level_1_start_4.oel";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
+	id = "assets/images/ado.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
 	id = "assets/images/burd.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
@@ -3081,6 +3106,9 @@ var DefaultAssetLibrary = function() {
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/coin.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
+	id = "assets/images/crawler.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/drops.png";
@@ -3107,16 +3135,28 @@ var DefaultAssetLibrary = function() {
 	id = "assets/images/metool.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
+	id = "assets/images/mm.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
+	id = "assets/images/nes_tiles.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
 	id = "assets/images/notey.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/ranger.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
+	id = "assets/images/shakuhachiman.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
 	id = "assets/images/snaake.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/snobal.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
+	id = "assets/images/spike.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/tiles.png";
@@ -3534,13 +3574,13 @@ EReg.prototype = {
 	}
 	,__class__: EReg
 };
-var Egg = function(X,Y,ThePlayer,XVel,Enemies) {
+var Egg = function(X,Y,ThePlayer,DropsGrp,XVel,Enemies) {
 	if(Y == null) Y = 0;
 	if(X == null) X = 0;
 	this._cracked = false;
 	this._HP = 1;
 	this.GRAVITY = 9800;
-	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP);
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
 	this.XSPEED = XVel;
 	this.loadGraphic("assets/images/burdegg.png",true,16,8);
 	this.set_width(16);
@@ -3582,10 +3622,10 @@ Egg.prototype = $extend(EnemyTemplate.prototype,{
 		this.acceleration.set_y(this.GRAVITY);
 	}
 	,spawnBirds: function() {
-		this.babby = new BabyBurd(this.x,this.y,this._player);
-		this.babby2 = new BabyBurd(this.x,this.y - 10,this._player);
-		this.babby3 = new BabyBurd(this.x + 10,this.y - 10 + this.get_height(),this._player);
-		this.babby4 = new BabyBurd(this.x - 10,this.y - 10 + this.get_height(),this._player);
+		this.babby = new BabyBurd(this.x,this.y,this._player,this._drops);
+		this.babby2 = new BabyBurd(this.x,this.y - 10,this._player,this._drops);
+		this.babby3 = new BabyBurd(this.x + 10,this.y - 10 + this.get_height(),this._player,this._drops);
+		this.babby4 = new BabyBurd(this.x - 10,this.y - 10 + this.get_height(),this._player,this._drops);
 		this.burdArray.add(this.babby);
 		this.burdArray.add(this.babby2);
 		this.burdArray.add(this.babby3);
@@ -4010,6 +4050,7 @@ var Ladder = function(X,Y) {
 	if(X == null) X = 0;
 	flixel.FlxSprite.call(this,X,Y);
 	this.loadGraphic("assets/images/ladder.png",false,16,16);
+	this.allowCollisions = 256;
 };
 $hxClasses["Ladder"] = Ladder;
 Ladder.__name__ = ["Ladder"];
@@ -4225,13 +4266,13 @@ MenuState.prototype = $extend(flixel.FlxState.prototype,{
 	}
 	,__class__: MenuState
 });
-var Metool = function(X,Y,ThePlayer,Bullets) {
+var Metool = function(X,Y,ThePlayer,DropsGrp,Bullets) {
 	this._HP = 2;
 	this.BULLET_SPEED = 100;
 	this.GUN_DELAY = 1.5;
 	this.GRAVITY = 9800;
 	this.XSPEED = 0;
-	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP);
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
 	this.loadGraphic("assets/images/metool.png",true,16,16);
 	this.set_width(16);
 	this.set_height(16);
@@ -4286,16 +4327,6 @@ Metool.prototype = $extend(EnemyTemplate.prototype,{
 			if(P.x < this.x) bulletX -= Math.floor(bullet.get_width() - 8); else bulletX += Math.floor(this.get_width() - 8);
 			this._cooldown = 0;
 		}
-	}
-	,kill: function() {
-		if(this.animation.get_curAnim() != this.animation._animations.get("hide")) {
-			this.set_alive(false);
-			flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
-			this._cooldown = -100;
-		}
-	}
-	,finishKill: function(_) {
-		this.set_exists(false);
 	}
 	,__class__: Metool
 });
@@ -4356,17 +4387,17 @@ NMEPreloader.prototype = $extend(openfl.display.Sprite.prototype,{
 	}
 	,__class__: NMEPreloader
 });
-var Notey = function(X,Y,ThePlayer) {
+var Notey = function(X,Y,ThePlayer,DropsGrp) {
 	this._HP = 1;
 	this.GRAVITY = 9800;
 	this.XSPEED = -75;
-	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP);
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
 	this.loadGraphic("assets/images/notey.png",true,16,16);
 	this.set_width(16);
 	this.set_height(16);
-	this.set_facing(1);
+	this.set_facing(16);
 	this.set_flipX(true);
-	this.animation.add("walk",[0,1,0,2],5,true);
+	this.animation.add("walk",[0,1,0,2],3,true);
 };
 $hxClasses["Notey"] = Notey;
 Notey.__name__ = ["Notey"];
@@ -4388,14 +4419,14 @@ Notey.prototype = $extend(EnemyTemplate.prototype,{
 		this.XSPEED = -this.XSPEED;
 		if(this.facing == 1) {
 			this.set_facing(16);
-			this.set_flipX(false);
+			this.set_flipX(true);
 			var _g = this;
-			_g.set_x(_g.x + 2);
+			_g.set_x(_g.x - 2);
 		} else {
 			this.set_facing(1);
-			this.set_flipX(true);
+			this.set_flipX(false);
 			var _g1 = this;
-			_g1.set_x(_g1.x - 2);
+			_g1.set_x(_g1.x + 2);
 		}
 		return;
 	}
@@ -4418,6 +4449,7 @@ PlayState.prototype = $extend(flixel.FlxState.prototype,{
 	,_grpBadBullets: null
 	,_grpCoins: null
 	,_grpLadders: null
+	,_grpHazards: null
 	,_door: null
 	,_grpWalls: null
 	,_levelWidth: null
@@ -4443,6 +4475,8 @@ PlayState.prototype = $extend(flixel.FlxState.prototype,{
 		this._grpWalls = new flixel.group.FlxTypedGroup();
 		this._grpLadders = new flixel.group.FlxTypedGroup();
 		this.add(this._grpLadders);
+		this._grpHazards = new flixel.group.FlxTypedGroup();
+		this.add(this._grpHazards);
 		this._grpEnemies = new flixel.group.FlxGroup();
 		this.add(this._grpEnemies);
 		this._door = new Door();
@@ -4488,15 +4522,16 @@ PlayState.prototype = $extend(flixel.FlxState.prototype,{
 		flixel.FlxG.overlap(this.playerBullets,this._grpEnemies,$bind(this,this.bulletTouchEnemy));
 		flixel.FlxG.overlap(this._player,this._grpCoins,$bind(this,this.playerTouchCoin));
 		flixel.FlxG.overlap(this._player,this.dropsGroup,$bind(this,this.playerTouchDrops));
+		flixel.FlxG.overlap(this._player,this._grpHazards,$bind(this,this.playerTouchHazard));
 		if(!flixel.FlxG.overlap(this._player,this._grpLadders,$bind(this,this.playerTouchLadder))) this._player.setTouchingLadder(false);
 		if(flixel.FlxG.keys.checkKeyStatus(["R"],1)) flixel.FlxG.switchState(new PlayState());
 		flixel.FlxState.prototype.update.call(this);
 	}
 	,nextLevel: function(P,D) {
-		flixel.FlxG.switchState(new PlayState2());
+		flixel.FlxG.switchState(new PlayState());
 	}
 	,setUpLevel: function() {
-		this._newEntrance = flixel.util.FlxRandom.intRanged(1,4);
+		this._newEntrance = flixel.util.FlxRandom.intRanged(2,2);
 		this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_start_" + this._newEntrance + ".oel");
 		this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles.png",16,16,"walls");
 		this._mWallsT.setTileProperties(104,0);
@@ -4600,6 +4635,10 @@ PlayState.prototype = $extend(flixel.FlxState.prototype,{
 	,playerTouchLadder: function(P,L) {
 		P.setTouchingLadder(true);
 	}
+	,playerTouchHazard: function(P,S) {
+		P.getHurt(S.dmg);
+		this._hud.updateHUD(this._player.hp,this._score);
+	}
 	,placeEntities: function(entityName,entityData) {
 		var x = Std.parseFloat(entityData.get("x"));
 		var y = Std.parseFloat(entityData.get("y"));
@@ -4611,23 +4650,26 @@ PlayState.prototype = $extend(flixel.FlxState.prototype,{
 		} else if(entityName == "coin") this._grpCoins.add(new Coin(x + 4,y + 4)); else if(entityName == "ladder") this._grpLadders.add(new Ladder(x,y)); else if(entityName == "door") {
 			this._door.set_x(x);
 			this._door.set_y(y);
+		} else if(entityName == "spike") {
+			var dmg = Std.parseInt(entityData.get("damage"));
+			this._grpHazards.add(new Spike(x,y,dmg));
 		} else if(entityName == "enemy") {
 			var _g = entityData.get("name");
 			switch(_g) {
 			case "snobal":
-				this._grpEnemies.add(new Snobal(x,y,this._player));
+				this._grpEnemies.add(new Snobal(x,y,this._player,this.dropsGroup));
 				break;
 			case "snaake":
-				this._grpEnemies.add(new Snaake(x,y,this._player));
+				this._grpEnemies.add(new Snaake(x,y,this._player,this.dropsGroup));
 				break;
 			case "metool":
-				this._grpEnemies.add(new Metool(x,y,this._player,this._grpBadBullets));
+				this._grpEnemies.add(new Metool(x,y,this._player,this.dropsGroup,this._grpBadBullets));
 				break;
 			case "burd":
-				this._grpEnemies.add(new Burd(x,y,this._player,this._grpEnemies));
+				this._grpEnemies.add(new Burd(x,y,this._player,this.dropsGroup,this._grpEnemies));
 				break;
 			case "notey":
-				this._grpEnemies.add(new Notey(x,y,this._player));
+				this._grpEnemies.add(new Notey(x,y,this._player,this.dropsGroup));
 				break;
 			}
 		}
@@ -4639,206 +4681,6 @@ PlayState.prototype = $extend(flixel.FlxState.prototype,{
 		if(entityName == "entrance") this._newEntrance = Std.parseInt(entityData.get("val"));
 	}
 	,__class__: PlayState
-});
-var PlayState2 = function(MaxSize) {
-	this._score = 0;
-	this._curMapY = 0;
-	this._curMapX = 0;
-	flixel.FlxState.call(this,MaxSize);
-};
-$hxClasses["PlayState2"] = PlayState2;
-PlayState2.__name__ = ["PlayState2"];
-PlayState2.__super__ = flixel.FlxState;
-PlayState2.prototype = $extend(flixel.FlxState.prototype,{
-	_grpPlayer: null
-	,_player: null
-	,playerBullets: null
-	,_grpEnemies: null
-	,_grpBadBullets: null
-	,_grpCoins: null
-	,_grpLadders: null
-	,_grpWalls: null
-	,_levelWidth: null
-	,_levelHeight: null
-	,_map: null
-	,_mWalls: null
-	,floor: null
-	,_map2: null
-	,_mWalls2: null
-	,_mapT: null
-	,_mWallsT: null
-	,loader: null
-	,midgroundMap: null
-	,coinGroup: null
-	,_entrance: null
-	,_curMapX: null
-	,_curMapY: null
-	,_hud: null
-	,_score: null
-	,create: function() {
-		this._levelHeight = this._levelWidth = 0;
-		this._grpWalls = new flixel.group.FlxTypedGroup();
-		this._grpLadders = new flixel.group.FlxTypedGroup();
-		this.add(this._grpLadders);
-		this._grpEnemies = new flixel.group.FlxGroup();
-		this.add(this._grpEnemies);
-		this._grpCoins = new flixel.group.FlxTypedGroup();
-		this.add(this._grpCoins);
-		this.playerBullets = new flixel.group.FlxTypedGroup();
-		this.add(this.playerBullets);
-		this._player = new Player(100,100,this.playerBullets);
-		this._grpBadBullets = new flixel.group.FlxGroup();
-		this.add(this._grpBadBullets);
-		this.setUpLevel();
-		this.add(this._grpWalls);
-		this._grpPlayer = new flixel.group.FlxGroup();
-		this.add(this._grpPlayer);
-		this._grpPlayer.add(this._player);
-		this._grpPlayer.add(this.playerBullets);
-		flixel.FlxG.mouse.set_visible(false);
-		flixel.FlxG.camera.bgColor = 154743039;
-		flixel.FlxG.camera.follow(this._player,1);
-		flixel.FlxG.camera.style = 1;
-		flixel.FlxG.camera.setBounds(0,-this._levelHeight,this._levelWidth,this._levelHeight * 2);
-		flixel.FlxG.worldBounds.set(0,-this._levelHeight,this._levelWidth,this._levelHeight * 2);
-		this._hud = new HUD();
-		this.add(this._hud);
-		flixel.FlxState.prototype.create.call(this);
-	}
-	,destroy: function() {
-		flixel.FlxState.prototype.destroy.call(this);
-	}
-	,update: function() {
-		var $it0 = new flixel.group.FlxTypedGroupIterator(this._grpWalls.members,null);
-		while( $it0.hasNext() ) {
-			var wall = $it0.next();
-			flixel.FlxG.overlap(wall,this._player,null,flixel.FlxObject.separate);
-			flixel.FlxG.overlap(wall,this._grpEnemies,null,flixel.FlxObject.separate);
-		}
-		flixel.FlxG.overlap(this._player,this._grpEnemies,$bind(this,this.getHurt));
-		flixel.FlxG.overlap(this.playerBullets,this._grpEnemies,$bind(this,this.bulletTouchEnemy));
-		flixel.FlxG.overlap(this._player,this._grpCoins,$bind(this,this.playerTouchCoin));
-		if(!flixel.FlxG.overlap(this._player,this._grpLadders,$bind(this,this.playerTouchLadder))) this._player.setTouchingLadder(false);
-		if(flixel.FlxG.keys.checkKeyStatus(["R"],1)) flixel.FlxG.switchState(new PlayState2());
-		flixel.FlxState.prototype.update.call(this);
-	}
-	,setUpLevel: function() {
-		this._entrance = flixel.util.FlxRandom.intRanged(1,1);
-		this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_start_" + this._entrance + ".oel");
-		this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles2.png",16,16,"walls");
-		this._mWallsT.setTileProperties(104,0);
-		this._mapT.loadEntities($bind(this,this.placeEntities),"entities");
-		this._levelHeight += this._mWallsT.get_height();
-		this._levelWidth += this._mWallsT.get_width();
-		this._grpWalls.add(this._mWallsT);
-		var _g = 1;
-		while(_g < 11) {
-			var i = _g++;
-			var id;
-			id = flixel.util.FlxRandom.intRanged(1,4);
-			this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_" + this._entrance + "_" + id + ".oel");
-			this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles2.png",16,16,"walls");
-			this.setUpMaps();
-		}
-		this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_end_" + this._entrance + ".oel");
-		this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles2.png",16,16,"walls");
-		this.setUpMaps();
-	}
-	,setUpMaps: function() {
-		var _g = 1;
-		while(_g < 44) {
-			var i = _g++;
-			this._mWallsT.setTileProperties(i,4369);
-		}
-		this._mWallsT.setTileProperties(104,0);
-		var previousWall = this._grpWalls.members[this._grpWalls.length - 1];
-		if(this._entrance == 1 || this._entrance == 2) {
-			var _g1 = this._mWallsT;
-			_g1.set_x(_g1.x + (previousWall.x + previousWall.get_width()));
-			var _g2 = this._mWallsT;
-			_g2.set_y(_g2.y + previousWall.y);
-		} else if(this._entrance == 3) {
-			var _g3 = this._mWallsT;
-			_g3.set_x(_g3.x + (previousWall.x + previousWall.get_width() - 96));
-			var _g4 = this._mWallsT;
-			_g4.set_y(_g4.y + (previousWall.y + previousWall.get_height()));
-		} else {
-			var _g5 = this._mWallsT;
-			_g5.set_x(_g5.x + (previousWall.x + previousWall.get_width() - 96));
-			var _g6 = this._mWallsT;
-			_g6.set_y(_g6.y + (previousWall.y - previousWall.get_height()));
-		}
-		this._curMapX = this._mWallsT.x;
-		this._curMapY = this._mWallsT.y;
-		this._mapT.loadEntities($bind(this,this.placeEntities),"entities");
-		this._mapT.loadEntities($bind(this,this.getExit),"entities");
-		this._levelHeight += this._mWallsT.get_height();
-		this._levelWidth += this._mWallsT.get_width();
-		this._grpWalls.add(this._mWallsT);
-	}
-	,getHurt: function(P,E) {
-		P.getHurt(1);
-		this._hud.updateHUD(this._player.hp,this._score);
-	}
-	,bulletTouchEnemy: function(B,E) {
-		if(B.alive && B.exists && E.alive && E.exists) {
-			E.kill();
-			this._score++;
-			var health;
-			health = this._player.hp;
-			this._hud.updateHUD(health,this._score);
-		}
-	}
-	,bulletTouchLadder: function(B,L) {
-		if(B.alive && B.exists && L.alive && L.exists) {
-			L.kill();
-			this._score++;
-			this._hud.updateHUD(this._player.hp,this._score);
-		}
-	}
-	,playerTouchCoin: function(P,C) {
-		if(P.alive && P.exists && C.alive && C.exists) {
-			C.kill();
-			this._score++;
-			this._hud.updateHUD(this._player.hp,this._score);
-		}
-	}
-	,playerTouchLadder: function(P,L) {
-		P.setTouchingLadder(true);
-	}
-	,placeEntities: function(entityName,entityData) {
-		var x = Std.parseFloat(entityData.get("x"));
-		var y = Std.parseFloat(entityData.get("y"));
-		x += this._curMapX;
-		y += this._curMapY;
-		if(entityName == "player") {
-			this._player.set_x(x);
-			this._player.set_y(y);
-		} else if(entityName == "coin") this._grpCoins.add(new Coin(x + 4,y + 4)); else if(entityName == "ladder") this._grpLadders.add(new Ladder(x,y)); else if(entityName == "enemy") {
-			var _g = entityData.get("name");
-			switch(_g) {
-			case "snobal":
-				this._grpEnemies.add(new Snobal(x,y,this._player));
-				break;
-			case "snaake":
-				this._grpEnemies.add(new Snaake(x,y,this._player));
-				break;
-			case "metool":
-				this._grpEnemies.add(new Metool(x,y,this._player,this._grpBadBullets));
-				break;
-			case "burd":
-				this._grpEnemies.add(new Burd(x,y,this._player,this._grpEnemies));
-				break;
-			}
-		}
-	}
-	,getExit: function(entityName,entityData) {
-		if(entityName == "exit") this._entrance = Std.parseInt(entityData.get("val"));
-	}
-	,getEntrance: function(entityName,entityData) {
-		if(entityName == "entrance") this._entrance = Std.parseInt(entityData.get("val"));
-	}
-	,__class__: PlayState2
 });
 var Player = function(inX,inY,Bullets) {
 	if(inY == null) inY = 0;
@@ -4859,25 +4701,25 @@ var Player = function(inX,inY,Bullets) {
 	this.remainingJumps = 2;
 	this.XSPEED = 200;
 	this.GRAVITY = 690;
-	this.jumpPower = 911;
+	this.jumpPower = 2250;
 	flixel.FlxSprite.call(this,inX,inY);
-	this.loadGraphic("assets/images/mc.png",true,16,16);
-	this.set_width(10);
-	this.set_height(14);
-	this.offset = new flixel.util.FlxPoint(3,1);
+	this.loadGraphic("assets/images/mm.png",true,32,32);
+	this.set_width(16);
+	this.set_height(22);
+	this.offset = new flixel.util.FlxPoint(8,4);
 	this.bulletArray = Bullets;
-	this.acceleration.set_y(this.GRAVITY);
+	this.velocity.set_y(this.GRAVITY);
 	this.maxVelocity.set(200,200);
 	this.drag.set(1600,1600);
-	this.animation.add("walk",[29,30,31],10,true);
-	this.animation.add("idle",[15,16,17],3,true);
-	this.animation.add("jump",[32],15,true);
-	this.animation.add("fall",[33],15,true);
-	this.animation.add("hurt",[19],15,true);
-	this.animation.add("walk_shoot",[71,72,73],10,true);
-	this.animation.add("idle_shoot",[46],3,true);
-	this.animation.add("jump_shoot",[57],15,true);
-	this.animation.add("fall_shoot",[58],15,true);
+	this.animation.add("walk",[3,2,3,4],10,true);
+	this.animation.add("idle",[0,0,0,0,0,1],3,true);
+	this.animation.add("jump",[5],15,true);
+	this.animation.add("fall",[6],15,true);
+	this.animation.add("hurt",[5],15,true);
+	this.animation.add("walk_shoot",[10,9,10,11],10,true);
+	this.animation.add("idle_shoot",[8],3,true);
+	this.animation.add("jump_shoot",[13],15,true);
+	this.animation.add("fall_shoot",[13],15,true);
 };
 $hxClasses["Player"] = Player;
 Player.__name__ = ["Player"];
@@ -5032,58 +4874,59 @@ Reflect.makeVarArgs = function(f) {
 		return f(a);
 	};
 };
-var Snaake = function(X,Y,ThePlayer) {
+var Snaake = function(X,Y,ThePlayer,DropsGrp) {
 	this._HP = 1;
 	this.GRAVITY = 9800;
-	this.XSPEED = 0;
-	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP);
-	this.loadGraphic("assets/images/snaake.png",true,16,16);
+	this.XSPEED2 = 100;
+	this.XSPEED = 50;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.loadGraphic("assets/images/crawler.png",true,16,8);
 	this.set_width(16);
-	this.set_height(16);
-	this.animation.add("idle",[0],10,true);
-	this.animation.add("move",[0,1,2],10,true);
+	this.set_height(8);
+	this.set_facing(1);
+	this.animation.add("walk",[0,1],8,true);
 };
 $hxClasses["Snaake"] = Snaake;
 Snaake.__name__ = ["Snaake"];
 Snaake.__super__ = EnemyTemplate;
 Snaake.prototype = $extend(EnemyTemplate.prototype,{
 	XSPEED: null
+	,XSPEED2: null
 	,GRAVITY: null
 	,_HP: null
 	,update: function() {
-		this.velocity.set_x(this.velocity.set_y(0));
-		var xdistance = this._player.x - this.x;
-		var ydistance = this._player.y - this.y;
-		var distancesquared = xdistance * xdistance + ydistance * ydistance;
-		this.acceleration.set_y(this.GRAVITY);
-		if(distancesquared < 32000) {
-			if(this._player.x < this.x) {
-				this.set_facing(1);
-				this.set_flipX(true);
-				this.velocity.set_x(-this.XSPEED);
-			} else if(this._player.x > this.x) {
-				this.set_facing(16);
-				this.set_flipX(false);
-				this.velocity.set_x(this.XSPEED);
-			}
+		if(this.isOnScreen()) {
+			this.velocity.set_x(this.XSPEED);
+			this.animation.play("walk");
+			this.acceleration.set_y(this.GRAVITY);
+			if((this.touching & 17) > 0) this.turnAround();
+			if(this._player.y + this._player.get_height() == this.y + this.get_height()) this.XSPEED = 150; else this.XSPEED = 50;
+			if(this.flipX == true) this.XSPEED *= -1;
+			EnemyTemplate.prototype.update.call(this);
 		}
-		if(this.velocity.x == 0 && this.velocity.y == 0) this.animation.play("move"); else this.animation.play("idle");
-		EnemyTemplate.prototype.update.call(this);
 	}
-	,kill: function() {
-		this.set_alive(false);
-		flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
-	}
-	,finishKill: function(_) {
-		this.set_exists(false);
+	,turnAround: function() {
+		this.XSPEED = -this.XSPEED;
+		if(this.facing == 16) {
+			this.set_facing(1);
+			this.set_flipX(true);
+			var _g = this;
+			_g.set_x(_g.x + this.XSPEED / 25);
+		} else {
+			this.set_facing(16);
+			this.set_flipX(false);
+			var _g1 = this;
+			_g1.set_x(_g1.x + this.XSPEED / 25);
+		}
+		return;
 	}
 	,__class__: Snaake
 });
-var Snobal = function(X,Y,ThePlayer) {
+var Snobal = function(X,Y,ThePlayer,DropsGrp) {
 	this._HP = 1;
 	this.GRAVITY = 9800;
 	this.XSPEED = 25;
-	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP);
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
 	this.loadGraphic("assets/images/snobal.png",true,16,16);
 	this.set_width(16);
 	this.set_height(16);
@@ -5117,14 +4960,25 @@ Snobal.prototype = $extend(EnemyTemplate.prototype,{
 		if(this.velocity.x == 0 && this.velocity.y == 0) this.animation.play("idle"); else this.animation.play("roll");
 		EnemyTemplate.prototype.update.call(this);
 	}
-	,kill: function() {
-		this.set_alive(false);
-		flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
-	}
-	,finishKill: function(_) {
-		this.set_exists(false);
-	}
 	,__class__: Snobal
+});
+var Spike = function(X,Y,Damage) {
+	if(Y == null) Y = 0;
+	if(X == null) X = 0;
+	this.dmg = 1;
+	flixel.FlxSprite.call(this,X,Y);
+	this.loadGraphic("assets/images/spike.png",false,16,16);
+	this.set_width(16);
+	this.set_height(15);
+	this.offset = new flixel.util.FlxPoint(0,1);
+	this.dmg = Damage;
+};
+$hxClasses["Spike"] = Spike;
+Spike.__name__ = ["Spike"];
+Spike.__super__ = flixel.FlxSprite;
+Spike.prototype = $extend(flixel.FlxSprite.prototype,{
+	dmg: null
+	,__class__: Spike
 });
 var Std = function() { };
 $hxClasses["Std"] = Std;
@@ -50311,7 +50165,7 @@ openfl.display.DisplayObject.__worldTransformDirty = 0;
 AssetPaths.data_goes_here__txt = "assets/data/data-goes-here.txt";
 AssetPaths.HaxeFlixelTestLevel1__oel = "assets/data/HaxeFlixelTestLevel1.oel";
 AssetPaths.level_1_1_1__oel = "assets/data/level_1_1_1.oel";
-AssetPaths.level_1_1_1og__oel = "assets/data/level_1_1_1og.oel";
+AssetPaths.level_1_1_1og2__oel = "assets/data/level_1_1_1og2.oel";
 AssetPaths.level_1_1_2__oel = "assets/data/level_1_1_2.oel";
 AssetPaths.level_1_1_3__oel = "assets/data/level_1_1_3.oel";
 AssetPaths.level_1_1_4__oel = "assets/data/level_1_1_4.oel";
@@ -50342,13 +50196,17 @@ AssetPaths.level_1_item_start_2__oel = "assets/data/level_1_item_start_2.oel";
 AssetPaths.level_1_item_start_3__oel = "assets/data/level_1_item_start_3.oel";
 AssetPaths.level_1_item_start_4__oel = "assets/data/level_1_item_start_4.oel";
 AssetPaths.level_1_start_1__oel = "assets/data/level_1_start_1.oel";
+AssetPaths.level_1_start_1woodman__oel = "assets/data/level_1_start_1woodman.oel";
 AssetPaths.level_1_start_2__oel = "assets/data/level_1_start_2.oel";
 AssetPaths.level_1_start_3__oel = "assets/data/level_1_start_3.oel";
+AssetPaths.level_1_start_3og__oel = "assets/data/level_1_start_3og.oel";
 AssetPaths.level_1_start_4__oel = "assets/data/level_1_start_4.oel";
+AssetPaths.ado__png = "assets/images/ado.png";
 AssetPaths.burd__png = "assets/images/burd.png";
 AssetPaths.burdegg__png = "assets/images/burdegg.png";
 AssetPaths.burdsmall__png = "assets/images/burdsmall.png";
 AssetPaths.coin__png = "assets/images/coin.png";
+AssetPaths.crawler__png = "assets/images/crawler.png";
 AssetPaths.drops__png = "assets/images/drops.png";
 AssetPaths.heart__png = "assets/images/heart.png";
 AssetPaths.images_go_here__txt = "assets/images/images-go-here.txt";
@@ -50357,10 +50215,14 @@ AssetPaths.ladder__png = "assets/images/ladder.png";
 AssetPaths.mc__png = "assets/images/mc.png";
 AssetPaths.mcbeck__png = "assets/images/mcbeck.png";
 AssetPaths.metool__png = "assets/images/metool.png";
+AssetPaths.mm__png = "assets/images/mm.png";
+AssetPaths.nes_tiles__png = "assets/images/nes_tiles.png";
 AssetPaths.notey__png = "assets/images/notey.png";
 AssetPaths.ranger__png = "assets/images/ranger.png";
+AssetPaths.shakuhachiman__png = "assets/images/shakuhachiman.png";
 AssetPaths.snaake__png = "assets/images/snaake.png";
 AssetPaths.snobal__png = "assets/images/snobal.png";
+AssetPaths.spike__png = "assets/images/spike.png";
 AssetPaths.tiles__png = "assets/images/tiles.png";
 AssetPaths.wood_tiles__png = "assets/images/wood_tiles.png";
 AssetPaths.wood_tiles2__png = "assets/images/wood_tiles2.png";

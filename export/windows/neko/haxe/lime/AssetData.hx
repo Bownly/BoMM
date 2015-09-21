@@ -90,8 +90,8 @@ class AssetData {
 			type.set ("assets/data/level_1_start_2.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/data/level_1_start_3.oel", "assets/data/level_1_start_3.oel");
 			type.set ("assets/data/level_1_start_3.oel", Reflect.field (AssetType, "text".toUpperCase ()));
-			path.set ("assets/data/level_1_start_3og.oel", "assets/data/level_1_start_3og.oel");
-			type.set ("assets/data/level_1_start_3og.oel", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/data/level_1_start_3airman.oel", "assets/data/level_1_start_3airman.oel");
+			type.set ("assets/data/level_1_start_3airman.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/data/level_1_start_4.oel", "assets/data/level_1_start_4.oel");
 			type.set ("assets/data/level_1_start_4.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/images/ado.png", "assets/images/ado.png");

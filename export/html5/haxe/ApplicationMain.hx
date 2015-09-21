@@ -42,7 +42,7 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/data/level_1_1_1og.oel");
+		urls.push ("assets/data/level_1_1_1og2.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -166,6 +166,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/level_1_start_1woodman.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/level_1_start_2.oel");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -174,8 +178,16 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/level_1_start_3og.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/data/level_1_start_4.oel");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/images/ado.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/burd.png");
@@ -191,6 +203,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/images/coin.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/crawler.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -226,6 +242,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/mm.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/nes_tiles.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/notey.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -234,11 +258,19 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/shakuhachiman.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/snaake.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/snobal.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/spike.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -346,7 +378,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "1143",
+			build: "1289",
 			company: "HaxeFlixel",
 			file: "HaxeFlixelVlog",
 			fps: 60,

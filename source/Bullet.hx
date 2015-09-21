@@ -16,13 +16,17 @@ class Bullet extends FlxSprite
     private var speed:Float;
     private var direction:Int;
     private var damage:Int;
+	private var ogX:Float;
+	private var RANGE:Int = 128;
 	
-	public function new(X:Float, Y:Float,Speed:Float,Direction:Int,Damage:Int)
+	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int)
 	   {
-        super(X,Y);
+        super(X, Y);
+		ogX = X;
         speed = Speed;
         direction = Direction;
         damage = Damage;
+		RANGE = Range;
         loadGraphic("assets/images/coin.png", true, 6, 6, true, "bullet");
 		
 		//if (collide with anything)
@@ -46,9 +50,11 @@ class Bullet extends FlxSprite
         }
 		
 		
-		if (getScreenXY().x < -64 || getScreenXY().x > FlxG.width + 64) 
+		//if (getScreenXY().x < -64 || getScreenXY().x > FlxG.width + 64) 
+		// If the bullet makes it 64 pixels off the side of the screen, kill it
+		
+		if (Math.abs(x - ogX) > RANGE) 
 		{ 
-			// If the bullet makes it 64 pixels off the side of the screen, kill it
 			kill(); 
 		} 
 		else if (touching != 0)

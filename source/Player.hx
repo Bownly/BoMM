@@ -8,6 +8,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxPoint;
 import flixel.util.FlxPoint;
+import weapons.Weapons;
 
 /**
  * ...
@@ -25,16 +26,25 @@ class Player extends FlxSprite
 	private var MAXHP:Int = 3;
 	private var MAXJUMPS:Int = 2;
 	private var shotRange:Int = 10;
-	private var _DAMAGE:Int = 1;
+	public var _DAMAGE:Int = 1;
 	private var _luck:Int = 5;
 	
-	private var bulletArray:FlxTypedGroup<Bullet>;
-	private var _maxBullets:Int = 3;
+	public var bulletArray:FlxTypedGroup<Bullet>;
+	public var _maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
 	
-	private var shootingString:String = "";
-	private var postShotTimer:Float = 0;
-	private var _cooldown:Float;
+	// Weapons...?
+	public var curWeaponLoc:Int;
+	public var curWeapon:Weapons;
+	public var weapon1:Weapons;
+	public var weapon2:Weapons;
+	public var weaponArray:Array<Weapons>;
+	
+
+	
+	public var shootingString:String = "";
+	public var postShotTimer:Float = 0;
+	public var _cooldown:Float;
 
 	
 	private var touchingLadder:Bool = false;
@@ -47,6 +57,13 @@ class Player extends FlxSprite
 	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(inX, inY);
+		
+		
+		weapon1 = new Weapons("pea", bulletArray, 0);
+		weapon2 = new Weapons("cyan", bulletArray, 100);
+		weaponArray = [weapon1, weapon2];
+		curWeaponLoc = 0;
+		curWeapon = weaponArray[curWeaponLoc];
 		
 		loadGraphic("assets/images/mm.png", true, 32, 32);
 		width = 16;
@@ -90,17 +107,35 @@ class Player extends FlxSprite
 		
 	}
 	
-	/*
-	So there are a few ways to handle weapon / player upgrades.
-	1. Firstly, stats will just upgrade the _max vars. Simple enough.
-	2. But what about the cyclable weapons that cost MP, like the proposed boss drop weapons?
-	Right now I'm thinking about hardcoding in each of them in 2 arrays:
-		one for storage purposes aka locked, and one for those accessible by the player aka unlocked.
-	Should each be a class with an mp cost, damage amount, etc? Or are they Bullet objects? 
-		Probably not. Maybe a melee weapon?
-	3. Or perhaps weapons work with a flag system like "chargeable", "huge", "spread", etc.
-	4. And in that vein, the Player should have those flags too. Maybe as params for Bullets?
-	*/
+
+	
+	/* So... let's talk weapons for a tick.
+	 * 
+	 * Since I have no idea how exactly weapons will be handled in this game, I want to layout the 
+	 * most, uh, universal implementation right now. If that even makes sense.
+	 * I want weapon switching in the game in some form asap even though I'll probably have to
+	 * rewrite all of the code between now and completion. So, I want to try to minimize the amount
+	 * that I'll have to rewrite.
+	 * 
+	 * Each main weapon will have its own Bullet class since they will all function differently
+	 * Similarly, I think they'll have a shoot function that the player just calls. 
+	 * Further, they'll have stats like damage and speed that will be parameters.
+	 * The values passed will be the player's equiv stats and will be added to the bullet's default stats.
+	 * 
+	 * But... this only makes sense with a 3-4 weapon paradigm... or maybe it makes sense always. 
+	 * I'm not too sure on that point.
+	 * 
+	 * Wait, shoot. It doesn't make much sense to have weapons be bullets bluhbluhbluh.
+	 * I'm thinking that I might just make a weaponstemplate class and work like that... I think
+	 * 
+	 * Wait wait wait. So why do I need a weptemplate class? 
+	 * I do think I need to overhaul the bullet class itself to add different types of bullets, or add bullet subclasses, BUT!
+	 * I don't probably even need a weapontemplate class at all. If anything, I'd just give the player different parameters depending on
+	 * which weapons are unlocked or not. I spoke about that earlier, but have since deleted that comment block.
+	 * 
+	 * Powerups for the player's base stats will be first in the form of drops with activation upon collision.
+	 * 
+	 * */
 	
 	
 	/*
@@ -220,6 +255,9 @@ class Player extends FlxSprite
 		
 		if (FlxG.keys.anyJustPressed(["SPACE", "K"]))
 			shoot();
+			
+		if (FlxG.keys.anyJustPressed(["L"]))
+			switchWeapon();
 	}
 	
 	private function resolveAnimations():Void
@@ -252,24 +290,19 @@ class Player extends FlxSprite
 	
 	private function shoot():Void
 	{
-
-		if (bulletArray.countLiving() < _maxBullets) 
-		{
-			postShotTimer = .33;
-			
-			if (flipX)
-			{
-				var newBullet = new Bullet(x - 8, y + 8, 500, FlxObject.LEFT, _DAMAGE);
-				bulletArray.add(newBullet);
-			}
-			else
-			{
-				var newBullet = new Bullet(x + 8, y + 8, 500, FlxObject.RIGHT, _DAMAGE);
-				bulletArray.add(newBullet);
-			}
-		}
+		curWeapon.shoot(this);
 		
     }
+	
+	private function switchWeapon():Void
+	{
+		if (curWeaponLoc == weaponArray.length -1)
+//		if (curWeaponLoc == 1)
+			curWeaponLoc = 0;
+		else
+			curWeaponLoc++;
+		curWeapon = weaponArray[curWeaponLoc];
+	}
 	
 	public function setTouchingLadder(bool:Bool):Void
 	{

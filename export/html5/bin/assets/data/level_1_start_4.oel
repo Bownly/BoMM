@@ -34,5 +34,7 @@
     <player id="2" x="16" y="432" />
     <exit id="1" x="592" y="0" val="4" />
     <enemy id="3" x="336" y="400" name="notey" />
+    <enemy id="5" x="240" y="416" name="snaake" />
+    <spike id="4" x="432" y="320" damage="100" />
   </entities>
 </level>

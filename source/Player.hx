@@ -8,7 +8,11 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxPoint;
 import flixel.util.FlxPoint;
-import weapons.Weapons;
+import weapons.Bullet;
+import weapons.CyanWeapon;
+import weapons.MagentaWeapon;
+import weapons.WeaponTemplate;
+import weapons.YellowWeapon;
 
 /**
  * ...
@@ -29,16 +33,18 @@ class Player extends FlxSprite
 	public var _DAMAGE:Int = 1;
 	private var _luck:Int = 5;
 	
-	public var bulletArray:FlxTypedGroup<Bullet>;
+	public var bulletArray:FlxTypedGroup<weapons.Bullet>;
 	public var _maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
 	
 	// Weapons...?
 	public var curWeaponLoc:Int;
-	public var curWeapon:Weapons;
-	public var weapon1:Weapons;
-	public var weapon2:Weapons;
-	public var weaponArray:Array<Weapons>;
+	public var curWeapon:WeaponTemplate;
+	public var weapon1:WeaponTemplate;
+	public var weapon2:WeaponTemplate;
+	public var weapon3:WeaponTemplate;
+	public var weapon4:WeaponTemplate;
+	public var weaponArray:Array<WeaponTemplate>;
 	
 
 	
@@ -54,14 +60,17 @@ class Player extends FlxSprite
 	private var _glitch:FlxGlitchSprite;
 	
 	
-	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<Bullet>) 
+	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>) 
 	{
 		super(inX, inY);
 		
 		
-		weapon1 = new Weapons("pea", bulletArray, 0);
-		weapon2 = new Weapons("cyan", bulletArray, 100);
-		weaponArray = [weapon1, weapon2];
+		weapon1 = new WeaponTemplate("pea", bulletArray);
+		weapon2 = new CyanWeapon("cyan", bulletArray);
+		weapon3 = new YellowWeapon("yellow", bulletArray);
+		weapon4 = new MagentaWeapon("magenta", bulletArray);
+		
+		weaponArray = [weapon1, weapon2, weapon3, weapon4];
 		curWeaponLoc = 0;
 		curWeapon = weaponArray[curWeaponLoc];
 		
@@ -69,11 +78,6 @@ class Player extends FlxSprite
 		width = 16;
 		height = 22;
 		offset = new FlxPoint(8, 4);
-		
-		/*loadGraphic("assets/images/mc.png", true, 16, 16);
-		width = 10;
-		height = 14;
-		offset = new FlxPoint(3, 1);*/
 		
 		bulletArray = Bullets;
 		
@@ -94,16 +98,6 @@ class Player extends FlxSprite
 		animation.add("jump_shoot", [13], 15, true);
 		animation.add("fall_shoot", [13], 15, true);
 		
-/*		animation.add("walk", [29, 30, 31], 10, true);
-		animation.add("idle", [15, 16, 17], 3, true);
-		animation.add("jump", [32], 15, true);
-		animation.add("fall", [33], 15, true);
-		animation.add("hurt", [19], 15, true);
-		
-		animation.add("walk_shoot", [71, 72, 73], 10, true);
-		animation.add("idle_shoot", [46], 3, true);
-		animation.add("jump_shoot", [57], 15, true);
-		animation.add("fall_shoot", [58], 15, true);*/
 		
 	}
 	
@@ -296,12 +290,69 @@ class Player extends FlxSprite
 	
 	private function switchWeapon():Void
 	{
-		if (curWeaponLoc == weaponArray.length -1)
-//		if (curWeaponLoc == 1)
-			curWeaponLoc = 0;
-		else
-			curWeaponLoc++;
+		do 
+		{
+			curWeaponLoc++; 
+			if (curWeaponLoc == weaponArray.length)
+				curWeaponLoc = 0;
+		}
+		while (weaponArray[curWeaponLoc].unlocked == false);
+		
+		
 		curWeapon = weaponArray[curWeaponLoc];
+		
+		if (curWeaponLoc == 0)  // pea atm
+		{
+			animation.add("walk", [3, 2, 3, 4], 10, true);
+			animation.add("idle", [0, 0, 0, 0, 0, 1], 3, true);
+			animation.add("jump", [5], 15, true);
+			animation.add("fall", [6], 15, true);
+			animation.add("hurt", [5], 15, true);
+			
+			animation.add("walk_shoot", [10, 9, 10, 11], 10, true);
+			animation.add("idle_shoot", [8], 3, true);
+			animation.add("jump_shoot", [13], 15, true);
+			animation.add("fall_shoot", [13], 15, true);
+		}
+		else if (curWeaponLoc == 1)  // cyan atm
+		{
+			animation.add("walk", [31, 30, 31, 32], 10, true);
+			animation.add("idle", [28, 28, 28, 28, 28, 29], 3, true);
+			animation.add("jump", [33], 15, true);
+			animation.add("fall", [34], 15, true);
+			animation.add("hurt", [33], 15, true);
+			
+			animation.add("walk_shoot", [38, 37, 38, 39], 10, true);
+			animation.add("idle_shoot", [35], 3, true);
+			animation.add("jump_shoot", [40], 15, true);
+			animation.add("fall_shoot", [40], 15, true);
+		}
+		else if (curWeaponLoc == 2)  // yellow atm
+		{
+			animation.add("walk", [17, 16, 17, 18], 10, true);
+			animation.add("idle", [14, 14, 14, 14, 14, 15], 3, true);
+			animation.add("jump", [19], 15, true);
+			animation.add("fall", [20], 15, true);
+			animation.add("hurt", [19], 15, true);
+			
+			animation.add("walk_shoot", [24, 23, 24, 25], 10, true);
+			animation.add("idle_shoot", [21], 3, true);
+			animation.add("jump_shoot", [26], 15, true);
+			animation.add("fall_shoot", [26], 15, true);
+		}
+		else if (curWeaponLoc == 3)  // magenta atm
+		{
+			animation.add("walk", [45, 44, 45, 46], 10, true);
+			animation.add("idle", [42, 42, 42, 42, 42, 43], 3, true);
+			animation.add("jump", [47], 15, true);
+			animation.add("fall", [48], 15, true);
+			animation.add("hurt", [47], 15, true);
+			
+			animation.add("walk_shoot", [52, 51, 52, 53], 10, true);
+			animation.add("idle_shoot", [49], 3, true);
+			animation.add("jump_shoot", [54], 15, true);
+			animation.add("fall_shoot", [54], 15, true);
+		}
 	}
 	
 	public function setTouchingLadder(bool:Bool):Void

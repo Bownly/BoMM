@@ -1,6 +1,6 @@
 package;
 
-import BabyBurd;
+import enemies.BabyBurd;
 import EnemyTemplate;
 import flixel.FlxG;
 import flixel.FlxObject;
@@ -21,11 +21,11 @@ class Egg extends EnemyTemplate
 	private var _HP:Int = 1;
 
 	private var _cracked:Bool = false;
-	private var babby:BabyBurd;
-	private var babby2:BabyBurd;
-	private var babby3:BabyBurd;
-	private var babby4:BabyBurd;
-	private var burdArray:FlxTypedGroup<BabyBurd>;
+	private var babby:enemies.BabyBurd;
+	private var babby2:enemies.BabyBurd;
+	private var babby3:enemies.BabyBurd;
+	private var babby4:enemies.BabyBurd;
+	private var burdArray:FlxTypedGroup<enemies.BabyBurd>;
 	private var enemArray:FlxGroup;
 
 	public function new(X:Float=0, Y:Float=0, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, XVel:Int, Enemies:FlxGroup) 
@@ -38,7 +38,7 @@ class Egg extends EnemyTemplate
 		height = 8;
 		
 		enemArray = Enemies;
-		burdArray = new FlxTypedGroup<BabyBurd>();
+		burdArray = new FlxTypedGroup<enemies.BabyBurd>();
 		
 		animation.add("idle", [0]);
 		animation.add("open", [1]);
@@ -73,10 +73,10 @@ class Egg extends EnemyTemplate
 	
 	private function spawnBirds():Void
 	{
-		babby = new BabyBurd(x, y, _player, _drops);
-		babby2 = new BabyBurd(x, y - 10, _player, _drops);
-		babby3 = new BabyBurd(x + 10, y - 10 + height, _player, _drops);
-		babby4 = new BabyBurd(x - 10, y - 10 + height, _player, _drops);
+		babby = new enemies.BabyBurd(x, y, _player, _drops);
+		babby2 = new enemies.BabyBurd(x, y - 10, _player, _drops);
+		babby3 = new enemies.BabyBurd(x + 10, y - 10 + height, _player, _drops);
+		babby4 = new enemies.BabyBurd(x - 10, y - 10 + height, _player, _drops);
 		
 		burdArray.add(babby);
 		burdArray.add(babby2);

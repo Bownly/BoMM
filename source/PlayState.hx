@@ -21,6 +21,7 @@ import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.util.FlxRandom;
+import weapons.Bullet;
 
 /**
  * A FlxState which can be used for the actual gameplay.
@@ -29,7 +30,7 @@ class PlayState extends FlxState
 {
 	private var _grpPlayer:FlxGroup;
 	private var _player:Player;
-	public var playerBullets:FlxTypedGroup<Bullet>;
+	public var playerBullets:FlxTypedGroup<weapons.Bullet>;
 	
 	private var _grpEnemies:FlxGroup;
 	private var _grpBadBullets:FlxGroup;
@@ -99,7 +100,7 @@ class PlayState extends FlxState
 		_grpCoins = new FlxTypedGroup<Coin>();
 		add(_grpCoins);
 		
-		playerBullets = new FlxTypedGroup<Bullet>();
+		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		_player = new Player(100,100,playerBullets);
 		
@@ -109,9 +110,13 @@ class PlayState extends FlxState
 		
 		var drop = new Drops(320, 320, 0, _player);
 		var drop2 = new Drops(340, 320, 2, _player);
+		var drop4 = new Drops(360, 320, 4, _player);
+		var drop6 = new Drops(380, 320, 6, _player);
 		
 		dropsGroup.add(drop);
 		dropsGroup.add(drop2);
+		dropsGroup.add(drop4);
+		dropsGroup.add(drop6);
 		
 		
 		_grpBadBullets = new FlxGroup();
@@ -182,6 +187,11 @@ class PlayState extends FlxState
 		}
 		
 		
+		// possible todo: Call this only when something changes, and not every frame
+		// right now it's more convenient being in one place...
+		// could just make it a function unto itself, but whatever
+		_hud.updateHUD(_player.hp, _player.curWeapon.juice, _score, _player.curWeapon.name);	
+
 		
 		//FlxG.overlap(playerBullets, _grpLadders, bulletTouchLadder);
 		
@@ -208,8 +218,8 @@ class PlayState extends FlxState
 		
 		
 		// stuff for the start room
-		_newEntrance = FlxRandom.intRanged(1, 1);
-		mOogmoLoader = new FlxOgmoLoader("assets/data/level_1_start_" + _newEntrance + ".oel");
+		_newEntrance = FlxRandom.intRanged(1, 4);
+		mOogmoLoader = new FlxOgmoLoader("assets/levels/level_1_start_" + _newEntrance + ".oel");
 		mTileMap = mOogmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 		
 		mOogmoLoader.loadEntities(placeEntities, "entities");
@@ -220,35 +230,35 @@ class PlayState extends FlxState
 		
 		
 		var itemRoomPos:Int;
-		itemRoomPos = FlxRandom.intRanged(1, 1);  // Same bounds as the for loop right below, but max is one less than below's. 
+		itemRoomPos = FlxRandom.intRanged(1, 4);  // Same bounds as the for loop right below, but max is one less than below's. 
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...2) 
+		for (i in 1...10) 
 		{
 			if (i == itemRoomPos)
 			{
 				// stuff for the item room
-				var myOgmoLoader  = new FlxOgmoLoader("assets/data/level_1_item_start_" + _newEntrance + ".oel");
+				var myOgmoLoader  = new FlxOgmoLoader("assets/levels/level_1_item_start_" + _newEntrance + ".oel");
 				var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 				setUpMaps(myOgmoLoader, myTileMap);
 				
-				var endId:Int = FlxRandom.intRanged(1, 1);
-				myOgmoLoader = new FlxOgmoLoader("assets/data/level_1_item_end_" + endId + ".oel");
+				var endId:Int = FlxRandom.intRanged(1, 4);
+				myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_item_end_" + endId + ".oel");
 				myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 				setUpMaps(myOgmoLoader, myTileMap);
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 1);
+			id = FlxRandom.intRanged(1, 4);
 			
-			var myOgmoLoader = new FlxOgmoLoader("assets/data/level_1_" + _newEntrance + "_" + id + ".oel");
+			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 			setUpMaps(myOgmoLoader, myTileMap);
 		}
 		
 		// stuff for the end room
-		var myOgmoLoader = new FlxOgmoLoader("assets/data/level_1_end_" + _newEntrance + ".oel");
+		var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_end_" + _newEntrance + ".oel");
 		var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 		setUpMaps(myOgmoLoader, myTileMap);
 	}
@@ -286,23 +296,24 @@ class PlayState extends FlxState
 		_grpWalls.add(map);
 	} 
 	
+	
 	private function touchEnemy(P:Player, E:EnemyTemplate):Void 
 	{
 		if (E.alive == true)
 		{
 			P.getHurt(1);
-			_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
+			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
 		}
 	}
-	private function playerGetHit(P:Player, B:Bullet):Void 
+	private function playerGetHit(P:Player, B:weapons.Bullet):Void 
 	{
 		if (B.alive == true)
 		{
 			P.getHurt(B.getDamage());
-			_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
+			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
 		}
 	}
-	private function bulletTouchEnemy(B:Bullet, E:EnemyTemplate):Void 
+	private function bulletTouchEnemy(B:weapons.Bullet, E:EnemyTemplate):Void 
 	{
 		if (B.alive && B.exists && E.alive && E.exists)
 		{
@@ -314,18 +325,18 @@ class PlayState extends FlxState
 			_score++;
 			var health:Int;
 			health = _player.hp;
-			_hud.updateHUD(health, _score, _player.curWeapon.name);	
+			//_hud.updateHUD(health, _score, _player.curWeapon.name);	
 			
 			//_hud.updateHUD(_health, _money);	
 		}
 	}
-	private function bulletTouchLadder(B:Bullet, L:Ladder):Void 
+	private function bulletTouchLadder(B:weapons.Bullet, L:Ladder):Void 
 	{
 		if (B.alive && B.exists && L.alive && L.exists)
 		{
 			L.kill();
 			_score++;
-			_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
+			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
 			
 			//_hud.updateHUD(_health, _money);		
 		
@@ -338,7 +349,7 @@ class PlayState extends FlxState
 		{
 			D.doStuff();
 			D.kill();
-			_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
+			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
 			
 		}
 		
@@ -349,7 +360,7 @@ class PlayState extends FlxState
 		{
 			C.kill();
 			_score++;
-			_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
+			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
 			
 			//_hud.updateHUD(_health, _money);		
 		
@@ -371,7 +382,7 @@ class PlayState extends FlxState
 	private function playerTouchHazard(P:Player, S:Spike):Void
 	{
 		P.getHurt(S.dmg);
-		_hud.updateHUD(_player.hp, _score, _player.weaponArray[_player.curWeaponLoc].name);
+		//_hud.updateHUD(_player.hp, _score, _player.weaponArray[_player.curWeaponLoc].name);
 	}
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void

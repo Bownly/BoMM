@@ -43,11 +43,11 @@ class MenuState extends FlxState
 	 */
 	override public function update():Void
 	{
-					gotoNextStates();
+		gotoNextStates();
 
 		if (FlxG.keys.anyPressed(["SPACE"])) 
 		{
-			gotoNextStates;
+			gotoNextStates();
 		}
 		super.update();
 	}	

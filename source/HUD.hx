@@ -54,7 +54,7 @@ package;
         add(_sprHealth);
         add(_sprMoney);
 		add(_sprJuice);
-		add(_sprWeapon);
+		//add(_sprWeapon);
         add(_txtHealth);
         add(_txtMoney);
 		add(_txtJuice);
@@ -65,12 +65,13 @@ package;
         });
     }
 
-    public function updateHUD(Health:Int = 0, Money:Int = 0, Weapon:String):Void
+    public function updateHUD(Health:Int = 0, Juice:Int = 0, Money:Int = 0, Weapon:String):Void
     {
         _txtHealth.text = Std.string(Health) + " / 3";
         _txtMoney.text = Std.string(Money);
         _txtMoney.x = _sprMoney.x - _txtMoney.width - 4;
 		
+		_txtJuice.text = Std.string(Juice) + " / 9";
 		_txtWeapon.text = "Cur Weapon: " + Weapon;
     }
  }

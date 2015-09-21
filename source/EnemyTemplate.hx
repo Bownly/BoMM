@@ -55,7 +55,7 @@ class EnemyTemplate extends FlxSprite
 	{
 		var dropChance = FlxRandom.intRanged(0, 1);
 		var dropChance = 1;
-		var dropID = FlxRandom.intRanged(0, 1) * 2;
+		var dropID = FlxRandom.intRanged(0, 3) * 2;
 		
 		var newDrop = new Drops(this.x, this.y, dropID, _player);
 		_drops.add(newDrop);

@@ -17,6 +17,8 @@ class Drops extends FlxSprite
 	/* Legend for drops:
 	 * 0 = Mushroom
 	 * 2 = Butterfly
+	 * 4 = Juice goblet
+	 * 6 = Sword in stone
 	 */
 	
 	public function new(X:Float=0, Y:Float=0, Index:Int, ThePlayer:Player) 
@@ -47,17 +49,36 @@ class Drops extends FlxSprite
 		_player.hp += Val;
 	}
 	
+	private function playerJuiceRestore(Val:Int):Void
+	{
+		if (_player.curWeapon.juice + Val > _player.curWeapon.juiceMax)
+			_player.curWeapon.juice = _player.curWeapon.juiceMax;
+		else
+			_player.curWeapon.juice += Val;
+	}
+	
+	private function weaponStrengthUp(Val:Int):Void
+	{
+		_player.curWeapon.damage += Val;
+	}
+	
 	
 	public function doStuff():Void  // called on collision with player
 	{
 		switch(i)
 		{
 			case 0:
-				//do Mushroom stuff
+				// do Mushroom stuff
 				playerHeal(10);
 			case 2:
-				//do Butterfly stuff
+				// do Butterfly stuff
 				playerHeal(20);
+			case 4:
+				// do Juice goblet stuff
+				playerJuiceRestore(5);
+			case 6:
+				// do sword in stone stuff
+				weaponStrengthUp(1);
 		}
 	}
 	

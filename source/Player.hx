@@ -22,7 +22,7 @@ class Player extends FlxSprite
 {
 	private var jumpPower:Int = 2250;
 	private var GRAVITY:Int = 690;
-	private var XSPEED:Int = 200;
+	private var XSPEED:Int = 150;
 	private var remainingJumps:Int = 2;
 	public var hp:Int = 3;
 	
@@ -101,37 +101,7 @@ class Player extends FlxSprite
 		
 	}
 	
-
-	
-	/* So... let's talk weapons for a tick.
-	 * 
-	 * Since I have no idea how exactly weapons will be handled in this game, I want to layout the 
-	 * most, uh, universal implementation right now. If that even makes sense.
-	 * I want weapon switching in the game in some form asap even though I'll probably have to
-	 * rewrite all of the code between now and completion. So, I want to try to minimize the amount
-	 * that I'll have to rewrite.
-	 * 
-	 * Each main weapon will have its own Bullet class since they will all function differently
-	 * Similarly, I think they'll have a shoot function that the player just calls. 
-	 * Further, they'll have stats like damage and speed that will be parameters.
-	 * The values passed will be the player's equiv stats and will be added to the bullet's default stats.
-	 * 
-	 * But... this only makes sense with a 3-4 weapon paradigm... or maybe it makes sense always. 
-	 * I'm not too sure on that point.
-	 * 
-	 * Wait, shoot. It doesn't make much sense to have weapons be bullets bluhbluhbluh.
-	 * I'm thinking that I might just make a weaponstemplate class and work like that... I think
-	 * 
-	 * Wait wait wait. So why do I need a weptemplate class? 
-	 * I do think I need to overhaul the bullet class itself to add different types of bullets, or add bullet subclasses, BUT!
-	 * I don't probably even need a weapontemplate class at all. If anything, I'd just give the player different parameters depending on
-	 * which weapons are unlocked or not. I spoke about that earlier, but have since deleted that comment block.
-	 * 
-	 * Powerups for the player's base stats will be first in the form of drops with activation upon collision.
-	 * 
-	 * */
-	
-	
+		
 	/*
 	At this point in time it seems as though I have limited options without any actual art or
 	concrete concepts. I could work on:
@@ -206,8 +176,6 @@ class Player extends FlxSprite
 		playerInputs();
 		resolveAnimations();
 		
-		
-		
 		super.update();
 	}
 
@@ -240,7 +208,7 @@ class Player extends FlxSprite
 			remainingJumps = MAXJUMPS;
 		}
 		
-		if (FlxG.keys.anyJustPressed(["UP", "J"]) && remainingJumps > 0) 
+		if (FlxG.keys.anyJustPressed(["UP", "J", "W"]) && remainingJumps > 0) 
 		{
 			velocity.y = -jumpPower;
 			remainingJumps--;

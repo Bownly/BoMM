@@ -46,17 +46,6 @@ class PlayState extends FlxState
 	private var _levelWidth:Float;
 	private var _levelHeight:Float;
 	
-	/*private var _map:FlxOgmoLoader;
-	private var _mWalls:FlxTilemap;
-	private var floor:FlxSprite;
-	
-	private var _map2:FlxOgmoLoader;
-	private var _mWalls2:FlxTilemap;
-	
-	var _mapT:FlxOgmoLoader;
-	var _mWallsT:FlxTilemap;
-	*/
-	
 	var mOogmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
 	

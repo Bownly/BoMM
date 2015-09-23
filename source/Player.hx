@@ -20,21 +20,21 @@ import weapons.YellowWeapon;
  */
 class Player extends FlxSprite
 {
-	private var jumpPower:Int = 2250;
-	private var GRAVITY:Int = 690;
-	private var XSPEED:Int = 150;
-	private var remainingJumps:Int = 2;
+	var jumpPower:Int = 2250;
+	var GRAVITY:Int = 690;
+	var xSpeed:Int = 150;
+	var remainingJumps:Int = 2;
 	public var hp:Int = 3;
 	
 	// Stats
-	private var MAXHP:Int = 3;
-	private var MAXJUMPS:Int = 2;
-	private var shotRange:Int = 10;
-	public var _DAMAGE:Int = 1;
-	private var _luck:Int = 5;
+	public var maxHP:Int = 3;
+	public var maxJumps:Int = 2;
+	public var shotRange:Int = 10;
+	public var damage:Int = 1;
+	public var luck:Int = 5;
 	
 	public var bulletArray:FlxTypedGroup<weapons.Bullet>;
-	public var _maxBullets:Int = 3;
+	public var maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
 	
 	// Weapons...?
@@ -46,18 +46,16 @@ class Player extends FlxSprite
 	public var weapon4:WeaponTemplate;
 	public var weaponArray:Array<WeaponTemplate>;
 	
-
 	
 	public var shootingString:String = "";
 	public var postShotTimer:Float = 0;
-	public var _cooldown:Float;
+	public var cooldown:Float;
 
 	
 	private var touchingLadder:Bool = false;
 	private var climbing:Bool = false;
 	
 	private var hurtTimer:Float = 0;
-	private var _glitch:FlxGlitchSprite;
 	
 	
 	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>) 
@@ -81,7 +79,6 @@ class Player extends FlxSprite
 		
 		bulletArray = Bullets;
 		
-		//acceleration.y = GRAVITY;
 		velocity.y = GRAVITY;
 		
 		maxVelocity.set(200, 200);
@@ -170,7 +167,7 @@ class Player extends FlxSprite
 			acceleration.y = GRAVITY;
 		
 		if (this.isTouching(FlxObject.FLOOR))
-			remainingJumps = MAXJUMPS;
+			remainingJumps = maxJumps;
 		
 		
 		playerInputs();
@@ -183,13 +180,13 @@ class Player extends FlxSprite
 	{
 		if (FlxG.keys.anyPressed(["LEFT", "A"]) && climbing == false) 
 		{
-			velocity.x = -XSPEED;
+			velocity.x = -xSpeed;
 			flipX = true;
 			climbing = false;
 		} 
 		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && climbing == false) 
 		{
-			velocity.x = XSPEED;
+			velocity.x = xSpeed;
 			flipX = false;
 			climbing = false;
 		}
@@ -198,14 +195,14 @@ class Player extends FlxSprite
 		{
 			velocity.y = -100;
 			climbing = true;
-			remainingJumps = MAXJUMPS;
+			remainingJumps = maxJumps;
 		}
 		
 		if (FlxG.keys.anyPressed(["DOWN", "S"]) && touchingLadder == true)
 		{
 			velocity.y = 100;
 			climbing = true;
-			remainingJumps = MAXJUMPS;
+			remainingJumps = maxJumps;
 		}
 		
 		if (FlxG.keys.anyJustPressed(["UP", "J", "W"]) && remainingJumps > 0) 
@@ -244,7 +241,7 @@ class Player extends FlxSprite
 		{
 			animation.play("fall" + shootingString);
 			// prevent player from having max jumps after walking off a platform
-			if (remainingJumps == MAXJUMPS)
+			if (remainingJumps == maxJumps)
 				remainingJumps--;
 			
 		}

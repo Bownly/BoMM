@@ -30,6 +30,8 @@ import weapons.Bullet;
 class PlayState extends FlxState
 {
 	private var _grpPlayer:FlxGroup;
+	static private var player:Player;
+	//static private var _grpPlayer:FlxGroup;
 	private var _player:Player;
 	public var playerBullets:FlxTypedGroup<weapons.Bullet>;
 	
@@ -92,9 +94,24 @@ class PlayState extends FlxState
 		
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
-		_player = new Player(100,100,playerBullets);
 		
-		
+		_player = new Player(100, 100, playerBullets);
+
+		// this is stuff for trying to get static player stuff working for passing between playstates
+		/*if (player == null)
+		{
+			_player = new Player(100, 100, playerBullets);
+			player = _player;
+			trace("is null");
+		}
+		else
+		{
+			_player = new Player(100, 100, playerBullets);
+			_player = player;
+			trace("should work");
+			
+		}*/
+			
 		dropsGroup = new FlxTypedGroup<Drops>();
 		add(dropsGroup);
 		

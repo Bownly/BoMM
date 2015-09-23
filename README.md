@@ -10,13 +10,11 @@ Here's the deal so far:
 
 -Similarly, I'm thinking of possibly overhauling Ladder.hx to mirror the implementation found in that platform jumper tutorial. Maybe. That would require 2 maps for every map, which might get excessive. We'll see, probably when I overhaul the level stitching code.
 
--I want to organize the levels folder and the source folder, but I've thusfar been too lazy to do so. 
-
-
 That's it for now. Holler if you have any questions or comments or concerns or cornucopias.
 
 
 Oh yeah, and Snaake.hx is actually that one enemy that goes back and forth and speeds up when you're on its same y level.
+
 
 # FlashDevelop tricks or tips and such
 
@@ -29,3 +27,9 @@ Oh yeah, and Snaake.hx is actually that one enemy that goes back and forth and s
 -I find building in neko to be fastest over windows, html5, or whatever
 
 -Ctrl + Shift + 1 on a class name will auto import that class
+
+
+# Style Guidelines
+Style Guidelines
+
+Bluhbluhbluh

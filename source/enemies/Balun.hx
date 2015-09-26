@@ -18,7 +18,8 @@ class Balun extends EnemyTemplate
 	 * 2 make the projectiles better (requires an overhaul of the bullet class probably.
 	 * 3 why is color even an Int? It could just be a string the whole way through, right?
 	 * 5 fix the weirdness of the string colliding through the ground somehow. It's not exactly a layers issue.
-	 * 
+	 * 6 fix the stupid non-collision bs bluhbluhbluh
+	 * 7 move shoot outside of movement
 	 * */
 	
 	private var palette:Int = 0;
@@ -117,69 +118,6 @@ class Balun extends EnemyTemplate
 			
 			if (distancesquared < 24000) 
 			{
-				/*if (_player.x < x)
-				{							
-					// The sprite is facing the opposite direction than flixel is expecting, so hack it into the right direction
-					facing = FlxObject.RIGHT; 
-					flipX = false;
-					switch (colorString) 
-					{
-						case "grey":
-						{
-							velocity.x = -XSPEED;
-							tail._moving = FlxObject.RIGHT;
-						}
-						case "yellow":
-						{
-							velocity.x = -XSPEED * 2;
-							tail._moving = FlxObject.RIGHT;
-						}
-						case "cyan":
-						{
-							velocity.x = XSPEED;
-							tail._moving = FlxObject.LEFT;
-							shoot(_player);
-						}
-						case "magenta":
-						{
-							velocity.x = -XSPEED;
-							tail._moving = FlxObject.RIGHT;
-							shoot(_player);
-						}
-					}
-				}
-				else if (_player.x > x)
-				{
-					facing = FlxObject.LEFT;
-					flipX = true;
-					switch (colorString) 
-					{
-						case "grey":
-						{
-							velocity.x = XSPEED;
-							tail._moving = FlxObject.LEFT;
-						}
-						case "yellow":
-						{
-							velocity.x = XSPEED * 2;
-							tail._moving = FlxObject.LEFT;
-						}
-						case "cyan":
-						{
-							velocity.x = -XSPEED;
-							tail._moving = FlxObject.RIGHT;
-							shoot(_player);
-						}
-						case "magenta":
-						{
-							velocity.x = XSPEED;
-							tail._moving = FlxObject.LEFT;
-						}
-					}
-				}
-				else
-					velocity.x = 0;*/
-				
 					
 				if (Math.floor(_player.x) < x)
 				{							

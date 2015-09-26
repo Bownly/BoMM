@@ -10,6 +10,11 @@ import flixel.util.FlxPoint;
 /**
  * ...
  * @author ...
+ * 
+ * todo
+ * 
+ * 1 split all functions into small functions and make it reclassable or whatever. 
+ * 
  */
 class Bullet extends FlxSprite
 {
@@ -21,7 +26,7 @@ class Bullet extends FlxSprite
 	private var RANGE:Int = 128;
 	
 	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int)
-	   {
+    {
         super(X, Y);
 		ogX = X;
 		ogY = Y;
@@ -52,8 +57,7 @@ class Bullet extends FlxSprite
         }
 		
 		
-		//if (getScreenXY().x < -64 || getScreenXY().x > FlxG.width + 64) 
-		// If the bullet makes it 64 pixels off the side of the screen, kill it
+		// If the bullet travels too far from its spawn point
 		
 		if (Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE) 
 		{ 

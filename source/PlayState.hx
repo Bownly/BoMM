@@ -58,13 +58,15 @@ class PlayState extends FlxState
 	
 	private var dropsGroup:FlxTypedGroup<Drops>;
 	
+	private var miscGroup:FlxGroup;
+	
 	private var _newEntrance:Int;
 	
 	private var _curMapX:Float = 0;
 	private var _curMapY:Float = 0;
 	
 	private var _hud:HUD;
-	private var _score:Int = 0;
+	public var _score:Int = 0;
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
@@ -85,6 +87,7 @@ class PlayState extends FlxState
 		
 		_grpEnemies = new FlxGroup();
 		add(_grpEnemies);
+
 		
 		_door = new Door();
 		add(_door);
@@ -97,8 +100,8 @@ class PlayState extends FlxState
 		
 		_player = new Player(100, 100, playerBullets);
 
-		// this is stuff for trying to get static player stuff working for passing between playstates
-		/*if (player == null)
+		/* this is stuff for trying to get static player stuff working for passing between playstates
+		if (player == null)
 		{
 			_player = new Player(100, 100, playerBullets);
 			player = _player;
@@ -115,10 +118,10 @@ class PlayState extends FlxState
 		dropsGroup = new FlxTypedGroup<Drops>();
 		add(dropsGroup);
 		
-		var drop = new Drops(320, 320, 0, _player);
-		var drop2 = new Drops(340, 320, 2, _player);
-		var drop4 = new Drops(360, 320, 4, _player);
-		var drop6 = new Drops(380, 320, 6, _player);
+		var drop = new Drops(320, 320, 0, _player, true);
+		var drop2 = new Drops(340, 320, 2, _player, true);
+		var drop4 = new Drops(360, 320, 4, _player, true);
+		var drop6 = new Drops(380, 320, 6, _player, true);
 		
 		dropsGroup.add(drop);
 		dropsGroup.add(drop2);
@@ -128,9 +131,12 @@ class PlayState extends FlxState
 		
 		_grpBadBullets = new FlxGroup();
 		add(_grpBadBullets);
-		
+		miscGroup = new FlxGroup();
+		add(miscGroup);
+	
 		setUpLevel();		
 		add(_grpWalls);		
+		
 		
 		_grpPlayer = new FlxGroup();
 		add(_grpPlayer);
@@ -225,7 +231,7 @@ class PlayState extends FlxState
 		
 		
 		// stuff for the start room
-		_newEntrance = FlxRandom.intRanged(1, 1);
+		_newEntrance = FlxRandom.intRanged(4, 4);
 		mOogmoLoader = new FlxOgmoLoader("assets/levels/level_1_start_" + _newEntrance + ".oel");
 		mTileMap = mOogmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 		
@@ -237,11 +243,11 @@ class PlayState extends FlxState
 		
 		
 		var itemRoomPos:Int;
-		itemRoomPos = FlxRandom.intRanged(1, 9);  // Same bounds as the for loop right below, but max is one less than below's. 
+		itemRoomPos = FlxRandom.intRanged(1, 3);  // Same bounds as the for loop right below, but max is one less than below's. 
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...10) 
+		for (i in 1...4) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -251,7 +257,8 @@ class PlayState extends FlxState
 				setUpMaps(myOgmoLoader, myTileMap);
 				
 				var endId:Int = FlxRandom.intRanged(1, 2);
-				myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_item_end_" + endId + ".oel");
+				//myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_item_end_" + endId + ".oel");
+				myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_shop_end_" + endId + ".oel");
 				myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
 				setUpMaps(myOgmoLoader, myTileMap);
 			}	
@@ -354,10 +361,9 @@ class PlayState extends FlxState
 	{
 		if (P.alive && P.exists && D.alive && D.exists)
 		{
-			D.doStuff();
-			D.kill();
+			var cost:Int = D.doStuff(_score);
+			_score -= cost;
 			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
-			
 		}
 		
 	}
@@ -425,6 +431,10 @@ class PlayState extends FlxState
 			var dmg:Int = Std.parseInt(entityData.get("damage"));
 			_grpHazards.add(new Spike(x, y, dmg));
 		}
+		else if (entityName == "StorePodium")
+		{
+			add(new ShopPodium(x, y, _player, dropsGroup, miscGroup));
+		}
 		else if (entityName == "enemy")
 		{
 			switch(entityData.get("name"))
@@ -443,7 +453,8 @@ class PlayState extends FlxState
 					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets));
 				case "balun":
 					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, 1));
-			}
+				case "mush":
+					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets));			}
 		}
 	}
 	

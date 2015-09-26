@@ -126,6 +126,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
 		Font.registerFont (__ASSET__assets_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__assets_fonts_arial_ttf);
 		
@@ -133,6 +137,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -717,10 +725,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/mcbeck.png", AssetType.IMAGE);
 		path.set ("assets/images/metool.png", "assets/images/metool.png");
 		type.set ("assets/images/metool.png", AssetType.IMAGE);
-		path.set ("assets/images/mm-yellow.png", "assets/images/mm-yellow.png");
-		type.set ("assets/images/mm-yellow.png", AssetType.IMAGE);
 		path.set ("assets/images/mm.png", "assets/images/mm.png");
 		type.set ("assets/images/mm.png", AssetType.IMAGE);
+		path.set ("assets/images/mush.png", "assets/images/mush.png");
+		type.set ("assets/images/mush.png", AssetType.IMAGE);
 		path.set ("assets/images/nes_tiles.png", "assets/images/nes_tiles.png");
 		type.set ("assets/images/nes_tiles.png", AssetType.IMAGE);
 		path.set ("assets/images/notey.png", "assets/images/notey.png");
@@ -807,6 +815,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/levels/level_1_item_start_3.oel", AssetType.TEXT);
 		path.set ("assets/levels/level_1_item_start_4.oel", "assets/levels/level_1_item_start_4.oel");
 		type.set ("assets/levels/level_1_item_start_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_1.oel", "assets/levels/level_1_shop_end_1.oel");
+		type.set ("assets/levels/level_1_shop_end_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_2.oel", "assets/levels/level_1_shop_end_2.oel");
+		type.set ("assets/levels/level_1_shop_end_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_3.oel", "assets/levels/level_1_shop_end_3.oel");
+		type.set ("assets/levels/level_1_shop_end_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_4.oel", "assets/levels/level_1_shop_end_4.oel");
+		type.set ("assets/levels/level_1_shop_end_4.oel", AssetType.TEXT);
 		path.set ("assets/levels/level_1_start_1.oel", "assets/levels/level_1_start_1.oel");
 		type.set ("assets/levels/level_1_start_1.oel", AssetType.TEXT);
 		path.set ("assets/levels/level_1_start_1woodman.oel", "assets/levels/level_1_start_1woodman.oel");
@@ -881,10 +897,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/metool.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/mm-yellow.png";
+		id = "assets/images/mm.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/mm.png";
+		id = "assets/images/mush.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/nes_tiles.png";
@@ -1016,6 +1032,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/levels/level_1_item_start_4.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/levels/level_1_start_1.oel";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -1137,6 +1165,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -1145,6 +1177,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1986,11 +2022,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_arial_ttf extends null { }
 
 
 #elseif html5
+
+
+
+
 
 
 

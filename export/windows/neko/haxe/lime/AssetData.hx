@@ -46,10 +46,10 @@ class AssetData {
 			type.set ("assets/images/mcbeck.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/metool.png", "assets/images/metool.png");
 			type.set ("assets/images/metool.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/mm-yellow.png", "assets/images/mm-yellow.png");
-			type.set ("assets/images/mm-yellow.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/mm.png", "assets/images/mm.png");
 			type.set ("assets/images/mm.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/mush.png", "assets/images/mush.png");
+			type.set ("assets/images/mush.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/nes_tiles.png", "assets/images/nes_tiles.png");
 			type.set ("assets/images/nes_tiles.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/notey.png", "assets/images/notey.png");
@@ -136,6 +136,14 @@ class AssetData {
 			type.set ("assets/levels/level_1_item_start_3.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/levels/level_1_item_start_4.oel", "assets/levels/level_1_item_start_4.oel");
 			type.set ("assets/levels/level_1_item_start_4.oel", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/levels/level_1_shop_end_1.oel", "assets/levels/level_1_shop_end_1.oel");
+			type.set ("assets/levels/level_1_shop_end_1.oel", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/levels/level_1_shop_end_2.oel", "assets/levels/level_1_shop_end_2.oel");
+			type.set ("assets/levels/level_1_shop_end_2.oel", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/levels/level_1_shop_end_3.oel", "assets/levels/level_1_shop_end_3.oel");
+			type.set ("assets/levels/level_1_shop_end_3.oel", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/levels/level_1_shop_end_4.oel", "assets/levels/level_1_shop_end_4.oel");
+			type.set ("assets/levels/level_1_shop_end_4.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/levels/level_1_start_1.oel", "assets/levels/level_1_start_1.oel");
 			type.set ("assets/levels/level_1_start_1.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/levels/level_1_start_1woodman.oel", "assets/levels/level_1_start_1woodman.oel");

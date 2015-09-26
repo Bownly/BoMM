@@ -99,23 +99,26 @@ class Player extends FlxSprite
 	}
 	
 		
-	/*
+	/* General checklist
+	 * 
 	At this point in time it seems as though I have limited options without any actual art or
 	concrete concepts. I could work on:
 	1. bosses and/or a boss class/system
 	2. touch up on some stuff like BabyBurd collision and random spread (but it's not a final enemy, probably, so why bother?)
 	3. Title Screen?
-	4. Weapons / upgrades systems / stats (save this for Mario)
+	4. Weapons / upgrades systems / stats 
 	6. movement tweaking with the mc (kinda pointless without overhauling all of my maps...)
 	7. ...which leads to making new levels...
 	8. What to heck else is there to even do? Oh god it's all dependent on the art and music. 
 	9. Adding powerups to treasure rooms, but then I'd have to make powerups first...
 	10. Overhaul ladders. Make them oneway collidible. ...but how?
 	11. Redo / overhaul the map stiching. It really is pretty bad atm. :T
+	12. STORE!!!!
 	*/
 	
 
-	/*
+	/* Boss musings
+	 * 
 	 * Is there any good reason why I would make a boss template class instead of just using enemyTemplate?
 	 * I can't quite think of any. 
 	 * Well what does a boss need that a normal enemy doesn't?
@@ -127,26 +130,26 @@ class Player extends FlxSprite
 	 * I'm leaning towards no BossTemplate class right now.
 	 * */
 	
-		/* Moving tiles:
-		 make them entities, but one for each square, or one entity per platform, and use a value thing for length?
-		 I like the latter option more.
-		 Oh shoot, can I make them the same class as falling platforms? 
-		 Yes, I think I can
-		 So, as entities, I have 2 params: direction and speed? At least direction...
-		 Well at that point, what do the two have in common? They both move in one direction (or two!) following a trigger
-		 The horizontal ones' trigger is spawning and the falling ones' trigger is the player steping on them. 
-		 Well that's not too similar actually. Other than the fact that they are collidable objects...
-		 
-		 params(ish):
-		 speed?
-		 distance
-		 direction
-		 placement
-		 size/length
-		 
-		 Eh, maybe these are too complicated for right now. No doubt I could ghetto-rig some implementation, 
-		 but it would probably be a bad one.
-		 
+	/* Moving tiles:
+	 make them ogmo entities, but one for each square, or one entity per platform, and use a value thing for length?
+	 I like the latter option more.
+	 Oh shoot, can I make them the same class as falling platforms? 
+	 Yes, I think I can
+	 So, as entities, I have 2 params: direction and speed? At least direction...
+	 Well at that point, what do the two have in common? They both move in one direction (or two!) following a trigger
+	 The horizontal ones' trigger is spawning and the falling ones' trigger is the player steping on them. 
+	 Well that's not too similar actually. Other than the fact that they are collidable objects...
+	 
+	 params(ish):
+	 speed?
+	 distance
+	 direction
+	 placement
+	 size/length
+	 
+	 Eh, maybe these are too complicated for right now. No doubt I could ghetto-rig some implementation, 
+	 but it would probably be a bad one.
+	 
 	*/
 	
 	override public function update():Void 

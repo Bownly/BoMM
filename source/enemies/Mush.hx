@@ -60,8 +60,7 @@ class Mush extends EnemyTemplate
 				if (isTouching(FlxObject.WALL) || (Math.abs(ogX - x) >= rangeX))
 					turnAround();
 			}
-			else
-				shoot();
+			shoot();
 			
 			
 			super.update();
@@ -71,24 +70,23 @@ class Mush extends EnemyTemplate
 	
 	public function shoot():Void
 	{
-		velocity.x = 0;  // case dependent
-		animation.play("jizz");  // case dependent
-		postShotTimer -= FlxG.elapsed;	
 		
 		if (_cooldown > GUN_DELAY)
 		{	
-			var bulletX:Int = Math.floor(x);
-			var bulletY:Int = Math.floor(y + 4);
-			var bullet = new weapons.Bullet(x - 8, y + 8, 500, FlxObject.CEILING, 1, 256);
+			velocity.x = 0;  // case dependent
+			animation.play("jizz");  // case dependent
+			
+			var bullet = new weapons.Bullet(x + 8, y + 8, 500, FlxObject.CEILING, 1, 256);
 			_bullets.add(bullet);
 			
 			// reset the shot clock
 			_cooldown = 0; 
 			postShotTimer = .33;
 		}
-			
 		_cooldown += FlxG.elapsed;
+		postShotTimer -= FlxG.elapsed;
 	}
+		
 		
 	
 	public function turnAround():Void

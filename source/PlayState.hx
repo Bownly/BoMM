@@ -454,7 +454,7 @@ class PlayState extends FlxState
 				case "balun":
 					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, 1));
 				case "mush":
-					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets));			}
+					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, 1));			}
 		}
 	}
 	

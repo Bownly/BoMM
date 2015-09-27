@@ -35,35 +35,21 @@ class Bullet extends FlxSprite
         damage = Damage;
 		RANGE = Range;
         loadGraphic("assets/images/coin.png", true, 6, 6, true, "bullet");
+		resolveVelocity();
 		
-		//if (collide with anything)
-			//destroy();
     }
  
     override public function update():Void
     {
         super.update();
-        if (direction == FlxObject.LEFT){
-            velocity.x = -speed;     
-        }
-        if (direction == FlxObject.RIGHT){
-            velocity.x = speed;     
-        }
-        if (direction == FlxObject.FLOOR){
-            velocity.y = speed;     
-        }
-        if (direction == FlxObject.CEILING){
-            velocity.y = -speed;     
-        }
 		
 		
 		// If the bullet travels too far from its spawn point
-		
 		if (Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE) 
 		{ 
 			kill(); 
 		} 
-		else if (touching != 0)
+		if (isTouching(FlxObject.ANY))  // doesn't work !!!
 		{
 			// We want the bullet to go away when it hits something, not just stop.
 			kill(); 
@@ -71,6 +57,38 @@ class Bullet extends FlxSprite
         
     }
  
+	public function resolveVelocity():Void
+	{
+		if (direction == FlxObject.LEFT)
+			velocity.x = -speed;     
+        if (direction == FlxObject.RIGHT)
+            velocity.x = speed;     
+        if (direction == FlxObject.FLOOR)
+            velocity.y = speed;     
+        if (direction == FlxObject.CEILING)
+            velocity.y = -speed;     
+		if (direction == FlxObject.LEFT + FlxObject.FLOOR)
+		{
+			velocity.x = -speed * 0.707;
+			velocity.y = speed * 0.707;
+		}
+		if (direction == FlxObject.LEFT + FlxObject.CEILING)
+		{
+			velocity.x = -speed * 0.707;
+			velocity.y = -speed * 0.707;
+		}
+		if (direction == FlxObject.RIGHT + FlxObject.FLOOR)
+		{
+			velocity.x = speed * 0.707;
+			velocity.y = speed * 0.707;
+		}
+		if (direction == FlxObject.RIGHT + FlxObject.CEILING)
+		{
+			velocity.x = speed * 0.707;
+			velocity.y = -speed * 0.707;
+		}
+	}
+	
     override public function destroy():Void
     {
 		alive = false;

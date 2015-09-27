@@ -178,6 +178,8 @@ class PlayState extends FlxState
 
 		FlxG.collide(_grpWalls, _player);
 		FlxG.collide(_grpWalls, _grpEnemies);
+		FlxG.collide(_grpWalls, _grpBadBullets);
+		FlxG.collide(_grpWalls, playerBullets);
 		
 		FlxG.overlap(_player, _door, nextLevel);
 		

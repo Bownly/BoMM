@@ -129,7 +129,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
 		Font.registerFont (__ASSET__assets_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__assets_fonts_arial_ttf);
 		
@@ -137,7 +136,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
-		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -733,16 +731,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/nes_tiles.png", AssetType.IMAGE);
 		path.set ("assets/images/notey.png", "assets/images/notey.png");
 		type.set ("assets/images/notey.png", AssetType.IMAGE);
-		path.set ("assets/images/ranger.png", "assets/images/ranger.png");
-		type.set ("assets/images/ranger.png", AssetType.IMAGE);
-		path.set ("assets/images/shakuhachiman.png", "assets/images/shakuhachiman.png");
-		type.set ("assets/images/shakuhachiman.png", AssetType.IMAGE);
 		path.set ("assets/images/snaake.png", "assets/images/snaake.png");
 		type.set ("assets/images/snaake.png", AssetType.IMAGE);
 		path.set ("assets/images/snobal.png", "assets/images/snobal.png");
 		type.set ("assets/images/snobal.png", AssetType.IMAGE);
 		path.set ("assets/images/spike.png", "assets/images/spike.png");
 		type.set ("assets/images/spike.png", AssetType.IMAGE);
+		path.set ("assets/images/spore.png", "assets/images/spore.png");
+		type.set ("assets/images/spore.png", AssetType.IMAGE);
 		path.set ("assets/images/tiles.png", "assets/images/tiles.png");
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		path.set ("assets/images/wood_tiles.png", "assets/images/wood_tiles.png");
@@ -909,12 +905,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/notey.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/ranger.png";
-		path.set (id, id);
-		type.set (id, AssetType.IMAGE);
-		id = "assets/images/shakuhachiman.png";
-		path.set (id, id);
-		type.set (id, AssetType.IMAGE);
 		id = "assets/images/snaake.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -922,6 +912,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/spike.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/spore.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tiles.png";
@@ -1168,7 +1161,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -1177,7 +1169,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
-		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -2025,13 +2016,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_arial_ttf extends null { }
 
 
 #elseif html5
-
 
 
 

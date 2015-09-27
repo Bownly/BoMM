@@ -12,7 +12,6 @@ import flixel.util.FlxPoint;
  * @author ...
  * 
  * todo
- * 
  * 1 split all functions into small functions and make it reclassable or whatever. 
  * 
  */
@@ -41,7 +40,6 @@ class Bullet extends FlxSprite
  
     override public function update():Void
     {
-        super.update();
 		
 		
 		// If the bullet travels too far from its spawn point
@@ -54,7 +52,8 @@ class Bullet extends FlxSprite
 			// We want the bullet to go away when it hits something, not just stop.
 			kill(); 
 		}
-        
+		super.update();
+
     }
  
 	public function resolveVelocity():Void

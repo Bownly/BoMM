@@ -54,16 +54,14 @@ class AssetData {
 			type.set ("assets/images/nes_tiles.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/notey.png", "assets/images/notey.png");
 			type.set ("assets/images/notey.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/ranger.png", "assets/images/ranger.png");
-			type.set ("assets/images/ranger.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/shakuhachiman.png", "assets/images/shakuhachiman.png");
-			type.set ("assets/images/shakuhachiman.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/snaake.png", "assets/images/snaake.png");
 			type.set ("assets/images/snaake.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/snobal.png", "assets/images/snobal.png");
 			type.set ("assets/images/snobal.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/spike.png", "assets/images/spike.png");
 			type.set ("assets/images/spike.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/spore.png", "assets/images/spore.png");
+			type.set ("assets/images/spore.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/tiles.png", "assets/images/tiles.png");
 			type.set ("assets/images/tiles.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/wood_tiles.png", "assets/images/wood_tiles.png");

@@ -29,14 +29,23 @@ class Testboss extends enemies.EnemyTemplate
 
 	private var _bullets:FlxGroup;
 	private var _cooldown:Float;
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup) 
 	
+	private var playstate:PlayState;
+	
+	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Playstate:PlayState) 
 	{
 		super(X, Y, ThePlayer, _HP, DropsGrp);
 		loadGraphic("assets/images/mcbeck.png", true, 34, 32);
 		width = 16;
 		height = 16;
 		
+		playstate = Playstate;
 	}
 	
+	override public function finishKill(_):Void
+	{
+		super.finishKill(_);
+		playstate.gotoNextLevel();
+	}
+
 }

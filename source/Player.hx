@@ -9,7 +9,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxPoint;
 import flixel.util.FlxPoint;
 import weapons.Bullet;
-import weapons.CyanWeapon;
+import weapons.EightWayWeapon;
 import weapons.MagentaWeapon;
 import weapons.WeaponTemplate;
 import weapons.YellowWeapon;
@@ -62,9 +62,8 @@ class Player extends FlxSprite
 	{
 		super(inX, inY);
 		
-		
 		weapon1 = new WeaponTemplate("pea", bulletArray);
-		weapon2 = new CyanWeapon("cyan", bulletArray);
+		weapon2 = new EightWayWeapon("cyan", bulletArray);
 		weapon3 = new YellowWeapon("yellow", bulletArray);
 		weapon4 = new MagentaWeapon("magenta", bulletArray);
 		
@@ -98,7 +97,7 @@ class Player extends FlxSprite
 		
 	}
 	
-		
+
 	/* General checklist
 	 * 
 	At this point in time it seems as though I have limited options without any actual art or
@@ -179,20 +178,24 @@ class Player extends FlxSprite
 		super.update();
 	}
 
+	
 	private function playerInputs():Void
 	{
-		if (FlxG.keys.anyPressed(["LEFT", "A"]) && climbing == false) 
-		{
-			velocity.x = -xSpeed;
-			flipX = true;
-			climbing = false;
-		} 
-		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && climbing == false) 
+		if (FlxG.keys.anyPressed(["RIGHT", "D"]) && climbing == false) 
 		{
 			velocity.x = xSpeed;
 			flipX = false;
+			facing = FlxObject.RIGHT;
 			climbing = false;
 		}
+		else if (FlxG.keys.anyPressed(["LEFT", "A"]) && climbing == false) 
+		{
+			velocity.x = -xSpeed;
+			flipX = true;
+			facing = FlxObject.LEFT;
+			climbing = false;
+		} 
+		
 		
 		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder == true) 
 		{
@@ -213,8 +216,7 @@ class Player extends FlxSprite
 			velocity.y = -jumpPower;
 			remainingJumps--;
 			climbing = false;
-		} 
-		
+		} 	
 		if (FlxG.keys.anyJustPressed(["SPACE", "K"]))
 			shoot();
 			
@@ -248,6 +250,11 @@ class Player extends FlxSprite
 				remainingJumps--;
 			
 		}
+	}
+	
+	public function setTouchingLadder(bool:Bool):Void
+	{
+		touchingLadder = bool;
 	}
 	
 	private function shoot():Void
@@ -322,13 +329,8 @@ class Player extends FlxSprite
 			animation.add("fall_shoot", [54], 15, true);
 		}
 	}
-	
-	public function setTouchingLadder(bool:Bool):Void
-	{
-		touchingLadder = bool;
-	}
-	
-	public function getHurt(dmg:Int):Void
+
+	public function takeDamage(dmg:Int):Void
 	{
 		if (hurtTimer <= 0)
 		{
@@ -339,5 +341,6 @@ class Player extends FlxSprite
 		
 		
 	}
+	
 	
 }

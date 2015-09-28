@@ -21,6 +21,7 @@ class Spore extends Bullet
 			2 + clrBfr, 3 + clrBfr, 2 + clrBfr, 3 + clrBfr], 2, true);
 	}
 	
+	
 	override public function update():Void
     {
         animation.play("spore");

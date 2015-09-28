@@ -26,6 +26,7 @@ class MenuState extends FlxState
 	
 	function gotoNextStates():Void
 	{
+		//FlxG.switchState(new PlayState());
 		FlxG.switchState(new PlayState());
 	}
 	

@@ -65,6 +65,7 @@ package;
         });
     }
 
+	
     public function updateHUD(Health:Int = 0, Juice:Int = 0, Money:Int = 0, Weapon:String):Void
     {
         _txtHealth.text = Std.string(Health) + " / 3";

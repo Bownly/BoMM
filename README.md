@@ -33,8 +33,8 @@ Oh yeah, and Snaake.hx is actually that one enemy that goes back and forth and s
 Style Guidelines
 
 Function names:
-Functions are to be ordered in two groups. The first group includes new() and overrides. new() should always be first, followed by update() and destroy(). Finally, any further overrides should follow in alphabetical order.
-The second group of functions should be all the other functions for that class and should be alphabetized. No other special rules atm.
+Functions are to be ordered in two groups. For the first group, new() should always be first, followed by update(), kill(), finishKill(), and destroy(). (Note that not all classes will have a need for all of these functions.) Finally, any further overrides should follow in alphabetical order.
+The second group of functions should be all the other functions for that class and should be alphabetized. Oh, and there should be an extra linebreak inbetween the two sets of functions. No other special rules atm.
 
 Variable names:
 Nothing concrete yet. Open for suggestions.

@@ -21,6 +21,7 @@ class WeaponTemplate
 	public var maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
 	
+	public var palette:Int = 0;
 	public var unlocked:Bool = true;
 
 	public function new(Name:String, Bullets:FlxTypedGroup<Bullet>) 

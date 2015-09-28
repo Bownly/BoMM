@@ -48,8 +48,11 @@ class PlayState extends FlxState
 	private var _levelWidth:Float;
 	private var _levelHeight:Float;
 	
-	var mOogmoLoader:FlxOgmoLoader;
+	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
+	
+	private var levelId:String = "1";
+	private var tileName:String = "assets/images/wood_tiles.png";
 	
 	private var loader:FlxOgmoLoader;
 	private var midgroundMap:FlxTilemap;
@@ -133,7 +136,7 @@ class PlayState extends FlxState
 		add(_grpBadBullets);
 		miscGroup = new FlxGroup();
 		add(miscGroup);
-	
+		
 		setUpLevel();		
 		add(_grpWalls);		
 		
@@ -160,19 +163,6 @@ class PlayState extends FlxState
 		super.create();
 	}
 	
-	
-	/**
-	 * Function that is called when this state is destroyed - you might want to 
-	 * consider setting all objects this state uses to null to help garbage collection.
-	 */
-	override public function destroy():Void
-	{
-		super.destroy();
-	}
-
-	/**
-	 * Function that is called once every frame.
-	 */
 	override public function update():Void
 	{
 
@@ -180,8 +170,6 @@ class PlayState extends FlxState
 		FlxG.collide(_grpWalls, _grpEnemies);
 		FlxG.collide(_grpWalls, _grpBadBullets);
 		FlxG.collide(_grpWalls, playerBullets);
-		
-		FlxG.overlap(_player, _door, nextLevel);
 		
 		FlxG.overlap(_player, _grpEnemies, touchEnemy);
 		FlxG.overlap(_player, _grpBadBullets, playerGetHit);
@@ -206,19 +194,25 @@ class PlayState extends FlxState
 		// right now it's more convenient being in one place...
 		// could just make it a function unto itself, but whatever
 		_hud.updateHUD(_player.hp, _player.curWeapon.juice, _score, _player.curWeapon.name);	
-
-		
-		//FlxG.overlap(playerBullets, _grpLadders, bulletTouchLadder);
 		
 		super.update();
 	}	
-	
-	private function nextLevel(P:Player, D:Door):Void
+		
+	/**
+	 * Function that is called when this state is destroyed - you might want to 
+	 * consider setting all objects this state uses to null to help garbage collection.
+	 */
+	override public function destroy():Void
 	{
-		FlxG.switchState(new PlayState());
+		super.destroy();
+	}
+
+
+	public function gotoNextLevel():Void
+	{
+		FlxG.switchState(new Level1());
 
 	}
-	
 	
 	private function setUpLevel():Void
 	{
@@ -230,14 +224,12 @@ class PlayState extends FlxState
 		 * ...and... yeah, stuff...
 		 * */
 		
-		
-		
 		// stuff for the start room
-		_newEntrance = FlxRandom.intRanged(4, 4);
-		mOogmoLoader = new FlxOgmoLoader("assets/levels/level_1_start_" + _newEntrance + ".oel");
-		mTileMap = mOogmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+		_newEntrance = FlxRandom.intRanged(1, 1);
+		myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_start_" + _newEntrance + ".oel");
+		mTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 		
-		mOogmoLoader.loadEntities(placeEntities, "entities");
+		myOgmoLoader.loadEntities(placeEntities, "entities");
 		
 		_levelHeight += mTileMap.height;
 		_levelWidth += mTileMap.width;		
@@ -254,28 +246,28 @@ class PlayState extends FlxState
 			if (i == itemRoomPos)
 			{
 				// stuff for the item room
-				var myOgmoLoader  = new FlxOgmoLoader("assets/levels/level_1_item_start_" + _newEntrance + ".oel");
-				var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+				var myOgmoLoader  = new FlxOgmoLoader("assets/levels/level_" + levelId + "_item_start_" + _newEntrance + ".oel");
+				var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 				setUpMaps(myOgmoLoader, myTileMap);
 				
-				var endId:Int = FlxRandom.intRanged(1, 2);
-				//myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_item_end_" + endId + ".oel");
-				myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_shop_end_" + endId + ".oel");
-				myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+				var endId:Int = FlxRandom.intRanged(1, 1);
+				//myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_item_end_" + endId + ".oel");
+				myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_shop_end_" + endId + ".oel");
+				myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 				setUpMaps(myOgmoLoader, myTileMap);
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 2);
+			id = FlxRandom.intRanged(1, 1);
 			
-			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_" + _newEntrance + "_" + id + ".oel");
-			var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
+			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 			setUpMaps(myOgmoLoader, myTileMap);
 		}
 		
 		// stuff for the end room
-		var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_1_end_" + _newEntrance + ".oel");
-		var myTileMap = myOgmoLoader.loadTilemap(AssetPaths.wood_tiles__png, 16, 16, "walls");
+		var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_end_" + _newEntrance + ".oel");
+		var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 		setUpMaps(myOgmoLoader, myTileMap);
 	}
 	
@@ -317,7 +309,7 @@ class PlayState extends FlxState
 	{
 		if (E.alive == true)
 		{
-			P.getHurt(1);
+			P.takeDamage(1);
 			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
 		}
 	}
@@ -325,7 +317,7 @@ class PlayState extends FlxState
 	{
 		if (B.alive == true)
 		{
-			P.getHurt(B.getDamage());
+			P.takeDamage(B.getDamage());
 			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
 		}
 	}
@@ -396,10 +388,10 @@ class PlayState extends FlxState
 	}
 	private function playerTouchHazard(P:Player, S:Spike):Void
 	{
-		P.getHurt(S.dmg);
+		P.takeDamage(S.dmg);
 		//_hud.updateHUD(_player.hp, _score, _player.weaponArray[_player.curWeaponLoc].name);
 	}
-	
+
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		var x:Float = Std.parseFloat(entityData.get("x"));
@@ -452,7 +444,7 @@ class PlayState extends FlxState
 				case "notey":
 					_grpEnemies.add(new enemies.Notey(x, y, _player, dropsGroup));
 				case "testboss":
-					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets));
+					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets, this));
 				case "balun":
 					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, 1));
 				case "mush":

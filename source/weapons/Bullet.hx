@@ -24,6 +24,30 @@ class Bullet extends FlxSprite
 	private var ogY:Float;
 	private var RANGE:Int = 128;
 	
+	
+	/* Weapon ideas list
+	 * 
+	 * Shoot for 9 weapons, 3 of each color
+	 * Should they be roughly grouped by function? I think so.
+	 
+	 * leaf shield
+	 * reflector
+		
+     * horizontal both directions
+	 * 8 direction
+		
+	 * charge
+	 * grenade
+	 * melee
+	 * ricochet
+	 * homing
+	 * spread
+	 * boomerang
+	 * ground hugger
+	 * anti-air
+	 
+	 * */
+	
 	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int)
     {
         super(X, Y);
@@ -55,7 +79,20 @@ class Bullet extends FlxSprite
 		super.update();
 
     }
+ 	
+    override public function destroy():Void
+    {
+		alive = false;
+//		exists = false;
+        super.destroy();
+    }
  
+	
+	public function getDamage():Int
+	{
+		return damage;
+	}
+	
 	public function resolveVelocity():Void
 	{
 		if (direction == FlxObject.LEFT)
@@ -86,18 +123,6 @@ class Bullet extends FlxSprite
 			velocity.x = speed * 0.707;
 			velocity.y = -speed * 0.707;
 		}
-	}
-	
-    override public function destroy():Void
-    {
-		alive = false;
-//		exists = false;
-        super.destroy();
-    }
- 
-	public function getDamage():Int
-	{
-		return damage;
 	}
 	
 }

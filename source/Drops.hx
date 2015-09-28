@@ -12,7 +12,7 @@ class Drops extends FlxSprite
 {
 	private var _player:Player;
 	
-	public var i:Int = 0;
+	public var id:Int = 0;
 	public var price:Int = 0;
 	public var free:Bool = true;
 	
@@ -33,9 +33,9 @@ class Drops extends FlxSprite
 		free = Free;
 		
 		_player = ThePlayer;
-		i = Index;
+		id = Index;
 		
-		animation.add("idle", [i, i+1], 5, true);
+		animation.add("idle", [id, id+1], 5, true);
 		
 		price = allocatePrices();
 		
@@ -49,10 +49,22 @@ class Drops extends FlxSprite
 			super.update();
 		}
 	}
+
+	override public function kill():Void
+	{
+		alive = false;
+		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, complete:finishKill } );
+	}
+	
+	private function finishKill(_):Void
+	{
+		exists = false;
+	}
+
 	
 	public function allocatePrices():Int
 	{
-		switch(i)
+		switch(id)
 		{
 			case 0:  // do Mushroom stuff
 				return 10;
@@ -62,6 +74,35 @@ class Drops extends FlxSprite
 				return 10;
 			case 6:  // do sword in stone stuff
 				return 30;
+		}
+		return 0;
+	}
+	
+	public function doStuff(score:Int):Int  // called on collision with player
+	{
+		if (price <= score || free == true)
+		{
+			switch(id)
+			{
+				case 0:  // do Mushroom stuff
+					playerHeal(10);
+				case 2:  // do Butterfly stuff
+					playerHeal(20);
+				case 4:  // do Juice goblet stuff
+					playerJuiceRestore(5);
+				case 6:  // do sword in stone stuff
+					weaponStrengthUp(1);
+			}
+			if (free == true)
+			{
+				this.kill();
+				return 0;
+			}
+			else
+			{
+				this.kill();	
+				return price;	
+			}
 		}
 		return 0;
 	}
@@ -85,50 +126,5 @@ class Drops extends FlxSprite
 	}
 	
 	
-	public function doStuff(score:Int):Int  // called on collision with player
-	{
-		if (price <= score || free == true)
-		{
-			trace("score: " + score);
-			trace("price: " + price);
-			switch(i)
-			{
-				case 0:
-					// do Mushroom stuff
-					playerHeal(10);
-				case 2:
-					// do Butterfly stuff
-					playerHeal(20);
-				case 4:
-					// do Juice goblet stuff
-					playerJuiceRestore(5);
-				case 6:
-					// do sword in stone stuff
-					weaponStrengthUp(1);
-			}
-//			score -= price;
-			if (free == true)
-			{
-				this.kill();
-				return 0;
-			}
-			else
-			{
-				this.kill();	
-				return price;	
-			}
-		}
-		return 0;
-	}
-	
-	override public function kill():Void
-	{
-		alive = false;
-		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, complete:finishKill } );
-	}
-	
-	private function finishKill(_):Void
-	{
-		exists = false;
-	}
+
 }

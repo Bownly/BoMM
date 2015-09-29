@@ -1,6 +1,8 @@
 package;
 
+import flixel.group.FlxTypedGroup;
 import flixel.util.FlxSave;
+import weapons.Bullet;
 
 /**
  * Handy, pre-built Registry class that can be used to store 
@@ -34,4 +36,8 @@ class Reg
 	 * Especially useful for setting up multiple save slots.
 	 */
 	public static var saves:Array<FlxSave> = [];
+	
+	public static var bullets:FlxTypedGroup<weapons.Bullet> = new FlxTypedGroup<weapons.Bullet>();
+	
+	public static var player:Player = new Player(0, 0, bullets);
 }

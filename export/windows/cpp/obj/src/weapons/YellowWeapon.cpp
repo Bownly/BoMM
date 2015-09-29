@@ -45,7 +45,7 @@ HX_STACK_ARG(Bullets,"Bullets")
 	HX_STACK_LINE(19)
 	this->juiceMax = (int)9;
 	HX_STACK_LINE(20)
-	this->juiceCost = (int)3;
+	this->juiceCost = (int)1;
 }
 ;
 	return null();
@@ -72,15 +72,15 @@ Void YellowWeapon_obj::shoot( ::Player _player){
 		HX_STACK_LINE(26)
 		int _g = _player->bulletArray->countLiving();		HX_STACK_VAR(_g,"_g");
 		HX_STACK_LINE(26)
-		if (((  (((_g < _player->_maxBullets))) ? bool((this->juice >= this->juiceCost)) : bool(false) ))){
+		if (((  (((_g < this->maxBullets))) ? bool((this->juice >= this->juiceCost)) : bool(false) ))){
 			HX_STACK_LINE(28)
 			_player->postShotTimer = .33;
 			HX_STACK_LINE(30)
 			if ((_player->flipX)){
 				HX_STACK_LINE(32)
-				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x - (int)8),(_player->y + (int)8),(int)500,(int)1,(_player->_DAMAGE + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
+				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x - (int)8),(_player->y + (int)8),(int)500,(int)1,(_player->damage + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
 				HX_STACK_LINE(33)
-				::weapons::Bullet newBullet2 = ::weapons::Bullet_obj::__new((_player->x - (int)8),(_player->y + (int)16),(int)500,(int)1,(_player->_DAMAGE + this->damage),(int)256);		HX_STACK_VAR(newBullet2,"newBullet2");
+				::weapons::Bullet newBullet2 = ::weapons::Bullet_obj::__new((_player->x - (int)8),(_player->y + (int)16),(int)500,(int)1,(_player->damage + this->damage),(int)256);		HX_STACK_VAR(newBullet2,"newBullet2");
 				HX_STACK_LINE(34)
 				_player->bulletArray->add(newBullet);
 				HX_STACK_LINE(35)
@@ -88,9 +88,9 @@ Void YellowWeapon_obj::shoot( ::Player _player){
 			}
 			else{
 				HX_STACK_LINE(39)
-				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x + (int)8),(_player->y + (int)8),(int)500,(int)16,(_player->_DAMAGE + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
+				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x + (int)8),(_player->y + (int)8),(int)500,(int)16,(_player->damage + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
 				HX_STACK_LINE(40)
-				::weapons::Bullet newBullet2 = ::weapons::Bullet_obj::__new((_player->x + (int)8),(_player->y + (int)16),(int)500,(int)16,(_player->_DAMAGE + this->damage),(int)256);		HX_STACK_VAR(newBullet2,"newBullet2");
+				::weapons::Bullet newBullet2 = ::weapons::Bullet_obj::__new((_player->x + (int)8),(_player->y + (int)16),(int)500,(int)16,(_player->damage + this->damage),(int)256);		HX_STACK_VAR(newBullet2,"newBullet2");
 				HX_STACK_LINE(41)
 				_player->bulletArray->add(newBullet);
 				HX_STACK_LINE(42)

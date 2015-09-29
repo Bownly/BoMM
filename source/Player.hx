@@ -71,7 +71,8 @@ class Player extends FlxSprite
 		curWeaponLoc = 0;
 		curWeapon = weaponArray[curWeaponLoc];
 		
-		loadGraphic("assets/images/mm.png", true, 32, 32);
+		
+		loadGraphic(AssetPaths.mm__png, true, 32, 32);
 		width = 16;
 		height = 22;
 		offset = new FlxPoint(8, 4);
@@ -195,7 +196,6 @@ class Player extends FlxSprite
 			facing = FlxObject.LEFT;
 			climbing = false;
 		} 
-		
 		
 		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder == true) 
 		{

@@ -28,7 +28,7 @@ namespace weapons{
 
 Void Bullet_obj::__construct(Float X,Float Y,Float Speed,int Direction,int Damage,int Range)
 {
-HX_STACK_FRAME("weapons.Bullet","new",0xe3ee754b,"weapons.Bullet.new","weapons/Bullet.hx",14,0x78fd7464)
+HX_STACK_FRAME("weapons.Bullet","new",0xe3ee754b,"weapons.Bullet.new","weapons/Bullet.hx",18,0x78fd7464)
 HX_STACK_THIS(this)
 HX_STACK_ARG(X,"X")
 HX_STACK_ARG(Y,"Y")
@@ -37,24 +37,26 @@ HX_STACK_ARG(Direction,"Direction")
 HX_STACK_ARG(Damage,"Damage")
 HX_STACK_ARG(Range,"Range")
 {
-	HX_STACK_LINE(21)
-	this->RANGE = (int)128;
 	HX_STACK_LINE(25)
+	this->RANGE = (int)128;
+	HX_STACK_LINE(53)
 	super::__construct(X,Y,null());
-	HX_STACK_LINE(26)
+	HX_STACK_LINE(54)
 	this->ogX = X;
-	HX_STACK_LINE(27)
+	HX_STACK_LINE(55)
 	this->ogY = Y;
-	HX_STACK_LINE(28)
+	HX_STACK_LINE(56)
 	this->speed = Speed;
-	HX_STACK_LINE(29)
+	HX_STACK_LINE(57)
 	this->direction = Direction;
-	HX_STACK_LINE(30)
+	HX_STACK_LINE(58)
 	this->damage = Damage;
-	HX_STACK_LINE(31)
+	HX_STACK_LINE(59)
 	this->RANGE = Range;
-	HX_STACK_LINE(32)
+	HX_STACK_LINE(60)
 	this->loadGraphic(HX_CSTRING("assets/images/coin.png"),true,(int)6,(int)6,true,HX_CSTRING("bullet"));
+	HX_STACK_LINE(61)
+	this->resolveVelocity();
 }
 ;
 	return null();
@@ -75,56 +77,34 @@ Dynamic Bullet_obj::__Create(hx::DynamicArray inArgs)
 
 Void Bullet_obj::update( ){
 {
-		HX_STACK_FRAME("weapons.Bullet","update",0x61fe85fe,"weapons.Bullet.update","weapons/Bullet.hx",39,0x78fd7464)
+		HX_STACK_FRAME("weapons.Bullet","update",0x61fe85fe,"weapons.Bullet.update","weapons/Bullet.hx",66,0x78fd7464)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(40)
-		this->super::update();
-		HX_STACK_LINE(41)
-		if (((this->direction == (int)1))){
-			HX_STACK_LINE(42)
-			this->velocity->set_x(-(this->speed));
-		}
-		HX_STACK_LINE(44)
-		if (((this->direction == (int)16))){
-			HX_STACK_LINE(45)
-			this->velocity->set_x(this->speed);
-		}
-		HX_STACK_LINE(47)
-		if (((this->direction == (int)4096))){
-			HX_STACK_LINE(48)
-			this->velocity->set_y(this->speed);
-		}
-		HX_STACK_LINE(50)
-		if (((this->direction == (int)256))){
-			HX_STACK_LINE(51)
-			this->velocity->set_y(-(this->speed));
-		}
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(70)
 		Float _g = ::Math_obj::abs((this->x - this->ogX));		HX_STACK_VAR(_g,"_g");
 		struct _Function_1_1{
 			inline static bool Block( hx::ObjectPtr< ::weapons::Bullet_obj > __this){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","weapons/Bullet.hx",58,0x78fd7464)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","weapons/Bullet.hx",70,0x78fd7464)
 				{
-					HX_STACK_LINE(58)
+					HX_STACK_LINE(70)
 					Float _g1 = ::Math_obj::abs((__this->y - __this->ogY));		HX_STACK_VAR(_g1,"_g1");
-					HX_STACK_LINE(58)
+					HX_STACK_LINE(70)
 					return (_g1 > __this->RANGE);
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(70)
 		if (((  ((!(((_g > this->RANGE))))) ? bool(_Function_1_1::Block(this)) : bool(true) ))){
-			HX_STACK_LINE(60)
+			HX_STACK_LINE(72)
 			this->kill();
 		}
-		else{
-			HX_STACK_LINE(62)
-			if (((this->touching != (int)0))){
-				HX_STACK_LINE(65)
-				this->kill();
-			}
+		HX_STACK_LINE(74)
+		if (((((int(this->touching) & int((int)4369))) > (int)0))){
+			HX_STACK_LINE(77)
+			this->kill();
 		}
+		HX_STACK_LINE(79)
+		this->super::update();
 	}
 return null();
 }
@@ -132,11 +112,11 @@ return null();
 
 Void Bullet_obj::destroy( ){
 {
-		HX_STACK_FRAME("weapons.Bullet","destroy",0xe36d2365,"weapons.Bullet.destroy","weapons/Bullet.hx",71,0x78fd7464)
+		HX_STACK_FRAME("weapons.Bullet","destroy",0xe36d2365,"weapons.Bullet.destroy","weapons/Bullet.hx",84,0x78fd7464)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(85)
 		this->set_alive(false);
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(87)
 		this->super::destroy();
 	}
 return null();
@@ -144,14 +124,73 @@ return null();
 
 
 int Bullet_obj::getDamage( ){
-	HX_STACK_FRAME("weapons.Bullet","getDamage",0x199cc0d0,"weapons.Bullet.getDamage","weapons/Bullet.hx",79,0x78fd7464)
+	HX_STACK_FRAME("weapons.Bullet","getDamage",0x199cc0d0,"weapons.Bullet.getDamage","weapons/Bullet.hx",93,0x78fd7464)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(79)
+	HX_STACK_LINE(93)
 	return this->damage;
 }
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Bullet_obj,getDamage,return )
+
+Void Bullet_obj::resolveVelocity( ){
+{
+		HX_STACK_FRAME("weapons.Bullet","resolveVelocity",0x6ab27694,"weapons.Bullet.resolveVelocity","weapons/Bullet.hx",97,0x78fd7464)
+		HX_STACK_THIS(this)
+		HX_STACK_LINE(98)
+		if (((this->direction == (int)1))){
+			HX_STACK_LINE(99)
+			this->velocity->set_x(-(this->speed));
+		}
+		HX_STACK_LINE(100)
+		if (((this->direction == (int)16))){
+			HX_STACK_LINE(101)
+			this->velocity->set_x(this->speed);
+		}
+		HX_STACK_LINE(102)
+		if (((this->direction == (int)4096))){
+			HX_STACK_LINE(103)
+			this->velocity->set_y(this->speed);
+		}
+		HX_STACK_LINE(104)
+		if (((this->direction == (int)256))){
+			HX_STACK_LINE(105)
+			this->velocity->set_y(-(this->speed));
+		}
+		HX_STACK_LINE(106)
+		if (((this->direction == (int)4097))){
+			HX_STACK_LINE(108)
+			this->velocity->set_x((-(this->speed) * 0.707));
+			HX_STACK_LINE(109)
+			this->velocity->set_y((this->speed * 0.707));
+		}
+		HX_STACK_LINE(111)
+		if (((this->direction == (int)257))){
+			HX_STACK_LINE(113)
+			this->velocity->set_x((-(this->speed) * 0.707));
+			HX_STACK_LINE(114)
+			this->velocity->set_y((-(this->speed) * 0.707));
+		}
+		HX_STACK_LINE(116)
+		if (((this->direction == (int)4112))){
+			HX_STACK_LINE(118)
+			this->velocity->set_x((this->speed * 0.707));
+			HX_STACK_LINE(119)
+			this->velocity->set_y((this->speed * 0.707));
+		}
+		HX_STACK_LINE(121)
+		if (((this->direction == (int)272))){
+			HX_STACK_LINE(123)
+			this->velocity->set_x((this->speed * 0.707));
+			HX_STACK_LINE(124)
+			this->velocity->set_y((-(this->speed) * 0.707));
+		}
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Bullet_obj,resolveVelocity,(void))
 
 
 Bullet_obj::Bullet_obj()
@@ -179,6 +218,9 @@ Dynamic Bullet_obj::__Field(const ::String &inName,bool inCallProp)
 	case 9:
 		if (HX_FIELD_EQ(inName,"direction") ) { return direction; }
 		if (HX_FIELD_EQ(inName,"getDamage") ) { return getDamage_dyn(); }
+		break;
+	case 15:
+		if (HX_FIELD_EQ(inName,"resolveVelocity") ) { return resolveVelocity_dyn(); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -239,6 +281,7 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("update"),
 	HX_CSTRING("destroy"),
 	HX_CSTRING("getDamage"),
+	HX_CSTRING("resolveVelocity"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {

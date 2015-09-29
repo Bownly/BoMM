@@ -44,6 +44,10 @@ class HXCPP_CLASS_ATTRIBUTES  EnemyTemplate_obj : public ::flixel::FlxSprite_obj
 		::Player _player;
 		int _health;
 		::flixel::group::FlxTypedGroup _drops;
+		int GREY;
+		int CYAN;
+		int MAGENTA;
+		int YELLOW;
 		virtual Void takeDamage( int damage);
 		Dynamic takeDamage_dyn();
 

@@ -69,6 +69,67 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Font.registerFont (__ASSET__assets_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__assets_fonts_arial_ttf);
 		
@@ -76,6 +137,67 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -573,24 +695,146 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
-		path.set ("assets/data/data-goes-here.txt", "assets/data/data-goes-here.txt");
-		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
-		path.set ("assets/data/HaxeFlixelTestLevel1.oel", "assets/data/HaxeFlixelTestLevel1.oel");
-		type.set ("assets/data/HaxeFlixelTestLevel1.oel", AssetType.TEXT);
-		path.set ("assets/data/room-001.oel", "assets/data/room-001.oel");
-		type.set ("assets/data/room-001.oel", AssetType.TEXT);
-		path.set ("assets/data/room-002.oel", "assets/data/room-002.oel");
-		type.set ("assets/data/room-002.oel", AssetType.TEXT);
+		path.set ("assets/images/ado.png", "assets/images/ado.png");
+		type.set ("assets/images/ado.png", AssetType.IMAGE);
+		path.set ("assets/images/balun.png", "assets/images/balun.png");
+		type.set ("assets/images/balun.png", AssetType.IMAGE);
+		path.set ("assets/images/burd.png", "assets/images/burd.png");
+		type.set ("assets/images/burd.png", AssetType.IMAGE);
+		path.set ("assets/images/burdegg.png", "assets/images/burdegg.png");
+		type.set ("assets/images/burdegg.png", AssetType.IMAGE);
+		path.set ("assets/images/burdsmall.png", "assets/images/burdsmall.png");
+		type.set ("assets/images/burdsmall.png", AssetType.IMAGE);
 		path.set ("assets/images/coin.png", "assets/images/coin.png");
 		type.set ("assets/images/coin.png", AssetType.IMAGE);
+		path.set ("assets/images/crawler.png", "assets/images/crawler.png");
+		type.set ("assets/images/crawler.png", AssetType.IMAGE);
+		path.set ("assets/images/drops.png", "assets/images/drops.png");
+		type.set ("assets/images/drops.png", AssetType.IMAGE);
+		path.set ("assets/images/heart.png", "assets/images/heart.png");
+		type.set ("assets/images/heart.png", AssetType.IMAGE);
 		path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		path.set ("assets/images/juice.png", "assets/images/juice.png");
+		type.set ("assets/images/juice.png", AssetType.IMAGE);
+		path.set ("assets/images/ladder.png", "assets/images/ladder.png");
+		type.set ("assets/images/ladder.png", AssetType.IMAGE);
 		path.set ("assets/images/mc.png", "assets/images/mc.png");
 		type.set ("assets/images/mc.png", AssetType.IMAGE);
-		path.set ("assets/images/ranger.png", "assets/images/ranger.png");
-		type.set ("assets/images/ranger.png", AssetType.IMAGE);
+		path.set ("assets/images/mcbeck.png", "assets/images/mcbeck.png");
+		type.set ("assets/images/mcbeck.png", AssetType.IMAGE);
+		path.set ("assets/images/metool.png", "assets/images/metool.png");
+		type.set ("assets/images/metool.png", AssetType.IMAGE);
+		path.set ("assets/images/mm.png", "assets/images/mm.png");
+		type.set ("assets/images/mm.png", AssetType.IMAGE);
+		path.set ("assets/images/mush.png", "assets/images/mush.png");
+		type.set ("assets/images/mush.png", AssetType.IMAGE);
+		path.set ("assets/images/nes_tiles.png", "assets/images/nes_tiles.png");
+		type.set ("assets/images/nes_tiles.png", AssetType.IMAGE);
+		path.set ("assets/images/notey.png", "assets/images/notey.png");
+		type.set ("assets/images/notey.png", AssetType.IMAGE);
+		path.set ("assets/images/snaake.png", "assets/images/snaake.png");
+		type.set ("assets/images/snaake.png", AssetType.IMAGE);
+		path.set ("assets/images/snobal.png", "assets/images/snobal.png");
+		type.set ("assets/images/snobal.png", AssetType.IMAGE);
+		path.set ("assets/images/spike.png", "assets/images/spike.png");
+		type.set ("assets/images/spike.png", AssetType.IMAGE);
+		path.set ("assets/images/spore.png", "assets/images/spore.png");
+		type.set ("assets/images/spore.png", AssetType.IMAGE);
+		path.set ("assets/images/tiles.png", "assets/images/tiles.png");
+		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		path.set ("assets/images/wood_tiles.png", "assets/images/wood_tiles.png");
 		type.set ("assets/images/wood_tiles.png", AssetType.IMAGE);
+		path.set ("assets/images/wood_tiles2.png", "assets/images/wood_tiles2.png");
+		type.set ("assets/images/wood_tiles2.png", AssetType.IMAGE);
+		path.set ("assets/images/wood_tiles3.png", "assets/images/wood_tiles3.png");
+		type.set ("assets/images/wood_tiles3.png", AssetType.IMAGE);
+		path.set ("assets/levels/data-goes-here.txt", "assets/levels/data-goes-here.txt");
+		type.set ("assets/levels/data-goes-here.txt", AssetType.TEXT);
+		path.set ("assets/levels/HaxeFlixelTestLevel1.oel", "assets/levels/HaxeFlixelTestLevel1.oel");
+		type.set ("assets/levels/HaxeFlixelTestLevel1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_1_1.oel", "assets/levels/level_1_1_1.oel");
+		type.set ("assets/levels/level_1_1_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_1_1og2.oel", "assets/levels/level_1_1_1og2.oel");
+		type.set ("assets/levels/level_1_1_1og2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_1_2.oel", "assets/levels/level_1_1_2.oel");
+		type.set ("assets/levels/level_1_1_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_1_3.oel", "assets/levels/level_1_1_3.oel");
+		type.set ("assets/levels/level_1_1_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_1_4.oel", "assets/levels/level_1_1_4.oel");
+		type.set ("assets/levels/level_1_1_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_2_1.oel", "assets/levels/level_1_2_1.oel");
+		type.set ("assets/levels/level_1_2_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_2_2.oel", "assets/levels/level_1_2_2.oel");
+		type.set ("assets/levels/level_1_2_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_2_3.oel", "assets/levels/level_1_2_3.oel");
+		type.set ("assets/levels/level_1_2_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_2_4.oel", "assets/levels/level_1_2_4.oel");
+		type.set ("assets/levels/level_1_2_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_3_1.oel", "assets/levels/level_1_3_1.oel");
+		type.set ("assets/levels/level_1_3_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_3_2.oel", "assets/levels/level_1_3_2.oel");
+		type.set ("assets/levels/level_1_3_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_3_3.oel", "assets/levels/level_1_3_3.oel");
+		type.set ("assets/levels/level_1_3_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_3_3og.oel", "assets/levels/level_1_3_3og.oel");
+		type.set ("assets/levels/level_1_3_3og.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_3_4.oel", "assets/levels/level_1_3_4.oel");
+		type.set ("assets/levels/level_1_3_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_4_1.oel", "assets/levels/level_1_4_1.oel");
+		type.set ("assets/levels/level_1_4_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_4_2.oel", "assets/levels/level_1_4_2.oel");
+		type.set ("assets/levels/level_1_4_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_4_3.oel", "assets/levels/level_1_4_3.oel");
+		type.set ("assets/levels/level_1_4_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_4_4.oel", "assets/levels/level_1_4_4.oel");
+		type.set ("assets/levels/level_1_4_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_end_1.oel", "assets/levels/level_1_end_1.oel");
+		type.set ("assets/levels/level_1_end_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_end_2.oel", "assets/levels/level_1_end_2.oel");
+		type.set ("assets/levels/level_1_end_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_end_3.oel", "assets/levels/level_1_end_3.oel");
+		type.set ("assets/levels/level_1_end_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_end_4.oel", "assets/levels/level_1_end_4.oel");
+		type.set ("assets/levels/level_1_end_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_end_1.oel", "assets/levels/level_1_item_end_1.oel");
+		type.set ("assets/levels/level_1_item_end_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_end_2.oel", "assets/levels/level_1_item_end_2.oel");
+		type.set ("assets/levels/level_1_item_end_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_end_3.oel", "assets/levels/level_1_item_end_3.oel");
+		type.set ("assets/levels/level_1_item_end_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_end_4.oel", "assets/levels/level_1_item_end_4.oel");
+		type.set ("assets/levels/level_1_item_end_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_mid.oel", "assets/levels/level_1_item_mid.oel");
+		type.set ("assets/levels/level_1_item_mid.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_start_1.oel", "assets/levels/level_1_item_start_1.oel");
+		type.set ("assets/levels/level_1_item_start_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_start_2.oel", "assets/levels/level_1_item_start_2.oel");
+		type.set ("assets/levels/level_1_item_start_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_start_3.oel", "assets/levels/level_1_item_start_3.oel");
+		type.set ("assets/levels/level_1_item_start_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_item_start_4.oel", "assets/levels/level_1_item_start_4.oel");
+		type.set ("assets/levels/level_1_item_start_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_1.oel", "assets/levels/level_1_shop_end_1.oel");
+		type.set ("assets/levels/level_1_shop_end_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_2.oel", "assets/levels/level_1_shop_end_2.oel");
+		type.set ("assets/levels/level_1_shop_end_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_3.oel", "assets/levels/level_1_shop_end_3.oel");
+		type.set ("assets/levels/level_1_shop_end_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_shop_end_4.oel", "assets/levels/level_1_shop_end_4.oel");
+		type.set ("assets/levels/level_1_shop_end_4.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_start_1.oel", "assets/levels/level_1_start_1.oel");
+		type.set ("assets/levels/level_1_start_1.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_start_1woodman.oel", "assets/levels/level_1_start_1woodman.oel");
+		type.set ("assets/levels/level_1_start_1woodman.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_start_2.oel", "assets/levels/level_1_start_2.oel");
+		type.set ("assets/levels/level_1_start_2.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_start_3.oel", "assets/levels/level_1_start_3.oel");
+		type.set ("assets/levels/level_1_start_3.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_start_3airman.oel", "assets/levels/level_1_start_3airman.oel");
+		type.set ("assets/levels/level_1_start_3airman.oel", AssetType.TEXT);
+		path.set ("assets/levels/level_1_start_4.oel", "assets/levels/level_1_start_4.oel");
+		type.set ("assets/levels/level_1_start_4.oel", AssetType.TEXT);
 		path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		path.set ("assets/sounds/sounds-go-here.txt", "assets/sounds/sounds-go-here.txt");
@@ -608,33 +852,216 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
-		id = "assets/data/data-goes-here.txt";
+		id = "assets/images/ado.png";
 		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/HaxeFlixelTestLevel1.oel";
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/balun.png";
 		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/room-001.oel";
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/burd.png";
 		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "assets/data/room-002.oel";
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/burdegg.png";
 		path.set (id, id);
-		type.set (id, AssetType.TEXT);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/burdsmall.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/coin.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/crawler.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/drops.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/heart.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/images-go-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/images/juice.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/ladder.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/mc.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/ranger.png";
+		id = "assets/images/mcbeck.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/metool.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/mm.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/mush.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/nes_tiles.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/notey.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/snaake.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/snobal.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/spike.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/spore.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tiles.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/wood_tiles.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/wood_tiles2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/wood_tiles3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/levels/data-goes-here.txt";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/HaxeFlixelTestLevel1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_1_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_1_1og2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_1_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_1_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_1_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_2_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_2_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_2_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_2_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_3_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_3_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_3_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_3_3og.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_3_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_4_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_4_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_4_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_4_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_end_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_end_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_end_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_end_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_end_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_end_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_end_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_end_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_mid.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_start_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_start_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_start_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_item_start_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_shop_end_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_start_1.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_start_1woodman.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_start_2.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_start_3.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_start_3airman.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/level_1_start_4.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -681,6 +1108,67 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -689,6 +1177,67 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1416,11 +1965,133 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_arial_ttf extends null { }
 
 
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -12,6 +12,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.FlxSubState;
 import flixel.group.FlxGroup;
 import flixel.group.FlxSpriteGroup;
 import flixel.group.FlxTypedGroup;
@@ -188,6 +189,18 @@ class PlayState extends FlxState
 		{
 			FlxG.switchState(new PlayState());
 		}
+		if (FlxG.keys.anyPressed(["T"])) 
+		{
+			FlxG.switchState(new MenuState());
+		}
+		
+		if (FlxG.keys.anyJustPressed(["P"]))
+		{
+			var sub = new PauseState();
+			//var sub = new FlxSubState(0xFFFFAAAA);
+			this.openSubState(sub);
+		}
+		
 		
 		
 		// possible todo: Call this only when something changes, and not every frame

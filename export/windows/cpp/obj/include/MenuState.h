@@ -8,10 +8,13 @@
 #include <flixel/FlxState.h>
 HX_DECLARE_CLASS0(MenuState)
 HX_DECLARE_CLASS1(flixel,FlxBasic)
+HX_DECLARE_CLASS1(flixel,FlxObject)
+HX_DECLARE_CLASS1(flixel,FlxSprite)
 HX_DECLARE_CLASS1(flixel,FlxState)
 HX_DECLARE_CLASS2(flixel,group,FlxGroup)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
 HX_DECLARE_CLASS2(flixel,interfaces,IFlxDestroyable)
+HX_DECLARE_CLASS2(flixel,text,FlxText)
 
 
 class HXCPP_CLASS_ATTRIBUTES  MenuState_obj : public ::flixel::FlxState_obj{
@@ -32,16 +35,37 @@ class HXCPP_CLASS_ATTRIBUTES  MenuState_obj : public ::flixel::FlxState_obj{
 		HX_DO_RTTI;
 		static void __boot();
 		static void __register();
+		void __Mark(HX_MARK_PARAMS);
+		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("MenuState"); }
 
+		int colorDefault;
+		int colorSelected;
+		int selectedLevel;
+		::flixel::text::FlxText txtLevel1;
+		::flixel::text::FlxText txtLevel2;
+		::flixel::text::FlxText txtLevel3;
+		::flixel::group::FlxTypedGroup grpLevel;
 		virtual Void create( );
 
-		virtual Void gotoNextStates( );
-		Dynamic gotoNextStates_dyn();
+		virtual Void update( );
+
+		virtual Void colorize( );
+		Dynamic colorize_dyn();
+
+		virtual Void gotoLevel1( );
+		Dynamic gotoLevel1_dyn();
+
+		virtual Void gotoLevel2( );
+		Dynamic gotoLevel2_dyn();
+
+		virtual Void gotoLevel3( );
+		Dynamic gotoLevel3_dyn();
+
+		virtual Void gotoNextState( );
+		Dynamic gotoNextState_dyn();
 
 		virtual Void destroy( );
-
-		virtual Void update( );
 
 };
 

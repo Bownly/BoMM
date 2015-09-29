@@ -20,12 +20,12 @@ class HXCPP_CLASS_ATTRIBUTES  Drops_obj : public ::flixel::FlxSprite_obj{
 		typedef ::flixel::FlxSprite_obj super;
 		typedef Drops_obj OBJ_;
 		Drops_obj();
-		Void __construct(hx::Null< Float >  __o_X,hx::Null< Float >  __o_Y,int Index,::Player ThePlayer);
+		Void __construct(hx::Null< Float >  __o_X,hx::Null< Float >  __o_Y,int Index,::Player ThePlayer,bool Free);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true)
 			{ return hx::Object::operator new(inSize,inContainer); }
-		static hx::ObjectPtr< Drops_obj > __new(hx::Null< Float >  __o_X,hx::Null< Float >  __o_Y,int Index,::Player ThePlayer);
+		static hx::ObjectPtr< Drops_obj > __new(hx::Null< Float >  __o_X,hx::Null< Float >  __o_Y,int Index,::Player ThePlayer,bool Free);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~Drops_obj();
@@ -38,8 +38,21 @@ class HXCPP_CLASS_ATTRIBUTES  Drops_obj : public ::flixel::FlxSprite_obj{
 		::String __ToString() const { return HX_CSTRING("Drops"); }
 
 		::Player _player;
-		int i;
+		int id;
+		int price;
+		bool free;
 		virtual Void update( );
+
+		virtual Void kill( );
+
+		virtual Void finishKill( ::flixel::tweens::FlxTween _);
+		Dynamic finishKill_dyn();
+
+		virtual int allocatePrices( );
+		Dynamic allocatePrices_dyn();
+
+		virtual int doStuff( int score);
+		Dynamic doStuff_dyn();
 
 		virtual Void playerHeal( int Val);
 		Dynamic playerHeal_dyn();
@@ -49,14 +62,6 @@ class HXCPP_CLASS_ATTRIBUTES  Drops_obj : public ::flixel::FlxSprite_obj{
 
 		virtual Void weaponStrengthUp( int Val);
 		Dynamic weaponStrengthUp_dyn();
-
-		virtual Void doStuff( );
-		Dynamic doStuff_dyn();
-
-		virtual Void kill( );
-
-		virtual Void finishKill( ::flixel::tweens::FlxTween _);
-		Dynamic finishKill_dyn();
 
 };
 

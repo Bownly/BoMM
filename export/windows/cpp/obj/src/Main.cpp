@@ -66,31 +66,31 @@ Void Main_obj::__construct()
 HX_STACK_FRAME("Main","new",0x6616a5cb,"Main.new","Main.hx",11,0x087e5c05)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(19)
+	HX_STACK_LINE(20)
 	this->startFullscreen = false;
-	HX_STACK_LINE(18)
+	HX_STACK_LINE(19)
 	this->skipSplash = false;
-	HX_STACK_LINE(17)
+	HX_STACK_LINE(18)
 	this->framerate = (int)60;
-	HX_STACK_LINE(16)
+	HX_STACK_LINE(17)
 	this->zoom = (int)-1;
-	HX_STACK_LINE(15)
+	HX_STACK_LINE(16)
 	this->initialState = hx::ClassOf< ::MenuState >();
 	HX_STACK_LINE(14)
-	this->gameHeight = (int)1240;
+	this->gameHeight = (int)300;
 	HX_STACK_LINE(13)
-	this->gameWidth = (int)1320;
-	HX_STACK_LINE(30)
+	this->gameWidth = (int)400;
+	HX_STACK_LINE(31)
 	super::__construct();
-	HX_STACK_LINE(32)
+	HX_STACK_LINE(33)
 	::openfl::_legacy::display::Stage _g = this->get_stage();		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(32)
+	HX_STACK_LINE(33)
 	if (((_g != null()))){
-		HX_STACK_LINE(34)
+		HX_STACK_LINE(35)
 		this->init(null());
 	}
 	else{
-		HX_STACK_LINE(38)
+		HX_STACK_LINE(39)
 		this->addEventListener(::openfl::_legacy::events::Event_obj::ADDED_TO_STAGE,this->init_dyn(),null(),null(),null());
 	}
 }
@@ -113,15 +113,15 @@ Dynamic Main_obj::__Create(hx::DynamicArray inArgs)
 
 Void Main_obj::init( ::openfl::_legacy::events::Event E){
 {
-		HX_STACK_FRAME("Main","init",0xea732345,"Main.init","Main.hx",43,0x087e5c05)
+		HX_STACK_FRAME("Main","init",0xea732345,"Main.init","Main.hx",44,0x087e5c05)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(E,"E")
-		HX_STACK_LINE(44)
+		HX_STACK_LINE(45)
 		if ((this->hasEventListener(::openfl::_legacy::events::Event_obj::ADDED_TO_STAGE))){
-			HX_STACK_LINE(46)
+			HX_STACK_LINE(47)
 			this->removeEventListener(::openfl::_legacy::events::Event_obj::ADDED_TO_STAGE,this->init_dyn(),null());
 		}
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(50)
 		this->setupGame();
 	}
 return null();
@@ -132,34 +132,34 @@ HX_DEFINE_DYNAMIC_FUNC1(Main_obj,init,(void))
 
 Void Main_obj::setupGame( ){
 {
-		HX_STACK_FRAME("Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",53,0x087e5c05)
+		HX_STACK_FRAME("Main","setupGame",0x7f7688ba,"Main.setupGame","Main.hx",54,0x087e5c05)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(54)
-		int stageWidth = ::openfl::_legacy::Lib_obj::get_current()->get_stage()->get_stageWidth();		HX_STACK_VAR(stageWidth,"stageWidth");
 		HX_STACK_LINE(55)
+		int stageWidth = ::openfl::_legacy::Lib_obj::get_current()->get_stage()->get_stageWidth();		HX_STACK_VAR(stageWidth,"stageWidth");
+		HX_STACK_LINE(56)
 		int stageHeight = ::openfl::_legacy::Lib_obj::get_current()->get_stage()->get_stageHeight();		HX_STACK_VAR(stageHeight,"stageHeight");
-		HX_STACK_LINE(57)
+		HX_STACK_LINE(58)
 		if (((this->zoom == (int)-1))){
-			HX_STACK_LINE(59)
-			Float ratioX = (Float(stageWidth) / Float(this->gameWidth));		HX_STACK_VAR(ratioX,"ratioX");
 			HX_STACK_LINE(60)
+			Float ratioX = (Float(stageWidth) / Float(this->gameWidth));		HX_STACK_VAR(ratioX,"ratioX");
+			HX_STACK_LINE(61)
 			Float ratioY = (Float(stageHeight) / Float(this->gameHeight));		HX_STACK_VAR(ratioY,"ratioY");
-			HX_STACK_LINE(61)
+			HX_STACK_LINE(62)
 			Float _g = ::Math_obj::min(ratioX,ratioY);		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(61)
+			HX_STACK_LINE(62)
 			this->zoom = _g;
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(63)
 			int _g1 = ::Math_obj::ceil((Float(stageWidth) / Float(this->zoom)));		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(62)
+			HX_STACK_LINE(63)
 			this->gameWidth = _g1;
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(64)
 			int _g2 = ::Math_obj::ceil((Float(stageHeight) / Float(this->zoom)));		HX_STACK_VAR(_g2,"_g2");
-			HX_STACK_LINE(63)
+			HX_STACK_LINE(64)
 			this->gameHeight = _g2;
 		}
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(67)
 		::flixel::FlxGame _g3 = ::flixel::FlxGame_obj::__new(this->gameWidth,this->gameHeight,this->initialState,this->zoom,this->framerate,this->framerate,this->skipSplash,this->startFullscreen);		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(67)
 		this->addChild(_g3);
 	}
 return null();
@@ -170,10 +170,10 @@ HX_DEFINE_DYNAMIC_FUNC0(Main_obj,setupGame,(void))
 
 Void Main_obj::main( ){
 {
-		HX_STACK_FRAME("Main","main",0xed0e206e,"Main.main","Main.hx",24,0x087e5c05)
-		HX_STACK_LINE(25)
+		HX_STACK_FRAME("Main","main",0xed0e206e,"Main.main","Main.hx",25,0x087e5c05)
+		HX_STACK_LINE(26)
 		::Main _g = ::Main_obj::__new();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(25)
+		HX_STACK_LINE(26)
 		::openfl::_legacy::Lib_obj::get_current()->addChild(_g);
 	}
 return null();

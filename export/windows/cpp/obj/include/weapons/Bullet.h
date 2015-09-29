@@ -47,6 +47,9 @@ class HXCPP_CLASS_ATTRIBUTES  Bullet_obj : public ::flixel::FlxSprite_obj{
 		virtual int getDamage( );
 		Dynamic getDamage_dyn();
 
+		virtual Void resolveVelocity( );
+		Dynamic resolveVelocity_dyn();
+
 };
 
 } // end namespace weapons

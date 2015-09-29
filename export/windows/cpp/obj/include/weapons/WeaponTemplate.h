@@ -43,6 +43,9 @@ class HXCPP_CLASS_ATTRIBUTES  WeaponTemplate_obj : public hx::Object{
 		int juice;
 		int juiceMax;
 		int juiceCost;
+		int maxBullets;
+		int bulletCount;
+		int palette;
 		bool unlocked;
 		virtual Void shoot( ::Player _player);
 		Dynamic shoot_dyn();

@@ -48,19 +48,27 @@ HX_STACK_ARG(ThePlayer,"ThePlayer")
 HX_STACK_ARG(Health,"Health")
 HX_STACK_ARG(DropsGrp,"DropsGrp")
 {
+	HX_STACK_LINE(36)
+	this->YELLOW = (int)3;
+	HX_STACK_LINE(35)
+	this->MAGENTA = (int)2;
+	HX_STACK_LINE(34)
+	this->CYAN = (int)1;
+	HX_STACK_LINE(33)
+	this->GREY = (int)0;
 	HX_STACK_LINE(30)
 	this->_health = (int)2;
-	HX_STACK_LINE(36)
-	super::__construct(X,Y,null());
-	HX_STACK_LINE(37)
-	this->_startx = X;
-	HX_STACK_LINE(38)
-	this->_starty = Y;
-	HX_STACK_LINE(39)
-	this->_player = ThePlayer;
-	HX_STACK_LINE(40)
-	this->_health = Health;
 	HX_STACK_LINE(41)
+	super::__construct(X,Y,null());
+	HX_STACK_LINE(42)
+	this->_startx = X;
+	HX_STACK_LINE(43)
+	this->_starty = Y;
+	HX_STACK_LINE(44)
+	this->_player = ThePlayer;
+	HX_STACK_LINE(45)
+	this->_health = Health;
+	HX_STACK_LINE(46)
 	this->_drops = DropsGrp;
 }
 ;
@@ -82,14 +90,14 @@ Dynamic EnemyTemplate_obj::__Create(hx::DynamicArray inArgs)
 
 Void EnemyTemplate_obj::takeDamage( int damage){
 {
-		HX_STACK_FRAME("enemies.EnemyTemplate","takeDamage",0x5bf80f4a,"enemies.EnemyTemplate.takeDamage","enemies/EnemyTemplate.hx",45,0x14fe3c45)
+		HX_STACK_FRAME("enemies.EnemyTemplate","takeDamage",0x5bf80f4a,"enemies.EnemyTemplate.takeDamage","enemies/EnemyTemplate.hx",50,0x14fe3c45)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(damage,"damage")
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(53)
 		hx::SubEq(this->_health,damage);
-		HX_STACK_LINE(50)
+		HX_STACK_LINE(55)
 		if (((this->_health <= (int)0))){
-			HX_STACK_LINE(51)
+			HX_STACK_LINE(56)
 			this->kill();
 		}
 	}
@@ -101,25 +109,25 @@ HX_DEFINE_DYNAMIC_FUNC1(EnemyTemplate_obj,takeDamage,(void))
 
 Void EnemyTemplate_obj::kill( ){
 {
-		HX_STACK_FRAME("enemies.EnemyTemplate","kill",0xfb1d23d2,"enemies.EnemyTemplate.kill","enemies/EnemyTemplate.hx",55,0x14fe3c45)
+		HX_STACK_FRAME("enemies.EnemyTemplate","kill",0xfb1d23d2,"enemies.EnemyTemplate.kill","enemies/EnemyTemplate.hx",60,0x14fe3c45)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(56)
-		int dropChance = ::flixel::util::FlxRandom_obj::intRanged((int)0,(int)1,null());		HX_STACK_VAR(dropChance,"dropChance");
-		HX_STACK_LINE(57)
-		int dropChance1 = (int)1;		HX_STACK_VAR(dropChance1,"dropChance1");
-		HX_STACK_LINE(58)
-		int _g = ::flixel::util::FlxRandom_obj::intRanged((int)0,(int)3,null());		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(58)
-		int dropID = (_g * (int)2);		HX_STACK_VAR(dropID,"dropID");
-		HX_STACK_LINE(60)
-		::Drops newDrop = ::Drops_obj::__new(this->x,this->y,dropID,this->_player);		HX_STACK_VAR(newDrop,"newDrop");
 		HX_STACK_LINE(61)
-		this->_drops->add(newDrop);
+		int dropChance = ::flixel::util::FlxRandom_obj::intRanged((int)0,(int)1,null());		HX_STACK_VAR(dropChance,"dropChance");
+		HX_STACK_LINE(62)
+		int dropChance1 = (int)1;		HX_STACK_VAR(dropChance1,"dropChance1");
 		HX_STACK_LINE(63)
+		int _g = ::flixel::util::FlxRandom_obj::intRanged((int)0,(int)3,null());		HX_STACK_VAR(_g,"_g");
+		HX_STACK_LINE(63)
+		int dropID = (_g * (int)2);		HX_STACK_VAR(dropID,"dropID");
+		HX_STACK_LINE(65)
+		::Drops newDrop = ::Drops_obj::__new(this->x,this->y,dropID,this->_player,true);		HX_STACK_VAR(newDrop,"newDrop");
+		HX_STACK_LINE(66)
+		this->_drops->add(newDrop);
+		HX_STACK_LINE(68)
 		this->set_alive(false);
 		struct _Function_1_1{
 			inline static Dynamic Block( hx::ObjectPtr< ::enemies::EnemyTemplate_obj > __this){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","enemies/EnemyTemplate.hx",64,0x14fe3c45)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","enemies/EnemyTemplate.hx",69,0x14fe3c45)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_CSTRING("alpha") , (int)0,false);
@@ -131,7 +139,7 @@ Void EnemyTemplate_obj::kill( ){
 		};
 		struct _Function_1_2{
 			inline static Dynamic Block( hx::ObjectPtr< ::enemies::EnemyTemplate_obj > __this){
-				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","enemies/EnemyTemplate.hx",64,0x14fe3c45)
+				HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","enemies/EnemyTemplate.hx",69,0x14fe3c45)
 				{
 					hx::Anon __result = hx::Anon_obj::Create();
 					__result->Add(HX_CSTRING("ease") , ::flixel::tweens::FlxEase_obj::circOut_dyn(),false);
@@ -141,7 +149,7 @@ Void EnemyTemplate_obj::kill( ){
 				return null();
 			}
 		};
-		HX_STACK_LINE(64)
+		HX_STACK_LINE(69)
 		::flixel::tweens::FlxTween_obj::tween(hx::ObjectPtr<OBJ_>(this),_Function_1_1::Block(this),.33,_Function_1_2::Block(this));
 	}
 return null();
@@ -150,10 +158,10 @@ return null();
 
 Void EnemyTemplate_obj::finishKill( ::flixel::tweens::FlxTween _){
 {
-		HX_STACK_FRAME("enemies.EnemyTemplate","finishKill",0x7d7ed4c5,"enemies.EnemyTemplate.finishKill","enemies/EnemyTemplate.hx",71,0x14fe3c45)
+		HX_STACK_FRAME("enemies.EnemyTemplate","finishKill",0x7d7ed4c5,"enemies.EnemyTemplate.finishKill","enemies/EnemyTemplate.hx",76,0x14fe3c45)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_,"_")
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(76)
 		this->set_exists(false);
 	}
 return null();
@@ -175,6 +183,10 @@ void EnemyTemplate_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(_player,"_player");
 	HX_MARK_MEMBER_NAME(_health,"_health");
 	HX_MARK_MEMBER_NAME(_drops,"_drops");
+	HX_MARK_MEMBER_NAME(GREY,"GREY");
+	HX_MARK_MEMBER_NAME(CYAN,"CYAN");
+	HX_MARK_MEMBER_NAME(MAGENTA,"MAGENTA");
+	HX_MARK_MEMBER_NAME(YELLOW,"YELLOW");
 	::flixel::FlxSprite_obj::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
@@ -186,6 +198,10 @@ void EnemyTemplate_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(_player,"_player");
 	HX_VISIT_MEMBER_NAME(_health,"_health");
 	HX_VISIT_MEMBER_NAME(_drops,"_drops");
+	HX_VISIT_MEMBER_NAME(GREY,"GREY");
+	HX_VISIT_MEMBER_NAME(CYAN,"CYAN");
+	HX_VISIT_MEMBER_NAME(MAGENTA,"MAGENTA");
+	HX_VISIT_MEMBER_NAME(YELLOW,"YELLOW");
 	::flixel::FlxSprite_obj::__Visit(HX_VISIT_ARG);
 }
 
@@ -193,16 +209,20 @@ Dynamic EnemyTemplate_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 4:
+		if (HX_FIELD_EQ(inName,"GREY") ) { return GREY; }
+		if (HX_FIELD_EQ(inName,"CYAN") ) { return CYAN; }
 		if (HX_FIELD_EQ(inName,"kill") ) { return kill_dyn(); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"_drops") ) { return _drops; }
+		if (HX_FIELD_EQ(inName,"YELLOW") ) { return YELLOW; }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"_startx") ) { return _startx; }
 		if (HX_FIELD_EQ(inName,"_starty") ) { return _starty; }
 		if (HX_FIELD_EQ(inName,"_player") ) { return _player; }
 		if (HX_FIELD_EQ(inName,"_health") ) { return _health; }
+		if (HX_FIELD_EQ(inName,"MAGENTA") ) { return MAGENTA; }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"takeDamage") ) { return takeDamage_dyn(); }
@@ -214,14 +234,20 @@ Dynamic EnemyTemplate_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic EnemyTemplate_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
+	case 4:
+		if (HX_FIELD_EQ(inName,"GREY") ) { GREY=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"CYAN") ) { CYAN=inValue.Cast< int >(); return inValue; }
+		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"_drops") ) { _drops=inValue.Cast< ::flixel::group::FlxTypedGroup >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"YELLOW") ) { YELLOW=inValue.Cast< int >(); return inValue; }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"_startx") ) { _startx=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"_starty") ) { _starty=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"_player") ) { _player=inValue.Cast< ::Player >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"_health") ) { _health=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"MAGENTA") ) { MAGENTA=inValue.Cast< int >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -233,6 +259,10 @@ void EnemyTemplate_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_CSTRING("_player"));
 	outFields->push(HX_CSTRING("_health"));
 	outFields->push(HX_CSTRING("_drops"));
+	outFields->push(HX_CSTRING("GREY"));
+	outFields->push(HX_CSTRING("CYAN"));
+	outFields->push(HX_CSTRING("MAGENTA"));
+	outFields->push(HX_CSTRING("YELLOW"));
 	super::__GetFields(outFields);
 };
 
@@ -246,6 +276,10 @@ static hx::StorageInfo sMemberStorageInfo[] = {
 	{hx::fsObject /*::Player*/ ,(int)offsetof(EnemyTemplate_obj,_player),HX_CSTRING("_player")},
 	{hx::fsInt,(int)offsetof(EnemyTemplate_obj,_health),HX_CSTRING("_health")},
 	{hx::fsObject /*::flixel::group::FlxTypedGroup*/ ,(int)offsetof(EnemyTemplate_obj,_drops),HX_CSTRING("_drops")},
+	{hx::fsInt,(int)offsetof(EnemyTemplate_obj,GREY),HX_CSTRING("GREY")},
+	{hx::fsInt,(int)offsetof(EnemyTemplate_obj,CYAN),HX_CSTRING("CYAN")},
+	{hx::fsInt,(int)offsetof(EnemyTemplate_obj,MAGENTA),HX_CSTRING("MAGENTA")},
+	{hx::fsInt,(int)offsetof(EnemyTemplate_obj,YELLOW),HX_CSTRING("YELLOW")},
 	{ hx::fsUnknown, 0, null()}
 };
 #endif
@@ -256,6 +290,10 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("_player"),
 	HX_CSTRING("_health"),
 	HX_CSTRING("_drops"),
+	HX_CSTRING("GREY"),
+	HX_CSTRING("CYAN"),
+	HX_CSTRING("MAGENTA"),
+	HX_CSTRING("YELLOW"),
 	HX_CSTRING("takeDamage"),
 	HX_CSTRING("kill"),
 	HX_CSTRING("finishKill"),

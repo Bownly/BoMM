@@ -241,38 +241,38 @@ Void HUD_obj::updateHUD( hx::Null< int >  __o_Health,hx::Null< int >  __o_Juice,
 int Health = __o_Health.Default(0);
 int Juice = __o_Juice.Default(0);
 int Money = __o_Money.Default(0);
-	HX_STACK_FRAME("HUD","updateHUD",0xbe04cb97,"HUD.updateHUD","HUD.hx",69,0xe7d70e87)
+	HX_STACK_FRAME("HUD","updateHUD",0xbe04cb97,"HUD.updateHUD","HUD.hx",70,0xe7d70e87)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(Health,"Health")
 	HX_STACK_ARG(Juice,"Juice")
 	HX_STACK_ARG(Money,"Money")
 	HX_STACK_ARG(Weapon,"Weapon")
 {
-		HX_STACK_LINE(70)
+		HX_STACK_LINE(71)
 		::String _g = ::Std_obj::string(Health);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(70)
+		HX_STACK_LINE(71)
 		::String _g1 = (_g + HX_CSTRING(" / 3"));		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(70)
+		HX_STACK_LINE(71)
 		this->_txtHealth->set_text(_g1);
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(72)
 		::String _g2 = ::Std_obj::string(Money);		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(72)
 		this->_txtMoney->set_text(_g2);
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(73)
 		Float _g3 = this->_txtMoney->get_width();		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(73)
 		Float _g4 = (this->_sprMoney->x - _g3);		HX_STACK_VAR(_g4,"_g4");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(73)
 		Float _g5 = (_g4 - (int)4);		HX_STACK_VAR(_g5,"_g5");
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(73)
 		this->_txtMoney->set_x(_g5);
-		HX_STACK_LINE(74)
-		::String _g6 = ::Std_obj::string(Juice);		HX_STACK_VAR(_g6,"_g6");
-		HX_STACK_LINE(74)
-		::String _g7 = (_g6 + HX_CSTRING(" / 9"));		HX_STACK_VAR(_g7,"_g7");
-		HX_STACK_LINE(74)
-		this->_txtJuice->set_text(_g7);
 		HX_STACK_LINE(75)
+		::String _g6 = ::Std_obj::string(Juice);		HX_STACK_VAR(_g6,"_g6");
+		HX_STACK_LINE(75)
+		::String _g7 = (_g6 + HX_CSTRING(" / 9"));		HX_STACK_VAR(_g7,"_g7");
+		HX_STACK_LINE(75)
+		this->_txtJuice->set_text(_g7);
+		HX_STACK_LINE(76)
 		this->_txtWeapon->set_text((HX_CSTRING("Cur Weapon: ") + Weapon));
 	}
 return null();

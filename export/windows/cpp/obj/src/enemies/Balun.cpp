@@ -71,79 +71,83 @@ HX_STACK_ARG(Enemies,"Enemies")
 HX_STACK_ARG(Bullets,"Bullets")
 HX_STACK_ARG(Color,"Color")
 {
-	HX_STACK_LINE(37)
+	HX_STACK_LINE(36)
 	this->_cooldown = (int)0;
-	HX_STACK_LINE(35)
-	this->BULLET_SPEED = (int)100;
 	HX_STACK_LINE(34)
+	this->BULLET_SPEED = (int)100;
+	HX_STACK_LINE(33)
 	this->GUN_DELAY = 1.5;
-	HX_STACK_LINE(32)
-	this->_HP = (int)20;
 	HX_STACK_LINE(31)
-	this->GRAVITY = (int)0;
+	this->_HP = (int)20;
 	HX_STACK_LINE(30)
+	this->GRAVITY = (int)0;
+	HX_STACK_LINE(29)
 	this->XSPEED = (int)35;
-	HX_STACK_LINE(27)
-	this->colorString = HX_CSTRING("grey");
 	HX_STACK_LINE(26)
+	this->colorString = HX_CSTRING("grey");
+	HX_STACK_LINE(25)
 	this->palette = (int)0;
-	HX_STACK_LINE(43)
+	HX_STACK_LINE(42)
 	super::__construct(X,Y,ThePlayer,this->_HP,DropsGrp);
-	HX_STACK_LINE(45)
+	HX_STACK_LINE(44)
 	this->palette = Color;
-	HX_STACK_LINE(47)
+	HX_STACK_LINE(45)
+	::enemies::BalunString _g = ::enemies::BalunString_obj::__new(this->x,(this->y + (int)16),ThePlayer,DropsGrp);		HX_STACK_VAR(_g,"_g");
+	HX_STACK_LINE(45)
+	this->tail = _g;
+	HX_STACK_LINE(46)
 	Enemies->add(this->tail);
-	HX_STACK_LINE(49)
+	HX_STACK_LINE(48)
 	this->loadGraphic(HX_CSTRING("assets/images/balun.png"),true,(int)16,(int)16,null(),null());
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(49)
 	this->set_width((int)16);
-	HX_STACK_LINE(51)
+	HX_STACK_LINE(50)
 	this->set_height((int)16);
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(52)
 	this->_bullets = Bullets;
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(54)
 	{
-		HX_STACK_LINE(55)
-		int _g = this->palette;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(55)
-		switch( (int)(_g)){
+		HX_STACK_LINE(54)
+		int _g1 = this->palette;		HX_STACK_VAR(_g1,"_g1");
+		HX_STACK_LINE(54)
+		switch( (int)(_g1)){
 			case (int)0: {
-				HX_STACK_LINE(58)
+				HX_STACK_LINE(57)
 				this->colorString = HX_CSTRING("grey");
 			}
 			;break;
 			case (int)1: {
-				HX_STACK_LINE(60)
+				HX_STACK_LINE(59)
 				this->colorString = HX_CSTRING("yellow");
 			}
 			;break;
 			case (int)2: {
-				HX_STACK_LINE(62)
+				HX_STACK_LINE(61)
 				this->colorString = HX_CSTRING("cyan");
 			}
 			;break;
 			case (int)3: {
-				HX_STACK_LINE(64)
+				HX_STACK_LINE(63)
 				this->colorString = HX_CSTRING("magenta");
 			}
 			;break;
 		}
 	}
-	HX_STACK_LINE(68)
+	HX_STACK_LINE(67)
 	this->animation->add(HX_CSTRING("grey"),Array_obj< int >::__new().Add((int)0),null(),null());
-	HX_STACK_LINE(69)
+	HX_STACK_LINE(68)
 	this->animation->add(HX_CSTRING("grey2"),Array_obj< int >::__new().Add((int)1),null(),null());
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(69)
 	this->animation->add(HX_CSTRING("yellow"),Array_obj< int >::__new().Add((int)2),null(),null());
-	HX_STACK_LINE(71)
+	HX_STACK_LINE(70)
 	this->animation->add(HX_CSTRING("yellow2"),Array_obj< int >::__new().Add((int)3),null(),null());
-	HX_STACK_LINE(72)
+	HX_STACK_LINE(71)
 	this->animation->add(HX_CSTRING("cyan"),Array_obj< int >::__new().Add((int)4),null(),null());
-	HX_STACK_LINE(73)
+	HX_STACK_LINE(72)
 	this->animation->add(HX_CSTRING("cyan2"),Array_obj< int >::__new().Add((int)5),null(),null());
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(73)
 	this->animation->add(HX_CSTRING("magenta"),Array_obj< int >::__new().Add((int)6),null(),null());
-	HX_STACK_LINE(75)
+	HX_STACK_LINE(74)
 	this->animation->add(HX_CSTRING("magenta2"),Array_obj< int >::__new().Add((int)7),null(),null());
 }
 ;
@@ -165,64 +169,66 @@ Dynamic Balun_obj::__Create(hx::DynamicArray inArgs)
 
 Void Balun_obj::update( ){
 {
-		HX_STACK_FRAME("enemies.Balun","update",0xedf990f9,"enemies.Balun.update","enemies/Balun.hx",80,0x5c699701)
+		HX_STACK_FRAME("enemies.Balun","update",0xedf990f9,"enemies.Balun.update","enemies/Balun.hx",79,0x5c699701)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(80)
+		HX_STACK_LINE(79)
 		if ((this->isOnScreen(null()))){
-			HX_STACK_LINE(86)
+			HX_STACK_LINE(85)
 			if ((::flixel::FlxG_obj::keys->checkKeyStatus(Array_obj< ::String >::__new().Add(HX_CSTRING("C")),(int)2))){
-				HX_STACK_LINE(88)
+				HX_STACK_LINE(87)
 				hx::AddEq(this->palette,(int)1);
-				HX_STACK_LINE(89)
+				HX_STACK_LINE(88)
 				if (((this->palette > (int)3))){
-					HX_STACK_LINE(90)
+					HX_STACK_LINE(89)
 					this->palette = (int)0;
 				}
-				HX_STACK_LINE(91)
+				HX_STACK_LINE(90)
 				{
-					HX_STACK_LINE(91)
+					HX_STACK_LINE(90)
 					int _g = this->palette;		HX_STACK_VAR(_g,"_g");
-					HX_STACK_LINE(91)
+					HX_STACK_LINE(90)
 					switch( (int)(_g)){
 						case (int)0: {
-							HX_STACK_LINE(94)
+							HX_STACK_LINE(93)
 							this->colorString = HX_CSTRING("grey");
 						}
 						;break;
 						case (int)1: {
-							HX_STACK_LINE(96)
+							HX_STACK_LINE(95)
 							this->colorString = HX_CSTRING("yellow");
 						}
 						;break;
 						case (int)2: {
-							HX_STACK_LINE(98)
+							HX_STACK_LINE(97)
 							this->colorString = HX_CSTRING("cyan");
 						}
 						;break;
 						case (int)3: {
-							HX_STACK_LINE(100)
+							HX_STACK_LINE(99)
 							this->colorString = HX_CSTRING("magenta");
 						}
 						;break;
 					}
 				}
 			}
-			HX_STACK_LINE(112)
+			HX_STACK_LINE(111)
 			Float _g = this->velocity->set_y((int)0);		HX_STACK_VAR(_g,"_g");
-			HX_STACK_LINE(112)
+			HX_STACK_LINE(111)
 			this->velocity->set_x(_g);
-			HX_STACK_LINE(114)
+			HX_STACK_LINE(113)
 			Float xdistance = (this->_player->x - this->x);		HX_STACK_VAR(xdistance,"xdistance");
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(114)
 			Float ydistance = (this->_player->y - this->y);		HX_STACK_VAR(ydistance,"ydistance");
-			HX_STACK_LINE(116)
+			HX_STACK_LINE(115)
 			Float distancesquared = ((xdistance * xdistance) + (ydistance * ydistance));		HX_STACK_VAR(distancesquared,"distancesquared");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(116)
 			this->acceleration->set_y(this->GRAVITY);
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(119)
 			if (((distancesquared < (int)24000))){
 				HX_STACK_LINE(122)
-				if (((this->_player->x < this->x))){
+				int _g1 = ::Math_obj::floor(this->_player->x);		HX_STACK_VAR(_g1,"_g1");
+				HX_STACK_LINE(122)
+				if (((_g1 < this->x))){
 					HX_STACK_LINE(125)
 					this->set_facing((int)16);
 					HX_STACK_LINE(126)
@@ -230,24 +236,39 @@ Void Balun_obj::update( ){
 					HX_STACK_LINE(127)
 					{
 						HX_STACK_LINE(127)
-						::String _g1 = this->colorString;		HX_STACK_VAR(_g1,"_g1");
+						::String _g2 = this->colorString;		HX_STACK_VAR(_g2,"_g2");
 						HX_STACK_LINE(127)
-						::String _switch_1 = (_g1);
+						::String _switch_1 = (_g2);
 						if (  ( _switch_1==HX_CSTRING("grey"))){
 							HX_STACK_LINE(131)
-							this->velocity->set_x(-(this->XSPEED));
+							{
+								HX_STACK_LINE(131)
+								::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+								HX_STACK_LINE(131)
+								_g11->set_x((_g11->x - (int)1));
+							}
 							HX_STACK_LINE(132)
 							this->tail->_moving = (int)16;
 						}
 						else if (  ( _switch_1==HX_CSTRING("yellow"))){
 							HX_STACK_LINE(136)
-							this->velocity->set_x((-(this->XSPEED) * (int)2));
+							{
+								HX_STACK_LINE(136)
+								::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+								HX_STACK_LINE(136)
+								_g11->set_x((_g11->x - (int)1));
+							}
 							HX_STACK_LINE(137)
 							this->tail->_moving = (int)16;
 						}
 						else if (  ( _switch_1==HX_CSTRING("cyan"))){
 							HX_STACK_LINE(141)
-							this->velocity->set_x(this->XSPEED);
+							{
+								HX_STACK_LINE(141)
+								::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+								HX_STACK_LINE(141)
+								_g11->set_x((_g11->x + (int)1));
+							}
 							HX_STACK_LINE(142)
 							this->tail->_moving = (int)1;
 							HX_STACK_LINE(143)
@@ -255,7 +276,12 @@ Void Balun_obj::update( ){
 						}
 						else if (  ( _switch_1==HX_CSTRING("magenta"))){
 							HX_STACK_LINE(147)
-							this->velocity->set_x(-(this->XSPEED));
+							{
+								HX_STACK_LINE(147)
+								::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+								HX_STACK_LINE(147)
+								_g11->set_x((_g11->x - (int)1));
+							}
 							HX_STACK_LINE(148)
 							this->tail->_moving = (int)16;
 							HX_STACK_LINE(149)
@@ -265,7 +291,9 @@ Void Balun_obj::update( ){
 				}
 				else{
 					HX_STACK_LINE(153)
-					if (((this->_player->x > this->x))){
+					int _g2 = ::Math_obj::floor(this->_player->x);		HX_STACK_VAR(_g2,"_g2");
+					HX_STACK_LINE(153)
+					if (((_g2 > this->x))){
 						HX_STACK_LINE(155)
 						this->set_facing((int)1);
 						HX_STACK_LINE(156)
@@ -273,24 +301,39 @@ Void Balun_obj::update( ){
 						HX_STACK_LINE(157)
 						{
 							HX_STACK_LINE(157)
-							::String _g1 = this->colorString;		HX_STACK_VAR(_g1,"_g1");
+							::String _g3 = this->colorString;		HX_STACK_VAR(_g3,"_g3");
 							HX_STACK_LINE(157)
-							::String _switch_2 = (_g1);
+							::String _switch_2 = (_g3);
 							if (  ( _switch_2==HX_CSTRING("grey"))){
 								HX_STACK_LINE(161)
-								this->velocity->set_x(this->XSPEED);
+								{
+									HX_STACK_LINE(161)
+									::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+									HX_STACK_LINE(161)
+									_g11->set_x((_g11->x + (int)1));
+								}
 								HX_STACK_LINE(162)
 								this->tail->_moving = (int)1;
 							}
 							else if (  ( _switch_2==HX_CSTRING("yellow"))){
 								HX_STACK_LINE(166)
-								this->velocity->set_x((this->XSPEED * (int)2));
+								{
+									HX_STACK_LINE(166)
+									::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+									HX_STACK_LINE(166)
+									_g11->set_x((_g11->x + (int)1));
+								}
 								HX_STACK_LINE(167)
 								this->tail->_moving = (int)1;
 							}
 							else if (  ( _switch_2==HX_CSTRING("cyan"))){
 								HX_STACK_LINE(171)
-								this->velocity->set_x(-(this->XSPEED));
+								{
+									HX_STACK_LINE(171)
+									::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+									HX_STACK_LINE(171)
+									_g11->set_x((_g11->x - (int)1));
+								}
 								HX_STACK_LINE(172)
 								this->tail->_moving = (int)16;
 								HX_STACK_LINE(173)
@@ -298,46 +341,58 @@ Void Balun_obj::update( ){
 							}
 							else if (  ( _switch_2==HX_CSTRING("magenta"))){
 								HX_STACK_LINE(177)
-								this->velocity->set_x(this->XSPEED);
+								{
+									HX_STACK_LINE(177)
+									::enemies::Balun _g11 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g11,"_g11");
+									HX_STACK_LINE(177)
+									_g11->set_x((_g11->x + (int)1));
+								}
 								HX_STACK_LINE(178)
 								this->tail->_moving = (int)1;
 							}
 						}
 					}
+					else{
+						HX_STACK_LINE(183)
+						this->tail->_moving = (int)0;
+					}
 				}
-				HX_STACK_LINE(183)
+				HX_STACK_LINE(186)
 				this->idealY = (this->_player->y - (int)8);
-				HX_STACK_LINE(184)
+				HX_STACK_LINE(187)
 				if (((this->colorString == HX_CSTRING("magenta")))){
-					HX_STACK_LINE(185)
+					HX_STACK_LINE(188)
 					this->idealY = (this->_player->y - (int)40);
 				}
-				HX_STACK_LINE(187)
+				HX_STACK_LINE(190)
 				if (((this->y > this->idealY))){
-					HX_STACK_LINE(188)
-					this->velocity->set_y(-(this->XSPEED));
+					HX_STACK_LINE(191)
+					::enemies::Balun _g2 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g2,"_g2");
+					HX_STACK_LINE(191)
+					_g2->set_y((_g2->y - (int)1));
 				}
 				else{
-					HX_STACK_LINE(189)
+					HX_STACK_LINE(192)
 					if (((this->y < this->idealY))){
-						HX_STACK_LINE(190)
-						this->velocity->set_y(this->XSPEED);
-					}
-					else{
-						HX_STACK_LINE(192)
-						this->velocity->set_y((int)0);
+						HX_STACK_LINE(193)
+						::enemies::Balun _g2 = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g2,"_g2");
+						HX_STACK_LINE(193)
+						_g2->set_y((_g2->y + (int)1));
 					}
 				}
 			}
-			HX_STACK_LINE(196)
-			this->resolveAnims();
-			HX_STACK_LINE(198)
-			hx::AddEq(this->_cooldown,::flixel::FlxG_obj::elapsed);
-			HX_STACK_LINE(200)
-			this->tail->set_x(this->x);
-			HX_STACK_LINE(201)
-			this->tail->set_y((this->y + (int)16));
 			HX_STACK_LINE(204)
+			this->resolveAnims();
+			HX_STACK_LINE(206)
+			hx::AddEq(this->_cooldown,::flixel::FlxG_obj::elapsed);
+			HX_STACK_LINE(208)
+			if ((this->tail->alive)){
+				HX_STACK_LINE(210)
+				this->tail->set_x(this->x);
+				HX_STACK_LINE(211)
+				this->tail->set_y((this->y + (int)16));
+			}
+			HX_STACK_LINE(214)
 			this->super::update();
 		}
 	}
@@ -347,41 +402,41 @@ return null();
 
 Void Balun_obj::shoot( ::Player P){
 {
-		HX_STACK_FRAME("enemies.Balun","shoot",0x648224ef,"enemies.Balun.shoot","enemies/Balun.hx",209,0x5c699701)
+		HX_STACK_FRAME("enemies.Balun","shoot",0x648224ef,"enemies.Balun.shoot","enemies/Balun.hx",219,0x5c699701)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(P,"P")
-		HX_STACK_LINE(211)
+		HX_STACK_LINE(221)
 		int bulletX = ::Math_obj::floor(this->x);		HX_STACK_VAR(bulletX,"bulletX");
-		HX_STACK_LINE(212)
+		HX_STACK_LINE(222)
 		int bulletY = ::Math_obj::floor((this->y + (int)4));		HX_STACK_VAR(bulletY,"bulletY");
-		HX_STACK_LINE(214)
+		HX_STACK_LINE(224)
 		if (((this->_cooldown > this->GUN_DELAY))){
-			HX_STACK_LINE(217)
+			HX_STACK_LINE(227)
 			if (((this->colorString == HX_CSTRING("cyan")))){
-				HX_STACK_LINE(219)
+				HX_STACK_LINE(229)
 				if (((P->x < this->x))){
-					HX_STACK_LINE(221)
+					HX_STACK_LINE(231)
 					::weapons::Bullet bullet = ::weapons::Bullet_obj::__new((this->x + (int)8),(this->y + (int)8),(int)500,(int)1,(int)1,(int)256);		HX_STACK_VAR(bullet,"bullet");
-					HX_STACK_LINE(222)
+					HX_STACK_LINE(232)
 					this->_bullets->add(bullet);
 				}
 				else{
-					HX_STACK_LINE(226)
+					HX_STACK_LINE(236)
 					::weapons::Bullet bullet = ::weapons::Bullet_obj::__new((this->x + (int)8),(this->y + (int)8),(int)500,(int)16,(int)1,(int)256);		HX_STACK_VAR(bullet,"bullet");
-					HX_STACK_LINE(227)
+					HX_STACK_LINE(237)
 					this->_bullets->add(bullet);
 				}
 			}
 			else{
-				HX_STACK_LINE(230)
+				HX_STACK_LINE(240)
 				if (((this->colorString == HX_CSTRING("magenta")))){
-					HX_STACK_LINE(232)
+					HX_STACK_LINE(242)
 					::weapons::Bullet bullet = ::weapons::Bullet_obj::__new((this->x + (int)8),(this->y + (int)8),(int)500,(int)4096,(int)1,(int)256);		HX_STACK_VAR(bullet,"bullet");
-					HX_STACK_LINE(233)
+					HX_STACK_LINE(243)
 					this->_bullets->add(bullet);
 				}
 			}
-			HX_STACK_LINE(237)
+			HX_STACK_LINE(247)
 			this->_cooldown = (int)0;
 		}
 	}
@@ -393,17 +448,15 @@ HX_DEFINE_DYNAMIC_FUNC1(Balun_obj,shoot,(void))
 
 Void Balun_obj::resolveAnims( ){
 {
-		HX_STACK_FRAME("enemies.Balun","resolveAnims",0x441feda6,"enemies.Balun.resolveAnims","enemies/Balun.hx",246,0x5c699701)
+		HX_STACK_FRAME("enemies.Balun","resolveAnims",0x441feda6,"enemies.Balun.resolveAnims","enemies/Balun.hx",256,0x5c699701)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(246)
+		HX_STACK_LINE(256)
 		if (((bool((this->velocity->x == (int)0)) && bool((this->velocity->y == (int)0))))){
-			HX_STACK_LINE(248)
+			HX_STACK_LINE(258)
 			this->animation->play(this->colorString,null(),null());
-			HX_STACK_LINE(249)
-			this->tail->_moving = (int)0;
 		}
 		else{
-			HX_STACK_LINE(253)
+			HX_STACK_LINE(262)
 			this->animation->play((this->colorString + HX_CSTRING("2")),null(),null());
 		}
 	}
@@ -415,13 +468,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Balun_obj,resolveAnims,(void))
 
 Void Balun_obj::kill( ){
 {
-		HX_STACK_FRAME("enemies.Balun","kill",0xfc504e8e,"enemies.Balun.kill","enemies/Balun.hx",258,0x5c699701)
+		HX_STACK_FRAME("enemies.Balun","kill",0xfc504e8e,"enemies.Balun.kill","enemies/Balun.hx",267,0x5c699701)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(259)
+		HX_STACK_LINE(268)
 		this->tail->set_alive(false);
-		HX_STACK_LINE(260)
+		HX_STACK_LINE(269)
 		this->tail->set_exists(false);
-		HX_STACK_LINE(261)
+		HX_STACK_LINE(270)
 		this->super::kill();
 	}
 return null();

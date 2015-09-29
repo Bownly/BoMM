@@ -1,5 +1,7 @@
 #include <hxcpp.h>
 
+#include <weapons/Spore.h>
+#include <weapons/Bullet.h>
 #include <sys/io/FileOutput.h>
 #include <sys/io/File.h>
 #include <sys/FileSystem.h>
@@ -311,8 +313,9 @@
 #include <flixel/animation/FlxAnimationController.h>
 #include <flixel/animation/FlxAnimation.h>
 #include <flixel/animation/FlxBaseAnimation.h>
+#include <flixel/addons/effects/GlitchDirection.h>
+#include <flixel/addons/effects/FlxGlitchSprite.h>
 #include <flixel/addons/editors/ogmo/FlxOgmoLoader.h>
-#include <flixel/FlxSubState.h>
 #include <flixel/_FlxSprite/GraphicDefault.h>
 #include <openfl/_legacy/display/BitmapData.h>
 #include <flixel/FlxGame.h>
@@ -342,9 +345,18 @@
 #include <flixel/system/frontEnds/BitmapFrontEnd.h>
 #include <flixel/system/scaleModes/RatioScaleMode.h>
 #include <flixel/system/scaleModes/BaseScaleMode.h>
-#include <flixel/util/FlxPoint.h>
 #include <flixel/system/FlxVersion.h>
 #include <flixel/FlxCamera.h>
+#include <enemies/Snobal.h>
+#include <enemies/Snaake.h>
+#include <enemies/Notey.h>
+#include <enemies/Mush.h>
+#include <enemies/Metool.h>
+#include <enemies/Egg.h>
+#include <enemies/Burd.h>
+#include <enemies/BalunString.h>
+#include <enemies/Balun.h>
+#include <enemies/BabyBurd.h>
 #include <cpp/vm/Thread.h>
 #include <cpp/vm/Mutex.h>
 #include <cpp/vm/Gc.h>
@@ -353,19 +365,37 @@
 #include <XmlType.h>
 #include <Type.h>
 #include <ValueType.h>
+#include <Testboss.h>
+#include <enemies/EnemyTemplate.h>
 #include <StringTools.h>
 #include <StringBuf.h>
+#include <Spike.h>
+#include <ShopPodium.h>
+#include <Reg.h>
+#include <flixel/util/FlxPoint.h>
+#include <weapons/MagentaWeapon.h>
+#include <weapons/YellowWeapon.h>
+#include <weapons/EightWayWeapon.h>
+#include <weapons/WeaponTemplate.h>
 #include <Reflect.h>
 #include <Player.h>
-#include <PlayState.h>
+#include <PauseState.h>
+#include <flixel/FlxSubState.h>
 #include <MenuState.h>
-#include <flixel/FlxState.h>
-#include <flixel/group/FlxGroup.h>
-#include <flixel/group/FlxTypedGroup.h>
 #include <IMap.h>
 #include <List.h>
+#include <Level2.h>
+#include <Level1.h>
+#include <PlayState.h>
+#include <flixel/FlxState.h>
+#include <flixel/group/FlxGroup.h>
 #include <Lambda.h>
+#include <Ladder.h>
+#include <HUD.h>
+#include <flixel/group/FlxTypedGroup.h>
 #include <EReg.h>
+#include <Drops.h>
+#include <Door.h>
 #include <__ASSET__assets_fonts_arial_ttf.h>
 #include <__ASSET__assets_fonts_nokiafc22_ttf.h>
 #include <openfl/_legacy/text/Font.h>
@@ -409,6 +439,8 @@ void __boot_all()
 {
 __files__boot();
 hx::RegisterResources( hx::GetResources() );
+::weapons::Spore_obj::__register();
+::weapons::Bullet_obj::__register();
 ::sys::io::FileOutput_obj::__register();
 ::sys::io::File_obj::__register();
 ::sys::FileSystem_obj::__register();
@@ -720,8 +752,9 @@ hx::RegisterResources( hx::GetResources() );
 ::flixel::animation::FlxAnimationController_obj::__register();
 ::flixel::animation::FlxAnimation_obj::__register();
 ::flixel::animation::FlxBaseAnimation_obj::__register();
+::flixel::addons::effects::GlitchDirection_obj::__register();
+::flixel::addons::effects::FlxGlitchSprite_obj::__register();
 ::flixel::addons::editors::ogmo::FlxOgmoLoader_obj::__register();
-::flixel::FlxSubState_obj::__register();
 ::flixel::_FlxSprite::GraphicDefault_obj::__register();
 ::openfl::_legacy::display::BitmapData_obj::__register();
 ::flixel::FlxGame_obj::__register();
@@ -751,9 +784,18 @@ hx::RegisterResources( hx::GetResources() );
 ::flixel::system::frontEnds::BitmapFrontEnd_obj::__register();
 ::flixel::system::scaleModes::RatioScaleMode_obj::__register();
 ::flixel::system::scaleModes::BaseScaleMode_obj::__register();
-::flixel::util::FlxPoint_obj::__register();
 ::flixel::system::FlxVersion_obj::__register();
 ::flixel::FlxCamera_obj::__register();
+::enemies::Snobal_obj::__register();
+::enemies::Snaake_obj::__register();
+::enemies::Notey_obj::__register();
+::enemies::Mush_obj::__register();
+::enemies::Metool_obj::__register();
+::enemies::Egg_obj::__register();
+::enemies::Burd_obj::__register();
+::enemies::BalunString_obj::__register();
+::enemies::Balun_obj::__register();
+::enemies::BabyBurd_obj::__register();
 ::cpp::vm::Thread_obj::__register();
 ::cpp::vm::Mutex_obj::__register();
 ::cpp::vm::Gc_obj::__register();
@@ -762,19 +804,37 @@ hx::RegisterResources( hx::GetResources() );
 ::XmlType_obj::__register();
 ::Type_obj::__register();
 ::ValueType_obj::__register();
+::Testboss_obj::__register();
+::enemies::EnemyTemplate_obj::__register();
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
+::Spike_obj::__register();
+::ShopPodium_obj::__register();
+::Reg_obj::__register();
+::flixel::util::FlxPoint_obj::__register();
+::weapons::MagentaWeapon_obj::__register();
+::weapons::YellowWeapon_obj::__register();
+::weapons::EightWayWeapon_obj::__register();
+::weapons::WeaponTemplate_obj::__register();
 ::Reflect_obj::__register();
 ::Player_obj::__register();
-::PlayState_obj::__register();
+::PauseState_obj::__register();
+::flixel::FlxSubState_obj::__register();
 ::MenuState_obj::__register();
-::flixel::FlxState_obj::__register();
-::flixel::group::FlxGroup_obj::__register();
-::flixel::group::FlxTypedGroup_obj::__register();
 ::IMap_obj::__register();
 ::List_obj::__register();
+::Level2_obj::__register();
+::Level1_obj::__register();
+::PlayState_obj::__register();
+::flixel::FlxState_obj::__register();
+::flixel::group::FlxGroup_obj::__register();
 ::Lambda_obj::__register();
+::Ladder_obj::__register();
+::HUD_obj::__register();
+::flixel::group::FlxTypedGroup_obj::__register();
 ::EReg_obj::__register();
+::Drops_obj::__register();
+::Door_obj::__register();
 ::__ASSET__assets_fonts_arial_ttf_obj::__register();
 ::__ASSET__assets_fonts_nokiafc22_ttf_obj::__register();
 ::openfl::_legacy::text::Font_obj::__register();
@@ -857,24 +917,51 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::text::Font_obj::__boot();
 ::__ASSET__assets_fonts_nokiafc22_ttf_obj::__boot();
 ::__ASSET__assets_fonts_arial_ttf_obj::__boot();
-::Lambda_obj::__boot();
-::List_obj::__boot();
-::IMap_obj::__boot();
+::Door_obj::__boot();
+::Drops_obj::__boot();
 ::flixel::group::FlxTypedGroup_obj::__boot();
+::HUD_obj::__boot();
+::Ladder_obj::__boot();
+::Lambda_obj::__boot();
 ::flixel::group::FlxGroup_obj::__boot();
 ::flixel::FlxState_obj::__boot();
-::MenuState_obj::__boot();
 ::PlayState_obj::__boot();
+::Level1_obj::__boot();
+::Level2_obj::__boot();
+::List_obj::__boot();
+::IMap_obj::__boot();
+::MenuState_obj::__boot();
+::flixel::FlxSubState_obj::__boot();
+::PauseState_obj::__boot();
 ::Player_obj::__boot();
 ::Reflect_obj::__boot();
+::weapons::WeaponTemplate_obj::__boot();
+::weapons::EightWayWeapon_obj::__boot();
+::weapons::YellowWeapon_obj::__boot();
+::weapons::MagentaWeapon_obj::__boot();
+::flixel::util::FlxPoint_obj::__boot();
+::Reg_obj::__boot();
+::ShopPodium_obj::__boot();
+::Spike_obj::__boot();
 ::StringBuf_obj::__boot();
 ::StringTools_obj::__boot();
+::enemies::EnemyTemplate_obj::__boot();
+::Testboss_obj::__boot();
 ::ValueType_obj::__boot();
 ::Type_obj::__boot();
 ::XmlType_obj::__boot();
+::enemies::BabyBurd_obj::__boot();
+::enemies::Balun_obj::__boot();
+::enemies::BalunString_obj::__boot();
+::enemies::Burd_obj::__boot();
+::enemies::Egg_obj::__boot();
+::enemies::Metool_obj::__boot();
+::enemies::Mush_obj::__boot();
+::enemies::Notey_obj::__boot();
+::enemies::Snaake_obj::__boot();
+::enemies::Snobal_obj::__boot();
 ::flixel::FlxCamera_obj::__boot();
 ::flixel::system::FlxVersion_obj::__boot();
-::flixel::util::FlxPoint_obj::__boot();
 ::flixel::system::scaleModes::BaseScaleMode_obj::__boot();
 ::flixel::system::scaleModes::RatioScaleMode_obj::__boot();
 ::flixel::system::frontEnds::BitmapFrontEnd_obj::__boot();
@@ -903,8 +990,9 @@ hx::RegisterResources( hx::GetResources() );
 ::flixel::FlxGame_obj::__boot();
 ::openfl::_legacy::display::BitmapData_obj::__boot();
 ::flixel::_FlxSprite::GraphicDefault_obj::__boot();
-::flixel::FlxSubState_obj::__boot();
 ::flixel::addons::editors::ogmo::FlxOgmoLoader_obj::__boot();
+::flixel::addons::effects::FlxGlitchSprite_obj::__boot();
+::flixel::addons::effects::GlitchDirection_obj::__boot();
 ::flixel::animation::FlxBaseAnimation_obj::__boot();
 ::flixel::animation::FlxAnimation_obj::__boot();
 ::flixel::animation::FlxAnimationController_obj::__boot();
@@ -1216,5 +1304,7 @@ hx::RegisterResources( hx::GetResources() );
 ::sys::FileSystem_obj::__boot();
 ::sys::io::File_obj::__boot();
 ::sys::io::FileOutput_obj::__boot();
+::weapons::Bullet_obj::__boot();
+::weapons::Spore_obj::__boot();
 }
 

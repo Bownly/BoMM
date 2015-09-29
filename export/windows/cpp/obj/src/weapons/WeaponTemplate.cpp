@@ -33,8 +33,14 @@ HX_STACK_THIS(this)
 HX_STACK_ARG(Name,"Name")
 HX_STACK_ARG(Bullets,"Bullets")
 {
-	HX_STACK_LINE(21)
+	HX_STACK_LINE(25)
 	this->unlocked = true;
+	HX_STACK_LINE(24)
+	this->palette = (int)0;
+	HX_STACK_LINE(22)
+	this->bulletCount = (int)0;
+	HX_STACK_LINE(21)
+	this->maxBullets = (int)3;
 	HX_STACK_LINE(19)
 	this->juiceCost = (int)0;
 	HX_STACK_LINE(18)
@@ -42,10 +48,10 @@ HX_STACK_ARG(Bullets,"Bullets")
 	HX_STACK_LINE(17)
 	this->juice = (int)9;
 	HX_STACK_LINE(15)
-	this->damage = (int)1;
-	HX_STACK_LINE(25)
+	this->damage = (int)1000;
+	HX_STACK_LINE(29)
 	this->name = Name;
-	HX_STACK_LINE(26)
+	HX_STACK_LINE(30)
 	this->bulletArray = Bullets;
 }
 ;
@@ -67,29 +73,29 @@ Dynamic WeaponTemplate_obj::__Create(hx::DynamicArray inArgs)
 
 Void WeaponTemplate_obj::shoot( ::Player _player){
 {
-		HX_STACK_FRAME("weapons.WeaponTemplate","shoot",0x9cb1ba7e,"weapons.WeaponTemplate.shoot","weapons/WeaponTemplate.hx",30,0x5cae07f0)
+		HX_STACK_FRAME("weapons.WeaponTemplate","shoot",0x9cb1ba7e,"weapons.WeaponTemplate.shoot","weapons/WeaponTemplate.hx",34,0x5cae07f0)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(_player,"_player")
-		HX_STACK_LINE(31)
+		HX_STACK_LINE(35)
 		int _g = _player->bulletArray->countLiving();		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(31)
-		if (((  (((_g < _player->_maxBullets))) ? bool((this->juice > (int)0)) : bool(false) ))){
-			HX_STACK_LINE(33)
+		HX_STACK_LINE(35)
+		if (((  (((_g < this->maxBullets))) ? bool((this->juice > (int)0)) : bool(false) ))){
+			HX_STACK_LINE(37)
 			_player->postShotTimer = .33;
-			HX_STACK_LINE(35)
+			HX_STACK_LINE(39)
 			if ((_player->flipX)){
-				HX_STACK_LINE(37)
-				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x - (int)8),(_player->y + (int)8),(int)500,(int)1,(_player->_DAMAGE + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
-				HX_STACK_LINE(38)
+				HX_STACK_LINE(41)
+				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x - (int)8),(_player->y + (int)8),(int)500,(int)1,(_player->damage + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
+				HX_STACK_LINE(42)
 				_player->bulletArray->add(newBullet);
 			}
 			else{
-				HX_STACK_LINE(42)
-				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x + (int)8),(_player->y + (int)8),(int)500,(int)16,(_player->_DAMAGE + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
-				HX_STACK_LINE(43)
+				HX_STACK_LINE(46)
+				::weapons::Bullet newBullet = ::weapons::Bullet_obj::__new((_player->x + (int)8),(_player->y + (int)8),(int)500,(int)16,(_player->damage + this->damage),(int)256);		HX_STACK_VAR(newBullet,"newBullet");
+				HX_STACK_LINE(47)
 				_player->bulletArray->add(newBullet);
 			}
-			HX_STACK_LINE(45)
+			HX_STACK_LINE(49)
 			hx::SubEq(this->juice,this->juiceCost);
 		}
 	}
@@ -113,6 +119,9 @@ void WeaponTemplate_obj::__Mark(HX_MARK_PARAMS)
 	HX_MARK_MEMBER_NAME(juice,"juice");
 	HX_MARK_MEMBER_NAME(juiceMax,"juiceMax");
 	HX_MARK_MEMBER_NAME(juiceCost,"juiceCost");
+	HX_MARK_MEMBER_NAME(maxBullets,"maxBullets");
+	HX_MARK_MEMBER_NAME(bulletCount,"bulletCount");
+	HX_MARK_MEMBER_NAME(palette,"palette");
 	HX_MARK_MEMBER_NAME(unlocked,"unlocked");
 	HX_MARK_END_CLASS();
 }
@@ -125,6 +134,9 @@ void WeaponTemplate_obj::__Visit(HX_VISIT_PARAMS)
 	HX_VISIT_MEMBER_NAME(juice,"juice");
 	HX_VISIT_MEMBER_NAME(juiceMax,"juiceMax");
 	HX_VISIT_MEMBER_NAME(juiceCost,"juiceCost");
+	HX_VISIT_MEMBER_NAME(maxBullets,"maxBullets");
+	HX_VISIT_MEMBER_NAME(bulletCount,"bulletCount");
+	HX_VISIT_MEMBER_NAME(palette,"palette");
 	HX_VISIT_MEMBER_NAME(unlocked,"unlocked");
 }
 
@@ -141,6 +153,9 @@ Dynamic WeaponTemplate_obj::__Field(const ::String &inName,bool inCallProp)
 	case 6:
 		if (HX_FIELD_EQ(inName,"damage") ) { return damage; }
 		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"palette") ) { return palette; }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"juiceMax") ) { return juiceMax; }
 		if (HX_FIELD_EQ(inName,"unlocked") ) { return unlocked; }
@@ -148,8 +163,12 @@ Dynamic WeaponTemplate_obj::__Field(const ::String &inName,bool inCallProp)
 	case 9:
 		if (HX_FIELD_EQ(inName,"juiceCost") ) { return juiceCost; }
 		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"maxBullets") ) { return maxBullets; }
+		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"bulletArray") ) { return bulletArray; }
+		if (HX_FIELD_EQ(inName,"bulletCount") ) { return bulletCount; }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -166,6 +185,9 @@ Dynamic WeaponTemplate_obj::__SetField(const ::String &inName,const Dynamic &inV
 	case 6:
 		if (HX_FIELD_EQ(inName,"damage") ) { damage=inValue.Cast< int >(); return inValue; }
 		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"palette") ) { palette=inValue.Cast< int >(); return inValue; }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"juiceMax") ) { juiceMax=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"unlocked") ) { unlocked=inValue.Cast< bool >(); return inValue; }
@@ -173,8 +195,12 @@ Dynamic WeaponTemplate_obj::__SetField(const ::String &inName,const Dynamic &inV
 	case 9:
 		if (HX_FIELD_EQ(inName,"juiceCost") ) { juiceCost=inValue.Cast< int >(); return inValue; }
 		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"maxBullets") ) { maxBullets=inValue.Cast< int >(); return inValue; }
+		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"bulletArray") ) { bulletArray=inValue.Cast< ::flixel::group::FlxTypedGroup >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"bulletCount") ) { bulletCount=inValue.Cast< int >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -187,6 +213,9 @@ void WeaponTemplate_obj::__GetFields(Array< ::String> &outFields)
 	outFields->push(HX_CSTRING("juice"));
 	outFields->push(HX_CSTRING("juiceMax"));
 	outFields->push(HX_CSTRING("juiceCost"));
+	outFields->push(HX_CSTRING("maxBullets"));
+	outFields->push(HX_CSTRING("bulletCount"));
+	outFields->push(HX_CSTRING("palette"));
 	outFields->push(HX_CSTRING("unlocked"));
 	super::__GetFields(outFields);
 };
@@ -202,6 +231,9 @@ static hx::StorageInfo sMemberStorageInfo[] = {
 	{hx::fsInt,(int)offsetof(WeaponTemplate_obj,juice),HX_CSTRING("juice")},
 	{hx::fsInt,(int)offsetof(WeaponTemplate_obj,juiceMax),HX_CSTRING("juiceMax")},
 	{hx::fsInt,(int)offsetof(WeaponTemplate_obj,juiceCost),HX_CSTRING("juiceCost")},
+	{hx::fsInt,(int)offsetof(WeaponTemplate_obj,maxBullets),HX_CSTRING("maxBullets")},
+	{hx::fsInt,(int)offsetof(WeaponTemplate_obj,bulletCount),HX_CSTRING("bulletCount")},
+	{hx::fsInt,(int)offsetof(WeaponTemplate_obj,palette),HX_CSTRING("palette")},
 	{hx::fsBool,(int)offsetof(WeaponTemplate_obj,unlocked),HX_CSTRING("unlocked")},
 	{ hx::fsUnknown, 0, null()}
 };
@@ -214,6 +246,9 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("juice"),
 	HX_CSTRING("juiceMax"),
 	HX_CSTRING("juiceCost"),
+	HX_CSTRING("maxBullets"),
+	HX_CSTRING("bulletCount"),
+	HX_CSTRING("palette"),
 	HX_CSTRING("unlocked"),
 	HX_CSTRING("shoot"),
 	String(null()) };

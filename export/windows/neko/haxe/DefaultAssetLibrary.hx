@@ -130,6 +130,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		Font.registerFont (__ASSET__assets_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__assets_fonts_arial_ttf);
 		
@@ -137,6 +138,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -699,6 +701,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/ado.png", AssetType.IMAGE);
 		path.set ("assets/images/balun.png", "assets/images/balun.png");
 		type.set ("assets/images/balun.png", AssetType.IMAGE);
+		path.set ("assets/images/bossdoor.png", "assets/images/bossdoor.png");
+		type.set ("assets/images/bossdoor.png", AssetType.IMAGE);
 		path.set ("assets/images/burd.png", "assets/images/burd.png");
 		type.set ("assets/images/burd.png", AssetType.IMAGE);
 		path.set ("assets/images/burdegg.png", "assets/images/burdegg.png");
@@ -856,6 +860,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/balun.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/bossdoor.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/burd.png";
@@ -1169,6 +1176,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -1177,6 +1185,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -2026,11 +2035,13 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_arial_ttf extends null { }
 
 
 #elseif html5
+
 
 
 

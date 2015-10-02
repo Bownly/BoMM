@@ -39,5 +39,6 @@ class Reg
 	
 	public static var bullets:FlxTypedGroup<weapons.Bullet> = new FlxTypedGroup<weapons.Bullet>();
 	
-	public static var player:Player = new Player(0, 0, bullets);
+	public static var player:Player;
+	//public static var player:Player = new Player(0, 0, bullets);
 }

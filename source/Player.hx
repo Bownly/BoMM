@@ -25,13 +25,14 @@ class Player extends FlxSprite
 	var xSpeed:Int = 150;
 	var remainingJumps:Int = 2;
 	public var hp:Int = 3;
+	var isSliding:Bool = false;
 	
 	// Stats
 	public var maxHP:Int = 3;
 	public var maxJumps:Int = 2;
 	public var shotRange:Int = 10;
 	public var damage:Int = 1;
-	public var luck:Int = 5;
+	public var luck:Int = 5;	
 	
 	public var bulletArray:FlxTypedGroup<weapons.Bullet>;
 	public var maxBullets:Int = 3;
@@ -56,6 +57,8 @@ class Player extends FlxSprite
 	private var climbing:Bool = false;
 	
 	private var hurtTimer:Float = 0;
+	
+	private var canMove:Bool = true;
 	
 	
 	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>) 
@@ -157,28 +160,41 @@ class Player extends FlxSprite
 		
 		velocity.x = 0;
 		
-		if (hp <= 0)
-			FlxTween.tween(this, { alpha:0 }, .33, { ease:FlxEase.circOut } );
-		
-		
-		if (hurtTimer > 0)
-			hurtTimer -= FlxG.elapsed;
-		
-		if (climbing)
-			acceleration.y = 0;
-		else
-			acceleration.y = GRAVITY;
-		
-		if (this.isTouching(FlxObject.FLOOR))
-			remainingJumps = maxJumps;
-		
-		
-		playerInputs();
-		resolveAnimations();
+		if (canMove == true) 
+		{
+			if (hp <= 0)
+				FlxTween.tween(this, { alpha:0 }, .33, { ease:FlxEase.circOut } );
+			
+			if (hurtTimer > 0)
+				hurtTimer -= FlxG.elapsed;
+			
+			if (climbing)
+				acceleration.y = 0;
+			else
+				acceleration.y = GRAVITY;
+			
+			if (this.isTouching(FlxObject.FLOOR))
+				remainingJumps = maxJumps;
+			
+			if (isSliding == true)
+			{
+				x += 100;
+				isSliding = false;
+			}
+				
+			playerInputs();
+			resolveAnimations();
+		}
 		
 		super.update();
 	}
 
+	public function enterBossDoor():Void
+	{
+		canMove = false;
+		x += 32;
+		canMove = true;
+	}
 	
 	private function playerInputs():Void
 	{
@@ -211,7 +227,12 @@ class Player extends FlxSprite
 			remainingJumps = maxJumps;
 		}
 		
-		if (FlxG.keys.anyJustPressed(["UP", "J", "W"]) && remainingJumps > 0) 
+		if (FlxG.keys.anyPressed(["DOWN", "S"]) && FlxG.keys.anyJustPressed(["J"]) && isTouching(FlxObject.FLOOR))
+		{
+			isSliding = true;
+		}
+		
+		if (FlxG.keys.anyJustPressed(["UP", "J", "W"]) && remainingJumps > 0 && isSliding == false) 
 		{
 			velocity.y = -jumpPower;
 			remainingJumps--;

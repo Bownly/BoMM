@@ -44,6 +44,7 @@ class PlayState extends FlxState
 	private var _grpHazards:FlxTypedGroup<Spike>;
 	
 	private var _door:Door;
+	private var _bossDoor:BossDoor;
 	
 	private var _grpWalls:FlxTypedGroup<FlxTilemap>;
 	private var _levelWidth:Float;
@@ -95,6 +96,8 @@ class PlayState extends FlxState
 		
 		_door = new Door();
 		add(_door);
+		_bossDoor = new BossDoor();
+		add(_bossDoor);
 		
 		_grpCoins = new FlxTypedGroup<Coin>();
 		add(_grpCoins);
@@ -102,23 +105,28 @@ class PlayState extends FlxState
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		
-		_player = new Player(100, 100, playerBullets);
-
-		/* this is stuff for trying to get static player stuff working for passing between playstates
-		if (player == null)
+	/*	if (Reg.player == null)
 		{
 			_player = new Player(100, 100, playerBullets);
-			player = _player;
-			trace("is null");
+			Reg.player = _player;
+			trace("og stats: ");
+			trace("Reg.player: " + Reg.player);
+			trace("   _player: " + _player);
+			trace("reset stats: ");
+			
 		}
 		else
 		{
-			_player = new Player(100, 100, playerBullets);
-			_player = player;
-			trace("should work");
+			_player = Reg.player;
+			trace("Reg.player: " + Reg.player);
+			trace("   _player: " + _player);
+			trace("_player.hp: " + _player.hp);
 			
-		}*/
-			
+		}
+		*/
+				_player = new Player(100, 100, playerBullets);
+
+		
 		dropsGroup = new FlxTypedGroup<Drops>();
 		add(dropsGroup);
 		
@@ -178,6 +186,8 @@ class PlayState extends FlxState
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.overlap(_player, dropsGroup, playerTouchDrops);
 		FlxG.overlap(_player, _grpHazards, playerTouchHazard);
+		FlxG.overlap(_player, _bossDoor, playerTouchBossDoor);
+		
 		
 		if (!FlxG.overlap(_player, _grpLadders, playerTouchLadder))
 		{
@@ -217,6 +227,8 @@ class PlayState extends FlxState
 	 */
 	override public function destroy():Void
 	{
+		Reg.player = _player;
+		_player = null;
 		super.destroy();
 	}
 
@@ -250,11 +262,11 @@ class PlayState extends FlxState
 		
 		
 		var itemRoomPos:Int;
-		itemRoomPos = FlxRandom.intRanged(1, 3);  // Same bounds as the for loop right below, but max is one less than below's. 
+		itemRoomPos = FlxRandom.intRanged(1, 1);  // Same bounds as the for loop right below, but max is one less than below's. 
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...4) 
+		for (i in 1...2) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -364,15 +376,14 @@ class PlayState extends FlxState
 		}
 		
 	}
-	private function playerTouchDrops(P:Player, D:Drops):Void 
+	private function playerTouchBossDoor(P:Player, BD:BossDoor):Void
 	{
-		if (P.alive && P.exists && D.alive && D.exists)
+		if (P.alive && P.exists && BD.alive && BD.exists)
 		{
-			var cost:Int = D.doStuff(_score);
-			_score -= cost;
-			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
+			BD.open();
+			P.enterBossDoor();
+			
 		}
-		
 	}
 	private function playerTouchCoin(P:Player, C:Coin):Void 
 	{
@@ -384,6 +395,16 @@ class PlayState extends FlxState
 			
 			//_hud.updateHUD(_health, _money);		
 		
+		}
+		
+	}
+	private function playerTouchDrops(P:Player, D:Drops):Void 
+	{
+		if (P.alive && P.exists && D.alive && D.exists)
+		{
+			var cost:Int = D.doStuff(_score);
+			_score -= cost;
+			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);	
 		}
 		
 	}
@@ -433,12 +454,17 @@ class PlayState extends FlxState
 			_door.x = x;
 			_door.y = y;
 		}
+		else if (entityName == "bossDoor")
+		{
+			_bossDoor.x = x;
+			_bossDoor.y = y;
+		}
 		else if (entityName == "spike")
 		{
 			var dmg:Int = Std.parseInt(entityData.get("damage"));
 			_grpHazards.add(new Spike(x, y, dmg));
 		}
-		else if (entityName == "StorePodium")
+		else if (entityName == "storePodium")
 		{
 			add(new ShopPodium(x, y, _player, dropsGroup, miscGroup));
 		}

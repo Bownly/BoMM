@@ -54,7 +54,7 @@ class Player extends FlxSprite
 
 	
 	private var touchingLadder:Bool = false;
-	private var climbing:Bool = false;
+	public var climbing:Bool = false;
 	
 	private var hurtTimer:Float = 0;
 	
@@ -76,7 +76,7 @@ class Player extends FlxSprite
 		
 		
 		loadGraphic(AssetPaths.mm__png, true, 32, 32);
-		width = 16;
+		width = 14;
 		height = 22;
 		offset = new FlxPoint(8, 4);
 		
@@ -213,11 +213,38 @@ class Player extends FlxSprite
 			climbing = false;
 		} 
 		
+		if (FlxG.keys.anyPressed(["LEFT", "A"]) && climbing == true) 
+		{
+			flipX = true;
+			facing = FlxObject.LEFT;
+		}
+		
+		if (FlxG.keys.anyPressed(["RIGHT", "D"]) && climbing == true) 
+		{
+			flipX = false;
+			facing = FlxObject.RIGHT;
+		}
+		
 		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder == true) 
 		{
 			velocity.y = -100;
 			climbing = true;
 			remainingJumps = maxJumps;
+		}
+		
+		if (FlxG.keys.anyPressed(["LEFT", "A"]) && touchingLadder == false) 
+		{
+			velocity.x = -xSpeed;
+			flipX = true;
+			facing = FlxObject.LEFT;
+			climbing = false;
+		}
+		if (FlxG.keys.anyPressed(["RIGHT", "D"]) && touchingLadder == false) 
+		{
+			velocity.x = xSpeed;
+			flipX = false;
+			facing = FlxObject.RIGHT;
+			climbing = false;
 		}
 		
 		if (FlxG.keys.anyPressed(["DOWN", "S"]) && touchingLadder == true)
@@ -227,17 +254,22 @@ class Player extends FlxSprite
 			remainingJumps = maxJumps;
 		}
 		
+
 		if (FlxG.keys.anyPressed(["DOWN", "S"]) && FlxG.keys.anyJustPressed(["J"]) && isTouching(FlxObject.FLOOR))
 		{
 			isSliding = true;
 		}
 		
-		if (FlxG.keys.anyJustPressed(["UP", "J", "W"]) && remainingJumps > 0 && isSliding == false) 
+		// jump
+		if (FlxG.keys.anyJustPressed(["UP", "J"]) && remainingJumps > 0 && isSliding == false) 
 		{
-			velocity.y = -jumpPower;
+			if (climbing == false)
+				velocity.y = -jumpPower;
 			remainingJumps--;
 			climbing = false;
+			
 		} 	
+		
 		if (FlxG.keys.anyJustPressed(["SPACE", "K"]))
 			shoot();
 			

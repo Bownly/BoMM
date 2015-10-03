@@ -3,6 +3,8 @@ package;
 import flixel.group.FlxTypedGroup;
 import flixel.util.FlxSave;
 import weapons.Bullet;
+import weapons.EightWayWeapon;
+import weapons.WeaponTemplate;
 
 /**
  * Handy, pre-built Registry class that can be used to store 
@@ -41,4 +43,10 @@ class Reg
 	
 	public static var player:Player;
 	//public static var player:Player = new Player(0, 0, bullets);
+	
+	
+	public static var weapon1:WeaponTemplate = new WeaponTemplate("pea");
+	public static var weapon2:WeaponTemplate = new EightWayWeapon("cyan");
+		
+	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2];
 }

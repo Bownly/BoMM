@@ -105,13 +105,15 @@ class PlayState extends FlxState
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		
-	/*	if (Reg.player == null)
+		/*if (Reg.player == null)
 		{
 			_player = new Player(100, 100, playerBullets);
 			Reg.player = _player;
 			trace("og stats: ");
 			trace("Reg.player: " + Reg.player);
 			trace("   _player: " + _player);
+			trace("Reg.player exists: " + Reg.player.exists);
+			trace("   _player exists: " + _player.exists);
 			trace("reset stats: ");
 			
 		}
@@ -121,10 +123,12 @@ class PlayState extends FlxState
 			trace("Reg.player: " + Reg.player);
 			trace("   _player: " + _player);
 			trace("_player.hp: " + _player.hp);
+			trace("Reg.player exists: " + Reg.player.exists);
+			trace("   _player exists: " + _player.exists);
 			
-		}
-		*/
-				_player = new Player(100, 100, playerBullets);
+		}*/
+		
+				_player = new Player(100, 100, playerBullets, Reg.weaponArray);
 
 		
 		dropsGroup = new FlxTypedGroup<Drops>();
@@ -227,8 +231,8 @@ class PlayState extends FlxState
 	 */
 	override public function destroy():Void
 	{
-		Reg.player = _player;
-		_player = null;
+		//Reg.player = _player;
+		//_player = null;
 		super.destroy();
 	}
 

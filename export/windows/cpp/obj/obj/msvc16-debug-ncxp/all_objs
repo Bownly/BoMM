@@ -402,6 +402,7 @@ obj/msvc16-debug-ncxp/bce901e1_Deque.obj
 obj/msvc16-debug-ncxp/78b3b381_AssetLibrary.obj
 obj/msvc16-debug-ncxp/2af284d7_Date.obj
 obj/msvc16-debug-ncxp/2af284d7_Coin.obj
+obj/msvc16-debug-ncxp/2af284d7_BossDoor.obj
 obj/msvc16-debug-ncxp/f06a7a38_FlxSprite.obj
 obj/msvc16-debug-ncxp/f06a7a38_FlxObject.obj
 obj/msvc16-debug-ncxp/91d775f0_FlxRect.obj

@@ -61,19 +61,21 @@ class Player extends FlxSprite
 	private var canMove:Bool = true;
 	
 	
-	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>) 
+	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>, ?WeaponArray:Array<WeaponTemplate>) 
 	{
 		super(inX, inY);
 		
-		weapon1 = new WeaponTemplate("pea", bulletArray);
+	/*	weapon1 = new WeaponTemplate("pea", bulletArray);
 		weapon2 = new EightWayWeapon("cyan", bulletArray);
 		weapon3 = new YellowWeapon("yellow", bulletArray);
 		weapon4 = new MagentaWeapon("magenta", bulletArray);
 		
 		weaponArray = [weapon1, weapon2, weapon3, weapon4];
 		curWeaponLoc = 0;
+		*/
+		weaponArray = WeaponArray;
+		curWeaponLoc = 0;
 		curWeapon = weaponArray[curWeaponLoc];
-		
 		
 		loadGraphic(AssetPaths.mm__png, true, 32, 32);
 		width = 16;

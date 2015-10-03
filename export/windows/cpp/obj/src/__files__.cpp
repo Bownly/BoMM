@@ -4,6 +4,7 @@ namespace hx {
 const char *__hxcpp_all_files[] = {
 #ifdef HXCPP_DEBUGGER
 "ApplicationMain.hx",
+"BossDoor.hx",
 "C:\\HaxeToolkit\\haxe\\std/Lambda.hx",
 "C:\\HaxeToolkit\\haxe\\std/List.hx",
 "C:\\HaxeToolkit\\haxe\\std/StringTools.hx",
@@ -314,6 +315,7 @@ const char *__hxcpp_all_files[] = {
 const char *__hxcpp_all_files_fullpath[] = {
 #ifdef HXCPP_DEBUGGER
 "C:\\Projects\\HaxeFlixel\\BoMM\\export\\windows\\cpp\\haxe\\ApplicationMain.hx",
+"C:\\Projects\\HaxeFlixel\\BoMM\\source\\BossDoor.hx",
 "C:\\HaxeToolkit\\haxe\\std\\Lambda.hx",
 "C:\\HaxeToolkit\\haxe\\std\\List.hx",
 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx",
@@ -647,6 +649,7 @@ const char *__hxcpp_all_classes[] = {
 "flixel.util.FlxRect",
 "flixel.FlxObject",
 "flixel.FlxSprite",
+"BossDoor",
 "Coin",
 "Date",
 "openfl._legacy.AssetLibrary",

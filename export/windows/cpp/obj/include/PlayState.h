@@ -6,6 +6,7 @@
 #endif
 
 #include <flixel/FlxState.h>
+HX_DECLARE_CLASS0(BossDoor)
 HX_DECLARE_CLASS0(Coin)
 HX_DECLARE_CLASS0(Door)
 HX_DECLARE_CLASS0(Drops)
@@ -59,6 +60,7 @@ class HXCPP_CLASS_ATTRIBUTES  PlayState_obj : public ::flixel::FlxState_obj{
 		::flixel::group::FlxTypedGroup _grpLadders;
 		::flixel::group::FlxTypedGroup _grpHazards;
 		::Door _door;
+		::BossDoor _bossDoor;
 		::flixel::group::FlxTypedGroup _grpWalls;
 		Float _levelWidth;
 		Float _levelHeight;
@@ -103,11 +105,14 @@ class HXCPP_CLASS_ATTRIBUTES  PlayState_obj : public ::flixel::FlxState_obj{
 		virtual Void bulletTouchLadder( ::weapons::Bullet B,::Ladder L);
 		Dynamic bulletTouchLadder_dyn();
 
-		virtual Void playerTouchDrops( ::Player P,::Drops D);
-		Dynamic playerTouchDrops_dyn();
+		virtual Void playerTouchBossDoor( ::Player P,::BossDoor BD);
+		Dynamic playerTouchBossDoor_dyn();
 
 		virtual Void playerTouchCoin( ::Player P,::Coin C);
 		Dynamic playerTouchCoin_dyn();
+
+		virtual Void playerTouchDrops( ::Player P,::Drops D);
+		Dynamic playerTouchDrops_dyn();
 
 		virtual Void playerTouchLadder( ::Player P,::Ladder L);
 		Dynamic playerTouchLadder_dyn();

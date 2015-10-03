@@ -38,6 +38,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/bossdoor.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/burd.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -394,7 +398,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "2049",
+			build: "2154",
 			company: "HaxeFlixel",
 			file: "HaxeFlixelVlog",
 			fps: 60,

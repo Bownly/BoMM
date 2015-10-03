@@ -112,14 +112,12 @@ HX_STACK_THIS(this)
 	Array< ::Dynamic > _g = Array_obj< ::Dynamic >::__new().Add(hx::ObjectPtr<OBJ_>(this));		HX_STACK_VAR(_g,"_g");
 	HX_STACK_LINE(56)
 	super::__construct();
-	HX_STACK_LINE(133)
-	::openfl::_legacy::text::Font_obj::registerFont(hx::ClassOf< ::__ASSET__assets_fonts_nokiafc22_ttf >());
 	HX_STACK_LINE(134)
+	::openfl::_legacy::text::Font_obj::registerFont(hx::ClassOf< ::__ASSET__assets_fonts_nokiafc22_ttf >());
+	HX_STACK_LINE(135)
 	::openfl::_legacy::text::Font_obj::registerFont(hx::ClassOf< ::__ASSET__assets_fonts_arial_ttf >());
-	HX_STACK_LINE(139)
-	bool useManifest = false;		HX_STACK_VAR(useManifest,"useManifest");
 	HX_STACK_LINE(140)
-	useManifest = true;
+	bool useManifest = false;		HX_STACK_VAR(useManifest,"useManifest");
 	HX_STACK_LINE(141)
 	useManifest = true;
 	HX_STACK_LINE(142)
@@ -266,48 +264,52 @@ HX_STACK_THIS(this)
 	useManifest = true;
 	HX_STACK_LINE(213)
 	useManifest = true;
+	HX_STACK_LINE(214)
+	useManifest = true;
 	HX_STACK_LINE(215)
+	useManifest = true;
+	HX_STACK_LINE(217)
 	this->className->set(HX_CSTRING("assets/fonts/nokiafc22.ttf"),hx::ClassOf< ::__ASSET__assets_fonts_nokiafc22_ttf >());
-	HX_STACK_LINE(216)
-	this->type->set(HX_CSTRING("assets/fonts/nokiafc22.ttf"),::openfl::_legacy::AssetType_obj::FONT);
 	HX_STACK_LINE(218)
+	this->type->set(HX_CSTRING("assets/fonts/nokiafc22.ttf"),::openfl::_legacy::AssetType_obj::FONT);
+	HX_STACK_LINE(220)
 	this->className->set(HX_CSTRING("assets/fonts/arial.ttf"),hx::ClassOf< ::__ASSET__assets_fonts_arial_ttf >());
-	HX_STACK_LINE(219)
+	HX_STACK_LINE(221)
 	this->type->set(HX_CSTRING("assets/fonts/arial.ttf"),::openfl::_legacy::AssetType_obj::FONT);
-	HX_STACK_LINE(222)
+	HX_STACK_LINE(224)
 	if ((useManifest)){
-		HX_STACK_LINE(224)
+		HX_STACK_LINE(226)
 		this->loadManifest();
-		HX_STACK_LINE(226)
+		HX_STACK_LINE(228)
 		int _g1 = ::Sys_obj::args()->indexOf(HX_CSTRING("-livereload"),null());		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(226)
+		HX_STACK_LINE(228)
 		if (((_g1 > (int)-1))){
-			HX_STACK_LINE(228)
+			HX_STACK_LINE(230)
 			Array< ::String > path = Array_obj< ::String >::__new().Add(::sys::FileSystem_obj::fullPath(HX_CSTRING("manifest")));		HX_STACK_VAR(path,"path");
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(231)
 			Float _g11 = ::sys::FileSystem_obj::stat(path->__get((int)0))->__Field(HX_CSTRING("mtime"),true)->__Field(HX_CSTRING("getTime"),true)();		HX_STACK_VAR(_g11,"_g11");
-			HX_STACK_LINE(229)
+			HX_STACK_LINE(231)
 			this->lastModified = _g11;
-			HX_STACK_LINE(231)
+			HX_STACK_LINE(233)
 			::haxe::Timer _g2 = ::haxe::Timer_obj::__new((int)2000);		HX_STACK_VAR(_g2,"_g2");
-			HX_STACK_LINE(231)
+			HX_STACK_LINE(233)
 			this->timer = _g2;
 
 			HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,_g,Array< ::String >,path)
 			Void run(){
-				HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","DefaultAssetLibrary.hx",232,0x0fc48912)
+				HX_STACK_FRAME("*","_Function_3_1",0x520271b9,"*._Function_3_1","DefaultAssetLibrary.hx",234,0x0fc48912)
 				{
-					HX_STACK_LINE(234)
-					Float modified = ::sys::FileSystem_obj::stat(path->__get((int)0))->__Field(HX_CSTRING("mtime"),true)->__Field(HX_CSTRING("getTime"),true)();		HX_STACK_VAR(modified,"modified");
 					HX_STACK_LINE(236)
+					Float modified = ::sys::FileSystem_obj::stat(path->__get((int)0))->__Field(HX_CSTRING("mtime"),true)->__Field(HX_CSTRING("getTime"),true)();		HX_STACK_VAR(modified,"modified");
+					HX_STACK_LINE(238)
 					if (((modified > _g->__get((int)0).StaticCast< ::DefaultAssetLibrary >()->lastModified))){
-						HX_STACK_LINE(238)
+						HX_STACK_LINE(240)
 						_g->__get((int)0).StaticCast< ::DefaultAssetLibrary >()->lastModified = modified;
-						HX_STACK_LINE(239)
-						_g->__get((int)0).StaticCast< ::DefaultAssetLibrary >()->loadManifest();
 						HX_STACK_LINE(241)
+						_g->__get((int)0).StaticCast< ::DefaultAssetLibrary >()->loadManifest();
+						HX_STACK_LINE(243)
 						if (((_g->__get((int)0).StaticCast< ::DefaultAssetLibrary >()->eventCallback != null()))){
-							HX_STACK_LINE(243)
+							HX_STACK_LINE(245)
 							_g->__get((int)0).StaticCast< ::DefaultAssetLibrary >()->eventCallback(_g->__get((int)0).StaticCast< ::DefaultAssetLibrary >(),HX_CSTRING("change"));
 						}
 					}
@@ -316,7 +318,7 @@ HX_STACK_THIS(this)
 			}
 			HX_END_LOCAL_FUNC0((void))
 
-			HX_STACK_LINE(232)
+			HX_STACK_LINE(234)
 			this->timer->run =  Dynamic(new _Function_3_1(_g,path));
 		}
 	}
@@ -339,224 +341,224 @@ Dynamic DefaultAssetLibrary_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 bool DefaultAssetLibrary_obj::exists( ::String id,::openfl::_legacy::AssetType type){
-	HX_STACK_FRAME("DefaultAssetLibrary","exists",0x972074de,"DefaultAssetLibrary.exists","DefaultAssetLibrary.hx",264,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","exists",0x972074de,"DefaultAssetLibrary.exists","DefaultAssetLibrary.hx",266,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
 	HX_STACK_ARG(type,"type")
-	HX_STACK_LINE(266)
-	::openfl::_legacy::AssetType assetType = this->type->get(id);		HX_STACK_VAR(assetType,"assetType");
 	HX_STACK_LINE(268)
+	::openfl::_legacy::AssetType assetType = this->type->get(id);		HX_STACK_VAR(assetType,"assetType");
+	HX_STACK_LINE(270)
 	if (((assetType != null()))){
-		HX_STACK_LINE(270)
+		HX_STACK_LINE(272)
 		if (((bool((assetType == type)) || bool((bool(((bool((type == ::openfl::_legacy::AssetType_obj::SOUND)) || bool((type == ::openfl::_legacy::AssetType_obj::MUSIC))))) && bool(((bool((assetType == ::openfl::_legacy::AssetType_obj::MUSIC)) || bool((assetType == ::openfl::_legacy::AssetType_obj::SOUND)))))))))){
-			HX_STACK_LINE(272)
+			HX_STACK_LINE(274)
 			return true;
 		}
-		HX_STACK_LINE(276)
+		HX_STACK_LINE(278)
 		if (((bool((bool((type == ::openfl::_legacy::AssetType_obj::BINARY)) || bool((type == null())))) || bool((bool((assetType == ::openfl::_legacy::AssetType_obj::BINARY)) && bool((type == ::openfl::_legacy::AssetType_obj::TEXT))))))){
-			HX_STACK_LINE(278)
+			HX_STACK_LINE(280)
 			return true;
 		}
 	}
-	HX_STACK_LINE(284)
+	HX_STACK_LINE(286)
 	return false;
 }
 
 
 ::openfl::_legacy::display::BitmapData DefaultAssetLibrary_obj::getBitmapData( ::String id){
-	HX_STACK_FRAME("DefaultAssetLibrary","getBitmapData",0xb8207f2d,"DefaultAssetLibrary.getBitmapData","DefaultAssetLibrary.hx",291,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","getBitmapData",0xb8207f2d,"DefaultAssetLibrary.getBitmapData","DefaultAssetLibrary.hx",293,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(291)
+	HX_STACK_LINE(293)
 	if ((this->className->exists(id))){
-		HX_STACK_LINE(293)
+		HX_STACK_LINE(295)
 		Dynamic _g = this->className->get(id);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(293)
+		HX_STACK_LINE(295)
 		return hx::TCast< openfl::_legacy::display::BitmapData >::cast(::Type_obj::createInstance(_g,Dynamic( Array_obj<Dynamic>::__new())));
 	}
 	else{
-		HX_STACK_LINE(297)
+		HX_STACK_LINE(299)
 		::String _g1 = this->path->get(id);		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(297)
+		HX_STACK_LINE(299)
 		return ::openfl::_legacy::display::BitmapData_obj::load(_g1,null());
 	}
-	HX_STACK_LINE(291)
+	HX_STACK_LINE(293)
 	return null();
 }
 
 
 ::openfl::_legacy::utils::ByteArray DefaultAssetLibrary_obj::getBytes( ::String id){
-	HX_STACK_FRAME("DefaultAssetLibrary","getBytes",0x86b4b377,"DefaultAssetLibrary.getBytes","DefaultAssetLibrary.hx",306,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","getBytes",0x86b4b377,"DefaultAssetLibrary.getBytes","DefaultAssetLibrary.hx",308,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(306)
+	HX_STACK_LINE(308)
 	if ((this->className->exists(id))){
-		HX_STACK_LINE(308)
+		HX_STACK_LINE(310)
 		Dynamic _g = this->className->get(id);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(308)
+		HX_STACK_LINE(310)
 		return hx::TCast< openfl::_legacy::utils::ByteArray >::cast(::Type_obj::createInstance(_g,Dynamic( Array_obj<Dynamic>::__new())));
 	}
 	else{
-		HX_STACK_LINE(312)
+		HX_STACK_LINE(314)
 		::String _g1 = this->path->get(id);		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(312)
+		HX_STACK_LINE(314)
 		return ::openfl::_legacy::utils::ByteArray_obj::readFile(_g1);
 	}
-	HX_STACK_LINE(306)
+	HX_STACK_LINE(308)
 	return null();
 }
 
 
 ::openfl::_legacy::text::Font DefaultAssetLibrary_obj::getFont( ::String id){
-	HX_STACK_FRAME("DefaultAssetLibrary","getFont",0x974ed843,"DefaultAssetLibrary.getFont","DefaultAssetLibrary.hx",321,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","getFont",0x974ed843,"DefaultAssetLibrary.getFont","DefaultAssetLibrary.hx",323,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(321)
+	HX_STACK_LINE(323)
 	if ((this->className->exists(id))){
-		HX_STACK_LINE(323)
-		Dynamic fontClass = this->className->get(id);		HX_STACK_VAR(fontClass,"fontClass");
-		HX_STACK_LINE(324)
-		::openfl::_legacy::text::Font_obj::registerFont(fontClass);
 		HX_STACK_LINE(325)
+		Dynamic fontClass = this->className->get(id);		HX_STACK_VAR(fontClass,"fontClass");
+		HX_STACK_LINE(326)
+		::openfl::_legacy::text::Font_obj::registerFont(fontClass);
+		HX_STACK_LINE(327)
 		return hx::TCast< openfl::_legacy::text::Font >::cast(::Type_obj::createInstance(fontClass,Dynamic( Array_obj<Dynamic>::__new())));
 	}
 	else{
-		HX_STACK_LINE(329)
+		HX_STACK_LINE(331)
 		::String _g = this->path->get(id);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(329)
+		HX_STACK_LINE(331)
 		return ::openfl::_legacy::text::Font_obj::__new(_g,null(),null());
 	}
-	HX_STACK_LINE(321)
+	HX_STACK_LINE(323)
 	return null();
 }
 
 
 ::openfl::_legacy::media::Sound DefaultAssetLibrary_obj::getMusic( ::String id){
-	HX_STACK_FRAME("DefaultAssetLibrary","getMusic",0xd9777bb1,"DefaultAssetLibrary.getMusic","DefaultAssetLibrary.hx",338,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","getMusic",0xd9777bb1,"DefaultAssetLibrary.getMusic","DefaultAssetLibrary.hx",340,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(338)
+	HX_STACK_LINE(340)
 	if ((this->className->exists(id))){
-		HX_STACK_LINE(340)
+		HX_STACK_LINE(342)
 		Dynamic _g = this->className->get(id);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(340)
+		HX_STACK_LINE(342)
 		return hx::TCast< openfl::_legacy::media::Sound >::cast(::Type_obj::createInstance(_g,Dynamic( Array_obj<Dynamic>::__new())));
 	}
 	else{
-		HX_STACK_LINE(344)
+		HX_STACK_LINE(346)
 		::String _g1 = this->path->get(id);		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(344)
+		HX_STACK_LINE(346)
 		::openfl::_legacy::net::URLRequest _g2 = ::openfl::_legacy::net::URLRequest_obj::__new(_g1);		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(344)
+		HX_STACK_LINE(346)
 		return ::openfl::_legacy::media::Sound_obj::__new(_g2,null(),true);
 	}
-	HX_STACK_LINE(338)
+	HX_STACK_LINE(340)
 	return null();
 }
 
 
 ::String DefaultAssetLibrary_obj::getPath( ::String id){
-	HX_STACK_FRAME("DefaultAssetLibrary","getPath",0x9de06019,"DefaultAssetLibrary.getPath","DefaultAssetLibrary.hx",359,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","getPath",0x9de06019,"DefaultAssetLibrary.getPath","DefaultAssetLibrary.hx",361,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(359)
+	HX_STACK_LINE(361)
 	return this->path->get(id);
 }
 
 
 ::openfl::_legacy::media::Sound DefaultAssetLibrary_obj::getSound( ::String id){
-	HX_STACK_FRAME("DefaultAssetLibrary","getSound",0x49e937db,"DefaultAssetLibrary.getSound","DefaultAssetLibrary.hx",368,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","getSound",0x49e937db,"DefaultAssetLibrary.getSound","DefaultAssetLibrary.hx",370,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(368)
+	HX_STACK_LINE(370)
 	if ((this->className->exists(id))){
-		HX_STACK_LINE(370)
+		HX_STACK_LINE(372)
 		Dynamic _g = this->className->get(id);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(370)
+		HX_STACK_LINE(372)
 		return hx::TCast< openfl::_legacy::media::Sound >::cast(::Type_obj::createInstance(_g,Dynamic( Array_obj<Dynamic>::__new())));
 	}
 	else{
-		HX_STACK_LINE(374)
+		HX_STACK_LINE(376)
 		::String _g1 = this->path->get(id);		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(374)
+		HX_STACK_LINE(376)
 		::openfl::_legacy::net::URLRequest _g2 = ::openfl::_legacy::net::URLRequest_obj::__new(_g1);		HX_STACK_VAR(_g2,"_g2");
-		HX_STACK_LINE(374)
+		HX_STACK_LINE(376)
 		::openfl::_legacy::AssetType _g3 = this->type->get(id);		HX_STACK_VAR(_g3,"_g3");
-		HX_STACK_LINE(374)
+		HX_STACK_LINE(376)
 		bool _g4 = (_g3 == ::openfl::_legacy::AssetType_obj::MUSIC);		HX_STACK_VAR(_g4,"_g4");
-		HX_STACK_LINE(374)
+		HX_STACK_LINE(376)
 		return ::openfl::_legacy::media::Sound_obj::__new(_g2,null(),_g4);
 	}
-	HX_STACK_LINE(368)
+	HX_STACK_LINE(370)
 	return null();
 }
 
 
 ::String DefaultAssetLibrary_obj::getText( ::String id){
-	HX_STACK_FRAME("DefaultAssetLibrary","getText",0xa0884721,"DefaultAssetLibrary.getText","DefaultAssetLibrary.hx",381,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","getText",0xa0884721,"DefaultAssetLibrary.getText","DefaultAssetLibrary.hx",383,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
-	HX_STACK_LINE(383)
-	::openfl::_legacy::utils::ByteArray bytes = this->getBytes(id);		HX_STACK_VAR(bytes,"bytes");
 	HX_STACK_LINE(385)
+	::openfl::_legacy::utils::ByteArray bytes = this->getBytes(id);		HX_STACK_VAR(bytes,"bytes");
+	HX_STACK_LINE(387)
 	if (((bytes == null()))){
-		HX_STACK_LINE(387)
+		HX_STACK_LINE(389)
 		return null();
 	}
 	else{
-		HX_STACK_LINE(391)
+		HX_STACK_LINE(393)
 		return bytes->readUTFBytes(bytes->length);
 	}
-	HX_STACK_LINE(385)
+	HX_STACK_LINE(387)
 	return null();
 }
 
 
 bool DefaultAssetLibrary_obj::isLocal( ::String id,::openfl::_legacy::AssetType type){
-	HX_STACK_FRAME("DefaultAssetLibrary","isLocal",0x968237df,"DefaultAssetLibrary.isLocal","DefaultAssetLibrary.hx",400,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","isLocal",0x968237df,"DefaultAssetLibrary.isLocal","DefaultAssetLibrary.hx",402,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(id,"id")
 	HX_STACK_ARG(type,"type")
-	HX_STACK_LINE(400)
+	HX_STACK_LINE(402)
 	return true;
 }
 
 
 Array< ::String > DefaultAssetLibrary_obj::list( ::openfl::_legacy::AssetType type){
-	HX_STACK_FRAME("DefaultAssetLibrary","list",0xf3604ee0,"DefaultAssetLibrary.list","DefaultAssetLibrary.hx",405,0x0fc48912)
+	HX_STACK_FRAME("DefaultAssetLibrary","list",0xf3604ee0,"DefaultAssetLibrary.list","DefaultAssetLibrary.hx",407,0x0fc48912)
 	HX_STACK_THIS(this)
 	HX_STACK_ARG(type,"type")
-	HX_STACK_LINE(407)
-	Array< ::String > items = Array_obj< ::String >::__new();		HX_STACK_VAR(items,"items");
 	HX_STACK_LINE(409)
+	Array< ::String > items = Array_obj< ::String >::__new();		HX_STACK_VAR(items,"items");
+	HX_STACK_LINE(411)
 	for(::cpp::FastIterator_obj< ::String > *__it = ::cpp::CreateFastIterator< ::String >(this->type->keys());  __it->hasNext(); ){
 		::String id = __it->next();
 		if (((  ((!(((type == null()))))) ? bool(this->exists(id,type)) : bool(true) ))){
-			HX_STACK_LINE(413)
+			HX_STACK_LINE(415)
 			items->push(id);
 		}
 ;
 	}
-	HX_STACK_LINE(419)
+	HX_STACK_LINE(421)
 	return items;
 }
 
 
 Void DefaultAssetLibrary_obj::loadBitmapData( ::String id,Dynamic handler){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","loadBitmapData",0x9243e881,"DefaultAssetLibrary.loadBitmapData","DefaultAssetLibrary.hx",426,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","loadBitmapData",0x9243e881,"DefaultAssetLibrary.loadBitmapData","DefaultAssetLibrary.hx",428,0x0fc48912)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(id,"id")
 		HX_STACK_ARG(handler,"handler")
-		HX_STACK_LINE(426)
+		HX_STACK_LINE(428)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("WORK"));
-		HX_STACK_LINE(426)
+		HX_STACK_LINE(428)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(this->getBitmapData_dyn());
-		HX_STACK_LINE(426)
+		HX_STACK_LINE(428)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(id);
-		HX_STACK_LINE(426)
+		HX_STACK_LINE(428)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(handler);
-		HX_STACK_LINE(426)
+		HX_STACK_LINE(428)
 		(::DefaultAssetLibrary_obj::loading)++;
 	}
 return null();
@@ -565,19 +567,19 @@ return null();
 
 Void DefaultAssetLibrary_obj::loadBytes( ::String id,Dynamic handler){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","loadBytes",0x8c71caa3,"DefaultAssetLibrary.loadBytes","DefaultAssetLibrary.hx",433,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","loadBytes",0x8c71caa3,"DefaultAssetLibrary.loadBytes","DefaultAssetLibrary.hx",435,0x0fc48912)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(id,"id")
 		HX_STACK_ARG(handler,"handler")
-		HX_STACK_LINE(433)
+		HX_STACK_LINE(435)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("WORK"));
-		HX_STACK_LINE(433)
+		HX_STACK_LINE(435)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(this->getBytes_dyn());
-		HX_STACK_LINE(433)
+		HX_STACK_LINE(435)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(id);
-		HX_STACK_LINE(433)
+		HX_STACK_LINE(435)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(handler);
-		HX_STACK_LINE(433)
+		HX_STACK_LINE(435)
 		(::DefaultAssetLibrary_obj::loading)++;
 	}
 return null();
@@ -586,19 +588,19 @@ return null();
 
 Void DefaultAssetLibrary_obj::loadFont( ::String id,Dynamic handler){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","loadFont",0x1da5ca97,"DefaultAssetLibrary.loadFont","DefaultAssetLibrary.hx",440,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","loadFont",0x1da5ca97,"DefaultAssetLibrary.loadFont","DefaultAssetLibrary.hx",442,0x0fc48912)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(id,"id")
 		HX_STACK_ARG(handler,"handler")
-		HX_STACK_LINE(440)
+		HX_STACK_LINE(442)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("WORK"));
-		HX_STACK_LINE(440)
+		HX_STACK_LINE(442)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(this->getFont_dyn());
-		HX_STACK_LINE(440)
+		HX_STACK_LINE(442)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(id);
-		HX_STACK_LINE(440)
+		HX_STACK_LINE(442)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(handler);
-		HX_STACK_LINE(440)
+		HX_STACK_LINE(442)
 		(::DefaultAssetLibrary_obj::loading)++;
 	}
 return null();
@@ -607,72 +609,72 @@ return null();
 
 Void DefaultAssetLibrary_obj::loadManifest( ){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","loadManifest",0x6f596c77,"DefaultAssetLibrary.loadManifest","DefaultAssetLibrary.hx",447,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","loadManifest",0x6f596c77,"DefaultAssetLibrary.loadManifest","DefaultAssetLibrary.hx",449,0x0fc48912)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(447)
+		HX_STACK_LINE(449)
 		try
 		{
 		HX_STACK_CATCHABLE(Dynamic, 0);
 		{
-			HX_STACK_LINE(456)
+			HX_STACK_LINE(458)
 			::openfl::_legacy::utils::ByteArray bytes = ::openfl::_legacy::utils::ByteArray_obj::readFile(HX_CSTRING("manifest"));		HX_STACK_VAR(bytes,"bytes");
-			HX_STACK_LINE(459)
+			HX_STACK_LINE(461)
 			if (((bytes != null()))){
-				HX_STACK_LINE(461)
-				bytes->position = (int)0;
 				HX_STACK_LINE(463)
+				bytes->position = (int)0;
+				HX_STACK_LINE(465)
 				if (((bytes->length > (int)0))){
-					HX_STACK_LINE(465)
-					::String data = bytes->readUTFBytes(bytes->length);		HX_STACK_VAR(data,"data");
 					HX_STACK_LINE(467)
+					::String data = bytes->readUTFBytes(bytes->length);		HX_STACK_VAR(data,"data");
+					HX_STACK_LINE(469)
 					if (((bool((data != null())) && bool((data.length > (int)0))))){
-						HX_STACK_LINE(469)
-						Dynamic manifest = ::haxe::Unserializer_obj::run(data);		HX_STACK_VAR(manifest,"manifest");
 						HX_STACK_LINE(471)
+						Dynamic manifest = ::haxe::Unserializer_obj::run(data);		HX_STACK_VAR(manifest,"manifest");
+						HX_STACK_LINE(473)
 						{
-							HX_STACK_LINE(471)
+							HX_STACK_LINE(473)
 							int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-							HX_STACK_LINE(471)
+							HX_STACK_LINE(473)
 							while((true)){
-								HX_STACK_LINE(471)
+								HX_STACK_LINE(473)
 								if ((!(((_g < manifest->__Field(HX_CSTRING("length"),true)))))){
-									HX_STACK_LINE(471)
+									HX_STACK_LINE(473)
 									break;
 								}
-								HX_STACK_LINE(471)
+								HX_STACK_LINE(473)
 								Dynamic asset = manifest->__GetItem(_g);		HX_STACK_VAR(asset,"asset");
-								HX_STACK_LINE(471)
+								HX_STACK_LINE(473)
 								++(_g);
 								struct _Function_7_1{
 									inline static bool Block( hx::ObjectPtr< ::DefaultAssetLibrary_obj > __this,Dynamic &asset){
-										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","DefaultAssetLibrary.hx",473,0x0fc48912)
+										HX_STACK_FRAME("*","closure",0x5bdab937,"*.closure","DefaultAssetLibrary.hx",475,0x0fc48912)
 										{
-											HX_STACK_LINE(473)
+											HX_STACK_LINE(475)
 											::String key = asset->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-											HX_STACK_LINE(473)
+											HX_STACK_LINE(475)
 											return __this->className->exists(key);
 										}
 										return null();
 									}
 								};
-								HX_STACK_LINE(473)
+								HX_STACK_LINE(475)
 								if ((!(_Function_7_1::Block(this,asset)))){
-									HX_STACK_LINE(475)
+									HX_STACK_LINE(477)
 									{
-										HX_STACK_LINE(475)
+										HX_STACK_LINE(477)
 										::String key = asset->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-										HX_STACK_LINE(475)
+										HX_STACK_LINE(477)
 										::String value = asset->__Field(HX_CSTRING("path"),true);		HX_STACK_VAR(value,"value");
-										HX_STACK_LINE(475)
+										HX_STACK_LINE(477)
 										this->path->set(key,value);
 									}
-									HX_STACK_LINE(476)
+									HX_STACK_LINE(478)
 									{
-										HX_STACK_LINE(476)
+										HX_STACK_LINE(478)
 										::String key = asset->__Field(HX_CSTRING("id"),true);		HX_STACK_VAR(key,"key");
-										HX_STACK_LINE(476)
+										HX_STACK_LINE(478)
 										::openfl::_legacy::AssetType value = ::Type_obj::createEnum(hx::ClassOf< ::openfl::_legacy::AssetType >(),asset->__Field(HX_CSTRING("type"),true),null());		HX_STACK_VAR(value,"value");
-										HX_STACK_LINE(476)
+										HX_STACK_LINE(478)
 										this->type->set(key,value);
 									}
 								}
@@ -682,8 +684,8 @@ Void DefaultAssetLibrary_obj::loadManifest( ){
 				}
 			}
 			else{
-				HX_STACK_LINE(488)
-				::haxe::Log_obj::trace(HX_CSTRING("Warning: Could not load asset manifest (bytes was null)"),hx::SourceInfo(HX_CSTRING("DefaultAssetLibrary.hx"),488,HX_CSTRING("DefaultAssetLibrary"),HX_CSTRING("loadManifest")));
+				HX_STACK_LINE(490)
+				::haxe::Log_obj::trace(HX_CSTRING("Warning: Could not load asset manifest (bytes was null)"),hx::SourceInfo(HX_CSTRING("DefaultAssetLibrary.hx"),490,HX_CSTRING("DefaultAssetLibrary"),HX_CSTRING("loadManifest")));
 			}
 		}
 		}
@@ -691,14 +693,14 @@ Void DefaultAssetLibrary_obj::loadManifest( ){
 			{
 				HX_STACK_BEGIN_CATCH
 				Dynamic e = __e;{
-					HX_STACK_LINE(494)
+					HX_STACK_LINE(496)
 					::String _g = ::Std_obj::string(e);		HX_STACK_VAR(_g,"_g");
-					HX_STACK_LINE(494)
+					HX_STACK_LINE(496)
 					::String _g1 = (HX_CSTRING("Warning: Could not load asset manifest (") + _g);		HX_STACK_VAR(_g1,"_g1");
-					HX_STACK_LINE(494)
+					HX_STACK_LINE(496)
 					::String _g2 = (_g1 + HX_CSTRING(")"));		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(494)
-					::haxe::Log_obj::trace(_g2,hx::SourceInfo(HX_CSTRING("DefaultAssetLibrary.hx"),494,HX_CSTRING("DefaultAssetLibrary"),HX_CSTRING("loadManifest")));
+					HX_STACK_LINE(496)
+					::haxe::Log_obj::trace(_g2,hx::SourceInfo(HX_CSTRING("DefaultAssetLibrary.hx"),496,HX_CSTRING("DefaultAssetLibrary"),HX_CSTRING("loadManifest")));
 				}
 			}
 		}
@@ -711,19 +713,19 @@ HX_DEFINE_DYNAMIC_FUNC0(DefaultAssetLibrary_obj,loadManifest,(void))
 
 Void DefaultAssetLibrary_obj::loadMusic( ::String id,Dynamic handler){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","loadMusic",0xdf3492dd,"DefaultAssetLibrary.loadMusic","DefaultAssetLibrary.hx",503,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","loadMusic",0xdf3492dd,"DefaultAssetLibrary.loadMusic","DefaultAssetLibrary.hx",505,0x0fc48912)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(id,"id")
 		HX_STACK_ARG(handler,"handler")
-		HX_STACK_LINE(503)
+		HX_STACK_LINE(505)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("WORK"));
-		HX_STACK_LINE(503)
+		HX_STACK_LINE(505)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(this->getMusic_dyn());
-		HX_STACK_LINE(503)
+		HX_STACK_LINE(505)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(id);
-		HX_STACK_LINE(503)
+		HX_STACK_LINE(505)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(handler);
-		HX_STACK_LINE(503)
+		HX_STACK_LINE(505)
 		(::DefaultAssetLibrary_obj::loading)++;
 	}
 return null();
@@ -732,19 +734,19 @@ return null();
 
 Void DefaultAssetLibrary_obj::loadSound( ::String id,Dynamic handler){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","loadSound",0x4fa64f07,"DefaultAssetLibrary.loadSound","DefaultAssetLibrary.hx",510,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","loadSound",0x4fa64f07,"DefaultAssetLibrary.loadSound","DefaultAssetLibrary.hx",512,0x0fc48912)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(id,"id")
 		HX_STACK_ARG(handler,"handler")
-		HX_STACK_LINE(510)
+		HX_STACK_LINE(512)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("WORK"));
-		HX_STACK_LINE(510)
+		HX_STACK_LINE(512)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(this->getSound_dyn());
-		HX_STACK_LINE(510)
+		HX_STACK_LINE(512)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(id);
-		HX_STACK_LINE(510)
+		HX_STACK_LINE(512)
 		::DefaultAssetLibrary_obj::workerIncomingQueue->add(handler);
-		HX_STACK_LINE(510)
+		HX_STACK_LINE(512)
 		(::DefaultAssetLibrary_obj::loading)++;
 	}
 return null();
@@ -753,27 +755,27 @@ return null();
 
 Void DefaultAssetLibrary_obj::loadText( ::String id,Dynamic handler){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","loadText",0x26df3975,"DefaultAssetLibrary.loadText","DefaultAssetLibrary.hx",515,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","loadText",0x26df3975,"DefaultAssetLibrary.loadText","DefaultAssetLibrary.hx",517,0x0fc48912)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(id,"id")
 		HX_STACK_ARG(handler,"handler")
-		HX_STACK_LINE(515)
+		HX_STACK_LINE(517)
 		Dynamic handler1 = Dynamic( Array_obj<Dynamic>::__new().Add(handler));		HX_STACK_VAR(handler1,"handler1");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,Dynamic,handler1)
 		Void run(::openfl::_legacy::utils::ByteArray bytes){
-			HX_STACK_FRAME("*","_Function_1_1",0x5200ed37,"*._Function_1_1","DefaultAssetLibrary.hx",519,0x0fc48912)
+			HX_STACK_FRAME("*","_Function_1_1",0x5200ed37,"*._Function_1_1","DefaultAssetLibrary.hx",521,0x0fc48912)
 			HX_STACK_ARG(bytes,"bytes")
 			{
-				HX_STACK_LINE(519)
+				HX_STACK_LINE(521)
 				if (((bytes == null()))){
-					HX_STACK_LINE(521)
+					HX_STACK_LINE(523)
 					handler1->__GetItem((int)0)(null()).Cast< Void >();
 				}
 				else{
-					HX_STACK_LINE(525)
+					HX_STACK_LINE(527)
 					::String _g = bytes->readUTFBytes(bytes->length);		HX_STACK_VAR(_g,"_g");
-					HX_STACK_LINE(525)
+					HX_STACK_LINE(527)
 					handler1->__GetItem((int)0)(_g).Cast< Void >();
 				}
 			}
@@ -781,9 +783,9 @@ Void DefaultAssetLibrary_obj::loadText( ::String id,Dynamic handler){
 		}
 		HX_END_LOCAL_FUNC1((void))
 
-		HX_STACK_LINE(517)
+		HX_STACK_LINE(519)
 		Dynamic callback =  Dynamic(new _Function_1_1(handler1));		HX_STACK_VAR(callback,"callback");
-		HX_STACK_LINE(531)
+		HX_STACK_LINE(533)
 		this->loadBytes(id,callback);
 	}
 return null();
@@ -792,20 +794,20 @@ return null();
 
 Void DefaultAssetLibrary_obj::__load( Dynamic getMethod,::String id,Dynamic handler){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","__load",0xcdf05448,"DefaultAssetLibrary.__load","DefaultAssetLibrary.hx",564,0x0fc48912)
+		HX_STACK_FRAME("DefaultAssetLibrary","__load",0xcdf05448,"DefaultAssetLibrary.__load","DefaultAssetLibrary.hx",566,0x0fc48912)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(getMethod,"getMethod")
 		HX_STACK_ARG(id,"id")
 		HX_STACK_ARG(handler,"handler")
-		HX_STACK_LINE(566)
-		::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("WORK"));
-		HX_STACK_LINE(567)
-		::DefaultAssetLibrary_obj::workerIncomingQueue->add(getMethod);
 		HX_STACK_LINE(568)
-		::DefaultAssetLibrary_obj::workerIncomingQueue->add(id);
+		::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("WORK"));
 		HX_STACK_LINE(569)
-		::DefaultAssetLibrary_obj::workerIncomingQueue->add(handler);
+		::DefaultAssetLibrary_obj::workerIncomingQueue->add(getMethod);
+		HX_STACK_LINE(570)
+		::DefaultAssetLibrary_obj::workerIncomingQueue->add(id);
 		HX_STACK_LINE(571)
+		::DefaultAssetLibrary_obj::workerIncomingQueue->add(handler);
+		HX_STACK_LINE(573)
 		(::DefaultAssetLibrary_obj::loading)++;
 	}
 return null();
@@ -826,32 +828,32 @@ int DefaultAssetLibrary_obj::loading;
 
 Void DefaultAssetLibrary_obj::__doWork( ){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","__doWork",0x3075ad9e,"DefaultAssetLibrary.__doWork","DefaultAssetLibrary.hx",538,0x0fc48912)
-		HX_STACK_LINE(538)
+		HX_STACK_FRAME("DefaultAssetLibrary","__doWork",0x3075ad9e,"DefaultAssetLibrary.__doWork","DefaultAssetLibrary.hx",540,0x0fc48912)
+		HX_STACK_LINE(540)
 		while((true)){
-			HX_STACK_LINE(540)
-			::String message = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(message,"message");
 			HX_STACK_LINE(542)
+			::String message = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(message,"message");
+			HX_STACK_LINE(544)
 			if (((message == HX_CSTRING("WORK")))){
-				HX_STACK_LINE(544)
-				Dynamic getMethod = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(getMethod,"getMethod");
-				HX_STACK_LINE(545)
-				Dynamic id = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(id,"id");
 				HX_STACK_LINE(546)
-				Dynamic handler = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(handler,"handler");
+				Dynamic getMethod = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(getMethod,"getMethod");
+				HX_STACK_LINE(547)
+				Dynamic id = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(id,"id");
 				HX_STACK_LINE(548)
-				Dynamic data = getMethod(id);		HX_STACK_VAR(data,"data");
-				HX_STACK_LINE(549)
-				::DefaultAssetLibrary_obj::workerResult->add(HX_CSTRING("RESULT"));
+				Dynamic handler = ::DefaultAssetLibrary_obj::workerIncomingQueue->pop(true);		HX_STACK_VAR(handler,"handler");
 				HX_STACK_LINE(550)
-				::DefaultAssetLibrary_obj::workerResult->add(data);
+				Dynamic data = getMethod(id);		HX_STACK_VAR(data,"data");
 				HX_STACK_LINE(551)
+				::DefaultAssetLibrary_obj::workerResult->add(HX_CSTRING("RESULT"));
+				HX_STACK_LINE(552)
+				::DefaultAssetLibrary_obj::workerResult->add(data);
+				HX_STACK_LINE(553)
 				::DefaultAssetLibrary_obj::workerResult->add(handler);
 			}
 			else{
-				HX_STACK_LINE(553)
+				HX_STACK_LINE(555)
 				if (((message == HX_CSTRING("EXIT")))){
-					HX_STACK_LINE(555)
+					HX_STACK_LINE(557)
 					break;
 				}
 			}
@@ -865,48 +867,48 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(DefaultAssetLibrary_obj,__doWork,(void))
 
 Void DefaultAssetLibrary_obj::__poll( ){
 {
-		HX_STACK_FRAME("DefaultAssetLibrary","__poll",0xd0953861,"DefaultAssetLibrary.__poll","DefaultAssetLibrary.hx",578,0x0fc48912)
-		HX_STACK_LINE(578)
+		HX_STACK_FRAME("DefaultAssetLibrary","__poll",0xd0953861,"DefaultAssetLibrary.__poll","DefaultAssetLibrary.hx",580,0x0fc48912)
+		HX_STACK_LINE(580)
 		if (((::DefaultAssetLibrary_obj::loading > ::DefaultAssetLibrary_obj::loaded))){
-			HX_STACK_LINE(580)
+			HX_STACK_LINE(582)
 			if (((::DefaultAssetLibrary_obj::workerThread == null()))){
-				HX_STACK_LINE(582)
+				HX_STACK_LINE(584)
 				::cpp::vm::Thread _g = ::cpp::vm::Thread_obj::create(::DefaultAssetLibrary_obj::__doWork_dyn());		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(582)
+				HX_STACK_LINE(584)
 				::DefaultAssetLibrary_obj::workerThread = _g;
 			}
-			HX_STACK_LINE(586)
-			::String message = ::DefaultAssetLibrary_obj::workerResult->pop(false);		HX_STACK_VAR(message,"message");
 			HX_STACK_LINE(588)
+			::String message = ::DefaultAssetLibrary_obj::workerResult->pop(false);		HX_STACK_VAR(message,"message");
+			HX_STACK_LINE(590)
 			while((true)){
-				HX_STACK_LINE(588)
+				HX_STACK_LINE(590)
 				if ((!(((message == HX_CSTRING("RESULT")))))){
-					HX_STACK_LINE(588)
+					HX_STACK_LINE(590)
 					break;
 				}
-				HX_STACK_LINE(590)
-				(::DefaultAssetLibrary_obj::loaded)++;
 				HX_STACK_LINE(592)
+				(::DefaultAssetLibrary_obj::loaded)++;
+				HX_STACK_LINE(594)
 				Dynamic data = ::DefaultAssetLibrary_obj::workerResult->pop(true);		HX_STACK_VAR(data,"data");
-				HX_STACK_LINE(593)
-				Dynamic handler = ::DefaultAssetLibrary_obj::workerResult->pop(true);		HX_STACK_VAR(handler,"handler");
 				HX_STACK_LINE(595)
+				Dynamic handler = ::DefaultAssetLibrary_obj::workerResult->pop(true);		HX_STACK_VAR(handler,"handler");
+				HX_STACK_LINE(597)
 				if (((handler != null()))){
-					HX_STACK_LINE(597)
+					HX_STACK_LINE(599)
 					handler(data);
 				}
-				HX_STACK_LINE(601)
+				HX_STACK_LINE(603)
 				Dynamic _g1 = ::DefaultAssetLibrary_obj::workerResult->pop(false);		HX_STACK_VAR(_g1,"_g1");
-				HX_STACK_LINE(601)
+				HX_STACK_LINE(603)
 				message = _g1;
 			}
 		}
 		else{
-			HX_STACK_LINE(607)
+			HX_STACK_LINE(609)
 			if (((::DefaultAssetLibrary_obj::workerThread != null()))){
-				HX_STACK_LINE(609)
+				HX_STACK_LINE(611)
 				::DefaultAssetLibrary_obj::workerIncomingQueue->add(HX_CSTRING("EXIT"));
-				HX_STACK_LINE(610)
+				HX_STACK_LINE(612)
 				::DefaultAssetLibrary_obj::workerThread = null();
 			}
 		}

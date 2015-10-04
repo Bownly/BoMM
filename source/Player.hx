@@ -89,18 +89,71 @@ class Player extends FlxSprite
 		maxVelocity.set(200, 200);
 		drag.set(1600, 1600);
 		
-		animation.add("walk", [3, 2, 3, 4], 10, true);
-		animation.add("idle", [0, 0, 0, 0, 0, 1], 3, true);
-		animation.add("jump", [5], 15, true);
-		animation.add("fall", [6], 15, true);
-		animation.add("hurt", [5], 15, true);
 		
-		animation.add("walk_shoot", [10, 9, 10, 11], 10, true);
-		animation.add("idle_shoot", [8], 3, true);
-		animation.add("jump_shoot", [13], 15, true);
-		animation.add("fall_shoot", [13], 15, true);
+		var offset = 18; // the amount of sprites in the sheet per color
+		var o = 0 * offset;  // offset for grey
+		animation.add("idle_0", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
+		animation.add("walk_0", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
+		animation.add("jump_0", [5 + o], 15, true);
+		animation.add("fall_0", [5 + o], 15, true);
+		animation.add("hurt_0", [5 + o], 15, true);
+		animation.add("climb_0", [6 + o, 7 + o], 3, true);
+		animation.add("climbup_0", [15 + o], 15, true);
+		animation.add("slide_0", [8 + o], 3, true);
 		
+		animation.add("idle_0_shoot", [9 + o]);
+		animation.add("walk_0_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
+		animation.add("jump_0_shoot", [14 + o], 15, true);
+		animation.add("fall_0_shoot", [14 + o], 15, true);
+		animation.add("climb_0_shoot", [15 + o], 1, true);
 		
+		o = 1 * offset;  // offset for cyan
+		animation.add("idle_1", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
+		animation.add("walk_1", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
+		animation.add("jump_1", [5 + o], 15, true);
+		animation.add("fall_1", [5 + o], 15, true);
+		animation.add("hurt_1", [5 + o], 15, true);
+		animation.add("climb_1", [6 + o, 7 + o], 3, true);
+		animation.add("climbup_1", [15 + o], 15, true);
+		animation.add("slide_1", [8 + o], 3, true);
+		
+		animation.add("idle_1_shoot", [9 + o]);
+		animation.add("walk_1_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
+		animation.add("jump_1_shoot", [14 + o], 15, true);
+		animation.add("fall_1_shoot", [14 + o], 15, true);
+		animation.add("climb_1_shoot", [15 + o], 1, true);
+		
+		o = 2 * offset;  // offset for magenta
+		animation.add("idle_2", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
+		animation.add("walk_2", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
+		animation.add("jump_2", [5 + o], 15, true);
+		animation.add("fall_2", [5 + o], 15, true);
+		animation.add("hurt_2", [5 + o], 15, true);
+		animation.add("climb_2", [6 + o, 7 + o], 3, true);
+		animation.add("climbup_2", [15 + o], 15, true);
+		animation.add("slide_2", [8 + o], 3, true);
+		
+		animation.add("idle_2_shoot", [9 + o]);
+		animation.add("walk_2_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
+		animation.add("jump_2_shoot", [14 + o], 15, true);
+		animation.add("fall_2_shoot", [14 + o], 15, true);
+		animation.add("climb_2_shoot", [15 + o], 1, true);
+		
+		o = 3 * offset;  // offset for yellow
+		animation.add("idle_3", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
+		animation.add("walk_3", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
+		animation.add("jump_3", [5 + o], 15, true);
+		animation.add("fall_3", [5 + o], 15, true);
+		animation.add("hurt_3", [5 + o], 15, true);
+		animation.add("climb_3", [6 + o, 7 + o], 3, true);
+		animation.add("climbup_3", [15 + o], 15, true);
+		animation.add("slide_3", [8 + o], 3, true);
+		
+		animation.add("idle_3_shoot", [9 + o]);
+		animation.add("walk_3_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
+		animation.add("jump_3_shoot", [14 + o], 15, true);
+		animation.add("fall_3_shoot", [14 + o], 15, true);
+		animation.add("climb_3_shoot", [15 + o], 1, true);
 	}
 	
 
@@ -290,16 +343,16 @@ class Player extends FlxSprite
 			shootingString = "";
 		
 		if (velocity.x == 0 && hurtTimer <= 0) 
-			animation.play("idle" + shootingString);
+			animation.play("idle_" + curWeaponLoc + shootingString);
 		
 		if (velocity.x != 0)
-			animation.play("walk" + shootingString);
+			animation.play("walk_" + curWeaponLoc + shootingString);
 		
 		if (velocity.y < 0) 
-			animation.play("jump" + shootingString);
+			animation.play("jump_" + curWeaponLoc + shootingString);
 		else if (velocity.y > 0) 
 		{
-			animation.play("fall" + shootingString);
+			animation.play("fall_" + curWeaponLoc + shootingString);
 			// prevent player from having max jumps after walking off a platform
 			if (remainingJumps == maxJumps)
 				remainingJumps--;
@@ -330,7 +383,7 @@ class Player extends FlxSprite
 		
 		
 		curWeapon = weaponArray[curWeaponLoc];
-		
+		/*
 		if (curWeaponLoc == 0)  // pea atm
 		{
 			animation.add("walk", [3, 2, 3, 4], 10, true);
@@ -383,7 +436,7 @@ class Player extends FlxSprite
 			animation.add("jump_shoot", [54], 15, true);
 			animation.add("fall_shoot", [54], 15, true);
 		}
-	}
+*/	}
 
 	public function takeDamage(dmg:Int):Void
 	{
@@ -391,7 +444,7 @@ class Player extends FlxSprite
 		{
 			hurtTimer = 1;
 			hp -= dmg;
-			animation.play("hurt");
+			animation.play("hurt_" + curWeaponLoc);
 		}
 		
 		

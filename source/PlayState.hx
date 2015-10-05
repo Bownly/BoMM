@@ -128,7 +128,7 @@ class PlayState extends FlxState
 			
 		}*/
 		
-				_player = new Player(100, 100, playerBullets, Reg.weaponArray);
+			_player = new Player(100, 100, playerBullets);
 
 		
 		dropsGroup = new FlxTypedGroup<Drops>();

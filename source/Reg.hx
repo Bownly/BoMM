@@ -44,6 +44,11 @@ class Reg
 	public static var player:Player;
 	//public static var player:Player = new Player(0, 0, bullets);
 	
+	//public static var pHP:Int = 3;
+	public static var pMaxHP:Int = 3;
+	public static var pMaxJumps:Int = 2;
+	public static var pDamage:Int = 1;
+	public static var pLuck:Int = 5;	
 	
 	public static var weapon1:WeaponTemplate = new WeaponTemplate("pea");
 	public static var weapon2:WeaponTemplate = new EightWayWeapon("cyan");

@@ -20,19 +20,20 @@ import weapons.YellowWeapon;
  */
 class Player extends FlxSprite
 {
+	// vars from Reg.hx
+	public var hp:Int = 3;
+	public var maxHP:Int = 3;
+	public var maxJumps:Int = 2;
+	public var damage:Int = 1;
+	public var luck:Int = 5;	
+	
 	var jumpPower:Int = 2250;
 	var GRAVITY:Int = 690;
 	var xSpeed:Int = 150;
 	var remainingJumps:Int = 2;
-	public var hp:Int = 3;
 	var isSliding:Bool = false;
 	
 	// Stats
-	public var maxHP:Int = 3;
-	public var maxJumps:Int = 2;
-	public var shotRange:Int = 10;
-	public var damage:Int = 1;
-	public var luck:Int = 5;	
 	
 	public var bulletArray:FlxTypedGroup<weapons.Bullet>;
 	public var maxBullets:Int = 3;
@@ -61,11 +62,18 @@ class Player extends FlxSprite
 	private var canMove:Bool = true;
 	
 	
-	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>, ?WeaponArray:Array<WeaponTemplate>) 
+	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>) 
 	{
 		super(inX, inY);
 		
-	/*	weapon1 = new WeaponTemplate("pea", bulletArray);
+		// sets up player's stats etc from Reg.hx values
+		maxHP = Reg.pMaxHP;
+		hp = maxHP;
+		maxJumps = Reg.pMaxJumps;
+		damage = Reg.pDamage;
+		luck = Reg.pLuck;
+		
+		/*weapon1 = new WeaponTemplate("pea", bulletArray);
 		weapon2 = new EightWayWeapon("cyan", bulletArray);
 		weapon3 = new YellowWeapon("yellow", bulletArray);
 		weapon4 = new MagentaWeapon("magenta", bulletArray);
@@ -73,87 +81,44 @@ class Player extends FlxSprite
 		weaponArray = [weapon1, weapon2, weapon3, weapon4];
 		curWeaponLoc = 0;
 		*/
-		weaponArray = WeaponArray;
+		weaponArray = Reg.weaponArray;
 		curWeaponLoc = 0;
 		curWeapon = weaponArray[curWeaponLoc];
+		for (wpn in weaponArray)  // restores the weapons' ammo
+		{
+			wpn.juice = wpn.juiceMax;
+		}
+		
+		bulletArray = Bullets;
+		velocity.y = GRAVITY;
+		maxVelocity.set(200, 200);
 		
 		loadGraphic(AssetPaths.mm__png, true, 32, 32);
 		width = 14;
 		height = 22;
 		offset = new FlxPoint(8, 4);
 		
-		bulletArray = Bullets;
-		
-		velocity.y = GRAVITY;
-		
-		maxVelocity.set(200, 200);
-		drag.set(1600, 1600);
-		
 		
 		var offset = 18; // the amount of sprites in the sheet per color
-		var o = 0 * offset;  // offset for grey
-		animation.add("idle_0", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
-		animation.add("walk_0", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
-		animation.add("jump_0", [5 + o], 15, true);
-		animation.add("fall_0", [5 + o], 15, true);
-		animation.add("hurt_0", [5 + o], 15, true);
-		animation.add("climb_0", [6 + o, 7 + o], 3, true);
-		animation.add("climbup_0", [15 + o], 15, true);
-		animation.add("slide_0", [8 + o], 3, true);
+		for (i in 0...3)
+		{
+			var o = i * offset;  // offseting for colors
+			animation.add("idle_" + i, [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
+			animation.add("walk_" + i, [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
+			animation.add("jump_" + i, [5 + o], 15, true);
+			animation.add("fall_" + i, [5 + o], 15, true);
+			animation.add("hurt_" + i, [10 + o], 15, true);
+			animation.add("climb_" + i, [6 + o, 7 + o], 3, true);
+			animation.add("climbup_" + i, [15 + o], 15, true);
+			animation.add("slide_" + i, [8 + o], 3, true);
+			
+			animation.add("idle_" + i + "_shoot", [9 + o]);
+			animation.add("walk_" + i + "_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
+			animation.add("jump_" + i + "_shoot", [14 + o], 15, true);
+			animation.add("fall_" + i + "_shoot", [14 + o], 15, true);
+			animation.add("climb_" + i + "_shoot", [15 + o], 1, true);
+		}
 		
-		animation.add("idle_0_shoot", [9 + o]);
-		animation.add("walk_0_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
-		animation.add("jump_0_shoot", [14 + o], 15, true);
-		animation.add("fall_0_shoot", [14 + o], 15, true);
-		animation.add("climb_0_shoot", [15 + o], 1, true);
-		
-		o = 1 * offset;  // offset for cyan
-		animation.add("idle_1", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
-		animation.add("walk_1", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
-		animation.add("jump_1", [5 + o], 15, true);
-		animation.add("fall_1", [5 + o], 15, true);
-		animation.add("hurt_1", [5 + o], 15, true);
-		animation.add("climb_1", [6 + o, 7 + o], 3, true);
-		animation.add("climbup_1", [15 + o], 15, true);
-		animation.add("slide_1", [8 + o], 3, true);
-		
-		animation.add("idle_1_shoot", [9 + o]);
-		animation.add("walk_1_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
-		animation.add("jump_1_shoot", [14 + o], 15, true);
-		animation.add("fall_1_shoot", [14 + o], 15, true);
-		animation.add("climb_1_shoot", [15 + o], 1, true);
-		
-		o = 2 * offset;  // offset for magenta
-		animation.add("idle_2", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
-		animation.add("walk_2", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
-		animation.add("jump_2", [5 + o], 15, true);
-		animation.add("fall_2", [5 + o], 15, true);
-		animation.add("hurt_2", [5 + o], 15, true);
-		animation.add("climb_2", [6 + o, 7 + o], 3, true);
-		animation.add("climbup_2", [15 + o], 15, true);
-		animation.add("slide_2", [8 + o], 3, true);
-		
-		animation.add("idle_2_shoot", [9 + o]);
-		animation.add("walk_2_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
-		animation.add("jump_2_shoot", [14 + o], 15, true);
-		animation.add("fall_2_shoot", [14 + o], 15, true);
-		animation.add("climb_2_shoot", [15 + o], 1, true);
-		
-		o = 3 * offset;  // offset for yellow
-		animation.add("idle_3", [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
-		animation.add("walk_3", [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
-		animation.add("jump_3", [5 + o], 15, true);
-		animation.add("fall_3", [5 + o], 15, true);
-		animation.add("hurt_3", [5 + o], 15, true);
-		animation.add("climb_3", [6 + o, 7 + o], 3, true);
-		animation.add("climbup_3", [15 + o], 15, true);
-		animation.add("slide_3", [8 + o], 3, true);
-		
-		animation.add("idle_3_shoot", [9 + o]);
-		animation.add("walk_3_shoot", [12 + o, 11 + o, 12 + o, 13 + o], 10, true);
-		animation.add("jump_3_shoot", [14 + o], 15, true);
-		animation.add("fall_3_shoot", [14 + o], 15, true);
-		animation.add("climb_3_shoot", [15 + o], 1, true);
 	}
 	
 
@@ -244,6 +209,17 @@ class Player extends FlxSprite
 		super.update();
 	}
 
+	override public function destroy():Void
+	{
+		/*Reg.pHP = hp;
+		Reg.pMaxHP = maxHP;
+		Reg.pMaxJumps = maxJumps;
+		Reg.pDamage = damage;
+		Reg.pLuck = luck;*/
+		
+		super.destroy();
+	}
+	
 	public function enterBossDoor():Void
 	{
 		canMove = false;
@@ -381,62 +357,8 @@ class Player extends FlxSprite
 		}
 		while (weaponArray[curWeaponLoc].unlocked == false);
 		
-		
 		curWeapon = weaponArray[curWeaponLoc];
-		/*
-		if (curWeaponLoc == 0)  // pea atm
-		{
-			animation.add("walk", [3, 2, 3, 4], 10, true);
-			animation.add("idle", [0, 0, 0, 0, 0, 1], 3, true);
-			animation.add("jump", [5], 15, true);
-			animation.add("fall", [6], 15, true);
-			animation.add("hurt", [5], 15, true);
-			
-			animation.add("walk_shoot", [10, 9, 10, 11], 10, true);
-			animation.add("idle_shoot", [8], 3, true);
-			animation.add("jump_shoot", [13], 15, true);
-			animation.add("fall_shoot", [13], 15, true);
-		}
-		else if (curWeaponLoc == 1)  // cyan atm
-		{
-			animation.add("walk", [31, 30, 31, 32], 10, true);
-			animation.add("idle", [28, 28, 28, 28, 28, 29], 3, true);
-			animation.add("jump", [33], 15, true);
-			animation.add("fall", [34], 15, true);
-			animation.add("hurt", [33], 15, true);
-			
-			animation.add("walk_shoot", [38, 37, 38, 39], 10, true);
-			animation.add("idle_shoot", [35], 3, true);
-			animation.add("jump_shoot", [40], 15, true);
-			animation.add("fall_shoot", [40], 15, true);
-		}
-		else if (curWeaponLoc == 2)  // yellow atm
-		{
-			animation.add("walk", [17, 16, 17, 18], 10, true);
-			animation.add("idle", [14, 14, 14, 14, 14, 15], 3, true);
-			animation.add("jump", [19], 15, true);
-			animation.add("fall", [20], 15, true);
-			animation.add("hurt", [19], 15, true);
-			
-			animation.add("walk_shoot", [24, 23, 24, 25], 10, true);
-			animation.add("idle_shoot", [21], 3, true);
-			animation.add("jump_shoot", [26], 15, true);
-			animation.add("fall_shoot", [26], 15, true);
-		}
-		else if (curWeaponLoc == 3)  // magenta atm
-		{
-			animation.add("walk", [45, 44, 45, 46], 10, true);
-			animation.add("idle", [42, 42, 42, 42, 42, 43], 3, true);
-			animation.add("jump", [47], 15, true);
-			animation.add("fall", [48], 15, true);
-			animation.add("hurt", [47], 15, true);
-			
-			animation.add("walk_shoot", [52, 51, 52, 53], 10, true);
-			animation.add("idle_shoot", [49], 3, true);
-			animation.add("jump_shoot", [54], 15, true);
-			animation.add("fall_shoot", [54], 15, true);
-		}
-*/	}
+	}
 
 	public function takeDamage(dmg:Int):Void
 	{

@@ -417,13 +417,13 @@ class PlayState extends FlxState
 		P.setTouchingLadder(true);
 		
 		// make it so that you can stand on top of the ladder
-		if (L.top == true && (P.y < L.y - (P.height - 3)) && P.climbing == false)
+		if (L.top == true && (P.y < L.y - (P.height - 3)) && P.isClimbing == false)
 		{
 			L.immovable = true;
 			FlxG.collide(P, L);
 			
 			if (FlxG.keys.anyPressed(["DOWN", "S"]))
-				P.climbing = true;
+				P.isClimbing = true;
 			
 		}
 	}

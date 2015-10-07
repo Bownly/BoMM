@@ -424,7 +424,6 @@ class PlayState extends FlxState
 			
 			if (FlxG.keys.anyPressed(["DOWN", "S"]))
 				P.isClimbing = true;
-			
 		}
 	}
 	private function playerTouchHazard(P:Player, S:Spike):Void

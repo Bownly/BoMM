@@ -27,12 +27,17 @@ class Player extends FlxSprite
 	public var damage:Int = 1;
 	public var luck:Int = 5;	
 	
-	var jumpPower:Int = 2250;
 	var GRAVITY:Int = 690;
-	var xSpeed:Int = 150;
+	var ySpeedJumping:Int = 2250;
+	var ySpeedClimbing:Int = 75;
+	var xSpeedWalking:Int = 138;
+	var xSpeedSliding:Int = 250;
+	var xSpeedHurt:Int = 50;
 	var remainingJumps:Int = 2;
 	var isSliding:Bool = false;
-	
+	var slideTimer:Float = 0;
+	var slideDuration:Float = .33;
+
 	public var bulletArray:FlxTypedGroup<weapons.Bullet>;
 	public var maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
@@ -179,13 +184,23 @@ class Player extends FlxSprite
 		
 		velocity.x = 0;
 		
+		if (hurtTimer > 0)  // todo, make immune time longer than forced move time, lol
+		{
+			canMove = false;
+			if (facing == FlxObject.RIGHT)
+				velocity.x = -xSpeedHurt;
+			else
+				velocity.x = xSpeedHurt;
+			hurtTimer -= FlxG.elapsed;
+		}
+		else
+			canMove = true;
+			
 		if (canMove == true) 
 		{
 			if (hp <= 0)
 				FlxTween.tween(this, { alpha:0 }, .33, { ease:FlxEase.circOut } );
 			
-			if (hurtTimer > 0)
-				hurtTimer -= FlxG.elapsed;
 			
 			if (isClimbing)
 				acceleration.y = 0;
@@ -194,16 +209,24 @@ class Player extends FlxSprite
 			
 			if (this.isTouching(FlxObject.FLOOR))
 				remainingJumps = maxJumps;
+			else
+				slideTimer = 0;
 			
-			if (isSliding == true)
+			if (slideTimer > 0)
 			{
-				x += 100;
-				isSliding = false;
+				if (facing == FlxObject.RIGHT)
+					velocity.x = xSpeedSliding;
+				else
+					velocity.x = -xSpeedSliding;
+				slideTimer -= FlxG.elapsed;
 			}
-				
+			else
+				isSliding = false;
+			
 			playerInputs();
-			resolveAnimations();
 		}
+		
+		resolveAnimations();
 		
 		super.update();
 	}
@@ -231,56 +254,47 @@ class Player extends FlxSprite
 		//walking
 		if (FlxG.keys.anyPressed(["RIGHT", "D"]) && isClimbing == false) 
 		{
-			velocity.x = xSpeed;
+			if (isSliding)
+				velocity.x = xSpeedSliding;
+			else
+				velocity.x = xSpeedWalking;
 			flipX = false;
 			facing = FlxObject.RIGHT;
 			isClimbing = false;
 		}
 		else if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing == false) 
 		{
-			velocity.x = -xSpeed;
+			if (isSliding)
+				velocity.x = -xSpeedSliding;
+			else
+				velocity.x = -xSpeedWalking;
 			flipX = true;
 			facing = FlxObject.LEFT;
 			isClimbing = false;
 		} 
-		// wut? todo: consolodate the above two functions and the below two
-		if (FlxG.keys.anyPressed(["LEFT", "A"]) && touchingLadder == false) 
-		{
-			velocity.x = -xSpeed;
-			flipX = true;
-			facing = FlxObject.LEFT;
-			isClimbing = false;
-		}
-		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && touchingLadder == false) 
-		{
-			velocity.x = xSpeed;
-			flipX = false;
-			facing = FlxObject.RIGHT;
-			isClimbing = false;
-		}
 		
 		// left/right movement while climbing
-		if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing == true) 
+		if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing) 
 		{
 			flipX = true;
 			facing = FlxObject.LEFT;
 		}
-		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && isClimbing == true) 
+		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && isClimbing) 
 		{
 			flipX = false;
 			facing = FlxObject.RIGHT;
 		}
 		
 		// climbing up and down
-		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder == true) 
+		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder) 
 		{
-			velocity.y = -100;
+			velocity.y = -ySpeedClimbing;
 			isClimbing = true;
 			remainingJumps = maxJumps;
 		}
-		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && touchingLadder == true)
+		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && touchingLadder)
 		{
-			velocity.y = 100;
+			velocity.y = ySpeedClimbing;
 			isClimbing = true;
 			remainingJumps = maxJumps;
 		}
@@ -289,16 +303,16 @@ class Player extends FlxSprite
 		if (FlxG.keys.anyPressed(["DOWN", "S"]) && FlxG.keys.anyJustPressed(["J"]) && isTouching(FlxObject.FLOOR))
 		{
 			isSliding = true;
+			slideTimer = slideDuration;
 		}
 		
 		// jump
 		if (FlxG.keys.anyJustPressed(["UP", "J"]) && remainingJumps > 0 && isSliding == false) 
 		{
 			if (isClimbing == false)
-				velocity.y = -jumpPower;
+				velocity.y = -ySpeedJumping;
 			remainingJumps--;
 			isClimbing = false;
-			
 		} 	
 		
 		if (FlxG.keys.anyJustPressed(["SPACE", "K"]))
@@ -324,11 +338,12 @@ class Player extends FlxSprite
 		if (velocity.x == 0 && hurtTimer <= 0 && isClimbing) 
 		{
 			animation.play("climb_" + curWeaponLoc + shootingString);		
-			animation.pause();
-				
+			animation.pause(); 	
 		}
-		if (velocity.x != 0)
+		if (velocity.x != 0 && isSliding == false)
 			animation.play("walk_" + curWeaponLoc + shootingString);
+		else if (velocity.x != 0 && isSliding)
+			animation.play("slide_" + curWeaponLoc + shootingString);
 		
 		if (velocity.y != 0 && isClimbing) 
 			animation.play("climb_" + curWeaponLoc + shootingString);			
@@ -340,7 +355,6 @@ class Player extends FlxSprite
 			// prevent player from having max jumps after walking off a platform
 			if (remainingJumps == maxJumps)
 				remainingJumps--;
-			
 		}
 		
 		if (hurtTimer > 0)

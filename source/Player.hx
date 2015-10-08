@@ -184,6 +184,9 @@ class Player extends FlxSprite
 		
 		velocity.x = 0;
 		
+		if (!touchingLadder)
+			isClimbing = false;
+		
 		if (hurtTimer > 0)  // todo, make immune time longer than forced move time, lol
 		{
 			canMove = false;
@@ -288,6 +291,15 @@ class Player extends FlxSprite
 		// climbing up and down
 		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder) 
 		{
+			/* Mario TODO
+			 * ladder improvements:
+			 * 1 jump x pos to ladder's x
+			 * 2 do the little climbup animation thing
+			 * 
+			*/
+			
+			
+			
 			velocity.y = -ySpeedClimbing;
 			isClimbing = true;
 			remainingJumps = maxJumps;

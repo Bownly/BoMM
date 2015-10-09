@@ -97,17 +97,17 @@ class Player extends FlxSprite
 		maxVelocity.set(200, 200);
 		drag.set(1600, 1600);
 		
-		loadGraphic(AssetPaths.mm__png, true, 32, 32);
+		loadGraphic(AssetPaths.mmgurl__png, true, 32, 32);
 		width = 14;
 		height = 22;
-		offset = new FlxPoint(8, 4);
+		offset = new FlxPoint(9, 4);
 		
 		
 		var offset = 18; // the amount of sprites in the sheet per color
 		for (i in 0...3)
 		{
 			var o = i * offset;  // offseting for colors
-			animation.add("idle_" + i, [0 + o, 0 + o, 0 + o, 0 + o, 0 + o, 1 + o], 3, true);
+			animation.add("idle_" + i, [0 + o, 0 + o, 0 + o, 1 + o, 1 + o, 1 + o], 3, true);
 			animation.add("walk_" + i, [3 + o, 2 + o, 3 + o, 4 + o], 10, true);
 			animation.add("jump_" + i, [5 + o], 15, true);
 			animation.add("fall_" + i, [5 + o], 15, true);
@@ -275,7 +275,24 @@ class Player extends FlxSprite
 			facing = FlxObject.LEFT;
 			isClimbing = false;
 		} 
+		// move 1px. For debug/testing stuff
+		if (FlxG.keys.anyJustPressed(["H"]) && isClimbing == false) 
+		{
+			x += 1;
+			flipX = false;
+			facing = FlxObject.RIGHT;
+			isClimbing = false;
+		}
+		else if (FlxG.keys.anyJustPressed(["G"]) && isClimbing == false) 
+		{
+			x -= 1;
+			flipX = true;
+			facing = FlxObject.LEFT;
+			isClimbing = false;
+		} 
 		
+		
+
 		// left/right movement while climbing
 		if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing) 
 		{

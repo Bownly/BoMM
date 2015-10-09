@@ -30,6 +30,8 @@ import weapons.Bullet;
  */
 class PlayState extends FlxState
 {
+	var unlockableColor:Int = Reg.C;
+	
 	private var _grpPlayer:FlxGroup;
 	static private var player:Player;
 	//static private var _grpPlayer:FlxGroup;
@@ -105,30 +107,8 @@ class PlayState extends FlxState
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		
-		/*if (Reg.player == null)
-		{
-			_player = new Player(100, 100, playerBullets);
-			Reg.player = _player;
-			trace("og stats: ");
-			trace("Reg.player: " + Reg.player);
-			trace("   _player: " + _player);
-			trace("Reg.player exists: " + Reg.player.exists);
-			trace("   _player exists: " + _player.exists);
-			trace("reset stats: ");
-			
-		}
-		else
-		{
-			_player = Reg.player;
-			trace("Reg.player: " + Reg.player);
-			trace("   _player: " + _player);
-			trace("_player.hp: " + _player.hp);
-			trace("Reg.player exists: " + Reg.player.exists);
-			trace("   _player exists: " + _player.exists);
-			
-		}*/
-		
-			_player = new Player(100, 100, playerBullets);
+
+		_player = new Player(100, 100, playerBullets);
 
 		
 		dropsGroup = new FlxTypedGroup<Drops>();
@@ -159,11 +139,15 @@ class PlayState extends FlxState
 		_grpPlayer.add(_player);
 		_grpPlayer.add(playerBullets);
 		
+		var cat = Reg.G | Reg.C;
+		trace("colorArray:  " + Reg.colorArray);
+		
 		
 		FlxG.mouse.visible = false;		
 		
 		//FlxG.camera.bgColor = 0x093930FF;
 		FlxG.camera.bgColor = 0xFF555555;
+		FlxG.camera.bgColor = 0x00000000;
 		
 		FlxG.camera.follow(_player,1);
 		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
@@ -239,6 +223,7 @@ class PlayState extends FlxState
 
 	public function gotoNextLevel():Void
 	{
+		Reg.colorArray.push(Reg.C);
 		FlxG.switchState(new Level1());
 
 	}
@@ -287,7 +272,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 1);
+			id = FlxRandom.intRanged(1, 2);
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -476,6 +461,12 @@ class PlayState extends FlxState
 		}
 		else if (entityName == "enemy")
 		{
+			
+			// put the code to determine the individual mob's color here
+			// something like a random # based on Reg.globalPallete
+			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
+			
+			
 			switch(entityData.get("name"))
 			{
 				case "snobal":
@@ -491,9 +482,10 @@ class PlayState extends FlxState
 				case "testboss":
 					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets, this));
 				case "balun":
-					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, 1));
+					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 				case "mush":
-					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, 1));			}
+					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, Reg.colorArray[palette]));				
+			}
 		}
 	}
 	

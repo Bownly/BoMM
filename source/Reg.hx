@@ -39,6 +39,26 @@ class Reg
 	 */
 	public static var saves:Array<FlxSave> = [];
 	
+
+	// color constants
+	public static inline var G:Int = 0;
+	public static inline var C:Int = 1;
+	public static inline var M:Int = 2;
+	public static inline var Y:Int = 3;
+	
+	// These next 4 vars are actually useless I guess...
+	public static inline var CM:Int = 0x110;
+	public static inline var CY:Int = 0x101;
+	public static inline var MY:Int = 0x011;
+	public static inline var CMY:Int = 0x111;
+
+
+	
+	public static var colorArray:Array<Int> = [G, C, M, Y];
+	
+	public static var globalPalette:Int = 0;
+	
+	
 	public static var bullets:FlxTypedGroup<weapons.Bullet> = new FlxTypedGroup<weapons.Bullet>();
 	
 	public static var player:Player;

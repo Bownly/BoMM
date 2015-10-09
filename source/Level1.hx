@@ -13,7 +13,7 @@ class Level1 extends PlayState
 		
 		levelId = "1";
 		tileName = "assets/images/wood_tiles2.png";
-		
+		//palette = Reg.C;
 	}
 	
 }

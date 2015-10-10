@@ -132,6 +132,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		Font.registerFont (__ASSET__assets_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__assets_fonts_arial_ttf);
 		
@@ -139,6 +140,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -757,6 +759,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/wood_tiles2.png", AssetType.IMAGE);
 		path.set ("assets/images/wood_tiles3.png", "assets/images/wood_tiles3.png");
 		type.set ("assets/images/wood_tiles3.png", AssetType.IMAGE);
+		path.set ("assets/images/wood_tiles_persist.png", "assets/images/wood_tiles_persist.png");
+		type.set ("assets/images/wood_tiles_persist.png", AssetType.IMAGE);
 		path.set ("assets/levels/data-goes-here.txt", "assets/levels/data-goes-here.txt");
 		type.set ("assets/levels/data-goes-here.txt", AssetType.TEXT);
 		path.set ("assets/levels/HaxeFlixelTestLevel1.oel", "assets/levels/HaxeFlixelTestLevel1.oel");
@@ -945,6 +949,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/wood_tiles3.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/wood_tiles_persist.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/levels/data-goes-here.txt";
@@ -1185,6 +1192,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -1193,6 +1201,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -2046,11 +2055,13 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_fonts_arial_ttf extends null { }
 
 
 #elseif html5
+
 
 
 

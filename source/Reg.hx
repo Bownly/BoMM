@@ -41,12 +41,11 @@ class Reg
 	
 
 	// color constants
-	public static inline var G:Int = 0;
-	public static inline var C:Int = 1;
-	public static inline var M:Int = 2;
-	public static inline var Y:Int = 3;
+	public static inline var G:Int = 0x1000;
+	public static inline var C:Int = 0x0100;
+	public static inline var M:Int = 0x0010;
+	public static inline var Y:Int = 0x0001;
 	
-	// These next 4 vars are actually useless I guess...
 	public static inline var CM:Int = 0x110;
 	public static inline var CY:Int = 0x101;
 	public static inline var MY:Int = 0x011;
@@ -54,9 +53,10 @@ class Reg
 
 
 	
-	public static var colorArray:Array<Int> = [G, C, M, Y];
+	//public static var colorArray:Array<Int> = [G, C, M, Y];
+	public static var colorArray:Array<Int> = [G];
 	
-	public static var globalPalette:Int = 0;
+	public static var globalPalette:Int = G;
 	
 	
 	public static var bullets:FlxTypedGroup<weapons.Bullet> = new FlxTypedGroup<weapons.Bullet>();

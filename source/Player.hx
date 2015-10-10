@@ -61,6 +61,7 @@ class Player extends FlxSprite
 	public var isClimbing:Bool = false;
 	
 	private var hurtTimer:Float = 0;
+	private var invincTimer:Float = 0;
 	
 	private var canMove:Bool = true;
 	
@@ -198,6 +199,9 @@ class Player extends FlxSprite
 		}
 		else
 			canMove = true;
+		
+		if (invincTimer > 0)
+			invincTimer -= FlxG.elapsed;
 			
 		if (canMove == true) 
 		{
@@ -419,9 +423,10 @@ class Player extends FlxSprite
 
 	public function takeDamage(dmg:Int):Void
 	{
-		if (hurtTimer <= 0)
+		if (invincTimer <= 0)
 		{
 			hurtTimer = 1;
+			invincTimer = 2;
 			hp -= dmg;
 			animation.play("hurt_" + curWeaponLoc);
 		}		

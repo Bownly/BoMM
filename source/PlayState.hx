@@ -75,6 +75,14 @@ class PlayState extends FlxState
 	private var _hud:HUD;
 	public var _score:Int = 0;
 	
+	
+	public function new(UnlockableColor:Int) 
+	{
+		unlockableColor = UnlockableColor;
+		super();
+	}
+	
+	
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
@@ -139,8 +147,8 @@ class PlayState extends FlxState
 		_grpPlayer.add(_player);
 		_grpPlayer.add(playerBullets);
 		
-		var cat = Reg.G | Reg.C;
-		trace("colorArray:  " + Reg.colorArray);
+		trace("colorArray:    " + Reg.colorArray);
+		trace("globalPalette: " + Reg.globalPalette);
 		
 		
 		FlxG.mouse.visible = false;		
@@ -185,7 +193,7 @@ class PlayState extends FlxState
 		
 		if (FlxG.keys.anyPressed(["R"])) 
 		{
-			FlxG.switchState(new PlayState());
+			FlxG.switchState(new PlayState(unlockableColor));
 		}
 		if (FlxG.keys.anyPressed(["T"])) 
 		{
@@ -223,8 +231,12 @@ class PlayState extends FlxState
 
 	public function gotoNextLevel():Void
 	{
-		Reg.colorArray.push(Reg.C);
-		FlxG.switchState(new Level1());
+		if (Reg.colorArray.indexOf(unlockableColor) == -1)
+		{
+			Reg.colorArray.push(unlockableColor);
+			Reg.globalPalette += unlockableColor;
+		}
+		FlxG.switchState(new MenuState());
 
 	}
 	
@@ -255,7 +267,7 @@ class PlayState extends FlxState
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...2) 
+		for (i in 1...3) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -272,7 +284,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 2);
+			id = FlxRandom.intRanged(1, 1);
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");

@@ -74,6 +74,8 @@ class AssetData {
 			type.set ("assets/images/wood_tiles2.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/wood_tiles3.png", "assets/images/wood_tiles3.png");
 			type.set ("assets/images/wood_tiles3.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/wood_tiles_persist.png", "assets/images/wood_tiles_persist.png");
+			type.set ("assets/images/wood_tiles_persist.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/levels/data-goes-here.txt", "assets/levels/data-goes-here.txt");
 			type.set ("assets/levels/data-goes-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/levels/HaxeFlixelTestLevel1.oel", "assets/levels/HaxeFlixelTestLevel1.oel");

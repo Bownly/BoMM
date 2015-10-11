@@ -7,9 +7,9 @@ package;
 class Level2 extends PlayState
 {
 
-	public function new() 
+	public function new(clr:Int) 
 	{
-		super();
+		super(clr);
 		
 		levelId = "1";
 		tileName = "assets/images/wood_tiles3.png";

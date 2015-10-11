@@ -30,163 +30,15 @@ class ApplicationMain {
 		var types = [];
 		
 		
-		urls.push ("assets/data/data-goes-here.txt");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/HaxeFlixelTestLevel1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_1_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_1_1og2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_1_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_1_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_1_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_2_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_2_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_2_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_2_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_3_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_3_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_3_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_3_3og.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_3_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_4_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_4_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_4_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_4_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_end_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_end_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_end_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_end_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_end_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_end_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_end_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_end_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_mid.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_start_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_start_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_start_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_item_start_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_start_1.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_start_1woodman.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_start_2.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_start_3.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_start_3og.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/data/level_1_start_4.oel");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/images/ado.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/balun.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/bossdoor.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -246,19 +98,15 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/mush.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/nes_tiles.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/images/notey.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/ranger.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/images/shakuhachiman.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -274,6 +122,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/spore.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/tiles.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -284,6 +136,182 @@ class ApplicationMain {
 		
 		urls.push ("assets/images/wood_tiles2.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/wood_tiles3.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/levels/data-goes-here.txt");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/HaxeFlixelTestLevel1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_1_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_1_1og2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_1_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_1_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_1_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_2_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_2_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_2_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_2_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_3_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_3_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_3_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_3_3og.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_3_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_4_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_4_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_4_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_4_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_end_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_end_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_end_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_end_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_end_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_end_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_end_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_end_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_mid.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_start_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_start_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_start_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_item_start_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_shop_end_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_shop_end_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_shop_end_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_shop_end_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_start_1.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_start_1woodman.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_start_2.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_start_3.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_start_3airman.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/level_1_start_4.oel");
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/music/music-goes-here.txt");
@@ -378,7 +406,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "1289",
+			build: "2156",
 			company: "HaxeFlixel",
 			file: "HaxeFlixelVlog",
 			fps: 60,

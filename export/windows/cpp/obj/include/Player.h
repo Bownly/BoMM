@@ -42,6 +42,7 @@ class HXCPP_CLASS_ATTRIBUTES  Player_obj : public ::flixel::FlxSprite_obj{
 		int xSpeed;
 		int remainingJumps;
 		int hp;
+		bool isSliding;
 		int maxHP;
 		int maxJumps;
 		int shotRange;
@@ -63,7 +64,11 @@ class HXCPP_CLASS_ATTRIBUTES  Player_obj : public ::flixel::FlxSprite_obj{
 		bool touchingLadder;
 		bool climbing;
 		Float hurtTimer;
+		bool canMove;
 		virtual Void update( );
+
+		virtual Void enterBossDoor( );
+		Dynamic enterBossDoor_dyn();
 
 		virtual Void playerInputs( );
 		Dynamic playerInputs_dyn();

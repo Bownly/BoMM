@@ -82,6 +82,12 @@ class MenuState extends FlxState
 					gotoLevel3();
 			}
 		}
+			
+		// here for testing only. Kill after 9/30/2015 if still here
+		if (FlxG.keys.anyPressed(["SPACE"])) 
+		{
+			gotoNextState();
+		}
 		super.update();
 	}	
 	
@@ -103,18 +109,24 @@ class MenuState extends FlxState
 	
 	function gotoLevel1():Void
 	{
-		FlxG.switchState(new Level1(Reg.C));
+		FlxG.switchState(new Level1());
 	}
 	function gotoLevel2():Void
 	{
-		FlxG.switchState(new Level2(Reg.M));
+		FlxG.switchState(new Level2());
 	}
 	function gotoLevel3():Void
 	{
-		FlxG.switchState(new PlayState(Reg.Y));
+		FlxG.switchState(new PlayState());
 	}
 	
-
+	
+	// here for testing only. Kill after 9/30/2015 if still here
+	function gotoNextState():Void
+	{
+		FlxG.switchState(new PlayState());
+	}
+	
 	
 	/**
 	 * Function that is called when this state is destroyed - you might want to 

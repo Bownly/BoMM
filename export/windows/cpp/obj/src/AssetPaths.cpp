@@ -26,8 +26,6 @@ Dynamic AssetPaths_obj::__Create(hx::DynamicArray inArgs)
 
 ::String AssetPaths_obj::balun__png;
 
-::String AssetPaths_obj::bossdoor__png;
-
 ::String AssetPaths_obj::burd__png;
 
 ::String AssetPaths_obj::burdegg__png;
@@ -191,7 +189,6 @@ void AssetPaths_obj::__GetFields(Array< ::String> &outFields)
 static ::String sStaticFields[] = {
 	HX_CSTRING("ado__png"),
 	HX_CSTRING("balun__png"),
-	HX_CSTRING("bossdoor__png"),
 	HX_CSTRING("burd__png"),
 	HX_CSTRING("burdegg__png"),
 	HX_CSTRING("burdsmall__png"),
@@ -275,7 +272,6 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(AssetPaths_obj::__mClass,"__mClass");
 	HX_MARK_MEMBER_NAME(AssetPaths_obj::ado__png,"ado__png");
 	HX_MARK_MEMBER_NAME(AssetPaths_obj::balun__png,"balun__png");
-	HX_MARK_MEMBER_NAME(AssetPaths_obj::bossdoor__png,"bossdoor__png");
 	HX_MARK_MEMBER_NAME(AssetPaths_obj::burd__png,"burd__png");
 	HX_MARK_MEMBER_NAME(AssetPaths_obj::burdegg__png,"burdegg__png");
 	HX_MARK_MEMBER_NAME(AssetPaths_obj::burdsmall__png,"burdsmall__png");
@@ -353,7 +349,6 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(AssetPaths_obj::__mClass,"__mClass");
 	HX_VISIT_MEMBER_NAME(AssetPaths_obj::ado__png,"ado__png");
 	HX_VISIT_MEMBER_NAME(AssetPaths_obj::balun__png,"balun__png");
-	HX_VISIT_MEMBER_NAME(AssetPaths_obj::bossdoor__png,"bossdoor__png");
 	HX_VISIT_MEMBER_NAME(AssetPaths_obj::burd__png,"burd__png");
 	HX_VISIT_MEMBER_NAME(AssetPaths_obj::burdegg__png,"burdegg__png");
 	HX_VISIT_MEMBER_NAME(AssetPaths_obj::burdsmall__png,"burdsmall__png");
@@ -448,7 +443,6 @@ void AssetPaths_obj::__boot()
 {
 	ado__png= HX_CSTRING("assets/images/ado.png");
 	balun__png= HX_CSTRING("assets/images/balun.png");
-	bossdoor__png= HX_CSTRING("assets/images/bossdoor.png");
 	burd__png= HX_CSTRING("assets/images/burd.png");
 	burdegg__png= HX_CSTRING("assets/images/burdegg.png");
 	burdsmall__png= HX_CSTRING("assets/images/burdsmall.png");

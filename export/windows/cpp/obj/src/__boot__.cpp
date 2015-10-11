@@ -404,7 +404,6 @@
 #include <openfl/_legacy/AssetLibrary.h>
 #include <Date.h>
 #include <Coin.h>
-#include <BossDoor.h>
 #include <flixel/FlxSprite.h>
 #include <flixel/FlxObject.h>
 #include <flixel/util/FlxRect.h>
@@ -844,7 +843,6 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::AssetLibrary_obj::__register();
 ::Date_obj::__register();
 ::Coin_obj::__register();
-::BossDoor_obj::__register();
 ::flixel::FlxSprite_obj::__register();
 ::flixel::FlxObject_obj::__register();
 ::flixel::util::FlxRect_obj::__register();
@@ -912,7 +910,6 @@ hx::RegisterResources( hx::GetResources() );
 ::flixel::util::FlxRect_obj::__boot();
 ::flixel::FlxObject_obj::__boot();
 ::flixel::FlxSprite_obj::__boot();
-::BossDoor_obj::__boot();
 ::Coin_obj::__boot();
 ::Date_obj::__boot();
 ::openfl::_legacy::AssetLibrary_obj::__boot();

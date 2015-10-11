@@ -124,7 +124,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -136,8 +135,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/ado.png", AssetType.IMAGE);
 		className.set ("assets/images/balun.png", __ASSET__assets_images_balun_png);
 		type.set ("assets/images/balun.png", AssetType.IMAGE);
-		className.set ("assets/images/bossdoor.png", __ASSET__assets_images_bossdoor_png);
-		type.set ("assets/images/bossdoor.png", AssetType.IMAGE);
 		className.set ("assets/images/burd.png", __ASSET__assets_images_burd_png);
 		type.set ("assets/images/burd.png", AssetType.IMAGE);
 		className.set ("assets/images/burdegg.png", __ASSET__assets_images_burdegg_png);
@@ -296,10 +293,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/balun.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "assets/images/bossdoor.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -619,9 +612,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/balun.png", __ASSET__assets_images_balun_png);
 		type.set ("assets/images/balun.png", AssetType.IMAGE);
-		
-		className.set ("assets/images/bossdoor.png", __ASSET__assets_images_bossdoor_png);
-		type.set ("assets/images/bossdoor.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/burd.png", __ASSET__assets_images_burd_png);
 		type.set ("assets/images/burd.png", AssetType.IMAGE);
@@ -1537,7 +1527,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:keep @:bind #if display private #end class __ASSET__assets_images_ado_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_balun_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_bossdoor_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_burd_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_burdegg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_burdsmall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1690,7 +1679,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
 @:keep #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_arial_ttf extends lime.text.Font { public function new () { super (); name = "Arial"; } } 
 
@@ -1704,7 +1692,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 @:image("assets/images/ado.png") #if display private #end class __ASSET__assets_images_ado_png extends lime.graphics.Image {}
 @:image("assets/images/balun.png") #if display private #end class __ASSET__assets_images_balun_png extends lime.graphics.Image {}
-@:image("assets/images/bossdoor.png") #if display private #end class __ASSET__assets_images_bossdoor_png extends lime.graphics.Image {}
 @:image("assets/images/burd.png") #if display private #end class __ASSET__assets_images_burd_png extends lime.graphics.Image {}
 @:image("assets/images/burdegg.png") #if display private #end class __ASSET__assets_images_burdegg_png extends lime.graphics.Image {}
 @:image("assets/images/burdsmall.png") #if display private #end class __ASSET__assets_images_burdsmall_png extends lime.graphics.Image {}

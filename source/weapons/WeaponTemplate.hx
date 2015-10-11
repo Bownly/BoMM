@@ -24,7 +24,7 @@ class WeaponTemplate
 	public var palette:Int = 0;
 	public var unlocked:Bool = true;
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Bullets:FlxTypedGroup<Bullet>) 
 	{
 		name = Name;
 		bulletArray = Bullets;

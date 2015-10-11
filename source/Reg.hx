@@ -1,4 +1,4 @@
-package;
+5package;
 
 import flixel.group.FlxTypedGroup;
 import flixel.util.FlxSave;

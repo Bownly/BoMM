@@ -499,11 +499,7 @@ class ApplicationMain {
 		
 		config = {
 			
-<<<<<<< HEAD
-			build: "2184",
-=======
-			build: "2421",
->>>>>>> refs/remotes/origin/Maybe
+			build: "2",
 			company: "HaxeFlixel",
 			file: "HaxeFlixelVlog",
 			fps: 60,

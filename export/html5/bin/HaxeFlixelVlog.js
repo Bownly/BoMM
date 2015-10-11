@@ -23,11 +23,85 @@ ApplicationMain.create = function() {
 	ApplicationMain.preloader.create(ApplicationMain.config);
 	var urls = [];
 	var types = [];
+	urls.push("assets/data/data-goes-here.txt");
+	types.push("TEXT");
+	urls.push("assets/data/HaxeFlixelTestLevel1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_1_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_1_1og2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_1_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_1_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_1_4.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_2_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_2_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_2_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_2_4.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_3_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_3_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_3_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_3_3og.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_3_4.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_4_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_4_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_4_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_4_4.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_end_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_end_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_end_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_end_4.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_end_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_end_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_end_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_end_4.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_mid.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_start_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_start_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_start_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_item_start_4.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_start_1.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_start_1woodman.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_start_2.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_start_3.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_start_3og.oel");
+	types.push("TEXT");
+	urls.push("assets/data/level_1_start_4.oel");
+	types.push("TEXT");
 	urls.push("assets/images/ado.png");
-	types.push("IMAGE");
-	urls.push("assets/images/balun.png");
-	types.push("IMAGE");
-	urls.push("assets/images/bossdoor.png");
 	types.push("IMAGE");
 	urls.push("assets/images/burd.png");
 	types.push("IMAGE");
@@ -57,11 +131,13 @@ ApplicationMain.create = function() {
 	types.push("IMAGE");
 	urls.push("assets/images/mm.png");
 	types.push("IMAGE");
-	urls.push("assets/images/mush.png");
-	types.push("IMAGE");
 	urls.push("assets/images/nes_tiles.png");
 	types.push("IMAGE");
 	urls.push("assets/images/notey.png");
+	types.push("IMAGE");
+	urls.push("assets/images/ranger.png");
+	types.push("IMAGE");
+	urls.push("assets/images/shakuhachiman.png");
 	types.push("IMAGE");
 	urls.push("assets/images/snaake.png");
 	types.push("IMAGE");
@@ -69,102 +145,12 @@ ApplicationMain.create = function() {
 	types.push("IMAGE");
 	urls.push("assets/images/spike.png");
 	types.push("IMAGE");
-	urls.push("assets/images/spore.png");
-	types.push("IMAGE");
 	urls.push("assets/images/tiles.png");
 	types.push("IMAGE");
 	urls.push("assets/images/wood_tiles.png");
 	types.push("IMAGE");
 	urls.push("assets/images/wood_tiles2.png");
 	types.push("IMAGE");
-	urls.push("assets/images/wood_tiles3.png");
-	types.push("IMAGE");
-	urls.push("assets/levels/data-goes-here.txt");
-	types.push("TEXT");
-	urls.push("assets/levels/HaxeFlixelTestLevel1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_1_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_1_1og2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_1_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_1_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_1_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_2_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_2_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_2_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_2_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_3_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_3_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_3_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_3_3og.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_3_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_4_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_4_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_4_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_4_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_end_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_end_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_end_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_end_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_end_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_end_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_end_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_end_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_mid.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_start_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_start_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_start_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_item_start_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_shop_end_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_shop_end_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_shop_end_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_shop_end_4.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_start_1.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_start_1woodman.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_start_2.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_start_3.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_start_3airman.oel");
-	types.push("TEXT");
-	urls.push("assets/levels/level_1_start_4.oel");
-	types.push("TEXT");
 	urls.push("assets/music/music-goes-here.txt");
 	types.push("TEXT");
 	urls.push("assets/sounds/sounds-go-here.txt");
@@ -203,7 +189,7 @@ ApplicationMain.init = function() {
 	if(total == 0) ApplicationMain.start();
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "2156", company : "HaxeFlixel", file : "HaxeFlixelVlog", fps : 60, name : "HaxeFlixelVlog", orientation : "portrait", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 480, parameters : "{}", resizable : true, stencilBuffer : true, title : "HaxeFlixelVlog", vsync : true, width : 640, x : null, y : null}]};
+	ApplicationMain.config = { build : "1289", company : "HaxeFlixel", file : "HaxeFlixelVlog", fps : 60, name : "HaxeFlixelVlog", orientation : "portrait", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 480, parameters : "{}", resizable : true, stencilBuffer : true, title : "HaxeFlixelVlog", vsync : true, width : 640, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -1462,10 +1448,8 @@ flixel.FlxBasic.prototype = {
 		this.set_exists(true);
 	}
 	,update: function() {
-		flixel.FlxBasic._ACTIVECOUNT++;
 	}
 	,draw: function() {
-		flixel.FlxBasic._VISIBLECOUNT++;
 	}
 	,set_visible: function(Value) {
 		return this.visible = Value;
@@ -1677,8 +1661,6 @@ flixel.FlxObject = function(X,Y,Width,Height) {
 	if(Width == null) Width = 0;
 	if(Y == null) Y = 0;
 	if(X == null) X = 0;
-	this.ignoreDrawDebug = false;
-	this.debugBoundingBoxColor = null;
 	this.collisonXDrag = true;
 	this.allowCollisions = 4369;
 	this.wasTouching = 0;
@@ -1867,8 +1849,6 @@ flixel.FlxObject.prototype = $extend(flixel.FlxBasic.prototype,{
 	,wasTouching: null
 	,allowCollisions: null
 	,collisonXDrag: null
-	,debugBoundingBoxColor: null
-	,ignoreDrawDebug: null
 	,_point: null
 	,_cameras: null
 	,initVars: function() {
@@ -1899,7 +1879,6 @@ flixel.FlxObject.prototype = $extend(flixel.FlxBasic.prototype,{
 		this._cameras = null;
 	}
 	,update: function() {
-		flixel.FlxBasic.prototype.update.call(this);
 		this.last.set_x(this.x);
 		this.last.set_y(this.y);
 		if(this.moves) this.updateMotion();
@@ -1931,8 +1910,6 @@ flixel.FlxObject.prototype = $extend(flixel.FlxBasic.prototype,{
 		_g6.set_y(_g6.y + delta);
 	}
 	,draw: function() {
-		flixel.FlxBasic.prototype.draw.call(this);
-		if(flixel.FlxG["debugger"].drawDebug) this.drawDebug();
 	}
 	,overlaps: function(ObjectOrGroup,InScreenSpace,Camera) {
 		if(InScreenSpace == null) InScreenSpace = false;
@@ -2025,45 +2002,6 @@ flixel.FlxObject.prototype = $extend(flixel.FlxBasic.prototype,{
 		this.set_width(Width);
 		this.set_height(Height);
 	}
-	,drawDebug: function() {
-		if(!this.ignoreDrawDebug) {
-			var _g = 0;
-			var _g1 = this.get_cameras();
-			while(_g < _g1.length) {
-				var camera = _g1[_g];
-				++_g;
-				this.drawDebugOnCamera(camera);
-			}
-		}
-	}
-	,drawDebugOnCamera: function(Camera) {
-		if(!Camera.visible || !Camera.exists || !this.isOnScreen(Camera)) return;
-		var boundingBoxX = this.x - Camera.scroll.x * this.scrollFactor.x;
-		var boundingBoxY = this.y - Camera.scroll.y * this.scrollFactor.y;
-		if(this.pixelPerfectRender) {
-			boundingBoxX = Math.floor(boundingBoxX);
-			boundingBoxY = Math.floor(boundingBoxY);
-		}
-		var boundingBoxWidth = Std["int"](this.get_width());
-		var boundingBoxHeight = Std["int"](this.get_height());
-		var color = this.debugBoundingBoxColor;
-		if(color == null) {
-			if(this.allowCollisions != 0) {
-				if(this.allowCollisions != 4369) color = -16181;
-				if(this.immovable) color = -16744448; else color = -65536;
-			}
-			if(color == null) color = -16776961;
-		}
-		var gfx = flixel.util.FlxSpriteUtil.flashGfx;
-		gfx.clear();
-		gfx.moveTo(boundingBoxX,boundingBoxY);
-		gfx.lineStyle(1,color,0.5);
-		gfx.lineTo(boundingBoxX + boundingBoxWidth,boundingBoxY);
-		gfx.lineTo(boundingBoxX + boundingBoxWidth,boundingBoxY + boundingBoxHeight);
-		gfx.lineTo(boundingBoxX,boundingBoxY + boundingBoxHeight);
-		gfx.lineTo(boundingBoxX,boundingBoxY);
-		Camera.buffer.draw(flixel.util.FlxSpriteUtil.flashGfxSprite);
-	}
 	,toString: function() {
 		return flixel.util.FlxStringUtil.getDebugString([flixel.util.LabelValuePair._pool.get().create("x",this.x),flixel.util.LabelValuePair._pool.get().create("y",this.y),flixel.util.LabelValuePair.weak("w",this.get_width()),flixel.util.LabelValuePair.weak("h",this.get_height()),flixel.util.LabelValuePair._pool.get().create("visible",this.visible),flixel.util.LabelValuePair._pool.get().create("velocity",this.velocity)]);
 	}
@@ -2074,11 +2012,11 @@ flixel.FlxObject.prototype = $extend(flixel.FlxBasic.prototype,{
 		return this.y = NewY;
 	}
 	,set_width: function(Width) {
-		if(Width < 0) flixel.FlxG.log.advanced("An object's width cannot be smaller than 0. Use offset for sprites to control the hitbox position!",flixel.system.debug.LogStyle.WARNING,true); else this.width = Width;
+		this.width = Width;
 		return Width;
 	}
 	,set_height: function(Height) {
-		if(Height < 0) flixel.FlxG.log.advanced("An object's height cannot be smaller than 0. Use offset for sprites to control the hitbox position!",flixel.system.debug.LogStyle.WARNING,true); else this.height = Height;
+		this.height = Height;
 		return Height;
 	}
 	,get_width: function() {
@@ -2489,9 +2427,7 @@ flixel.FlxSprite.prototype = $extend(flixel.FlxObject.prototype,{
 				this._matrix.translate(this._point.x,this._point.y);
 				camera.buffer.draw(this.framePixels,this._matrix,null,this.blend,null,this.antialiasing || camera.antialiasing);
 			}
-			flixel.FlxBasic._VISIBLECOUNT++;
 		}
-		if(flixel.FlxG["debugger"].drawDebug) this.drawDebug();
 	}
 	,stamp: function(Brush,X,Y) {
 		if(Y == null) Y = 0;
@@ -2811,35 +2747,147 @@ flixel.FlxSprite.prototype = $extend(flixel.FlxObject.prototype,{
 	,__class__: flixel.FlxSprite
 	,__properties__: $extend(flixel.FlxObject.prototype.__properties__,{set_color:"set_color",set_blend:"set_blend",set_flipY:"set_flipY",set_flipX:"set_flipX",set_facing:"set_facing",set_alpha:"set_alpha",set_cachedGraphics:"set_cachedGraphics",set_frame:"set_frame",set_pixels:"set_pixels",get_pixels:"get_pixels"})
 });
-var BossDoor = function(X,Y) {
-	if(Y == null) Y = 0;
-	if(X == null) X = 0;
-	this.status = 0;
+var EnemyTemplate = function(X,Y,ThePlayer,Health,DropsGrp) {
+	this._health = 2;
 	flixel.FlxSprite.call(this,X,Y);
-	this.loadGraphic("assets/images/bossdoor.png",false,16,32);
-	this.animation.add("open",[0,1,2,3,4,3,2,1,0],15,false);
-	this.animation.add("shut",[4,3,2,1,0],5,false);
+	this._startx = X;
+	this._starty = Y;
+	this._player = ThePlayer;
+	this._health = Health;
+	this._drops = DropsGrp;
 };
-$hxClasses["BossDoor"] = BossDoor;
-BossDoor.__name__ = ["BossDoor"];
-BossDoor.__super__ = flixel.FlxSprite;
-BossDoor.prototype = $extend(flixel.FlxSprite.prototype,{
-	status: null
+$hxClasses["EnemyTemplate"] = EnemyTemplate;
+EnemyTemplate.__name__ = ["EnemyTemplate"];
+EnemyTemplate.__super__ = flixel.FlxSprite;
+EnemyTemplate.prototype = $extend(flixel.FlxSprite.prototype,{
+	_startx: null
+	,_starty: null
+	,_player: null
+	,_health: null
+	,_drops: null
+	,takeDamage: function(damage) {
+		this._health -= damage;
+		if(this._health <= 0) this.kill();
+	}
+	,kill: function() {
+		var dropChance = flixel.util.FlxRandom.intRanged(0,1);
+		var dropChance1 = 1;
+		var dropID = flixel.util.FlxRandom.intRanged(0,1) * 2;
+		var newDrop = new Drops(this.x,this.y,dropID,this._player);
+		this._drops.add(newDrop);
+		this.set_alive(false);
+		flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
+	}
+	,finishKill: function(_) {
+		this.set_exists(false);
+	}
+	,__class__: EnemyTemplate
+});
+var BabyBurd = function(X,Y,ThePlayer,DropsGrp) {
+	this._HP = 1;
+	this.YSPEED = 25;
+	this.XSPEED = 50;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.YSPEED = flixel.util.FlxRandom.intRanged(-10,10);
+	this.velocity.set_y(this.YSPEED);
+	this.loadGraphic("assets/images/burdsmall.png",true,8,8);
+	this.set_width(8);
+	this.set_height(8);
+	this.animation.add("flap",[0,1],10,true);
+	if(this._player.x < this.x) {
+		this.set_facing(16);
+		this.set_flipX(false);
+		this.velocity.set_x(-this.XSPEED);
+	} else if(this._player.x > this.x) {
+		this.set_facing(1);
+		this.set_flipX(true);
+		this.velocity.set_x(this.XSPEED);
+	}
+};
+$hxClasses["BabyBurd"] = BabyBurd;
+BabyBurd.__name__ = ["BabyBurd"];
+BabyBurd.__super__ = EnemyTemplate;
+BabyBurd.prototype = $extend(EnemyTemplate.prototype,{
+	XSPEED: null
+	,YSPEED: null
+	,_HP: null
 	,update: function() {
-		if(this.status == 1) {
-			this.animation.play("open");
-			this.status = 2;
-		}
-		if(this.animation._animations.get("open").finished) this.status = 0;
+		this.animation.play("flap");
+		EnemyTemplate.prototype.update.call(this);
+	}
+	,__class__: BabyBurd
+});
+var Bullet = function(X,Y,Speed,Direction,Damage) {
+	flixel.FlxSprite.call(this,X,Y);
+	this.speed = Speed;
+	this.direction = Direction;
+	this.damage = Damage;
+	this.loadGraphic("assets/images/coin.png",true,6,6,true,"bullet");
+};
+$hxClasses["Bullet"] = Bullet;
+Bullet.__name__ = ["Bullet"];
+Bullet.__super__ = flixel.FlxSprite;
+Bullet.prototype = $extend(flixel.FlxSprite.prototype,{
+	speed: null
+	,direction: null
+	,damage: null
+	,update: function() {
 		flixel.FlxSprite.prototype.update.call(this);
+		if(this.direction == 1) this.velocity.set_x(-this.speed);
+		if(this.direction == 16) this.velocity.set_x(this.speed);
+		if(this.direction == 4096) this.velocity.set_y(this.speed);
+		if(this.direction == 256) this.velocity.set_y(-this.speed);
+		if(this.getScreenXY().x < -64 || this.getScreenXY().x > flixel.FlxG.width + 64) this.kill(); else if(this.touching != 0) this.kill();
 	}
-	,open: function() {
-		this.status = 1;
+	,destroy: function() {
+		this.set_alive(false);
+		flixel.FlxSprite.prototype.destroy.call(this);
 	}
-	,shut: function() {
-		this.status = 2;
+	,getDamage: function() {
+		return this.damage;
 	}
-	,__class__: BossDoor
+	,__class__: Bullet
+});
+var Burd = function(X,Y,ThePlayer,DropsGrp,Enemies) {
+	this.haveEgg = false;
+	this._HP = 1;
+	this.GRAVITY = 9800;
+	this.XSPEED = -75;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.loadGraphic("assets/images/burd.png",true,16,16);
+	this.set_width(16);
+	this.set_height(16);
+	this.animation.add("flap",[0,1],5,true);
+	this.egg = new Egg(this.x,this.y + this.get_height(),ThePlayer,this._drops,this.XSPEED,Enemies);
+	Enemies.add(this.egg);
+	this.haveEgg = true;
+};
+$hxClasses["Burd"] = Burd;
+Burd.__name__ = ["Burd"];
+Burd.__super__ = EnemyTemplate;
+Burd.prototype = $extend(EnemyTemplate.prototype,{
+	XSPEED: null
+	,GRAVITY: null
+	,_HP: null
+	,haveEgg: null
+	,egg: null
+	,update: function() {
+		if(this.isOnScreen()) {
+			this.velocity.set_x(this.XSPEED);
+			this.velocity.set_y(0);
+			this.animation.play("flap");
+			var xdistance = this._player.x - this.x;
+			var ydistance = this._player.y - this.y;
+			var distancesquared = xdistance * xdistance + ydistance * ydistance;
+			if(distancesquared < 24000 && this.haveEgg) this.dropEgg();
+			EnemyTemplate.prototype.update.call(this);
+		}
+	}
+	,dropEgg: function() {
+		this.haveEgg = false;
+		this.egg.dropped();
+	}
+	,__class__: Burd
 });
 var Coin = function(X,Y) {
 	if(Y == null) Y = 0;
@@ -2928,13 +2976,124 @@ var DefaultAssetLibrary = function() {
 	openfl.text.Font.registerFont(__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 	openfl.text.Font.registerFont(__ASSET__OPENFL__assets_fonts_arial_ttf);
 	var id;
+	id = "assets/data/data-goes-here.txt";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/HaxeFlixelTestLevel1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_1_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_1_1og2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_1_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_1_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_1_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_2_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_2_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_2_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_2_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_3_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_3_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_3_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_3_3og.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_3_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_4_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_4_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_4_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_4_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_end_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_end_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_end_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_end_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_end_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_end_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_end_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_end_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_mid.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_start_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_start_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_start_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_item_start_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_1.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_1woodman.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_2.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_3.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_3og.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "assets/data/level_1_start_4.oel";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
 	id = "assets/images/ado.png";
-	this.path.set(id,id);
-	this.type.set(id,"IMAGE");
-	id = "assets/images/balun.png";
-	this.path.set(id,id);
-	this.type.set(id,"IMAGE");
-	id = "assets/images/bossdoor.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/burd.png";
@@ -2979,13 +3138,16 @@ var DefaultAssetLibrary = function() {
 	id = "assets/images/mm.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
-	id = "assets/images/mush.png";
-	this.path.set(id,id);
-	this.type.set(id,"IMAGE");
 	id = "assets/images/nes_tiles.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/notey.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
+	id = "assets/images/ranger.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
+	id = "assets/images/shakuhachiman.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
 	id = "assets/images/snaake.png";
@@ -2997,9 +3159,6 @@ var DefaultAssetLibrary = function() {
 	id = "assets/images/spike.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
-	id = "assets/images/spore.png";
-	this.path.set(id,id);
-	this.type.set(id,"IMAGE");
 	id = "assets/images/tiles.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
@@ -3009,138 +3168,6 @@ var DefaultAssetLibrary = function() {
 	id = "assets/images/wood_tiles2.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
-	id = "assets/images/wood_tiles3.png";
-	this.path.set(id,id);
-	this.type.set(id,"IMAGE");
-	id = "assets/levels/data-goes-here.txt";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/HaxeFlixelTestLevel1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_1_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_1_1og2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_1_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_1_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_1_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_2_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_2_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_2_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_2_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_3_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_3_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_3_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_3_3og.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_3_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_4_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_4_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_4_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_4_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_end_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_end_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_end_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_end_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_end_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_end_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_end_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_end_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_mid.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_start_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_start_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_start_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_item_start_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_shop_end_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_shop_end_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_shop_end_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_shop_end_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_start_1.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_start_1woodman.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_start_2.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_start_3.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_start_3airman.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
-	id = "assets/levels/level_1_start_4.oel";
-	this.path.set(id,id);
-	this.type.set(id,"TEXT");
 	id = "assets/music/music-goes-here.txt";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
@@ -3478,34 +3505,42 @@ Door.__super__ = flixel.FlxSprite;
 Door.prototype = $extend(flixel.FlxSprite.prototype,{
 	__class__: Door
 });
-var Drops = function(X,Y,Index,ThePlayer,Free) {
+var Drops = function(X,Y,Index,ThePlayer) {
 	if(Y == null) Y = 0;
 	if(X == null) X = 0;
-	this.free = true;
-	this.price = 0;
-	this.id = 0;
+	this.i = 0;
 	flixel.FlxSprite.call(this,X,Y);
 	this.loadGraphic("assets/images/drops.png",false,8,8);
 	this.set_width(8);
 	this.set_height(8);
-	this.free = Free;
 	this._player = ThePlayer;
-	this.id = Index;
-	this.animation.add("idle",[this.id,this.id + 1],5,true);
-	this.price = this.allocatePrices();
+	this.i = Index;
+	this.animation.add("idle",[this.i,this.i + 1],5,true);
 };
 $hxClasses["Drops"] = Drops;
 Drops.__name__ = ["Drops"];
 Drops.__super__ = flixel.FlxSprite;
 Drops.prototype = $extend(flixel.FlxSprite.prototype,{
 	_player: null
-	,id: null
-	,price: null
-	,free: null
+	,i: null
 	,update: function() {
 		if(this.isOnScreen()) {
 			this.animation.play("idle");
 			flixel.FlxSprite.prototype.update.call(this);
+		}
+	}
+	,playerHeal: function(Val) {
+		this._player.hp += Val;
+	}
+	,doStuff: function() {
+		var _g = this.i;
+		switch(_g) {
+		case 0:
+			this.playerHeal(10);
+			break;
+		case 2:
+			this.playerHeal(20);
+			break;
 		}
 	}
 	,kill: function() {
@@ -3514,56 +3549,6 @@ Drops.prototype = $extend(flixel.FlxSprite.prototype,{
 	}
 	,finishKill: function(_) {
 		this.set_exists(false);
-	}
-	,allocatePrices: function() {
-		var _g = this.id;
-		switch(_g) {
-		case 0:
-			return 10;
-		case 2:
-			return 20;
-		case 4:
-			return 10;
-		case 6:
-			return 30;
-		}
-		return 0;
-	}
-	,doStuff: function(score) {
-		if(this.price <= score || this.free == true) {
-			var _g = this.id;
-			switch(_g) {
-			case 0:
-				this.playerHeal(10);
-				break;
-			case 2:
-				this.playerHeal(20);
-				break;
-			case 4:
-				this.playerJuiceRestore(5);
-				break;
-			case 6:
-				this.weaponStrengthUp(1);
-				break;
-			}
-			if(this.free == true) {
-				this.kill();
-				return 0;
-			} else {
-				this.kill();
-				return this.price;
-			}
-		}
-		return 0;
-	}
-	,playerHeal: function(Val) {
-		this._player.hp += Val;
-	}
-	,playerJuiceRestore: function(Val) {
-		if(this._player.curWeapon.juice + Val > this._player.curWeapon.juiceMax) this._player.curWeapon.juice = this._player.curWeapon.juiceMax; else this._player.curWeapon.juice += Val;
-	}
-	,weaponStrengthUp: function(Val) {
-		this._player.curWeapon.damage += Val;
 	}
 	,__class__: Drops
 });
@@ -3589,6 +3574,66 @@ EReg.prototype = {
 	}
 	,__class__: EReg
 };
+var Egg = function(X,Y,ThePlayer,DropsGrp,XVel,Enemies) {
+	if(Y == null) Y = 0;
+	if(X == null) X = 0;
+	this._cracked = false;
+	this._HP = 1;
+	this.GRAVITY = 9800;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.XSPEED = XVel;
+	this.loadGraphic("assets/images/burdegg.png",true,16,8);
+	this.set_width(16);
+	this.set_height(8);
+	this.enemArray = Enemies;
+	this.burdArray = new flixel.group.FlxTypedGroup();
+	this.animation.add("idle",[0]);
+	this.animation.add("open",[1]);
+};
+$hxClasses["Egg"] = Egg;
+Egg.__name__ = ["Egg"];
+Egg.__super__ = EnemyTemplate;
+Egg.prototype = $extend(EnemyTemplate.prototype,{
+	XSPEED: null
+	,GRAVITY: null
+	,_HP: null
+	,_cracked: null
+	,babby: null
+	,babby2: null
+	,babby3: null
+	,babby4: null
+	,burdArray: null
+	,enemArray: null
+	,update: function() {
+		if(this.isOnScreen()) {
+			this.velocity.set_x(this.XSPEED);
+			this.velocity.set_y(0);
+			if(this._cracked == false) this.animation.play("idle"); else this.animation.play("open");
+			if((this.touching & 4096) > 0) {
+				this.spawnBirds();
+				this._cracked = true;
+				this.animation.play("open");
+				this.kill();
+			}
+			EnemyTemplate.prototype.update.call(this);
+		}
+	}
+	,dropped: function() {
+		this.acceleration.set_y(this.GRAVITY);
+	}
+	,spawnBirds: function() {
+		this.babby = new BabyBurd(this.x,this.y,this._player,this._drops);
+		this.babby2 = new BabyBurd(this.x,this.y - 10,this._player,this._drops);
+		this.babby3 = new BabyBurd(this.x + 10,this.y - 10 + this.get_height(),this._player,this._drops);
+		this.babby4 = new BabyBurd(this.x - 10,this.y - 10 + this.get_height(),this._player,this._drops);
+		this.burdArray.add(this.babby);
+		this.burdArray.add(this.babby2);
+		this.burdArray.add(this.babby3);
+		this.burdArray.add(this.babby4);
+		this.enemArray.add(this.burdArray);
+	}
+	,__class__: Egg
+});
 flixel.group = {};
 flixel.group.FlxTypedGroup = function(MaxSize) {
 	if(MaxSize == null) MaxSize = 0;
@@ -3636,10 +3681,7 @@ flixel.group.FlxTypedGroup.prototype = $extend(flixel.FlxBasic.prototype,{
 		}
 	}
 	,add: function(Object) {
-		if(Object == null) {
-			flixel.FlxG.log.warn("Cannot add a `null` object to a FlxGroup.");
-			return null;
-		}
+		if(Object == null) return null;
 		if(HxOverrides.indexOf(this.members,Object,0) >= 0) return Object;
 		var index = this.getFirstNull();
 		if(index != -1) {
@@ -3887,7 +3929,7 @@ var HUD = function() {
 	this._txtJuice = new flixel.text.FlxText(64,2,0,"6 / 9",8);
 	this._txtJuice.setBorderStyle(1,-8355712,1,1);
 	this._sprJuice = new flixel.FlxSprite(this._txtHealth.x + this._txtHealth.get_width(),this._txtJuice.y + this._txtJuice.get_height() / 2 - 8,"assets/images/juice.png");
-	this._txtWeapon = new flixel.text.FlxText(this._txtJuice.x + this._txtJuice.get_width(),2,0,"Cur Weapon: ",8);
+	this._txtWeapon = new flixel.text.FlxText(this._txtJuice.x + this._txtJuice.get_width(),2,0,"Cur Weapon:",8);
 	this._txtWeapon.setBorderStyle(1,-8355712,1,1);
 	this._sprWeapon = new flixel.FlxSprite(this._txtWeapon.x + this._txtWeapon.get_width(),this._txtWeapon.y + (this._txtWeapon.get_height() / 2 - 4),"assets/images/coin.png");
 	this._txtMoney = new flixel.text.FlxText(0,2,0,"0",8);
@@ -3899,6 +3941,7 @@ var HUD = function() {
 	this.add(this._sprHealth);
 	this.add(this._sprMoney);
 	this.add(this._sprJuice);
+	this.add(this._sprWeapon);
 	this.add(this._txtHealth);
 	this.add(this._txtMoney);
 	this.add(this._txtJuice);
@@ -3920,15 +3963,12 @@ HUD.prototype = $extend(flixel.group.FlxTypedGroup.prototype,{
 	,_sprJuice: null
 	,_sprWeapon: null
 	,_sprMoney: null
-	,updateHUD: function(Health,Juice,Money,Weapon) {
+	,updateHUD: function(Health,Money) {
 		if(Money == null) Money = 0;
-		if(Juice == null) Juice = 0;
 		if(Health == null) Health = 0;
 		this._txtHealth.set_text((Health == null?"null":"" + Health) + " / 3");
 		this._txtMoney.set_text(Money == null?"null":"" + Money);
 		this._txtMoney.set_x(this._sprMoney.x - this._txtMoney.get_width() - 4);
-		this._txtJuice.set_text((Juice == null?"null":"" + Juice) + " / 9");
-		this._txtWeapon.set_text("Cur Weapon: " + Weapon);
 	}
 	,__class__: HUD
 });
@@ -4005,21 +4045,18 @@ HxOverrides.iter = function(a) {
 		return this.arr[this.cur++];
 	}};
 };
-var Ladder = function(X,Y,Top) {
+var Ladder = function(X,Y) {
 	if(Y == null) Y = 0;
 	if(X == null) X = 0;
-	this.top = false;
 	flixel.FlxSprite.call(this,X,Y);
 	this.loadGraphic("assets/images/ladder.png",false,16,16);
-	this.top = Top;
 	this.allowCollisions = 256;
 };
 $hxClasses["Ladder"] = Ladder;
 Ladder.__name__ = ["Ladder"];
 Ladder.__super__ = flixel.FlxSprite;
 Ladder.prototype = $extend(flixel.FlxSprite.prototype,{
-	top: null
-	,kill: function() {
+	kill: function() {
 		this.set_alive(false);
 		flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
 	}
@@ -4057,6 +4094,45 @@ Lambda.count = function(it,pred) {
 	}
 	return n;
 };
+var List = function() {
+	this.length = 0;
+};
+$hxClasses["List"] = List;
+List.__name__ = ["List"];
+List.prototype = {
+	h: null
+	,q: null
+	,length: null
+	,add: function(item) {
+		var x = [item];
+		if(this.h == null) this.h = x; else this.q[1] = x;
+		this.q = x;
+		this.length++;
+	}
+	,pop: function() {
+		if(this.h == null) return null;
+		var x = this.h[0];
+		this.h = this.h[1];
+		if(this.h == null) this.q = null;
+		this.length--;
+		return x;
+	}
+	,iterator: function() {
+		return { h : this.h, hasNext : function() {
+			return this.h != null;
+		}, next : function() {
+			if(this.h == null) return null;
+			var x = this.h[0];
+			this.h = this.h[1];
+			return x;
+		}};
+	}
+	,__class__: List
+};
+var IMap = function() { };
+$hxClasses["IMap"] = IMap;
+IMap.__name__ = ["IMap"];
+Math.__name__ = ["Math"];
 flixel.group.FlxGroup = function(MaxSize) {
 	flixel.group.FlxTypedGroup.call(this,MaxSize);
 };
@@ -4164,449 +4240,95 @@ flixel.FlxState.prototype = $extend(flixel.group.FlxGroup.prototype,{
 	,__class__: flixel.FlxState
 	,__properties__: $extend(flixel.group.FlxGroup.prototype.__properties__,{set_bgColor:"set_bgColor",get_bgColor:"get_bgColor"})
 });
-var PlayState = function(MaxSize) {
-	this._score = 0;
-	this._curMapY = 0;
-	this._curMapX = 0;
-	this.tileName = "assets/images/wood_tiles.png";
-	this.levelId = "1";
-	flixel.FlxState.call(this,MaxSize);
-};
-$hxClasses["PlayState"] = PlayState;
-PlayState.__name__ = ["PlayState"];
-PlayState.player = null;
-PlayState.__super__ = flixel.FlxState;
-PlayState.prototype = $extend(flixel.FlxState.prototype,{
-	_grpPlayer: null
-	,_player: null
-	,playerBullets: null
-	,_grpEnemies: null
-	,_grpBadBullets: null
-	,_grpCoins: null
-	,_grpLadders: null
-	,_grpHazards: null
-	,_door: null
-	,_bossDoor: null
-	,_grpWalls: null
-	,_levelWidth: null
-	,_levelHeight: null
-	,myOgmoLoader: null
-	,mTileMap: null
-	,levelId: null
-	,tileName: null
-	,loader: null
-	,midgroundMap: null
-	,coinGroup: null
-	,dropsGroup: null
-	,miscGroup: null
-	,_newEntrance: null
-	,_curMapX: null
-	,_curMapY: null
-	,_hud: null
-	,_score: null
-	,create: function() {
-		this._levelHeight = this._levelWidth = 0;
-		this._grpWalls = new flixel.group.FlxTypedGroup();
-		this._grpLadders = new flixel.group.FlxTypedGroup();
-		this.add(this._grpLadders);
-		this._grpHazards = new flixel.group.FlxTypedGroup();
-		this.add(this._grpHazards);
-		this._grpEnemies = new flixel.group.FlxGroup();
-		this.add(this._grpEnemies);
-		this._door = new Door();
-		this.add(this._door);
-		this._bossDoor = new BossDoor();
-		this.add(this._bossDoor);
-		this._grpCoins = new flixel.group.FlxTypedGroup();
-		this.add(this._grpCoins);
-		this.playerBullets = new flixel.group.FlxTypedGroup();
-		this.add(this.playerBullets);
-		if(Reg.player == null) {
-			this._player = new Player(100,100,this.playerBullets);
-			Reg.player = this._player;
-			haxe.Log.trace("og stats: ",{ fileName : "PlayState.hx", lineNumber : 112, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("Reg.player: " + Std.string(Reg.player),{ fileName : "PlayState.hx", lineNumber : 113, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("   _player: " + Std.string(this._player),{ fileName : "PlayState.hx", lineNumber : 114, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("Reg.player exists: " + Std.string(Reg.player.exists),{ fileName : "PlayState.hx", lineNumber : 115, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("   _player exists: " + Std.string(this._player.exists),{ fileName : "PlayState.hx", lineNumber : 116, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("reset stats: ",{ fileName : "PlayState.hx", lineNumber : 117, className : "PlayState", methodName : "create"});
-		} else {
-			this._player = Reg.player;
-			haxe.Log.trace("Reg.player: " + Std.string(Reg.player),{ fileName : "PlayState.hx", lineNumber : 123, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("   _player: " + Std.string(this._player),{ fileName : "PlayState.hx", lineNumber : 124, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("_player.hp: " + this._player.hp,{ fileName : "PlayState.hx", lineNumber : 125, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("Reg.player exists: " + Std.string(Reg.player.exists),{ fileName : "PlayState.hx", lineNumber : 126, className : "PlayState", methodName : "create"});
-			haxe.Log.trace("   _player exists: " + Std.string(this._player.exists),{ fileName : "PlayState.hx", lineNumber : 127, className : "PlayState", methodName : "create"});
-		}
-		this.dropsGroup = new flixel.group.FlxTypedGroup();
-		this.add(this.dropsGroup);
-		var drop = new Drops(320,320,0,this._player,true);
-		var drop2 = new Drops(340,320,2,this._player,true);
-		var drop4 = new Drops(360,320,4,this._player,true);
-		var drop6 = new Drops(380,320,6,this._player,true);
-		this.dropsGroup.add(drop);
-		this.dropsGroup.add(drop2);
-		this.dropsGroup.add(drop4);
-		this.dropsGroup.add(drop6);
-		this._grpBadBullets = new flixel.group.FlxGroup();
-		this.add(this._grpBadBullets);
-		this.miscGroup = new flixel.group.FlxGroup();
-		this.add(this.miscGroup);
-		this.setUpLevel();
-		this.add(this._grpWalls);
-		this._grpPlayer = new flixel.group.FlxGroup();
-		this.add(this._grpPlayer);
-		this._grpPlayer.add(this._player);
-		this._grpPlayer.add(this.playerBullets);
-		flixel.FlxG.mouse.set_visible(false);
-		flixel.FlxG.camera.bgColor = -11184811;
-		flixel.FlxG.camera.follow(this._player,1);
-		flixel.FlxG.camera.style = 1;
-		flixel.FlxG.camera.setBounds(0,-this._levelHeight,this._levelWidth,this._levelHeight * 2);
-		flixel.FlxG.worldBounds.set(0,-this._levelHeight,this._levelWidth,this._levelHeight * 2);
-		this._hud = new HUD();
-		this.add(this._hud);
-		flixel.FlxState.prototype.create.call(this);
-	}
-	,update: function() {
-		flixel.FlxG.overlap(this._grpWalls,this._player,null,flixel.FlxObject.separate);
-		flixel.FlxG.overlap(this._grpWalls,this._grpEnemies,null,flixel.FlxObject.separate);
-		flixel.FlxG.overlap(this._grpWalls,this._grpBadBullets,null,flixel.FlxObject.separate);
-		flixel.FlxG.overlap(this._grpWalls,this.playerBullets,null,flixel.FlxObject.separate);
-		flixel.FlxG.overlap(this._player,this._grpEnemies,$bind(this,this.touchEnemy));
-		flixel.FlxG.overlap(this._player,this._grpBadBullets,$bind(this,this.playerGetHit));
-		flixel.FlxG.overlap(this.playerBullets,this._grpEnemies,$bind(this,this.bulletTouchEnemy));
-		flixel.FlxG.overlap(this._player,this._grpCoins,$bind(this,this.playerTouchCoin));
-		flixel.FlxG.overlap(this._player,this.dropsGroup,$bind(this,this.playerTouchDrops));
-		flixel.FlxG.overlap(this._player,this._grpHazards,$bind(this,this.playerTouchHazard));
-		flixel.FlxG.overlap(this._player,this._bossDoor,$bind(this,this.playerTouchBossDoor));
-		if(!flixel.FlxG.overlap(this._player,this._grpLadders,$bind(this,this.playerTouchLadder))) this._player.setTouchingLadder(false);
-		if(flixel.FlxG.keys.checkKeyStatus(["R"],1)) flixel.FlxG.switchState(new PlayState());
-		if(flixel.FlxG.keys.checkKeyStatus(["T"],1)) flixel.FlxG.switchState(new MenuState());
-		if(flixel.FlxG.keys.checkKeyStatus(["P"],2)) {
-			var sub = new PauseState();
-			this._requestSubStateReset = true;
-			this._requestedSubState = sub;
-		}
-		this._hud.updateHUD(this._player.hp,this._player.curWeapon.juice,this._score,this._player.curWeapon.name);
-		flixel.FlxState.prototype.update.call(this);
-	}
-	,destroy: function() {
-		flixel.FlxState.prototype.destroy.call(this);
-	}
-	,gotoNextLevel: function() {
-		flixel.FlxG.switchState(new Level1());
-	}
-	,setUpLevel: function() {
-		this._newEntrance = flixel.util.FlxRandom.intRanged(1,1);
-		this.myOgmoLoader = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/levels/level_" + this.levelId + "_start_" + this._newEntrance + ".oel");
-		this.mTileMap = this.myOgmoLoader.loadTilemap(this.tileName,16,16,"walls");
-		this.myOgmoLoader.loadEntities($bind(this,this.placeEntities),"entities");
-		this._levelHeight += this.mTileMap.get_height();
-		this._levelWidth += this.mTileMap.get_width();
-		this._grpWalls.add(this.mTileMap);
-		var itemRoomPos;
-		itemRoomPos = flixel.util.FlxRandom.intRanged(1,1);
-		var _g = 1;
-		while(_g < 2) {
-			var i = _g++;
-			if(i == itemRoomPos) {
-				var myOgmoLoader = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/levels/level_" + this.levelId + "_item_start_" + this._newEntrance + ".oel");
-				var myTileMap = myOgmoLoader.loadTilemap(this.tileName,16,16,"walls");
-				this.setUpMaps(myOgmoLoader,myTileMap);
-				var endId = flixel.util.FlxRandom.intRanged(1,1);
-				myOgmoLoader = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/levels/level_" + this.levelId + "_shop_end_" + endId + ".oel");
-				myTileMap = myOgmoLoader.loadTilemap(this.tileName,16,16,"walls");
-				this.setUpMaps(myOgmoLoader,myTileMap);
-			}
-			var id;
-			id = flixel.util.FlxRandom.intRanged(1,1);
-			var myOgmoLoader1 = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/levels/level_" + this.levelId + "_" + this._newEntrance + "_" + id + ".oel");
-			var myTileMap1 = myOgmoLoader1.loadTilemap(this.tileName,16,16,"walls");
-			this.setUpMaps(myOgmoLoader1,myTileMap1);
-		}
-		var myOgmoLoader2 = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/levels/level_" + this.levelId + "_end_" + this._newEntrance + ".oel");
-		var myTileMap2 = myOgmoLoader2.loadTilemap(this.tileName,16,16,"walls");
-		this.setUpMaps(myOgmoLoader2,myTileMap2);
-	}
-	,setUpMaps: function(ogmo,map) {
-		var previousWall = this._grpWalls.members[this._grpWalls.length - 1];
-		if(this._newEntrance == 1 || this._newEntrance == 2) {
-			var _g = map;
-			_g.set_x(_g.x + (previousWall.x + previousWall.get_width()));
-			var _g1 = map;
-			_g1.set_y(_g1.y + previousWall.y);
-		} else if(this._newEntrance == 3) {
-			var _g2 = map;
-			_g2.set_x(_g2.x + (previousWall.x + previousWall.get_width() - 96));
-			var _g3 = map;
-			_g3.set_y(_g3.y + (previousWall.y + previousWall.get_height()));
-		} else {
-			var _g4 = map;
-			_g4.set_x(_g4.x + (previousWall.x + previousWall.get_width() - 96));
-			var _g5 = map;
-			_g5.set_y(_g5.y + (previousWall.y - previousWall.get_height()));
-		}
-		this._curMapX = map.x;
-		this._curMapY = map.y;
-		ogmo.loadEntities($bind(this,this.placeEntities),"entities");
-		ogmo.loadEntities($bind(this,this.getExit),"entities");
-		this._levelHeight += map.get_height();
-		this._levelWidth += map.get_width();
-		this._grpWalls.add(map);
-	}
-	,touchEnemy: function(P,E) {
-		if(E.alive == true) P.takeDamage(1);
-	}
-	,playerGetHit: function(P,B) {
-		if(B.alive == true) P.takeDamage(B.getDamage());
-	}
-	,bulletTouchEnemy: function(B,E) {
-		if(B.alive && B.exists && E.alive && E.exists) E.takeDamage(B.getDamage());
-		if(E.alive == false) {
-			this._score++;
-			var health;
-			health = this._player.hp;
-		}
-	}
-	,bulletTouchLadder: function(B,L) {
-		if(B.alive && B.exists && L.alive && L.exists) {
-			L.kill();
-			this._score++;
-		}
-	}
-	,playerTouchBossDoor: function(P,BD) {
-		if(P.alive && P.exists && BD.alive && BD.exists) {
-			BD.open();
-			P.enterBossDoor();
-		}
-	}
-	,playerTouchCoin: function(P,C) {
-		if(P.alive && P.exists && C.alive && C.exists) {
-			C.kill();
-			this._score++;
-		}
-	}
-	,playerTouchDrops: function(P,D) {
-		if(P.alive && P.exists && D.alive && D.exists) {
-			var cost = D.doStuff(this._score);
-			this._score -= cost;
-		}
-	}
-	,playerTouchLadder: function(P,L) {
-		P.setTouchingLadder(true);
-		if(L.top == true && P.y < L.y - (P.get_height() - 3)) {
-			L.set_immovable(true);
-			flixel.FlxG.overlap(P,L,null,flixel.FlxObject.separate);
-		}
-	}
-	,playerTouchHazard: function(P,S) {
-		P.takeDamage(S.dmg);
-	}
-	,placeEntities: function(entityName,entityData) {
-		var x = Std.parseFloat(entityData.get("x"));
-		var y = Std.parseFloat(entityData.get("y"));
-		x += this._curMapX;
-		y += this._curMapY;
-		if(entityName == "player") {
-			this._player.set_x(x);
-			this._player.set_y(y);
-		} else if(entityName == "coin") this._grpCoins.add(new Coin(x + 4,y + 4)); else if(entityName == "ladder") {
-			if(entityData.get("top") == "True") this._grpLadders.add(new Ladder(x,y,true)); else this._grpLadders.add(new Ladder(x,y,false));
-		} else if(entityName == "door") {
-			this._door.set_x(x);
-			this._door.set_y(y);
-		} else if(entityName == "bossDoor") {
-			this._bossDoor.set_x(x);
-			this._bossDoor.set_y(y);
-		} else if(entityName == "spike") {
-			var dmg = Std.parseInt(entityData.get("damage"));
-			this._grpHazards.add(new Spike(x,y,dmg));
-		} else if(entityName == "storePodium") this.add(new ShopPodium(x,y,this._player,this.dropsGroup,this.miscGroup)); else if(entityName == "enemy") {
-			var _g = entityData.get("name");
-			switch(_g) {
-			case "snobal":
-				this._grpEnemies.add(new enemies.Snobal(x,y,this._player,this.dropsGroup));
-				break;
-			case "snaake":
-				this._grpEnemies.add(new enemies.Snaake(x,y,this._player,this.dropsGroup));
-				break;
-			case "metool":
-				this._grpEnemies.add(new enemies.Metool(x,y,this._player,this.dropsGroup,this._grpBadBullets));
-				break;
-			case "burd":
-				this._grpEnemies.add(new enemies.Burd(x,y,this._player,this.dropsGroup,this._grpEnemies));
-				break;
-			case "notey":
-				this._grpEnemies.add(new enemies.Notey(x,y,this._player,this.dropsGroup));
-				break;
-			case "testboss":
-				this._grpEnemies.add(new Testboss(x,y,this._player,this.dropsGroup,this._grpBadBullets,this));
-				break;
-			case "balun":
-				this._grpEnemies.add(new enemies.Balun(x,y,this._player,this.dropsGroup,this._grpEnemies,this._grpBadBullets,1));
-				break;
-			case "mush":
-				this._grpEnemies.add(new enemies.Mush(x,y,this._player,this.dropsGroup,this._grpBadBullets,1));
-				break;
-			}
-		}
-	}
-	,getExit: function(entityName,entityData) {
-		if(entityName == "exit") this._newEntrance = Std.parseInt(entityData.get("val"));
-	}
-	,getEntrance: function(entityName,entityData) {
-		if(entityName == "entrance") this._newEntrance = Std.parseInt(entityData.get("val"));
-	}
-	,__class__: PlayState
-});
-var Level1 = function() {
-	PlayState.call(this);
-	this.levelId = "1";
-	this.tileName = "assets/images/wood_tiles2.png";
-};
-$hxClasses["Level1"] = Level1;
-Level1.__name__ = ["Level1"];
-Level1.__super__ = PlayState;
-Level1.prototype = $extend(PlayState.prototype,{
-	__class__: Level1
-});
-var Level2 = function() {
-	PlayState.call(this);
-	this.levelId = "1";
-	this.tileName = "assets/images/wood_tiles3.png";
-};
-$hxClasses["Level2"] = Level2;
-Level2.__name__ = ["Level2"];
-Level2.__super__ = PlayState;
-Level2.prototype = $extend(PlayState.prototype,{
-	__class__: Level2
-});
-var List = function() {
-	this.length = 0;
-};
-$hxClasses["List"] = List;
-List.__name__ = ["List"];
-List.prototype = {
-	h: null
-	,q: null
-	,length: null
-	,add: function(item) {
-		var x = [item];
-		if(this.h == null) this.h = x; else this.q[1] = x;
-		this.q = x;
-		this.length++;
-	}
-	,pop: function() {
-		if(this.h == null) return null;
-		var x = this.h[0];
-		this.h = this.h[1];
-		if(this.h == null) this.q = null;
-		this.length--;
-		return x;
-	}
-	,iterator: function() {
-		return { h : this.h, hasNext : function() {
-			return this.h != null;
-		}, next : function() {
-			if(this.h == null) return null;
-			var x = this.h[0];
-			this.h = this.h[1];
-			return x;
-		}};
-	}
-	,__class__: List
-};
-var IMap = function() { };
-$hxClasses["IMap"] = IMap;
-IMap.__name__ = ["IMap"];
-Math.__name__ = ["Math"];
 var MenuState = function(MaxSize) {
-	this.selectedLevel = 1;
-	this.colorSelected = 10156463;
-	this.colorDefault = 16424873;
 	flixel.FlxState.call(this,MaxSize);
 };
 $hxClasses["MenuState"] = MenuState;
 MenuState.__name__ = ["MenuState"];
 MenuState.__super__ = flixel.FlxState;
 MenuState.prototype = $extend(flixel.FlxState.prototype,{
-	colorDefault: null
-	,colorSelected: null
-	,selectedLevel: null
-	,txtLevel1: null
-	,txtLevel2: null
-	,txtLevel3: null
-	,grpLevel: null
-	,create: function() {
+	create: function() {
 		flixel.FlxState.prototype.create.call(this);
-		this.add(new flixel.text.FlxText(6,9,200,"Level Select (lol)"));
-		flixel.FlxG.camera.bgColor = 16424873;
-		this.grpLevel = new flixel.group.FlxTypedGroup();
-		this.txtLevel1 = new flixel.text.FlxText(100,50,0,"Level1",8);
-		this.txtLevel2 = new flixel.text.FlxText(100,75,0,"Level2",8);
-		this.txtLevel3 = new flixel.text.FlxText(100,100,0,"Level3",8);
-		this.add(this.grpLevel);
-		this.grpLevel.add(this.txtLevel1);
-		this.grpLevel.add(this.txtLevel2);
-		this.grpLevel.add(this.txtLevel3);
+		this.add(new flixel.text.FlxText(6,9,200,"Hello, HaxeFlixel!"));
+		flixel.FlxG.camera.bgColor = -4531627;
+		this.add(new flixel.ui.FlxButton(0,25,"Start",$bind(this,this.gotoNextStates)));
 	}
-	,update: function() {
-		this.colorize();
-		if(flixel.FlxG.keys.checkKeyStatus(["DOWN","S"],2)) this.selectedLevel++; else if(flixel.FlxG.keys.checkKeyStatus(["UP","W"],2)) this.selectedLevel--;
-		if(this.selectedLevel >= 4) this.selectedLevel = 1; else if(this.selectedLevel <= 0) this.selectedLevel = 3;
-		if(flixel.FlxG.keys.checkKeyStatus(["ENTER","J"],2)) {
-			var _g = this.selectedLevel;
-			switch(_g) {
-			case 1:
-				this.gotoLevel1();
-				break;
-			case 2:
-				this.gotoLevel2();
-				break;
-			case 3:
-				this.gotoLevel3();
-				break;
-			}
-		}
-		if(flixel.FlxG.keys.checkKeyStatus(["SPACE"],1)) this.gotoNextState();
-		flixel.FlxState.prototype.update.call(this);
-	}
-	,colorize: function() {
-		var $it0 = new flixel.group.FlxTypedGroupIterator(this.grpLevel.members,null);
-		while( $it0.hasNext() ) {
-			var level = $it0.next();
-			level.setFormat(null,8,10156463);
-		}
-		var _g = this.selectedLevel;
-		switch(_g) {
-		case 1:
-			this.txtLevel1.setFormat(null,8,16424873);
-			break;
-		case 2:
-			this.txtLevel2.setFormat(null,8,16424873);
-			break;
-		case 3:
-			this.txtLevel3.setFormat(null,8,16424873);
-			break;
-		}
-	}
-	,gotoLevel1: function() {
-		flixel.FlxG.switchState(new Level1());
-	}
-	,gotoLevel2: function() {
-		flixel.FlxG.switchState(new Level2());
-	}
-	,gotoLevel3: function() {
-		flixel.FlxG.switchState(new PlayState());
-	}
-	,gotoNextState: function() {
+	,gotoNextStates: function() {
 		flixel.FlxG.switchState(new PlayState());
 	}
 	,destroy: function() {
 		flixel.FlxState.prototype.destroy.call(this);
 	}
+	,update: function() {
+		this.gotoNextStates();
+		if(flixel.FlxG.keys.checkKeyStatus(["SPACE"],1)) $bind(this,this.gotoNextStates);
+		flixel.FlxState.prototype.update.call(this);
+	}
 	,__class__: MenuState
+});
+var Metool = function(X,Y,ThePlayer,DropsGrp,Bullets) {
+	this._HP = 2;
+	this.BULLET_SPEED = 100;
+	this.GUN_DELAY = 1.5;
+	this.GRAVITY = 9800;
+	this.XSPEED = 0;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.loadGraphic("assets/images/metool.png",true,16,16);
+	this.set_width(16);
+	this.set_height(16);
+	this._bullets = Bullets;
+	this._cooldown = 0;
+	this.animation.add("hide",[0]);
+	this.animation.add("open",[1]);
+};
+$hxClasses["Metool"] = Metool;
+Metool.__name__ = ["Metool"];
+Metool.__super__ = EnemyTemplate;
+Metool.prototype = $extend(EnemyTemplate.prototype,{
+	XSPEED: null
+	,GRAVITY: null
+	,GUN_DELAY: null
+	,BULLET_SPEED: null
+	,_HP: null
+	,_bullets: null
+	,_cooldown: null
+	,update: function() {
+		if(this.isOnScreen()) {
+			this.velocity.set_x(this.velocity.set_y(0));
+			var xdistance = this._player.x - this.x;
+			var ydistance = this._player.y - this.y;
+			var distancesquared = xdistance * xdistance + ydistance * ydistance;
+			this.acceleration.set_y(this.GRAVITY);
+			if(distancesquared < 16000) {
+				if(this._player.x < this.x) {
+					this.set_facing(16);
+					this.set_flipX(false);
+					this.velocity.set_x(-this.XSPEED);
+				} else if(this._player.x > this.x) {
+					this.set_facing(1);
+					this.set_flipX(true);
+					this.velocity.set_x(this.XSPEED);
+				}
+				if(this._player.facing == 16) this.animation.play("hide"); else this.animation.play("open");
+			} else {
+				this.animation.play("open");
+				this.shoot(this._player);
+			}
+			this._cooldown += flixel.FlxG.elapsed;
+			EnemyTemplate.prototype.update.call(this);
+		}
+	}
+	,shoot: function(P) {
+		var bulletX = Math.floor(this.x);
+		var bulletY = Math.floor(this.y + 4);
+		if(this._cooldown > this.GUN_DELAY) {
+			var bullet = new Bullet(this.x - 8,this.y + 8,500,1,1);
+			this._bullets.add(bullet);
+			if(P.x < this.x) bulletX -= Math.floor(bullet.get_width() - 8); else bulletX += Math.floor(this.get_width() - 8);
+			this._cooldown = 0;
+		}
+	}
+	,__class__: Metool
 });
 var NMEPreloader = function() {
 	openfl.display.Sprite.call(this);
@@ -4665,94 +4387,322 @@ NMEPreloader.prototype = $extend(openfl.display.Sprite.prototype,{
 	}
 	,__class__: NMEPreloader
 });
-flixel.FlxSubState = function(BGColor) {
-	if(BGColor == null) BGColor = 0;
-	this._created = false;
-	flixel.FlxState.call(this);
-	this.closeCallback = null;
-	this.set_bgColor(BGColor);
+var Notey = function(X,Y,ThePlayer,DropsGrp) {
+	this._HP = 1;
+	this.GRAVITY = 9800;
+	this.XSPEED = -75;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.loadGraphic("assets/images/notey.png",true,16,16);
+	this.set_width(16);
+	this.set_height(16);
+	this.set_facing(16);
+	this.set_flipX(true);
+	this.animation.add("walk",[0,1,0,2],3,true);
 };
-$hxClasses["flixel.FlxSubState"] = flixel.FlxSubState;
-flixel.FlxSubState.__name__ = ["flixel","FlxSubState"];
-flixel.FlxSubState.__super__ = flixel.FlxState;
-flixel.FlxSubState.prototype = $extend(flixel.FlxState.prototype,{
-	closeCallback: null
-	,_parentState: null
-	,_bgColor: null
-	,_created: null
-	,draw: function() {
-		var _g = 0;
-		var _g1 = flixel.FlxG.cameras.list;
-		while(_g < _g1.length) {
-			var camera = _g1[_g];
-			++_g;
-			camera.fill(this._bgColor);
+$hxClasses["Notey"] = Notey;
+Notey.__name__ = ["Notey"];
+Notey.__super__ = EnemyTemplate;
+Notey.prototype = $extend(EnemyTemplate.prototype,{
+	XSPEED: null
+	,GRAVITY: null
+	,_HP: null
+	,update: function() {
+		if(this.isOnScreen()) {
+			this.velocity.set_x(this.XSPEED);
+			this.animation.play("walk");
+			this.acceleration.set_y(this.GRAVITY);
+			if((this.touching & 17) > 0) this.turnAround();
+			EnemyTemplate.prototype.update.call(this);
 		}
-		flixel.FlxState.prototype.draw.call(this);
+	}
+	,turnAround: function() {
+		this.XSPEED = -this.XSPEED;
+		if(this.facing == 1) {
+			this.set_facing(16);
+			this.set_flipX(true);
+			var _g = this;
+			_g.set_x(_g.x - 2);
+		} else {
+			this.set_facing(1);
+			this.set_flipX(false);
+			var _g1 = this;
+			_g1.set_x(_g1.x + 2);
+		}
+		return;
+	}
+	,__class__: Notey
+});
+var PlayState = function(MaxSize) {
+	this._score = 0;
+	this._curMapY = 0;
+	this._curMapX = 0;
+	flixel.FlxState.call(this,MaxSize);
+};
+$hxClasses["PlayState"] = PlayState;
+PlayState.__name__ = ["PlayState"];
+PlayState.__super__ = flixel.FlxState;
+PlayState.prototype = $extend(flixel.FlxState.prototype,{
+	_grpPlayer: null
+	,_player: null
+	,playerBullets: null
+	,_grpEnemies: null
+	,_grpBadBullets: null
+	,_grpCoins: null
+	,_grpLadders: null
+	,_grpHazards: null
+	,_door: null
+	,_grpWalls: null
+	,_levelWidth: null
+	,_levelHeight: null
+	,_map: null
+	,_mWalls: null
+	,floor: null
+	,_map2: null
+	,_mWalls2: null
+	,_mapT: null
+	,_mWallsT: null
+	,loader: null
+	,midgroundMap: null
+	,coinGroup: null
+	,dropsGroup: null
+	,_newEntrance: null
+	,_curMapX: null
+	,_curMapY: null
+	,_hud: null
+	,_score: null
+	,create: function() {
+		this._levelHeight = this._levelWidth = 0;
+		this._grpWalls = new flixel.group.FlxTypedGroup();
+		this._grpLadders = new flixel.group.FlxTypedGroup();
+		this.add(this._grpLadders);
+		this._grpHazards = new flixel.group.FlxTypedGroup();
+		this.add(this._grpHazards);
+		this._grpEnemies = new flixel.group.FlxGroup();
+		this.add(this._grpEnemies);
+		this._door = new Door();
+		this.add(this._door);
+		this._grpCoins = new flixel.group.FlxTypedGroup();
+		this.add(this._grpCoins);
+		this.playerBullets = new flixel.group.FlxTypedGroup();
+		this.add(this.playerBullets);
+		this._player = new Player(100,100,this.playerBullets);
+		this.dropsGroup = new flixel.group.FlxTypedGroup();
+		this.add(this.dropsGroup);
+		var drop = new Drops(320,320,0,this._player);
+		var drop2 = new Drops(340,320,2,this._player);
+		this.dropsGroup.add(drop);
+		this.dropsGroup.add(drop2);
+		this._grpBadBullets = new flixel.group.FlxGroup();
+		this.add(this._grpBadBullets);
+		this.setUpLevel();
+		this.add(this._grpWalls);
+		this._grpPlayer = new flixel.group.FlxGroup();
+		this.add(this._grpPlayer);
+		this._grpPlayer.add(this._player);
+		this._grpPlayer.add(this.playerBullets);
+		flixel.FlxG.mouse.set_visible(false);
+		flixel.FlxG.camera.bgColor = -11184811;
+		flixel.FlxG.camera.follow(this._player,1);
+		flixel.FlxG.camera.style = 1;
+		flixel.FlxG.camera.setBounds(0,-this._levelHeight,this._levelWidth,this._levelHeight * 2);
+		flixel.FlxG.worldBounds.set(0,-this._levelHeight,this._levelWidth,this._levelHeight * 2);
+		this._hud = new HUD();
+		this.add(this._hud);
+		flixel.FlxState.prototype.create.call(this);
 	}
 	,destroy: function() {
 		flixel.FlxState.prototype.destroy.call(this);
-		this.closeCallback = null;
-		this._parentState = null;
 	}
-	,close: function() {
-		if(this._parentState != null && this._parentState.subState == this) this._parentState._requestSubStateReset = true;
+	,update: function() {
+		flixel.FlxG.overlap(this._grpWalls,this._player,null,flixel.FlxObject.separate);
+		flixel.FlxG.overlap(this._grpWalls,this._grpEnemies,null,flixel.FlxObject.separate);
+		flixel.FlxG.overlap(this._player,this._door,$bind(this,this.nextLevel));
+		flixel.FlxG.overlap(this._player,this._grpEnemies,$bind(this,this.touchEnemy));
+		flixel.FlxG.overlap(this._player,this._grpBadBullets,$bind(this,this.playerGetHit));
+		flixel.FlxG.overlap(this.playerBullets,this._grpEnemies,$bind(this,this.bulletTouchEnemy));
+		flixel.FlxG.overlap(this._player,this._grpCoins,$bind(this,this.playerTouchCoin));
+		flixel.FlxG.overlap(this._player,this.dropsGroup,$bind(this,this.playerTouchDrops));
+		flixel.FlxG.overlap(this._player,this._grpHazards,$bind(this,this.playerTouchHazard));
+		if(!flixel.FlxG.overlap(this._player,this._grpLadders,$bind(this,this.playerTouchLadder))) this._player.setTouchingLadder(false);
+		if(flixel.FlxG.keys.checkKeyStatus(["R"],1)) flixel.FlxG.switchState(new PlayState());
+		flixel.FlxState.prototype.update.call(this);
 	}
-	,get_bgColor: function() {
-		return this._bgColor;
+	,nextLevel: function(P,D) {
+		flixel.FlxG.switchState(new PlayState());
 	}
-	,set_bgColor: function(Value) {
-		return this._bgColor = Value;
+	,setUpLevel: function() {
+		this._newEntrance = flixel.util.FlxRandom.intRanged(2,2);
+		this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_start_" + this._newEntrance + ".oel");
+		this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles.png",16,16,"walls");
+		this._mWallsT.setTileProperties(104,0);
+		this._mapT.loadEntities($bind(this,this.placeEntities),"entities");
+		this._levelHeight += this._mWallsT.get_height();
+		this._levelWidth += this._mWallsT.get_width();
+		this._grpWalls.add(this._mWallsT);
+		var itemRoomPos;
+		itemRoomPos = flixel.util.FlxRandom.intRanged(1,5);
+		var _g = 1;
+		while(_g < 6) {
+			var i = _g++;
+			if(i == itemRoomPos) {
+				this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_item_start_" + this._newEntrance + ".oel");
+				this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles.png",16,16,"walls");
+				this.setUpMaps();
+				var endId = flixel.util.FlxRandom.intRanged(1,4);
+				this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_item_end_" + endId + ".oel");
+				this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles.png",16,16,"walls");
+				this.setUpMaps();
+			}
+			var id;
+			id = flixel.util.FlxRandom.intRanged(1,4);
+			this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_" + this._newEntrance + "_" + id + ".oel");
+			this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles.png",16,16,"walls");
+			this.setUpMaps();
+		}
+		this._mapT = new flixel.addons.editors.ogmo.FlxOgmoLoader("assets/data/level_1_end_" + this._newEntrance + ".oel");
+		this._mWallsT = this._mapT.loadTilemap("assets/images/wood_tiles.png",16,16,"walls");
+		this.setUpMaps();
 	}
-	,__class__: flixel.FlxSubState
-});
-var PauseState = function(BGColor) {
-	if(BGColor == null) BGColor = 0;
-	flixel.FlxSubState.call(this,BGColor);
-	var text = new flixel.text.FlxText(175,120,0,"PAUSED",16);
-	text.scrollFactor.set(0,0);
-	this.add(text);
-};
-$hxClasses["PauseState"] = PauseState;
-PauseState.__name__ = ["PauseState"];
-PauseState.__super__ = flixel.FlxSubState;
-PauseState.prototype = $extend(flixel.FlxSubState.prototype,{
-	update: function() {
-		if(flixel.FlxG.keys.checkKeyStatus(["P"],-1)) this.close();
-		flixel.FlxSubState.prototype.update.call(this);
+	,setUpMaps: function() {
+		this._mWallsT.setTileProperties(104,0);
+		var previousWall = this._grpWalls.members[this._grpWalls.length - 1];
+		if(this._newEntrance == 1 || this._newEntrance == 2) {
+			var _g = this._mWallsT;
+			_g.set_x(_g.x + (previousWall.x + previousWall.get_width()));
+			var _g1 = this._mWallsT;
+			_g1.set_y(_g1.y + previousWall.y);
+		} else if(this._newEntrance == 3) {
+			var _g2 = this._mWallsT;
+			_g2.set_x(_g2.x + (previousWall.x + previousWall.get_width() - 96));
+			var _g3 = this._mWallsT;
+			_g3.set_y(_g3.y + (previousWall.y + previousWall.get_height()));
+		} else {
+			var _g4 = this._mWallsT;
+			_g4.set_x(_g4.x + (previousWall.x + previousWall.get_width() - 96));
+			var _g5 = this._mWallsT;
+			_g5.set_y(_g5.y + (previousWall.y - previousWall.get_height()));
+		}
+		this._curMapX = this._mWallsT.x;
+		this._curMapY = this._mWallsT.y;
+		this._mapT.loadEntities($bind(this,this.placeEntities),"entities");
+		this._mapT.loadEntities($bind(this,this.getExit),"entities");
+		this._levelHeight += this._mWallsT.get_height();
+		this._levelWidth += this._mWallsT.get_width();
+		this._grpWalls.add(this._mWallsT);
 	}
-	,__class__: PauseState
+	,touchEnemy: function(P,E) {
+		if(E.alive == true) {
+			P.getHurt(1);
+			this._hud.updateHUD(this._player.hp,this._score);
+		}
+	}
+	,playerGetHit: function(P,B) {
+		if(B.alive == true) {
+			P.getHurt(B.getDamage());
+			this._hud.updateHUD(this._player.hp,this._score);
+		}
+	}
+	,bulletTouchEnemy: function(B,E) {
+		if(B.alive && B.exists && E.alive && E.exists) {
+			E.takeDamage(B.getDamage());
+			this._score++;
+			var health;
+			health = this._player.hp;
+			this._hud.updateHUD(health,this._score);
+		}
+	}
+	,bulletTouchLadder: function(B,L) {
+		if(B.alive && B.exists && L.alive && L.exists) {
+			L.kill();
+			this._score++;
+			this._hud.updateHUD(this._player.hp,this._score);
+		}
+	}
+	,playerTouchDrops: function(P,D) {
+		if(P.alive && P.exists && D.alive && D.exists) {
+			D.doStuff();
+			D.kill();
+			this._hud.updateHUD(this._player.hp,this._score);
+		}
+	}
+	,playerTouchCoin: function(P,C) {
+		if(P.alive && P.exists && C.alive && C.exists) {
+			C.kill();
+			this._score++;
+			this._hud.updateHUD(this._player.hp,this._score);
+		}
+	}
+	,playerTouchLadder: function(P,L) {
+		P.setTouchingLadder(true);
+	}
+	,playerTouchHazard: function(P,S) {
+		P.getHurt(S.dmg);
+		this._hud.updateHUD(this._player.hp,this._score);
+	}
+	,placeEntities: function(entityName,entityData) {
+		var x = Std.parseFloat(entityData.get("x"));
+		var y = Std.parseFloat(entityData.get("y"));
+		x += this._curMapX;
+		y += this._curMapY;
+		if(entityName == "player") {
+			this._player.set_x(x);
+			this._player.set_y(y);
+		} else if(entityName == "coin") this._grpCoins.add(new Coin(x + 4,y + 4)); else if(entityName == "ladder") this._grpLadders.add(new Ladder(x,y)); else if(entityName == "door") {
+			this._door.set_x(x);
+			this._door.set_y(y);
+		} else if(entityName == "spike") {
+			var dmg = Std.parseInt(entityData.get("damage"));
+			this._grpHazards.add(new Spike(x,y,dmg));
+		} else if(entityName == "enemy") {
+			var _g = entityData.get("name");
+			switch(_g) {
+			case "snobal":
+				this._grpEnemies.add(new Snobal(x,y,this._player,this.dropsGroup));
+				break;
+			case "snaake":
+				this._grpEnemies.add(new Snaake(x,y,this._player,this.dropsGroup));
+				break;
+			case "metool":
+				this._grpEnemies.add(new Metool(x,y,this._player,this.dropsGroup,this._grpBadBullets));
+				break;
+			case "burd":
+				this._grpEnemies.add(new Burd(x,y,this._player,this.dropsGroup,this._grpEnemies));
+				break;
+			case "notey":
+				this._grpEnemies.add(new Notey(x,y,this._player,this.dropsGroup));
+				break;
+			}
+		}
+	}
+	,getExit: function(entityName,entityData) {
+		if(entityName == "exit") this._newEntrance = Std.parseInt(entityData.get("val"));
+	}
+	,getEntrance: function(entityName,entityData) {
+		if(entityName == "entrance") this._newEntrance = Std.parseInt(entityData.get("val"));
+	}
+	,__class__: PlayState
 });
 var Player = function(inX,inY,Bullets) {
 	if(inY == null) inY = 0;
 	if(inX == null) inX = 0;
-	this.canMove = true;
 	this.hurtTimer = 0;
 	this.climbing = false;
 	this.touchingLadder = false;
 	this.postShotTimer = 0;
 	this.shootingString = "";
 	this.bulletCount = 0;
-	this.maxBullets = 3;
-	this.luck = 5;
-	this.damage = 1;
+	this._maxBullets = 3;
+	this._luck = 5;
+	this._DAMAGE = 1;
 	this.shotRange = 10;
-	this.maxJumps = 2;
-	this.maxHP = 3;
-	this.isSliding = false;
+	this.MAXJUMPS = 2;
+	this.MAXHP = 3;
 	this.hp = 3;
 	this.remainingJumps = 2;
-	this.xSpeed = 150;
+	this.XSPEED = 200;
 	this.GRAVITY = 690;
 	this.jumpPower = 2250;
 	flixel.FlxSprite.call(this,inX,inY);
-	this.weapon1 = new weapons.WeaponTemplate("pea",this.bulletArray);
-	this.weapon2 = new weapons.EightWayWeapon("cyan",this.bulletArray);
-	this.weapon3 = new weapons.YellowWeapon("yellow",this.bulletArray);
-	this.weapon4 = new weapons.MagentaWeapon("magenta",this.bulletArray);
-	this.weaponArray = [this.weapon1,this.weapon2,this.weapon3,this.weapon4];
-	this.curWeaponLoc = 0;
-	this.curWeapon = this.weaponArray[this.curWeaponLoc];
 	this.loadGraphic("assets/images/mm.png",true,32,32);
 	this.set_width(16);
 	this.set_height(22);
@@ -4777,85 +4727,55 @@ Player.__super__ = flixel.FlxSprite;
 Player.prototype = $extend(flixel.FlxSprite.prototype,{
 	jumpPower: null
 	,GRAVITY: null
-	,xSpeed: null
+	,XSPEED: null
 	,remainingJumps: null
 	,hp: null
-	,isSliding: null
-	,maxHP: null
-	,maxJumps: null
+	,MAXHP: null
+	,MAXJUMPS: null
 	,shotRange: null
-	,damage: null
-	,luck: null
+	,_DAMAGE: null
+	,_luck: null
 	,bulletArray: null
-	,maxBullets: null
+	,_maxBullets: null
 	,bulletCount: null
-	,curWeaponLoc: null
-	,curWeapon: null
-	,weapon1: null
-	,weapon2: null
-	,weapon3: null
-	,weapon4: null
-	,weaponArray: null
 	,shootingString: null
 	,postShotTimer: null
-	,cooldown: null
+	,_cooldown: null
 	,touchingLadder: null
 	,climbing: null
 	,hurtTimer: null
-	,canMove: null
+	,_glitch: null
 	,update: function() {
 		this.velocity.set_x(0);
-		if(this.canMove == true) {
-			if(this.hp <= 0) flixel.tweens.FlxTween.tween(this,{ alpha : 0},.33,{ ease : flixel.tweens.FlxEase.circOut});
-			if(this.hurtTimer > 0) this.hurtTimer -= flixel.FlxG.elapsed;
-			if(this.climbing) this.acceleration.set_y(0); else this.acceleration.set_y(this.GRAVITY);
-			if((this.touching & 4096) > 0) this.remainingJumps = this.maxJumps;
-			if(this.isSliding == true) {
-				var _g = this;
-				_g.set_x(_g.x + 100);
-				this.isSliding = false;
-			}
-			this.playerInputs();
-			this.resolveAnimations();
-		}
+		if(this.hp <= 0) flixel.tweens.FlxTween.tween(this,{ alpha : 0},.33,{ ease : flixel.tweens.FlxEase.circOut});
+		if(this.hurtTimer > 0) this.hurtTimer -= flixel.FlxG.elapsed;
+		if(this.climbing) this.acceleration.set_y(0); else this.acceleration.set_y(this.GRAVITY);
+		if((this.touching & 4096) > 0) this.remainingJumps = this.MAXJUMPS;
+		this.playerInputs();
+		this.resolveAnimations();
 		flixel.FlxSprite.prototype.update.call(this);
 	}
-	,enterBossDoor: function() {
-		this.canMove = false;
-		var _g = this;
-		_g.set_x(_g.x + 32);
-		this.canMove = true;
-	}
 	,playerInputs: function() {
-		if(flixel.FlxG.keys.checkKeyStatus(["RIGHT","D"],1) && this.climbing == false) {
-			this.velocity.set_x(this.xSpeed);
-			this.set_flipX(false);
-			this.set_facing(16);
-			this.climbing = false;
-		} else if(flixel.FlxG.keys.checkKeyStatus(["LEFT","A"],1) && this.climbing == false) {
-			this.velocity.set_x(-this.xSpeed);
+		if(flixel.FlxG.keys.checkKeyStatus(["LEFT","A"],1)) {
+			this.velocity.set_x(-this.XSPEED);
 			this.set_flipX(true);
-			this.set_facing(1);
+			this.climbing = false;
+		} else if(flixel.FlxG.keys.checkKeyStatus(["RIGHT","D"],1)) {
+			this.velocity.set_x(this.XSPEED);
+			this.set_flipX(false);
 			this.climbing = false;
 		}
-		if(flixel.FlxG.keys.checkKeyStatus(["UP","W"],1) && this.touchingLadder == true) {
+		if(flixel.FlxG.keys.checkKeyStatus(["C"],1) && this.touchingLadder == true) {
 			this.velocity.set_y(-100);
 			this.climbing = true;
-			this.remainingJumps = this.maxJumps;
+			this.remainingJumps = this.MAXJUMPS;
 		}
-		if(flixel.FlxG.keys.checkKeyStatus(["DOWN","S"],1) && this.touchingLadder == true) {
-			this.velocity.set_y(100);
-			this.climbing = true;
-			this.remainingJumps = this.maxJumps;
-		}
-		if(flixel.FlxG.keys.checkKeyStatus(["DOWN","S"],1) && flixel.FlxG.keys.checkKeyStatus(["J"],2) && (this.touching & 4096) > 0) this.isSliding = true;
-		if(flixel.FlxG.keys.checkKeyStatus(["UP","J","W"],2) && this.remainingJumps > 0 && this.isSliding == false) {
+		if(flixel.FlxG.keys.checkKeyStatus(["UP","W"],2) && this.remainingJumps > 0) {
 			this.velocity.set_y(-this.jumpPower);
 			this.remainingJumps--;
 			this.climbing = false;
 		}
 		if(flixel.FlxG.keys.checkKeyStatus(["SPACE","K"],2)) this.shoot();
-		if(flixel.FlxG.keys.checkKeyStatus(["L"],2)) this.switchWeapon();
 	}
 	,resolveAnimations: function() {
 		if(this.postShotTimer > 0) {
@@ -4866,64 +4786,25 @@ Player.prototype = $extend(flixel.FlxSprite.prototype,{
 		if(this.velocity.x != 0) this.animation.play("walk" + this.shootingString);
 		if(this.velocity.y < 0) this.animation.play("jump" + this.shootingString); else if(this.velocity.y > 0) {
 			this.animation.play("fall" + this.shootingString);
-			if(this.remainingJumps == this.maxJumps) this.remainingJumps--;
+			if(this.remainingJumps == this.MAXJUMPS) this.remainingJumps--;
+		}
+	}
+	,shoot: function() {
+		if(this.bulletArray.countLiving() < this._maxBullets) {
+			this.postShotTimer = .33;
+			if(this.flipX) {
+				var newBullet = new Bullet(this.x - 8,this.y + 8,500,1,this._DAMAGE);
+				this.bulletArray.add(newBullet);
+			} else {
+				var newBullet1 = new Bullet(this.x + 8,this.y + 8,500,16,this._DAMAGE);
+				this.bulletArray.add(newBullet1);
+			}
 		}
 	}
 	,setTouchingLadder: function(bool) {
 		this.touchingLadder = bool;
 	}
-	,shoot: function() {
-		this.curWeapon.shoot(this);
-	}
-	,switchWeapon: function() {
-		do {
-			this.curWeaponLoc++;
-			if(this.curWeaponLoc == this.weaponArray.length) this.curWeaponLoc = 0;
-		} while(this.weaponArray[this.curWeaponLoc].unlocked == false);
-		this.curWeapon = this.weaponArray[this.curWeaponLoc];
-		if(this.curWeaponLoc == 0) {
-			this.animation.add("walk",[3,2,3,4],10,true);
-			this.animation.add("idle",[0,0,0,0,0,1],3,true);
-			this.animation.add("jump",[5],15,true);
-			this.animation.add("fall",[6],15,true);
-			this.animation.add("hurt",[5],15,true);
-			this.animation.add("walk_shoot",[10,9,10,11],10,true);
-			this.animation.add("idle_shoot",[8],3,true);
-			this.animation.add("jump_shoot",[13],15,true);
-			this.animation.add("fall_shoot",[13],15,true);
-		} else if(this.curWeaponLoc == 1) {
-			this.animation.add("walk",[31,30,31,32],10,true);
-			this.animation.add("idle",[28,28,28,28,28,29],3,true);
-			this.animation.add("jump",[33],15,true);
-			this.animation.add("fall",[34],15,true);
-			this.animation.add("hurt",[33],15,true);
-			this.animation.add("walk_shoot",[38,37,38,39],10,true);
-			this.animation.add("idle_shoot",[35],3,true);
-			this.animation.add("jump_shoot",[40],15,true);
-			this.animation.add("fall_shoot",[40],15,true);
-		} else if(this.curWeaponLoc == 2) {
-			this.animation.add("walk",[17,16,17,18],10,true);
-			this.animation.add("idle",[14,14,14,14,14,15],3,true);
-			this.animation.add("jump",[19],15,true);
-			this.animation.add("fall",[20],15,true);
-			this.animation.add("hurt",[19],15,true);
-			this.animation.add("walk_shoot",[24,23,24,25],10,true);
-			this.animation.add("idle_shoot",[21],3,true);
-			this.animation.add("jump_shoot",[26],15,true);
-			this.animation.add("fall_shoot",[26],15,true);
-		} else if(this.curWeaponLoc == 3) {
-			this.animation.add("walk",[45,44,45,46],10,true);
-			this.animation.add("idle",[42,42,42,42,42,43],3,true);
-			this.animation.add("jump",[47],15,true);
-			this.animation.add("fall",[48],15,true);
-			this.animation.add("hurt",[47],15,true);
-			this.animation.add("walk_shoot",[52,51,52,53],10,true);
-			this.animation.add("idle_shoot",[49],3,true);
-			this.animation.add("jump_shoot",[54],15,true);
-			this.animation.add("fall_shoot",[54],15,true);
-		}
-	}
-	,takeDamage: function(dmg) {
+	,getHurt: function(dmg) {
 		if(this.hurtTimer <= 0) {
 			this.hurtTimer = 1;
 			this.hp -= dmg;
@@ -4993,52 +4874,93 @@ Reflect.makeVarArgs = function(f) {
 		return f(a);
 	};
 };
-var Std = function() { };
-$hxClasses["Std"] = Std;
-Std.__name__ = ["Std"];
-Std.string = function(s) {
-	return js.Boot.__string_rec(s,"");
+var Snaake = function(X,Y,ThePlayer,DropsGrp) {
+	this._HP = 1;
+	this.GRAVITY = 9800;
+	this.XSPEED2 = 100;
+	this.XSPEED = 50;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.loadGraphic("assets/images/crawler.png",true,16,8);
+	this.set_width(16);
+	this.set_height(8);
+	this.set_facing(1);
+	this.animation.add("walk",[0,1],8,true);
 };
-Std["int"] = function(x) {
-	return x | 0;
+$hxClasses["Snaake"] = Snaake;
+Snaake.__name__ = ["Snaake"];
+Snaake.__super__ = EnemyTemplate;
+Snaake.prototype = $extend(EnemyTemplate.prototype,{
+	XSPEED: null
+	,XSPEED2: null
+	,GRAVITY: null
+	,_HP: null
+	,update: function() {
+		if(this.isOnScreen()) {
+			this.velocity.set_x(this.XSPEED);
+			this.animation.play("walk");
+			this.acceleration.set_y(this.GRAVITY);
+			if((this.touching & 17) > 0) this.turnAround();
+			if(this._player.y + this._player.get_height() == this.y + this.get_height()) this.XSPEED = 150; else this.XSPEED = 50;
+			if(this.flipX == true) this.XSPEED *= -1;
+			EnemyTemplate.prototype.update.call(this);
+		}
+	}
+	,turnAround: function() {
+		this.XSPEED = -this.XSPEED;
+		if(this.facing == 16) {
+			this.set_facing(1);
+			this.set_flipX(true);
+			var _g = this;
+			_g.set_x(_g.x + this.XSPEED / 25);
+		} else {
+			this.set_facing(16);
+			this.set_flipX(false);
+			var _g1 = this;
+			_g1.set_x(_g1.x + this.XSPEED / 25);
+		}
+		return;
+	}
+	,__class__: Snaake
+});
+var Snobal = function(X,Y,ThePlayer,DropsGrp) {
+	this._HP = 1;
+	this.GRAVITY = 9800;
+	this.XSPEED = 25;
+	EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
+	this.loadGraphic("assets/images/snobal.png",true,16,16);
+	this.set_width(16);
+	this.set_height(16);
+	this.animation.add("idle",[0],10,true);
+	this.animation.add("roll",[0,1,2,3],15,true);
 };
-Std.parseInt = function(x) {
-	var v = parseInt(x,10);
-	if(v == 0 && (HxOverrides.cca(x,1) == 120 || HxOverrides.cca(x,1) == 88)) v = parseInt(x);
-	if(isNaN(v)) return null;
-	return v;
-};
-Std.parseFloat = function(x) {
-	return parseFloat(x);
-};
-var Reg = function() { };
-$hxClasses["Reg"] = Reg;
-Reg.__name__ = ["Reg"];
-Reg.player = null;
-var ShopPodium = function(X,Y,ThePlayer,DropsGrp,MiscGrp) {
-	if(Y == null) Y = 0;
-	if(X == null) X = 0;
-	flixel.FlxSprite.call(this,X,Y);
-	this.set_visible(false);
-	var dropID = flixel.util.FlxRandom.intRanged(0,3) * 2;
-	var newDrop = new Drops(this.x,this.y,dropID,ThePlayer,false);
-	this.price = newDrop.price;
-	DropsGrp.add(newDrop);
-	this._txtMoney = new flixel.text.FlxText(this.x,this.y + 16,0,"" + this.price,8);
-	this._txtMoney.setBorderStyle(1,-8355712,1,1);
-	this._sprMoney = new flixel.FlxSprite(this._txtMoney.x + this._txtMoney.get_width(),this._txtMoney.y + 4,"assets/images/coin.png");
-	this._txtMoney.set_alignment("right");
-	MiscGrp.add(this._txtMoney);
-	MiscGrp.add(this._sprMoney);
-};
-$hxClasses["ShopPodium"] = ShopPodium;
-ShopPodium.__name__ = ["ShopPodium"];
-ShopPodium.__super__ = flixel.FlxSprite;
-ShopPodium.prototype = $extend(flixel.FlxSprite.prototype,{
-	_txtMoney: null
-	,_sprMoney: null
-	,price: null
-	,__class__: ShopPodium
+$hxClasses["Snobal"] = Snobal;
+Snobal.__name__ = ["Snobal"];
+Snobal.__super__ = EnemyTemplate;
+Snobal.prototype = $extend(EnemyTemplate.prototype,{
+	XSPEED: null
+	,GRAVITY: null
+	,_HP: null
+	,update: function() {
+		this.velocity.set_x(this.velocity.set_y(0));
+		var xdistance = this._player.x - this.x;
+		var ydistance = this._player.y - this.y;
+		var distancesquared = xdistance * xdistance + ydistance * ydistance;
+		this.acceleration.set_y(this.GRAVITY);
+		if(distancesquared < 32000) {
+			if(this._player.x < this.x) {
+				this.set_facing(16);
+				this.set_flipX(false);
+				this.velocity.set_x(-this.XSPEED);
+			} else if(this._player.x > this.x) {
+				this.set_facing(1);
+				this.set_flipX(true);
+				this.velocity.set_x(this.XSPEED);
+			}
+		}
+		if(this.velocity.x == 0 && this.velocity.y == 0) this.animation.play("idle"); else this.animation.play("roll");
+		EnemyTemplate.prototype.update.call(this);
+	}
+	,__class__: Snobal
 });
 var Spike = function(X,Y,Damage) {
 	if(Y == null) Y = 0;
@@ -5058,6 +4980,24 @@ Spike.prototype = $extend(flixel.FlxSprite.prototype,{
 	dmg: null
 	,__class__: Spike
 });
+var Std = function() { };
+$hxClasses["Std"] = Std;
+Std.__name__ = ["Std"];
+Std.string = function(s) {
+	return js.Boot.__string_rec(s,"");
+};
+Std["int"] = function(x) {
+	return x | 0;
+};
+Std.parseInt = function(x) {
+	var v = parseInt(x,10);
+	if(v == 0 && (HxOverrides.cca(x,1) == 120 || HxOverrides.cca(x,1) == 88)) v = parseInt(x);
+	if(isNaN(v)) return null;
+	return v;
+};
+Std.parseFloat = function(x) {
+	return parseFloat(x);
+};
 var StringBuf = function() {
 	this.b = "";
 };
@@ -5081,10 +5021,6 @@ StringTools.urlEncode = function(s) {
 };
 StringTools.urlDecode = function(s) {
 	return decodeURIComponent(s.split("+").join(" "));
-};
-StringTools.htmlEscape = function(s,quotes) {
-	s = s.split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;");
-	if(quotes) return s.split("\"").join("&quot;").split("'").join("&#039;"); else return s;
 };
 StringTools.startsWith = function(s,start) {
 	return s.length >= start.length && HxOverrides.substr(s,0,start.length) == start;
@@ -5129,81 +5065,6 @@ StringTools.hex = function(n,digits) {
 StringTools.fastCodeAt = function(s,index) {
 	return s.charCodeAt(index);
 };
-var enemies = {};
-enemies.EnemyTemplate = function(X,Y,ThePlayer,Health,DropsGrp) {
-	this.YELLOW = 3;
-	this.MAGENTA = 2;
-	this.CYAN = 1;
-	this.GREY = 0;
-	this._health = 2;
-	flixel.FlxSprite.call(this,X,Y);
-	this._startx = X;
-	this._starty = Y;
-	this._player = ThePlayer;
-	this._health = Health;
-	this._drops = DropsGrp;
-};
-$hxClasses["enemies.EnemyTemplate"] = enemies.EnemyTemplate;
-enemies.EnemyTemplate.__name__ = ["enemies","EnemyTemplate"];
-enemies.EnemyTemplate.__super__ = flixel.FlxSprite;
-enemies.EnemyTemplate.prototype = $extend(flixel.FlxSprite.prototype,{
-	_startx: null
-	,_starty: null
-	,_player: null
-	,_health: null
-	,_drops: null
-	,GREY: null
-	,CYAN: null
-	,MAGENTA: null
-	,YELLOW: null
-	,takeDamage: function(damage) {
-		this._health -= damage;
-		if(this._health <= 0) this.kill();
-	}
-	,kill: function() {
-		var dropChance = flixel.util.FlxRandom.intRanged(0,1);
-		var dropChance1 = 1;
-		var dropID = flixel.util.FlxRandom.intRanged(0,3) * 2;
-		var newDrop = new Drops(this.x,this.y,dropID,this._player,true);
-		this._drops.add(newDrop);
-		this.set_alive(false);
-		flixel.tweens.FlxTween.tween(this,{ alpha : 0, y : this.y - 16},.33,{ ease : flixel.tweens.FlxEase.circOut, complete : $bind(this,this.finishKill)});
-	}
-	,finishKill: function(_) {
-		this.set_exists(false);
-	}
-	,__class__: enemies.EnemyTemplate
-});
-var Testboss = function(X,Y,ThePlayer,DropsGrp,Bullets,Playstate) {
-	this._HP = 10;
-	this.BULLET_SPEED = 100;
-	this.GUN_DELAY = 1.5;
-	this.GRAVITY = 9800;
-	this.XSPEED = 0;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/mcbeck.png",true,34,32);
-	this.set_width(16);
-	this.set_height(16);
-	this.playstate = Playstate;
-};
-$hxClasses["Testboss"] = Testboss;
-Testboss.__name__ = ["Testboss"];
-Testboss.__super__ = enemies.EnemyTemplate;
-Testboss.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,GRAVITY: null
-	,GUN_DELAY: null
-	,BULLET_SPEED: null
-	,_HP: null
-	,_bullets: null
-	,_cooldown: null
-	,playstate: null
-	,finishKill: function(_) {
-		enemies.EnemyTemplate.prototype.finishKill.call(this,_);
-		this.playstate.gotoNextLevel();
-	}
-	,__class__: Testboss
-});
 var ValueType = $hxClasses["ValueType"] = { __ename__ : ["ValueType"], __constructs__ : ["TNull","TInt","TFloat","TBool","TObject","TFunction","TClass","TEnum","TUnknown"] };
 ValueType.TNull = ["TNull",0];
 ValueType.TNull.toString = $estr;
@@ -5529,681 +5390,6 @@ Xml.prototype = {
 	,__class__: Xml
 	,__properties__: {set_nodeValue:"set_nodeValue",get_nodeValue:"get_nodeValue",set_nodeName:"set_nodeName",get_nodeName:"get_nodeName"}
 };
-enemies.BabyBurd = function(X,Y,ThePlayer,DropsGrp) {
-	this._HP = 1;
-	this.YSPEED = 25;
-	this.XSPEED = 50;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.YSPEED = flixel.util.FlxRandom.intRanged(-10,10);
-	this.velocity.set_y(this.YSPEED);
-	this.loadGraphic("assets/images/burdsmall.png",true,8,8);
-	this.set_width(8);
-	this.set_height(8);
-	this.animation.add("flap",[0,1],10,true);
-	if(this._player.x < this.x) {
-		this.set_facing(16);
-		this.set_flipX(false);
-		this.velocity.set_x(-this.XSPEED);
-	} else if(this._player.x > this.x) {
-		this.set_facing(1);
-		this.set_flipX(true);
-		this.velocity.set_x(this.XSPEED);
-	}
-};
-$hxClasses["enemies.BabyBurd"] = enemies.BabyBurd;
-enemies.BabyBurd.__name__ = ["enemies","BabyBurd"];
-enemies.BabyBurd.__super__ = enemies.EnemyTemplate;
-enemies.BabyBurd.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,YSPEED: null
-	,_HP: null
-	,update: function() {
-		this.animation.play("flap");
-		enemies.EnemyTemplate.prototype.update.call(this);
-	}
-	,__class__: enemies.BabyBurd
-});
-enemies.Balun = function(X,Y,ThePlayer,DropsGrp,Enemies,Bullets,Color) {
-	this._cooldown = 0;
-	this.BULLET_SPEED = 100;
-	this.GUN_DELAY = 1.5;
-	this._HP = 20;
-	this.GRAVITY = 0;
-	this.XSPEED = 35;
-	this.colorString = "grey";
-	this.palette = 0;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.palette = Color;
-	this.tail = new enemies.BalunString(this.x,this.y + 16,ThePlayer,DropsGrp);
-	Enemies.add(this.tail);
-	this.loadGraphic("assets/images/balun.png",true,16,16);
-	this.set_width(16);
-	this.set_height(16);
-	this._bullets = Bullets;
-	var _g = this.palette;
-	switch(_g) {
-	case 0:
-		this.colorString = "grey";
-		break;
-	case 1:
-		this.colorString = "yellow";
-		break;
-	case 2:
-		this.colorString = "cyan";
-		break;
-	case 3:
-		this.colorString = "magenta";
-		break;
-	}
-	this.animation.add("grey",[0]);
-	this.animation.add("grey2",[1]);
-	this.animation.add("yellow",[2]);
-	this.animation.add("yellow2",[3]);
-	this.animation.add("cyan",[4]);
-	this.animation.add("cyan2",[5]);
-	this.animation.add("magenta",[6]);
-	this.animation.add("magenta2",[7]);
-};
-$hxClasses["enemies.Balun"] = enemies.Balun;
-enemies.Balun.__name__ = ["enemies","Balun"];
-enemies.Balun.__super__ = enemies.EnemyTemplate;
-enemies.Balun.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	palette: null
-	,colorString: null
-	,idealY: null
-	,XSPEED: null
-	,GRAVITY: null
-	,_HP: null
-	,GUN_DELAY: null
-	,BULLET_SPEED: null
-	,_bullets: null
-	,_cooldown: null
-	,tail: null
-	,update: function() {
-		if(this.isOnScreen()) {
-			if(flixel.FlxG.keys.checkKeyStatus(["C"],2)) {
-				this.palette += 1;
-				if(this.palette > 3) this.palette = 0;
-				var _g = this.palette;
-				switch(_g) {
-				case 0:
-					this.colorString = "grey";
-					break;
-				case 1:
-					this.colorString = "yellow";
-					break;
-				case 2:
-					this.colorString = "cyan";
-					break;
-				case 3:
-					this.colorString = "magenta";
-					break;
-				}
-			}
-			this.velocity.set_x(this.velocity.set_y(0));
-			var xdistance = this._player.x - this.x;
-			var ydistance = this._player.y - this.y;
-			var distancesquared = xdistance * xdistance + ydistance * ydistance;
-			this.acceleration.set_y(this.GRAVITY);
-			if(distancesquared < 24000) {
-				if(Math.floor(this._player.x) < this.x) {
-					this.set_facing(16);
-					this.set_flipX(false);
-					var _g1 = this.colorString;
-					switch(_g1) {
-					case "grey":
-						var _g11 = this;
-						_g11.set_x(_g11.x - 1);
-						this.tail._moving = 16;
-						break;
-					case "yellow":
-						var _g12 = this;
-						_g12.set_x(_g12.x - 1);
-						this.tail._moving = 16;
-						break;
-					case "cyan":
-						var _g13 = this;
-						_g13.set_x(_g13.x + 1);
-						this.tail._moving = 1;
-						this.shoot(this._player);
-						break;
-					case "magenta":
-						var _g14 = this;
-						_g14.set_x(_g14.x - 1);
-						this.tail._moving = 16;
-						this.shoot(this._player);
-						break;
-					}
-				} else if(Math.floor(this._player.x) > this.x) {
-					this.set_facing(1);
-					this.set_flipX(true);
-					var _g2 = this.colorString;
-					switch(_g2) {
-					case "grey":
-						var _g15 = this;
-						_g15.set_x(_g15.x + 1);
-						this.tail._moving = 1;
-						break;
-					case "yellow":
-						var _g16 = this;
-						_g16.set_x(_g16.x + 1);
-						this.tail._moving = 1;
-						break;
-					case "cyan":
-						var _g17 = this;
-						_g17.set_x(_g17.x - 1);
-						this.tail._moving = 16;
-						this.shoot(this._player);
-						break;
-					case "magenta":
-						var _g18 = this;
-						_g18.set_x(_g18.x + 1);
-						this.tail._moving = 1;
-						break;
-					}
-				} else this.tail._moving = 0;
-				this.idealY = this._player.y - 8;
-				if(this.colorString == "magenta") this.idealY = this._player.y - 40;
-				if(this.y > this.idealY) {
-					var _g3 = this;
-					_g3.set_y(_g3.y - 1);
-				} else if(this.y < this.idealY) {
-					var _g4 = this;
-					_g4.set_y(_g4.y + 1);
-				}
-			}
-			this.resolveAnims();
-			this._cooldown += flixel.FlxG.elapsed;
-			if(this.tail.alive) {
-				this.tail.set_x(this.x);
-				this.tail.set_y(this.y + 16);
-			}
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,shoot: function(P) {
-		var bulletX = Math.floor(this.x);
-		var bulletY = Math.floor(this.y + 4);
-		if(this._cooldown > this.GUN_DELAY) {
-			if(this.colorString == "cyan") {
-				if(P.x < this.x) {
-					var bullet = new weapons.Bullet(this.x + 8,this.y + 8,500,1,1,256);
-					this._bullets.add(bullet);
-				} else {
-					var bullet1 = new weapons.Bullet(this.x + 8,this.y + 8,500,16,1,256);
-					this._bullets.add(bullet1);
-				}
-			} else if(this.colorString == "magenta") {
-				var bullet2 = new weapons.Bullet(this.x + 8,this.y + 8,500,4096,1,256);
-				this._bullets.add(bullet2);
-			}
-			this._cooldown = 0;
-		}
-	}
-	,resolveAnims: function() {
-		if(this.velocity.x == 0 && this.velocity.y == 0) this.animation.play(this.colorString); else this.animation.play(this.colorString + "2");
-	}
-	,kill: function() {
-		this.tail.set_alive(false);
-		this.tail.set_exists(false);
-		enemies.EnemyTemplate.prototype.kill.call(this);
-	}
-	,__class__: enemies.Balun
-});
-enemies.BalunString = function(X,Y,ThePlayer,DropsGrp) {
-	if(Y == null) Y = 0;
-	if(X == null) X = 0;
-	this._HP = 9999;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/balun.png",true,16,16);
-	this.set_width(0);
-	this.set_height(0);
-	this._moving = 0;
-	this.animation.add("idle",[8,9],3,true);
-	this.animation.add("left",[10,11],6,true);
-	this.animation.add("right",[12,13],6,true);
-};
-$hxClasses["enemies.BalunString"] = enemies.BalunString;
-enemies.BalunString.__name__ = ["enemies","BalunString"];
-enemies.BalunString.__super__ = enemies.EnemyTemplate;
-enemies.BalunString.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	_moving: null
-	,_HP: null
-	,update: function() {
-		if(this.alive == true) {
-			if(this._moving == 0) this.animation.play("idle"); else if(this._moving == 1) this.animation.play("left"); else if(this._moving == 16) this.animation.play("right");
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,__class__: enemies.BalunString
-});
-enemies.Burd = function(X,Y,ThePlayer,DropsGrp,Enemies) {
-	this.haveEgg = false;
-	this._HP = 1;
-	this.GRAVITY = 9800;
-	this.XSPEED = -75;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/burd.png",true,16,16);
-	this.set_width(16);
-	this.set_height(16);
-	this.animation.add("flap",[0,1],5,true);
-	this.egg = new enemies.Egg(this.x,this.y + this.get_height(),ThePlayer,this._drops,this.XSPEED,Enemies);
-	Enemies.add(this.egg);
-	this.haveEgg = true;
-};
-$hxClasses["enemies.Burd"] = enemies.Burd;
-enemies.Burd.__name__ = ["enemies","Burd"];
-enemies.Burd.__super__ = enemies.EnemyTemplate;
-enemies.Burd.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,GRAVITY: null
-	,_HP: null
-	,haveEgg: null
-	,egg: null
-	,update: function() {
-		if(this.isOnScreen()) {
-			this.velocity.set_x(this.XSPEED);
-			this.velocity.set_y(0);
-			this.animation.play("flap");
-			var xdistance = this._player.x - this.x;
-			var ydistance = this._player.y - this.y;
-			var distancesquared = xdistance * xdistance + ydistance * ydistance;
-			if(distancesquared < 24000 && this.haveEgg) this.dropEgg();
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,dropEgg: function() {
-		this.haveEgg = false;
-		this.egg.dropped();
-	}
-	,__class__: enemies.Burd
-});
-enemies.Egg = function(X,Y,ThePlayer,DropsGrp,XVel,Enemies) {
-	if(Y == null) Y = 0;
-	if(X == null) X = 0;
-	this._cracked = false;
-	this._HP = 1;
-	this.GRAVITY = 9800;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.XSPEED = XVel;
-	this.loadGraphic("assets/images/burdegg.png",true,16,8);
-	this.set_width(16);
-	this.set_height(8);
-	this.enemArray = Enemies;
-	this.burdArray = new flixel.group.FlxTypedGroup();
-	this.animation.add("idle",[0]);
-	this.animation.add("open",[1]);
-};
-$hxClasses["enemies.Egg"] = enemies.Egg;
-enemies.Egg.__name__ = ["enemies","Egg"];
-enemies.Egg.__super__ = enemies.EnemyTemplate;
-enemies.Egg.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,GRAVITY: null
-	,_HP: null
-	,_cracked: null
-	,babby: null
-	,babby2: null
-	,babby3: null
-	,babby4: null
-	,burdArray: null
-	,enemArray: null
-	,update: function() {
-		if(this.isOnScreen()) {
-			this.velocity.set_x(this.XSPEED);
-			this.velocity.set_y(0);
-			if(this._cracked == false) this.animation.play("idle"); else this.animation.play("open");
-			if((this.touching & 4096) > 0) {
-				this.spawnBirds();
-				this._cracked = true;
-				this.animation.play("open");
-				this.kill();
-			}
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,dropped: function() {
-		this.acceleration.set_y(this.GRAVITY);
-	}
-	,spawnBirds: function() {
-		this.babby = new enemies.BabyBurd(this.x,this.y,this._player,this._drops);
-		this.babby2 = new enemies.BabyBurd(this.x,this.y - 10,this._player,this._drops);
-		this.babby3 = new enemies.BabyBurd(this.x + 10,this.y - 10 + this.get_height(),this._player,this._drops);
-		this.babby4 = new enemies.BabyBurd(this.x - 10,this.y - 10 + this.get_height(),this._player,this._drops);
-		this.burdArray.add(this.babby);
-		this.burdArray.add(this.babby2);
-		this.burdArray.add(this.babby3);
-		this.burdArray.add(this.babby4);
-		this.enemArray.add(this.burdArray);
-	}
-	,__class__: enemies.Egg
-});
-enemies.Metool = function(X,Y,ThePlayer,DropsGrp,Bullets) {
-	this._HP = 2;
-	this.BULLET_SPEED = 100;
-	this.GUN_DELAY = 1.5;
-	this.GRAVITY = 9800;
-	this.XSPEED = 0;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/metool.png",true,16,16);
-	this.set_width(16);
-	this.set_height(16);
-	this._bullets = Bullets;
-	this._cooldown = 0;
-	this.animation.add("hide",[0]);
-	this.animation.add("open",[1]);
-};
-$hxClasses["enemies.Metool"] = enemies.Metool;
-enemies.Metool.__name__ = ["enemies","Metool"];
-enemies.Metool.__super__ = enemies.EnemyTemplate;
-enemies.Metool.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,GRAVITY: null
-	,GUN_DELAY: null
-	,BULLET_SPEED: null
-	,_HP: null
-	,_bullets: null
-	,_cooldown: null
-	,update: function() {
-		if(this.isOnScreen()) {
-			this.velocity.set_x(this.velocity.set_y(0));
-			var xdistance = this._player.x - this.x;
-			var ydistance = this._player.y - this.y;
-			var distancesquared = xdistance * xdistance + ydistance * ydistance;
-			this.acceleration.set_y(this.GRAVITY);
-			if(distancesquared < 16000) {
-				if(this._player.x < this.x) {
-					this.set_facing(16);
-					this.set_flipX(false);
-					this.velocity.set_x(-this.XSPEED);
-				} else if(this._player.x > this.x) {
-					this.set_facing(1);
-					this.set_flipX(true);
-					this.velocity.set_x(this.XSPEED);
-				}
-				if(this._player.facing == 16) this.animation.play("hide"); else this.animation.play("open");
-			} else {
-				this.animation.play("open");
-				this.shoot(this._player);
-			}
-			this._cooldown += flixel.FlxG.elapsed;
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,shoot: function(P) {
-		var bulletX = Math.floor(this.x);
-		var bulletY = Math.floor(this.y + 4);
-		if(this._cooldown > this.GUN_DELAY) {
-			var bullet = new weapons.Bullet(this.x - 8,this.y + 8,500,1,1,256);
-			this._bullets.add(bullet);
-			this._cooldown = 0;
-		}
-	}
-	,takeDamage: function(damage) {
-		if(this.animation.get_name() == "open") {
-			this._health -= damage;
-			if(this._health <= 0) this.kill();
-		}
-	}
-	,__class__: enemies.Metool
-});
-enemies.Mush = function(X,Y,ThePlayer,DropsGrp,Bullets,Palette) {
-	this.sporeSpeed = 40;
-	this.palette = 0;
-	this.postShotTimer = 0;
-	this.rangeX = 64;
-	this._HP = 2;
-	this.BULLET_SPEED = 100;
-	this.GUN_DELAY = 3;
-	this.GRAVITY = 9800;
-	this.XSPEED = -30;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/mush.png",true,16,16);
-	this.set_width(16);
-	this.set_height(16);
-	this.palette = Palette;
-	this.ogX = X;
-	this._bullets = Bullets;
-	this._cooldown = 0;
-	this.set_facing(1);
-	this.set_flipX(true);
-	this.animation.add("walk0",[1,0,1,2],3,true);
-	this.animation.add("walk1",[5,4,5,6],3,true);
-	this.animation.add("walk2",[9,8,9,10],3,true);
-	this.animation.add("walk3",[13,12,13,14],3,true);
-	this.animation.add("spore0",[1,3,3,3,3],6,false);
-	this.animation.add("spore1",[5,7,7,7,7],6,false);
-	this.animation.add("spore2",[9,11,11,11,11],6,false);
-	this.animation.add("spore3",[13,15,15,15,15],6,false);
-};
-$hxClasses["enemies.Mush"] = enemies.Mush;
-enemies.Mush.__name__ = ["enemies","Mush"];
-enemies.Mush.__super__ = enemies.EnemyTemplate;
-enemies.Mush.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,GRAVITY: null
-	,GUN_DELAY: null
-	,BULLET_SPEED: null
-	,_HP: null
-	,_bullets: null
-	,_cooldown: null
-	,rangeX: null
-	,ogX: null
-	,postShotTimer: null
-	,palette: null
-	,sporeSpeed: null
-	,update: function() {
-		if(this.isOnScreen()) {
-			if(this.postShotTimer <= 0) {
-				this.velocity.set_x(this.XSPEED);
-				this.animation.play("walk" + this.palette);
-				if((this.touching & 17) > 0 || Math.abs(this.ogX - this.x) >= this.rangeX) this.turnAround();
-			}
-			this.shoot();
-			this.changeColor();
-			if(this.palette == 3) this.GUN_DELAY = .67; else this.GUN_DELAY = 3;
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,changeColor: function() {
-		if(flixel.FlxG.keys.checkKeyStatus(["C"],2)) {
-			this.palette += 1;
-			if(this.palette > 3) this.palette = 0;
-		}
-	}
-	,shoot: function() {
-		if(this._cooldown > this.GUN_DELAY) {
-			var _g = this.palette;
-			switch(_g) {
-			case 0:
-				this.velocity.set_x(0);
-				this.animation.play("spore" + this.palette);
-				var bullet = new weapons.Spore(this.x,this.y + 8,this.sporeSpeed,256,1,256,0);
-				this._bullets.add(bullet);
-				break;
-			case 1:
-				this.velocity.set_x(0);
-				this.animation.play("spore" + this.palette);
-				var bullet1 = new weapons.Spore(this.x,this.y,this.sporeSpeed * 0.5,256 + this.facing,1,256,1);
-				var bullet2 = new weapons.Spore(this.x,this.y,this.sporeSpeed * 0.75,256 + this.facing,1,256,1);
-				var bullet3 = new weapons.Spore(this.x,this.y,this.sporeSpeed,256 + this.facing,1,256,1);
-				this._bullets.add(bullet1);
-				this._bullets.add(bullet2);
-				this._bullets.add(bullet3);
-				break;
-			case 2:
-				this.velocity.set_x(0);
-				this.animation.play("spore" + this.palette);
-				var bullet4 = new weapons.Spore(this.x,this.y,this.sporeSpeed,257,1,256,2);
-				var bullet21 = new weapons.Spore(this.x,this.y,this.sporeSpeed,272,1,256,2);
-				var bullet31 = new weapons.Spore(this.x,this.y + 8,this.sporeSpeed,256,1,256,2);
-				this._bullets.add(bullet4);
-				this._bullets.add(bullet21);
-				this._bullets.add(bullet31);
-				break;
-			case 3:
-				var direction;
-				if(this.facing == 16) direction = 1; else direction = 16;
-				var bullet5 = new weapons.Spore(this.x - 8,this.y,this.sporeSpeed,256 + direction,1,256,3);
-				this._bullets.add(bullet5);
-				break;
-			}
-			this._cooldown = 0;
-			if(this.palette != 3) this.postShotTimer = .67;
-		}
-		this._cooldown += flixel.FlxG.elapsed;
-		this.postShotTimer -= flixel.FlxG.elapsed;
-	}
-	,turnAround: function() {
-		this.XSPEED = -this.XSPEED;
-		if(this.facing == 16) {
-			this.set_facing(1);
-			this.set_flipX(true);
-			var _g = this;
-			_g.set_x(_g.x - 2);
-		} else {
-			this.set_facing(16);
-			this.set_flipX(false);
-			var _g1 = this;
-			_g1.set_x(_g1.x + 2);
-		}
-		return;
-	}
-	,__class__: enemies.Mush
-});
-enemies.Notey = function(X,Y,ThePlayer,DropsGrp) {
-	this._HP = 1;
-	this.GRAVITY = 9800;
-	this.XSPEED = -75;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/notey.png",true,16,16);
-	this.set_width(16);
-	this.set_height(16);
-	this.set_facing(16);
-	this.set_flipX(true);
-	this.animation.add("walk",[0,1,0,2],3,true);
-};
-$hxClasses["enemies.Notey"] = enemies.Notey;
-enemies.Notey.__name__ = ["enemies","Notey"];
-enemies.Notey.__super__ = enemies.EnemyTemplate;
-enemies.Notey.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,GRAVITY: null
-	,_HP: null
-	,update: function() {
-		if(this.isOnScreen()) {
-			this.velocity.set_x(this.XSPEED);
-			this.animation.play("walk");
-			this.acceleration.set_y(this.GRAVITY);
-			if((this.touching & 17) > 0) this.turnAround();
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,turnAround: function() {
-		this.XSPEED = -this.XSPEED;
-		if(this.facing == 1) {
-			this.set_facing(16);
-			this.set_flipX(true);
-			var _g = this;
-			_g.set_x(_g.x - 2);
-		} else {
-			this.set_facing(1);
-			this.set_flipX(false);
-			var _g1 = this;
-			_g1.set_x(_g1.x + 2);
-		}
-		return;
-	}
-	,__class__: enemies.Notey
-});
-enemies.Snaake = function(X,Y,ThePlayer,DropsGrp) {
-	this._HP = 1;
-	this.GRAVITY = 9800;
-	this.XSPEED2 = 100;
-	this.XSPEED = 50;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/crawler.png",true,16,8);
-	this.set_width(16);
-	this.set_height(8);
-	this.set_facing(1);
-	this.animation.add("walk",[0,1],8,true);
-};
-$hxClasses["enemies.Snaake"] = enemies.Snaake;
-enemies.Snaake.__name__ = ["enemies","Snaake"];
-enemies.Snaake.__super__ = enemies.EnemyTemplate;
-enemies.Snaake.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,XSPEED2: null
-	,GRAVITY: null
-	,_HP: null
-	,update: function() {
-		if(this.isOnScreen()) {
-			this.velocity.set_x(this.XSPEED);
-			this.animation.play("walk");
-			this.acceleration.set_y(this.GRAVITY);
-			if((this.touching & 17) > 0) this.turnAround();
-			if(this._player.y + this._player.get_height() == this.y + this.get_height()) this.XSPEED = 150; else this.XSPEED = 50;
-			if(this.flipX == true) this.XSPEED *= -1;
-			enemies.EnemyTemplate.prototype.update.call(this);
-		}
-	}
-	,turnAround: function() {
-		this.XSPEED = -this.XSPEED;
-		if(this.facing == 16) {
-			this.set_facing(1);
-			this.set_flipX(true);
-			var _g = this;
-			_g.set_x(_g.x + this.XSPEED / 25);
-		} else {
-			this.set_facing(16);
-			this.set_flipX(false);
-			var _g1 = this;
-			_g1.set_x(_g1.x + this.XSPEED / 25);
-		}
-		return;
-	}
-	,__class__: enemies.Snaake
-});
-enemies.Snobal = function(X,Y,ThePlayer,DropsGrp) {
-	this._HP = 1;
-	this.GRAVITY = 9800;
-	this.XSPEED = 25;
-	enemies.EnemyTemplate.call(this,X,Y,ThePlayer,this._HP,DropsGrp);
-	this.loadGraphic("assets/images/snobal.png",true,16,16);
-	this.set_width(16);
-	this.set_height(16);
-	this.animation.add("idle",[0],10,true);
-	this.animation.add("roll",[0,1,2,3],15,true);
-};
-$hxClasses["enemies.Snobal"] = enemies.Snobal;
-enemies.Snobal.__name__ = ["enemies","Snobal"];
-enemies.Snobal.__super__ = enemies.EnemyTemplate;
-enemies.Snobal.prototype = $extend(enemies.EnemyTemplate.prototype,{
-	XSPEED: null
-	,GRAVITY: null
-	,_HP: null
-	,update: function() {
-		this.velocity.set_x(this.velocity.set_y(0));
-		var xdistance = this._player.x - this.x;
-		var ydistance = this._player.y - this.y;
-		var distancesquared = xdistance * xdistance + ydistance * ydistance;
-		this.acceleration.set_y(this.GRAVITY);
-		if(distancesquared < 32000) {
-			if(this._player.x < this.x) {
-				this.set_facing(16);
-				this.set_flipX(false);
-				this.velocity.set_x(-this.XSPEED);
-			} else if(this._player.x > this.x) {
-				this.set_facing(1);
-				this.set_flipX(true);
-				this.velocity.set_x(this.XSPEED);
-			}
-		}
-		if(this.velocity.x == 0 && this.velocity.y == 0) this.animation.play("idle"); else this.animation.play("roll");
-		enemies.EnemyTemplate.prototype.update.call(this);
-	}
-	,__class__: enemies.Snobal
-});
 flixel.FlxCamera = function(X,Y,Width,Height,Zoom) {
 	if(Zoom == null) Zoom = 0;
 	if(Height == null) Height = 0;
@@ -7051,22 +6237,13 @@ flixel.system.frontEnds.BitmapLogFrontEnd.__name__ = ["flixel","system","frontEn
 flixel.system.frontEnds.BitmapLogFrontEnd.prototype = {
 	add: function(Data,Name) {
 		if(Name == null) Name = "";
-		flixel.FlxG.game["debugger"].bitmapLog.add(Data,Name);
 	}
 	,clear: function() {
-		flixel.FlxG.game["debugger"].bitmapLog.clear();
 	}
 	,clearAt: function(Index) {
 		if(Index == null) Index = -1;
-		flixel.FlxG.game["debugger"].bitmapLog.clearAt(Index);
 	}
 	,viewCache: function() {
-		flixel.FlxG.game["debugger"].bitmapLog.clear();
-		var $it0 = flixel.FlxG.bitmap._cache.iterator();
-		while( $it0.hasNext() ) {
-			var cachedGraphic = $it0.next();
-			flixel.FlxG.game["debugger"].bitmapLog.add(cachedGraphic.bitmap,cachedGraphic.key);
-		}
 	}
 	,__class__: flixel.system.frontEnds.BitmapLogFrontEnd
 };
@@ -7094,7 +6271,7 @@ flixel.system.frontEnds.CameraFrontEnd.prototype = {
 		if(Camera != null && index != -1) {
 			flixel.FlxG.game.removeChild(Camera.flashSprite);
 			this.list.splice(index,1);
-		} else flixel.FlxG.log.advanced("FlxG.cameras.remove(): The camera you attemped to remove is not a part of the game.",flixel.system.debug.LogStyle.WARNING,true);
+		} else null;
 		if(Destroy) Camera.destroy();
 	}
 	,reset: function(NewCamera) {
@@ -7439,15 +6616,12 @@ flixel.system.frontEnds.ConsoleFrontEnd.__name__ = ["flixel","system","frontEnds
 flixel.system.frontEnds.ConsoleFrontEnd.prototype = {
 	autoPause: null
 	,registerFunction: function(FunctionAlias,Function) {
-		flixel.FlxG.game["debugger"].console.registerFunction(FunctionAlias,Function);
 	}
 	,registerObject: function(ObjectAlias,AnyObject) {
-		flixel.FlxG.game["debugger"].console.registerObject(ObjectAlias,AnyObject);
 	}
 	,addCommand: function(Aliases,ProcessFunction,Help,ParamHelp,NumParams,ParamCutoff) {
 		if(ParamCutoff == null) ParamCutoff = -1;
 		if(NumParams == null) NumParams = 0;
-		flixel.FlxG.game["debugger"].console.commands.push({ aliases : Aliases, processFunction : ProcessFunction, help : Help, paramHelp : ParamHelp, numParams : NumParams, paramCutoff : ParamCutoff});
 	}
 	,__class__: flixel.system.frontEnds.ConsoleFrontEnd
 };
@@ -7467,55 +6641,26 @@ flixel.system.frontEnds.DebuggerFrontEnd.prototype = {
 	,drawDebugChanged: null
 	,visible: null
 	,setLayout: function(Layout) {
-		flixel.FlxG.game["debugger"].setLayout(Layout);
 	}
 	,resetLayout: function() {
-		flixel.FlxG.game["debugger"].resetLayout();
 	}
 	,addButton: function(Alignment,Icon,UpHandler,ToggleMode,UpdateLayout) {
 		if(UpdateLayout == null) UpdateLayout = true;
 		if(ToggleMode == null) ToggleMode = false;
-		return flixel.FlxG.game["debugger"].addButton(Alignment,Icon,UpHandler,ToggleMode,UpdateLayout);
+		return null;
 	}
 	,track: function(Object,WindowTitle) {
-		if((function($this) {
-			var $r;
-			var x = Object;
-			$r = HxOverrides.indexOf(flixel.system.debug.Tracker.objectsBeingTracked,x,0);
-			return $r;
-		}(this)) == -1) {
-			var profile = flixel.system.debug.Tracker.findProfile(Object);
-			if(profile == null) {
-				flixel.FlxG.log.error("FlxG.debugger.track(): Could not find a tracking profile for this object of class '" + (function($this) {
-					var $r;
-					var cl;
-					if(js.Boot.__instanceof(Object,Class)) cl = Object; else cl = Type.getClass(Object);
-					var s = Type.getClassName(cl);
-					if(s != null) {
-						s = StringTools.replace(s,"::",".");
-						var pos = s.lastIndexOf(".") + 1;
-						s = HxOverrides.substr(s,pos,null);
-					}
-					$r = s;
-					return $r;
-				}(this)) + "'.");
-				return null;
-			} else return flixel.FlxG.game["debugger"].addWindow(new flixel.system.debug.Tracker(profile,Object,WindowTitle));
-		} else return null;
+		return null;
 	}
 	,addTrackerProfile: function(Profile) {
-		if(Profile != null) flixel.system.debug.Tracker.profiles.push(Profile);
 	}
 	,removeButton: function(Button,UpdateLayout) {
 		if(UpdateLayout == null) UpdateLayout = true;
-		flixel.FlxG.game["debugger"].removeButton(Button,UpdateLayout);
 	}
 	,set_drawDebug: function(Value) {
-		if(Value != this.drawDebug) this.drawDebugChanged.dispatch();
 		return this.drawDebug = Value;
 	}
 	,set_visible: function(Value) {
-		flixel.FlxG.game["debugger"].set_visible(Value);
 		return this.visible = Value;
 	}
 	,__class__: flixel.system.frontEnds.DebuggerFrontEnd
@@ -7711,36 +6856,17 @@ flixel.system.frontEnds.LogFrontEnd.prototype = {
 	redirectTraces: null
 	,_standardTraceFunction: null
 	,add: function(Data) {
-		this.advanced(Data,flixel.system.debug.LogStyle.NORMAL);
 	}
 	,warn: function(Data) {
-		this.advanced(Data,flixel.system.debug.LogStyle.WARNING,true);
 	}
 	,error: function(Data) {
-		this.advanced(Data,flixel.system.debug.LogStyle.ERROR,true);
 	}
 	,notice: function(Data) {
-		this.advanced(Data,flixel.system.debug.LogStyle.NOTICE);
 	}
 	,advanced: function(Data,Style,FireOnce) {
 		if(FireOnce == null) FireOnce = false;
-		if(flixel.FlxG.game["debugger"] == null) {
-			this._standardTraceFunction(Data);
-			return;
-		}
-		if(Style == null) Style = flixel.system.debug.LogStyle.NORMAL;
-		if(!((Data instanceof Array) && Data.__enum__ == null)) Data = [Data];
-		if(flixel.FlxG.game["debugger"].log.add(Data,Style,FireOnce)) {
-			if(Style.errorSound != null) flixel.FlxG.sound.load(flixel.system.FlxAssets.getSound(Style.errorSound).play());
-			if(Style.openConsole) {
-				flixel.FlxG.game["debugger"].set_visible(true);
-				flixel.FlxG["debugger"].visible = true;
-			}
-			if(Style.callbackFunction = null) Style.callbackFunction();
-		}
 	}
 	,clear: function() {
-		flixel.FlxG.game["debugger"].log.clear();
 	}
 	,set_redirectTraces: function(Redirect) {
 		if(Redirect) haxe.Log.trace = $bind(this,this.processTraceData); else haxe.Log.trace = this._standardTraceFunction;
@@ -8059,10 +7185,6 @@ flixel.util.FlxPath = function(Object,Nodes,Speed,Mode,AutoRotate) {
 	this._inc = 1;
 	this._nodeIndex = 0;
 	this.finished = false;
-	this.ignoreDrawDebug = false;
-	this.debugScrollY = 1.0;
-	this.debugScrollX = 1.0;
-	this.debugColor = 16777215;
 	this.active = true;
 	this.autoCenter = true;
 	this.angle = 0;
@@ -8081,10 +7203,6 @@ flixel.util.FlxPath.prototype = {
 	,autoCenter: null
 	,active: null
 	,onComplete: null
-	,debugColor: null
-	,debugScrollX: null
-	,debugScrollY: null
-	,ignoreDrawDebug: null
 	,finished: null
 	,_nodeIndex: null
 	,_mode: null
@@ -8092,10 +7210,6 @@ flixel.util.FlxPath.prototype = {
 	,_autoRotate: null
 	,_inManager: null
 	,reset: function() {
-		this.debugScrollX = 1.0;
-		this.debugScrollY = 1.0;
-		this.debugColor = 16777215;
-		this.ignoreDrawDebug = false;
 		this.autoCenter = true;
 		return this;
 	}
@@ -8308,40 +7422,6 @@ flixel.util.FlxPath.prototype = {
 		if(this.nodes.length > 0) return this.nodes[this.nodes.length - 1];
 		return null;
 	}
-	,drawDebug: function(Camera) {
-		if(this.nodes == null || this.nodes.length <= 0) return;
-		if(Camera == null) Camera = flixel.FlxG.camera;
-		var gfx = flixel.util.FlxSpriteUtil.flashGfx;
-		gfx.clear();
-		var node;
-		var nextNode;
-		var i = 0;
-		var l = this.nodes.length;
-		while(i < l) {
-			node = this.nodes[i];
-			flixel.util.FlxPath._point.set_x(node.x - Camera.scroll.x * this.debugScrollX);
-			flixel.util.FlxPath._point.set_y(node.y - Camera.scroll.y * this.debugScrollY);
-			var nodeSize = 2;
-			if(i == 0 || i == l - 1) nodeSize *= 2;
-			var nodeColor = this.debugColor;
-			if(l > 1) {
-				if(i == 0) nodeColor = -16744448; else if(i == l - 1) nodeColor = -65536;
-			}
-			gfx.beginFill(nodeColor,0.5);
-			gfx.lineStyle();
-			gfx.drawRect(flixel.util.FlxPath._point.x - nodeSize * 0.5,flixel.util.FlxPath._point.y - nodeSize * 0.5,nodeSize,nodeSize);
-			gfx.endFill();
-			var linealpha = 0.3;
-			if(i < l - 1) nextNode = this.nodes[i + 1]; else nextNode = this.nodes[i];
-			gfx.moveTo(flixel.util.FlxPath._point.x,flixel.util.FlxPath._point.y);
-			gfx.lineStyle(1,this.debugColor,linealpha);
-			flixel.util.FlxPath._point.set_x(nextNode.x - Camera.scroll.x * this.debugScrollX);
-			flixel.util.FlxPath._point.set_y(nextNode.y - Camera.scroll.y * this.debugScrollY);
-			gfx.lineTo(flixel.util.FlxPath._point.x,flixel.util.FlxPath._point.y);
-			i++;
-		}
-		Camera.buffer.draw(flixel.util.FlxSpriteUtil.flashGfxSprite);
-	}
 	,__class__: flixel.util.FlxPath
 };
 flixel.plugin = {};
@@ -8361,7 +7441,6 @@ flixel.plugin.FlxPlugin.prototype = $extend(flixel.FlxBasic.prototype,{
 flixel.plugin.PathManager = function() {
 	this._paths = [];
 	flixel.plugin.FlxPlugin.call(this);
-	this.set_visible(false);
 };
 $hxClasses["flixel.plugin.PathManager"] = flixel.plugin.PathManager;
 flixel.plugin.PathManager.__name__ = ["flixel","plugin","PathManager"];
@@ -8380,18 +7459,6 @@ flixel.plugin.PathManager.prototype = $extend(flixel.plugin.FlxPlugin.prototype,
 			var path = _g1[_g];
 			++_g;
 			if(path.active) path.update();
-		}
-	}
-	,draw: function() {
-		flixel.plugin.FlxPlugin.prototype.draw.call(this);
-		if(flixel.FlxG["debugger"].drawDebug) {
-			var _g = 0;
-			var _g1 = this._paths;
-			while(_g < _g1.length) {
-				var path = _g1[_g];
-				++_g;
-				if(path != null && !path.ignoreDrawDebug) path.drawDebug();
-			}
 		}
 	}
 	,add: function(Path) {
@@ -8894,7 +7961,6 @@ flixel.util.FlxSave.prototype = {
 			this._sharedObject = openfl.net.SharedObject.getLocal(this.name);
 		} catch( e ) {
 			if( js.Boot.__instanceof(e,openfl.errors.Error) ) {
-				flixel.FlxG.log.advanced("There was a problem binding to\nthe shared object data from FlxSave.",flixel.system.debug.LogStyle.ERROR,true);
 				this.destroy();
 				return false;
 			} else throw(e);
@@ -8932,10 +7998,10 @@ flixel.util.FlxSave.prototype = {
 	,onDone: function(Result) {
 		switch(Result) {
 		case flixel.util.FlxSave.PENDING:
-			flixel.FlxG.log.advanced("FlxSave is requesting extra storage space.",flixel.system.debug.LogStyle.WARNING,true);
+			null;
 			break;
 		case flixel.util.FlxSave.ERROR:
-			flixel.FlxG.log.advanced("There was a problem flushing\nthe shared object data from FlxSave.",flixel.system.debug.LogStyle.ERROR,true);
+			null;
 			break;
 		}
 		if(this._onComplete != null) this._onComplete(Result == flixel.util.FlxSave.SUCCESS);
@@ -8943,10 +8009,7 @@ flixel.util.FlxSave.prototype = {
 		return Result == flixel.util.FlxSave.SUCCESS;
 	}
 	,checkBinding: function() {
-		if(this._sharedObject == null) {
-			flixel.FlxG.log.advanced("You must call FlxSave.bind()\nbefore you can read or write data.",flixel.system.debug.LogStyle.WARNING,true);
-			return false;
-		}
+		if(this._sharedObject == null) return false;
 		return true;
 	}
 	,__class__: flixel.util.FlxSave
@@ -9015,10 +8078,7 @@ flixel.system.frontEnds.SoundFrontEnd.prototype = {
 		if(AutoDestroy == null) AutoDestroy = false;
 		if(Looped == null) Looped = false;
 		if(Volume == null) Volume = 1;
-		if(EmbeddedSound == null && URL == null) {
-			flixel.FlxG.log.warn("FlxG.loadSound() requires either\nan embedded sound or a URL to work.");
-			return null;
-		}
+		if(EmbeddedSound == null && URL == null) return null;
 		var sound = this.list.recycle(flixel.system.FlxSound);
 		if(EmbeddedSound != null) sound.loadEmbedded(EmbeddedSound,Looped,AutoDestroy,OnComplete); else sound.loadStream(URL,Looped,AutoDestroy,OnComplete);
 		sound.set_volume(Volume);
@@ -9138,14 +8198,12 @@ flixel.system.frontEnds.VCRFrontEnd.prototype = {
 		if(!this.paused) {
 			if(!flixel.FlxG.mouse.useSystemCursor) openfl.ui.Mouse.show();
 			this.paused = true;
-			flixel.FlxG.game["debugger"].vcr.onPause();
 		}
 	}
 	,resume: function() {
 		if(this.paused) {
 			if(!flixel.FlxG.mouse.useSystemCursor) openfl.ui.Mouse.hide();
 			this.paused = false;
-			flixel.FlxG.game["debugger"].vcr.onResume();
 		}
 	}
 	,__class__: flixel.system.frontEnds.VCRFrontEnd
@@ -9156,22 +8214,16 @@ $hxClasses["flixel.system.frontEnds.WatchFrontEnd"] = flixel.system.frontEnds.Wa
 flixel.system.frontEnds.WatchFrontEnd.__name__ = ["flixel","system","frontEnds","WatchFrontEnd"];
 flixel.system.frontEnds.WatchFrontEnd.prototype = {
 	add: function(AnyObject,VariableName,DisplayName) {
-		flixel.FlxG.game["debugger"].watch.add(AnyObject,VariableName,DisplayName);
 	}
 	,remove: function(AnyObject,VariableName) {
-		flixel.FlxG.game["debugger"].watch.remove(AnyObject,VariableName);
 	}
 	,addQuick: function(Name,NewValue) {
-		flixel.FlxG.game["debugger"].watch.updateQuickWatch(Name,NewValue);
 	}
 	,removeQuick: function(Name) {
-		flixel.FlxG.game["debugger"].watch.remove(null,null,Name);
 	}
 	,addMouse: function() {
-		flixel.FlxG.game["debugger"].watch.add(flixel.FlxG,"mouse","Mouse Position");
 	}
 	,removeMouse: function() {
-		flixel.FlxG.game["debugger"].watch.remove(flixel.FlxG,"mouse");
 	}
 	,__class__: flixel.system.frontEnds.WatchFrontEnd
 };
@@ -9274,14 +8326,14 @@ flixel.FlxG.get_updateFramerate = function() {
 	return 1000 / flixel.FlxG.game._stepMS | 0;
 };
 flixel.FlxG.set_updateFramerate = function(Framerate) {
-	if(Framerate < flixel.FlxG.drawFramerate) flixel.FlxG.log.advanced("FlxG.framerate: The game's framerate shouldn't be smaller than the flash framerate, since it can stop your game from updating.",flixel.system.debug.LogStyle.WARNING,true);
+	if(Framerate < flixel.FlxG.drawFramerate) null;
 	flixel.FlxG.game._stepMS = Std["int"](Math.abs(1000 / Framerate));
 	flixel.FlxG.game._stepSeconds = flixel.FlxG.game._stepMS / 1000;
 	if(flixel.FlxG.game._maxAccumulation < flixel.FlxG.game._stepMS) flixel.FlxG.game._maxAccumulation = flixel.FlxG.game._stepMS;
 	return Framerate;
 };
 flixel.FlxG.set_drawFramerate = function(Framerate) {
-	if(Framerate > (1000 / flixel.FlxG.game._stepMS | 0)) flixel.FlxG.log.advanced("FlxG.drawFramerate: The update framerate shouldn't be smaller than the draw framerate, since it can stop your game from updating.",flixel.system.debug.LogStyle.WARNING,true);
+	if(Framerate > (1000 / flixel.FlxG.game._stepMS | 0)) null;
 	flixel.FlxG.drawFramerate = Std["int"](Math.abs(Framerate));
 	if(flixel.FlxG.game.stage != null) flixel.FlxG.game.stage.set_frameRate(flixel.FlxG.drawFramerate);
 	flixel.FlxG.game._maxAccumulation = (2000 / flixel.FlxG.drawFramerate | 0) - 1;
@@ -9331,7 +8383,6 @@ flixel.FlxGame.__super__ = openfl.display.Sprite;
 flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 	focusLostFramerate: null
 	,soundTray: null
-	,'debugger': null
 	,ticks: null
 	,_gameJustStarted: null
 	,_initialState: null
@@ -9358,8 +8409,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 		this.stage.align = openfl.display.StageAlign.TOP_LEFT;
 		this.stage.set_frameRate(flixel.FlxG.drawFramerate);
 		this.addChild(this._inputContainer);
-		this["debugger"] = new flixel.system.debug.FlxDebugger(openfl.Lib.current.stage.stageWidth,openfl.Lib.current.stage.stageHeight);
-		this.addChild(this["debugger"]);
 		this.soundTray = Type.createInstance(this._customSoundTray,[]);
 		this.addChild(this.soundTray);
 		this._focusLostScreen = Type.createInstance(this._customFocusLostScreen,[]);
@@ -9367,7 +8416,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 		this.stage.addEventListener(openfl.events.Event.DEACTIVATE,$bind(this,this.onFocusLost));
 		this.stage.addEventListener(openfl.events.Event.ACTIVATE,$bind(this,this.onFocus));
 		flixel.FlxG.signals.gameReset.dispatch();
-		this._skipSplash = true;
 		if(this._skipSplash || flixel.system.FlxSplash.nextState != null) {
 			this._requestedState = Type.createInstance(this._initialState,[]);
 			if(flixel.system.FlxSplash.nextState == null) this._gameJustStarted = true;
@@ -9376,10 +8424,9 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 			this._requestedState = new flixel.system.FlxSplash();
 			this._skipSplash = true;
 		}
-		if(js.Boot.__instanceof(this._requestedState,flixel.FlxSubState)) throw "You can't set FlxSubState class instance as the state for you game";
 		flixel.FlxG.reset();
 		this.switchState();
-		if((1000 / flixel.FlxG.game._stepMS | 0) < flixel.FlxG.drawFramerate) flixel.FlxG.log.advanced("FlxG.updateFramerate: The update framerate shouldn't be smaller than the draw framerate, since it can slow down your game.",flixel.system.debug.LogStyle.WARNING,true);
+		if((1000 / flixel.FlxG.game._stepMS | 0) < flixel.FlxG.drawFramerate) null;
 		this.stage.addEventListener(openfl.events.Event.ENTER_FRAME,$bind(this,this.onEnterFrame));
 		this.stage.addEventListener(openfl.events.Event.RESIZE,$bind(this,this.onResize));
 		this.resizeGame(openfl.Lib.current.stage.stageWidth,openfl.Lib.current.stage.stageHeight);
@@ -9392,7 +8439,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 			return;
 		}
 		if(this._focusLostScreen != null) this._focusLostScreen.set_visible(false);
-		this["debugger"].stats.onFocus();
 		this.stage.set_frameRate(flixel.FlxG.drawFramerate);
 		flixel.FlxG.sound.onFocus();
 		flixel.FlxG.inputs.onFocus();
@@ -9405,7 +8451,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 			return;
 		}
 		if(this._focusLostScreen != null) this._focusLostScreen.set_visible(true);
-		this["debugger"].stats.onFocusLost();
 		this.stage.set_frameRate(this.focusLostFramerate);
 		flixel.FlxG.sound.onFocusLost();
 		flixel.FlxG.inputs.onFocusLost();
@@ -9420,7 +8465,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 	}
 	,resizeGame: function(width,height) {
 		flixel.FlxG._scaleMode.onMeasure(width,height);
-		this["debugger"].onResize(width,height);
 		if(this._focusLostScreen != null) this._focusLostScreen.draw();
 		if(this.soundTray != null) this.soundTray.screenCenter();
 		this._inputContainer.set_scaleX(1 / flixel.FlxG.game.get_scaleX());
@@ -9443,15 +8487,11 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 					this._accumulator = this._accumulator - this._stepMS;
 				}
 			} else this.step();
-			flixel.FlxBasic._VISIBLECOUNT = 0;
 			this.draw();
-			this["debugger"].stats.visibleObjects(flixel.FlxBasic._VISIBLECOUNT);
-			this["debugger"].update();
 		}
 	}
 	,resetGame: function() {
 		flixel.FlxG.signals.gameReset.dispatch();
-		this._skipSplash = true;
 		if(this._skipSplash || flixel.system.FlxSplash.nextState != null) {
 			this._requestedState = Type.createInstance(this._initialState,[]);
 			if(flixel.system.FlxSplash.nextState == null) this._gameJustStarted = true;
@@ -9460,7 +8500,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 			this._requestedState = new flixel.system.FlxSplash();
 			this._skipSplash = true;
 		}
-		if(js.Boot.__instanceof(this._requestedState,flixel.FlxSubState)) throw "You can't set FlxSubState class instance as the state for you game";
 		flixel.FlxG.reset();
 	}
 	,switchState: function() {
@@ -9475,7 +8514,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 		this._state = this._requestedState;
 		this._state.create();
 		if(this._gameJustStarted) this.gameStart();
-		this["debugger"].console.registerObject("state",this._state);
 	}
 	,gameStart: function() {
 		flixel.FlxG.signals.gameStarted.dispatch();
@@ -9484,7 +8522,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 	,step: function() {
 		if(this._resetGame) {
 			flixel.FlxG.signals.gameReset.dispatch();
-			this._skipSplash = true;
 			if(this._skipSplash || flixel.system.FlxSplash.nextState != null) {
 				this._requestedState = Type.createInstance(this._initialState,[]);
 				if(flixel.system.FlxSplash.nextState == null) this._gameJustStarted = true;
@@ -9493,18 +8530,14 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 				this._requestedState = new flixel.system.FlxSplash();
 				this._skipSplash = true;
 			}
-			if(js.Boot.__instanceof(this._requestedState,flixel.FlxSubState)) throw "You can't set FlxSubState class instance as the state for you game";
 			flixel.FlxG.reset();
 			this._resetGame = false;
 		}
-		flixel.FlxBasic._ACTIVECOUNT = 0;
 		this.update();
-		this["debugger"].stats.activeObjects(flixel.FlxBasic._ACTIVECOUNT);
 	}
 	,update: function() {
 		if(!this._state.active || !this._state.exists) return;
 		if(this._state != this._requestedState) this.switchState();
-		if(flixel.FlxG["debugger"].visible) this.ticks = openfl.Lib.getTimer();
 		flixel.FlxG.signals.preUpdate.dispatch();
 		if(flixel.FlxG.fixedTimestep) flixel.FlxG.elapsed = flixel.FlxG.timeScale * this._stepSeconds; else {
 			flixel.FlxG.elapsed = flixel.FlxG.timeScale * (this._elapsedMS / 1000);
@@ -9517,7 +8550,6 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 		this._state.tryUpdate();
 		flixel.FlxG.cameras.update();
 		flixel.FlxG.signals.postUpdate.dispatch();
-		this["debugger"].stats.flixelUpdate(openfl.Lib.getTimer() - this.ticks);
 		var _g = 0;
 		var _g1 = flixel.FlxG.swipes;
 		while(_g < _g1.length) {
@@ -9532,14 +8564,12 @@ flixel.FlxGame.prototype = $extend(openfl.display.Sprite.prototype,{
 	}
 	,draw: function() {
 		if(!this._state.visible || !this._state.exists) return;
-		if(flixel.FlxG["debugger"].visible) this.ticks = openfl.Lib.getTimer();
 		flixel.FlxG.signals.preDraw.dispatch();
 		flixel.FlxG.cameras.lock();
 		flixel.FlxG.plugins.draw();
 		this._state.draw();
 		flixel.FlxG.cameras.unlock();
 		flixel.FlxG.signals.postDraw.dispatch();
-		this["debugger"].stats.flixelDraw(openfl.Lib.getTimer() - this.ticks);
 	}
 	,__class__: flixel.FlxGame
 });
@@ -10186,7 +9216,9 @@ openfl.display.BitmapData.prototype = {
 				while(_g3 < _g2) {
 					var xx = _g3++;
 					position = (width_yy + xx) * 4;
-					pixelValue = openfl.Memory.getI32(position);
+					pixelValue = openfl.Memory._setPositionTemporarily(position,function() {
+						return openfl.Memory.gcRef.readInt();
+					});
 					pixelMask = pixelValue & mask;
 					i = openfl.display.BitmapData.__ucompare(pixelMask,thresholdMask);
 					test = false;
@@ -10248,7 +9280,9 @@ openfl.display.BitmapData.prototype = {
 				while(_g11 < dw) {
 					var xx1 = _g11++;
 					position1 = (xx1 + sx + (yy1 + sy) * sw) * 4;
-					pixelValue1 = openfl.Memory.getI32(canvasMemory + position1);
+					pixelValue1 = openfl.Memory._setPositionTemporarily(canvasMemory + position1,function() {
+						return openfl.Memory.gcRef.readInt();
+					});
 					pixelMask1 = pixelValue1 & mask;
 					i1 = openfl.display.BitmapData.__ucompare(pixelMask1,thresholdMask1);
 					test1 = false;
@@ -10465,6 +9499,47 @@ flixel._FlxSprite.GraphicDefault.preload = null;
 flixel._FlxSprite.GraphicDefault.__super__ = openfl.display.BitmapData;
 flixel._FlxSprite.GraphicDefault.prototype = $extend(openfl.display.BitmapData.prototype,{
 	__class__: flixel._FlxSprite.GraphicDefault
+});
+flixel.FlxSubState = function(BGColor) {
+	if(BGColor == null) BGColor = 0;
+	this._created = false;
+	flixel.FlxState.call(this);
+	this.closeCallback = null;
+	this.set_bgColor(BGColor);
+};
+$hxClasses["flixel.FlxSubState"] = flixel.FlxSubState;
+flixel.FlxSubState.__name__ = ["flixel","FlxSubState"];
+flixel.FlxSubState.__super__ = flixel.FlxState;
+flixel.FlxSubState.prototype = $extend(flixel.FlxState.prototype,{
+	closeCallback: null
+	,_parentState: null
+	,_bgColor: null
+	,_created: null
+	,draw: function() {
+		var _g = 0;
+		var _g1 = flixel.FlxG.cameras.list;
+		while(_g < _g1.length) {
+			var camera = _g1[_g];
+			++_g;
+			camera.fill(this._bgColor);
+		}
+		flixel.FlxState.prototype.draw.call(this);
+	}
+	,destroy: function() {
+		flixel.FlxState.prototype.destroy.call(this);
+		this.closeCallback = null;
+		this._parentState = null;
+	}
+	,close: function() {
+		if(this._parentState != null && this._parentState.subState == this) this._parentState._requestSubStateReset = true;
+	}
+	,get_bgColor: function() {
+		return this._bgColor;
+	}
+	,set_bgColor: function(Value) {
+		return this._bgColor = Value;
+	}
+	,__class__: flixel.FlxSubState
 });
 flixel.addons = {};
 flixel.addons.editors = {};
@@ -10809,10 +9884,7 @@ flixel.animation.FlxAnimationController.prototype = {
 	}
 	,append: function(Name,Frames) {
 		var anim = this._animations.get(Name);
-		if(anim == null) {
-			flixel.FlxG.log.advanced("No animation called \"" + Name + "\"",flixel.system.debug.LogStyle.WARNING,true);
-			return;
-		}
+		if(anim == null) return;
 		var numFrames = Frames.length - 1;
 		var i = numFrames;
 		while(i >= 0) {
@@ -10834,10 +9906,7 @@ flixel.animation.FlxAnimationController.prototype = {
 	}
 	,appendByNames: function(Name,FrameNames) {
 		var anim = this._animations.get(Name);
-		if(anim == null) {
-			flixel.FlxG.log.advanced("No animation called \"" + Name + "\"",flixel.system.debug.LogStyle.WARNING,true);
-			return;
-		}
+		if(anim == null) return;
 		if(this._sprite.cachedGraphics != null && this._sprite.cachedGraphics.data != null) this.byNamesHelper(anim._frames,FrameNames);
 	}
 	,addByStringIndices: function(Name,Prefix,Indices,Postfix,FrameRate,Looped) {
@@ -10854,10 +9923,7 @@ flixel.animation.FlxAnimationController.prototype = {
 	}
 	,appendByStringIndices: function(Name,Prefix,Indices,Postfix) {
 		var anim = this._animations.get(Name);
-		if(anim == null) {
-			flixel.FlxG.log.advanced("No animation called \"" + Name + "\"",flixel.system.debug.LogStyle.WARNING,true);
-			return;
-		}
+		if(anim == null) return;
 		if(this._sprite.cachedGraphics != null && this._sprite.cachedGraphics.data != null) this.byStringIndicesHelper(anim._frames,Prefix,Indices,Postfix);
 	}
 	,addByIndices: function(Name,Prefix,Indices,Postfix,FrameRate,Looped) {
@@ -10874,10 +9940,7 @@ flixel.animation.FlxAnimationController.prototype = {
 	}
 	,appendByIndices: function(Name,Prefix,Indices,Postfix) {
 		var anim = this._animations.get(Name);
-		if(anim == null) {
-			flixel.FlxG.log.advanced("No animation called \"" + Name + "\"",flixel.system.debug.LogStyle.WARNING,true);
-			return;
-		}
+		if(anim == null) return;
 		if(this._sprite.cachedGraphics != null && this._sprite.cachedGraphics.data != null) this.byIndicesHelper(anim._frames,Prefix,Indices,Postfix);
 	}
 	,findSpriteFrame: function(Prefix,Index,Postfix) {
@@ -10912,10 +9975,7 @@ flixel.animation.FlxAnimationController.prototype = {
 	}
 	,appendByPrefix: function(Name,Prefix) {
 		var anim = this._animations.get(Name);
-		if(anim == null) {
-			flixel.FlxG.log.advanced("No animation called \"" + Name + "\"",flixel.system.debug.LogStyle.WARNING,true);
-			return;
-		}
+		if(anim == null) return;
 		if(this._sprite.cachedGraphics != null && this._sprite.cachedGraphics.data != null) {
 			var animFrames = new Array();
 			this.findByPrefix(animFrames,Prefix);
@@ -10929,10 +9989,7 @@ flixel.animation.FlxAnimationController.prototype = {
 			if(this._curAnim != null) this._curAnim.stop();
 			this._curAnim = null;
 		}
-		if(AnimName == null || this._animations.get(AnimName) == null) {
-			flixel.FlxG.log.advanced("No animation called \"" + AnimName + "\"",flixel.system.debug.LogStyle.WARNING,true);
-			return;
-		}
+		if(AnimName == null || this._animations.get(AnimName) == null) return;
 		if(this._curAnim != null && AnimName != this._curAnim.name) this._curAnim.stop();
 		this._curAnim = this._animations.get(AnimName);
 		this._curAnim.play(Force,Frame);
@@ -11199,7 +10256,6 @@ flixel.group.FlxTypedSpriteGroup = function(X,Y,MaxSize) {
 	if(MaxSize == null) MaxSize = 0;
 	if(Y == null) Y = 0;
 	if(X == null) X = 0;
-	this._isDrawnDebug = false;
 	this._skipTransformChildren = false;
 	flixel.FlxSprite.call(this,X,Y);
 	this.group = new flixel.group.FlxTypedGroup(MaxSize);
@@ -11293,7 +10349,6 @@ flixel.group.FlxTypedSpriteGroup.prototype = $extend(flixel.FlxSprite.prototype,
 	,members: null
 	,length: null
 	,_skipTransformChildren: null
-	,_isDrawnDebug: null
 	,_sprites: null
 	,initVars: function() {
 		this.collisionType = 4;
@@ -11371,7 +10426,6 @@ flixel.group.FlxTypedSpriteGroup.prototype = $extend(flixel.FlxSprite.prototype,
 	}
 	,draw: function() {
 		this.group.draw();
-		this._isDrawnDebug = false;
 	}
 	,replaceColor: function(Color,NewColor,FetchPositions) {
 		if(FetchPositions == null) FetchPositions = false;
@@ -11719,7 +10773,6 @@ flixel.group.FlxTypedSpriteGroup.prototype = $extend(flixel.FlxSprite.prototype,
 		this.transformChildren_flixel_util_FlxPoint($bind(this,this.scrollFactorTransform),ScrollFactor);
 	}
 	,loadGraphicFromSprite: function(Sprite) {
-		flixel.FlxG.log.advanced("loadGraphicFromSprite() is not supported in FlxSpriteGroups.",flixel.system.debug.LogStyle.ERROR,true);
 		return this;
 	}
 	,loadGraphic: function(Graphic,Animated,Width,Height,Unique,Key) {
@@ -11734,25 +10787,21 @@ flixel.group.FlxTypedSpriteGroup.prototype = $extend(flixel.FlxSprite.prototype,
 		if(AntiAliasing == null) AntiAliasing = false;
 		if(Frame == null) Frame = -1;
 		if(Rotations == null) Rotations = 16;
-		flixel.FlxG.log.advanced("loadRotatedGraphic() is not supported in FlxSpriteGroups.",flixel.system.debug.LogStyle.ERROR,true);
 		return this;
 	}
 	,makeGraphic: function(Width,Height,Color,Unique,Key) {
 		if(Unique == null) Unique = false;
 		if(Color == null) Color = -1;
-		flixel.FlxG.log.advanced("makeGraphic() is not supported in FlxSpriteGroups.",flixel.system.debug.LogStyle.ERROR,true);
 		return this;
 	}
 	,loadGraphicFromTexture: function(Data,Unique,FrameName) {
 		if(Unique == null) Unique = false;
-		flixel.FlxG.log.advanced("loadGraphicFromTexture() is not supported in FlxSpriteGroups.",flixel.system.debug.LogStyle.ERROR,true);
 		return this;
 	}
 	,loadRotatedGraphicFromTexture: function(Data,Image,Rotations,AntiAliasing,AutoBuffer) {
 		if(AutoBuffer == null) AutoBuffer = false;
 		if(AntiAliasing == null) AntiAliasing = false;
 		if(Rotations == null) Rotations = 16;
-		flixel.FlxG.log.advanced("loadRotatedGraphicFromTexture() is not supported in FlxSpriteGroups.",flixel.system.debug.LogStyle.ERROR,true);
 		return this;
 	}
 	,set_pixels: function(Value) {
@@ -12721,7 +11770,7 @@ flixel.input.keyboard.FlxKeyboard.prototype = {
 		var k = this._keyList[KeyCode];
 		if(k != null) {
 			if(k.current == Status) return true; else if(Status == 1 && k.current == 2) return true; else if(Status == 0 && k.current == -1) return true;
-		} else flixel.FlxG.log.advanced("Invalid Key: `" + KeyCode + "`.",flixel.system.debug.LogStyle.ERROR,true);
+		}
 		return false;
 	}
 	,getKeyCode: function(KeyName) {
@@ -12786,7 +11835,6 @@ flixel.input.keyboard.FlxKeyboard.prototype = {
 	}
 	,onKeyUp: function(FlashEvent) {
 		var c = FlashEvent.keyCode;
-		if(flixel.FlxG.game["debugger"] != null && this.inKeyArray(flixel.FlxG["debugger"].toggleKeys,c)) flixel.FlxG["debugger"].set_visible(!flixel.FlxG["debugger"].visible);
 		if(!this.enabled) return;
 		if(this.inKeyArray(flixel.FlxG.sound.muteKeys,c)) {
 			flixel.FlxG.sound.muted = !flixel.FlxG.sound.muted;
@@ -13038,7 +12086,6 @@ flixel.input.mouse.FlxMouse.prototype = $extend(flixel.util.FlxPoint.prototype,{
 		this.getWorldPosition(null,this);
 	}
 	,onMouseWheel: function(FlashEvent) {
-		if(flixel.FlxG["debugger"].visible && flixel.FlxG.game["debugger"].hasMouse) return;
 		this._wheelUsed = true;
 		this.wheel = FlashEvent.delta;
 	}
@@ -13141,14 +12188,9 @@ flixel.input.mouse.FlxMouseButton.prototype = {
 		this._justPressedPosition = flixel.util.FlxDestroyUtil.put(this._justPressedPosition);
 	}
 	,onDown: function(FlashEvent) {
-		if(this._ID == -1 && flixel.FlxG["debugger"].visible) {
-			if(flixel.FlxG.game["debugger"].hasMouse) return;
-			if(flixel.FlxG.game["debugger"].watch.editing) flixel.FlxG.game["debugger"].watch.submit();
-		}
 		if(this.current > 0) this.current = 1; else this.current = 2;
 	}
 	,onUp: function(FlashEvent) {
-		if(flixel.FlxG["debugger"].visible && flixel.FlxG.game["debugger"].hasMouse) return;
 		if(this.current == 2) this.current = -2; else if(this.current > 0) this.current = -1; else this.current = 0;
 	}
 	,reset: function() {
@@ -14159,7 +13201,6 @@ flixel.system.FlxSound.prototype = $extend(flixel.FlxBasic.prototype,{
 		}
 	}
 	,gotID3: function(event) {
-		flixel.FlxG.log.advanced("Got ID3 info.",flixel.system.debug.LogStyle.NOTICE);
 		this.name = this._sound.get_id3().songName;
 		this.artist = this._sound.get_id3().artist;
 		this._sound.removeEventListener(openfl.events.Event.ID3,$bind(this,this.gotID3));
@@ -14340,6 +13381,185 @@ flixel.system.FlxSplash.prototype = $extend(flixel.FlxState.prototype,{
 	,__class__: flixel.system.FlxSplash
 });
 flixel.system.debug = {};
+flixel.system.debug.ConsoleUtil = function() { };
+$hxClasses["flixel.system.debug.ConsoleUtil"] = flixel.system.debug.ConsoleUtil;
+flixel.system.debug.ConsoleUtil.__name__ = ["flixel","system","debug","ConsoleUtil"];
+flixel.system.debug.ConsoleUtil.callFunction = function(Function,Args) {
+	try {
+		Function.apply(null,Args);
+		return true;
+	} catch( e ) {
+		if( js.Boot.__instanceof(e,openfl.errors.ArgumentError) ) {
+			if(e.errorID == 1063) {
+				var expected = Std.parseInt(flixel.util.FlxStringUtil.filterDigits(e.message).charAt(4));
+				if(expected < Args.length) {
+					var shortenedArgs = Args.slice(0,expected);
+					Function.apply(null,shortenedArgs);
+				} else return false;
+				return true;
+			}
+			return false;
+		} else throw(e);
+	}
+};
+flixel.system.debug.ConsoleUtil.findCommand = function(Alias,Commands) {
+	var _g1 = 0;
+	var _g = Commands.length;
+	while(_g1 < _g) {
+		var i = _g1++;
+		if(HxOverrides.indexOf(Commands[i].aliases,Alias,0) != -1) return Commands[i];
+	}
+	return null;
+};
+flixel.system.debug.ConsoleUtil.resolveObjectAndVariable = function(ObjectAndVariable,Object) {
+	var searchArr = ObjectAndVariable.split(".");
+	if(searchArr.length == 1) return { object : Object, variableName : ObjectAndVariable};
+	var variableName = searchArr.join(".");
+	if(!Reflect.isObject(Object)) {
+		flixel.FlxG.log.error("'" + (function($this) {
+			var $r;
+			var cl;
+			if(js.Boot.__instanceof(Object,Class)) cl = Object; else cl = Type.getClass(Object);
+			var s = Type.getClassName(cl);
+			if(s != null) {
+				s = StringTools.replace(s,"::",".");
+				var pos = s.lastIndexOf(".") + 1;
+				s = HxOverrides.substr(s,pos,null);
+			}
+			$r = s;
+			return $r;
+		}(this)) + "' is not a valid Object");
+		return null;
+	}
+	var l = searchArr.length;
+	var tempObj = Object;
+	var tempVarName = "";
+	var _g = 0;
+	while(_g < l) {
+		var i = _g++;
+		tempVarName = searchArr[i];
+		try {
+			if(i < l - 1) tempObj = Reflect.getProperty(tempObj,tempVarName);
+		} catch( e ) {
+			flixel.FlxG.log.error("'" + (function($this) {
+				var $r;
+				var cl1;
+				if(js.Boot.__instanceof(tempObj,Class)) cl1 = tempObj; else cl1 = Type.getClass(tempObj);
+				var s1 = Type.getClassName(cl1);
+				if(s1 != null) {
+					s1 = StringTools.replace(s1,"::",".");
+					var pos1 = s1.lastIndexOf(".") + 1;
+					s1 = HxOverrides.substr(s1,pos1,null);
+				}
+				$r = s1;
+				return $r;
+			}(this)) + "' does not have a field '" + tempVarName + "'");
+			return null;
+		}
+	}
+	return { object : tempObj, variableName : tempVarName};
+};
+flixel.system.debug.ConsoleUtil.resolveObjectAndVariableFromMap = function(ObjectAndVariable,ObjectMap) {
+	var splitString = ObjectAndVariable.split(".");
+	var object = ObjectMap.get(splitString[0]);
+	splitString.shift();
+	ObjectAndVariable = splitString.join(".");
+	return flixel.system.debug.ConsoleUtil.resolveObjectAndVariable(ObjectAndVariable,object);
+};
+flixel.system.debug.ConsoleUtil.getInstanceFieldsAdvanced = function(cl,numSuperClassesToInclude) {
+	if(numSuperClassesToInclude == null) numSuperClassesToInclude = 0;
+	var fields = Type.getInstanceFields(cl);
+	if(numSuperClassesToInclude >= 0) {
+		var curClass = Type.getSuperClass(cl);
+		var superClasses = [];
+		while(curClass != null) {
+			superClasses.push(curClass);
+			curClass = Type.getSuperClass(curClass);
+		}
+		superClasses.reverse();
+		if(numSuperClassesToInclude > superClasses.length) numSuperClassesToInclude = superClasses.length;
+		var _g1 = 0;
+		var _g = superClasses.length - numSuperClassesToInclude;
+		while(_g1 < _g) {
+			var i = _g1++;
+			var superFields = Type.getInstanceFields(superClasses[i]);
+			var _g2 = 0;
+			while(_g2 < superFields.length) {
+				var superField = superFields[_g2];
+				++_g2;
+				if(HxOverrides.indexOf(fields,superField,0) != -1) HxOverrides.remove(fields,superField);
+			}
+		}
+	}
+	return fields;
+};
+flixel.system.debug.ConsoleUtil.parseBool = function(s) {
+	if(s == "true") return true; else if(s == "false") return false; else return null;
+};
+flixel.system.debug.ConsoleUtil.log = function(Text) {
+	flixel.FlxG.log.advanced([Text],flixel.system.debug.LogStyle.CONSOLE);
+};
+flixel.system.debug.ButtonAlignment = $hxClasses["flixel.system.debug.ButtonAlignment"] = { __ename__ : ["flixel","system","debug","ButtonAlignment"], __constructs__ : ["LEFT","MIDDLE","RIGHT"] };
+flixel.system.debug.ButtonAlignment.LEFT = ["LEFT",0];
+flixel.system.debug.ButtonAlignment.LEFT.toString = $estr;
+flixel.system.debug.ButtonAlignment.LEFT.__enum__ = flixel.system.debug.ButtonAlignment;
+flixel.system.debug.ButtonAlignment.MIDDLE = ["MIDDLE",1];
+flixel.system.debug.ButtonAlignment.MIDDLE.toString = $estr;
+flixel.system.debug.ButtonAlignment.MIDDLE.__enum__ = flixel.system.debug.ButtonAlignment;
+flixel.system.debug.ButtonAlignment.RIGHT = ["RIGHT",2];
+flixel.system.debug.ButtonAlignment.RIGHT.toString = $estr;
+flixel.system.debug.ButtonAlignment.RIGHT.__enum__ = flixel.system.debug.ButtonAlignment;
+flixel.system.debug.DebuggerLayout = $hxClasses["flixel.system.debug.DebuggerLayout"] = { __ename__ : ["flixel","system","debug","DebuggerLayout"], __constructs__ : ["STANDARD","MICRO","BIG","TOP","LEFT","RIGHT"] };
+flixel.system.debug.DebuggerLayout.STANDARD = ["STANDARD",0];
+flixel.system.debug.DebuggerLayout.STANDARD.toString = $estr;
+flixel.system.debug.DebuggerLayout.STANDARD.__enum__ = flixel.system.debug.DebuggerLayout;
+flixel.system.debug.DebuggerLayout.MICRO = ["MICRO",1];
+flixel.system.debug.DebuggerLayout.MICRO.toString = $estr;
+flixel.system.debug.DebuggerLayout.MICRO.__enum__ = flixel.system.debug.DebuggerLayout;
+flixel.system.debug.DebuggerLayout.BIG = ["BIG",2];
+flixel.system.debug.DebuggerLayout.BIG.toString = $estr;
+flixel.system.debug.DebuggerLayout.BIG.__enum__ = flixel.system.debug.DebuggerLayout;
+flixel.system.debug.DebuggerLayout.TOP = ["TOP",3];
+flixel.system.debug.DebuggerLayout.TOP.toString = $estr;
+flixel.system.debug.DebuggerLayout.TOP.__enum__ = flixel.system.debug.DebuggerLayout;
+flixel.system.debug.DebuggerLayout.LEFT = ["LEFT",4];
+flixel.system.debug.DebuggerLayout.LEFT.toString = $estr;
+flixel.system.debug.DebuggerLayout.LEFT.__enum__ = flixel.system.debug.DebuggerLayout;
+flixel.system.debug.DebuggerLayout.RIGHT = ["RIGHT",5];
+flixel.system.debug.DebuggerLayout.RIGHT.toString = $estr;
+flixel.system.debug.DebuggerLayout.RIGHT.__enum__ = flixel.system.debug.DebuggerLayout;
+flixel.system.debug.LogStyle = function(Prefix,Color,Size,Bold,Italic,Underlined,ErrorSound,OpenConsole,CallbackFunction) {
+	if(OpenConsole == null) OpenConsole = false;
+	if(Underlined == null) Underlined = false;
+	if(Italic == null) Italic = false;
+	if(Bold == null) Bold = false;
+	if(Size == null) Size = 12;
+	if(Color == null) Color = "FFFFFF";
+	if(Prefix == null) Prefix = "";
+	this.prefix = Prefix;
+	this.color = Color;
+	this.size = Size;
+	this.bold = Bold;
+	this.italic = Italic;
+	this.underlined = Underlined;
+	this.errorSound = ErrorSound;
+	this.openConsole = OpenConsole;
+	this.callbackFunction = CallbackFunction;
+};
+$hxClasses["flixel.system.debug.LogStyle"] = flixel.system.debug.LogStyle;
+flixel.system.debug.LogStyle.__name__ = ["flixel","system","debug","LogStyle"];
+flixel.system.debug.LogStyle.prototype = {
+	prefix: null
+	,color: null
+	,size: null
+	,bold: null
+	,italic: null
+	,underlined: null
+	,errorSound: null
+	,openConsole: null
+	,callbackFunction: null
+	,__class__: flixel.system.debug.LogStyle
+};
 flixel.system.debug.Window = function(Title,Icon,Width,Height,Resizable,Bounds,Closable) {
 	if(Closable == null) Closable = false;
 	if(Resizable == null) Resizable = true;
@@ -14554,2141 +13774,26 @@ flixel.system.debug.Window.prototype = $extend(openfl.display.Sprite.prototype,{
 	}
 	,close: function() {
 		this.destroy();
-		flixel.FlxG.game["debugger"].removeWindow(this);
 	}
 	,__class__: flixel.system.debug.Window
 });
-flixel.system.debug.BitmapLog = function() {
-	this._middleMouseDown = false;
-	this._matrix = new openfl.geom.Matrix();
-	this._curMouseOffset = flixel.util.FlxPoint.get(null,null);
-	this._lastMousePos = flixel.util.FlxPoint.get(null,null);
-	this._point = flixel.util.FlxPoint.get(null,null);
-	this._curIndex = 0;
-	this._entries = [];
-	this.zoom = 1;
-	flixel.system.debug.Window.call(this,"bitmapLog",new flixel.system.debug.GraphicBitmapLog(0,0));
-	this.minSize.x = 165;
-	this.minSize.y = 31;
-	this._canvasBitmap = new openfl.display.Bitmap(new openfl.display.BitmapData(Std["int"](this.get_width()),Std["int"](this.get_height() - 15),true,0));
-	this._canvasBitmap.set_x(0);
-	this._canvasBitmap.set_y(15);
-	this.addChild(this._canvasBitmap);
-	this.createHeaderUI();
-	this.createFooterUI();
-	this.setVisible(false);
-	this.addEventListener(openfl.events.MouseEvent.MOUSE_WHEEL,$bind(this,this.onMouseWheel));
-	this.addEventListener(openfl.events.MouseEvent.MIDDLE_MOUSE_DOWN,$bind(this,this.onMiddleDown));
-	this.addEventListener(openfl.events.MouseEvent.MIDDLE_MOUSE_UP,$bind(this,this.onMiddleUp));
-	flixel.FlxG.signals.stateSwitched.add($bind(this,this.clear));
-	this.removeChild(this._handle);
-	this.addChild(this._handle);
-	this.removeChild(this._shadow);
-};
-$hxClasses["flixel.system.debug.BitmapLog"] = flixel.system.debug.BitmapLog;
-flixel.system.debug.BitmapLog.__name__ = ["flixel","system","debug","BitmapLog"];
-flixel.system.debug.BitmapLog.__super__ = flixel.system.debug.Window;
-flixel.system.debug.BitmapLog.prototype = $extend(flixel.system.debug.Window.prototype,{
-	zoom: null
-	,_canvasBitmap: null
-	,_entries: null
-	,_curIndex: null
-	,_point: null
-	,_lastMousePos: null
-	,_curMouseOffset: null
-	,_matrix: null
-	,_buttonLeft: null
-	,_buttonText: null
-	,_buttonRight: null
-	,_counterText: null
-	,_dimensionsText: null
-	,_ui: null
-	,_middleMouseDown: null
-	,_footer: null
-	,_footerText: null
-	,createHeaderUI: function() {
-		var _g = this;
-		this._ui = new openfl.display.Sprite();
-		this._ui.set_y(2);
-		this._buttonLeft = new flixel.system.ui.FlxSystemButton(new flixel.system.debug.GraphicArrowLeft(0,0),$bind(this,this.previous));
-		this._dimensionsText = flixel.system.debug.DebuggerUtil.createTextField();
-		this._counterText = flixel.system.debug.DebuggerUtil.createTextField(0,-3);
-		this._counterText.set_text("0/0");
-		this._buttonText = new flixel.system.ui.FlxSystemButton(null,function() {
-			_g.set_zoom(1);
-			_g._curMouseOffset.set();
-			_g.refreshCanvas();
-		});
-		this._buttonText.addChild(this._counterText);
-		this._buttonRight = new flixel.system.ui.FlxSystemButton(new flixel.system.debug.GraphicArrowRight(0,0),$bind(this,this.next));
-		this._buttonRight.set_x(60);
-		this._ui.addChild(this._buttonLeft);
-		this._ui.addChild(this._buttonText);
-		this._ui.addChild(this._buttonRight);
-		this.addChild(this._ui);
-		this.addChild(this._dimensionsText);
-	}
-	,createFooterUI: function() {
-		this._footer = new openfl.display.Bitmap(new openfl.display.BitmapData(1,15,true,-1157627904));
-		this._footer.set_alpha(0.8);
-		this.addChild(this._footer);
-		this._footerText = flixel.system.debug.DebuggerUtil.createTextField();
-		this.addChild(this._footerText);
-	}
-	,destroy: function() {
-		flixel.system.debug.Window.prototype.destroy.call(this);
-		this.clear();
-		this.removeChild(this._canvasBitmap);
-		flixel.util.FlxDestroyUtil.dispose(this._canvasBitmap.bitmapData);
-		this._canvasBitmap.bitmapData = null;
-		this._canvasBitmap = null;
-		this._entries = null;
-		this.removeEventListener(openfl.events.MouseEvent.MOUSE_WHEEL,$bind(this,this.onMouseWheel));
-		this.removeEventListener(openfl.events.MouseEvent.MIDDLE_MOUSE_DOWN,$bind(this,this.onMiddleDown));
-		this.removeEventListener(openfl.events.MouseEvent.MIDDLE_MOUSE_UP,$bind(this,this.onMiddleUp));
-		flixel.FlxG.signals.stateSwitched.remove($bind(this,this.clear));
-	}
-	,update: function() {
-		if(this._middleMouseDown) {
-			var delta = flixel.util.FlxPoint.get(this.get_mouseX(),this.get_mouseY());
-			this._curMouseOffset.addPoint(delta.subtractPoint(this._lastMousePos));
-			this.refreshCanvas();
-			this._lastMousePos.set(this.get_mouseX(),this.get_mouseY());
-		}
-	}
-	,updateSize: function() {
-		flixel.system.debug.Window.prototype.updateSize.call(this);
-		this._background.set_scaleY(this._height - this._header.get_height() * 2);
-	}
-	,resize: function(Width,Height) {
-		flixel.system.debug.Window.prototype.resize.call(this,Width,Height);
-		this._canvasBitmap.bitmapData = flixel.util.FlxDestroyUtil.dispose(this._canvasBitmap.bitmapData);
-		this._canvasBitmap.bitmapData = new openfl.display.BitmapData(Std["int"](this._width - this._canvasBitmap.get_x()),Std["int"](this._height - this._canvasBitmap.get_y() - this._footer.get_height()),true,0);
-		this.refreshCanvas(this._curIndex);
-		this._ui.set_x(this._header.get_width() - this._ui.get_width() + 43);
-		this._footer.set_width(this._width);
-		this._footer.set_y(this._height - this._footer.get_height());
-		this.resizeTexts();
-	}
-	,resizeTexts: function() {
-		this._dimensionsText.set_x(this._header.get_width() / 2 - this._dimensionsText.get_textWidth() / 2);
-		this._dimensionsText.set_visible(this._width > 200);
-		this._footerText.set_y(this._height - this._footer.get_height());
-		this._footerText.set_x(this._width / 2 - this._footerText.get_textWidth() / 2);
-		this._footerText.set_width(this._footer.get_width());
-		if(this._footerText.get_x() < 0) this._footerText.set_x(0);
-		var start = this._buttonLeft.get_x() + this._buttonLeft.get_width();
-		var range = this._buttonRight.get_x() - start;
-		this._buttonText.set_x(33 - this._counterText.get_textWidth() / 2);
-	}
-	,next: function() {
-		this.set_zoom(1);
-		this._curMouseOffset.set();
-		this.refreshCanvas(this._curIndex + 1);
-	}
-	,previous: function() {
-		this.set_zoom(1);
-		this._curMouseOffset.set();
-		this.refreshCanvas(this._curIndex - 1);
-	}
-	,resetSettings: function() {
-		this.set_zoom(1);
-		this._curMouseOffset.set();
-	}
-	,add: function(bmp,name) {
-		if(name == null) name = "";
-		if(bmp == null) return false;
-		this.setVisible(true);
-		this._entries.push({ bitmap : bmp.clone(), name : name});
-		return this.refreshCanvas();
-	}
-	,clearAt: function(Index) {
-		if(Index == null) Index = -1;
-		if(Index == -1) Index = this._entries.length - 1;
-		flixel.util.FlxDestroyUtil.dispose(this._entries[Index].bitmap);
-		this._entries[Index] = null;
-		this._entries.splice(Index,1);
-		if(this._curIndex > this._entries.length - 1) this._curIndex = this._entries.length - 1;
-		this.refreshCanvas(this._curIndex);
-	}
-	,clear: function() {
-		var _g1 = 0;
-		var _g = this._entries.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			flixel.util.FlxDestroyUtil.dispose(this._entries[i].bitmap);
-			this._entries[i] = null;
-		}
-		this._entries = [];
-		this._canvasBitmap.bitmapData.fillRect(this._canvasBitmap.bitmapData.rect,0);
-		this._dimensionsText.set_text("");
-		this._counterText.set_text("0/0");
-		this._footerText.set_text("");
-	}
-	,refreshCanvas: function(Index) {
-		if(this._entries == null || this._entries.length <= 0) {
-			this._curIndex = 0;
-			return false;
-		}
-		if(Index == null) Index = this._curIndex;
-		this._canvasBitmap.bitmapData.fillRect(this._canvasBitmap.bitmapData.rect,0);
-		if(Index < 0) Index = this._entries.length - 1; else if(Index >= this._entries.length) Index = 0;
-		this._curIndex = Index;
-		this._point.set_x(this._canvasBitmap.bitmapData.width / 2 - this._entries[this._curIndex].bitmap.width * this.zoom / 2);
-		this._point.set_y(this._canvasBitmap.bitmapData.height / 2 - this._entries[this._curIndex].bitmap.height * this.zoom / 2);
-		this._point.addPoint(this._curMouseOffset);
-		this._matrix.identity();
-		this._matrix.scale(this.zoom,this.zoom);
-		this._matrix.translate(this._point.x,this._point.y);
-		this._canvasBitmap.bitmapData.draw(this._entries[this._curIndex].bitmap,this._matrix,null,null,this._canvasBitmap.bitmapData.rect,false);
-		this.drawBoundingBox(this._entries[this._curIndex].bitmap);
-		this._canvasBitmap.bitmapData.draw(flixel.util.FlxSpriteUtil.flashGfxSprite,this._matrix,null,null,this._canvasBitmap.bitmapData.rect,false);
-		this.refreshTexts();
-		return true;
-	}
-	,refreshTexts: function() {
-		this._dimensionsText.set_text(this._entries[this._curIndex].bitmap.width + "x" + this._entries[this._curIndex].bitmap.height);
-		this._counterText.set_text("" + (this._curIndex + 1) + "/" + this._entries.length);
-		var entryName = this._entries[this._curIndex].name;
-		var name;
-		if(entryName == "") name = ""; else name = "\"" + entryName + "\" | ";
-		this._footerText.set_text(name + flixel.util.FlxStringUtil.formatBytes(flixel.util.FlxBitmapUtil.getMemorySize(this._entries[this._curIndex].bitmap)));
-		this.resizeTexts();
-	}
-	,drawBoundingBox: function(bitmap) {
-		var gfx = flixel.util.FlxSpriteUtil.flashGfx;
-		gfx.clear();
-		gfx.lineStyle(1,-65536,0.75,false,openfl.display.LineScaleMode.NONE);
-		gfx.drawRect(0,0,bitmap.width,bitmap.height);
-	}
-	,onMouseWheel: function(e) {
-		var _g = this;
-		_g.set_zoom(_g.zoom + (e.delta < 0?-1:1) * 0.25 * this.zoom);
-		this.refreshCanvas();
-	}
-	,onMiddleDown: function(e) {
-		this._middleMouseDown = true;
-		this._lastMousePos.set(this.get_mouseX(),this.get_mouseY());
-	}
-	,onMiddleUp: function(e) {
-		this._middleMouseDown = false;
-	}
-	,set_zoom: function(Value) {
-		if(Value < 0) Value = 0;
-		return this.zoom = Value;
-	}
-	,get__canvas: function() {
-		return this._canvasBitmap.bitmapData;
-	}
-	,get__curEntry: function() {
-		return this._entries[this._curIndex];
-	}
-	,get__curBitmap: function() {
-		return this._entries[this._curIndex].bitmap;
-	}
-	,__class__: flixel.system.debug.BitmapLog
-	,__properties__: $extend(flixel.system.debug.Window.prototype.__properties__,{get__curBitmap:"get__curBitmap",get__curEntry:"get__curEntry",get__canvas:"get__canvas",set_zoom:"set_zoom"})
-});
-flixel.system.debug.Console = function() {
-	this._historyIndex = 0;
-	flixel.system.debug.Window.call(this,"console",new flixel.system.debug.GraphicConsole(0,0),0,0,false);
-	this.commands = new Array();
-	this.registeredObjects = new haxe.ds.StringMap();
-	this.registeredFunctions = new haxe.ds.StringMap();
-	this.objectStack = new Array();
-	this.cmdHistory = new Array();
-	if(flixel.FlxG.save.data.history != null) {
-		this.cmdHistory = flixel.FlxG.save.data.history;
-		this._historyIndex = this.cmdHistory.length;
-	} else {
-		this.cmdHistory = new Array();
-		flixel.FlxG.save.data.history = this.cmdHistory;
-	}
-	this._input = new openfl.text.TextField();
-	this._input.set_type(openfl.text.TextFieldType.INPUT);
-	this._input.set_embedFonts(true);
-	this._input.set_defaultTextFormat(new openfl.text.TextFormat(flixel.system.FlxAssets.FONT_DEBUGGER,13,16777215,false,false,false));
-	this._input.set_text("(Click here / press [Tab] to enter command. Type 'help' for help.)");
-	this._input.set_width(this._width - 4);
-	this._input.set_height(this._height - 15);
-	this._input.set_x(2);
-	this._input.set_y(15);
-	this.addChild(this._input);
-	this._input.addEventListener(openfl.events.FocusEvent.FOCUS_IN,$bind(this,this.onFocus));
-	this._input.addEventListener(openfl.events.FocusEvent.FOCUS_OUT,$bind(this,this.onFocusLost));
-	this._input.addEventListener(openfl.events.KeyboardEvent.KEY_DOWN,$bind(this,this.onKeyPress));
-	new flixel.system.debug.ConsoleCommands(this);
-};
-$hxClasses["flixel.system.debug.Console"] = flixel.system.debug.Console;
-flixel.system.debug.Console.__name__ = ["flixel","system","debug","Console"];
-flixel.system.debug.Console.__super__ = flixel.system.debug.Window;
-flixel.system.debug.Console.prototype = $extend(flixel.system.debug.Window.prototype,{
-	registeredObjects: null
-	,registeredFunctions: null
-	,objectStack: null
-	,cmdHistory: null
-	,commands: null
-	,_historyIndex: null
-	,_input: null
-	,onFocus: function(e) {
-		flixel.FlxG.keys.enabled = false;
-		if(this._input.get_text() == "(Click here / press [Tab] to enter command. Type 'help' for help.)") this._input.set_text("");
-	}
-	,onFocusLost: function(e) {
-		flixel.FlxG.keys.enabled = true;
-		if(this._input.get_text() == "") this._input.set_text("(Click here / press [Tab] to enter command. Type 'help' for help.)");
-	}
-	,onKeyPress: function(e) {
-		if(e.keyCode == 32 && this._input.get_text() == " ") this._input.set_text("");
-		if(e.keyCode == 13 && this._input.get_text() != "") this.processCommand(); else if(e.keyCode == 27) openfl.Lib.current.stage.set_focus(null); else if(e.keyCode == 46) this._input.set_text(""); else if(e.keyCode == 38) {
-			if(this.cmdHistory.length == 0) return;
-			this._input.set_text((function($this) {
-				var $r;
-				if($this._historyIndex > 0) $this._historyIndex--;
-				$r = $this.cmdHistory[$this._historyIndex];
-				return $r;
-			}(this)));
-			this.addEventListener(openfl.events.Event.RENDER,$bind(this,this.overrideDefaultSelection));
-			openfl.Lib.current.stage.invalidate();
-		} else if(e.keyCode == 40) {
-			if(this.cmdHistory.length == 0) return;
-			this._input.set_text((function($this) {
-				var $r;
-				if($this._historyIndex < $this.cmdHistory.length) $this._historyIndex++;
-				$r = $this.cmdHistory[$this._historyIndex] != null?$this.cmdHistory[$this._historyIndex]:"";
-				return $r;
-			}(this)));
-		}
-	}
-	,processCommand: function() {
-		var args = StringTools.rtrim(this._input.get_text()).split(" ");
-		var alias = args.shift();
-		var command = flixel.system.debug.ConsoleUtil.findCommand(alias,this.commands);
-		if(command != null) {
-			var func = command.processFunction;
-			if((function($this) {
-				var $r;
-				if($this._historyIndex > 0) $this._historyIndex--;
-				$r = $this.cmdHistory[$this._historyIndex];
-				return $r;
-			}(this)) != this._input.get_text()) {
-				this.cmdHistory.push(this._input.get_text());
-				flixel.FlxG.save.flush();
-				if(this.cmdHistory.length > 25) this.cmdHistory.shift();
-			}
-			this._historyIndex = this.cmdHistory.length;
-			if(Reflect.isFunction(func)) {
-				if(command.paramCutoff > 0) {
-					var start = command.paramCutoff - 1;
-					args[start] = args.slice(start,args.length);
-					args = args.slice(0,command.paramCutoff);
-				}
-				flixel.system.debug.ConsoleUtil.callFunction(func,args);
-			}
-			this._input.set_text("");
-		} else flixel.FlxG.log.advanced("Console: Invalid command: '" + alias + "'",flixel.system.debug.LogStyle.ERROR,true);
-	}
-	,overrideDefaultSelection: function(e) {
-		this._input.setSelection(this._input.get_text().length,this._input.get_text().length);
-		this.removeEventListener(openfl.events.Event.RENDER,$bind(this,this.overrideDefaultSelection));
-	}
-	,getPreviousCommand: function() {
-		if(this._historyIndex > 0) this._historyIndex--;
-		return this.cmdHistory[this._historyIndex];
-	}
-	,getNextCommand: function() {
-		if(this._historyIndex < this.cmdHistory.length) this._historyIndex++;
-		if(this.cmdHistory[this._historyIndex] != null) return this.cmdHistory[this._historyIndex]; else return "";
-	}
-	,registerObject: function(ObjectAlias,AnyObject) {
-		var value = AnyObject;
-		this.registeredObjects.set(ObjectAlias,value);
-	}
-	,registerFunction: function(FunctionAlias,Function) {
-		var value = Function;
-		this.registeredFunctions.set(FunctionAlias,value);
-	}
-	,addCommand: function(Aliases,ProcessFunction,Help,ParamHelp,NumParams,ParamCutoff) {
-		if(ParamCutoff == null) ParamCutoff = -1;
-		if(NumParams == null) NumParams = 0;
-		this.commands.push({ aliases : Aliases, processFunction : ProcessFunction, help : Help, paramHelp : ParamHelp, numParams : NumParams, paramCutoff : ParamCutoff});
-	}
-	,destroy: function() {
-		flixel.system.debug.Window.prototype.destroy.call(this);
-		this._input.removeEventListener(openfl.events.FocusEvent.FOCUS_IN,$bind(this,this.onFocus));
-		this._input.removeEventListener(openfl.events.FocusEvent.FOCUS_OUT,$bind(this,this.onFocusLost));
-		this._input.removeEventListener(openfl.events.KeyboardEvent.KEY_DOWN,$bind(this,this.onKeyPress));
-		if(this._input != null) {
-			this.removeChild(this._input);
-			this._input = null;
-		}
-		this.commands = null;
-		this.registeredObjects = null;
-		this.registeredFunctions = null;
-		this.objectStack = null;
-	}
-	,updateSize: function() {
-		flixel.system.debug.Window.prototype.updateSize.call(this);
-		this._input.set_width(this._width - 4);
-		this._input.set_height(this._height - 15);
-	}
-	,__class__: flixel.system.debug.Console
-});
-flixel.system.debug.ConsoleCommands = function(console) {
-	this._watchingMouse = false;
-	this._console = console;
-	console.commands.push({ aliases : ["help","h"], processFunction : $bind(this,this.help), help : null, paramHelp : "(Command)", numParams : 1, paramCutoff : -1});
-	console.commands.push({ aliases : ["close","cl"], processFunction : $bind(this,this.close), help : "Closes the debugger overlay.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["clearHistory","ch"], processFunction : $bind(this,this.clearHistory), help : "Clears the command history.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["clearLog","clear"], processFunction : ($_=flixel.FlxG.log,$bind($_,$_.clear)), help : "Clears the log window.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["resetState","rs"], processFunction : $bind(this,this.resetState), help : "Resets the current state.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["switchState","ss"], processFunction : $bind(this,this.switchState), help : "Switches to a specified state.", paramHelp : "[FlxState]", numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["resetGame","rg"], processFunction : $bind(this,this.resetGame), help : "Resets the game.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["create","cr"], processFunction : $bind(this,this.create), help : "Creates a new FlxObject and registers it - by default at the mouse position.", paramHelp : "[FlxObject] (MousePos = true)", numParams : 3, paramCutoff : 3});
-	console.commands.push({ aliases : ["set","s"], processFunction : $bind(this,this.set), help : "Sets a variable within a registered object.", paramHelp : "[Path to function]", numParams : 3, paramCutoff : -1});
-	console.commands.push({ aliases : ["call","c"], processFunction : $bind(this,this.call), help : "Calls a registered function / function within a registered object.", paramHelp : null, numParams : 3, paramCutoff : 2});
-	console.commands.push({ aliases : ["fields","f"], processFunction : $bind(this,this.fields), help : "Lists the fields of a class or instance", paramHelp : "[Class or path to instance] [NumSuperClassesToInclude]", numParams : 2, paramCutoff : -1});
-	console.commands.push({ aliases : ["listObjects","lo"], processFunction : $bind(this,this.listObjects), help : "Lists all the aliases of the registered objects.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["listFunctions","lf"], processFunction : $bind(this,this.listFunctions), help : "Lists all the aliases of the registered objects.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["watchMouse","wm"], processFunction : $bind(this,this.watchMouse), help : "Adds the mouse coordinates to the watch window.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["track","t"], processFunction : $bind(this,this.track), help : "Adds a tracker window for the specified object.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["pause","p"], processFunction : $bind(this,this.pause), help : "Toggle between paused and unpaused", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["clearBitmapLog","cbl"], processFunction : ($_=flixel.FlxG.bitmapLog,$bind($_,$_.clear)), help : "Clears the bitmapLog window.", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.commands.push({ aliases : ["viewCache","vc"], processFunction : ($_=flixel.FlxG.bitmapLog,$bind($_,$_.viewCache)), help : "Adds the cache to the bitmapLog window", paramHelp : null, numParams : 0, paramCutoff : -1});
-	console.registerObject("FlxG",flixel.FlxG);
-};
-$hxClasses["flixel.system.debug.ConsoleCommands"] = flixel.system.debug.ConsoleCommands;
-flixel.system.debug.ConsoleCommands.__name__ = ["flixel","system","debug","ConsoleCommands"];
-flixel.system.debug.ConsoleCommands.prototype = {
-	_console: null
-	,_watchingMouse: null
-	,help: function(Alias) {
-		if(Alias == null) {
-			var output = "System commands: ";
-			var _g = 0;
-			var _g1 = this._console.commands;
-			while(_g < _g1.length) {
-				var command = _g1[_g];
-				++_g;
-				output += command.aliases[0] + ", ";
-			}
-			flixel.FlxG.log.advanced([output],flixel.system.debug.LogStyle.CONSOLE);
-			flixel.FlxG.log.advanced(["help (Command) for more information about a specific command"],flixel.system.debug.LogStyle.CONSOLE);
-		} else {
-			var command1 = flixel.system.debug.ConsoleUtil.findCommand(Alias,this._console.commands);
-			if(command1 != null) {
-				flixel.FlxG.log.advanced("",flixel.system.debug.LogStyle.NORMAL);
-				flixel.FlxG.log.advanced([command1.aliases],flixel.system.debug.LogStyle.CONSOLE);
-				if(command1.help != null) flixel.FlxG.log.advanced([command1.help],flixel.system.debug.LogStyle.CONSOLE);
-				var cutoffHelp = "";
-				if(command1.paramCutoff > 0) cutoffHelp = " [param0...paramX]";
-				if(command1.paramHelp != null || cutoffHelp != "") flixel.FlxG.log.advanced(["Params: " + command1.paramHelp + cutoffHelp],flixel.system.debug.LogStyle.CONSOLE);
-			} else flixel.FlxG.log.advanced("A command named '" + Alias + "' does not exist",flixel.system.debug.LogStyle.ERROR,true);
-		}
-	}
-	,close: function() {
-		flixel.FlxG.game["debugger"].set_visible(false);
-		flixel.FlxG["debugger"].visible = false;
-	}
-	,clearHistory: function() {
-		this._console.cmdHistory = new Array();
-		flixel.FlxG.save.flush();
-		flixel.FlxG.log.advanced(["clearHistory: Command history cleared"],flixel.system.debug.LogStyle.CONSOLE);
-	}
-	,resetState: function() {
-		flixel.FlxG.switchState(Type.createInstance(Type.getClass(flixel.FlxG.game._state),[]));
-		flixel.FlxG.log.advanced(["resetState: State has been reset"],flixel.system.debug.LogStyle.CONSOLE);
-	}
-	,switchState: function(ClassName) {
-		var instance = flixel.system.debug.ConsoleUtil.attemptToCreateInstance_flixel_FlxState(ClassName,flixel.FlxState);
-		if(instance == null) return;
-		flixel.FlxG.switchState(instance);
-		flixel.FlxG.log.advanced(["switchState: New '" + ClassName + "' created"],flixel.system.debug.LogStyle.CONSOLE);
-	}
-	,resetGame: function() {
-		flixel.FlxG.game._resetGame = true;
-		flixel.FlxG.log.advanced(["resetGame: Game has been reset"],flixel.system.debug.LogStyle.CONSOLE);
-	}
-	,create: function(ClassName,MousePos,Params) {
-		if(MousePos == null) MousePos = "true";
-		if(Params == null) Params = [];
-		var instance = flixel.system.debug.ConsoleUtil.attemptToCreateInstance_flixel_FlxObject(ClassName,flixel.FlxObject,Params);
-		if(instance == null) return;
-		var obj = instance;
-		if(MousePos == "true") {
-			obj.set_x(flixel.FlxG.game.get_mouseX());
-			obj.set_y(flixel.FlxG.game.get_mouseY());
-		}
-		flixel.FlxG.game._state.add(instance);
-		if(Params.length == 0) flixel.FlxG.log.advanced(["create: New " + ClassName + " created at X = " + obj.x + " Y = " + obj.y],flixel.system.debug.LogStyle.CONSOLE); else flixel.system.debug.ConsoleUtil.log("create: New " + ClassName + " created at X = " + obj.x + " Y = " + obj.y + " with params " + Std.string(Params));
-		this._console.objectStack.push(instance);
-		this._console.registerObject(Std.string(this._console.objectStack.length),instance);
-		flixel.FlxG.log.advanced(["create: " + ClassName + " registered as object '" + this._console.objectStack.length + "'"],flixel.system.debug.LogStyle.CONSOLE);
-	}
-	,set: function(ObjectAndVariable,NewVariableValue,WatchName) {
-		var pathToVariable = flixel.system.debug.ConsoleUtil.resolveObjectAndVariableFromMap(ObjectAndVariable,this._console.registeredObjects);
-		if(pathToVariable == null) return;
-		var object = pathToVariable.object;
-		var varName = pathToVariable.variableName;
-		var variable = null;
-		try {
-			variable = Reflect.getProperty(object,varName);
-		} catch( e ) {
-			return;
-		}
-		if(variable == null) {
-			flixel.FlxG.log.advanced("set: '" + ObjectAndVariable + "' could not be found",flixel.system.debug.LogStyle.ERROR,true);
-			return;
-		}
-		if(typeof(variable) == "boolean") {
-			var oldVal = NewVariableValue;
-			NewVariableValue = flixel.system.debug.ConsoleUtil.parseBool(NewVariableValue);
-			if(NewVariableValue == null) {
-				flixel.FlxG.log.advanced("set: '" + oldVal + "' is not a valid value for Bool '" + varName + "'",flixel.system.debug.LogStyle.ERROR,true);
-				return;
-			}
-		}
-		if(typeof(variable) == "number" && Math.isNaN(Std.parseFloat(NewVariableValue))) {
-			flixel.FlxG.log.error("set: '" + Std.string(NewVariableValue) + "' is not a valid value for number '" + varName + "'");
-			return;
-		} else if(!(typeof(variable) == "number") && !(typeof(variable) == "boolean") && !(typeof(variable) == "string")) {
-			flixel.FlxG.log.error("set: '" + varName + ":" + (function($this) {
-				var $r;
-				var cl;
-				if(js.Boot.__instanceof(variable,Class)) cl = variable; else cl = Type.getClass(variable);
-				var s = Type.getClassName(cl);
-				if(s != null) {
-					s = StringTools.replace(s,"::",".");
-					var pos = s.lastIndexOf(".") + 1;
-					s = HxOverrides.substr(s,pos,null);
-				}
-				$r = s;
-				return $r;
-			}(this)) + "' is not of a simple type (number, bool or string)");
-			return;
-		}
-		Reflect.setProperty(object,varName,NewVariableValue);
-		flixel.system.debug.ConsoleUtil.log("set: " + (function($this) {
-			var $r;
-			var cl1;
-			if(js.Boot.__instanceof(object,Class)) cl1 = object; else cl1 = Type.getClass(object);
-			var s1 = Type.getClassName(cl1);
-			if(s1 != null) {
-				s1 = StringTools.replace(s1,"::",".");
-				var pos1 = s1.lastIndexOf(".") + 1;
-				s1 = HxOverrides.substr(s1,pos1,null);
-			}
-			$r = s1;
-			return $r;
-		}(this)) + "." + varName + " is now " + Std.string(NewVariableValue));
-		if(WatchName != null) flixel.FlxG.game["debugger"].watch.add(object,varName,WatchName);
-	}
-	,fields: function(ObjectAndVariable,NumSuperClassesToInclude) {
-		if(NumSuperClassesToInclude == null) NumSuperClassesToInclude = 0;
-		var pathToVariable = flixel.system.debug.ConsoleUtil.resolveObjectAndVariableFromMap(ObjectAndVariable,this._console.registeredObjects);
-		if(pathToVariable == null) return;
-		var fields = [];
-		if(js.Boot.__instanceof(pathToVariable.object,Class) && pathToVariable.variableName == "") fields = Type.getClassFields(pathToVariable.object); else {
-			var instance = Reflect.getProperty(pathToVariable.object,pathToVariable.variableName);
-			if(instance == null) return;
-			var cl = Type.getClass(instance);
-			fields = flixel.system.debug.ConsoleUtil.getInstanceFieldsAdvanced(cl,NumSuperClassesToInclude);
-		}
-		flixel.FlxG.log.advanced(["fields: list of fields for " + ObjectAndVariable],flixel.system.debug.LogStyle.CONSOLE);
-		var output = "";
-		var _g = 0;
-		while(_g < fields.length) {
-			var field = fields[_g];
-			++_g;
-			output += field + "\n";
-		}
-		flixel.FlxG.log.advanced([output],flixel.system.debug.LogStyle.CONSOLE);
-	}
-	,call: function(FunctionAlias,Params) {
-		if(Params == null) Params = [];
-		var func = this._console.registeredFunctions.get(FunctionAlias);
-		if(!Reflect.isFunction(func)) {
-			var searchArr = FunctionAlias.split(".");
-			var objectName = searchArr.shift();
-			var object = this._console.registeredObjects.get(objectName);
-			if(!Reflect.isObject(object)) {
-				flixel.FlxG.log.error("call: '" + (function($this) {
-					var $r;
-					var cl;
-					if(js.Boot.__instanceof(object,Class)) cl = object; else cl = Type.getClass(object);
-					var s = Type.getClassName(cl);
-					if(s != null) {
-						s = StringTools.replace(s,"::",".");
-						var pos = s.lastIndexOf(".") + 1;
-						s = HxOverrides.substr(s,pos,null);
-					}
-					$r = s;
-					return $r;
-				}(this)) + "' is not a valid Object to call");
-				return;
-			}
-			var tempObj = object;
-			var tempVarName = "";
-			var funcName = "";
-			var l = searchArr.length - 1;
-			var _g = 0;
-			while(_g < l) {
-				var i = _g++;
-				tempVarName = searchArr[i];
-				try {
-					var prop = Reflect.getProperty(tempObj,tempVarName);
-				} catch( e ) {
-					flixel.FlxG.log.error("call: " + (function($this) {
-						var $r;
-						var cl1;
-						if(js.Boot.__instanceof(tempObj,Class)) cl1 = tempObj; else cl1 = Type.getClass(tempObj);
-						var s1 = Type.getClassName(cl1);
-						if(s1 != null) {
-							s1 = StringTools.replace(s1,"::",".");
-							var pos1 = s1.lastIndexOf(".") + 1;
-							s1 = HxOverrides.substr(s1,pos1,null);
-						}
-						$r = s1;
-						return $r;
-					}(this)) + " does not have a field '" + tempVarName + "' to call");
-					return;
-				}
-				tempObj = Reflect.getProperty(tempObj,tempVarName);
-			}
-			func = Reflect.field(tempObj,searchArr[l]);
-			if(func == null) {
-				flixel.FlxG.log.error("call: " + (function($this) {
-					var $r;
-					var cl2;
-					if(js.Boot.__instanceof(tempObj,Class)) cl2 = tempObj; else cl2 = Type.getClass(tempObj);
-					var s2 = Type.getClassName(cl2);
-					if(s2 != null) {
-						s2 = StringTools.replace(s2,"::",".");
-						var pos2 = s2.lastIndexOf(".") + 1;
-						s2 = HxOverrides.substr(s2,pos2,null);
-					}
-					$r = s2;
-					return $r;
-				}(this)) + " does not have a method '" + searchArr[l] + "' to call");
-				return;
-			}
-		}
-		if(Reflect.isFunction(func)) {
-			var success = flixel.system.debug.ConsoleUtil.callFunction(func,Params);
-			if(Params.length == 0 && success) flixel.FlxG.log.advanced(["call: Called '" + FunctionAlias + "()'"],flixel.system.debug.LogStyle.CONSOLE); else if(success) flixel.system.debug.ConsoleUtil.log("call: Called '" + FunctionAlias + "()' with params " + Std.string(Params));
-		} else flixel.FlxG.log.advanced("call: '" + FunctionAlias + "' is not a valid function",flixel.system.debug.LogStyle.ERROR,true);
-	}
-	,listObjects: function() {
-		flixel.system.debug.ConsoleUtil.log("Objects registered: \n" + flixel.util.FlxStringUtil.formatStringMap(this._console.registeredObjects));
-	}
-	,listFunctions: function() {
-		flixel.system.debug.ConsoleUtil.log("Functions registered: \n" + flixel.util.FlxStringUtil.formatStringMap(this._console.registeredFunctions));
-	}
-	,watchMouse: function() {
-		if(!this._watchingMouse) {
-			flixel.FlxG.game["debugger"].watch.add(flixel.FlxG,"mouse","Mouse Position");
-			flixel.FlxG.log.advanced(["watchMouse: Mouse position added to watch window"],flixel.system.debug.LogStyle.CONSOLE);
-		} else {
-			flixel.FlxG.game["debugger"].watch.remove(flixel.FlxG,"mouse");
-			flixel.FlxG.log.advanced(["watchMouse: Mouse position removed from watch window"],flixel.system.debug.LogStyle.CONSOLE);
-		}
-		this._watchingMouse = !this._watchingMouse;
-	}
-	,track: function(ObjectAndVariable) {
-		var pathToVariable = flixel.system.debug.ConsoleUtil.resolveObjectAndVariableFromMap(ObjectAndVariable,this._console.registeredObjects);
-		flixel.FlxG["debugger"].track(Reflect.getProperty(pathToVariable.object,pathToVariable.variableName));
-	}
-	,pause: function() {
-		if(flixel.FlxG.vcr.paused) {
-			flixel.FlxG.vcr.resume();
-			flixel.FlxG.log.advanced(["pause: Game unpaused"],flixel.system.debug.LogStyle.CONSOLE);
-		} else {
-			flixel.FlxG.vcr.pause();
-			flixel.FlxG.log.advanced(["pause: Game paused"],flixel.system.debug.LogStyle.CONSOLE);
-		}
-	}
-	,__class__: flixel.system.debug.ConsoleCommands
-};
-flixel.system.debug.ConsoleUtil = function() { };
-$hxClasses["flixel.system.debug.ConsoleUtil"] = flixel.system.debug.ConsoleUtil;
-flixel.system.debug.ConsoleUtil.__name__ = ["flixel","system","debug","ConsoleUtil"];
-flixel.system.debug.ConsoleUtil.attemptToCreateInstance_flixel_FlxObject = function(ClassName,type,Params) {
-	if(Params == null) Params = [];
-	var obj = Type.resolveClass(ClassName);
-	if(!Reflect.isObject(obj)) {
-		flixel.FlxG.log.advanced(ClassName + "' is not a valid class name. Try passing the full class path. Also make sure the class is being compiled.",flixel.system.debug.LogStyle.ERROR,true);
-		return null;
-	}
-	var instance = Type.createInstance(obj,Params);
-	if(!js.Boot.__instanceof(instance,type)) {
-		flixel.FlxG.log.error(ClassName + "' is not a " + Type.getClassName(type));
-		return null;
-	}
-	return instance;
-};
-flixel.system.debug.ConsoleUtil.attemptToCreateInstance_flixel_FlxState = function(ClassName,type,Params) {
-	if(Params == null) Params = [];
-	var obj = Type.resolveClass(ClassName);
-	if(!Reflect.isObject(obj)) {
-		flixel.FlxG.log.advanced(ClassName + "' is not a valid class name. Try passing the full class path. Also make sure the class is being compiled.",flixel.system.debug.LogStyle.ERROR,true);
-		return null;
-	}
-	var instance = Type.createInstance(obj,Params);
-	if(!js.Boot.__instanceof(instance,type)) {
-		flixel.FlxG.log.error(ClassName + "' is not a " + Type.getClassName(type));
-		return null;
-	}
-	return instance;
-};
-flixel.system.debug.ConsoleUtil.callFunction = function(Function,Args) {
-	try {
-		Function.apply(null,Args);
-		return true;
-	} catch( e ) {
-		if( js.Boot.__instanceof(e,openfl.errors.ArgumentError) ) {
-			if(e.errorID == 1063) {
-				var expected = Std.parseInt(flixel.util.FlxStringUtil.filterDigits(e.message).charAt(4));
-				if(expected < Args.length) {
-					var shortenedArgs = Args.slice(0,expected);
-					Function.apply(null,shortenedArgs);
-				} else {
-					flixel.FlxG.log.advanced("Invalid number or parameters: " + expected + " expected, " + Args.length + " passed",flixel.system.debug.LogStyle.ERROR,true);
-					return false;
-				}
-				return true;
-			}
-			return false;
-		} else throw(e);
-	}
-};
-flixel.system.debug.ConsoleUtil.findCommand = function(Alias,Commands) {
-	var _g1 = 0;
-	var _g = Commands.length;
-	while(_g1 < _g) {
-		var i = _g1++;
-		if(HxOverrides.indexOf(Commands[i].aliases,Alias,0) != -1) return Commands[i];
-	}
-	return null;
-};
-flixel.system.debug.ConsoleUtil.resolveObjectAndVariable = function(ObjectAndVariable,Object) {
-	var searchArr = ObjectAndVariable.split(".");
-	if(searchArr.length == 1) return { object : Object, variableName : ObjectAndVariable};
-	var variableName = searchArr.join(".");
-	if(!Reflect.isObject(Object)) {
-		flixel.FlxG.log.error("'" + (function($this) {
-			var $r;
-			var cl;
-			if(js.Boot.__instanceof(Object,Class)) cl = Object; else cl = Type.getClass(Object);
-			var s = Type.getClassName(cl);
-			if(s != null) {
-				s = StringTools.replace(s,"::",".");
-				var pos = s.lastIndexOf(".") + 1;
-				s = HxOverrides.substr(s,pos,null);
-			}
-			$r = s;
-			return $r;
-		}(this)) + "' is not a valid Object");
-		return null;
-	}
-	var l = searchArr.length;
-	var tempObj = Object;
-	var tempVarName = "";
-	var _g = 0;
-	while(_g < l) {
-		var i = _g++;
-		tempVarName = searchArr[i];
-		try {
-			if(i < l - 1) tempObj = Reflect.getProperty(tempObj,tempVarName);
-		} catch( e ) {
-			flixel.FlxG.log.error("'" + (function($this) {
-				var $r;
-				var cl1;
-				if(js.Boot.__instanceof(tempObj,Class)) cl1 = tempObj; else cl1 = Type.getClass(tempObj);
-				var s1 = Type.getClassName(cl1);
-				if(s1 != null) {
-					s1 = StringTools.replace(s1,"::",".");
-					var pos1 = s1.lastIndexOf(".") + 1;
-					s1 = HxOverrides.substr(s1,pos1,null);
-				}
-				$r = s1;
-				return $r;
-			}(this)) + "' does not have a field '" + tempVarName + "'");
-			return null;
-		}
-	}
-	return { object : tempObj, variableName : tempVarName};
-};
-flixel.system.debug.ConsoleUtil.resolveObjectAndVariableFromMap = function(ObjectAndVariable,ObjectMap) {
-	var splitString = ObjectAndVariable.split(".");
-	var object = ObjectMap.get(splitString[0]);
-	splitString.shift();
-	ObjectAndVariable = splitString.join(".");
-	return flixel.system.debug.ConsoleUtil.resolveObjectAndVariable(ObjectAndVariable,object);
-};
-flixel.system.debug.ConsoleUtil.getInstanceFieldsAdvanced = function(cl,numSuperClassesToInclude) {
-	if(numSuperClassesToInclude == null) numSuperClassesToInclude = 0;
-	var fields = Type.getInstanceFields(cl);
-	if(numSuperClassesToInclude >= 0) {
-		var curClass = Type.getSuperClass(cl);
-		var superClasses = [];
-		while(curClass != null) {
-			superClasses.push(curClass);
-			curClass = Type.getSuperClass(curClass);
-		}
-		superClasses.reverse();
-		if(numSuperClassesToInclude > superClasses.length) numSuperClassesToInclude = superClasses.length;
-		var _g1 = 0;
-		var _g = superClasses.length - numSuperClassesToInclude;
-		while(_g1 < _g) {
-			var i = _g1++;
-			var superFields = Type.getInstanceFields(superClasses[i]);
-			var _g2 = 0;
-			while(_g2 < superFields.length) {
-				var superField = superFields[_g2];
-				++_g2;
-				if(HxOverrides.indexOf(fields,superField,0) != -1) HxOverrides.remove(fields,superField);
-			}
-		}
-	}
-	return fields;
-};
-flixel.system.debug.ConsoleUtil.parseBool = function(s) {
-	if(s == "true") return true; else if(s == "false") return false; else return null;
-};
-flixel.system.debug.ConsoleUtil.log = function(Text) {
-	flixel.FlxG.log.advanced([Text],flixel.system.debug.LogStyle.CONSOLE);
-};
-flixel.system.debug.DebuggerUtil = function() { };
-$hxClasses["flixel.system.debug.DebuggerUtil"] = flixel.system.debug.DebuggerUtil;
-flixel.system.debug.DebuggerUtil.__name__ = ["flixel","system","debug","DebuggerUtil"];
-flixel.system.debug.DebuggerUtil.createTextField = function(X,Y,Color,Size) {
-	if(Size == null) Size = 12;
-	if(Color == null) Color = -1;
-	if(Y == null) Y = 0;
-	if(X == null) X = 0;
-	var tf = new openfl.text.TextField();
-	tf.set_x(X);
-	tf.set_y(Y);
-	tf.set_multiline(false);
-	tf.set_wordWrap(false);
-	tf.set_embedFonts(true);
-	tf.set_selectable(false);
-	tf.set_defaultTextFormat(new openfl.text.TextFormat(flixel.system.FlxAssets.FONT_DEBUGGER,Size,(Color >> 16 & 255) << 16 | (Color >> 8 & 255) << 8 | Color & 255));
-	tf.set_alpha(flixel.util.FlxColorUtil.getAlphaFloat(Color));
-	return tf;
-};
-flixel.system.debug._FlxDebugger = {};
-flixel.system.debug._FlxDebugger.GraphicFlixel = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._FlxDebugger.GraphicFlixel.preload != null) {
-		this.image = flixel.system.debug._FlxDebugger.GraphicFlixel.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._FlxDebugger.GraphicFlixel.resourceName),flixel.system.debug._FlxDebugger.GraphicFlixel.resourceType,function(b) {
-		if(flixel.system.debug._FlxDebugger.GraphicFlixel.preload == null) flixel.system.debug._FlxDebugger.GraphicFlixel.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._FlxDebugger.GraphicFlixel"] = flixel.system.debug._FlxDebugger.GraphicFlixel;
-flixel.system.debug._FlxDebugger.GraphicFlixel.__name__ = ["flixel","system","debug","_FlxDebugger","GraphicFlixel"];
-flixel.system.debug._FlxDebugger.GraphicFlixel.preload = null;
-flixel.system.debug._FlxDebugger.GraphicFlixel.__super__ = openfl.display.BitmapData;
-flixel.system.debug._FlxDebugger.GraphicFlixel.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._FlxDebugger.GraphicFlixel
-});
-flixel.system.debug._FlxDebugger.GraphicDrawDebug = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._FlxDebugger.GraphicDrawDebug.preload != null) {
-		this.image = flixel.system.debug._FlxDebugger.GraphicDrawDebug.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._FlxDebugger.GraphicDrawDebug.resourceName),flixel.system.debug._FlxDebugger.GraphicDrawDebug.resourceType,function(b) {
-		if(flixel.system.debug._FlxDebugger.GraphicDrawDebug.preload == null) flixel.system.debug._FlxDebugger.GraphicDrawDebug.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._FlxDebugger.GraphicDrawDebug"] = flixel.system.debug._FlxDebugger.GraphicDrawDebug;
-flixel.system.debug._FlxDebugger.GraphicDrawDebug.__name__ = ["flixel","system","debug","_FlxDebugger","GraphicDrawDebug"];
-flixel.system.debug._FlxDebugger.GraphicDrawDebug.preload = null;
-flixel.system.debug._FlxDebugger.GraphicDrawDebug.__super__ = openfl.display.BitmapData;
-flixel.system.debug._FlxDebugger.GraphicDrawDebug.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._FlxDebugger.GraphicDrawDebug
-});
-flixel.system.debug.GraphicLog = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug.GraphicLog.preload != null) {
-		this.image = flixel.system.debug.GraphicLog.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug.GraphicLog.resourceName),flixel.system.debug.GraphicLog.resourceType,function(b) {
-		if(flixel.system.debug.GraphicLog.preload == null) flixel.system.debug.GraphicLog.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug.GraphicLog"] = flixel.system.debug.GraphicLog;
-flixel.system.debug.GraphicLog.__name__ = ["flixel","system","debug","GraphicLog"];
-flixel.system.debug.GraphicLog.preload = null;
-flixel.system.debug.GraphicLog.__super__ = openfl.display.BitmapData;
-flixel.system.debug.GraphicLog.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug.GraphicLog
-});
-flixel.system.debug.GraphicStats = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug.GraphicStats.preload != null) {
-		this.image = flixel.system.debug.GraphicStats.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug.GraphicStats.resourceName),flixel.system.debug.GraphicStats.resourceType,function(b) {
-		if(flixel.system.debug.GraphicStats.preload == null) flixel.system.debug.GraphicStats.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug.GraphicStats"] = flixel.system.debug.GraphicStats;
-flixel.system.debug.GraphicStats.__name__ = ["flixel","system","debug","GraphicStats"];
-flixel.system.debug.GraphicStats.preload = null;
-flixel.system.debug.GraphicStats.__super__ = openfl.display.BitmapData;
-flixel.system.debug.GraphicStats.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug.GraphicStats
-});
-flixel.system.debug.GraphicWatch = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug.GraphicWatch.preload != null) {
-		this.image = flixel.system.debug.GraphicWatch.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug.GraphicWatch.resourceName),flixel.system.debug.GraphicWatch.resourceType,function(b) {
-		if(flixel.system.debug.GraphicWatch.preload == null) flixel.system.debug.GraphicWatch.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug.GraphicWatch"] = flixel.system.debug.GraphicWatch;
-flixel.system.debug.GraphicWatch.__name__ = ["flixel","system","debug","GraphicWatch"];
-flixel.system.debug.GraphicWatch.preload = null;
-flixel.system.debug.GraphicWatch.__super__ = openfl.display.BitmapData;
-flixel.system.debug.GraphicWatch.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug.GraphicWatch
-});
-flixel.system.debug.GraphicBitmapLog = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug.GraphicBitmapLog.preload != null) {
-		this.image = flixel.system.debug.GraphicBitmapLog.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug.GraphicBitmapLog.resourceName),flixel.system.debug.GraphicBitmapLog.resourceType,function(b) {
-		if(flixel.system.debug.GraphicBitmapLog.preload == null) flixel.system.debug.GraphicBitmapLog.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug.GraphicBitmapLog"] = flixel.system.debug.GraphicBitmapLog;
-flixel.system.debug.GraphicBitmapLog.__name__ = ["flixel","system","debug","GraphicBitmapLog"];
-flixel.system.debug.GraphicBitmapLog.preload = null;
-flixel.system.debug.GraphicBitmapLog.__super__ = openfl.display.BitmapData;
-flixel.system.debug.GraphicBitmapLog.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug.GraphicBitmapLog
-});
-flixel.system.debug.GraphicConsole = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug.GraphicConsole.preload != null) {
-		this.image = flixel.system.debug.GraphicConsole.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug.GraphicConsole.resourceName),flixel.system.debug.GraphicConsole.resourceType,function(b) {
-		if(flixel.system.debug.GraphicConsole.preload == null) flixel.system.debug.GraphicConsole.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug.GraphicConsole"] = flixel.system.debug.GraphicConsole;
-flixel.system.debug.GraphicConsole.__name__ = ["flixel","system","debug","GraphicConsole"];
-flixel.system.debug.GraphicConsole.preload = null;
-flixel.system.debug.GraphicConsole.__super__ = openfl.display.BitmapData;
-flixel.system.debug.GraphicConsole.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug.GraphicConsole
-});
-flixel.system.debug.GraphicArrowLeft = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug.GraphicArrowLeft.preload != null) {
-		this.image = flixel.system.debug.GraphicArrowLeft.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug.GraphicArrowLeft.resourceName),flixel.system.debug.GraphicArrowLeft.resourceType,function(b) {
-		if(flixel.system.debug.GraphicArrowLeft.preload == null) flixel.system.debug.GraphicArrowLeft.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug.GraphicArrowLeft"] = flixel.system.debug.GraphicArrowLeft;
-flixel.system.debug.GraphicArrowLeft.__name__ = ["flixel","system","debug","GraphicArrowLeft"];
-flixel.system.debug.GraphicArrowLeft.preload = null;
-flixel.system.debug.GraphicArrowLeft.__super__ = openfl.display.BitmapData;
-flixel.system.debug.GraphicArrowLeft.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug.GraphicArrowLeft
-});
-flixel.system.debug.GraphicArrowRight = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug.GraphicArrowRight.preload != null) {
-		this.image = flixel.system.debug.GraphicArrowRight.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug.GraphicArrowRight.resourceName),flixel.system.debug.GraphicArrowRight.resourceType,function(b) {
-		if(flixel.system.debug.GraphicArrowRight.preload == null) flixel.system.debug.GraphicArrowRight.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug.GraphicArrowRight"] = flixel.system.debug.GraphicArrowRight;
-flixel.system.debug.GraphicArrowRight.__name__ = ["flixel","system","debug","GraphicArrowRight"];
-flixel.system.debug.GraphicArrowRight.preload = null;
-flixel.system.debug.GraphicArrowRight.__super__ = openfl.display.BitmapData;
-flixel.system.debug.GraphicArrowRight.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug.GraphicArrowRight
-});
-flixel.system.debug.FlxDebugger = function(Width,Height) {
-	this.hasMouse = false;
-	openfl.display.Sprite.call(this);
-	this.set_visible(false);
-	this._layout = flixel.system.debug.DebuggerLayout.STANDARD;
-	this._screen = new openfl.geom.Point();
-	this._windows = [];
-	this._topBar = new openfl.display.Sprite();
-	this._topBar.get_graphics().beginFill(0,0.66666666666666663);
-	this._topBar.get_graphics().drawRect(0,0,openfl.Lib.current.stage.stageWidth,20);
-	this._topBar.get_graphics().endFill();
-	this.addChild(this._topBar);
-	var txt = new openfl.text.TextField();
-	txt.set_height(20);
-	txt.set_selectable(false);
-	txt.set_y(-9);
-	txt.set_multiline(false);
-	txt.set_embedFonts(true);
-	var format = new openfl.text.TextFormat(flixel.system.FlxAssets.FONT_DEBUGGER,12,-1);
-	txt.set_defaultTextFormat(format);
-	txt.set_autoSize(openfl.text.TextFieldAutoSize.LEFT);
-	txt.set_text(Std.string(flixel.FlxG.VERSION));
-	this._leftButtons = [];
-	this._rightButtons = [];
-	this._middleButtons = [];
-	this.addWindow(this.log = new flixel.system.debug.Log());
-	this.addWindow(this.bitmapLog = new flixel.system.debug.BitmapLog());
-	this.addWindow(this.watch = new flixel.system.debug.Watch());
-	this.addWindow(this.console = new flixel.system.debug.Console());
-	this.addWindow(this.stats = new flixel.system.debug.Stats());
-	this.vcr = new flixel.system.debug.VCR(this);
-	this.addButton(flixel.system.debug.ButtonAlignment.LEFT,new flixel.system.debug._FlxDebugger.GraphicFlixel(0,0),$bind(this,this.openHomepage));
-	this.addButton(flixel.system.debug.ButtonAlignment.LEFT,null,$bind(this,this.openHomepage)).addChild(txt);
-	this.addWindowToggleButton(this.bitmapLog,flixel.system.debug.GraphicBitmapLog);
-	this.addWindowToggleButton(this.log,flixel.system.debug.GraphicLog);
-	this.addWindowToggleButton(this.watch,flixel.system.debug.GraphicWatch);
-	this.addWindowToggleButton(this.console,flixel.system.debug.GraphicConsole);
-	this.addWindowToggleButton(this.stats,flixel.system.debug.GraphicStats);
-	var drawDebugButton = this.addButton(flixel.system.debug.ButtonAlignment.RIGHT,new flixel.system.debug._FlxDebugger.GraphicDrawDebug(0,0),$bind(this,this.toggleDrawDebug),true);
-	drawDebugButton.set_toggled(!flixel.FlxG["debugger"].drawDebug);
-	flixel.FlxG["debugger"].drawDebugChanged.add(function() {
-		drawDebugButton.set_toggled(flixel.FlxG["debugger"].drawDebug);
-	});
-	this.onResize(Width,Height);
-	this.addEventListener(openfl.events.MouseEvent.MOUSE_OVER,$bind(this,this.onMouseOver));
-	this.addEventListener(openfl.events.MouseEvent.MOUSE_OUT,$bind(this,this.onMouseOut));
-	flixel.FlxG.signals.stateSwitched.add(flixel.system.debug.Tracker.onStateSwitch);
-};
-$hxClasses["flixel.system.debug.FlxDebugger"] = flixel.system.debug.FlxDebugger;
-flixel.system.debug.FlxDebugger.__name__ = ["flixel","system","debug","FlxDebugger"];
-flixel.system.debug.FlxDebugger.__super__ = openfl.display.Sprite;
-flixel.system.debug.FlxDebugger.prototype = $extend(openfl.display.Sprite.prototype,{
-	stats: null
-	,log: null
-	,watch: null
-	,bitmapLog: null
-	,vcr: null
-	,console: null
-	,hasMouse: null
-	,_layout: null
-	,_screen: null
-	,_screenBounds: null
-	,_middleButtons: null
-	,_leftButtons: null
-	,_rightButtons: null
-	,_topBar: null
-	,_windows: null
-	,destroy: function() {
-		this._screen = null;
-		this._leftButtons = flixel.util.FlxDestroyUtil.destroyArray(this._leftButtons);
-		this._middleButtons = flixel.util.FlxDestroyUtil.destroyArray(this._middleButtons);
-		this._rightButtons = flixel.util.FlxDestroyUtil.destroyArray(this._rightButtons);
-		this.removeChild(this._topBar);
-		this._topBar = null;
-		if(this.log != null) {
-			this.removeChild(this.log);
-			this.log.destroy();
-			this.log = null;
-		}
-		if(this.watch != null) {
-			this.removeChild(this.watch);
-			this.watch.destroy();
-			this.watch = null;
-		}
-		if(this.bitmapLog != null) {
-			this.removeChild(this.bitmapLog);
-			this.bitmapLog.destroy();
-			this.bitmapLog = null;
-		}
-		if(this.stats != null) {
-			this.removeChild(this.stats);
-			this.stats.destroy();
-			this.stats = null;
-		}
-		if(this.console != null) {
-			this.removeChild(this.console);
-			this.console.destroy();
-			this.console = null;
-		}
-		this._windows = null;
-		this.removeEventListener(openfl.events.MouseEvent.MOUSE_OVER,$bind(this,this.onMouseOver));
-		this.removeEventListener(openfl.events.MouseEvent.MOUSE_OUT,$bind(this,this.onMouseOut));
-	}
-	,update: function() {
-		var _g = 0;
-		var _g1 = this._windows;
-		while(_g < _g1.length) {
-			var $window = _g1[_g];
-			++_g;
-			$window.update();
-		}
-	}
-	,setLayout: function(Layout) {
-		this._layout = Layout;
-		this.resetLayout();
-	}
-	,resetLayout: function() {
-		var _g = this._layout;
-		switch(_g[1]) {
-		case 1:
-			this.log.resize(this._screen.x / 4,68);
-			this.log.reposition(0,this._screen.y);
-			this.console.resize(this._screen.x / 2 - 8,35);
-			this.console.reposition(this.log.get_x() + this.log.get_width() + 2,this._screen.y);
-			this.watch.resize(this._screen.x / 4,68);
-			this.watch.reposition(this._screen.x,this._screen.y);
-			this.stats.reposition(this._screen.x,0);
-			this.bitmapLog.resize(this._screen.x / 4,68);
-			this.bitmapLog.reposition(0,this._screen.y - 136 - 4);
-			break;
-		case 2:
-			this.console.resize(this._screen.x - 4,35);
-			this.console.reposition(2,this._screen.y);
-			this.log.resize((this._screen.x - 6) / 2,this._screen.y / 2);
-			this.log.reposition(0,this._screen.y - this.log.get_height() - this.console.get_height() - 3.);
-			this.watch.resize((this._screen.x - 6) / 2,this._screen.y / 2);
-			this.watch.reposition(this._screen.x,this._screen.y - this.watch.get_height() - this.console.get_height() - 3.);
-			this.stats.reposition(this._screen.x,0);
-			this.bitmapLog.resize((this._screen.x - 6) / 2,this._screen.y - 4 - this._screen.y / 2 - 70);
-			this.bitmapLog.reposition(0,3.);
-			break;
-		case 3:
-			this.console.resize(this._screen.x - 4,35);
-			this.console.reposition(0,0);
-			this.log.resize((this._screen.x - 6) / 2,this._screen.y / 4);
-			this.log.reposition(0,this.console.get_height() + 2 + 15);
-			this.watch.resize((this._screen.x - 6) / 2,this._screen.y / 4);
-			this.watch.reposition(this._screen.x,this.console.get_height() + 2 + 15);
-			this.stats.reposition(this._screen.x,this._screen.y);
-			this.bitmapLog.resize((this._screen.x - 6) / 2,this._screen.y / 4);
-			this.bitmapLog.reposition(0,this.console.get_height() + 4 + 15 + this._screen.y / 4 + 2);
-			break;
-		case 4:
-			this.console.resize(this._screen.x - 4,35);
-			this.console.reposition(2,this._screen.y);
-			this.log.resize(this._screen.x / 3,(this._screen.y - 15 - 5.) / 2 - this.console.get_height() / 2 - 2);
-			this.log.reposition(0,0);
-			this.watch.resize(this._screen.x / 3,(this._screen.y - 15 - 5.) / 2 - this.console.get_height() / 2);
-			this.watch.reposition(0,this.log.get_y() + this.log.get_height() + 2);
-			this.stats.reposition(this._screen.x,0);
-			this.bitmapLog.resize(this._screen.x / 3,(this._screen.y - 15 - 5.) / 2 - this.console.get_height() / 2 - 2);
-			this.bitmapLog.reposition(this._screen.x / 3 + 4,0);
-			break;
-		case 5:
-			this.console.resize(this._screen.x - 4,35);
-			this.console.reposition(2,this._screen.y);
-			this.log.resize(this._screen.x / 3,(this._screen.y - 15 - 5.) / 2 - this.console.get_height() / 2 - 2);
-			this.log.reposition(this._screen.x,0);
-			this.watch.resize(this._screen.x / 3,(this._screen.y - 15 - 5.) / 2 - this.console.get_height() / 2);
-			this.watch.reposition(this._screen.x,this.log.get_y() + this.log.get_height() + 2);
-			this.stats.reposition(0,0);
-			this.bitmapLog.resize(this._screen.x / 3,(this._screen.y - 15 - 5.) / 2 - this.console.get_height() / 2 - 2);
-			this.bitmapLog.reposition(this._screen.x - 4 - this._screen.x / 3 * 2,0);
-			break;
-		case 0:
-			this.console.resize(this._screen.x - 4,35);
-			this.console.reposition(2,this._screen.y);
-			this.log.resize((this._screen.x - 6) / 2,this._screen.y / 4);
-			this.log.reposition(0,this._screen.y - this.log.get_height() - this.console.get_height() - 3.);
-			this.watch.resize((this._screen.x - 6) / 2,this._screen.y / 4);
-			this.watch.reposition(this._screen.x,this._screen.y - this.watch.get_height() - this.console.get_height() - 3.);
-			this.stats.reposition(this._screen.x,0);
-			this.bitmapLog.resize((this._screen.x - 6) / 2,this._screen.y / 4);
-			this.bitmapLog.reposition(0,this.log.get_y() - 2 - this.bitmapLog.get_height());
-			break;
-		}
-	}
-	,onResize: function(Width,Height) {
-		this._screen.x = Width;
-		this._screen.y = Height;
-		this.updateBounds();
-		this._topBar.set_width(openfl.Lib.current.stage.stageWidth);
-		this.resetButtonLayout();
-		this.resetLayout();
-		this.set_scaleX(1 / flixel.FlxG.game.get_scaleX());
-		this.set_scaleY(1 / flixel.FlxG.game.get_scaleY());
-		this.set_x(-flixel.FlxG.game.get_x() * this.get_scaleX());
-		this.set_y(-flixel.FlxG.game.get_y() * this.get_scaleY());
-	}
-	,updateBounds: function() {
-		this._screenBounds = new openfl.geom.Rectangle(2,21.,this._screen.x - 4,this._screen.y - 4 - 20);
-		var _g = 0;
-		var _g1 = this._windows;
-		while(_g < _g1.length) {
-			var $window = _g1[_g];
-			++_g;
-			$window.updateBounds(this._screenBounds);
-		}
-	}
-	,hAlignButtons: function(Sprites,Padding,Set,LeftOffset) {
-		if(LeftOffset == null) LeftOffset = 0;
-		if(Set == null) Set = true;
-		if(Padding == null) Padding = 0;
-		var width = 0;
-		var last = LeftOffset;
-		var _g1 = 0;
-		var _g = Sprites.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			var o = Sprites[i];
-			width += o.get_width() + Padding;
-			if(Set) o.set_x(last);
-			last = o.get_x() + o.get_width() + Padding;
-		}
-		return width;
-	}
-	,resetButtonLayout: function() {
-		this.hAlignButtons(this._leftButtons,10,true,10);
-		var offset = openfl.Lib.current.stage.stageWidth * 0.5 - this.hAlignButtons(this._middleButtons,10,false) * 0.5;
-		this.hAlignButtons(this._middleButtons,10,true,offset);
-		var offset1 = openfl.Lib.current.stage.stageWidth - this.hAlignButtons(this._rightButtons,10,false);
-		this.hAlignButtons(this._rightButtons,10,true,offset1);
-	}
-	,addButton: function(Position,Icon,UpHandler,ToggleMode,UpdateLayout) {
-		if(UpdateLayout == null) UpdateLayout = false;
-		if(ToggleMode == null) ToggleMode = false;
-		var button = new flixel.system.ui.FlxSystemButton(Icon,UpHandler,ToggleMode);
-		var array;
-		switch(Position[1]) {
-		case 0:
-			array = this._leftButtons;
-			break;
-		case 1:
-			array = this._middleButtons;
-			break;
-		case 2:
-			array = this._rightButtons;
-			break;
-		}
-		button.set_y(10. - button.get_height() / 2);
-		array.push(button);
-		this.addChild(button);
-		if(UpdateLayout) this.resetButtonLayout();
-		return button;
-	}
-	,removeButton: function(Button,UpdateLayout) {
-		if(UpdateLayout == null) UpdateLayout = true;
-		this.removeChild(Button);
-		Button.destroy();
-		this.removeButtonFromArray(this._leftButtons,Button);
-		this.removeButtonFromArray(this._middleButtons,Button);
-		this.removeButtonFromArray(this._rightButtons,Button);
-		if(UpdateLayout) this.resetButtonLayout();
-	}
-	,addWindowToggleButton: function(window,icon) {
-		var button = this.addButton(flixel.system.debug.ButtonAlignment.RIGHT,Type.createInstance(icon,[0,0]),$bind(window,window.toggleVisible),true,true);
-		window.toggleButton = button;
-		button.set_toggled(!window.get_visible());
-	}
-	,addWindow: function(window) {
-		this._windows.push(window);
-		this.addChild(window);
-		if(this._screenBounds != null) {
-			this.updateBounds();
-			window.bound();
-		}
-		return window;
-	}
-	,removeWindow: function(window) {
-		if(this.contains(window)) this.removeChild(window);
-		flixel.util.FlxArrayUtil.fastSplice_flixel_system_debug_Window(this._windows,window);
-	}
-	,onMouseOver: function(_) {
-		this.hasMouse = true;
-		flixel.FlxG.mouse.set_useSystemCursor(true);
-	}
-	,onMouseOut: function(_) {
-		this.hasMouse = false;
-		if(!flixel.FlxG.vcr.paused) flixel.FlxG.mouse.set_useSystemCursor(false);
-	}
-	,removeButtonFromArray: function(Arr,Button) {
-		var index = HxOverrides.indexOf(Arr,Button,0);
-		if(index != -1) Arr.splice(index,1);
-	}
-	,toggleDrawDebug: function() {
-		flixel.FlxG["debugger"].set_drawDebug(!flixel.FlxG["debugger"].drawDebug);
-	}
-	,openHomepage: function() {
-		flixel.FlxG.openURL("http://www.haxeflixel.com",null);
-	}
-	,__class__: flixel.system.debug.FlxDebugger
-});
-flixel.system.debug.ButtonAlignment = $hxClasses["flixel.system.debug.ButtonAlignment"] = { __ename__ : ["flixel","system","debug","ButtonAlignment"], __constructs__ : ["LEFT","MIDDLE","RIGHT"] };
-flixel.system.debug.ButtonAlignment.LEFT = ["LEFT",0];
-flixel.system.debug.ButtonAlignment.LEFT.toString = $estr;
-flixel.system.debug.ButtonAlignment.LEFT.__enum__ = flixel.system.debug.ButtonAlignment;
-flixel.system.debug.ButtonAlignment.MIDDLE = ["MIDDLE",1];
-flixel.system.debug.ButtonAlignment.MIDDLE.toString = $estr;
-flixel.system.debug.ButtonAlignment.MIDDLE.__enum__ = flixel.system.debug.ButtonAlignment;
-flixel.system.debug.ButtonAlignment.RIGHT = ["RIGHT",2];
-flixel.system.debug.ButtonAlignment.RIGHT.toString = $estr;
-flixel.system.debug.ButtonAlignment.RIGHT.__enum__ = flixel.system.debug.ButtonAlignment;
-flixel.system.debug.DebuggerLayout = $hxClasses["flixel.system.debug.DebuggerLayout"] = { __ename__ : ["flixel","system","debug","DebuggerLayout"], __constructs__ : ["STANDARD","MICRO","BIG","TOP","LEFT","RIGHT"] };
-flixel.system.debug.DebuggerLayout.STANDARD = ["STANDARD",0];
-flixel.system.debug.DebuggerLayout.STANDARD.toString = $estr;
-flixel.system.debug.DebuggerLayout.STANDARD.__enum__ = flixel.system.debug.DebuggerLayout;
-flixel.system.debug.DebuggerLayout.MICRO = ["MICRO",1];
-flixel.system.debug.DebuggerLayout.MICRO.toString = $estr;
-flixel.system.debug.DebuggerLayout.MICRO.__enum__ = flixel.system.debug.DebuggerLayout;
-flixel.system.debug.DebuggerLayout.BIG = ["BIG",2];
-flixel.system.debug.DebuggerLayout.BIG.toString = $estr;
-flixel.system.debug.DebuggerLayout.BIG.__enum__ = flixel.system.debug.DebuggerLayout;
-flixel.system.debug.DebuggerLayout.TOP = ["TOP",3];
-flixel.system.debug.DebuggerLayout.TOP.toString = $estr;
-flixel.system.debug.DebuggerLayout.TOP.__enum__ = flixel.system.debug.DebuggerLayout;
-flixel.system.debug.DebuggerLayout.LEFT = ["LEFT",4];
-flixel.system.debug.DebuggerLayout.LEFT.toString = $estr;
-flixel.system.debug.DebuggerLayout.LEFT.__enum__ = flixel.system.debug.DebuggerLayout;
-flixel.system.debug.DebuggerLayout.RIGHT = ["RIGHT",5];
-flixel.system.debug.DebuggerLayout.RIGHT.toString = $estr;
-flixel.system.debug.DebuggerLayout.RIGHT.__enum__ = flixel.system.debug.DebuggerLayout;
-flixel.system.debug.Log = function() {
-	flixel.system.debug.Window.call(this,"log",new flixel.system.debug.GraphicLog(0,0));
-	this._text = new openfl.text.TextField();
-	this._text.set_x(2);
-	this._text.set_y(15);
-	this._text.set_multiline(true);
-	this._text.set_wordWrap(true);
-	this._text.set_selectable(true);
-	this._text.set_embedFonts(true);
-	this._text.set_defaultTextFormat(new openfl.text.TextFormat(flixel.system.FlxAssets.FONT_DEBUGGER,12,16777215));
-	this.addChild(this._text);
-	this._lines = new Array();
-};
-$hxClasses["flixel.system.debug.Log"] = flixel.system.debug.Log;
-flixel.system.debug.Log.__name__ = ["flixel","system","debug","Log"];
-flixel.system.debug.Log.__super__ = flixel.system.debug.Window;
-flixel.system.debug.Log.prototype = $extend(flixel.system.debug.Window.prototype,{
-	_text: null
-	,_lines: null
-	,destroy: function() {
-		if(this._text != null) {
-			this.removeChild(this._text);
-			this._text = null;
-		}
-		this._lines = null;
-		flixel.system.debug.Window.prototype.destroy.call(this);
-	}
-	,add: function(Data,Style,FireOnce) {
-		if(FireOnce == null) FireOnce = false;
-		if(Data == null) return false;
-		var texts = new Array();
-		var _g1 = 0;
-		var _g = Data.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			texts[i] = Std.string(Data[i]);
-			texts[i] = StringTools.htmlEscape(texts[i]);
-		}
-		var text = Style.prefix + texts.join(" ");
-		if(FireOnce) {
-			var _g2 = 0;
-			var _g11 = this._lines;
-			while(_g2 < _g11.length) {
-				var line = _g11[_g2];
-				++_g2;
-				if(text == line) return false;
-			}
-		}
-		if(this._lines.length <= 0) this._text.set_text("");
-		this._lines.push(text);
-		if(this._lines.length > 200) {
-			this._lines.shift();
-			var newText = "";
-			var _g12 = 0;
-			var _g3 = this._lines.length;
-			while(_g12 < _g3) {
-				var i1 = _g12++;
-				newText += this._lines[i1] + "\n";
-			}
-			this._text.set_text(newText);
-		} else {
-			var _g4 = this._text;
-			_g4.set_text(_g4.get_text() + (text + "\n"));
-		}
-		this._text.set_scrollV(Std["int"](this._text.get_maxScrollV()));
-		return true;
-	}
-	,clear: function() {
-		this._text.set_text("");
-		this._lines.splice(0,this._lines.length);
-	}
-	,updateSize: function() {
-		flixel.system.debug.Window.prototype.updateSize.call(this);
-		this._text.set_width(this._width - 10);
-		this._text.set_height(this._height - 15);
-	}
-	,__class__: flixel.system.debug.Log
-});
-flixel.system.debug.LogStyle = function(Prefix,Color,Size,Bold,Italic,Underlined,ErrorSound,OpenConsole,CallbackFunction) {
-	if(OpenConsole == null) OpenConsole = false;
-	if(Underlined == null) Underlined = false;
-	if(Italic == null) Italic = false;
-	if(Bold == null) Bold = false;
-	if(Size == null) Size = 12;
-	if(Color == null) Color = "FFFFFF";
-	if(Prefix == null) Prefix = "";
-	this.prefix = Prefix;
-	this.color = Color;
-	this.size = Size;
-	this.bold = Bold;
-	this.italic = Italic;
-	this.underlined = Underlined;
-	this.errorSound = ErrorSound;
-	this.openConsole = OpenConsole;
-	this.callbackFunction = CallbackFunction;
-};
-$hxClasses["flixel.system.debug.LogStyle"] = flixel.system.debug.LogStyle;
-flixel.system.debug.LogStyle.__name__ = ["flixel","system","debug","LogStyle"];
-flixel.system.debug.LogStyle.prototype = {
-	prefix: null
-	,color: null
-	,size: null
-	,bold: null
-	,italic: null
-	,underlined: null
-	,errorSound: null
-	,openConsole: null
-	,callbackFunction: null
-	,__class__: flixel.system.debug.LogStyle
-};
-flixel.system.debug._Stats = {};
-flixel.system.debug._Stats.GraphicMinimizeButton = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._Stats.GraphicMinimizeButton.preload != null) {
-		this.image = flixel.system.debug._Stats.GraphicMinimizeButton.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._Stats.GraphicMinimizeButton.resourceName),flixel.system.debug._Stats.GraphicMinimizeButton.resourceType,function(b) {
-		if(flixel.system.debug._Stats.GraphicMinimizeButton.preload == null) flixel.system.debug._Stats.GraphicMinimizeButton.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._Stats.GraphicMinimizeButton"] = flixel.system.debug._Stats.GraphicMinimizeButton;
-flixel.system.debug._Stats.GraphicMinimizeButton.__name__ = ["flixel","system","debug","_Stats","GraphicMinimizeButton"];
-flixel.system.debug._Stats.GraphicMinimizeButton.preload = null;
-flixel.system.debug._Stats.GraphicMinimizeButton.__super__ = openfl.display.BitmapData;
-flixel.system.debug._Stats.GraphicMinimizeButton.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._Stats.GraphicMinimizeButton
-});
-flixel.system.debug._Stats.GraphicMaximizeButton = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._Stats.GraphicMaximizeButton.preload != null) {
-		this.image = flixel.system.debug._Stats.GraphicMaximizeButton.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._Stats.GraphicMaximizeButton.resourceName),flixel.system.debug._Stats.GraphicMaximizeButton.resourceType,function(b) {
-		if(flixel.system.debug._Stats.GraphicMaximizeButton.preload == null) flixel.system.debug._Stats.GraphicMaximizeButton.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._Stats.GraphicMaximizeButton"] = flixel.system.debug._Stats.GraphicMaximizeButton;
-flixel.system.debug._Stats.GraphicMaximizeButton.__name__ = ["flixel","system","debug","_Stats","GraphicMaximizeButton"];
-flixel.system.debug._Stats.GraphicMaximizeButton.preload = null;
-flixel.system.debug._Stats.GraphicMaximizeButton.__super__ = openfl.display.BitmapData;
-flixel.system.debug._Stats.GraphicMaximizeButton.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._Stats.GraphicMaximizeButton
-});
-flixel.system.debug.Stats = function() {
-	this._paused = true;
-	this._activeObjectMarker = 0;
-	this._visibleObjectMarker = 0;
-	this._drawMarker = 0;
-	this._updateMarker = 0;
-	this._updateTimer = 0;
-	this._lastTime = 0;
-	this.drawTime = 0;
-	this.updateTime = 0;
-	this.activeCount = 0;
-	this.visibleCount = 0;
-	this.flashPlayerFramerate = 0;
-	this._itvTime = 0;
-	flixel.system.debug.Window.call(this,"stats",new flixel.system.debug.GraphicStats(0,0),0,0,false);
-	this.minSize.y = 180;
-	this.resize(160,180);
-	this.start();
-	this._update = [];
-	this._draw = [];
-	this._activeObject = [];
-	this._visibleObject = [];
-	var gutter = 5;
-	var graphX = gutter;
-	var graphY = Std["int"](this._header.get_height()) + gutter;
-	var graphHeight = 40;
-	var graphWidth = 140;
-	this.fpsGraph = new flixel.system.debug.StatsGraph(graphX,graphY,graphWidth,graphHeight,-6881536,"fps");
-	this.addChild(this.fpsGraph);
-	this.fpsGraph.maxValue = flixel.FlxG.drawFramerate;
-	this.fpsGraph.minValue = 0;
-	graphY = Std["int"](this._header.get_height()) + graphHeight + 20;
-	this.memoryGraph = new flixel.system.debug.StatsGraph(graphX,graphY,graphWidth,graphHeight,-16737025,"MB");
-	this.addChild(this.memoryGraph);
-	graphY = Std["int"](this._header.get_height()) + gutter;
-	graphX += gutter + graphWidth + 20;
-	graphWidth -= 10;
-	this.updateTimeGraph = new flixel.system.debug.StatsGraph(graphX,graphY,graphWidth,graphHeight,-2305024,"ms",35,"Update");
-	this.updateTimeGraph.set_visible(false);
-	this.addChild(this.updateTimeGraph);
-	graphY = Std["int"](this._header.get_height()) + graphHeight + 20;
-	this.drawTimeGraph = new flixel.system.debug.StatsGraph(graphX,graphY,graphWidth,graphHeight,-4784128,"ms",35,"Draw");
-	this.drawTimeGraph.set_visible(false);
-	this.addChild(this.drawTimeGraph);
-	this.addChild(this._leftTextField = flixel.system.debug.DebuggerUtil.createTextField(gutter,graphHeight * 2 + 45,-1426063361,11));
-	this.addChild(this._rightTextField = flixel.system.debug.DebuggerUtil.createTextField(gutter + 70,graphHeight * 2 + 45,-1,11));
-	this._leftTextField.set_multiline(this._rightTextField.set_multiline(true));
-	this._leftTextField.set_wordWrap(this._rightTextField.set_wordWrap(true));
-	this._leftTextField.set_text("Update: \nDraw:" + "\nQuadTrees: \nLists:");
-	this._toggleSizeButton = new flixel.system.ui.FlxSystemButton(new flixel.system.debug._Stats.GraphicMaximizeButton(0,0),$bind(this,this.toggleSize));
-	this._toggleSizeButton.set_alpha(0.8);
-	this.addChild(this._toggleSizeButton);
-	this.updateSize();
-};
-$hxClasses["flixel.system.debug.Stats"] = flixel.system.debug.Stats;
-flixel.system.debug.Stats.__name__ = ["flixel","system","debug","Stats"];
-flixel.system.debug.Stats.__super__ = flixel.system.debug.Window;
-flixel.system.debug.Stats.prototype = $extend(flixel.system.debug.Window.prototype,{
-	_leftTextField: null
-	,_rightTextField: null
-	,_itvTime: null
-	,_initTime: null
-	,_frameCount: null
-	,_totalCount: null
-	,_currentTime: null
-	,fpsGraph: null
-	,memoryGraph: null
-	,drawTimeGraph: null
-	,updateTimeGraph: null
-	,flashPlayerFramerate: null
-	,visibleCount: null
-	,activeCount: null
-	,updateTime: null
-	,drawTime: null
-	,_lastTime: null
-	,_updateTimer: null
-	,_update: null
-	,_updateMarker: null
-	,_draw: null
-	,_drawMarker: null
-	,_visibleObject: null
-	,_visibleObjectMarker: null
-	,_activeObject: null
-	,_activeObjectMarker: null
-	,_paused: null
-	,_toggleSizeButton: null
-	,start: function() {
-		if(this._paused) {
-			this._paused = false;
-			this._initTime = this._itvTime = flixel.FlxG.game.ticks;
-			this._totalCount = this._frameCount = 0;
-		}
-	}
-	,stop: function() {
-		this._paused = true;
-	}
-	,destroy: function() {
-		if(this.fpsGraph != null) {
-			this.fpsGraph.destroy();
-			this.removeChild(this.fpsGraph);
-		}
-		this.fpsGraph = null;
-		if(this.memoryGraph != null) this.removeChild(this.memoryGraph);
-		this.memoryGraph = null;
-		if(this._leftTextField != null) this.removeChild(this._leftTextField);
-		this._leftTextField = null;
-		if(this._rightTextField != null) this.removeChild(this._rightTextField);
-		this._rightTextField = null;
-		this._update = null;
-		this._draw = null;
-		this._activeObject = null;
-		this._visibleObject = null;
-		flixel.system.debug.Window.prototype.destroy.call(this);
-	}
-	,update: function() {
-		if(this._paused) return;
-		var time = this._currentTime = flixel.FlxG.game.ticks;
-		var elapsed = time - this._lastTime;
-		if(elapsed > 250) elapsed = 250;
-		this._lastTime = time;
-		this._updateTimer += elapsed;
-		this._frameCount++;
-		this._totalCount++;
-		if(this._updateTimer > 250) {
-			this.fpsGraph.update(this._frameCount / ((this._currentTime - this._itvTime) / 1000),this._totalCount / ((this._currentTime - this._initTime) / 1000));
-			this.memoryGraph.update(openfl.system.System.get_totalMemory() / 1024 / 1000);
-			this.updateTexts();
-			this._frameCount = 0;
-			this._itvTime = this._currentTime;
-			this.updateTime = 0;
-			var _g1 = 0;
-			var _g = this._updateMarker;
-			while(_g1 < _g) {
-				var i = _g1++;
-				this.updateTime += this._update[i];
-			}
-			var _g11 = 0;
-			var _g2 = this._activeObjectMarker;
-			while(_g11 < _g2) {
-				var i1 = _g11++;
-				this.activeCount += this._activeObject[i1];
-			}
-			this.activeCount = this.activeCount / this._activeObjectMarker | 0;
-			this.drawTime = 0;
-			var _g12 = 0;
-			var _g3 = this._drawMarker;
-			while(_g12 < _g3) {
-				var i2 = _g12++;
-				this.drawTime += this._draw[i2];
-			}
-			var _g13 = 0;
-			var _g4 = this._visibleObjectMarker;
-			while(_g13 < _g4) {
-				var i3 = _g13++;
-				this.visibleCount += this._visibleObject[i3];
-			}
-			this.visibleCount = this.visibleCount / this._visibleObjectMarker | 0;
-			this._updateMarker = 0;
-			this._drawMarker = 0;
-			this._activeObjectMarker = 0;
-			this._visibleObjectMarker = 0;
-			this._updateTimer -= 250;
-		}
-	}
-	,updateTexts: function() {
-		var updTime = flixel.util.FlxMath.roundDecimal(this.updateTime / this._updateMarker,1);
-		var drwTime = flixel.util.FlxMath.roundDecimal(this.drawTime / this._drawMarker,1);
-		this.drawTimeGraph.update(drwTime);
-		this.updateTimeGraph.update(updTime);
-		this._rightTextField.set_text(this.activeCount + " (" + updTime + "ms)\n" + this.visibleCount + " (" + drwTime + "ms)\n" + flixel.system.FlxQuadTree._NUM_CACHED_QUAD_TREES + "\n" + flixel.system.FlxList._NUM_CACHED_FLX_LIST);
-	}
-	,currentFps: function() {
-		return this._frameCount / ((this._currentTime - this._itvTime) / 1000);
-	}
-	,averageFps: function() {
-		return this._totalCount / ((this._currentTime - this._initTime) / 1000);
-	}
-	,runningTime: function() {
-		return (this._currentTime - this._initTime) / 1000;
-	}
-	,intervalTime: function() {
-		return (this._currentTime - this._itvTime) / 1000;
-	}
-	,currentMem: function() {
-		return openfl.system.System.get_totalMemory() / 1024 / 1000;
-	}
-	,flixelUpdate: function(Time) {
-		if(this._paused) return;
-		this._update[this._updateMarker++] = Time;
-	}
-	,flixelDraw: function(Time) {
-		if(this._paused) return;
-		this._draw[this._drawMarker++] = Time;
-	}
-	,activeObjects: function(Count) {
-		if(this._paused) return;
-		this._activeObject[this._activeObjectMarker++] = Count;
-	}
-	,visibleObjects: function(Count) {
-		if(this._paused) return;
-		this._visibleObject[this._visibleObjectMarker++] = Count;
-	}
-	,onFocus: function() {
-		this._paused = false;
-	}
-	,onFocusLost: function() {
-		this._paused = true;
-	}
-	,toggleSize: function() {
-		if(this._width == 160) {
-			this.resize(320,this._height);
-			var _g = this;
-			_g.set_x(_g.get_x() - 160);
-			this.drawTimeGraph.set_visible(true);
-			this.updateTimeGraph.set_visible(true);
-			this._toggleSizeButton.changeIcon(new flixel.system.debug._Stats.GraphicMinimizeButton(0,0));
-		} else {
-			this.resize(160,this._height);
-			var _g1 = this;
-			_g1.set_x(_g1.get_x() + 160);
-			this.drawTimeGraph.set_visible(false);
-			this.updateTimeGraph.set_visible(false);
-			this._toggleSizeButton.changeIcon(new flixel.system.debug._Stats.GraphicMaximizeButton(0,0));
-		}
-		this.updateSize();
-		this.bound();
-	}
-	,updateSize: function() {
-		flixel.system.debug.Window.prototype.updateSize.call(this);
-		if(this._toggleSizeButton != null) {
-			this._toggleSizeButton.set_x(this._width - this._toggleSizeButton.get_width() - 3);
-			this._toggleSizeButton.set_y(3);
-		}
-	}
-	,__class__: flixel.system.debug.Stats
-});
-flixel.system.debug.StatsGraph = function(X,Y,Width,Height,GraphColor,Unit,LabelWidth,Label) {
-	if(LabelWidth == null) LabelWidth = 45;
-	this.maxValue = 0.0000000000000001;
-	this.minValue = 1.79e+308;
-	openfl.display.Sprite.call(this);
-	this.set_x(X);
-	this.set_y(Y);
-	this._width = Width - LabelWidth;
-	this._height = Height;
-	this.graphColor = GraphColor;
-	this._unit = Unit;
-	this._labelWidth = LabelWidth;
-	if(Label == null) this._label = ""; else this._label = Label;
-	this.history = [];
-	this._axis = new openfl.display.Shape();
-	this._axis.set_x(this._labelWidth + 10);
-	this.maxLabel = flixel.system.debug.DebuggerUtil.createTextField(0,0,-1426063361,11);
-	this.curLabel = flixel.system.debug.DebuggerUtil.createTextField(0,this._height / 2 - 5.5,this.graphColor,11);
-	this.minLabel = flixel.system.debug.DebuggerUtil.createTextField(0,this._height - 11,-1426063361,11);
-	this.avgLabel = flixel.system.debug.DebuggerUtil.createTextField(this._labelWidth + 20,this._height / 2 - 5.5 - 10,-1426063361,11);
-	this.avgLabel.set_width(this._width);
-	this.avgLabel.get_defaultTextFormat().align = openfl.text.TextFormatAlign.CENTER;
-	this.avgLabel.set_alpha(0.5);
-	this.addChild(this._axis);
-	this.addChild(this.maxLabel);
-	this.addChild(this.curLabel);
-	this.addChild(this.minLabel);
-	this.addChild(this.avgLabel);
-	this.drawAxis();
-};
-$hxClasses["flixel.system.debug.StatsGraph"] = flixel.system.debug.StatsGraph;
-flixel.system.debug.StatsGraph.__name__ = ["flixel","system","debug","StatsGraph"];
-flixel.system.debug.StatsGraph.__super__ = openfl.display.Sprite;
-flixel.system.debug.StatsGraph.prototype = $extend(openfl.display.Sprite.prototype,{
-	minLabel: null
-	,curLabel: null
-	,maxLabel: null
-	,avgLabel: null
-	,minValue: null
-	,maxValue: null
-	,graphColor: null
-	,history: null
-	,_axis: null
-	,_width: null
-	,_height: null
-	,_unit: null
-	,_labelWidth: null
-	,_label: null
-	,drawAxis: function() {
-		var gfx = this._axis.get_graphics();
-		gfx.clear();
-		gfx.beginFill(0);
-		gfx.lineStyle(1,16777215,0.5);
-		gfx.moveTo(0,0);
-		gfx.lineTo(0,this._height);
-		gfx.moveTo(0,this._height);
-		gfx.lineTo(this._width,this._height);
-		gfx.endFill();
-	}
-	,drawGraph: function() {
-		var gfx = this.get_graphics();
-		gfx.clear();
-		gfx.lineStyle(1,this.graphColor,1);
-		gfx.moveTo(this._axis.get_x(),this._axis.get_y());
-		var inc = this._width / 29;
-		var range = this.maxValue - this.minValue;
-		var value;
-		var _g1 = 0;
-		var _g = this.history.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			value = (this.history[i] - this.minValue) / range;
-			gfx.lineTo(this._axis.get_x() + i * inc,-value * this._height + this._height);
-		}
-	}
-	,update: function(Value,Average) {
-		this.history.unshift(Value);
-		if(this.history.length > 30) this.history.pop();
-		this.maxValue = Math.max(this.maxValue,Value);
-		this.minValue = Math.min(this.minValue,Value);
-		this.minLabel.set_text(flixel.util.FlxMath.roundDecimal(this.minValue,1) + " " + this._unit);
-		this.curLabel.set_text(flixel.util.FlxMath.roundDecimal(Value,1) + " " + this._unit);
-		this.maxLabel.set_text(flixel.util.FlxMath.roundDecimal(this.maxValue,1) + " " + this._unit);
-		if(Average == null) Average = this.average();
-		this.avgLabel.set_text(this._label + "\nAvg: " + flixel.util.FlxMath.roundDecimal(Average,1) + " " + this._unit);
-		this.drawGraph();
-	}
-	,average: function() {
-		var sum = 0;
-		var _g = 0;
-		var _g1 = this.history;
-		while(_g < _g1.length) {
-			var value = _g1[_g];
-			++_g;
-			sum += value;
-		}
-		return sum / this.history.length;
-	}
-	,destroy: function() {
-		if(this._axis != null) {
-			this.removeChild(this._axis);
-			this._axis = null;
-		}
-		if(this.minLabel != null) {
-			this.removeChild(this.minLabel);
-			this.minLabel = null;
-		}
-		if(this.curLabel != null) {
-			this.removeChild(this.curLabel);
-			this.curLabel = null;
-		}
-		if(this.maxLabel != null) {
-			this.removeChild(this.maxLabel);
-			this.maxLabel = null;
-		}
-		if(this.avgLabel != null) {
-			this.removeChild(this.avgLabel);
-			this.avgLabel = null;
-		}
-		this.history = null;
-	}
-	,__class__: flixel.system.debug.StatsGraph
-});
-flixel.system.debug.Watch = function(Closable) {
-	if(Closable == null) Closable = false;
-	flixel.system.debug.Window.call(this,"watch",new flixel.system.debug.GraphicWatch(0,0),0,0,true,null,Closable);
-	this._names = new openfl.display.Sprite();
-	this._names.set_x(2);
-	this._names.set_y(15);
-	this.addChild(this._names);
-	this._values = new openfl.display.Sprite();
-	this._values.set_x(2);
-	this._values.set_y(15);
-	this.addChild(this._values);
-	this._watching = new Array();
-	this._quickWatchList = new haxe.ds.StringMap();
-	this.editing = false;
-	this.removeAll();
-	flixel.FlxG.signals.stateSwitched.add($bind(this,this.removeAll));
+flixel.system.debug.Watch = function(Title,Icon,Width,Height,Resizable,Bounds,Closable) {
+	flixel.system.debug.Window.call(this,Title,Icon,Width,Height,Resizable,Bounds,Closable);
 };
 $hxClasses["flixel.system.debug.Watch"] = flixel.system.debug.Watch;
 flixel.system.debug.Watch.__name__ = ["flixel","system","debug","Watch"];
 flixel.system.debug.Watch.__super__ = flixel.system.debug.Window;
 flixel.system.debug.Watch.prototype = $extend(flixel.system.debug.Window.prototype,{
-	editing: null
-	,_names: null
-	,_values: null
-	,_watching: null
-	,_quickWatchList: null
-	,destroy: function() {
-		if(this._names != null) {
-			this.removeChild(this._names);
-			this._names = null;
-		}
-		if(this._values != null) {
-			this.removeChild(this._values);
-			this._values = null;
-		}
-		if(this._watching != null) {
-			var _g = 0;
-			var _g1 = this._watching;
-			while(_g < _g1.length) {
-				var watchEntry = _g1[_g];
-				++_g;
-				watchEntry = flixel.util.FlxDestroyUtil.destroy(watchEntry);
-			}
-			this._watching = null;
-		}
-		this._quickWatchList = null;
-		flixel.FlxG.signals.stateSwitched.remove($bind(this,this.removeAll));
-		flixel.system.debug.Window.prototype.destroy.call(this);
-	}
-	,add: function(AnyObject,VariableName,DisplayName) {
-		var varData = flixel.system.debug.ConsoleUtil.resolveObjectAndVariable(VariableName,AnyObject);
-		AnyObject = varData.object;
-		VariableName = varData.variableName;
-		var _g = 0;
-		var _g1 = this._watching;
-		while(_g < _g1.length) {
-			var watchEntry = _g1[_g];
-			++_g;
-			if(watchEntry.object == AnyObject && watchEntry.field == VariableName) return;
-		}
-		var watchEntry1 = new flixel.system.debug.WatchEntry(this._watching.length * 15,this._width / 2,this._width / 2 - 10,AnyObject,VariableName,DisplayName);
-		if(watchEntry1.field == null) {
-			watchEntry1.destroy();
-			watchEntry1 = null;
-			return;
-		}
-		this._names.addChild(watchEntry1.nameDisplay);
-		this._values.addChild(watchEntry1.valueDisplay);
-		this._watching.push(watchEntry1);
-	}
-	,updateQuickWatch: function(Name,NewValue) {
-		if(this._quickWatchList.get(Name) == null) {
-			var quickWatch = new flixel.system.debug.WatchEntry(this._watching.length * 15,this._width / 2,this._width / 2 - 10,null,null,Name);
-			this._names.addChild(quickWatch.nameDisplay);
-			this._values.addChild(quickWatch.valueDisplay);
-			this._watching.push(quickWatch);
-			this._quickWatchList.set(Name,quickWatch);
-		}
-		var quickWatch1 = this._quickWatchList.get(Name);
-		if(quickWatch1 != null) quickWatch1.valueDisplay.set_text(Std.string(NewValue));
-	}
-	,remove: function(AnyObject,VariableName,QuickWatchName) {
-		if(AnyObject == null && VariableName == null && QuickWatchName != null) {
-			var quickWatch = this._quickWatchList.get(QuickWatchName);
-			if(quickWatch != null) this.removeEntry(quickWatch,HxOverrides.indexOf(this._watching,quickWatch,0));
-			this._quickWatchList.remove(QuickWatchName);
-			return;
-		}
-		var _g1 = 0;
-		var _g = this._watching.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			var watchEntry = this._watching[i];
-			if(watchEntry != null && watchEntry.object == AnyObject && (VariableName == null || watchEntry.field == VariableName)) this.removeEntry(watchEntry,i);
-		}
-	}
-	,removeEntry: function(Entry,Index) {
-		flixel.util.FlxArrayUtil.fastSplice_flixel_system_debug_WatchEntry(this._watching,Entry);
-		this._names.removeChild(Entry.nameDisplay);
-		this._values.removeChild(Entry.valueDisplay);
-		Entry.destroy();
-		var _g1 = 0;
-		var _g = this._watching.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			this._watching[i].setY(i * 15);
-		}
-	}
-	,removeAll: function() {
-		var _g = 0;
-		var _g1 = this._watching;
-		while(_g < _g1.length) {
-			var watchEntry = _g1[_g];
-			++_g;
-			this._names.removeChild(watchEntry.nameDisplay);
-			this._values.removeChild(watchEntry.valueDisplay);
-			watchEntry.destroy();
-		}
-		this._watching = [];
-		this._quickWatchList = new haxe.ds.StringMap();
-	}
-	,update: function() {
-		this.editing = false;
-		var _g = 0;
-		var _g1 = this._watching;
-		while(_g < _g1.length) {
-			var watchEntry = _g1[_g];
-			++_g;
-			if(!watchEntry.updateValue()) this.editing = true;
-		}
-	}
-	,submit: function() {
-		var _g = 0;
-		var _g1 = this._watching;
-		while(_g < _g1.length) {
-			var watchEntry = _g1[_g];
-			++_g;
-			if(watchEntry.editing) watchEntry.submit();
-		}
-		this.editing = false;
-	}
-	,updateSize: function() {
-		if((this._height | 0) < this._watching.length * 15 + 17) this._height = this._watching.length * 15 + 17;
-		flixel.system.debug.Window.prototype.updateSize.call(this);
-		this._values.set_x(this._width / 2 + 2);
-		var _g = 0;
-		var _g1 = this._watching;
-		while(_g < _g1.length) {
-			var watchEntry = _g1[_g];
-			++_g;
-			watchEntry.updateWidth(this._width / 2,this._width / 2 - 10);
-		}
-	}
-	,__class__: flixel.system.debug.Watch
+	__class__: flixel.system.debug.Watch
 });
-flixel.system.debug.Tracker = function(Profile,Object,WindowTitle) {
-	flixel.system.debug.Watch.call(this,true);
-	flixel.system.debug.Tracker.initProfiles();
-	this._object = Object;
-	flixel.system.debug.Tracker.objectsBeingTracked.push(this._object);
-	this.initWatchEntries(Profile);
-	this._title.set_text(WindowTitle == null?(function($this) {
-		var $r;
-		var Obj = $this._object;
-		var cl;
-		if(js.Boot.__instanceof(Obj,Class)) cl = Obj; else cl = Type.getClass(Obj);
-		var s = Type.getClassName(cl);
-		if(s != null) {
-			s = StringTools.replace(s,"::",".");
-			var pos = s.lastIndexOf(".") + 1;
-			s = HxOverrides.substr(s,pos,null);
-		}
-		$r = s;
-		return $r;
-	}(this)):WindowTitle);
-	this.set_visible(true);
-	var lastWatchEntryY = this._watching[this._watching.length - 1].nameDisplay.get_y();
-	this.resize(200,lastWatchEntryY + 30);
-	this.set_x(flixel.system.debug.Tracker._numTrackerWindows * 80);
-	this.set_y(flixel.system.debug.Tracker._numTrackerWindows * 25 + 20);
-	flixel.system.debug.Tracker._numTrackerWindows++;
-	flixel.FlxG.signals.stateSwitched.add($bind(this,this.close));
+flixel.system.debug.Tracker = function(Title,Icon,Width,Height,Resizable,Bounds,Closable) {
+	flixel.system.debug.Watch.call(this,Title,Icon,Width,Height,Resizable,Bounds,Closable);
 };
 $hxClasses["flixel.system.debug.Tracker"] = flixel.system.debug.Tracker;
 flixel.system.debug.Tracker.__name__ = ["flixel","system","debug","Tracker"];
-flixel.system.debug.Tracker.profiles = null;
-flixel.system.debug.Tracker.addProfile = function(Profile) {
-	if(Profile != null) flixel.system.debug.Tracker.profiles.push(Profile);
-};
-flixel.system.debug.Tracker.findProfile = function(Object) {
-	flixel.system.debug.Tracker.initProfiles();
-	var lastMatchingProfile = null;
-	var _g = 0;
-	var _g1 = flixel.system.debug.Tracker.profiles;
-	while(_g < _g1.length) {
-		var profile = _g1[_g];
-		++_g;
-		if(js.Boot.__instanceof(Object,profile.objectClass) || Object == profile.objectClass) lastMatchingProfile = profile;
-	}
-	return lastMatchingProfile;
-};
-flixel.system.debug.Tracker.onStateSwitch = function() {
-	flixel.system.debug.Tracker._numTrackerWindows = 0;
-};
-flixel.system.debug.Tracker.initProfiles = function() {
-	if(flixel.system.debug.Tracker.profiles == null) {
-		flixel.system.debug.Tracker.profiles = [];
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.FlxG,["width","height","worldBounds.x","worldBounds.y","worldBounds.width","worldBounds.height","worldDivisions","updateFramerate","drawFramerate","elapsed","maxElapsed","autoPause","fixedTimestep","timeScale"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.util.FlxPoint,["x","y"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.util.FlxRect,["width","height"],[flixel.util.FlxPoint]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.FlxBasic,["active","visible","alive","exists"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.FlxObject,["velocity","acceleration","drag","angle"],[flixel.util.FlxRect,flixel.FlxBasic]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.tile.FlxTilemap,["auto","widthInTiles","heightInTiles","totalTiles","scaleX","scaleY"],[flixel.FlxObject]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.FlxSprite,["frameWidth","frameHeight","alpha","origin","offset","scale"],[flixel.FlxObject]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.ui.FlxTypedButton,["status","labelAlphas"],[flixel.FlxSprite]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.ui.FlxBar,["min","max","range","pct","pxPerPercent","value"],[flixel.FlxSprite]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.text.FlxText,["text","size","font","embedded","bold","italic","wordWrap","borderSize","borderStyle"],[flixel.FlxSprite]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.group.FlxTypedGroup,["length","members.length","maxSize"],[flixel.FlxBasic]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.group.FlxSpriteGroup,null,[flixel.FlxSprite,flixel.group.FlxTypedGroup]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.FlxState,["persistentUpdate","persistentDraw","destroySubStates","bgColor"],[flixel.group.FlxTypedGroup]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.FlxCamera,["style","followLerp","followLead","deadzone","bounds","zoom","alpha","angle"],[flixel.FlxBasic,flixel.util.FlxRect]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.tweens.FlxTween,["active","duration","type","percent","finished","scale","backward","executions","startDelay","loopDelay"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.util.FlxPath,["speed","angle","autoCenter","_nodeIndex","active","finished"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.util.FlxTimer,["time","loops","active","finished","timeLeft","elapsedTime","loopsLeft","elapsedLoops","progress"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.animation.FlxAnimationController,["frameIndex","frameName","name","paused","finished","frames"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.input.mouse.FlxMouse,["screenX","screenY","wheel","visible","useSystemCursor","pressed","justPressed","justReleased","pressedMiddle","justPressedMiddle","justReleasedMiddle","pressedRight","justPressedRight","justReleasedRight"],[flixel.util.FlxPoint]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.input.touch.FlxTouch,["screenX","screenY","touchPointID","pressed","justPressed","justReleased","isActive"],[flixel.util.FlxPoint]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.input.gamepad.FlxGamepad,["id","deadZone","hat","ball","dpadUp","dpadDown","dpadLeft","dpadRight"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(flixel.input.FlxSwipe,["ID","startPosition","endPosition","distance","angle","duration"]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(openfl.display.DisplayObject,["z","scaleX","scaleY","mouseX","mouseY","rotationX","rotationY","visible"],[flixel.util.FlxRect]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(openfl.geom.Point,null,[flixel.util.FlxPoint]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(openfl.geom.Rectangle,null,[flixel.util.FlxRect]));
-		flixel.system.debug.Tracker.addProfile(new flixel.system.debug.TrackerProfile(openfl.geom.Matrix,["a","b","c","d","tx","ty"]));
-	}
-};
 flixel.system.debug.Tracker.__super__ = flixel.system.debug.Watch;
 flixel.system.debug.Tracker.prototype = $extend(flixel.system.debug.Watch.prototype,{
-	_object: null
-	,destroy: function() {
-		flixel.FlxG.signals.stateSwitched.remove($bind(this,this.close));
-		flixel.system.debug.Tracker._numTrackerWindows--;
-		var x = this._object;
-		HxOverrides.remove(flixel.system.debug.Tracker.objectsBeingTracked,x);
-		this._object = null;
-		flixel.system.debug.Watch.prototype.destroy.call(this);
-	}
-	,findProfileByClass: function(ObjectClass) {
-		var _g = 0;
-		var _g1 = flixel.system.debug.Tracker.profiles;
-		while(_g < _g1.length) {
-			var profile = _g1[_g];
-			++_g;
-			if(profile.objectClass == ObjectClass) return profile;
-		}
-		return null;
-	}
-	,initWatchEntries: function(Profile) {
-		if(Profile != null) {
-			this.addExtensions(Profile);
-			this.addVariables(Profile.variables);
-		}
-	}
-	,addExtensions: function(Profile) {
-		if(Profile.extensions != null) {
-			var _g = 0;
-			var _g1 = Profile.extensions;
-			while(_g < _g1.length) {
-				var extension = _g1[_g];
-				++_g;
-				if(extension != null) {
-					var extensionProfile = this.findProfileByClass(extension);
-					if(extensionProfile != null) {
-						this.addVariables(extensionProfile.variables);
-						this.addExtensions(extensionProfile);
-					}
-				}
-			}
-		}
-	}
-	,addVariables: function(Variables) {
-		if(Variables != null) {
-			var _g = 0;
-			while(_g < Variables.length) {
-				var variable = Variables[_g];
-				++_g;
-				this.add(this._object,variable,variable);
-			}
-		}
-	}
-	,__class__: flixel.system.debug.Tracker
+	__class__: flixel.system.debug.Tracker
 });
 flixel.system.debug.TrackerProfile = function(ObjectClass,Variables,Extensions) {
 	this.objectClass = ObjectClass;
@@ -16705,347 +13810,6 @@ flixel.system.debug.TrackerProfile.prototype = {
 		return flixel.util.FlxStringUtil.getDebugString([flixel.util.LabelValuePair._pool.get().create("variables",this.variables),flixel.util.LabelValuePair._pool.get().create("extensions",this.extensions)]);
 	}
 	,__class__: flixel.system.debug.TrackerProfile
-};
-flixel.system.debug._VCR = {};
-flixel.system.debug._VCR.GraphicOpen = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._VCR.GraphicOpen.preload != null) {
-		this.image = flixel.system.debug._VCR.GraphicOpen.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._VCR.GraphicOpen.resourceName),flixel.system.debug._VCR.GraphicOpen.resourceType,function(b) {
-		if(flixel.system.debug._VCR.GraphicOpen.preload == null) flixel.system.debug._VCR.GraphicOpen.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._VCR.GraphicOpen"] = flixel.system.debug._VCR.GraphicOpen;
-flixel.system.debug._VCR.GraphicOpen.__name__ = ["flixel","system","debug","_VCR","GraphicOpen"];
-flixel.system.debug._VCR.GraphicOpen.preload = null;
-flixel.system.debug._VCR.GraphicOpen.__super__ = openfl.display.BitmapData;
-flixel.system.debug._VCR.GraphicOpen.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._VCR.GraphicOpen
-});
-flixel.system.debug._VCR.GraphicPause = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._VCR.GraphicPause.preload != null) {
-		this.image = flixel.system.debug._VCR.GraphicPause.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._VCR.GraphicPause.resourceName),flixel.system.debug._VCR.GraphicPause.resourceType,function(b) {
-		if(flixel.system.debug._VCR.GraphicPause.preload == null) flixel.system.debug._VCR.GraphicPause.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._VCR.GraphicPause"] = flixel.system.debug._VCR.GraphicPause;
-flixel.system.debug._VCR.GraphicPause.__name__ = ["flixel","system","debug","_VCR","GraphicPause"];
-flixel.system.debug._VCR.GraphicPause.preload = null;
-flixel.system.debug._VCR.GraphicPause.__super__ = openfl.display.BitmapData;
-flixel.system.debug._VCR.GraphicPause.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._VCR.GraphicPause
-});
-flixel.system.debug._VCR.GraphicRecordOff = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._VCR.GraphicRecordOff.preload != null) {
-		this.image = flixel.system.debug._VCR.GraphicRecordOff.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._VCR.GraphicRecordOff.resourceName),flixel.system.debug._VCR.GraphicRecordOff.resourceType,function(b) {
-		if(flixel.system.debug._VCR.GraphicRecordOff.preload == null) flixel.system.debug._VCR.GraphicRecordOff.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._VCR.GraphicRecordOff"] = flixel.system.debug._VCR.GraphicRecordOff;
-flixel.system.debug._VCR.GraphicRecordOff.__name__ = ["flixel","system","debug","_VCR","GraphicRecordOff"];
-flixel.system.debug._VCR.GraphicRecordOff.preload = null;
-flixel.system.debug._VCR.GraphicRecordOff.__super__ = openfl.display.BitmapData;
-flixel.system.debug._VCR.GraphicRecordOff.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._VCR.GraphicRecordOff
-});
-flixel.system.debug._VCR.GraphicRecordOn = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._VCR.GraphicRecordOn.preload != null) {
-		this.image = flixel.system.debug._VCR.GraphicRecordOn.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._VCR.GraphicRecordOn.resourceName),flixel.system.debug._VCR.GraphicRecordOn.resourceType,function(b) {
-		if(flixel.system.debug._VCR.GraphicRecordOn.preload == null) flixel.system.debug._VCR.GraphicRecordOn.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._VCR.GraphicRecordOn"] = flixel.system.debug._VCR.GraphicRecordOn;
-flixel.system.debug._VCR.GraphicRecordOn.__name__ = ["flixel","system","debug","_VCR","GraphicRecordOn"];
-flixel.system.debug._VCR.GraphicRecordOn.preload = null;
-flixel.system.debug._VCR.GraphicRecordOn.__super__ = openfl.display.BitmapData;
-flixel.system.debug._VCR.GraphicRecordOn.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._VCR.GraphicRecordOn
-});
-flixel.system.debug._VCR.GraphicRestart = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._VCR.GraphicRestart.preload != null) {
-		this.image = flixel.system.debug._VCR.GraphicRestart.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._VCR.GraphicRestart.resourceName),flixel.system.debug._VCR.GraphicRestart.resourceType,function(b) {
-		if(flixel.system.debug._VCR.GraphicRestart.preload == null) flixel.system.debug._VCR.GraphicRestart.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._VCR.GraphicRestart"] = flixel.system.debug._VCR.GraphicRestart;
-flixel.system.debug._VCR.GraphicRestart.__name__ = ["flixel","system","debug","_VCR","GraphicRestart"];
-flixel.system.debug._VCR.GraphicRestart.preload = null;
-flixel.system.debug._VCR.GraphicRestart.__super__ = openfl.display.BitmapData;
-flixel.system.debug._VCR.GraphicRestart.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._VCR.GraphicRestart
-});
-flixel.system.debug._VCR.GraphicStep = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._VCR.GraphicStep.preload != null) {
-		this.image = flixel.system.debug._VCR.GraphicStep.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._VCR.GraphicStep.resourceName),flixel.system.debug._VCR.GraphicStep.resourceType,function(b) {
-		if(flixel.system.debug._VCR.GraphicStep.preload == null) flixel.system.debug._VCR.GraphicStep.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._VCR.GraphicStep"] = flixel.system.debug._VCR.GraphicStep;
-flixel.system.debug._VCR.GraphicStep.__name__ = ["flixel","system","debug","_VCR","GraphicStep"];
-flixel.system.debug._VCR.GraphicStep.preload = null;
-flixel.system.debug._VCR.GraphicStep.__super__ = openfl.display.BitmapData;
-flixel.system.debug._VCR.GraphicStep.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._VCR.GraphicStep
-});
-flixel.system.debug._VCR.GraphicStop = function(width,height,transparent,fillRGBA,onload) {
-	if(fillRGBA == null) fillRGBA = -1;
-	if(transparent == null) transparent = true;
-	openfl.display.BitmapData.call(this,0,0,transparent,fillRGBA);
-	if(flixel.system.debug._VCR.GraphicStop.preload != null) {
-		this.image = flixel.system.debug._VCR.GraphicStop.preload;
-		width = this.image.width;
-		height = this.image.height;
-	} else this.__fromBase64(haxe.Resource.getString(flixel.system.debug._VCR.GraphicStop.resourceName),flixel.system.debug._VCR.GraphicStop.resourceType,function(b) {
-		if(flixel.system.debug._VCR.GraphicStop.preload == null) flixel.system.debug._VCR.GraphicStop.preload = b.image;
-		if(onload != null) onload(b);
-	});
-};
-$hxClasses["flixel.system.debug._VCR.GraphicStop"] = flixel.system.debug._VCR.GraphicStop;
-flixel.system.debug._VCR.GraphicStop.__name__ = ["flixel","system","debug","_VCR","GraphicStop"];
-flixel.system.debug._VCR.GraphicStop.preload = null;
-flixel.system.debug._VCR.GraphicStop.__super__ = openfl.display.BitmapData;
-flixel.system.debug._VCR.GraphicStop.prototype = $extend(openfl.display.BitmapData.prototype,{
-	__class__: flixel.system.debug._VCR.GraphicStop
-});
-flixel.system.debug.VCR = function(Debugger) {
-	this.runtime = 0;
-	this.restartBtn = Debugger.addButton(flixel.system.debug.ButtonAlignment.MIDDLE,new flixel.system.debug._VCR.GraphicRestart(0,0),flixel.FlxG.resetState);
-	this.playbackToggleBtn = Debugger.addButton(flixel.system.debug.ButtonAlignment.MIDDLE,new flixel.system.debug._VCR.GraphicPause(0,0),($_=flixel.FlxG.vcr,$bind($_,$_.pause)));
-	this.stepBtn = Debugger.addButton(flixel.system.debug.ButtonAlignment.MIDDLE,new flixel.system.debug._VCR.GraphicStep(0,0),$bind(this,this.onStep));
-};
-$hxClasses["flixel.system.debug.VCR"] = flixel.system.debug.VCR;
-flixel.system.debug.VCR.__name__ = ["flixel","system","debug","VCR"];
-flixel.system.debug.VCR.prototype = {
-	runtimeDisplay: null
-	,runtime: null
-	,playbackToggleBtn: null
-	,stepBtn: null
-	,restartBtn: null
-	,recordBtn: null
-	,openBtn: null
-	,onPause: function() {
-		this.playbackToggleBtn.upHandler = ($_=flixel.FlxG.vcr,$bind($_,$_.resume));
-		this.playbackToggleBtn.changeIcon(new flixel.system.debug.GraphicArrowRight(0,0));
-	}
-	,onResume: function() {
-		this.playbackToggleBtn.upHandler = ($_=flixel.FlxG.vcr,$bind($_,$_.pause));
-		this.playbackToggleBtn.changeIcon(new flixel.system.debug._VCR.GraphicPause(0,0));
-	}
-	,onStep: function() {
-		if(!flixel.FlxG.vcr.paused) flixel.FlxG.vcr.pause();
-		flixel.FlxG.vcr.stepRequested = true;
-	}
-	,__class__: flixel.system.debug.VCR
-};
-flixel.system.debug.WatchEntry = function(Y,NameWidth,ValueWidth,Obj,Field,Custom) {
-	this.quickWatch = false;
-	this.editing = false;
-	if(Obj == null && Field == null && Custom != null) this.quickWatch = true;
-	this.custom = Custom;
-	if(!this.quickWatch) {
-		this.object = Obj;
-		this.field = Field;
-		var tempArr = this.field.split(".");
-		var l = tempArr.length;
-		var tempObj = this.object;
-		var tempVarName = "";
-		var _g = 0;
-		while(_g < l) {
-			var i = _g++;
-			tempVarName = tempArr[i];
-			try {
-				Reflect.getProperty(tempObj,tempVarName);
-			} catch( e ) {
-				flixel.FlxG.log.error("Watch: " + Std.string(tempObj) + " does not have a field '" + tempVarName + "'");
-				tempVarName = null;
-				break;
-			}
-			if(i < l - 1) tempObj = Reflect.getProperty(tempObj,tempVarName);
-		}
-		this.object = tempObj;
-		this.field = tempVarName;
-	}
-	var fontName = flixel.system.FlxAssets.FONT_DEBUGGER;
-	var color = 16777215;
-	if(this.quickWatch) color = 10875373;
-	this._whiteText = new openfl.text.TextFormat(fontName,12,color);
-	this._blackText = new openfl.text.TextFormat(fontName,12,0);
-	this.nameDisplay = new openfl.text.TextField();
-	this.nameDisplay.set_y(Y);
-	this.nameDisplay.set_multiline(false);
-	this.nameDisplay.set_selectable(true);
-	this.nameDisplay.set_embedFonts(true);
-	this.nameDisplay.set_defaultTextFormat(this._whiteText);
-	this.valueDisplay = new openfl.text.TextField();
-	this.valueDisplay.set_y(Y);
-	this.valueDisplay.set_height(20);
-	this.valueDisplay.set_multiline(false);
-	this.valueDisplay.set_selectable(true);
-	this.valueDisplay.doubleClickEnabled = true;
-	if(!this.quickWatch) {
-		this.valueDisplay.addEventListener(openfl.events.KeyboardEvent.KEY_UP,$bind(this,this.onKeyUp));
-		this.valueDisplay.addEventListener(openfl.events.MouseEvent.MOUSE_UP,$bind(this,this.onMouseUp));
-	}
-	this.valueDisplay.set_background(false);
-	this.valueDisplay.set_backgroundColor(16777215);
-	this.valueDisplay.set_embedFonts(true);
-	this.valueDisplay.set_defaultTextFormat(this._whiteText);
-	this.updateWidth(NameWidth,ValueWidth);
-};
-$hxClasses["flixel.system.debug.WatchEntry"] = flixel.system.debug.WatchEntry;
-flixel.system.debug.WatchEntry.__name__ = ["flixel","system","debug","WatchEntry"];
-flixel.system.debug.WatchEntry.__interfaces__ = [flixel.interfaces.IFlxDestroyable];
-flixel.system.debug.WatchEntry.prototype = {
-	object: null
-	,field: null
-	,custom: null
-	,nameDisplay: null
-	,valueDisplay: null
-	,editing: null
-	,oldValue: null
-	,_whiteText: null
-	,_blackText: null
-	,quickWatch: null
-	,destroy: function() {
-		this.object = null;
-		this.oldValue = null;
-		this.nameDisplay = null;
-		this.field = null;
-		this.custom = null;
-		if(this.valueDisplay != null) {
-			this.valueDisplay.removeEventListener(openfl.events.MouseEvent.MOUSE_UP,$bind(this,this.onMouseUp));
-			this.valueDisplay.removeEventListener(openfl.events.KeyboardEvent.KEY_UP,$bind(this,this.onKeyUp));
-			this.valueDisplay = null;
-		}
-	}
-	,setY: function(Y) {
-		this.nameDisplay.set_y(Y);
-		this.valueDisplay.set_y(Y);
-	}
-	,updateWidth: function(NameWidth,ValueWidth) {
-		this.nameDisplay.set_width(NameWidth);
-		this.valueDisplay.set_width(ValueWidth);
-		if(this.custom != null) this.nameDisplay.set_text(this.custom); else if(this.field != null) {
-			this.nameDisplay.set_text("");
-			if(NameWidth > 120) this.nameDisplay.appendText((function($this) {
-				var $r;
-				var Obj = $this.object;
-				var cl;
-				if(js.Boot.__instanceof(Obj,Class)) cl = Obj; else cl = Type.getClass(Obj);
-				var s = Type.getClassName(cl);
-				if(s != null) {
-					s = StringTools.replace(s,"::",".");
-					var pos = s.lastIndexOf(".") + 1;
-					s = HxOverrides.substr(s,pos,null);
-				}
-				$r = s;
-				return $r;
-			}(this)) + ".");
-			this.nameDisplay.appendText(this.field);
-		}
-	}
-	,updateValue: function() {
-		if(this.editing || this.quickWatch) return false;
-		var property = Reflect.getProperty(this.object,this.field);
-		this.valueDisplay.set_text(Std.string(property));
-		return true;
-	}
-	,onMouseUp: function(FlashEvent) {
-		this.editing = true;
-		flixel.FlxG.keys.enabled = false;
-		this.oldValue = Reflect.getProperty(this.object,this.field);
-		this.valueDisplay.set_type(openfl.text.TextFieldType.INPUT);
-		this.valueDisplay.setTextFormat(this._blackText);
-		this.valueDisplay.set_background(true);
-	}
-	,onKeyUp: function(FlashEvent) {
-		if(FlashEvent.keyCode == 13 || FlashEvent.keyCode == 9 || FlashEvent.keyCode == 27) {
-			if(FlashEvent.keyCode == 27) this.cancel(); else this.submit();
-		}
-	}
-	,cancel: function() {
-		this.valueDisplay.set_text(this.oldValue.toString());
-		this.doneEditing();
-	}
-	,submit: function() {
-		var property = Reflect.getProperty(this.object,this.field);
-		if(js.Boot.__instanceof(property,flixel.util.FlxPoint)) {
-			var xString = this.valueDisplay.get_text().split(" |")[0];
-			xString = xString.substring(3,xString.length);
-			var xValue = Std.parseFloat(xString);
-			var yString = this.valueDisplay.get_text().split("| ")[1];
-			yString = yString.substring(3,yString.length);
-			var yValue = Std.parseFloat(yString);
-			if(!Math.isNaN(xValue)) property.x = xValue;
-			if(!Math.isNaN(yValue)) property.y = yValue;
-		} else Reflect.setProperty(this.object,this.field,this.valueDisplay.get_text());
-		this.doneEditing();
-	}
-	,toString: function() {
-		return flixel.util.FlxStringUtil.getDebugString([flixel.util.LabelValuePair.weak("object",(function($this) {
-			var $r;
-			var Obj = $this.object;
-			var cl;
-			if(js.Boot.__instanceof(Obj,Class)) cl = Obj; else cl = Type.getClass(Obj);
-			var s = Type.getClassName(cl);
-			if(s != null) {
-				s = StringTools.replace(s,"::",".");
-				var pos = s.lastIndexOf(".") + 1;
-				s = HxOverrides.substr(s,pos,null);
-			}
-			$r = s;
-			return $r;
-		}(this))),flixel.util.LabelValuePair._pool.get().create("field",this.field)]);
-	}
-	,doneEditing: function() {
-		this.valueDisplay.set_type(openfl.text.TextFieldType.DYNAMIC);
-		this.valueDisplay.setTextFormat(this._whiteText);
-		this.valueDisplay.set_defaultTextFormat(this._whiteText);
-		this.valueDisplay.set_background(false);
-		this.editing = false;
-		flixel.FlxG.keys.enabled = true;
-	}
-	,__class__: flixel.system.debug.WatchEntry
 };
 flixel.system.debug._Window = {};
 flixel.system.debug._Window.GraphicWindowHandle = function(width,height,transparent,fillRGBA,onload) {
@@ -19444,10 +16208,6 @@ flixel.tile.FlxTilemap.prototype = $extend(flixel.FlxObject.prototype,{
 	,_scaledTileWidth: null
 	,_scaledTileHeight: null
 	,_tileObjects: null
-	,_debugTileNotSolid: null
-	,_debugTilePartial: null
-	,_debugTileSolid: null
-	,_debugRect: null
 	,_startingIndex: null
 	,destroy: function() {
 		this._flashPoint = null;
@@ -19475,10 +16235,6 @@ flixel.tile.FlxTilemap.prototype = $extend(flixel.FlxObject.prototype,{
 		}
 		this._data = null;
 		this._rects = null;
-		this._debugRect = null;
-		this._debugTileNotSolid = null;
-		this._debugTilePartial = null;
-		this._debugTileSolid = null;
 		this.framesData = null;
 		this.set_cachedGraphics(null);
 		this.region = null;
@@ -19587,14 +16343,10 @@ flixel.tile.FlxTilemap.prototype = $extend(flixel.FlxObject.prototype,{
 			var i1 = _g2++;
 			this._tileObjects[i1] = new flixel.tile.FlxTile(this,i1,this._tileWidth,this._tileHeight,i1 >= DrawIndex,i1 >= CollideIndex?this.allowCollisions:0);
 		}
-		this._debugTileNotSolid = this.makeDebugTile(-16776961);
-		this._debugTilePartial = this.makeDebugTile(-16181);
-		this._debugTileSolid = this.makeDebugTile(-16744448);
 		this._scaledTileWidth = this._tileWidth * this.scale.x;
 		this._scaledTileHeight = this._tileHeight * this.scale.y;
 		this.set_width(this.widthInTiles * this._scaledTileWidth);
 		this.set_height(this.heightInTiles * this._scaledTileHeight);
-		this._debugRect = new openfl.geom.Rectangle(0,0,this._tileWidth,this._tileHeight);
 		this._rects = new Array();
 		flixel.util.FlxArrayUtil.setLength_openfl_geom_Rectangle(this._rects,this.totalTiles);
 		i = 0;
@@ -19607,8 +16359,6 @@ flixel.tile.FlxTilemap.prototype = $extend(flixel.FlxObject.prototype,{
 		this._randomChoices = randomChoices;
 		this._randomLambda = randomLambda;
 		if(this._randomIndices != null && (this._randomChoices == null || this._randomChoices.length == 0)) throw "You must provide valid 'randomChoices' if you wish to randomize tilemap indicies, please read documentation of 'setCustomTileMappings' function.";
-	}
-	,drawDebugOnCamera: function(Camera) {
 	}
 	,draw: function() {
 		var cameras = this.get_cameras();
@@ -19634,9 +16384,7 @@ flixel.tile.FlxTilemap.prototype = $extend(flixel.FlxObject.prototype,{
 			this._flashPoint.x = this.x - camera.scroll.x * this.scrollFactor.x + buffer.x;
 			this._flashPoint.y = this.y - camera.scroll.y * this.scrollFactor.y + buffer.y;
 			buffer.draw(camera,this._flashPoint,this.scale.x,this.scale.y);
-			flixel.FlxBasic._VISIBLECOUNT++;
 		}
-		if(flixel.FlxG["debugger"].drawDebug) this.drawDebug();
 	}
 	,getData: function(Simple) {
 		if(Simple == null) Simple = false;
@@ -20007,23 +16755,13 @@ flixel.tile.FlxTilemap.prototype = $extend(flixel.FlxObject.prototype,{
 		var column;
 		var columnIndex;
 		var tile;
-		var debugTile;
 		while(row < screenRows) {
 			columnIndex = rowIndex;
 			column = 0;
 			this._flashPoint.x = 0;
 			while(column < screenColumns) {
 				this._flashRect = this._rects[columnIndex];
-				if(this._flashRect != null) {
-					Buffer.pixels.copyPixels(this.cachedGraphics.bitmap,this._flashRect,this._flashPoint,null,null,true);
-					if(flixel.FlxG["debugger"].drawDebug && !this.ignoreDrawDebug) {
-						tile = this._tileObjects[this._data[columnIndex]];
-						if(tile != null) {
-							if(tile.allowCollisions <= 0) debugTile = this._debugTileNotSolid; else if(tile.allowCollisions != 4369) debugTile = this._debugTilePartial; else debugTile = this._debugTileSolid;
-							Buffer.pixels.copyPixels(debugTile,this._debugRect,this._flashPoint,null,null,true);
-						}
-					}
-				}
+				if(this._flashRect != null) Buffer.pixels.copyPixels(this.cachedGraphics.bitmap,this._flashRect,this._flashPoint,null,null,true);
 				this._flashPoint.x += this._tileWidth;
 				column++;
 				columnIndex++;
@@ -20034,20 +16772,6 @@ flixel.tile.FlxTilemap.prototype = $extend(flixel.FlxObject.prototype,{
 		}
 		Buffer.x = screenXInTiles * this._scaledTileWidth;
 		Buffer.y = screenYInTiles * this._scaledTileHeight;
-	}
-	,makeDebugTile: function(Color) {
-		var debugTile;
-		debugTile = new openfl.display.BitmapData(this._tileWidth,this._tileHeight,true,0);
-		var gfx = flixel.util.FlxSpriteUtil.flashGfx;
-		gfx.clear();
-		gfx.moveTo(0,0);
-		gfx.lineStyle(1,Color,0.5);
-		gfx.lineTo(this._tileWidth - 1,0);
-		gfx.lineTo(this._tileWidth - 1,this._tileHeight - 1);
-		gfx.lineTo(0,this._tileHeight - 1);
-		gfx.lineTo(0,0);
-		debugTile.draw(flixel.util.FlxSpriteUtil.flashGfxSprite);
-		return debugTile;
 	}
 	,simplifyPath: function(Points) {
 		var deltaPrevious;
@@ -20606,7 +17330,6 @@ flixel.tweens.misc.VarTween.prototype = $extend(flixel.tweens.FlxTween.prototype
 		this._properties = null;
 	}
 	,tween: function(object,properties,duration) {
-		if(object == null) throw "Cannot tween variables of an object that is null."; else if(properties == null) throw "Cannot tween null properties.";
 		this._object = object;
 		this._properties = properties;
 		this.duration = duration;
@@ -21128,299 +17851,6 @@ flixel.tweens.motion.QuadPath.prototype = $extend(flixel.tweens.motion.Motion.pr
 	,__class__: flixel.tweens.motion.QuadPath
 });
 flixel.ui = {};
-flixel.ui.FlxBar = function(x,y,direction,width,height,parentRef,variable,min,max,border) {
-	if(border == null) border = false;
-	if(max == null) max = 100;
-	if(min == null) min = 0;
-	if(variable == null) variable = "";
-	if(height == null) height = 10;
-	if(width == null) width = 100;
-	if(direction == null) direction = 1;
-	if(y == null) y = 0;
-	if(x == null) x = 0;
-	this.fixedPosition = true;
-	this.zeroOffset = new openfl.geom.Point();
-	flixel.FlxSprite.call(this,x,y);
-	this.barWidth = width;
-	this.barHeight = height;
-	this.makeGraphic(this.barWidth,this.barHeight,-1,true);
-	this.filledBarPoint = new openfl.geom.Point(0,0);
-	this.canvas = new openfl.display.BitmapData(width,height,true,0);
-	if(parentRef != null) {
-		this.parent = parentRef;
-		this.parentVariable = variable;
-	}
-	this.setFillDirection(direction);
-	this.setRange(min,max);
-	this.createFilledBar(-16756480,-16714752,border);
-	this.emptyKill = false;
-	this.updateBar();
-};
-$hxClasses["flixel.ui.FlxBar"] = flixel.ui.FlxBar;
-flixel.ui.FlxBar.__name__ = ["flixel","ui","FlxBar"];
-flixel.ui.FlxBar.__super__ = flixel.FlxSprite;
-flixel.ui.FlxBar.prototype = $extend(flixel.FlxSprite.prototype,{
-	canvas: null
-	,barType: null
-	,barWidth: null
-	,barHeight: null
-	,parent: null
-	,parentVariable: null
-	,fixedPosition: null
-	,positionOffset: null
-	,min: null
-	,max: null
-	,range: null
-	,pct: null
-	,value: null
-	,pxPerPercent: null
-	,emptyCallback: null
-	,emptyBar: null
-	,emptyBarRect: null
-	,emptyBarPoint: null
-	,emptyKill: null
-	,zeroOffset: null
-	,filledCallback: null
-	,filledBar: null
-	,filledBarRect: null
-	,filledBarPoint: null
-	,fillDirection: null
-	,fillHorizontal: null
-	,destroy: function() {
-		this.positionOffset = flixel.util.FlxDestroyUtil.put(this.positionOffset);
-		this.canvas.dispose();
-		this.canvas = null;
-		this.parent = null;
-		this.positionOffset = null;
-		this.emptyCallback = null;
-		this.emptyBarRect = null;
-		this.emptyBarPoint = null;
-		this.zeroOffset = null;
-		this.filledCallback = null;
-		this.filledBarRect = null;
-		this.filledBarPoint = null;
-		this.emptyBar = flixel.util.FlxDestroyUtil.dispose(this.emptyBar);
-		this.filledBar = flixel.util.FlxDestroyUtil.dispose(this.filledBar);
-		flixel.FlxSprite.prototype.destroy.call(this);
-	}
-	,trackParent: function(offsetX,offsetY) {
-		this.fixedPosition = false;
-		this.positionOffset = flixel.util.FlxPoint.get(offsetX,offsetY);
-		if(Object.prototype.hasOwnProperty.call(this.parent,"scrollFactor")) {
-			this.scrollFactor.set_x(this.parent.scrollFactor.x);
-			this.scrollFactor.set_y(this.parent.scrollFactor.y);
-		}
-	}
-	,setParent: function(parentRef,variable,track,offsetX,offsetY) {
-		if(offsetY == null) offsetY = 0;
-		if(offsetX == null) offsetX = 0;
-		if(track == null) track = false;
-		this.parent = parentRef;
-		this.parentVariable = variable;
-		if(track) this.trackParent(offsetX,offsetY);
-		this.updateValueFromParent();
-		this.updateBar();
-	}
-	,stopTrackingParent: function(posX,posY) {
-		this.fixedPosition = true;
-		this.set_x(posX);
-		this.set_y(posY);
-	}
-	,setCallbacks: function(onEmpty,onFilled,killOnEmpty) {
-		if(killOnEmpty == null) killOnEmpty = false;
-		if(onEmpty != null) this.emptyCallback = onEmpty;
-		if(onFilled != null) this.filledCallback = onFilled;
-		if(killOnEmpty) this.emptyKill = true;
-	}
-	,set_killOnEmpty: function(value) {
-		this.emptyKill = value;
-		return value;
-	}
-	,get_killOnEmpty: function() {
-		return this.emptyKill;
-	}
-	,setRange: function(min,max) {
-		if(max <= min) {
-			throw "FlxBar: max cannot be less than or equal to min";
-			return;
-		}
-		this.min = min;
-		this.max = max;
-		this.range = max - min;
-		this.pct = this.range / 100;
-		if(this.fillHorizontal) this.pxPerPercent = this.barWidth / 100; else this.pxPerPercent = this.barHeight / 100;
-		if(!Math.isNaN(this.value)) {
-			if(this.value > max) this.value = max;
-			if(this.value < min) this.value = min;
-		} else this.value = min;
-	}
-	,stats: null
-	,get_stats: function() {
-		var data = new haxe.ds.StringMap();
-		data.set("min",this.min);
-		data.set("max",this.max);
-		data.set("range",this.range);
-		data.set("pct",this.pct);
-		data.set("pxPerPct",this.pxPerPercent);
-		data.set("fillH",this.fillHorizontal);
-		return data;
-	}
-	,createFilledBar: function(empty,fill,showBorder,border) {
-		if(border == null) border = -1;
-		if(showBorder == null) showBorder = false;
-		this.barType = 1;
-		if(showBorder) {
-			this.emptyBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,border);
-			this.emptyBar.fillRect(new openfl.geom.Rectangle(1,1,this.barWidth - 2,this.barHeight - 2),empty);
-			this.filledBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,border);
-			this.filledBar.fillRect(new openfl.geom.Rectangle(1,1,this.barWidth - 2,this.barHeight - 2),fill);
-		} else {
-			this.emptyBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,empty);
-			this.filledBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,fill);
-		}
-		this.filledBarRect = new openfl.geom.Rectangle(0,0,this.filledBar.width,this.filledBar.height);
-		this.emptyBarRect = new openfl.geom.Rectangle(0,0,this.emptyBar.width,this.emptyBar.height);
-	}
-	,createGradientBar: function(empty,fill,chunkSize,rotation,showBorder,border) {
-		if(border == null) border = -1;
-		if(showBorder == null) showBorder = false;
-		if(rotation == null) rotation = 180;
-		if(chunkSize == null) chunkSize = 1;
-		this.barType = 2;
-		if(showBorder) {
-			this.emptyBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,border);
-			flixel.util.FlxGradient.overlayGradientOnBitmapData(this.emptyBar,this.barWidth - 2,this.barHeight - 2,empty,1,1,chunkSize,rotation);
-			this.filledBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,border);
-			flixel.util.FlxGradient.overlayGradientOnBitmapData(this.filledBar,this.barWidth - 2,this.barHeight - 2,fill,1,1,chunkSize,rotation);
-		} else {
-			this.emptyBar = flixel.util.FlxGradient.createGradientBitmapData(this.barWidth,this.barHeight,empty,chunkSize,rotation);
-			this.filledBar = flixel.util.FlxGradient.createGradientBitmapData(this.barWidth,this.barHeight,fill,chunkSize,rotation);
-		}
-		this.emptyBarRect = new openfl.geom.Rectangle(0,0,this.emptyBar.width,this.emptyBar.height);
-		this.filledBarRect = new openfl.geom.Rectangle(0,0,this.filledBar.width,this.filledBar.height);
-	}
-	,createImageBar: function(empty,fill,emptyBackground,fillBackground) {
-		if(fillBackground == null) fillBackground = -16711936;
-		if(emptyBackground == null) emptyBackground = -16777216;
-		var emptyGraphics = flixel.FlxG.bitmap.addWithSpaces(empty,0,0,1,1,false,null);
-		var filledGraphics = flixel.FlxG.bitmap.addWithSpaces(fill,0,0,1,1,false,null);
-		var emptyBitmapData;
-		if(emptyGraphics != null) emptyBitmapData = emptyGraphics.bitmap; else emptyBitmapData = null;
-		var fillBitmapData;
-		if(filledGraphics != null) fillBitmapData = filledGraphics.bitmap; else fillBitmapData = null;
-		this.barType = 3;
-		if(empty == null && fill == null) return;
-		if(empty != null && fill == null) {
-			this.emptyBar = emptyBitmapData;
-			this.emptyBarRect = new openfl.geom.Rectangle(0,0,this.emptyBar.width,this.emptyBar.height);
-			this.barWidth = this.emptyBarRect.width | 0;
-			this.barHeight = this.emptyBarRect.height | 0;
-			this.filledBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,fillBackground);
-			this.filledBarRect = new openfl.geom.Rectangle(0,0,this.barWidth,this.barHeight);
-		} else if(empty == null && fill != null) {
-			this.filledBar = fillBitmapData;
-			this.filledBarRect = new openfl.geom.Rectangle(0,0,this.filledBar.width,this.filledBar.height);
-			this.barWidth = this.filledBarRect.width | 0;
-			this.barHeight = this.filledBarRect.height | 0;
-			this.emptyBar = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,emptyBackground);
-			this.emptyBarRect = new openfl.geom.Rectangle(0,0,this.barWidth,this.barHeight);
-		} else if(empty != null && fill != null) {
-			this.emptyBar = emptyBitmapData;
-			this.emptyBarRect = new openfl.geom.Rectangle(0,0,this.emptyBar.width,this.emptyBar.height);
-			this.filledBar = fillBitmapData;
-			this.filledBarRect = new openfl.geom.Rectangle(0,0,this.filledBar.width,this.filledBar.height);
-			this.barWidth = this.emptyBarRect.width | 0;
-			this.barHeight = this.emptyBarRect.height | 0;
-		}
-		this.canvas = new openfl.display.BitmapData(this.barWidth,this.barHeight,true,0);
-		if(this.fillHorizontal) this.pxPerPercent = this.barWidth / 100; else this.pxPerPercent = this.barHeight / 100;
-	}
-	,setFillDirection: function(direction) {
-		if(direction == 1 || direction == 2 || direction == 5 || direction == 6) {
-			this.fillDirection = direction;
-			this.fillHorizontal = true;
-		} else if(direction == 3 || direction == 4 || direction == 7 || direction == 8) {
-			this.fillDirection = direction;
-			this.fillHorizontal = false;
-		}
-	}
-	,updateValueFromParent: function() {
-		this.updateValue(Reflect.getProperty(this.parent,this.parentVariable));
-	}
-	,updateValue: function(newValue) {
-		if(newValue > this.max) newValue = this.max;
-		if(newValue < this.min) newValue = this.min;
-		this.value = newValue;
-		if(this.value == this.min && this.emptyCallback != null) this.emptyCallback();
-		if(this.value == this.max && this.filledCallback != null) this.filledCallback();
-		if(this.value == this.min && this.emptyKill) this.kill();
-	}
-	,updateBar: function() {
-		if(this.fillHorizontal) this.filledBarRect.width = Std["int"](this.get_percent() * this.pxPerPercent); else this.filledBarRect.height = Std["int"](this.get_percent() * this.pxPerPercent);
-		this.canvas.copyPixels(this.emptyBar,this.emptyBarRect,this.zeroOffset);
-		if(this.get_percent() > 0) {
-			if(this.fillDirection == 1 || this.fillDirection == 3) {
-			} else if(this.fillDirection == 4) {
-				this.filledBarRect.y = this.barHeight - this.filledBarRect.height;
-				this.filledBarPoint.y = this.barHeight - this.filledBarRect.height;
-			} else if(this.fillDirection == 2) {
-				this.filledBarRect.x = this.barWidth - this.filledBarRect.width;
-				this.filledBarPoint.x = this.barWidth - this.filledBarRect.width;
-			} else if(this.fillDirection == 5) {
-				this.filledBarRect.x = this.barWidth / 2 - this.filledBarRect.width / 2 | 0;
-				this.filledBarPoint.x = this.barWidth / 2 - this.filledBarRect.width / 2 | 0;
-			} else if(this.fillDirection == 6) {
-				this.filledBarRect.width = Std["int"](100 - this.get_percent() * this.pxPerPercent);
-				this.filledBarPoint.x = (this.barWidth - this.filledBarRect.width) / 2 | 0;
-			} else if(this.fillDirection == 7) {
-				this.filledBarRect.y = this.barHeight / 2 - this.filledBarRect.height / 2 | 0;
-				this.filledBarPoint.y = this.barHeight / 2 - this.filledBarRect.height / 2 | 0;
-			} else if(this.fillDirection == 8) {
-				this.filledBarRect.height = Std["int"](100 - this.get_percent() * this.pxPerPercent);
-				this.filledBarPoint.y = (this.barHeight - this.filledBarRect.height) / 2 | 0;
-			}
-			this.canvas.copyPixels(this.filledBar,this.filledBarRect,this.filledBarPoint);
-		}
-		this.set_pixels(this.canvas);
-	}
-	,update: function() {
-		if(this.parent != null) {
-			if(Reflect.getProperty(this.parent,this.parentVariable) != this.value) {
-				this.updateValueFromParent();
-				this.updateBar();
-			}
-			if(this.fixedPosition == false) {
-				this.set_x(this.parent.x + this.positionOffset.x);
-				this.set_y(this.parent.y + this.positionOffset.y);
-			}
-		}
-		flixel.FlxSprite.prototype.update.call(this);
-	}
-	,get_percent: function() {
-		if(this.value > this.max) return 100;
-		return Math.floor(this.value / this.range * 100);
-	}
-	,set_percent: function(newPct) {
-		if(newPct >= 0 && newPct <= 100) {
-			this.updateValue(this.pct * newPct);
-			this.updateBar();
-		}
-		return newPct;
-	}
-	,set_currentValue: function(newValue) {
-		this.updateValue(newValue);
-		this.updateBar();
-		return newValue;
-	}
-	,get_currentValue: function() {
-		return this.value;
-	}
-	,toString: function() {
-		return flixel.util.FlxStringUtil.getDebugString([flixel.util.LabelValuePair._pool.get().create("min",this.min),flixel.util.LabelValuePair._pool.get().create("max",this.max),flixel.util.LabelValuePair._pool.get().create("range",this.range),flixel.util.LabelValuePair._pool.get().create("%",this.pct),flixel.util.LabelValuePair._pool.get().create("px/%",this.pxPerPercent),flixel.util.LabelValuePair._pool.get().create("value",this.value)]);
-	}
-	,__class__: flixel.ui.FlxBar
-	,__properties__: $extend(flixel.FlxSprite.prototype.__properties__,{set_currentValue:"set_currentValue",get_currentValue:"get_currentValue",set_percent:"set_percent",get_percent:"get_percent",get_stats:"get_stats",set_killOnEmpty:"set_killOnEmpty",get_killOnEmpty:"get_killOnEmpty"})
-});
 flixel.ui.FlxTypedButton = function(X,Y,OnClick) {
 	if(Y == null) Y = 0;
 	if(X == null) X = 0;
@@ -21480,10 +17910,6 @@ flixel.ui.FlxTypedButton.prototype = $extend(flixel.FlxSprite.prototype,{
 			this.label.set_cameras(this.get_cameras());
 			this.label.draw();
 		}
-	}
-	,drawDebug: function() {
-		flixel.FlxSprite.prototype.drawDebug.call(this);
-		if(this.label != null) this.label.drawDebug();
 	}
 	,updateButton: function() {
 		var overlapFound = false;
@@ -21783,6 +18209,15 @@ flixel.util.FlxAngle.get_TO_RAD = function() {
 flixel.util.FlxArrayUtil = function() { };
 $hxClasses["flixel.util.FlxArrayUtil"] = flixel.util.FlxArrayUtil;
 flixel.util.FlxArrayUtil.__name__ = ["flixel","util","FlxArrayUtil"];
+flixel.util.FlxArrayUtil.fastSplice_flixel_text_FlxTextFormat = function(array,element) {
+	var index = HxOverrides.indexOf(array,element,0);
+	if(index != -1) {
+		array[index] = array[array.length - 1];
+		array.pop();
+		return array;
+	}
+	return array;
+};
 flixel.util.FlxArrayUtil.setLength_flixel_system_replay_FrameRecord = function(array,newLength) {
 	if(newLength < 0) return;
 	var oldLength = array.length;
@@ -21822,14 +18257,10 @@ flixel.util.FlxArrayUtil.setLength_flixel_input_keyboard_FlxKey = function(array
 		}
 	}
 };
-flixel.util.FlxArrayUtil.fastSplice_flixel_text_FlxTextFormat = function(array,element) {
-	var index = HxOverrides.indexOf(array,element,0);
-	if(index != -1) {
-		array[index] = array[array.length - 1];
-		array.pop();
-		return array;
-	}
-	return array;
+flixel.util.FlxArrayUtil.getRandom_flixel_group_FlxTypedGroup_T = function(Objects,StartIndex,EndIndex) {
+	if(EndIndex == null) EndIndex = 0;
+	if(StartIndex == null) StartIndex = 0;
+	return flixel.util.FlxRandom.getObject_getRandom_T(Objects,StartIndex,EndIndex);
 };
 flixel.util.FlxArrayUtil.setLength_Int = function(array,newLength) {
 	if(newLength < 0) return;
@@ -21876,29 +18307,6 @@ flixel.util.FlxArrayUtil.fastSplice_flixel_util_FlxTimer = function(array,elemen
 	return array;
 };
 flixel.util.FlxArrayUtil.fastSplice_flixel_util_FlxPath = function(array,element) {
-	var index = HxOverrides.indexOf(array,element,0);
-	if(index != -1) {
-		array[index] = array[array.length - 1];
-		array.pop();
-		return array;
-	}
-	return array;
-};
-flixel.util.FlxArrayUtil.getRandom_flixel_group_FlxTypedGroup_T = function(Objects,StartIndex,EndIndex) {
-	if(EndIndex == null) EndIndex = 0;
-	if(StartIndex == null) StartIndex = 0;
-	return flixel.util.FlxRandom.getObject_getRandom_T(Objects,StartIndex,EndIndex);
-};
-flixel.util.FlxArrayUtil.fastSplice_flixel_system_debug_WatchEntry = function(array,element) {
-	var index = HxOverrides.indexOf(array,element,0);
-	if(index != -1) {
-		array[index] = array[array.length - 1];
-		array.pop();
-		return array;
-	}
-	return array;
-};
-flixel.util.FlxArrayUtil.fastSplice_flixel_system_debug_Window = function(array,element) {
 	var index = HxOverrides.indexOf(array,element,0);
 	if(index != -1) {
 		array[index] = array[array.length - 1];
@@ -22011,173 +18419,6 @@ flixel.util._FlxBitmapDataPool.FlxBitmapDataPoolNode.prototype = {
 	,prev: null
 	,next: null
 	,__class__: flixel.util._FlxBitmapDataPool.FlxBitmapDataPoolNode
-};
-flixel.util.FlxBitmapUtil = function() { };
-$hxClasses["flixel.util.FlxBitmapUtil"] = flixel.util.FlxBitmapUtil;
-flixel.util.FlxBitmapUtil.__name__ = ["flixel","util","FlxBitmapUtil"];
-flixel.util.FlxBitmapUtil.merge = function(sourceBitmapData,sourceRect,destBitmapData,destPoint,redMultiplier,greenMultiplier,blueMultiplier,alphaMultiplier) {
-	if(destPoint.x >= destBitmapData.width || destPoint.y >= destBitmapData.height || sourceRect.x >= sourceBitmapData.width || sourceRect.y >= sourceBitmapData.height || sourceRect.x + sourceRect.width <= 0 || sourceRect.y + sourceRect.height <= 0) return;
-	while(sourceRect.x + sourceRect.width > sourceBitmapData.width || sourceRect.y + sourceRect.height > sourceBitmapData.height || sourceRect.x < 0 || sourceRect.y < 0 || destPoint.x < 0 || destPoint.y < 0) {
-		if(sourceRect.x + sourceRect.width > sourceBitmapData.width) sourceRect.width = sourceBitmapData.width - sourceRect.x;
-		if(sourceRect.y + sourceRect.height > sourceBitmapData.height) sourceRect.height = sourceBitmapData.height - sourceRect.y;
-		if(sourceRect.x < 0) {
-			destPoint.x = destPoint.x - sourceRect.x;
-			sourceRect.width = sourceRect.width + sourceRect.x;
-			sourceRect.x = 0;
-		}
-		if(sourceRect.y < 0) {
-			destPoint.y = destPoint.y - sourceRect.y;
-			sourceRect.height = sourceRect.height + sourceRect.y;
-			sourceRect.y = 0;
-		}
-		if(destPoint.x >= destBitmapData.width || destPoint.y >= destBitmapData.height) return;
-		if(destPoint.x < 0) {
-			sourceRect.x = sourceRect.x - destPoint.x;
-			sourceRect.width = sourceRect.width + destPoint.x;
-			destPoint.x = 0;
-		}
-		if(destPoint.y < 0) {
-			sourceRect.y = sourceRect.y - destPoint.y;
-			sourceRect.height = sourceRect.height + destPoint.y;
-			destPoint.y = 0;
-		}
-	}
-	if(sourceRect.width <= 0 || sourceRect.height <= 0) return;
-	var startSourceX = Math.round(sourceRect.x);
-	var startSourceY = Math.round(sourceRect.y);
-	var width = Math.round(sourceRect.width);
-	var height = Math.round(sourceRect.height);
-	var sourceX = startSourceX;
-	var sourceY = startSourceY;
-	var destX = Math.round(destPoint.x);
-	var destY = Math.round(destPoint.y);
-	var currX = destX;
-	var currY = destY;
-	var sourceColor;
-	var destColor;
-	var sourceRed;
-	var sourceGreen;
-	var sourceBlue;
-	var sourceAlpha;
-	var destRed;
-	var destGreen;
-	var destBlue;
-	var destAlpha;
-	var resultRed;
-	var resultGreen;
-	var resultBlue;
-	var resultAlpha;
-	var resultColor = 0;
-	destBitmapData.lock();
-	var _g = 0;
-	while(_g < width) {
-		var i = _g++;
-		var _g1 = 0;
-		while(_g1 < height) {
-			var j = _g1++;
-			sourceX = startSourceX + i;
-			sourceY = startSourceY + j;
-			currX = destX + i;
-			currY = destY + j;
-			sourceColor = sourceBitmapData.getPixel32(sourceX,sourceY);
-			destColor = destBitmapData.getPixel32(currX,currY);
-			sourceRed = sourceColor >> 16 & 255;
-			sourceGreen = sourceColor >> 8 & 255;
-			sourceBlue = sourceColor & 255;
-			sourceAlpha = sourceColor >> 24 & 255;
-			destRed = destColor >> 16 & 255;
-			destGreen = destColor >> 8 & 255;
-			destBlue = destColor & 255;
-			destAlpha = destColor >> 24 & 255;
-			resultRed = (sourceRed * redMultiplier + destRed * (256 - redMultiplier)) / 256 | 0;
-			resultGreen = (sourceGreen * greenMultiplier + destGreen * (256 - greenMultiplier)) / 256 | 0;
-			resultBlue = (sourceBlue * blueMultiplier + destBlue * (256 - blueMultiplier)) / 256 | 0;
-			resultAlpha = (sourceAlpha * alphaMultiplier + destAlpha * (256 - alphaMultiplier)) / 256 | 0;
-			resultColor = resultAlpha << 24 | resultRed << 16 | resultGreen << 8 | resultBlue;
-			destBitmapData.setPixel32(currX,currY,resultColor);
-		}
-	}
-	destBitmapData.unlock();
-};
-flixel.util.FlxBitmapUtil.mergeColorComponent = function(source,dest,multiplier) {
-	return (source * multiplier + dest * (256 - multiplier)) / 256 | 0;
-};
-flixel.util.FlxBitmapUtil.compare = function(Bitmap1,Bitmap2) {
-	if(Bitmap1 == Bitmap2) return 0;
-	if(Bitmap1.width != Bitmap2.width) return -3; else if(Bitmap1.height != Bitmap2.height) return -4; else {
-		var width = Bitmap1.width;
-		var height = Bitmap1.height;
-		var result = new openfl.display.BitmapData(width,height,true,0);
-		var identical = true;
-		var pixel1;
-		var pixel2;
-		var rgb1;
-		var rgb2;
-		var r1;
-		var g1;
-		var b1;
-		var r2;
-		var g2;
-		var b2;
-		var alpha1;
-		var alpha2;
-		var resultAlpha;
-		var resultColor;
-		var resultR;
-		var resultG;
-		var resultB;
-		var diffR;
-		var diffG;
-		var diffB;
-		var diffA;
-		var checkAlpha = true;
-		var _g = 0;
-		while(_g < width) {
-			var i = _g++;
-			var _g1 = 0;
-			while(_g1 < height) {
-				var j = _g1++;
-				pixel1 = Bitmap1.getPixel32(i,j);
-				pixel2 = Bitmap2.getPixel32(i,j);
-				if(pixel1 != pixel2) {
-					identical = false;
-					checkAlpha = true;
-					rgb1 = pixel1 & 16777215;
-					rgb2 = pixel2 & 16777215;
-					if(rgb1 != rgb2) {
-						r1 = pixel1 >> 16 & 255;
-						g1 = pixel1 >> 8 & 255;
-						b1 = pixel1 & 255;
-						r2 = pixel2 >> 16 & 255;
-						g2 = pixel2 >> 8 & 255;
-						b2 = pixel2 & 255;
-						diffR = r1 - r2;
-						diffG = g1 - g2;
-						diffB = b1 - b2;
-						if(diffR >= 0) resultR = diffR; else resultR = 256 + diffR;
-						if(diffG >= 0) resultG = diffG; else resultG = 256 + diffG;
-						if(diffB >= 0) resultB = diffB; else resultB = 256 + diffB;
-						resultColor = -16777216 | resultR << 16 | resultG << 8 | resultB;
-						result.setPixel32(i,j,resultColor);
-						checkAlpha = false;
-					}
-					if(checkAlpha) {
-						alpha1 = pixel1 >> 24 & 255;
-						alpha2 = pixel2 >> 24 & 255;
-						diffA = alpha1 - alpha2;
-						if(diffA >= 0) resultAlpha = diffA; else resultAlpha = 256 + diffA;
-						resultColor = resultAlpha | 16711680 | 65280 | 255;
-						if(alpha1 != alpha2) result.setPixel32(i,j,resultColor);
-					}
-				}
-			}
-		}
-		if(!identical) return result;
-	}
-	return 0;
-};
-flixel.util.FlxBitmapUtil.getMemorySize = function(bitmapData) {
-	return bitmapData.width * bitmapData.height * 4;
 };
 flixel.util.FlxCollision = function() { };
 $hxClasses["flixel.util.FlxCollision"] = flixel.util.FlxCollision;
@@ -22471,7 +18712,7 @@ flixel.util.FlxColorUtil.getComplementHarmony = function(Color) {
 flixel.util.FlxColorUtil.getAnalogousHarmony = function(Color,Threshold) {
 	if(Threshold == null) Threshold = 30;
 	var hsv = flixel.util.FlxColorUtil.RGBtoHSV(Color);
-	if(Threshold > 359 || Threshold < 0) flixel.FlxG.log.advanced("FlxColor Warning: Invalid threshold given to getAnalogousHarmony()",flixel.system.debug.LogStyle.WARNING,true);
+	if(Threshold > 359 || Threshold < 0) null;
 	var warmer = flixel.util.FlxMath.wrapValue(hsv.hue | 0,359 - Threshold,359);
 	var colder = flixel.util.FlxMath.wrapValue(hsv.hue | 0,Threshold,359);
 	return { color1 : Color, color2 : flixel.util.FlxColorUtil.HSVtoARGB(warmer,1.0,1.0), color3 : flixel.util.FlxColorUtil.HSVtoARGB(colder,1.0,1.0), hue1 : hsv.hue | 0, hue2 : warmer, hue3 : colder};
@@ -22479,11 +18720,10 @@ flixel.util.FlxColorUtil.getAnalogousHarmony = function(Color,Threshold) {
 flixel.util.FlxColorUtil.getSplitComplementHarmony = function(Color,Threshold) {
 	if(Threshold == null) Threshold = 30;
 	var hsv = flixel.util.FlxColorUtil.RGBtoHSV(Color);
-	if(Threshold >= 359 || Threshold <= 0) flixel.FlxG.log.advanced("FlxColor: Invalid threshold given to getSplitComplementHarmony()",flixel.system.debug.LogStyle.WARNING,true);
+	if(Threshold >= 359 || Threshold <= 0) null;
 	var opposite = flixel.util.FlxMath.wrapValue(hsv.hue | 0,180,359);
 	var warmer = flixel.util.FlxMath.wrapValue(hsv.hue | 0,opposite - Threshold,359);
 	var colder = flixel.util.FlxMath.wrapValue(hsv.hue | 0,opposite + Threshold,359);
-	flixel.FlxG.log.advanced("hue: " + hsv.hue + " opposite: " + opposite + " warmer: " + warmer + " colder: " + colder,flixel.system.debug.LogStyle.NOTICE);
 	return { color1 : Color, color2 : flixel.util.FlxColorUtil.HSVtoARGB(warmer,hsv.saturation,hsv.value), color3 : flixel.util.FlxColorUtil.HSVtoARGB(colder,hsv.saturation,hsv.value), hue1 : hsv.hue | 0, hue2 : warmer, hue3 : colder};
 };
 flixel.util.FlxColorUtil.getTriadicHarmony = function(Color) {
@@ -22544,7 +18784,7 @@ flixel.util.FlxColorUtil.HSVtoARGB = function(H,S,V,Alpha) {
 			result = Alpha << 24 | (V * 255 | 0) << 16 | (p * 255 | 0) << 8 | (q * 255 | 0);
 			break;
 		default:
-			flixel.FlxG.log.advanced("FlxColor: HSVtoARGB: Unknown color",flixel.system.debug.LogStyle.WARNING,true);
+			null;
 		}
 	}
 	return result;
@@ -22648,109 +18888,6 @@ flixel.util.FlxDestroyUtil.putArray = function(array) {
 flixel.util.FlxDestroyUtil.dispose = function(Bitmap) {
 	if(Bitmap != null) Bitmap.dispose();
 	return null;
-};
-flixel.util.FlxGradient = function() { };
-$hxClasses["flixel.util.FlxGradient"] = flixel.util.FlxGradient;
-flixel.util.FlxGradient.__name__ = ["flixel","util","FlxGradient"];
-flixel.util.FlxGradient.createGradientMatrix = function(width,height,colors,chunkSize,rotation) {
-	if(rotation == null) rotation = 90;
-	if(chunkSize == null) chunkSize = 1;
-	var gradientMatrix = new openfl.geom.Matrix();
-	var rot = rotation * (Math.PI / 180);
-	if(chunkSize == 1) gradientMatrix.createGradientBox(width,height,rot,0,0); else gradientMatrix.createGradientBox(width,height / chunkSize,rot,0,0);
-	var alpha = new Array();
-	var _g1 = 0;
-	var _g = colors.length;
-	while(_g1 < _g) {
-		var ai = _g1++;
-		alpha.push(flixel.util.FlxColorUtil.getAlphaFloat(colors[ai]));
-	}
-	var ratio = new Array();
-	if(colors.length == 2) {
-		ratio[0] = 0;
-		ratio[1] = 255;
-	} else {
-		var spread = 255 / (colors.length - 1) | 0;
-		ratio.push(0);
-		var _g11 = 1;
-		var _g2 = colors.length - 1;
-		while(_g11 < _g2) {
-			var ri = _g11++;
-			ratio.push(ri * spread);
-		}
-		ratio.push(255);
-	}
-	return { matrix : gradientMatrix, alpha : alpha, ratio : ratio};
-};
-flixel.util.FlxGradient.createGradientArray = function(width,height,colors,chunkSize,rotation,interpolate) {
-	if(interpolate == null) interpolate = true;
-	if(rotation == null) rotation = 90;
-	if(chunkSize == null) chunkSize = 1;
-	var data = flixel.util.FlxGradient.createGradientBitmapData(width,height,colors,chunkSize,rotation,interpolate);
-	var result = new Array();
-	var _g1 = 0;
-	var _g = data.height;
-	while(_g1 < _g) {
-		var y = _g1++;
-		result.push(data.getPixel32(0,y));
-	}
-	return result;
-};
-flixel.util.FlxGradient.createGradientFlxSprite = function(width,height,colors,chunkSize,rotation,interpolate) {
-	if(interpolate == null) interpolate = true;
-	if(rotation == null) rotation = 90;
-	if(chunkSize == null) chunkSize = 1;
-	var data = flixel.util.FlxGradient.createGradientBitmapData(width,height,colors,chunkSize,rotation,interpolate);
-	var dest = new flixel.FlxSprite();
-	dest.set_pixels(data);
-	return dest;
-};
-flixel.util.FlxGradient.createGradientBitmapData = function(width,height,colors,chunkSize,rotation,interpolate) {
-	if(interpolate == null) interpolate = true;
-	if(rotation == null) rotation = 90;
-	if(chunkSize == null) chunkSize = 1;
-	if(width < 1) width = 1;
-	if(height < 1) height = 1;
-	var gradient = flixel.util.FlxGradient.createGradientMatrix(width,height,colors,chunkSize,rotation);
-	var s = new openfl.display.Shape();
-	if(interpolate) s.get_graphics().beginGradientFill(openfl.display.GradientType.LINEAR,colors,gradient.alpha,gradient.ratio,gradient.matrix,openfl.display.SpreadMethod.PAD,openfl.display.InterpolationMethod.RGB,0); else s.get_graphics().beginGradientFill(openfl.display.GradientType.LINEAR,colors,gradient.alpha,gradient.ratio,gradient.matrix,openfl.display.SpreadMethod.PAD,openfl.display.InterpolationMethod.LINEAR_RGB,0);
-	if(chunkSize == 1) s.get_graphics().drawRect(0,0,width,height); else s.get_graphics().drawRect(0,0,width,height / chunkSize);
-	var data = new openfl.display.BitmapData(width,height,true,0);
-	if(chunkSize == 1) data.draw(s); else {
-		var tempBitmap = new openfl.display.Bitmap(new openfl.display.BitmapData(width,height / chunkSize | 0,true,0));
-		tempBitmap.bitmapData.draw(s);
-		tempBitmap.set_scaleY(chunkSize);
-		var sM = new openfl.geom.Matrix();
-		sM.scale(tempBitmap.get_scaleX(),tempBitmap.get_scaleY());
-		data.draw(tempBitmap,sM);
-	}
-	return data;
-};
-flixel.util.FlxGradient.overlayGradientOnFlxSprite = function(dest,width,height,colors,destX,destY,chunkSize,rotation,interpolate) {
-	if(interpolate == null) interpolate = true;
-	if(rotation == null) rotation = 90;
-	if(chunkSize == null) chunkSize = 1;
-	if(destY == null) destY = 0;
-	if(destX == null) destX = 0;
-	if(width > dest.get_width()) width = Std["int"](dest.get_width());
-	if(height > dest.get_height()) height = Std["int"](dest.get_height());
-	var source = flixel.util.FlxGradient.createGradientFlxSprite(width,height,colors,chunkSize,rotation,interpolate);
-	dest.stamp(source,destX,destY);
-	source.destroy();
-	return dest;
-};
-flixel.util.FlxGradient.overlayGradientOnBitmapData = function(dest,width,height,colors,destX,destY,chunkSize,rotation,interpolate) {
-	if(interpolate == null) interpolate = true;
-	if(rotation == null) rotation = 90;
-	if(chunkSize == null) chunkSize = 1;
-	if(destY == null) destY = 0;
-	if(destX == null) destX = 0;
-	if(width > dest.width) width = dest.width;
-	if(height > dest.height) height = dest.height;
-	var source = flixel.util.FlxGradient.createGradientBitmapData(width,height,colors,chunkSize,rotation,interpolate);
-	dest.copyPixels(source,new openfl.geom.Rectangle(0,0,source.width,source.height),new openfl.geom.Point(destX,destY),null,null,true);
-	source.dispose();
-	return dest;
 };
 flixel.util.FlxMath = function() { };
 $hxClasses["flixel.util.FlxMath"] = flixel.util.FlxMath;
@@ -26426,7 +22563,6 @@ lime._backend.html5.HTML5Renderer.prototype = {
 				this.parent.context = lime.graphics.RenderContext.CANVAS(this.parent.window.backend.canvas.getContext("2d"));
 				this.parent.type = lime.graphics.RendererType.CANVAS;
 			} else {
-				webgl = WebGLDebugUtils.makeDebugContext(webgl);
 				lime.graphics.opengl.GL.context = webgl;
 				this.parent.context = lime.graphics.RenderContext.OPENGL(lime.graphics.opengl.GL.context);
 				this.parent.type = lime.graphics.RendererType.OPENGL;
@@ -37245,29 +33381,24 @@ openfl.Memory._setPositionTemporarily = function(position,action) {
 	return value;
 };
 openfl.Memory.getByte = function(addr) {
-	if(addr < 0 || addr + 1 > openfl.Memory.len) throw "Bad address";
 	return openfl.Memory.gcRef.data.getInt8(addr);
 };
 openfl.Memory.getDouble = function(addr) {
-	if(addr < 0 || addr + 8 > openfl.Memory.len) throw "Bad address";
 	return openfl.Memory._setPositionTemporarily(addr,function() {
 		return openfl.Memory.gcRef.readDouble();
 	});
 };
 openfl.Memory.getFloat = function(addr) {
-	if(addr < 0 || addr + 4 > openfl.Memory.len) throw "Bad address";
 	return openfl.Memory._setPositionTemporarily(addr,function() {
 		return openfl.Memory.gcRef.readFloat();
 	});
 };
 openfl.Memory.getI32 = function(addr) {
-	if(addr < 0 || addr + 4 > openfl.Memory.len) throw "Bad address";
 	return openfl.Memory._setPositionTemporarily(addr,function() {
 		return openfl.Memory.gcRef.readInt();
 	});
 };
 openfl.Memory.getUI16 = function(addr) {
-	if(addr < 0 || addr + 2 > openfl.Memory.len) throw "Bad address";
 	return openfl.Memory._setPositionTemporarily(addr,function() {
 		return openfl.Memory.gcRef.readUnsignedShort();
 	});
@@ -37277,29 +33408,24 @@ openfl.Memory.select = function(inBytes) {
 	if(inBytes != null) openfl.Memory.len = inBytes.length; else openfl.Memory.len = 0;
 };
 openfl.Memory.setByte = function(addr,v) {
-	if(addr < 0 || addr + 1 > openfl.Memory.len) throw "Bad address";
 	openfl.Memory.gcRef.data.setUint8(addr,v);
 };
 openfl.Memory.setDouble = function(addr,v) {
-	if(addr < 0 || addr + 8 > openfl.Memory.len) throw "Bad address";
 	openfl.Memory._setPositionTemporarily(addr,function() {
 		openfl.Memory.gcRef.writeDouble(v);
 	});
 };
 openfl.Memory.setFloat = function(addr,v) {
-	if(addr < 0 || addr + 4 > openfl.Memory.len) throw "Bad address";
 	openfl.Memory._setPositionTemporarily(addr,function() {
 		openfl.Memory.gcRef.writeFloat(v);
 	});
 };
 openfl.Memory.setI16 = function(addr,v) {
-	if(addr < 0 || addr + 2 > openfl.Memory.len) throw "Bad address";
 	openfl.Memory._setPositionTemporarily(addr,function() {
 		openfl.Memory.gcRef.writeUnsignedShort(v);
 	});
 };
 openfl.Memory.setI32 = function(addr,v) {
-	if(addr < 0 || addr + 4 > openfl.Memory.len) throw "Bad address";
 	openfl.Memory._setPositionTemporarily(addr,function() {
 		openfl.Memory.gcRef.writeInt(v);
 	});
@@ -52137,32 +48263,6 @@ openfl.system.SecurityDomain.__name__ = ["openfl","system","SecurityDomain"];
 openfl.system.SecurityDomain.prototype = {
 	__class__: openfl.system.SecurityDomain
 };
-openfl.system.System = function() { };
-$hxClasses["openfl.system.System"] = openfl.system.System;
-openfl.system.System.__name__ = ["openfl","system","System"];
-openfl.system.System.__properties__ = {get_vmVersion:"get_vmVersion",get_totalMemory:"get_totalMemory"}
-openfl.system.System.totalMemory = null;
-openfl.system.System.vmVersion = null;
-openfl.system.System.exit = function(code) {
-	lime.system.System.exit(code);
-};
-openfl.system.System.gc = function() {
-};
-openfl.system.System.pause = function() {
-	throw "System.pause is currently not supported for HTML5";
-};
-openfl.system.System.resume = function() {
-	throw "System.resume is currently not supported for HTML5";
-};
-openfl.system.System.setClipboard = function(string) {
-	throw "System.setClipboard is currently not supported for HTML5";
-};
-openfl.system.System.get_totalMemory = function() {
-	return 0;
-};
-openfl.system.System.get_vmVersion = function() {
-	return "1.0.0";
-};
 openfl.text.AntiAliasType = $hxClasses["openfl.text.AntiAliasType"] = { __ename__ : ["openfl","text","AntiAliasType"], __constructs__ : ["ADVANCED","NORMAL"] };
 openfl.text.AntiAliasType.ADVANCED = ["ADVANCED",0];
 openfl.text.AntiAliasType.ADVANCED.toString = $estr;
@@ -53994,210 +50094,6 @@ openfl.ui.MultitouchInputMode.TOUCH_POINT.__enum__ = openfl.ui.MultitouchInputMo
 openfl.ui.MultitouchInputMode.GESTURE = ["GESTURE",2];
 openfl.ui.MultitouchInputMode.GESTURE.toString = $estr;
 openfl.ui.MultitouchInputMode.GESTURE.__enum__ = openfl.ui.MultitouchInputMode;
-var weapons = {};
-weapons.Bullet = function(X,Y,Speed,Direction,Damage,Range) {
-	this.RANGE = 128;
-	flixel.FlxSprite.call(this,X,Y);
-	this.ogX = X;
-	this.ogY = Y;
-	this.speed = Speed;
-	this.direction = Direction;
-	this.damage = Damage;
-	this.RANGE = Range;
-	this.loadGraphic("assets/images/coin.png",true,6,6,true,"bullet");
-	this.resolveVelocity();
-};
-$hxClasses["weapons.Bullet"] = weapons.Bullet;
-weapons.Bullet.__name__ = ["weapons","Bullet"];
-weapons.Bullet.__super__ = flixel.FlxSprite;
-weapons.Bullet.prototype = $extend(flixel.FlxSprite.prototype,{
-	speed: null
-	,direction: null
-	,damage: null
-	,ogX: null
-	,ogY: null
-	,RANGE: null
-	,update: function() {
-		if(Math.abs(this.x - this.ogX) > this.RANGE || Math.abs(this.y - this.ogY) > this.RANGE) this.kill();
-		if((this.touching & 4369) > 0) this.kill();
-		flixel.FlxSprite.prototype.update.call(this);
-	}
-	,destroy: function() {
-		this.set_alive(false);
-		flixel.FlxSprite.prototype.destroy.call(this);
-	}
-	,getDamage: function() {
-		return this.damage;
-	}
-	,resolveVelocity: function() {
-		if(this.direction == 1) this.velocity.set_x(-this.speed);
-		if(this.direction == 16) this.velocity.set_x(this.speed);
-		if(this.direction == 4096) this.velocity.set_y(this.speed);
-		if(this.direction == 256) this.velocity.set_y(-this.speed);
-		if(this.direction == 4097) {
-			this.velocity.set_x(-this.speed * 0.707);
-			this.velocity.set_y(this.speed * 0.707);
-		}
-		if(this.direction == 257) {
-			this.velocity.set_x(-this.speed * 0.707);
-			this.velocity.set_y(-this.speed * 0.707);
-		}
-		if(this.direction == 4112) {
-			this.velocity.set_x(this.speed * 0.707);
-			this.velocity.set_y(this.speed * 0.707);
-		}
-		if(this.direction == 272) {
-			this.velocity.set_x(this.speed * 0.707);
-			this.velocity.set_y(-this.speed * 0.707);
-		}
-	}
-	,__class__: weapons.Bullet
-});
-weapons.WeaponTemplate = function(Name,Bullets) {
-	this.unlocked = true;
-	this.palette = 0;
-	this.bulletCount = 0;
-	this.maxBullets = 3;
-	this.juiceCost = 0;
-	this.juiceMax = 9;
-	this.juice = 9;
-	this.damage = 1000;
-	this.name = Name;
-	this.bulletArray = Bullets;
-};
-$hxClasses["weapons.WeaponTemplate"] = weapons.WeaponTemplate;
-weapons.WeaponTemplate.__name__ = ["weapons","WeaponTemplate"];
-weapons.WeaponTemplate.prototype = {
-	name: null
-	,bulletArray: null
-	,damage: null
-	,juice: null
-	,juiceMax: null
-	,juiceCost: null
-	,maxBullets: null
-	,bulletCount: null
-	,palette: null
-	,unlocked: null
-	,shoot: function(_player) {
-		if(_player.bulletArray.countLiving() < this.maxBullets && this.juice > 0) {
-			_player.postShotTimer = .33;
-			if(_player.flipX) {
-				var newBullet = new weapons.Bullet(_player.x - 8,_player.y + 8,500,1,_player.damage + this.damage,256);
-				_player.bulletArray.add(newBullet);
-			} else {
-				var newBullet1 = new weapons.Bullet(_player.x + 8,_player.y + 8,500,16,_player.damage + this.damage,256);
-				_player.bulletArray.add(newBullet1);
-			}
-			this.juice -= this.juiceCost;
-		}
-	}
-	,__class__: weapons.WeaponTemplate
-};
-weapons.EightWayWeapon = function(Name,Bullets) {
-	weapons.WeaponTemplate.call(this,Name,Bullets);
-	this.damage = 5;
-	this.juice = 9;
-	this.juiceMax = 9;
-	this.juiceCost = 1;
-	this.palette = 1;
-};
-$hxClasses["weapons.EightWayWeapon"] = weapons.EightWayWeapon;
-weapons.EightWayWeapon.__name__ = ["weapons","EightWayWeapon"];
-weapons.EightWayWeapon.__super__ = weapons.WeaponTemplate;
-weapons.EightWayWeapon.prototype = $extend(weapons.WeaponTemplate.prototype,{
-	shoot: function(_player) {
-		if(_player.bulletArray.countLiving() < _player.maxBullets && this.juice >= this.juiceCost) {
-			_player.postShotTimer = .33;
-			var direction = 0;
-			if(flixel.FlxG.keys.checkKeyStatus(["LEFT","A"],1)) direction += 1; else if(flixel.FlxG.keys.checkKeyStatus(["RIGHT","D"],1)) direction += 16;
-			if(flixel.FlxG.keys.checkKeyStatus(["UP","W"],1)) direction += 256; else if(flixel.FlxG.keys.checkKeyStatus(["DOWN","S"],1)) direction += 4096;
-			if(direction == 0) direction = _player.facing;
-			var newBullet = new weapons.Bullet(_player.x + 8,_player.y + 8,500,direction,_player.damage + this.damage,256);
-			_player.bulletArray.add(newBullet);
-			this.juice -= this.juiceCost;
-		}
-	}
-	,__class__: weapons.EightWayWeapon
-});
-weapons.MagentaWeapon = function(Name,Bullets) {
-	weapons.WeaponTemplate.call(this,Name,Bullets);
-	this.damage = 5;
-	this.juice = 9;
-	this.juiceMax = 9;
-	this.juiceCost = 1;
-};
-$hxClasses["weapons.MagentaWeapon"] = weapons.MagentaWeapon;
-weapons.MagentaWeapon.__name__ = ["weapons","MagentaWeapon"];
-weapons.MagentaWeapon.__super__ = weapons.WeaponTemplate;
-weapons.MagentaWeapon.prototype = $extend(weapons.WeaponTemplate.prototype,{
-	shoot: function(_player) {
-		if(_player.bulletArray.countLiving() < _player.maxBullets && this.juice >= this.juiceCost) {
-			_player.postShotTimer = .33;
-			if(_player.flipX) {
-				var newBullet = new weapons.Bullet(_player.x - 8,_player.y + 8,500,1,_player.damage + this.damage,256);
-				var newBullet2 = new weapons.Bullet(_player.x - 8,_player.y + 16,500,256,_player.damage + this.damage,256);
-				_player.bulletArray.add(newBullet);
-				_player.bulletArray.add(newBullet2);
-			} else {
-				var newBullet1 = new weapons.Bullet(_player.x + 8,_player.y + 8,500,256,_player.damage + this.damage,256);
-				var newBullet21 = new weapons.Bullet(_player.x + 8,_player.y + 16,500,16,_player.damage + this.damage,256);
-				_player.bulletArray.add(newBullet1);
-				_player.bulletArray.add(newBullet21);
-			}
-			this.juice -= this.juiceCost;
-		}
-	}
-	,__class__: weapons.MagentaWeapon
-});
-weapons.Spore = function(X,Y,Speed,Direction,Damage,Range,Palette) {
-	this.gravity = -30;
-	weapons.Bullet.call(this,X,Y,Speed,Direction,Damage,Range);
-	this.loadGraphic("assets/images/spore.png",true,16,16,true);
-	this.acceleration.set_y(-this.gravity);
-	var clrBfr = Palette * 4;
-	this.animation.add("spore",[clrBfr,1 + clrBfr,2 + clrBfr,3 + clrBfr,2 + clrBfr,3 + clrBfr,2 + clrBfr,3 + clrBfr,2 + clrBfr,3 + clrBfr],2,true);
-};
-$hxClasses["weapons.Spore"] = weapons.Spore;
-weapons.Spore.__name__ = ["weapons","Spore"];
-weapons.Spore.__super__ = weapons.Bullet;
-weapons.Spore.prototype = $extend(weapons.Bullet.prototype,{
-	gravity: null
-	,update: function() {
-		this.animation.play("spore");
-		weapons.Bullet.prototype.update.call(this);
-	}
-	,__class__: weapons.Spore
-});
-weapons.YellowWeapon = function(Name,Bullets) {
-	weapons.WeaponTemplate.call(this,Name,Bullets);
-	this.damage = 5;
-	this.juice = 9;
-	this.juiceMax = 9;
-	this.juiceCost = 1;
-};
-$hxClasses["weapons.YellowWeapon"] = weapons.YellowWeapon;
-weapons.YellowWeapon.__name__ = ["weapons","YellowWeapon"];
-weapons.YellowWeapon.__super__ = weapons.WeaponTemplate;
-weapons.YellowWeapon.prototype = $extend(weapons.WeaponTemplate.prototype,{
-	shoot: function(_player) {
-		if(_player.bulletArray.countLiving() < this.maxBullets && this.juice >= this.juiceCost) {
-			_player.postShotTimer = .33;
-			if(_player.flipX) {
-				var newBullet = new weapons.Bullet(_player.x - 8,_player.y + 8,500,1,_player.damage + this.damage,256);
-				var newBullet2 = new weapons.Bullet(_player.x - 8,_player.y + 16,500,1,_player.damage + this.damage,256);
-				_player.bulletArray.add(newBullet);
-				_player.bulletArray.add(newBullet2);
-			} else {
-				var newBullet1 = new weapons.Bullet(_player.x + 8,_player.y + 8,500,16,_player.damage + this.damage,256);
-				var newBullet21 = new weapons.Bullet(_player.x + 8,_player.y + 16,500,16,_player.damage + this.damage,256);
-				_player.bulletArray.add(newBullet1);
-				_player.bulletArray.add(newBullet21);
-			}
-			this.juice -= this.juiceCost;
-		}
-	}
-	,__class__: weapons.YellowWeapon
-});
 function $iterator(o) { if( o instanceof Array ) return function() { return HxOverrides.iter(o); }; return typeof(o.iterator) == 'function' ? $bind(o,o.iterator) : o.iterator; }
 var $_, $fid = 0;
 function $bind(o,m) { if( m == null ) return null; if( m.__id__ == null ) m.__id__ = $fid++; var f; if( o.hx__closures__ == null ) o.hx__closures__ = {}; else f = o.hx__closures__[m.__id__]; if( f == null ) { f = function(){ return f.method.apply(f.scope, arguments); }; f.scope = o; f.method = m; o.hx__closures__[m.__id__] = f; } return f; }
@@ -54235,7 +50131,7 @@ Xml.Comment = "comment";
 Xml.DocType = "doctype";
 Xml.ProcessingInstruction = "processingInstruction";
 Xml.Document = "document";
-haxe.Resource.content = [{ name : "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicStop", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQUlBQUFBbXp1QnhBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUJkSlJFRlVlTnBpL1AvL1B3TmV3RGlxZ3VvcUFBSU1BUHVuSU92R0dSTk9BQUFBQUVsRlRrU3VRbUND"},{ name : "__ASSET__:bitmap_flixel_system_debug__Stats_GraphicMinimizeButton", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFvQUFBQUtDQVlBQUFDTk1zKzlBQUFBQm1KTFIwUUEvd0QvQVArZ3ZhZVRBQUFBQ1hCSVdYTUFBQUIyQUFBQWRnRk9leVlJQUFBQUIzUkpUVVVIM2dNSkNSMDFlRVp4RlFBQUFEOUpSRUZVR05OaitQLy8vMzhHQWdDdUJzWkExb1JOREM2QnJoQ1p6L1QvLzM4bWZOWVQ0elR5QUNPNjhZeU1qRmpGbUpBbHNacUVMRWRVOEJBYjRBQzRjRkxGc3d1SW53QUFBQUJKUlU1RXJrSmdnZz09"},{ name : "LIME_font_flixel_system_PreloaderFont", data : "b3k0Omhhc2hxOjExMW95Njphc2NlbnRkMTAyNHk0OmRhdGFhZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoeTY6X3dpZHRoZDc2OHk0OnhNYXhkNjQweTQ6eE1pbmQweTQ6eU1heGQ2NDB5NDp5TWluZDB5NzpfaGVpZ2h0ZDY0MHk3OmxlYWRpbmdkMjU2eTc6ZGVzY2VudGQyNTZ5ODpjaGFyQ29kZWkxMTF5MTU6bGVmdHNpZGVCZWFyaW5nZDB5MTI6YWR2YW5jZVdpZHRoZDc2OHk4OmNvbW1hbmRzYWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyM29SMWQxMDI0UjJhZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDI1NmQzODRkNTEyZDI1NmQ1MTJkMjU2ZDExNTJkMGQxMTUyZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQzODRkMTAyNGQzODRkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTEwb1IxZDEwMjRSMmFkNjQwZDUxMmQ2NDBkMTAyNGQzODRkMTAyNGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDEwMjRkMGQxMDI0ZDBkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyMm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkyMjJSMTJkMFIxM2QzODRSMTRhaGc6MTA5b1IxZDEwMjRSMmFkNzY4ZDUxMmQ2NDBkNTEyZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkMTAyNGQwZDEwMjRkMGQzODRkODk2ZDM4NGQ4OTZkNTEyZDEwMjRkNTEyZDEwMjRkMTAyNGQ3NjhkMTAyNGQ3NjhkNTEyaFIzZDExNTJSNGQxMDI0UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTEwOVIxMmQwUjEzZDExNTJSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjIxb1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDc2OGQzODRkNzY4ZDUxMmQ2NDBkNTEyZDY0MGQ2NDBkNTEyZDY0MGQ1MTJkMTAyNGQyNTZkMTAyNGQyNTZkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDM4NGQyNTZkMzg0ZDI1NmQ1MTJkNTEyZDUxMmQ1MTJkMzg0ZDM4NGQzODRkMzg0ZDI1NmhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjIxUjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMDhvUjFkMTAyNFIyYWQwZDEyOGQyNTZkMTI4ZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTA4UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJoZzoyMjBvUjFkMTAyNFIyYWQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDM4NGQ4OTZkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDI1NmQzODRkMjU2ZDg5NmQzODRkODk2aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEwN29SMWQxMDI0UjJhZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQyNTZkMTI4ZDI1NmQ1MTJkMzg0ZDUxMmQzODRkMzg0ZDY0MGQzODRkNjQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkMzg0ZDY0MGQzODRkNzY4ZDUxMmQ3NjhkNTEyZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMjU2ZDg5NmQyNTZkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTA3UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxOW9SMWQxMDI0UjJhZDI1NmQyNTdkMjU2ZDg5NmQzODRkODk2ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMTlSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMDZvUjFkMTAyNFIyYWQzODRkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMGQxMDI0ZDEyOGQxMDI0ZDEyOGQzODRkMzg0ZDM4NGQzODRkMTAyNGQyNTZkMTAyNGQyNTZkMTE1MmQwZDExNTJkMGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxMDZSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmhnOjIxOG9SMWQxMDI0UjJhZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQyNTZkMzg1ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTVkMzg0ZDI1NmQzODVoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIxOFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTA1b1IxZDEwMjRSMmFkMjU2ZDI1NmQwZDI1NmQwZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMGQxMDI0ZDBkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0aFIzZDM4NFI0ZDI1NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxMDVSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJoZzoyMTdvUjFkMTAyNFIyYWQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTVkMzg0ZDI1NmQzODVkMjU2ZDg5NmQzODRkODk2ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjE3UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTA0b1IxZDEwMjRSMmFkMzg0ZDEwMjRkMzg0ZDUxMmQyNTZkNTEyZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQyNTZkMTI4ZDI1NmQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEwNFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxNm9SMWQxMDI0UjJhZDI1NmQyNTZkMjU2ZDUxMmQzODRkNTEyZDM4NGQzODRkNTEyZDM4NGQ1MTJkMjU2ZDI1NmQyNTZkNTEyZDY0MGQzODRkNjQwZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDUxMmQ4OTZkNTEyZDY0MGQxMjhkMTI4ZDc2OGQxMjhkNzY4ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDBkMTAyNGQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIxNlIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaGc6MTAzb1IxZDEwMjRSMmFkMjU2ZDc2OGQzODRkNzY4ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNzY4ZDEyOGQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMTI4ZDg5NmQxMjhkNzY4ZDBkNzY4ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ2NDBkMzg0ZDY0MGQxMDI0ZDUxMmQxMDI0ZDUxMmQxMTUyZDEyOGQxMTUyZDEyOGQxMDI0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMDNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxNW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkyMTVSMTJkMFIxM2QzODRSMTRhaGc6MTAyb1IxZDEwMjRSMmFkMzg0ZDM4NGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDEwMjRkMGQxMDI0ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEwMlIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxNG9SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkNTEyZDg5NmQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDY0MGQzODRkNjQwZDUxMmQ3NjhkNTEyZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjE0UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTAxb1IxZDEwMjRSMmFkMjU2ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDY0MGQ1MTJkNjQwZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkMFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpMTAxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMTNvUjFkMTAyNFIyYWQ2NDBkMTI4ZDc2OGQxMjhkNzY4ZDI1NmQ2NDBkMjU2ZDY0MGQxMjhkNTEyZDg5NmQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQ1MTJkNzY4ZDUxMmQ3NjhkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDg5NlI0ZDc2OFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMTNSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEwMG9SMWQxMDI0UjJhZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDUxMmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQzODRkMzg0ZDM4NGQxMjhkNjQwZDEyOGQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTAwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjEyb1IxZDEwMjRSMmFkNTEyZDg5NmQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDI1NmQyNTdkMjU2ZDM4NGQ1MTJkMzg0ZDUxMmQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQzODRkNzY4ZDM4NGQ3NjhkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDg5NlI0ZDc2OFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMTJSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6OTlvUjFkMTAyNFIyYWQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZoUjNkNjQwUjRkNTEyUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTk5UjEyZDBSMTNkNjQwUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjExb1IxZDEwMjRSMmFkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDUxMmQ4OTZkNTEyZDUxMmQyNTZkNTEyZDI1NmQ4OTZkNTEyZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMzg0ZDI1NmQzODRkMzg0ZDY0MGQzODRkNjQwZDUxMmQ3NjhkNTEyZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjExUjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjk4b1IxZDEwMjRSMmFkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQzODRkNTEyZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQwZDEwMjRkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDUxMmQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTk4UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjEwb1IxZDEwMjRSMmFkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQ4OTZkNTEyZDUxMmQyNTZkNTEyZDI1NmQ4OTZkNTEyZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQzODRkMzg0ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDUxMmQ3NjhkNTEyZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjEwUjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjk3b1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ1MTJkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkMFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpOTdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwOW9SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQxMjhkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQzODRkNjQwZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOWQyNTZkMTI4ZDI1NWQxMjhkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkMTAyNGQ1MTJkMTAyNGQ1MTJkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDI1NmQxMjhkMjU2ZDEyOGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwOVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjk2b1IxZDEwMjRSMmFkMTI4ZDI1NmQwZDI1NmQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDEyOGQzODRkMTI4ZDI1NmhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkNjQwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk5NlIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJoZzoyMDhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMjA4UjEyZDBSMTNkMzg0UjE0YWhnOjk1b1IxZDEwMjRSMmFkMGQ4OTZkNzY4ZDg5NmQ3NjhkMTAyNGQwZDEwMjRkMGQ4OTZoUjNkNzY4UjRkNzY4UjVkMFI2ZDEyOFI3ZDBSOGQxMjhSOWQyNTZSMTBkMjU2UjExaTk1UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJoZzoyMDdvUjFkMTAyNFIyYWQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDBkMjU2ZDBkMTI4ZDEyOGQxMDI0ZDEyOGQzODRkMzg0ZDM4NGQzODRkMTAyNGQxMjhkMTAyNGhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjA3UjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmhnOjk0b1IxZDEwMjRSMmFkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQzODRkMjU2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkMzg0ZDEyOGQzODRkMTI4ZDUxMmQwZDUxMmQwZDI1NmhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkNTEyUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk5NFIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwNm9SMWQxMDI0UjJhZDI1NmQzODRkMjU2ZDI1N2QyNTdkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQyNTZkMzg0ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQwZDEwMjRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMDZSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaGc6OTNvUjFkMTAyNFIyYWQzODRkMTE1MmQwZDExNTJkMGQxMDI0ZDEyOGQxMDI0ZDEyOGQyNTZkMGQyNTZkMGQxMjhkMzg0ZDEyOGQzODRkMTE1MmhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpOTNSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaGc6MjA1b1IxZDEwMjRSMmFkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDBkMTAyNGQwZDI1NmQxMjhkMjU2ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwNVIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJoZzo5Mm9SMWQxMDI0UjJhZDEyOGQ1MTJkMGQ1MTJkMGQxMjUuNWQxMjhkMTI1LjVkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkMTAyNGQyNTZkMTAyNGQyNTZkNzcwLjVkMTI4ZDc3MC41ZDEyOGQ1MTJoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5OC41UjdkMFI4ZDg5OC41UjlkMjU2UjEwZDI1NlIxMWk5MlIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwNG9SMWQxMDI0UjJhZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwNFIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJoZzo5MW9SMWQxMDI0UjJhZDBkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQxMDI0ZDM4NGQxMDI0ZDM4NGQxMTUyZDBkMTE1MmQwZDEyOGhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpOTFSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaGc6MjAzb1IxZDEwMjRSMmFkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkMTI4ZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMGQxMDI0ZDBkMzg0ZDY0MGQzODRkNjQwZDUxMmQyNTZkNTEyZDI1NmQ2NDBkNTEyZDY0MGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjAzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo5MG9SMWQxMDI0UjJhZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQ2NDBkMTI4ZDY0MGQxMjhkNTEyZDI1NmQ1MTJkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMGQyNTZkMGQxMjhkNjQwZDEyOGQ2NDBkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk5MFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMDJvUjFkMTAyNFIyYWQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMGQxMDI0ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTZkMjU2ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjAyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODlvUjFkMTAyNFIyYWQyNTZkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQwZDM4NGQwZDEyOGQyNTZkMTI4ZDI1NmQzODRkNTEyZDM4NGQ1MTJkMTI4ZDc2OGQxMjhkNzY4ZDM4NGQ2NDBkMzg0ZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkMTAyNGQyNTZkMTAyNGQyNTZkNTEyaFIzZDg5NlI0ZDc2OFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk4OVIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjAxb1IxZDEwMjRSMmFkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDUxMmQ2NDBkNTEyZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDUxMmQ2NDBoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwMVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjg4b1IxZDEwMjRSMmFkMGQxMDI0ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQyNTZkNjQwZDI1NmQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMTI4ZDI1NmQxMjhkMjU2ZDM4NGQ1MTJkMzg0ZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkMzg0ZDY0MGQzODRkNjQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkNjQwZDY0MGQ2NDBkNzY4ZDc2OGQ3NjhkNzY4ZDEwMjRkNTEyZDEwMjRkNTEyZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODhSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwMG9SMWQxMDI0UjJhZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMGQxMDI0ZDBkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ1MTJkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMDBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4N29SMWQxMDI0UjJhZDY0MGQxMjhkODk2ZDEyOGQ4OTZkNjQwZDc2OGQ2NDBkNzY4ZDEwMjRkNTEyZDEwMjRkNTEyZDg5NmQzODRkODk2ZDM4NGQxMDI0ZDEyOGQxMDI0ZDEyOGQ2NDBkMGQ2NDBkMGQxMjhkMjU2ZDEyOGQyNTZkNTEyZDM4NGQ1MTJkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTI4aFIzZDEwMjRSNGQ4OTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODdSMTJkMFIxM2QxMDI0UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5OW9SMWQxMDI0UjJhZDI1NmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDY0MGQxMjhkNjQwZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQzODRkMTAyNGQzODRkMTE1MmQyNTZkMTE1MmQyNTZkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTk5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4Nm9SMWQxMDI0UjJhZDI1NmQ3NjhkMTI4ZDc2OGQxMjhkNTEyZDBkNTEyZDBkMTI4ZDI1NmQxMjhkMjU2ZDUxMmQ1MTJkNTEyZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkNTEyZDY0MGQ1MTJkNjQwZDc2OGQ1MTJkNzY4ZDUxMmQxMDI0ZDI1NmQxMDI0ZDI1NmQ3NjhoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTg2UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxOThvUjFkMTAyNFIyYWQyNTZkNTEyZDM4NGQ1MTJkMzg0ZDM4NGQyNTZkMzg0ZDI1NmQ1MTJkMjU2ZDEyOGQ4OTZkMTI4ZDg5NmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDc2OGQ1MTJkNzY4ZDY0MGQ2NDBkNjQwZDY0MGQ4OTZkODk2ZDg5NmQ4OTZkMTAyNGQzODRkMTAyNGQzODRkNjQwZDI1NmQ2NDBkMjU2ZDEwMjRkMGQxMDI0ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTZkMjU2ZDI1NmQxMjhoUjNkMTAyNFI0ZDg5NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOThSMTJkMFIxM2QxMDI0UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4NW9SMWQxMDI0UjJhZDM4NGQ4OTZkMzg0ZDEyOGQ2NDBkMTI4ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMTI4ZDI1NmQxMjhkMjU2ZDg5NmQzODRkODk2aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk4NVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5N29SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQyNTZkMjU3ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODRvUjFkMTAyNFIyYWQ3NjhkMTI4ZDc2OGQyNTZkNTEyZDI1NmQ1MTJkMTAyNGQyNTZkMTAyNGQyNTZkMjU2ZDBkMjU2ZDBkMTI4ZDc2OGQxMjhoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTg0UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE5Nm9SMWQxMDI0UjJhZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTZSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4M29SMWQxMDI0UjJhZDBkODk2ZDI1NmQ4OTZkMjU2ZDY0MGQxMjhkNjQwZDEyOGQ1MTJkMGQ1MTJkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQyNTZkMjU2ZDI1NmQ1MTJkMzg0ZDUxMmQzODRkNjQwZDUxMmQ2NDBkNTEyZDg5NmQzODRkODk2ZDM4NGQxMDI0ZDBkMTAyNGQwZDg5NmhSM2Q2NDBSNGQ1MTJSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODNSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTk1b1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQxMjhkMjU3ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMGQzODRkMGQyNTZkMTI3ZDI1NmQxMjhkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4Mm9SMWQxMDI0UjJhZDM4NGQ2NDBkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQ2NDBkMzg0ZDY0MGQ2NDBkODk2ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDY0MGQ1MTJkNjQwZDUxMmQ4OTZkNjQwZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODJSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5NG9SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQyNTZkMjU3ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTRSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODFvUjFkMTAyNFIyYWQzODRkODk2ZDM4NGQ3NjhkNTEyZDc2OGQ1MTJkMjU2ZDI1NmQyNTZkMjU2ZDg5NmQzODRkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDY0MGQxMjhkNjQwZDI1NmQ3NjhkMjU2ZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQ3NjhkMTAyNGQ3NjhkMTE1MmQ1MTJkMTE1MmQ1MTJkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODFSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTkzb1IxZDEwMjRSMmFkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQyNTZkMTAyNGQwZDEwMjRkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODBvUjFkMTAyNFIyYWQzODRkNjQwZDM4NGQyNTZkMjU2ZDI1NmQyNTZkNjQwZDM4NGQ2NDBkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDY0MGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQxMjhkNTEyZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxOTJvUjFkMTAyNFIyYWQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQzODRkMTAyNGQzODRkNzY4ZDI1NmQ3NjhkMjU2ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE5MlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo3OW9SMWQxMDI0UjJhZDUxMmQ4OTZkNTEyZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkNTEyZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNzY4ZDI1NmQ3NjhkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTc5UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5MW9SMWQxMDI0UjJhZDUxMmQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQyNTZkNjQwZDI1NmQzODRkNTEyZDM4NGQ1MTJkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTFSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo3OG9SMWQxMDI0UjJhZDY0MGQxMDI0ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDUxMmQ1MTJkNTEyZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkMTAyNGQ2NDBkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNzhSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTkwb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE5MFIxMmQwUjEzZDM4NFIxNGFoZzo3N29SMWQxMDI0UjJhZDY0MGQ2NDBkNTEyZDY0MGQ1MTJkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDUxMmQ1MTJkNTEyZDUxMmQzODRkNjQwZDM4NGQ2NDBkMjU2ZDc2OGQyNTZkNzY4ZDEyOGQ4OTZkMTI4ZDg5NmQxMDI0ZDY0MGQxMDI0ZDY0MGQ2NDBoUjNkMTAyNFI0ZDg5NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk3N1IxMmQwUjEzZDEwMjRSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxODlvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTg5UjEyZDBSMTNkMzg0UjE0YWhnOjc2b1IxZDEwMjRSMmFkMGQxMjhkMjU2ZDEyOGQyNTZkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMGQxMDI0ZDBkMTI4aFIzZDY0MFI0ZDUxMlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk3NlIxMmQwUjEzZDY0MFIxNGFpMWkyaTJpMmkyaTJpMmhnOjE4OG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxODhSMTJkMFIxM2QzODRSMTRhaGc6NzVvUjFkMTAyNFIyYWQ1MTJkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQyNTZkMTI4ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDUxMmQyNTZkNTEyZDEyOGQ3NjhkMTI4ZDc2OGQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDUxMmQzODRkNTEyZDM4NGQ2NDBkNTEyZDY0MGQ1MTJkNzY4ZDY0MGQ3NjhkNjQwZDg5NmQ3NjhkODk2ZDc2OGQxMDI0ZDUxMmQxMDI0ZDUxMmQ4OTZoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTc1UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxODdvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTg3UjEyZDBSMTNkMzg0UjE0YWhnOjc0b1IxZDEwMjRSMmFkMGQxMDI0ZDBkODk2ZDI1NmQ4OTZkMjU2ZDEyOGQ1MTJkMTI4ZDUxMmQ4OTZkMzg0ZDg5NmQzODRkMTAyNGQwZDEwMjRoUjNkNjQwUjRkNTEyUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTc0UjEyZDBSMTNkNjQwUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE4Nm9SMWQxMDI0UjJhZDI1NmQzODRkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQyNTZkMzg0ZDI1NmQzODRkMjU2ZDUxMmQxMjhkNTEyZDEyOGQzODRkMGQzODRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDI1NmQzODRkMGQ2NDBkMzg0ZDY0MGQzODRkNzY4ZDBkNzY4ZDBkNjQwaFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QyNTZSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE4NlIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMWkyaTJpMmkyaGc6NzNvUjFkMTAyNFIyYWQwZDEwMjRkMGQxMjhkMjU2ZDEyOGQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTczUjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJoZzoxODVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTg1UjEyZDBSMTNkMzg0UjE0YWhnOjcyb1IxZDEwMjRSMmFkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDM4NGQzODRkMzg0ZDEyOGQ2NDBkMTI4ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkMTAyNGQwZDEwMjRkMGQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTcyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTg0b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE4NFIxMmQwUjEzZDM4NFIxNGFoZzo3MW9SMWQxMDI0UjJhZDEyOGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDI1NmQyNTZkMjU2ZDg5NmQzODRkODk2ZDM4NGQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNzFSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTgzb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE4M1IxMmQwUjEzZDM4NFIxNGFoZzo3MG9SMWQxMDI0UjJhZDUxMmQzODRkNTEyZDUxMmQyNTZkNTEyZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDUxMmQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTcwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxODJvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTgyUjEyZDBSMTNkMzg0UjE0YWhnOjY5b1IxZDEwMjRSMmFkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDBkMTAyNGQwZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDUxMmQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTgxb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE4MVIxMmQwUjEzZDM4NFIxNGFoZzo2OG9SMWQxMDI0UjJhZDM4NGQ4OTZkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkMzg0ZDg5NmQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMGQxMDI0ZDBkMTI4ZDUxMmQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY4UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJoZzoxODBvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTgwUjEyZDBSMTNkMzg0UjE0YWhnOjY3b1IxZDEwMjRSMmFkMTI4ZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkMjU2ZDI1NmQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY3UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTc5b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE3OVIxMmQwUjEzZDM4NFIxNGFoZzo2Nm9SMWQxMDI0UjJhZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDM4NGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQzODRkODk2ZDM4NGQ1MTJkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMGQxMDI0ZDBkMTI4ZDUxMmQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY2UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTc4UjEyZDBSMTNkMzg0UjE0YWhnOjY1b1IxZDEwMjRSMmFkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkMjU2ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkMjU2ZDI1NmQyNTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY1UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTFpMmkyaTJpMmhnOjE3N29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzdSMTJkMFIxM2QzODRSMTRhaGc6NjRvUjFkMTAyNFIyYWQyNTZkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQ3NjhkMjU2ZDUxMmQ1MTJkNTEyZDUxMmQzODRkMjU2ZDM4NGQyNTZkNTEyZDY0MGQxMDI0ZDY0MGQxMTUyZDEyOGQxMTUyZDEyOGQxMDI0ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDc2OGQzODRkNzY4ZDg5NmQyNTZkODk2ZDI1NmQxMDI0ZDY0MGQxMDI0aFIzZDg5NlI0ZDc2OFI1ZDBSNmQ3NjhSN2QtMTI4UjhkNzY4UjlkMjU2UjEwZDI1NlIxMWk2NFIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE3Nm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzZSMTJkMFIxM2QzODRSMTRhaGc6NjNvUjFkMTAyNFIyYWQxMjhkODk2ZDM4NGQ4OTZkMzg0ZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQxMjhkNTEyZDI1NmQ1MTJkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMGQyNTZkMGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkMzg0ZDUxMmQzODRkNzY4ZDEyOGQ3NjhkMTI4ZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNjNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTc1UjEyZDBSMTNkMzg0UjE0YWhnOjYyb1IxZDEwMjRSMmFkMTI4ZDc2OGQxMjhkNjQwZDI1NmQ2NDBkMjU2ZDUxMmQxMjhkNTEyZDEyOGQzODRkMGQzODRkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDI1NmQyNTZkMjU2ZDM4NGQzODRkMzg0ZDM4NGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMTI4ZDg5NmQxMjhkMTAyNGQwZDEwMjRkMGQ3NjhkMTI4ZDc2OGhSM2Q2NDBSNGQ1MTJSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNjJSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzRvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTc0UjEyZDBSMTNkMzg0UjE0YWhnOjYxb1IxZDEwMjRSMmFkMGQ4OTZkMGQ3NjhkNTEyZDc2OGQ1MTJkODk2ZDBkODk2ZDBkNjQwZDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQwZDY0MGhSM2Q2NDBSNGQ1MTJSNWQwUjZkNTEyUjdkMTI4UjhkNTEyUjlkMjU2UjEwZDI1NlIxMWk2MVIxMmQwUjEzZDY0MFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmhnOjE3M29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzNSMTJkMFIxM2QzODRSMTRhaGc6NjBvUjFkMTAyNFIyYWQ1MTJkNzY4ZDUxMmQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMjU2ZDg5NmQyNTZkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQwZDY0MGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQzODRkMzg0ZDM4NGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQzODRkNjQwZDM4NGQ3NjhkNTEyZDc2OGhSM2Q2NDBSNGQ1MTJSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNjBSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzJvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTcyUjEyZDBSMTNkMzg0UjE0YWhnOjU5b1IxZDEwMjRSMmFkMGQ4OTZkMTI4ZDg5NmQxMjhkNzY4ZDI1NmQ3NjhkMjU2ZDEwMjRkMTI4ZDEwMjRkMTI4ZDExNTJkMGQxMTUyZDBkODk2ZDBkMzg0ZDI1NmQzODRkMjU2ZDY0MGQwZDY0MGQwZDM4NGhSM2QzODRSNGQyNTZSNWQwUjZkNjQwUjdkLTEyOFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpNTlSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTFpMmkyaTJpMmhnOjE3MW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzFSMTJkMFIxM2QzODRSMTRhaGc6NThvUjFkMTAyNFIyYWQwZDM4NGQyNTZkMzg0ZDI1NmQ2NDBkMGQ2NDBkMGQzODRkMGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQ3NjhoUjNkMzg0UjRkMjU2UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTU4UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaGc6MTcwb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE3MFIxMmQwUjEzZDM4NFIxNGFoZzo1N29SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDY0MGQxMjhkMTAyNGQxMjhkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMGQ2NDBkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNTdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjlvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTY5UjEyZDBSMTNkMzg0UjE0YWhnOjU2b1IxZDEwMjRSMmFkMzg0ZDUxMmQzODRkMjU2ZDI1NmQyNTZkMjU2ZDUxMmQzODRkNTEyZDM4NGQ4OTZkMzg0ZDY0MGQyNTZkNjQwZDI1NmQ4OTZkMzg0ZDg5NmQ2NDBkNjQwZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkNjQwZDY0MGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNTZSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTY4UjEyZDBSMTNkMzg0UjE0YWhnOjU1b1IxZDEwMjRSMmFkMTI4ZDY0MGQyNTZkNjQwZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDBkMjU2ZDBkMTI4ZDY0MGQxMjhkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ2NDBkMzg0ZDY0MGQzODRkMTAyNGQxMjhkMTAyNGQxMjhkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk1NVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjdvUjFkMTAyNFIyYWQzODRkMjU3ZDM4NWQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDM4NGQzODRkMzg0ZDI1N2QxMjhkMTAyM2QxMjdkMTAyNGQwZDEwMjRkMGQ4OTZkMTI4ZDg5NmQxMjhkMTAyM2QyNTZkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQ3NjhkMjU2ZDUxMmQxMjhkNTEyZDEyOGQ2NDBkMjU2ZDY0MGQyNTZkNTEyZDM4NGQ1MTJkNTEyZDUxMmQ1MTJkMTAyNGQzODRkMTAyNGQzODRkMTE1MmQxMjhkMTE1MmQxMjhkMTAyNGQyNTZkMTAyNGQyNTZkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMzg0ZDEyOGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDM4NGQzODRkMzg0ZDM4NGQ1MTJoUjNkNjQwUjRkNTEyUjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE2N1IxMmQwUjEzZDY0MFIxNGFpMWkyaTJpMmkyaTJpMWkyaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjU0b1IxZDEwMjRSMmFkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDY0MGQ1MTJkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQyNTZkMjU2ZDI1NmQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTU0UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTY2b1IxZDEwMjRSMmFkMGQxMjhkMjU2ZDEyOGQyNTZkMTE1MmQwZDExNTJkMGQxMjhoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE2NlIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaGc6NTNvUjFkMTAyNFIyYWQ2NDBkNTEyZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQwZDEwMjRkMGQ4OTZkMzg0ZDg5NmQzODRkNTEyZDBkNTEyZDBkMTI4ZDUxMmQxMjhkNTEyZDI1NmQxMjhkMjU2ZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjVvUjFkMTAyNFIyYWQwZDY0MGQyNTZkNjQwZDI1NmQ1MTJkMGQ1MTJkMGQzODRkMTI4ZDM4NGQxMjhkMjU2ZDBkMjU2ZDBkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQ1MTJkMjU2ZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ3NjhkMzg0ZDc2OGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDc2OGQ2NDBkNzY4ZDc2OGQ1MTJkNzY4ZDUxMmQxMDI0ZDI1NmQxMDI0ZDI1NmQ3NjhkMGQ3NjhkMGQ2NDBoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE2NVIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6NTJvUjFkMTAyNFIyYWQyNTZkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQ1MTJkMzg0ZDM4NGQyNTdkMzg0ZDI1NmQzODNkMjU2ZDI1NmQzODRkMjU2ZDM4NGQxMjhkNjQwZDEyOGQ2NDBkMTAyNGQzODRkMTAyNGQzODRkNzY4ZDBkNzY4ZDBkNTEyZDEyOGQ1MTJkMTI4ZDY0MGQzODRkNjQwZDM4NGQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE2NG9SMWQxMDI0UjJhZDUxMmQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDI1NmQwZDg5NmQxMjhkODk2ZDEyOGQxMDI0ZDBkMTAyNGQwZDg5NmQzODRkNTEyZDI1NmQ1MTJkMjU2ZDc2OGQzODRkNzY4ZDM4NGQ1MTJkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyZDY0MGQ3NjhkNTEyZDc2OGQ1MTJkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkNTEyZDEwMjRkNTEyZDg5NmQxMjhkODk2ZDEyOGQ3NjhkMGQ3NjhkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMjU2aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ3NjhSN2QwUjhkNzY4UjlkMjU2UjEwZDI1NlIxMWkxNjRSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6NTFvUjFkMTAyNFIyYWQwZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQ2NDBkNjQwZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQwZDEwMjRkMGQ4OTZkMzg0ZDg5NmQzODRkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQzODRkNTEyZDM4NGQyNTZkMGQyNTZkMGQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE2M29SMWQxMDI0UjJhZDBkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDY0MGQxMjhkNjQwZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDY0MGQxMjhkNjQwZDI1NmQzODRkMjU2ZDM4NGQ2NDBkNTEyZDY0MGQ1MTJkNzY4ZDM4NGQ3NjhkMzg0ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDBkMTAyNGQwZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTYzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjUwb1IxZDEwMjRSMmFkMGQ2NDBkMTI4ZDY0MGQxMjhkNTEyZDM4NGQ1MTJkMzg0ZDI1NmQwZDI1NmQwZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQyNTZkNjQwZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQ2NDBoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTYyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE2MlIxMmQwUjEzZDM4NFIxNGFoZzo0OW9SMWQxMDI0UjJhZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQxMDI0ZDEyOGQxMDI0ZDEyOGQzODRkMGQzODRkMGQyNTZoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTQ5UjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE2MW9SMWQxMDI0UjJhZDI1NmQyNTZkMGQyNTZkMGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDBkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0ZDBkMzg0aFIzZDM4NFI0ZDI1NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxNjFSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJoZzo0OG9SMWQxMDI0UjJhZDM4NGQ4OTZkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTQ4UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE2MG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNjBSMTJkMFIxM2QzODRSMTRhaGc6NDdvUjFkMTAyNFIyYWQyNTZkNzcwLjVkMTI4ZDc3MC41ZDEyOGQxMDI0ZDBkMTAyNGQwZDY0MGQxMjhkNjQwZDEyOGQzODRkMjU2ZDM4NGQyNTZkMTI1LjVkMzg0ZDEyNS41ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNzcwLjVoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5OC41UjdkMFI4ZDg5OC41UjlkMjU2UjEwZDI1NlIxMWk0N1IxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE1OW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTlSMTJkMFIxM2QzODRSMTRhaGc6NDZvUjFkMTAyNFIyYWQwZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDc2OGhSM2QzODRSNGQyNTZSNWQwUjZkMjU2UjdkMFI4ZDI1NlI5ZDI1NlIxMGQyNTZSMTFpNDZSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmhnOjE1OG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNThSMTJkMFIxM2QzODRSMTRhaGc6NDVvUjFkMTAyNFIyYWQwZDY0MGQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkMGQ2NDBoUjNkNjQwUjRkNTEyUjVkMFI2ZDUxMlI3ZDM4NFI4ZDUxMlI5ZDI1NlIxMGQyNTZSMTFpNDVSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmhnOjE1N29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTdSMTJkMFIxM2QzODRSMTRhaGc6NDRvUjFkMTAyNFIyYWQwZDg5NmQxMjhkODk2ZDEyOGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQxMjhkMTAyNGQxMjhkMTE1MmQwZDExNTJkMGQ4OTZoUjNkMzg0UjRkMjU2UjVkMFI2ZDI1NlI3ZC0xMjhSOGQyNTZSOWQyNTZSMTBkMjU2UjExaTQ0UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE1Nm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTZSMTJkMFIxM2QzODRSMTRhaGc6NDNvUjFkMTAyNFIyYWQzODRkODk2ZDI1NmQ4OTZkMjU2ZDY0MGQwZDY0MGQwZDUxMmQyNTZkNTEyZDI1NmQyNTZkMzg0ZDI1NmQzODRkNTEyZDY0MGQ1MTJkNjQwZDY0MGQzODRkNjQwZDM4NGQ4OTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDc2OFI3ZDEyOFI4ZDc2OFI5ZDI1NlIxMGQyNTZSMTFpNDNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNTVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTU1UjEyZDBSMTNkMzg0UjE0YWhnOjQyb1IxZDEwMjRSMmFkNjQwZDY0MGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDc2OGQzODRkNzY4ZDM4NGQxMDI0ZDI1NmQxMDI0ZDI1NmQ3NjhkMTI4ZDc2OGQxMjhkODk2ZDBkODk2ZDBkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDI1NmQxMjhkMjU2ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQ2NDBkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk0MlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTU0b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE1NFIxMmQwUjEzZDM4NFIxNGFoZzo0MW9SMWQxMDI0UjJhZDEyOGQxMDI0ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDg5NmQyNTZkODk2ZDI1NmQxMDI0ZDEyOGQxMDI0ZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDEyOGQxMDI0ZDEyOGQxMTUyZDBkMTE1MmQwZDEwMjRkMTI4ZDEwMjRoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTQxUjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaGc6MTUzb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE1M1IxMmQwUjEzZDM4NFIxNGFoZzo0MG9SMWQxMDI0UjJhZDM4NGQxMDI0ZDM4NGQxMTUyZDI1NmQxMTUyZDI1NmQxMDI0ZDM4NGQxMDI0ZDI1NmQxMjhkMzg0ZDEyOGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTZkMjU2ZDI1NmQxMDI0ZDEyOGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWk0MFIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmhnOjE1Mm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTJSMTJkMFIxM2QzODRSMTRhaGc6MzlvUjFkMTAyNFIyYWQwZDEyOGQxMjhkMTI4ZDEyOGQzODRkMGQzODRkMGQxMjhoUjNkMjU2UjRkMTI4UjVkMFI2ZDg5NlI3ZDY0MFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzlSMTJkMFIxM2QyNTZSMTRhaTFpMmkyaTJpMmhnOjE1MW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTFSMTJkMFIxM2QzODRSMTRhaGc6MzhvUjFkMTAyNFIyYWQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDg5NmQzODRkNjQwZDI1NmQ2NDBkMjU2ZDg5NmQzODRkODk2ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQwZDM4NGQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ2NDBkNjQwZDY0MGQ2NDBkNTEyZDc2OGQ1MTJkNzY4ZDEwMjRkNjQwZDEwMjRkNjQwZDg5NmhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzhSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE1MG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTBSMTJkMFIxM2QzODRSMTRhaGc6MzdvUjFkMTAyNFIyYWQ1MTJkMTAyNGQ1MTJkNzY4ZDc2OGQ3NjhkNzY4ZDEwMjRkNTEyZDEwMjRkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDBkMzg0ZDBkMTI4ZDUxMmQ2NDBkMzg0ZDY0MGQzODRkODk2ZDI1NmQ4OTZkMjU2ZDEwMjRkMTI4ZDEwMjRkMTI4ZDc2OGQyNTZkNzY4ZDI1NmQ1MTJkMzg0ZDUxMmQzODRkMjU2ZDUxMmQyNTZkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQzODYuNWQ1MTJkMzg2LjVkNTEyZDY0MGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzdSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTQ5b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0OVIxMmQwUjEzZDM4NFIxNGFoZzozNm9SMWQxMDI0UjJhZDI1NmQ1MTJkMzg0ZDUxMmQzODRkMzg0ZDI1NmQzODRkMjU2ZDUxMmQyNTZkNzY4ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkNzY4ZDI1NmQ3NjhkMzg0ZDEwMjRkMjU2ZDEwMjRkMjU2ZDExNTJkMTI4ZDExNTJkMTI4ZDEwMjRkMGQxMDI0ZDBkODk2ZDEyOGQ4OTZkMTI4ZDY0MGQwZDY0MGQwZDM4NGQxMjhkMzg0ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDY0MGQ2NDBkNjQwZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTE1MmQzODRkMTE1MmQzODRkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzZSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTQ4b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0OFIxMmQwUjEzZDM4NFIxNGFoZzozNW9SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ2NDBkMjU2ZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDY0MGQ2NDBkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMjU2ZDg5NmQyNTZkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNDdvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTQ3UjEyZDBSMTNkMzg0UjE0YWhnOjM0b1IxZDEwMjRSMmFkMjU2ZDEyOGQzODRkMTI4ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMTI4ZDBkMTI4ZDEyOGQxMjhkMTI4ZDM4NGQwZDM4NGQwZDEyOGhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkNjQwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkzNFIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmhnOjE0Nm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNDZSMTJkMFIxM2QzODRSMTRhaGc6MzNvUjFkMTAyNFIyYWQwZDg5NmQyNTZkODk2ZDI1NmQxMDI0ZDBkMTAyNGQwZDg5NmQyNTZkNzY4ZDBkNzY4ZDBkMTI4ZDI1NmQxMjhkMjU2ZDc2OGhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzNSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJoZzoxNDVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTQ1UjEyZDBSMTNkMzg0UjE0YWhnOjMyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTMyUjEyZDBSMTNkMzg0UjE0YWhnOjE0NG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNDRSMTJkMFIxM2QzODRSMTRhaGc6MTQzb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0M1IxMmQwUjEzZDM4NFIxNGFoZzoyNTVvUjFkMTAyNFIyYWQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDM4NGQ3NjhkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQxMDI0ZDUxMmQxMDI0ZDUxMmQxMTUyZDEyOGQxMTUyZDEyOGQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMTI4ZDg5NmQxMjhkNzY4ZDBkNzY4ZDBkMzg0ZDI1NmQzODRkMjU2ZDc2OGQzODRkNzY4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyNTVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTQyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0MlIxMmQwUjEzZDM4NFIxNGFoZzoyNTRvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMjU0UjEyZDBSMTNkMzg0UjE0YWhnOjE0MW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNDFSMTJkMFIxM2QzODRSMTRhaGc6MjUzb1IxZDEwMjRSMmFkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQzODRkNzY4ZDM4NGQzODRkNjQwZDM4NGQ2NDBkMTAyNGQ1MTJkMTAyNGQ1MTJkMTE1MmQxMjhkMTE1MmQxMjhkMTAyNGQzODRkMTAyNGQzODRkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDM4NGQyNTVkMzg0ZDI1NmQzODVkMjU2ZDc2OGQzODRkNzY4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyNTNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNDBvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTQwUjEyZDBSMTNkMzg0UjE0YWhnOjI1Mm9SMWQxMDI0UjJhZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDUxMmQxMjhkNTEyZDI1NmQzODRkMjU2ZDM4NGQxMjhkMzg0ZDg5NmQzODRkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTZkMzg0ZDI1NmQ4OTZkMzg0ZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjUyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEzOW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMzlSMTJkMFIxM2QzODRSMTRhaGc6MjUxb1IxZDEwMjRSMmFkMTI4ZDg5NmQwZDg5NmQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjUxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTM4UjEyZDBSMTNkMzg0UjE0YWhnOjI1MG9SMWQxMDI0UjJhZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQyNTZkMzg1ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDI1NWQzODRkMjU2ZDM4NWhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjUwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEzN29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMzdSMTJkMFIxM2QzODRSMTRhaGc6MjQ5b1IxZDEwMjRSMmFkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTVkMzg0ZDI1NmQzODVkMjU2ZDg5NmQzODRkODk2ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMzg0ZDI1NmQzODRkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjQ5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzZvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTM2UjEyZDBSMTNkMzg0UjE0YWhnOjI0OG9SMWQxMDI0UjJhZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQzODRkNzY4ZDI1NmQ3NjhkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMTI4ZDUxMmQxMjhkMzg0ZDY0MGQzODRkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkyNDhSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJoZzoxMzVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTM1UjEyZDBSMTNkMzg0UjE0YWhnOjI0N29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkyNDdSMTJkMFIxM2QzODRSMTRhaGc6MTM0b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTEzNFIxMmQwUjEzZDM4NFIxNGFoZzoyNDZvUjFkMTAyNFIyYWQzODRkMTI4ZDUxMmQxMjhkNTEyZDI1NmQzODRkMjU2ZDM4NGQxMjhkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0NlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEzM29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMzNSMTJkMFIxM2QzODRSMTRhaGc6MjQ1b1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMjU3ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMjU2ZDEyN2QyNTZkMTI4ZDI1N2hSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjQ1UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTMyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTEzMlIxMmQwUjEzZDM4NFIxNGFoZzoyNDRvUjFkMTAyNFIyYWQzODRkODk2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQxMjhkMzg0ZDEyOGQzODRkMjU2ZDUxMmQyNTZkNTEyZDM4NGQ2NDBkMzg0ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTVkMjU2ZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0NFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzFvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTMxUjEyZDBSMTNkMzg0UjE0YWhnOjI0M29SMWQxMDI0UjJhZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQzODRkODk2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0M1IxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzBvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTMwUjEyZDBSMTNkMzg0UjE0YWhnOjI0Mm9SMWQxMDI0UjJhZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkODk2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0MlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjlvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTI5UjEyZDBSMTNkMzg0UjE0YWhnOjI0MW9SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQxMjhkMjU3ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDUxMmQyNTZkNTEyZDI1NmQxMDI0ZDBkMTAyNGQwZDI1NmQxMjdkMjU2ZDEyOGQyNTdoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0MVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEyOG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMjhSMTJkMFIxM2QzODRSMTRhaGc6MjQwb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTI0MFIxMmQwUjEzZDM4NFIxNGFoZzoxMjdvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTI3UjEyZDBSMTNkMzg0UjE0YWhnOjIzOW9SMWQxMDI0UjJhZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEwMjRkMTI4ZDM4NGQzODRkMzg0ZDM4NGQxMDI0ZDEyOGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMzlSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaGc6MTI2b1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDEyOGQzODRkMGQzODRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDEyOGQxMjhkMzg0ZDEyOGQzODRkMjU2ZDUxMmQyNTZkNTEyZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2Q2NDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEyNlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmhnOjIzOG9SMWQxMDI0UjJhZDI1NmQzODRkMjU2ZDI1N2QyNTdkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQyNTZkMzg0ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQwZDEwMjRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMzhSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaGc6MTI1b1IxZDEwMjRSMmFkMzg0ZDExNTJkMGQxMTUyZDBkMTAyNGQxMjhkMTAyNGQxMjhkMjU2ZDBkMjU2ZDBkMTI4ZDM4NGQxMjhkMzg0ZDExNTJoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEyNVIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJoZzoyMzdvUjFkMTAyNFIyYWQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMGQxMDI0ZDBkMjU2ZDEyOGQyNTZkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQxMDI0ZDBkMTAyNGhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjM3UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmhnOjEyNG9SMWQxMDI0UjJhZDBkMTI4ZDI1NmQxMjhkMjU2ZDExNTJkMGQxMTUyZDBkMTI4aFIzZDM4NFI0ZDI1NlI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxMjRSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmhnOjIzNm9SMWQxMDI0UjJhZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIzNlIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJoZzoxMjNvUjFkMTAyNFIyYWQwZDEyOGQzODRkMTI4ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTAyNGQzODRkMTAyNGQzODRkMTE1MmQwZDExNTJkMGQxMjhoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEyM1IxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJoZzoyMzVvUjFkMTAyNFIyYWQzODRkMTI4ZDUxMmQxMjhkNTEyZDI1NmQzODRkMjU2ZDM4NGQxMjhkMjU2ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ2NDBkNTEyZDY0MGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIzNVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjJvUjFkMTAyNFIyYWQwZDM4NGQ2NDBkMzg0ZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQ3NjhkMTI4ZDc2OGQxMjhkNjQwZDI1NmQ2NDBkMjU2ZDUxMmQwZDUxMmQwZDM4NGhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkMFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpMTIyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjM0b1IxZDEwMjRSMmFkMjU2ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkNzY4ZDI1NmQ3NjhkMjU2ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQzODRkMTI4ZDM4NGQxMjhkMjU2ZDI1NWQyNTZkMjU2ZDI1N2hSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjM0UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjFvUjFkMTAyNFIyYWQzODRkNzY4ZDM4NGQzODRkNjQwZDM4NGQ2NDBkMTAyNGQ1MTJkMTAyNGQ1MTJkMTE1MmQxMjhkMTE1MmQxMjhkMTAyNGQzODRkMTAyNGQzODRkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDM4NGQyNTZkMzg0ZDI1NmQ3NjhkMzg0ZDc2OGhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkLTEyOFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpMTIxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMzNvUjFkMTAyNFIyYWQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDY0MGQ1MTJkNjQwZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTMuNWQzODRkMjUzLjVkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjMzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjBvUjFkMTAyNFIyYWQwZDEwMjRkMGQ3NjhkMTI4ZDc2OGQxMjhkNjQwZDBkNjQwZDBkMzg0ZDI1NmQzODRkMjU2ZDY0MGQzODRkNjQwZDM4NGQzODRkNjQwZDM4NGQ2NDBkNjQwZDUxMmQ2NDBkNTEyZDc2OGQ2NDBkNzY4ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTEyMFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMzJvUjFkMTAyNFIyYWQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDY0MGQ1MTJkNjQwZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTMuNWQzODRkMjUzLjVkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjMyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMTlvUjFkMTAyNFIyYWQ2NDBkMzg0ZDg5NmQzODRkODk2ZDc2OGQ3NjhkNzY4ZDc2OGQxMDI0ZDUxMmQxMDI0ZDUxMmQ4OTZkMzg0ZDg5NmQzODRkMTAyNGQxMjhkMTAyNGQxMjhkNzY4ZDBkNzY4ZDBkMzg0ZDI1NmQzODRkMjU2ZDc2OGQzODRkNzY4ZDM4NGQ1MTJkNTEyZDUxMmQ1MTJkNzY4ZDY0MGQ3NjhkNjQwZDM4NGhSM2QxMDI0UjRkODk2UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTExOVIxMmQwUjEzZDEwMjRSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjMxb1IxZDEwMjRSMmFkMjU2ZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDM4NGQxMDI0ZDM4NGQxMTUyZDI1NmQxMTUyZDI1NmQxMDI0aFIzZDY0MFI0ZDUxMlI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkyMzFSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExOG9SMWQxMDI0UjJhZDI1NmQ4OTZkMTI4ZDg5NmQxMjhkNjQwZDBkNjQwZDBkMzg0ZDI1NmQzODRkMjU2ZDY0MGQzODRkNjQwZDM4NGQzODRkNjQwZDM4NGQ2NDBkNjQwZDUxMmQ2NDBkNTEyZDg5NmQzODRkODk2ZDM4NGQxMDI0ZDI1NmQxMDI0ZDI1NmQ4OTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTExOFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjMwb1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ2NDBkNzY4ZDY0MGQ3NjhkNTEzZDc2OWQ1MTJkODk2ZDUxMmQ4OTZkNzY4ZDY0MGQ3NjhkNjQwZDg5NmQ4OTZkODk2ZDg5NmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQ3NjhkMTI4ZDc2OGQxMjhkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQxMjhkNTEyZDEyOGQzODRkNzY4ZDM4NGQ3NjhkNTEyZDY0MGQ1MTJkNjQwZDY0MGhSM2QxMDI0UjRkODk2UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTIzMFIxMmQwUjEzZDEwMjRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExN29SMWQxMDI0UjJhZDEyOGQ4OTZkMGQ4OTZkMGQzODRkMjU2ZDM4NGQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTExN1IxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjI5b1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMTI4ZDUxMmQxMjhkMjU2ZDI1NWQyNTZkMjU2ZDI1N2hSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjI5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMTZvUjFkMTAyNFIyYWQzODRkODk2ZDM4NGQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDM4NGQzODRkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTE2UjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjI4b1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMTI4ZDUxMmQxMjhkMzg0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjhSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTE1b1IxZDEwMjRSMmFkNTEyZDY0MGQ1MTJkODk2ZDM4NGQ4OTZkMzg0ZDEwMjRkMGQxMDI0ZDBkODk2ZDI1NmQ4OTZkMjU2ZDc2OGQwZDc2OGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ1MTJkNjQwaFIzZDY0MFI0ZDUxMlI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTVSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyN29SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMjU2ZDEyN2QyNTZkMTI4ZDI1N2QxMjhkMzg0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTE0b1IxZDEwMjRSMmFkMGQxMDI0ZDBkMzg0ZDI1NmQzODRkMjU2ZDUxMmQzODRkNTEyZDM4NGQzODRkNTEyZDM4NGQ1MTJkNjQwZDI1NmQ2NDBkMjU2ZDEwMjRkMGQxMDI0aFIzZDY0MFI0ZDUxMlI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTRSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyNm9SMWQxMDI0UjJhZDI1NmQ4OTZkMzg0ZDg5NmQzODRkNzY4ZDI1NmQ3NjhkMjU2ZDg5NmQyNTZkMjU3ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDBkNTEyZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTVkMjU2ZDI1NmQyNTdoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIyNlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExM29SMWQxMDI0UjJhZDY0MGQzODRkNjQwZDExNTJkMzg0ZDExNTJkMzg0ZDg5NmQxMjhkODk2ZDEyOGQ3NjhkMGQ3NjhkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDY0MGQzODRkMzg0ZDc2OGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDc2OGQzODRkNzY4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkxaTJpMmkyaTJoZzoyMjVvUjFkMTAyNFIyYWQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDY0MGQ1MTJkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMzg0ZDI1NmQzODRkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExMm9SMWQxMDI0UjJhZDM4NGQ3NjhkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ3NjhkMzg0ZDc2OGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkNzY4ZDUxMmQ3NjhkNTEyZDg5NmQyNTZkODk2ZDI1NmQxMTUyZDBkMTE1MmQwZDM4NGQ1MTJkMzg0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTJSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMjRvUjFkMTAyNFIyYWQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjRSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnaHk4OmZvbnROYW1leTMwOk5va2lhJTIwQ2VsbHBob25lJTIwRkMlMjBTbWFsbGc"},{ name : "__ASSET__:bitmap_flixel_tile_GraphicAutoAlt", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUlBQUFBQUlDQU1BQUFBR0F3ZE1BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBS1QybERRMUJRYUc5MGIzTm9iM0FnU1VORElIQnliMlpwYkdVQUFIamFuVk5uVkZQcEZqMzMzdlJDUzRpQWxFdHZVaFVJSUZKQ2k0QVVrU1lxSVFrUVNvZ2hvZGtWVWNFUlJVVUVHOGlnaUFPT2pvQ01GVkVzRElvSzJBZmtJYUtPZzZPSWlzcjc0WHVqYTlhODkrYk4vclhYUHVlczg1Mnp6d2ZBQ0F5V1NETlJOWUFNcVVJZUVlQ0R4OFRHNGVRdVFJRUtKSEFBRUFpelpDRnovU01CQVBoK1BEd3JJc0FIdmdBQmVOTUxDQURBVFp2QU1CeUgvdy9xUXBsY0FZQ0VBY0Iwa1RoTENJQVVBRUI2amtLbUFFQkdBWUNkbUNaVEFLQUVBR0RMWTJMakFGQXRBR0FuZitiVEFJQ2QrSmw3QVFCYmxDRVZBYUNSQUNBVFpZaEVBR2c3QUt6UFZvcEZBRmd3QUJSbVM4UTVBTmd0QURCSlYyWklBTEMzQU1ET0VBdXlBQWdNQURCUmlJVXBBQVI3QUdESUl5TjRBSVNaQUJSRzhsYzg4U3V1RU9jcUFBQjRtYkk4dVNRNVJZRmJDQzF4QjFkWExoNG96a2tYS3hRMllRSmhta0F1d25tWkdUS0JOQS9nODh3QUFLQ1JGUkhnZy9QOWVNNE9yczdPTm82MkRsOHQ2cjhHL3lKaVl1UCs1YytyY0VBQUFPRjBmdEgrTEMrekdvQTdCb0J0L3FJbDdnUm9YZ3VnZGZlTFpySVBRTFVBb09uYVYvTncrSDQ4UEVXaGtMbloyZVhrNU5oS3hFSmJZY3BYZmY1bndsL0FWLzFzK1g0OC9QZjE0TDdpSklFeVhZRkhCUGpnd3N6MFRLVWN6NUlKaEdMYzVvOUgvTGNMLy93ZDB5TEVTV0s1V0NvVTQxRVNjWTVFbW96ek1xVWlpVUtTS2NVbDB2OWs0dDhzK3dNKzN6VUFzR28rQVh1UkxhaGRZd1AyU3ljUVdIVEE0dmNBQVBLN2I4SFVLQWdEZ0dpRDRjOTMvKzgvL1VlZ0pRQ0Faa21TY1FBQVhrUWtMbFRLc3ovSENBQUFSS0NCS3JCQkcvVEJHQ3pBQmh6QkJkekJDL3hnTm9SQ0pNVENRaEJDQ21TQUhISmdLYXlDUWlpR3piQWRLbUF2MUVBZE5NQlJhSWFUY0E0dXdsVzREajF3RC9waENKN0JLTHlCQ1FSQnlBZ1RZU0hhaUFGaWlsZ2pqZ2dYbVlYNEljRklCQktMSkNESmlCUlJJa3VSTlVneFVvcFVJRlZJSGZJOWNnSTVoMXhHdXBFN3lBQXlndnlHdkVjeGxJR3lVVDNVRExWRHVhZzNHb1JHb2d2UVpIUXhtbzhXb0p2UWNyUWFQWXcyb2VmUXEyZ1AybzgrUThjd3dPZ1lCelBFYkRBdXhzTkNzVGdzQ1pOank3RWlyQXlyeGhxd1Zxd0R1NG4xWTgreGR3UVNnVVhBQ1RZRWQwSWdZUjVCU0ZoTVdFN1lTS2dnSENRMEVkb0pOd2tEaEZIQ0p5S1RxRXUwSnJvUitjUVlZakl4aDFoSUxDUFdFbzhUTHhCN2lFUEVOeVFTaVVNeUo3bVFBa214cEZUU0V0SkcwbTVTSStrc3FaczBTQm9qazhuYVpHdXlCem1VTENBcnlJWGtuZVRENURQa0crUWg4bHNLbldKQWNhVDRVK0lvVXNwcVNobmxFT1UwNVFabG1ESkJWYU9hVXQyb29WUVJOWTlhUXEyaHRsS3ZVWWVvRXpSMW1qbk5neFpKUzZXdG9wWFRHbWdYYVBkcHIraDB1aEhkbFI1T2w5Qlgwc3ZwUitpWDZBUDBkd3dOaGhXRHg0aG5LQm1iR0FjWVp4bDNHSytZVEtZWjA0c1p4MVF3TnpIcm1PZVpENWx2VlZncXRpcDhGWkhLQ3BWS2xTYVZHeW92VkttcXBxcmVxZ3RWODFYTFZJK3BYbE45cmtaVk0xUGpxUW5VbHF0VnFwMVE2MU1iVTJlcE82aUhxbWVvYjFRL3BINVovWWtHV2NOTXcwOURwRkdnc1YvanZNWWdDMk1aczNnc0lXc05xNFoxZ1RYRUpySE4yWHgyS3J1WS9SMjdpejJxcWFFNVF6TktNMWV6VXZPVVpqOEg0NWh4K0p4MFRnbm5LS2VYODM2SzNoVHZLZUlwRzZZMFRMa3haVnhycXBhWGxsaXJTS3RScTBmcnZUYXU3YWVkcHIxRnUxbjdnUTVCeDBvblhDZEhaNC9PQlozblU5bFQzYWNLcHhaTlBUcjFyaTZxYTZVYm9idEVkNzl1cCs2WW5yNWVnSjVNYjZmZWViM24raHg5TC8xVS9XMzZwL1ZIREZnR3N3d2tCdHNNemhnOHhUVnhiendkTDhmYjhWRkRYY05BUTZWaGxXR1g0WVNSdWRFOG85VkdqVVlQakduR1hPTWs0MjNHYmNhakpnWW1JU1pMVGVwTjdwcFNUYm1tS2FZN1REdE14ODNNemFMTjFwazFtejB4MXpMbm0rZWIxNXZmdDJCYWVGb3N0cWkydUdWSnN1UmFwbG51dHJ4dWhWbzVXYVZZVlZwZHMwYXRuYTBsMXJ1dHU2Y1JwN2xPazA2cm50Wm53N0R4dHNtMnFiY1pzT1hZQnR1dXRtMjJmV0ZuWWhkbnQ4V3V3KzZUdlpOOXVuMk4vVDBIRFlmWkRxc2RXaDErYzdSeUZEcFdPdDZhenB6dVAzM0Y5SmJwTDJkWXp4RFAyRFBqdGhQTEtjUnBuVk9iMDBkbkYyZTVjNFB6aUl1SlM0TExMcGMrTHBzYnh0M0l2ZVJLZFBWeFhlRjYwdldkbTdPYnd1Mm8yNi91TnU1cDdvZmNuOHcwbnltZVdUTnowTVBJUStCUjVkRS9DNStWTUd2ZnJINVBRMCtCWjdYbkl5OWpMNUZYcmRld3Q2VjNxdmRoN3hjKzlqNXluK00rNHp3MzNqTGVXVi9NTjhDM3lMZkxUOE52bmwrRjMwTi9JLzlrLzNyLzBRQ25nQ1VCWndPSmdVR0JXd0w3K0hwOEliK09QenJiWmZheTJlMUJqS0M1UVJWQmo0S3RndVhCclNGb3lPeVFyU0gzNTVqT2tjNXBEb1ZRZnVqVzBBZGg1bUdMdzM0TUo0V0hoVmVHUDQ1d2lGZ2EwVEdYTlhmUjNFTnozMFQ2UkpaRTNwdG5NVTg1cnkxS05TbytxaTVxUE5vM3VqUzZQOFl1WmxuTTFWaWRXRWxzU3h3NUxpcXVObTVzdnQvODdmT0g0cDNpQytON0Y1Z3Z5RjF3ZWFIT3d2U0ZweGFwTGhJc09wWkFUSWhPT0pUd1FSQXFxQmFNSmZJVGR5V09Dbm5DSGNKbklpL1JOdEdJMkVOY0toNU84a2dxVFhxUzdKRzhOWGtreFRPbExPVzVoQ2Vwa0x4TURVemRtenFlRnBwMklHMHlQVHE5TVlPU2taQnhRcW9oVFpPMlorcG41bVoyeTZ4bGhiTCt4VzZMdHk4ZWxRZkphN09RckFWWkxRcTJRcWJvVkZvbzF5b0hzbWRsVjJhL3pZbktPWmFybml2TjdjeXp5dHVRTjV6dm4vL3RFc0lTNFpLMnBZWkxWeTBkV09hOXJHbzVzanh4ZWRzSzR4VUZLNFpXQnF3OHVJcTJLbTNWVDZ2dFY1ZXVmcjBtZWsxcmdWN0J5b0xCdFFGcjZ3dFZDdVdGZmV2YzErMWRUMWd2V2QrMVlmcUduUnMrRlltS3JoVGJGNWNWZjlnbzNIamxHNGR2eXIrWjNKUzBxYXZFdVdUUFp0Sm02ZWJlTFo1YkRwYXFsK2FYRG00TjJkcTBEZDlXdE8zMTlrWGJMNWZOS051N2c3WkR1YU8vUExpOFphZkp6czA3UDFTa1ZQUlUrbFEyN3RMZHRXSFgrRzdSN2h0N3ZQWTA3TlhiVzd6My9UN0p2dHRWQVZWTjFXYlZaZnRKKzdQM1A2NkpxdW40bHZ0dFhhMU9iWEh0eHdQU0EvMEhJdzYyMTduVTFSM1NQVlJTajlZcjYwY094eCsrL3AzdmR5ME5OZzFWalp6RzRpTndSSG5rNmZjSjMvY2VEVHJhZG94N3JPRUgweDkySFdjZEwycENtdkthUnB0VG12dGJZbHU2VDh3KzBkYnEzbnI4UjlzZkQ1dzBQRmw1U3ZOVXlXbmE2WUxUazJmeXo0eWRsWjE5Zmk3NTNHRGJvclo3NTJQTzMyb1BiKys2RUhUaDBrWC9pK2M3dkR2T1hQSzRkUEt5MitVVFY3aFhtcTg2WDIzcWRPbzgvcFBUVDhlN25MdWFycmxjYTdudWVyMjFlMmIzNlJ1ZU44N2Q5TDE1OFJiLzF0V2VPVDNkdmZONmIvZkY5L1hmRnQxK2NpZjl6c3U3MlhjbjdxMjhUN3hmOUVEdFFkbEQzWWZWUDF2KzNOanYzSDlxd0hlZzg5SGNSL2NHaFlQUC9wSDFqdzlEQlkrWmo4dUdEWWJybmpnK09UbmlQM0w5NmZ5blE4OWt6eWFlRi82aS9zdXVGeFl2ZnZqVjY5Zk8wWmpSb1pmeWw1Ty9iWHlsL2VyQTZ4bXYyOGJDeGg2K3lYZ3pNVjcwVnZ2dHdYZmNkeDN2bzk4UFQrUjhJSDhvLzJqNXNmVlQwS2Y3a3htVGsvOEVBNWp6L0dNekxkc0FBQUFnWTBoU1RRQUFlaVVBQUlDREFBRDUvd0FBZ09rQUFIVXdBQURxWUFBQU9wZ0FBQmR2a2wvRlJnQUFBd0JRVEZSRkFBQUFYbDVlQUFBQUF3TURCQVFFQlFVRkJnWUdCd2NIQ0FnSUNRa0pDZ29LQ3dzTERBd01EUTBORGc0T0R3OFBFQkFRRVJFUkVoSVNFeE1URkJRVUZSVVZGaFlXRnhjWEdCZ1lHUmtaR2hvYUd4c2JIQndjSFIwZEhoNGVIeDhmSUNBZ0lTRWhJaUlpSXlNakpDUWtKU1VsSmlZbUp5Y25LQ2dvS1NrcEtpb3FLeXNyTEN3c0xTMHRMaTR1THk4dk1EQXdNVEV4TWpJeU16TXpORFEwTlRVMU5qWTJOemMzT0RnNE9UazVPam82T3pzN1BEdzhQVDA5UGo0K1B6OC9RRUJBUVVGQlFrSkNRME5EUkVSRVJVVkZSa1pHUjBkSFNFaElTVWxKU2twS1MwdExURXhNVFUxTlRrNU9UMDlQVUZCUVVWRlJVbEpTVTFOVFZGUlVWVlZWVmxaV1YxZFhXRmhZV1ZsWldscGFXMXRiWEZ4Y1hWMWRYbDVlWDE5ZllHQmdZV0ZoWW1KaVkyTmpaR1JrWldWbFptWm1aMmRuYUdob2FXbHBhbXBxYTJ0cmJHeHNiVzF0Ym01dWIyOXZjSEJ3Y1hGeGNuSnljM056ZEhSMGRYVjFkbloyZDNkM2VIaDRlWGw1ZW5wNmUzdDdmSHg4ZlgxOWZuNStmMzkvZ0lDQWdZR0Jnb0tDZzRPRGhJU0VoWVdGaG9hR2g0ZUhpSWlJaVltSmlvcUtpNHVMakl5TWpZMk5qbzZPajQrUGtKQ1FrWkdSa3BLU2s1T1RsSlNVbFpXVmxwYVdsNWVYbUppWW1abVptcHFhbTV1Ym5KeWNuWjJkbnA2ZW41K2ZvS0Nnb2FHaG9xS2lvNk9qcEtTa3BhV2xwcWFtcDZlbnFLaW9xYW1wcXFxcXE2dXJyS3lzcmEydHJxNnVyNit2c0xDd3NiR3hzckt5czdPenRMUzB0YlcxdHJhMnQ3ZTN1TGk0dWJtNXVycTZ1N3U3dkx5OHZiMjl2cjYrdjcrL3dNREF3Y0hCd3NMQ3c4UER4TVRFeGNYRnhzYkd4OGZIeU1qSXljbkp5c3JLeTh2THpNek16YzNOenM3T3o4L1AwTkRRMGRIUjB0TFMwOVBUMU5UVTFkWFYxdGJXMTlmWDJOalkyZG5aMnRyYTI5dmIzTnpjM2QzZDN0N2UzOS9mNE9EZzRlSGg0dUxpNCtQajVPVGs1ZVhsNXVibTUrZm42T2pvNmVucDZ1cnE2K3ZyN096czdlM3Q3dTd1NysvdjhQRHc4Zkh4OHZMeTgvUHo5UFQwOWZYMTl2YjI5L2YzK1BqNCtmbjUrdnI2Ky92Ny9QejgvZjM5L3Y3Ky8vLy9Ra3FmSXdBQUFBTjBVazVULy84QTE4b05RUUFBQUhaSlJFRlVlTnJzVTBrU3dDQUlTeGovLzJUcFFSaGJOZHBiTC9VQ1lRa09Dd3dBZ0JBQU9NZ0ViTkt3OG0rTk4vN1pYMnF6MVFNRlBaU0loNHRLbWU5UFhKVy9OTFdYWFJPNzBQZVJIV3Qrdzhmdi8wREorWENhRGw5TWZGNWRIblpDdGNER1RGdldvRDdUYlVjcGIrd0NBQUQvL3dNQXl5QVNLMkFhNkV3QUFBQUFTVVZPUks1Q1lJST0"},{ name : "__ASSET__:bitmap_flixel_system_debug_GraphicArrowRight", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUQ1SlJFRlVlTnBpK1AvLy96SWdqZ1JpQmtJWVJNQUFRVTNJaWdscXdxWVlweVo4aWpFME1mNEhheUVLTENmSlpJcmRURlJvRUJYT1JNY2dRSUFCQU1xdGZ6aUhGZ2JoQUFBQUFFbEZUa1N1UW1DQw"},{ name : "__ASSET__:bitmap_flixel_system_debug_GraphicWatch", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBQUlHTklVazBBQUhvbEFBQ0Fnd0FBK2Y4QUFJRHBBQUIxTUFBQTZtQUFBRHFZQUFBWGI1SmZ4VVlBQUFEY1NVUkJWSGphakpBaFM4TmhHTVIvZTFGWkdNSmd3U2FyVnNPS1dSSGJtcGo4Qkg0Q205L0JabDJ3R3NSZ0U5Um1GbHcwQ0NKWUxIZG44UDF2KzZ1SUIwOTU3cmk3NStrazRiOG9BTmdGZXhmN0d2c0ZlNHA5Z2oxb3FaTVFhVDlTSXQxSE9vNTBGdWs5MG1Xa2ZoS1N6TVRUU0xlUnVnMFI2VENTSXgwMHUxSUQxb0VIU3ZsWUNMMEJYb0ZodS9NWHNZYzlxamVzQWtkQXQzS3R6cHVSSGlPOVJicUtkRmR2T0krMDFOVG96RjVuYndEakd0c0hkb0JuWUp0U251Yk9peU90Uk9wRk9xM3VGeitkdjhOZUF5YkFNcVZzQVgrSWY4SG5BTlI0d3BRazlwRnhBQUFBQUVsRlRrU3VRbUND"},{ name : "__ASSET__:bitmap_flixel_system_debug_GraphicArrowLeft", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBQm1KTFIwUUFBQUFBQUFENVE3dC9BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBQUIzUkpUVVVIM2dRWkVqQTAzU0hjY2dBQUFFQkpSRUZVR05Oai9QLy9Qd01SSUpLQmdjR1g0Zi8vLy9odzVQLy8vNWY5aHdLaUZPRlNqRlVSdW1LOGlwQVZFMVJFdHNra3U1bXMwTUNyaVpHVUdBUUFzOU5wbXo4SWloRUFBQUFBU1VWT1JLNUNZSUk9"},{ name : "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicOpen", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUZSSlJFRlVlTnFVa0ZFT3dDQUlRd3UzM0FXNVpyY2xVNWxXM1Y0Q0lhUzhENHdrdnVKcGpxdTRxTEJrdmdkYmlPbkppSm14eFVjT3NVTnRYUkRpWUFpWElNU0JOTWV6QzJWMi9FRllacnordk9VVVlBQURCZWdXcGc5L1hBQUFBQUJKUlU1RXJrSmdnZz09"},{ name : "__ASSET__:bitmap_flixel_system_debug__Window_GraphicCloseButton", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFnQUFBQUlDQVlBQUFERUQ3NkxBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUFkZ0FBQUhZQlRuc21DQUFBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFCL1NVUkJWQmlWVFkweENzSlFFQVhIYnlTZXdNdWxUV2R2YTZPbGxXSnBDQ0syaWsxT1krY3RRc1lpcS9rREM4dnM3bHZVU3UzVXBVcFdPN1ZDM1RqU3FXVU1EK0dldisxdGlKZDZ5dm95ajl3NzhWQVhLb21SR2JCaW9nY0dBTlNrTm5GNVY0L1IzOVNFMm9hNHF2TjRkdzUzS1lBMzBBRDFQeGJXUUFGOHZwYVlyTldBYU5WMEFBQUFBRWxGVGtTdVFtQ0M"},{ name : "__ASSET__:bitmap_flixel_system_debug_GraphicBitmapLog", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBQm1KTFIwUUFBQUFBQUFENVE3dC9BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBQUIzUkpUVVVIM2dRWkV4c2Fka1ZHNHdBQUFFRkpSRUZVR05PVnpjc0pBREFJQk5FdDFUSnl0UFBKS2VSbnhBd3NlSGlnOUJOUW1mRURBU3REUUdXWTRRdStjQWhQN013cytqaU94cDR5dk9ZWkxrRkFIVzZYWUMwODhkcWRBQUFBQUVsRlRrU3VRbUND"},{ name : "__ASSET__:bitmap_flixel_system_debug_GraphicStats", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBQUlHTklVazBBQUhvbEFBQ0Fnd0FBK2Y4QUFJRHBBQUIxTUFBQTZtQUFBRHFZQUFBWGI1SmZ4VVlBQUFBeFNVUkJWSGphWXZ6Ly96OERzWUNKZ1FSQWpPTC9VRXdkaytHbTBkVE5XQlZqdFpvK3ptQWtKUVlCQUFBQS8vOERBTDhIREFscWRHWVJBQUFBQUVsRlRrU3VRbUND"},{ name : "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicRestart", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUU1SlJFRlVlTnBpK1AvLy96SWdaa0REV01WQXhIOHNDckdLb1N1R0tjUXFocXdZV1NGV01aaGlkSVZZeFJqQk9vZ0VURkI2T1JZNVRERnkzRXh5YUJBTVp4WXNib3ZDNG42d0dFQ0FBUUFHbVQrVFE1cWdGQUFBQUFCSlJVNUVya0pnZ2c9PQ"},{ name : "__ASSET__:bitmap_flixel_system_debug__Window_GraphicWindowHandle", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFvQUFBQUtDQVlBQUFDTk1zKzlBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUZCSlJFRlVlTnFNandFS0FDQUlBeFgyeWg3b055MmpRa3lwUWJUMGRFU3FTblllRXZoWE5zRE1ZblhlelZHNHdBME5OVlJaSGpLUEgyaDYvNWwxVzBPaXgzTlRFbDFDSjdxS0MvNExraTdBQUQ1WWZydllMZlJQQUFBQUFFbEZUa1N1UW1DQw"},{ name : "__ASSET__:bitmap_flixel_system_debug_GraphicLog", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBQUlHTklVazBBQUhvbEFBQ0Fnd0FBK2Y4QUFJRHBBQUIxTUFBQTZtQUFBRHFZQUFBWGI1SmZ4VVlBQUFBa1NVUkJWSGphWXZ6Ly96OERzWUFGaVkxUEZ5TzZZc1pSa3dlSHlRQUFBQUQvL3dNQStmWUlMQWhqbnhZQUFBQUFTVVZPUks1Q1lJST0"},{ name : "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicPause", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUI1SlJFRlVlTnBpL0E4RURLaUFFWW1OSXNmRVFBSVlWVHdJRlFNRUdBQ1JGUVVTVTBxVk1RQUFBQUJKUlU1RXJrSmdnZz09"},{ name : "__ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoCorners", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUVBQUFBQkFDQVlBQUFDcWFYSGVBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQlkxSlJFRlVlTnJrV3d1eW16Z1FsR1Q4d1g1Sk52ZS9UUTYwdFhrdi9tRkFDNjRaMG01TEFwejFPaENxcHJEQnh1NmVuaGtKUnRZWTg2MnhkV1A3eG40MDloM3NIem4yMGRpeHNaTlkwZGlsc2JLeENxd0c4MkQ4M3NDZVg3ZWJoWDFyRHZacVdXTUwyUzhiV3dtT1RXTnZZbDhhKzlyWVg3TC9MTWZiejJ3Yk8yZHljQ2tBQ3JtZ0FTQkZ3QzZ5Ui9BZVNJZ0Jad0lZT0pPQVJDandSZUQ2K1BrTS9sc054OVlDZWlmN055VmdMeGQ5QjYrMzlyZnN2NHNLV2dXY3lmczFlVDRGT3VUOVBnSVFXRWdKQzFCQklZNjhpT20xVVNVWlhIZWhCSnprd0VHQUtoSHZRc0M3a0hRU0FpNEF1b29BcjhuTEtlQkRWR0FEUkRnaTRnSktacy9uNHZWYzNxL1VrVXFBRjVBZllrakNoNUNqM2k4SFNOMzBBQjlDZ0Uwb0FVbXdRa0JKdVVpUHJ5RG1jM205RkNJNkFpcngvZzhnUU1Hci9BdncvcEQ0N2dPYzh2eFFFcFNJQ3ZhbFhKc1Y4Q2J4bndNcFZTYmVMWUVBQkw2WDh5ZUsrMGRCRHdYK0tCRTFPQWdKVUd4YklzQm5VTmEwREI3azlSRkszeGtraGpFK3hMc2h3SDRrZUQrQUNFM0VXc1cwVkI0QW0xWUFMWmMyZzlwK0lQQUhxdmxWSk5iTlNFOC9vZ0QrYm93SXZMWVR4eDBCMTE0STJJZ3RNZ0NxSHp4Q3lWUFpsMVRxbmdteTcxcVdsR1poYjZqOEZZUnRUOGt3eXdUb2lZQVhFZkQxTDRKOGxCZzdrSFF2d0d2NDc1Y0F4b09RMEJHQTRNODB6T1doN2JNOVBsUUZzWE0xNUlRU0JrWWhFbFlaZ01haGJxeld2d0o4MzIvYWdBbzhPSzZDb1R1VFVDTUJPTkJoNzc4YThKakU2R2wwV29FS0NzQjYwaktJRTV3TGxic3hZL2ZmZ1FoV0ErYXVNa0NDeVFMU0x3Zkd2Zm5OeVdBVmxLU0VRc2NCUlVUNmZpS2VUeW1ocGx6QUpGd0pLQlAxZnFvSzRMQ3RZYUtFSkRoSDRLc1pTRDgwTnFnREpGd3R3emNrbWFtSGdROGt3NHBJV0RqeS90UVZFQ01pUmtMbElqYzFwK2oxUGdKOElDRldMbkZuMTgvTSsxWGdIdWFOQXVvQk56dW1Gdis5WWVBQ1NXL29sSGVxT2VER2hpcGc2dU9BS0JFdVVmYm1zREVKRlpQZ1RQcWh4bHhJQ0QybTZ3Z1krOGhxVHZuQXU1bDZQVFl6dkZPRCt3T2tINW9YZE9kY1l2dzg1ZEdnSHhvT3pveDdiaitYSE5BZGMyYittMDlNazQyYmFlSWJzbGtsd1A0cFlFUHZYZVFEcVMvUGFsTUZoR3lPS3Jqck8zSXpCODBLdm51czdoTGVueklwc2NmbmQ2cDNpVENZaStkakpEZ2t3TTI4SW9SYTdib2NNR2NWaE1CamE1M3JYZ1NJbUVNSkRMWGNJdVlGZGxzdUlpVE1EZnhObDZrTGdIZG1Yb21RUTBCYlp6c0N0SWRXRDA1OVlHUURCSEJ2c2JiUVpZN0FZM3hNT1JuYW52aS9VVUJHS3BoVFNXVHBZM2Q1aTNuWm5sanBtNTU4WUNlWStFS0xMQlRyQ2dsWXc0bU13c0JNWkdnY0d2bTVsUGVOdE1sZDI4YUZpQlVSNEdES1hKdGhEWXV2bnV2SEZJREFPd1VnQVdzS0IrNFB0aWJjbWhxN0RXVk11TkY1N08yc01mY2wrbGFWNE5xaXE3VUhOd0owQXlmTzhnVnNqMC9kWDdPSlAydi9ZKzhPbWVveStDVTRkdzFxdjRaQUxuOCtGK05HNlJBQi9oYzkrOHg1UG51ZFBhOXJCWElOQVNWZ0srQnpjN3MyQ0lIR1dtZTVXenNXTGo0U0Zxd2VQd0kwMzlwRHI3UGtOMkJyVkVDN3RZc0plRjBncnI3Z0xqSm53azlmWGxYdWVLaTdCTkNxN3EzNTJTNi9WUVZzNVlzS0h0dmxhMkFZMXduZVBXSXkvOCtUSkp1WTZOaEF0a2ZRT3lLZ2E1ZlBoVFgwUGk0OHhEc29xV2JLWnl1aER6eU84VlgyQ253WEljRXBBVXZ5UEpaQWpDdGRXZnFLbmlMYjQza3VkUnNCck10b1B4RUpMVzZMWlhCbjd0Y0xlQ0lnSXhYRXdpRkZRbXdNMFZmelkwdHBPZXVyOTNQQjlFbE1sYUR5YnovVExTc3pKdDR5YitCSGxrUlFUQWtwRXZ6STBoa2I0ckxzMmZ0YklPQU5iQXRWNExwZVlHZCtManIwZ2RLSGlhVnZQZEV6OGtIb2xyYUwxSHYydmtxL1hVWGVyaUQvVEdxb2NQSDB5ZHl2dXViWXFzejlpbTFWZ251Z01neXArVFl5ekkxTmNIQm1pM01aWFIxL3hLVCtyd0FEQUFKQmFpQW1tNXh3QUFBQUFFbEZUa1N1UW1DQw"},{ name : "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicStep", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUVWSlJFRlVlTnBpK1AvLy96SWdqZ1JpQmdKNEdZaUFBVUthL2lNckpxUUpxMkpjbXZBcVJ0ZjBueEdzZzBqQVJJU2E1VUFjQldaUjZtYWlRb09vY0NZNkJnRUNEQUF3WUY0RDlrNTlxUUFBQUFCSlJVNUVya0pnZ2c9PQ"},{ name : "__ASSET__:bitmap_flixel_system_debug__Stats_GraphicMaximizeButton", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFvQUFBQUtDQVlBQUFDTk1zKzlBQUFBQm1KTFIwUUEvd0QvQVArZ3ZhZVRBQUFBQ1hCSVdYTUFBQUIyQUFBQWRnRk9leVlJQUFBQUIzUkpUVVVIM2dNSkNSOFVCaGtEeVFBQUFFOUpSRUZVR05PdGtFRVN3REFJQW92Ly8vUDJvb2FhOUJaUFpvQXdxd0NlTlpMVUQ5ZkNIVzc2VFkyZmR3MklVOVVwZUhlVU5kMVlBRm5kTUFGUW1ndTV0eGFWM202VDV5bW9EL0gwT3ZrTFNBOUI4bis0Y2pvQUFBQUFTVVZPUks1Q1lJST0"},{ name : "__ASSET__:bitmap_flixel_ui__FlxTypedButton_GraphicButton", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUZBQUFBQThDQVlBQUFEeEp6Mk1BQUFBQVhOU1IwSUFyczRjNlFBQUFBUm5RVTFCQUFDeGp3djhZUVVBQUFBSmNFaFpjd0FBRHNNQUFBN0RBY2R2cUdRQUFBQWFkRVZZZEZOdlpuUjNZWEpsQUZCaGFXNTBMazVGVkNCMk15NDFMakV3TVBSeW9RQUFBWFpKUkVGVWVGN3RtMEVLZzBBTVJlZGVYc3M3ZUE0RjcrRUozSGdUdHk3U3BraWhNbU5tU0FjY2VFSUs3Y0xGNC84NHpUZEJSTUw3MGcrcWtNSEpMc2k2cmpKTkUxWEFRSm1kb2d2Uzk3MTBYWWNDTXhXb3JKVFpEMEQ5b3RlKzc5UU5BMldrcktJQWwyVVJ5bVlBUUtkUUFBaEEyMlkxV3hFS1JJRW9zT21uUFJiR3dsZ1lDOWM4Smp6OTN2VEFXajF3R0FhaGJBWlJCVExPeWg4b1I4ZForaU9WeitBN3ptS2tuNis4YSt6eFlRZEFKMENsU2laU25nZVJpV1RtSDdHMDhqWVRPWTVEcURTRDIweGsyemFoYkFiSmZ5TEFzK0VwSXdBNm5RWkFBT1paclZaTFFvRW9FQVUyZlZ6Q3dsZ1lDMlBoV2tlRUZ1NmI3SUh6UEF0bE15QVRjWXl5RkI2WnlCL3lIeklScHdyUGQ4ckpSRHo3TWV5SkZPeUZYUGRveUVRY0ZrNW1JdG9ZS1p0QjhodzRqcU5RTmdNQU9vVUNRQURhTnF2WmlsQWdDa1NCVFQvdHNUQVd4c0pZdU9ZeDRlbjNwZ2ZTQXgvWUE5a1R5WC9aUERyT1lveGxqN0d1akQ3VGJOWWM4cFVYMnhONUFRa0dlQlBxNStCakFBQUFBRWxGVGtTdVFtQ0M"},{ name : "__ASSET__:bitmap_flixel_input_mouse__FlxMouse_GraphicCursor", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUJnQUFBQWdDQVlBQUFBSVhyZzRBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQW1SSlJFRlVlTnEwbHM5ckUwRVV4Nzg3MllTZ0psVFNTaVdwVnZyRElxaEZVSUtnK0NlSUlncWVGRS9pVFJDOHBMUVhqeUwwNGc5Q29tWFRKSVcwT1ZVRU1UZEJSSWs1VzZXdGtLSlNiR25EcHNuNlprMlczVFFicytua3dkdVpuVm0rbjMwenczc2pCVUxCQ0lBcGRNbGMrL3orZDlScTVMbHVBT1JhTzhrZkR5ZW5XMGJ5YU9LZVl3RGpEMDNUZEFnSlJFUkhJTkVlYUpWS0ZZeEprQ1NKajAzWVJYTC85bVZib2Q2QmtIMEV1bWxTdlNjMEVnTnc1ZXAxakE2UENJY1lnQU0rUDU0OG5zYXh3VUdoRUdaKzJTaFZNSjlLNCtqQUVXRVFDMkM3cEVKakhpeWswd2dGZzBJZ3JIRmdhYm1vaTJkbWt6amMzNzlueUM3QW44MHQvRjdmMFBlQ1F3NzE5UmtRT29xUlBRTzRmVjBwNnUzdzBCQXl5U1FDZ1VESGtLYUE0czkxYkc2VjlQN3hrVkU5a29NOVBSMUJtTjNFVWkwS2JpZkd4akNuS1BEN2ZJNGh0b0RWNGkrbzVSM2ovZlRKVXdSSk9JYllBbmgrK3I2NlpoazdNejRPSlI2SDErdHRHOEphVFg3N3NZWkt0V29aQzU4OWg5U3JtYlloTFFHcXVxTXZWYU9kRDRjeEU0M0M0M2JEVkU4aWpnR05tMjIyU3hjdUl2Nzh4WDhoY2l2eFdTV0dmUDRUYmV4K0VtcitLVjhxdFZ3MlEyQ3U4YmFBVk9JbEZ1YlQvejZTWFdBdTF1N1J0MENhQXJJa25Na2t3UXVjTE11UW1PUTBReGlRWFlEWGkxa2thR2tZWTVEZExqNzBsdnhCaDhuVVl3SGtjbThRaXo0MUw4a2lMM1pVbzdjN3Jja0c0T09IOXlnVThuQVRzMWI4cytUWFNGd1ZVbkMrRkQ3VFh4czNpemtSNGtZRUx1c0o0ZUkzbTRuYkxZT1RWS0dRM3hEeDU1YUxWNjBmSTcvRDg1ekltMTA5Z21ma3QwU0wxMi9YdmRUZTdkYjEvYThBQXdDWlVNUU16UW9keXdBQUFBQkpSVTVFcmtKZ2dnPT0"},{ name : "__ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoLight", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUVBQUFBQkFDQVlBQUFDcWFYSGVBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQnE1SlJFRlVlTnJVVzR0dTR6WVE1TktVYzNmcHQvYWYrcE01MjVLNFJRQ3gySnZiRi8xSTJ3Q0VaRWQyTk1QWnQwTGx6Ny9LQzMvb1NkL0RyN3JCOXNXZzZVN0E5Q295MmhjQXB3ZStpNFB2NC84Q0FSUzhSM2VBbE5ld3VBNC9RNCtTMEw0SU9EMWdDcFM0RC81cUFpeEFsSHd2SW9PVHBQQ0VtcDVHQUUwQ0orTzZqQk5rQjlSVFRLSTlDTndDR0wwWDdUd0xnS3lBWlllSUtUVTg2Z1ExSXNaN1ZRRS9TNEE4NzQ0S1h1b0RNdktPVm5XVWdJQ3NSUWNKRkpBeFJVeDdFSHlGY3dSY0EySTg4QU5rRjY5SlVRWTdEalEwaDVZQWI1RkFEdUFxRnNGNWhvQU93UHZ4K1E0cTZBYjR0Qis0eHdscTREWGdKK1cxWmc3c0VERFdMc0NpQ1hqK0ljd1ZXbkwzU1pFK0FwWkFjVlZGRmFSNGRqN0FzZ0MrSDUvWndROGcwRzRvd1EyUjdRNnZYNVhkSHlBYkFHOEtHZmdkMnU0UDRKczR4OWZqZm5ieG5YMDJTclNKM2RkMi9pU09UUnkxZFlMcjBRZDBBRDhBeTRYa2FVUjRvZkkzTWxvaXhkWGlPMG9ld1M2d21xSUdWSUFrUUlKZWp6WCszbVlrUldnS2x2Ui9lZDBtS2poTi9pY0Q5RmtjeitMMzQ5b0t6cENGbzBQZ0RmeUk1ZUZaMmUzeWlBL3draHEwOHdVQXY4SDVJb2lRU2tCUExuZitKcFpHZ0JWQ2krSVV6YWpRa3BWZURhUXZ3WDg3UUkvMVRmeE9tb1NtQUFSL0ZZUlI0RGhMMER0SU9VRnliSitVVUllN1AwQi9QNERMOVNaSWtHYkFRSUFFdjRqZEw0cGlNR21xQWp3Wi9RVFZDVklpSDdETW9BRUJBL0FuQ1QrTzQzZEJ6aG5zZWhBZzdmNFQvRThnQ3NIdlNzSlVJVzBtbzcvSVVSZ2tKd3lpL1dzRWZBSitQd2dZUzVyRzRoRHdDZjRDU2lsR2xyZ2JaS0FTckVZclo0b2hMZDNGMEhkV0NQaHhrUEN1S0dFUkpFb0h1QjdnaDBwSUFhOGxSaWVSTVZZbFd6VHJnMHd4cEJFaGZjRWlTSkFFSUFudmdvQXpSQUpwLzJkbDUyVitzRUtJYk1mN0o1RU00YkljSWJWRTFXZWx2bG9PZ0k0UUNaQ21nQXBZaGRldjRzWXQ4R05wOVlaSHdpOUtpRExCNGhSQUo4TVJuc0VSRG4vd0J4Q3dnTk5hUWZvTXdHVmtXSlQwR2plcVo3ckhUUWtSTldoalJabmdHWlNBSmpITW9JRUNic0lrQnZnQi9BMXlDU3Uxcm80RDU0d1BvQ0FaaWtwZ0xTcThLZUZ4Z0tuQ0I4aW9JTUZmSUwxdWlWTGJhNzJGWVRBVEZTaHdqTTFSeGpDUlJlejRKbXI5TTZUTkMrUU5sdXk5QnF4cEJqTzFnQlVleVZBRGtxRVJVK0hHUmlSb3prNlRrNm5TN0N5eUpZWVRzeDNpQW0xeEN0cG94ZWtZUlUzVnUwQVh1TW1aMlI4N0ZSZzcvVDJyMVYyVWZvRDNXYTk5bmhtcjNhMEE3WTk3N1d4TVQzZFk2MEV3SmtJYnRMMnNuUDllOEdZWUpLZU5aTzF3VDdTeE1HbTVpci9KSWd6dVVQL2Z4R2MyY2R3VVFsQTkzc3pBRElQUkdKcVYzbDBQMmxpeXJKV2xMWW5QVk1nRHJzcTZBUUdhU3Rnd3lSSjFoVnBDTWw3ZkhuY2VnVjlFL0Vid0MrUUJzZ3orT0k2WFl3MHlWa1VORmhIZUlOWE5BNnkrR2twdGQzYitDbVZ0aGZSMmhZS25ReW44QVNSY3dUUlFBWmFQaUtLYW1ncVQ0Z09zY1pVbCtjWG81bGdWWDRmTTd3T1dSOFNtQUk4YzVUOEthY2FPRjRNRWRxUXZuVnd6cXJvVkNDQWdZQld5bCtDUmdCV1VnSW9vR1FjWW1ZQVg0anFFdEhiY21CeVdrTkx4dllGUGtBckFqdEJGVVlFa3dsSUFubk1tQ2hSbnlvbzl0azNKNkc3S0VGVHVyblJ5NkJUeEd1bEFmOExTRklBT2taMlErRnRWT0JNR05UVnNrUGRYQXp6dVBqWkZPNWpCVGV5MGpBWVhKVS9ZamR6QWNvUnVGR0NuZHU0d2t4dm5ZMngxVlZTek83dGZ3UVIyVUFIbUJSZHh0SnhnRDU0eWNVM0E2NkdqS2V4S3I2REF6ck1DQ25jZkJ5TmFQbkZUdlArcWhNTTlDSU4zT1VFckJTYVIxR3lKTWZkTk5FS3QyV0EzU0pESHEyUDdtZDNIOUQ1VkRHbFBjZlNnNVl4Z21taDV6VXlIVjZXbXNNQjNweVpJSzhDZHBSdkFOeU5ibEFTY2xLNU9FVTdRZXo1Z0Qyb0JiL2VuTTBFdkg3Q2V5Y0dFYVFCcHg4MWxtcGRlaldFOUtUSlRLdk1qaVZCSlBKT3p3WmdMbldBTituajRqSkJHUkUvbS96elRGR21KM2ZjYURkM0lGYW80N2tyTHF6Z0U0UENUamVaSWxQV0Z1NS90Q211NUFRNGdHRVpaVlF3cHZhZkROQ2ZibmVKTEE1d3BnKzl1aVZId1hsZUlRSDlnTlRpTEUyVllxZTZpZmlGUE5IZW5HaUxraEVRQ1U4RHFyMExPRUQwMm55R2lPS0dPWnh1aldSTW9Tbmkwd2lRcFQyaVEwNGttQnp3N3RRZ0hOcDhpWW1ZeTVEMTBxRDJwVGNiTWdCTmtsNENFakpON3lmOExjS0tEck8yOE5ZTG53QXk4bHJ5MzAwODFnZG5Ka1VXSU5YVGxoQkl5NzAwUFJlNGx3RXFPTEFkcDNTQWxBSEJ5V0hNWCtHY29nQnhpSWpJeWl1STdydmt5QWlJMXpONGtUeWpqS2VDZlFVQlcyc1dwS1NJbitCTGd6eVlnVXNXak4vNi8rdS94NkticDN3QnEvZnd0d0FDRGVkRE1KazlyRWdBQUFBQkpSVTVFcmtKZ2dnPT0"},{ name : "__ASSET__:bitmap_flixel_tile_GraphicAuto", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUlBQUFBQUlDQU1BQUFBR0F3ZE1BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBS1QybERRMUJRYUc5MGIzTm9iM0FnU1VORElIQnliMlpwYkdVQUFIamFuVk5uVkZQcEZqMzMzdlJDUzRpQWxFdHZVaFVJSUZKQ2k0QVVrU1lxSVFrUVNvZ2hvZGtWVWNFUlJVVUVHOGlnaUFPT2pvQ01GVkVzRElvSzJBZmtJYUtPZzZPSWlzcjc0WHVqYTlhODkrYk4vclhYUHVlczg1Mnp6d2ZBQ0F5V1NETlJOWUFNcVVJZUVlQ0R4OFRHNGVRdVFJRUtKSEFBRUFpelpDRnovU01CQVBoK1BEd3JJc0FIdmdBQmVOTUxDQURBVFp2QU1CeUgvdy9xUXBsY0FZQ0VBY0Iwa1RoTENJQVVBRUI2amtLbUFFQkdBWUNkbUNaVEFLQUVBR0RMWTJMakFGQXRBR0FuZitiVEFJQ2QrSmw3QVFCYmxDRVZBYUNSQUNBVFpZaEVBR2c3QUt6UFZvcEZBRmd3QUJSbVM4UTVBTmd0QURCSlYyWklBTEMzQU1ET0VBdXlBQWdNQURCUmlJVXBBQVI3QUdESUl5TjRBSVNaQUJSRzhsYzg4U3V1RU9jcUFBQjRtYkk4dVNRNVJZRmJDQzF4QjFkWExoNG96a2tYS3hRMllRSmhta0F1d25tWkdUS0JOQS9nODh3QUFLQ1JGUkhnZy9QOWVNNE9yczdPTm82MkRsOHQ2cjhHL3lKaVl1UCs1YytyY0VBQUFPRjBmdEgrTEMrekdvQTdCb0J0L3FJbDdnUm9YZ3VnZGZlTFpySVBRTFVBb09uYVYvTncrSDQ4UEVXaGtMbloyZVhrNU5oS3hFSmJZY3BYZmY1bndsL0FWLzFzK1g0OC9QZjE0TDdpSklFeVhZRkhCUGpnd3N6MFRLVWN6NUlKaEdMYzVvOUgvTGNMLy93ZDB5TEVTV0s1V0NvVTQxRVNjWTVFbW96ek1xVWlpVUtTS2NVbDB2OWs0dDhzK3dNKzN6VUFzR28rQVh1UkxhaGRZd1AyU3ljUVdIVEE0dmNBQVBLN2I4SFVLQWdEZ0dpRDRjOTMvKzgvL1VlZ0pRQ0Faa21TY1FBQVhrUWtMbFRLc3ovSENBQUFSS0NCS3JCQkcvVEJHQ3pBQmh6QkJkekJDL3hnTm9SQ0pNVENRaEJDQ21TQUhISmdLYXlDUWlpR3piQWRLbUF2MUVBZE5NQlJhSWFUY0E0dXdsVzREajF3RC9waENKN0JLTHlCQ1FSQnlBZ1RZU0hhaUFGaWlsZ2pqZ2dYbVlYNEljRklCQktMSkNESmlCUlJJa3VSTlVneFVvcFVJRlZJSGZJOWNnSTVoMXhHdXBFN3lBQXlndnlHdkVjeGxJR3lVVDNVRExWRHVhZzNHb1JHb2d2UVpIUXhtbzhXb0p2UWNyUWFQWXcyb2VmUXEyZ1AybzgrUThjd3dPZ1lCelBFYkRBdXhzTkNzVGdzQ1pOank3RWlyQXlyeGhxd1Zxd0R1NG4xWTgreGR3UVNnVVhBQ1RZRWQwSWdZUjVCU0ZoTVdFN1lTS2dnSENRMEVkb0pOd2tEaEZIQ0p5S1RxRXUwSnJvUitjUVlZakl4aDFoSUxDUFdFbzhUTHhCN2lFUEVOeVFTaVVNeUo3bVFBa214cEZUU0V0SkcwbTVTSStrc3FaczBTQm9qazhuYVpHdXlCem1VTENBcnlJWGtuZVRENURQa0crUWg4bHNLbldKQWNhVDRVK0lvVXNwcVNobmxFT1UwNVFabG1ESkJWYU9hVXQyb29WUVJOWTlhUXEyaHRsS3ZVWWVvRXpSMW1qbk5neFpKUzZXdG9wWFRHbWdYYVBkcHIraDB1aEhkbFI1T2w5Qlgwc3ZwUitpWDZBUDBkd3dOaGhXRHg0aG5LQm1iR0FjWVp4bDNHSytZVEtZWjA0c1p4MVF3TnpIcm1PZVpENWx2VlZncXRpcDhGWkhLQ3BWS2xTYVZHeW92VkttcXBxcmVxZ3RWODFYTFZJK3BYbE45cmtaVk0xUGpxUW5VbHF0VnFwMVE2MU1iVTJlcE82aUhxbWVvYjFRL3BINVovWWtHV2NOTXcwOURwRkdnc1YvanZNWWdDMk1aczNnc0lXc05xNFoxZ1RYRUpySE4yWHgyS3J1WS9SMjdpejJxcWFFNVF6TktNMWV6VXZPVVpqOEg0NWh4K0p4MFRnbm5LS2VYODM2SzNoVHZLZUlwRzZZMFRMa3haVnhycXBhWGxsaXJTS3RScTBmcnZUYXU3YWVkcHIxRnUxbjdnUTVCeDBvblhDZEhaNC9PQlozblU5bFQzYWNLcHhaTlBUcjFyaTZxYTZVYm9idEVkNzl1cCs2WW5yNWVnSjVNYjZmZWViM24raHg5TC8xVS9XMzZwL1ZIREZnR3N3d2tCdHNNemhnOHhUVnhiendkTDhmYjhWRkRYY05BUTZWaGxXR1g0WVNSdWRFOG85VkdqVVlQakduR1hPTWs0MjNHYmNhakpnWW1JU1pMVGVwTjdwcFNUYm1tS2FZN1REdE14ODNNemFMTjFwazFtejB4MXpMbm0rZWIxNXZmdDJCYWVGb3N0cWkydUdWSnN1UmFwbG51dHJ4dWhWbzVXYVZZVlZwZHMwYXRuYTBsMXJ1dHU2Y1JwN2xPazA2cm50Wm53N0R4dHNtMnFiY1pzT1hZQnR1dXRtMjJmV0ZuWWhkbnQ4V3V3KzZUdlpOOXVuMk4vVDBIRFlmWkRxc2RXaDErYzdSeUZEcFdPdDZhenB6dVAzM0Y5SmJwTDJkWXp4RFAyRFBqdGhQTEtjUnBuVk9iMDBkbkYyZTVjNFB6aUl1SlM0TExMcGMrTHBzYnh0M0l2ZVJLZFBWeFhlRjYwdldkbTdPYnd1Mm8yNi91TnU1cDdvZmNuOHcwbnltZVdUTnowTVBJUStCUjVkRS9DNStWTUd2ZnJINVBRMCtCWjdYbkl5OWpMNUZYcmRld3Q2VjNxdmRoN3hjKzlqNXluK00rNHp3MzNqTGVXVi9NTjhDM3lMZkxUOE52bmwrRjMwTi9JLzlrLzNyLzBRQ25nQ1VCWndPSmdVR0JXd0w3K0hwOEliK09QenJiWmZheTJlMUJqS0M1UVJWQmo0S3RndVhCclNGb3lPeVFyU0gzNTVqT2tjNXBEb1ZRZnVqVzBBZGg1bUdMdzM0TUo0V0hoVmVHUDQ1d2lGZ2EwVEdYTlhmUjNFTnozMFQ2UkpaRTNwdG5NVTg1cnkxS05TbytxaTVxUE5vM3VqUzZQOFl1WmxuTTFWaWRXRWxzU3h3NUxpcXVObTVzdnQvODdmT0g0cDNpQytON0Y1Z3Z5RjF3ZWFIT3d2U0ZweGFwTGhJc09wWkFUSWhPT0pUd1FSQXFxQmFNSmZJVGR5V09Dbm5DSGNKbklpL1JOdEdJMkVOY0toNU84a2dxVFhxUzdKRzhOWGtreFRPbExPVzVoQ2Vwa0x4TURVemRtenFlRnBwMklHMHlQVHE5TVlPU2taQnhRcW9oVFpPMlorcG41bVoyeTZ4bGhiTCt4VzZMdHk4ZWxRZkphN09RckFWWkxRcTJRcWJvVkZvbzF5b0hzbWRsVjJhL3pZbktPWmFybml2TjdjeXp5dHVRTjV6dm4vL3RFc0lTNFpLMnBZWkxWeTBkV09hOXJHbzVzanh4ZWRzSzR4VUZLNFpXQnF3OHVJcTJLbTNWVDZ2dFY1ZXVmcjBtZWsxcmdWN0J5b0xCdFFGcjZ3dFZDdVdGZmV2YzErMWRUMWd2V2QrMVlmcUduUnMrRlltS3JoVGJGNWNWZjlnbzNIamxHNGR2eXIrWjNKUzBxYXZFdVdUUFp0Sm02ZWJlTFo1YkRwYXFsK2FYRG00TjJkcTBEZDlXdE8zMTlrWGJMNWZOS051N2c3WkR1YU8vUExpOFphZkp6czA3UDFTa1ZQUlUrbFEyN3RMZHRXSFgrRzdSN2h0N3ZQWTA3TlhiVzd6My9UN0p2dHRWQVZWTjFXYlZaZnRKKzdQM1A2NkpxdW40bHZ0dFhhMU9iWEh0eHdQU0EvMEhJdzYyMTduVTFSM1NQVlJTajlZcjYwY094eCsrL3AzdmR5ME5OZzFWalp6RzRpTndSSG5rNmZjSjMvY2VEVHJhZG94N3JPRUgweDkySFdjZEwycENtdkthUnB0VG12dGJZbHU2VDh3KzBkYnEzbnI4UjlzZkQ1dzBQRmw1U3ZOVXlXbmE2WUxUazJmeXo0eWRsWjE5Zmk3NTNHRGJvclo3NTJQTzMyb1BiKys2RUhUaDBrWC9pK2M3dkR2T1hQSzRkUEt5MitVVFY3aFhtcTg2WDIzcWRPbzgvcFBUVDhlN25MdWFycmxjYTdudWVyMjFlMmIzNlJ1ZU44N2Q5TDE1OFJiLzF0V2VPVDNkdmZONmIvZkY5L1hmRnQxK2NpZjl6c3U3MlhjbjdxMjhUN3hmOUVEdFFkbEQzWWZWUDF2KzNOanYzSDlxd0hlZzg5SGNSL2NHaFlQUC9wSDFqdzlEQlkrWmo4dUdEWWJybmpnK09UbmlQM0w5NmZ5blE4OWt6eWFlRi82aS9zdXVGeFl2ZnZqVjY5Zk8wWmpSb1pmeWw1Ty9iWHlsL2VyQTZ4bXYyOGJDeGg2K3lYZ3pNVjcwVnZ2dHdYZmNkeDN2bzk4UFQrUjhJSDhvLzJqNXNmVlQwS2Y3a3htVGsvOEVBNWp6L0dNekxkc0FBQUFnWTBoU1RRQUFlaVVBQUlDREFBRDUvd0FBZ09rQUFIVXdBQURxWUFBQU9wZ0FBQmR2a2wvRlJnQUFBd0JRVEZSRkFBQUFYbDVlQUFBQUF3TURCQVFFQlFVRkJnWUdCd2NIQ0FnSUNRa0pDZ29LQ3dzTERBd01EUTBORGc0T0R3OFBFQkFRRVJFUkVoSVNFeE1URkJRVUZSVVZGaFlXRnhjWEdCZ1lHUmtaR2hvYUd4c2JIQndjSFIwZEhoNGVIeDhmSUNBZ0lTRWhJaUlpSXlNakpDUWtKU1VsSmlZbUp5Y25LQ2dvS1NrcEtpb3FLeXNyTEN3c0xTMHRMaTR1THk4dk1EQXdNVEV4TWpJeU16TXpORFEwTlRVMU5qWTJOemMzT0RnNE9UazVPam82T3pzN1BEdzhQVDA5UGo0K1B6OC9RRUJBUVVGQlFrSkNRME5EUkVSRVJVVkZSa1pHUjBkSFNFaElTVWxKU2twS1MwdExURXhNVFUxTlRrNU9UMDlQVUZCUVVWRlJVbEpTVTFOVFZGUlVWVlZWVmxaV1YxZFhXRmhZV1ZsWldscGFXMXRiWEZ4Y1hWMWRYbDVlWDE5ZllHQmdZV0ZoWW1KaVkyTmpaR1JrWldWbFptWm1aMmRuYUdob2FXbHBhbXBxYTJ0cmJHeHNiVzF0Ym01dWIyOXZjSEJ3Y1hGeGNuSnljM056ZEhSMGRYVjFkbloyZDNkM2VIaDRlWGw1ZW5wNmUzdDdmSHg4ZlgxOWZuNStmMzkvZ0lDQWdZR0Jnb0tDZzRPRGhJU0VoWVdGaG9hR2g0ZUhpSWlJaVltSmlvcUtpNHVMakl5TWpZMk5qbzZPajQrUGtKQ1FrWkdSa3BLU2s1T1RsSlNVbFpXVmxwYVdsNWVYbUppWW1abVptcHFhbTV1Ym5KeWNuWjJkbnA2ZW41K2ZvS0Nnb2FHaG9xS2lvNk9qcEtTa3BhV2xwcWFtcDZlbnFLaW9xYW1wcXFxcXE2dXJyS3lzcmEydHJxNnVyNit2c0xDd3NiR3hzckt5czdPenRMUzB0YlcxdHJhMnQ3ZTN1TGk0dWJtNXVycTZ1N3U3dkx5OHZiMjl2cjYrdjcrL3dNREF3Y0hCd3NMQ3c4UER4TVRFeGNYRnhzYkd4OGZIeU1qSXljbkp5c3JLeTh2THpNek16YzNOenM3T3o4L1AwTkRRMGRIUjB0TFMwOVBUMU5UVTFkWFYxdGJXMTlmWDJOalkyZG5aMnRyYTI5dmIzTnpjM2QzZDN0N2UzOS9mNE9EZzRlSGg0dUxpNCtQajVPVGs1ZVhsNXVibTUrZm42T2pvNmVucDZ1cnE2K3ZyN096czdlM3Q3dTd1NysvdjhQRHc4Zkh4OHZMeTgvUHo5UFQwOWZYMTl2YjI5L2YzK1BqNCtmbjUrdnI2Ky92Ny9QejgvZjM5L3Y3Ky8vLy9Ra3FmSXdBQUFBTjBVazVULy84QTE4b05RUUFBQUcxSlJFRlVlTnJzazdFU3dDQUlRMS84LzQ5MlVEeUJWdHk2MUNVWEVnVTVvQUZBUXdCaWNnYUhTc2ZaZlBCT2x5UUpTekM1bHJmUWpWb0MrVUNwYncvdlNNQ0RuczFQdnp6b2Z3SGZGMkJENWxCKzJONExTUFp3eWdKc3pRS0dkYXM2UUxwMjI0RU9BQUQvL3dNQTlQY0E4YU9wY3lVQUFBQUFTVVZPUks1Q1lJST0"},{ name : "__ASSET__:bitmap_flixel__FlxSprite_GraphicDefault", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUJBQUFBQVFDQVlBQUFBZjgvOWhBQUFBQkdkQlRVRUFBTEdPZlB0Umt3QUFBQ0JqU0ZKTkFBQ0hEd0FBakE4QUFQMVNBQUNCUUFBQWZYa0FBT21MQUFBODVRQUFHY3h6UElWM0FBQUtPV2xEUTFCUWFHOTBiM05vYjNBZ1NVTkRJSEJ5YjJacGJHVUFBRWpIblpaM1ZGVFhGb2ZQdlhkNm9jMHdBbEtHM3J2QUFOSjdrMTVGWVpnWllDZ0REak0wc1NHaUFoRkZSSm9pU0ZERWdORlFKRlpFc1JBVVZMQUhKQWdvTVJoRlZDeHZSdGFMcnF5ODkvTHkrK09zYisyejk3bjc3TDNQV2hjQWtxY3ZsNWNHU3dHUXloUHdnenljNlJHUlVYVHNBSUFCSG1DQUtRQk1Wa2E2WDdCN0NCREp5ODJGbmlGeUFsOEVBZkI2V0x3Q2NOUFFNNEJPQi8rZnBGbnBmSUhvbUFBUm03TTVHU3dSRjRnNEpVdVFMcmJQaXBnYWx5eG1HQ1ZtdmloQkVjdUpPV0dSRFQ3N0xMS2ptTm1wUExhSXhUbW5zMVBaWXU0VjhiWk1JVWZFaUsrSUN6TzVuQ3dSM3hLeFJvb3dsU3ZpTitMWVZBNHpBd0FVU1d3WGNGaUpJallSTVlrZkV1UWk0dVVBNEVnSlgzSGNWeXpnWkF2RWwzSkpTOC9oY3hNU0JYUWRsaTdkMU5xYVFmZmtaS1Z3QkFMREFDWXJtY2xuMDEzU1V0T1p2QndBRnUvOFdUTGkydEpGUmJZMHRiYTBORFF6TXYycVVQOTE4MjlLM050RmVobjR1V2NRcmYrTDdhLzgwaG9BWU15SmFyUHppeTJ1Q29ET0xRREkzZnRpMHpnQWdLU29ieDNYdjdvUFRUd3ZpUUpCdW8yeGNWWldsaEdYd3pJU0YvUVAvVStIdjZHdnZtY2tQdTZQOHRCZE9mRk1ZWXFBTHE0Ykt5MGxUY2luWjZReldSeTY0WitIK0I4SC9uVWVCa0djZUE2Znd4TkZoSW1tak10TEVMV2J4K1lLdUdrOE9wZjNuNXI0RDhQK3BNVzVGb25TK0JGUVk0eUExSFVxUUg3dEJ5Z0tFU0RSKzhWZC82TnZ2dmd3SUg1NTRTcVRpM1AvN3pmOVo4R2w0aVdEbS9BNXppVW9oTTRTOGpNWDk4VFBFcUFCQVVnQ0twQUh5a0FkNkFCRFlBYXNnQzF3Qkc3QUcvaURFQkFKVmdNV1NBU3BnQSt5UUI3WUJBcEJNZGdKOW9CcVVBY2FRVE5vQmNkQkp6Z0Z6b05MNEJxNEFXNkQrMkFVVElCbllCYThCZ3NRQkdFaE1rU0I1Q0VWU0JQU2g4d2dCbVFQdVVHK1VCQVVDY1ZDQ1JBUEVrSjUwR2FvR0NxRHFxRjZxQm42SGpvSm5ZZXVRSVBRWFdnTW1vWitoOTdCQ0V5Q3FiQVNyQVVid3d6WUNmYUJRK0JWY0FLOEJzNkZDK0FkY0NYY0FCK0ZPK0R6OERYNE5qd0tQNFBuRUlBUUVScWlpaGdpRE1RRjhVZWlrSGlFajZ4SGlwQUtwQUZwUmJxUlB1UW1Nb3JNSUc5UkdCUUZSVWNab214Um5xaFFGQXUxQnJVZVZZS3FSaDFHZGFCNlVUZFJZNmhaMUVjMEdhMkkxa2Zib0wzUUVlZ0VkQmE2RUYyQmJrSzNveStpYjZNbjBLOHhHQXdObzQyeHduaGlJakZKbUxXWUVzdytUQnZtSEdZUU00Nlp3Mkt4OGxoOXJCM1dIOHZFQ3JDRjJDcnNVZXhaN0JCMkF2c0dSOFNwNE14dzdyZ29IQStYajZ2QUhjR2R3UTNoSm5FTGVDbThKdDRHNzQ5bjQzUHdwZmhHZkRmK09uNEN2MENRSm1nVDdBZ2hoQ1RDSmtJbG9aVndrZkNBOEpKSUpLb1JyWW1CUkM1eEk3R1NlSXg0bVRoR2ZFdVNJZW1SWEVqUkpDRnBCK2tRNlJ6cEx1a2xtVXpXSWp1U284Z0M4ZzV5TS9rQytSSDVqUVJGd2tqQ1M0SXRzVUdpUnFKRFlraml1U1JlVWxQU1NYSzFaSzVraGVRSnlldVNNMUo0S1MwcEZ5bW0xSHFwR3FtVFVpTlNjOUlVYVZOcGYrbFU2UkxwSTlKWHBLZGtzREphTW00eWJKa0NtWU15RjJUR0tRaEZuZUpDWVZFMlV4b3BGeWtUVkF4Vm0rcEZUYUlXVTcrakRsQm5aV1ZrbDhtR3lXYkwxc2llbGgybElUUXRtaGN0aFZaS08wNGJwcjFib3JURWFRbG55ZllsclV1R2xzekxMWlZ6bE9QSUZjbTF5ZDJXZXlkUGwzZVRUNWJmSmQ4cC8xQUJwYUNuRUtpUXBiQmY0YUxDekZMcVV0dWxyS1ZGUzQ4dnZhY0lLK29wQmltdVZUeW8ySzg0cDZTczVLR1VybFNsZEVGcFJwbW03S2ljcEZ5dWZFWjVXb1dpWXEvQ1ZTbFhPYXZ5bEM1TGQ2S24wQ3ZwdmZSWlZVVlZUMVdoYXIzcWdPcUNtclphcUZxK1dwdmFRM1dDT2tNOVhyMWN2VWQ5VmtORncwOGpUNk5GNDU0bVhwT2htYWk1VjdOUGMxNUxXeXRjYTZ0V3A5YVV0cHkybDNhdWRvdjJBeDJ5am9QT0dwMEduVnU2R0YyR2JyTHVQdDBiZXJDZWhWNmlYbzNlZFgxWTMxS2ZxNzlQZjlBQWJXQnR3RE5vTUJneEpCazZHV1lhdGhpT0dkR01mSTN5alRxTm5odHJHRWNaN3pMdU0vNW9ZbUdTWXRKb2N0OVV4dFRiTk4rMDIvUjNNejB6bGxtTjJTMXpzcm03K1Fiekx2TVh5L1NYY1pidFgzYkhnbUxoWjdIVm9zZmlnNldWSmQreTFYTGFTc01xMXFyV2FvUkJaUVF3U2hpWHJkSFd6dFlickU5WnY3V3h0QkhZSExmNXpkYlFOdG4yaU8zVWN1M2xuT1dOeThmdDFPeVlkdlYyby9aMCsxajdBL2FqRHFvT1RJY0doOGVPNm81c3h5YkhTU2RkcHlTbm8wN1BuVTJjK2M3dHp2TXVOaTdyWE02NUlxNGVya1d1QTI0eWJxRnUxVzZQM05YY0U5eGIzR2M5TER6V2VwenpSSHY2ZU83eUhQRlM4bUo1Tlh2TmVsdDVyL1B1OVNINUJQdFUrenoyMWZQbCszYjd3WDdlZnJ2OUhxelFYTUZiMGVrUC9MMzhkL3MvRE5BT1dCUHdZeUFtTUNDd0p2QkprR2xRWGxCZk1DVTRKdmhJOE9zUTU1RFNrUHVoT3FIQzBKNHd5YkRvc09hdytYRFg4TEx3MFFqamlIVVIxeUlWSXJtUlhWSFlxTENvcHFpNWxXNHI5NnljaUxhSUxvd2VYcVc5S252VmxkVUtxMU5XbjQ2UmpHSEduSWhGeDRiSEhvbDl6L1JuTmpEbjRyemlhdU5tV1M2c3ZheG5iRWQyT1h1YVk4Y3A0MHpHMjhXWHhVOGwyQ1hzVHBoT2RFaXNTSnpodW5DcnVTK1NQSlBxa3VhVC9aTVBKWDlLQ1U5cFM4V2x4cWFlNU1ud2tubTlhY3BwMldtRDZmcnBoZW1qYTJ6VzdGa3p5L2ZoTjJWQUdhc3l1Z1JVMGM5VXYxQkh1RVU0bG1tZldaUDVKaXNzNjBTMmREWXZ1ejlITDJkN3ptU3VlKzYzYTFGcldXdDc4bFR6TnVXTnJYTmFWNzhlV2grM3ZtZUQrb2FDRFJNYlBUWWUza1RZbEx6cHAzeVQvTEw4VjV2RE4zY1hLQlZzTEJqZjRyR2xwVkNpa0Y4NHN0VjJhOTAyMURidXRvSHQ1dHVydG44c1loZGRMVFlwcmloK1g4SXF1ZnFONlRlVjMzemFFYjlqb05TeWRQOU96RTdlenVGZERyc09sMG1YNVphTjcvYmIzVkZPTHk4cWY3VW5acytWaW1VVmRYc0plNFY3Unl0OUs3dXFOS3AyVnIydlRxeStYZU5jMDFhcldMdTlkbjRmZTkvUWZzZjlyWFZLZGNWMTd3NXdEOXlwOTZqdmFOQnFxRGlJT1poNThFbGpXR1BmdDR4dm01c1Vtb3FiUGh6aUhSbzlISFM0dDltcXVmbUk0cEhTRnJoRjJESjlOUHJvamU5Y3YrdHFOV3l0YjZPMUZSOER4NFRIbm40ZisvM3djWi9qUFNjWUoxcC8wUHlodHAzU1h0UUJkZVIwekhZbWRvNTJSWFlObnZRKzJkTnQyOTMrbzlHUGgwNnBucW81TFh1NjlBemhUTUdaVDJkeno4NmRTejgzY3o3aC9IaFBUTS85Q3hFWGJ2VUc5ZzVjOUxsNCtaTDdwUXQ5VG4xbkw5dGRQblhGNXNySnE0eXJuZGNzcjNYMFcvUzMvMlR4VS91QTVVREhkYXZyWFRlc2IzUVBMaDg4TStRd2RQNm02ODFMdDd4dVhidTk0dmJnY09qd25aSG9rZEU3N0R0VGQxUHV2cmlYZVcvaC9zWUg2QWRGRDZVZVZqeFNmTlR3cys3UGJhT1dvNmZIWE1mNkh3Yy92ai9PR24vMlM4WXY3eWNLbnBDZlZFeXFURFpQbVUyZG1uYWZ2dkYwNWRPSlorblBGbVlLZjVYK3RmYTV6dk1mZm5QOHJYODJZbmJpQmYvRnA5OUxYc3EvUFBScTJhdWV1WUM1UjY5VFh5L01GNzJSZjNQNExlTnQzN3Z3ZDVNTFdlK3g3eXMvNkg3by91ano4Y0duMUUrZi9nVURtUFA4dXNUbzB3QUFBQWx3U0ZsekFBQU93Z0FBRHNJQkZTaEtnQUFBQUJwMFJWaDBVMjltZEhkaGNtVUFVR0ZwYm5RdVRrVlVJSFl6TGpVdU1UQXc5SEtoQUFBQjIwbEVRVlE0VDMzVHZVOFRZUURIOGVmbEFJbEpnN0hhOUtoS3IwSmJpb0FscGhyRWhNaE00dUtnTVVhZ0pjWEpRVWNUYzRZQllwZ2NpQTY0WUl3MnZnUmJyVkVQUnRERkR0VTQ5eDhncVFvTVA1N255blB0NVdxSFgyNzZmcDU3eVJGeldxL2tUQU5xajI2SDBPMXZBeUhFdFVPVVk3WXJqT2ZkNTV6ZDk4Y3FSSVpZVDdxMlhSakNmRWJIVVorR05rcHgzWGNDSmVNeXF0RkoxeVRXRkZEZzF0c0JQSndjOFlRS2Fnbjhzb2JSVXp5Tjlud0VLOWN1TlVWczRPbTlVNTVIK0NuaWtJakpSOE9lVm9oZytlYVlCMW5WQmRBYjZrQzFPT3dnUDZ3aEJJc1JKMVlJLzJEZzhhMkxMaVI3SkN4Zk5NRjhXcmVCa29nRFRXS0ZNSUVzemRTUXNqR0JUdkZsYk1CM21PUE5pemlPdFlnYmtZWFpVYVM3ZXRSbkptQ3NBMzFYWG9HL0cvVGN1Z29icit4ckJscHF2QTRFZ3RNWUhRZk8zTmdFWDB1MFJLaVZoZmF0Q3Y3a0N3aGxJUEwwa2ZPL2JVQXVNYlVCOXI2L0tVS3RPV2pmLzRydENXUVhORGtHRWdoT09iRkMrdE9mQkJKekliWDRUeTArR0RlZmdjUUdjaDVBUXZGTUVTeGZRNmgxcDM1eUk3RDQ4ditBUktMWk5iRFBkMFg4ejNXeWN3ZXRnR1NxRFAveHE2RFJzK0JMcjZGdDdYZ1FMb0dUWWJNaUg2TnhBVDBOeXRycnY3UDRJK25nQlRCekJUSlNZM01QS3Z0ZUJpU2RVNUVBV3dBQUFBQkpSVTVFcmtKZ2dnPT0"},{ name : "__ASSET__:bitmap_flixel_system_debug__FlxDebugger_GraphicFlixel", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUF3QUFBQU1DQVlBQUFCV2RWem5BQUFBQkdkQlRVRUFBTEdPZlB0Umt3QUFBQ0JqU0ZKTkFBQ0hEd0FBakE4QUFQMVNBQUNCUUFBQWZYa0FBT21MQUFBODVRQUFHY3h6UElWM0FBQUtPV2xEUTFCUWFHOTBiM05vYjNBZ1NVTkRJSEJ5YjJacGJHVUFBRWpIblpaM1ZGVFhGb2ZQdlhkNm9jMHdBbEtHM3J2QUFOSjdrMTVGWVpnWllDZ0REak0wc1NHaUFoRkZSSm9pU0ZERWdORlFKRlpFc1JBVVZMQUhKQWdvTVJoRlZDeHZSdGFMcnF5ODkvTHkrK09zYisyejk3bjc3TDNQV2hjQWtxY3ZsNWNHU3dHUXloUHdnenljNlJHUlVYVHNBSUFCSG1DQUtRQk1Wa2E2WDdCN0NCREp5ODJGbmlGeUFsOEVBZkI2V0x3Q2NOUFFNNEJPQi8rZnBGbnBmSUhvbUFBUm03TTVHU3dSRjRnNEpVdVFMcmJQaXBnYWx5eG1HQ1ZtdmloQkVjdUpPV0dSRFQ3N0xMS2ptTm1wUExhSXhUbW5zMVBaWXU0VjhiWk1JVWZFaUsrSUN6TzVuQ3dSM3hLeFJvb3dsU3ZpTitMWVZBNHpBd0FVU1d3WGNGaUpJallSTVlrZkV1UWk0dVVBNEVnSlgzSGNWeXpnWkF2RWwzSkpTOC9oY3hNU0JYUWRsaTdkMU5xYVFmZmtaS1Z3QkFMREFDWXJtY2xuMDEzU1V0T1p2QndBRnUvOFdUTGkydEpGUmJZMHRiYTBORFF6TXYycVVQOTE4MjlLM050RmVobjR1V2NRcmYrTDdhLzgwaG9BWU15SmFyUHppeTJ1Q29ET0xRREkzZnRpMHpnQWdLU29ieDNYdjdvUFRUd3ZpUUpCdW8yeGNWWldsaEdYd3pJU0YvUVAvVStIdjZHdnZtY2tQdTZQOHRCZE9mRk1ZWXFBTHE0Ykt5MGxUY2luWjZReldSeTY0WitIK0I4SC9uVWVCa0djZUE2Znd4TkZoSW1tak10TEVMV2J4K1lLdUdrOE9wZjNuNXI0RDhQK3BNVzVGb25TK0JGUVk0eUExSFVxUUg3dEJ5Z0tFU0RSKzhWZC82TnZ2dmd3SUg1NTRTcVRpM1AvN3pmOVo4R2w0aVdEbS9BNXppVW9oTTRTOGpNWDk4VFBFcUFCQVVnQ0twQUh5a0FkNkFCRFlBYXNnQzF3Qkc3QUcvaURFQkFKVmdNV1NBU3BnQSt5UUI3WUJBcEJNZGdKOW9CcVVBY2FRVE5vQmNkQkp6Z0Z6b05MNEJxNEFXNkQrMkFVVElCbllCYThCZ3NRQkdFaE1rU0I1Q0VWU0JQU2g4d2dCbVFQdVVHK1VCQVVDY1ZDQ1JBUEVrSjUwR2FvR0NxRHFxRjZxQm42SGpvSm5ZZXVRSVBRWFdnTW1vWitoOTdCQ0V5Q3FiQVNyQVVid3d6WUNmYUJRK0JWY0FLOEJzNkZDK0FkY0NYY0FCK0ZPK0R6OERYNE5qd0tQNFBuRUlBUUVScWlpaGdpRE1RRjhVZWlrSGlFajZ4SGlwQUtwQUZwUmJxUlB1UW1Nb3JNSUc5UkdCUUZSVWNab214Um5xaFFGQXUxQnJVZVZZS3FSaDFHZGFCNlVUZFJZNmhaMUVjMEdhMkkxa2Zib0wzUUVlZ0VkQmE2RUYyQmJrSzNveStpYjZNbjBLOHhHQXdObzQyeHduaGlJakZKbUxXWUVzdytUQnZtSEdZUU00Nlp3Mkt4OGxoOXJCM1dIOHZFQ3JDRjJDcnNVZXhaN0JCMkF2c0dSOFNwNE14dzdyZ29IQStYajZ2QUhjR2R3UTNoSm5FTGVDbThKdDRHNzQ5bjQzUHdwZmhHZkRmK09uNEN2MENRSm1nVDdBZ2hoQ1RDSmtJbG9aVndrZkNBOEpKSUpLb1JyWW1CUkM1eEk3R1NlSXg0bVRoR2ZFdVNJZW1SWEVqUkpDRnBCK2tRNlJ6cEx1a2xtVXpXSWp1U284Z0M4ZzV5TS9rQytSSDVqUVJGd2tqQ1M0SXRzVUdpUnFKRFlraml1U1JlVWxQU1NYSzFaSzVraGVRSnlldVNNMUo0S1MwcEZ5bW0xSHFwR3FtVFVpTlNjOUlVYVZOcGYrbFU2UkxwSTlKWHBLZGtzREphTW00eWJKa0NtWU15RjJUR0tRaEZuZUpDWVZFMlV4b3BGeWtUVkF4Vm0rcEZUYUlXVTcrakRsQm5aV1ZrbDhtR3lXYkwxc2llbGgybElUUXRtaGN0aFZaS08wNGJwcjFib3JURWFRbG55ZllsclV1R2xzekxMWlZ6bE9QSUZjbTF5ZDJXZXlkUGwzZVRUNWJmSmQ4cC8xQUJwYUNuRUtpUXBiQmY0YUxDekZMcVV0dWxyS1ZGUzQ4dnZhY0lLK29wQmltdVZUeW8ySzg0cDZTczVLR1VybFNsZEVGcFJwbW03S2ljcEZ5dWZFWjVXb1dpWXEvQ1ZTbFhPYXZ5bEM1TGQ2S24wQ3ZwdmZSWlZVVlZUMVdoYXIzcWdPcUNtclphcUZxK1dwdmFRM1dDT2tNOVhyMWN2VWQ5VmtORncwOGpUNk5GNDU0bVhwT2htYWk1VjdOUGMxNUxXeXRjYTZ0V3A5YVV0cHkybDNhdWRvdjJBeDJ5am9QT0dwMEduVnU2R0YyR2JyTHVQdDBiZXJDZWhWNmlYbzNlZFgxWTMxS2ZxNzlQZjlBQWJXQnR3RE5vTUJneEpCazZHV1lhdGhpT0dkR01mSTN5alRxTm5odHJHRWNaN3pMdU0vNW9ZbUdTWXRKb2N0OVV4dFRiTk4rMDIvUjNNejB6bGxtTjJTMXpzcm03K1Fiekx2TVh5L1NYY1pidFgzYkhnbUxoWjdIVm9zZmlnNldWSmQreTFYTGFTc01xMXFyV2FvUkJaUVF3U2hpWHJkSFd6dFlickU5WnY3V3h0QkhZSExmNXpkYlFOdG4yaU8zVWN1M2xuT1dOeThmdDFPeVlkdlYyby9aMCsxajdBL2FqRHFvT1RJY0doOGVPNm81c3h5YkhTU2RkcHlTbm8wN1BuVTJjK2M3dHp2TXVOaTdyWE02NUlxNGVya1d1QTI0eWJxRnUxVzZQM05YY0U5eGIzR2M5TER6V2VwenpSSHY2ZU83eUhQRlM4bUo1Tlh2TmVsdDVyL1B1OVNINUJQdFUrenoyMWZQbCszYjd3WDdlZnJ2OUhxelFYTUZiMGVrUC9MMzhkL3MvRE5BT1dCUHdZeUFtTUNDd0p2QkprR2xRWGxCZk1DVTRKdmhJOE9zUTU1RFNrUHVoT3FIQzBKNHd5YkRvc09hdytYRFg4TEx3MFFqamlIVVIxeUlWSXJtUlhWSFlxTENvcHFpNWxXNHI5NnljaUxhSUxvd2VYcVc5S252VmxkVUtxMU5XbjQ2UmpHSEduSWhGeDRiSEhvbDl6L1JuTmpEbjRyemlhdU5tV1M2c3ZheG5iRWQyT1h1YVk4Y3A0MHpHMjhXWHhVOGwyQ1hzVHBoT2RFaXNTSnpodW5DcnVTK1NQSlBxa3VhVC9aTVBKWDlLQ1U5cFM4V2x4cWFlNU1ud2tubTlhY3BwMldtRDZmcnBoZW1qYTJ6VzdGa3p5L2ZoTjJWQUdhc3l1Z1JVMGM5VXYxQkh1RVU0bG1tZldaUDVKaXNzNjBTMmREWXZ1ejlITDJkN3ptU3VlKzYzYTFGcldXdDc4bFR6TnVXTnJYTmFWNzhlV2grM3ZtZUQrb2FDRFJNYlBUWWUza1RZbEx6cHAzeVQvTEw4VjV2RE4zY1hLQlZzTEJqZjRyR2xwVkNpa0Y4NHN0VjJhOTAyMURidXRvSHQ1dHVydG44c1loZGRMVFlwcmloK1g4SXF1ZnFONlRlVjMzemFFYjlqb05TeWRQOU96RTdlenVGZERyc09sMG1YNVphTjcvYmIzVkZPTHk4cWY3VW5acytWaW1VVmRYc0plNFY3Unl0OUs3dXFOS3AyVnIydlRxeStYZU5jMDFhcldMdTlkbjRmZTkvUWZzZjlyWFZLZGNWMTd3NXdEOXlwOTZqdmFOQnFxRGlJT1poNThFbGpXR1BmdDR4dm01c1Vtb3FiUGh6aUhSbzlISFM0dDltcXVmbUk0cEhTRnJoRjJESjlOUHJvamU5Y3YrdHFOV3l0YjZPMUZSOER4NFRIbm40ZisvM3djWi9qUFNjWUoxcC8wUHlodHAzU1h0UUJkZVIwekhZbWRvNTJSWFlObnZRKzJkTnQyOTMrbzlHUGgwNnBucW81TFh1NjlBemhUTUdaVDJkeno4NmRTejgzY3o3aC9IaFBUTS85Q3hFWGJ2VUc5ZzVjOUxsNCtaTDdwUXQ5VG4xbkw5dGRQblhGNXNySnE0eXJuZGNzcjNYMFcvUzMvMlR4VS91QTVVREhkYXZyWFRlc2IzUVBMaDg4TStRd2RQNm02ODFMdDd4dVhidTk0dmJnY09qd25aSG9rZEU3N0R0VGQxUHV2cmlYZVcvaC9zWUg2QWRGRDZVZVZqeFNmTlR3cys3UGJhT1dvNmZIWE1mNkh3Yy92ai9PR24vMlM4WXY3eWNLbnBDZlZFeXFURFpQbVUyZG1uYWZ2dkYwNWRPSlorblBGbVlLZjVYK3RmYTV6dk1mZm5QOHJYODJZbmJpQmYvRnA5OUxYc3EvUFBScTJhdWV1WUM1UjY5VFh5L01GNzJSZjNQNExlTnQzN3Z3ZDVNTFdlK3g3eXMvNkg3by91ano4Y0duMUUrZi9nVURtUFA4dXNUbzB3QUFBQWx3U0ZsekFBQUxFZ0FBQ3hJQjB0MSsvQUFBQUJwMFJWaDBVMjltZEhkaGNtVUFVR0ZwYm5RdVRrVlVJSFl6TGpVdU1UQXc5SEtoQUFBQkxFbEVRVlFvVTJQNGY5RG9QeEkrRG1RNy9qOWt4QUFDWDlYOVZJRjRHUkQvQStML0lNeUFwZ0drK2QvSEE0WTdqcnE1emdJcStBbFRpRlBENTRPRy94MTNxLzJYWHFuKy80S3RPOWhVWkF5eTRTck1sbzlBeFhaQXhRdzdsY0JZY3BYYS96TU9LSnErZ1RTNGdaenhBYWpZRWtreFRKUFlHclgvSjV6Y1lMYjBNL3cvWXNUdzdJREJPclBkcW5DVFlZcGh0TWhhdGYrSFhGMi9BSjBtQVE0TjQ0REhDN21XZXVEVXdMQlQ5VC9yNGFYUFdNNys1bVN3ZHZ5dkJzUy9USDFlLytkYzdveEZrOXAvNW1NYi93TVZnM0FPU01NQ0lQNFB3aVorei85enJIUkEwZ1JTdkFtbUdFUS9BbW40RGRNQTFoVHcrRC83S3R2L0RMczBnSXEzSUNzR3MwRWF3S1lqWTZPUXUyK1lqMnk0QlhVR2lpWjBEVitBR3R1QVdCQ29tQldJazRINEFiSkdBSlFUU2ZzMmF1VnlBQUFBQUVsRlRrU3VRbUND"},{ name : "__ASSET__:bitmap_flixel_system_debug_GraphicConsole", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBQUlHTklVazBBQUhvbEFBQ0Fnd0FBK2Y4QUFJRHBBQUIxTUFBQTZtQUFBRHFZQUFBWGI1SmZ4VVlBQUFCVVNVUkJWSGphdEpIUkNVQWhEQVBqRzhVVjNNbmhuTVZaWE9IOFVTaFBoSW9ZeUUrNXRJRUdRRjU5T3BDRm82UXFLVzFwd0RvRERTaS91WUFGbmk0amxEM3d2SUlOWEcxMmQ0NUFCZEt1V25qMmxENEFLVWJYUXNkOGx3a0FBQUFBU1VWT1JLNUNZSUk9"},{ name : "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicRecordOff", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUdoSlJFRlVlTnBpK1AvL1B3TVUyd0J4SHhCZkFPS2ZVTG9QS2c1V0ExTVlBOFRYLzJNSDE2SHlEREFUY1NsRTFtRER4TURBRUFURUdnejRBVWcrQ0tUWWlZRTQ0TVFJOGd5UXdVYUU0bDhnazY4VGFmSjFrT0o5UkNyZVIxSm9rQnpPUk1jZ1FJQUJBUHdDK0RaNDFKa0NBQUFBQUVsRlRrU3VRbUND"},{ name : "__ASSET__:bitmap_flixel_system_debug__FlxDebugger_GraphicDrawDebug", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUU5SlJFRlVlTnEwa01zTkFDQUlRNnRic3FCcjF2Z25haFFQTnVrRlhna3BTS0phZUZhWVFWSGg1WWdWbEFiZjFJN1E1UVRnc0pmZTBlTkJYMkFwajR4V2RxWnV4QUwzUnRJZ0dLdERGR0FBNGg0Vk01NWl5QnNBQUFBQVNVVk9SSzVDWUlJPQ"},{ name : "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicRecordOn", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFzQUFBQUxDQVlBQUFDcHJIY21BQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUoxSlJFRlVlTnAwVWNrUkF5RU1zL0pJTFZ1RXE5ajMxcFNTdGdaKzFKSjhpSHlFQ2V1RUdZRVBHWVF0QXlKREhFbzg2RGVlVDZLNUgzRXhubS9Fd1VBbnhnU21iZkVqeUZZSnJNU0tUckxleU4vcGJtS1YvOWZHVzNkeGJTaFBoNDNGYnJEUHNQTHU5YW1yMkxGZUpxUC9USTRpcFJ2NUxFbGNQaER1YVczVDJiWkZKNzQxVzE0bEcxNzdMSmMrZjE3UEFzMkpyUk5FVHBCNEN6QUFFNHFQMnhEMkYyNEFBQUFBU1VWT1JLNUNZSUk9"}];
+haxe.Resource.content = [{ name : "LIME_font_flixel_system_PreloaderFont", data : "b3k0Omhhc2hxOjExMW95Njphc2NlbnRkMTAyNHk0OmRhdGFhZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoeTY6X3dpZHRoZDc2OHk0OnhNYXhkNjQweTQ6eE1pbmQweTQ6eU1heGQ2NDB5NDp5TWluZDB5NzpfaGVpZ2h0ZDY0MHk3OmxlYWRpbmdkMjU2eTc6ZGVzY2VudGQyNTZ5ODpjaGFyQ29kZWkxMTF5MTU6bGVmdHNpZGVCZWFyaW5nZDB5MTI6YWR2YW5jZVdpZHRoZDc2OHk4OmNvbW1hbmRzYWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyM29SMWQxMDI0UjJhZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDI1NmQzODRkNTEyZDI1NmQ1MTJkMjU2ZDExNTJkMGQxMTUyZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQzODRkMTAyNGQzODRkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTEwb1IxZDEwMjRSMmFkNjQwZDUxMmQ2NDBkMTAyNGQzODRkMTAyNGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDEwMjRkMGQxMDI0ZDBkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyMm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkyMjJSMTJkMFIxM2QzODRSMTRhaGc6MTA5b1IxZDEwMjRSMmFkNzY4ZDUxMmQ2NDBkNTEyZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkMTAyNGQwZDEwMjRkMGQzODRkODk2ZDM4NGQ4OTZkNTEyZDEwMjRkNTEyZDEwMjRkMTAyNGQ3NjhkMTAyNGQ3NjhkNTEyaFIzZDExNTJSNGQxMDI0UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTEwOVIxMmQwUjEzZDExNTJSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjIxb1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDc2OGQzODRkNzY4ZDUxMmQ2NDBkNTEyZDY0MGQ2NDBkNTEyZDY0MGQ1MTJkMTAyNGQyNTZkMTAyNGQyNTZkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDM4NGQyNTZkMzg0ZDI1NmQ1MTJkNTEyZDUxMmQ1MTJkMzg0ZDM4NGQzODRkMzg0ZDI1NmhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjIxUjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMDhvUjFkMTAyNFIyYWQwZDEyOGQyNTZkMTI4ZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTA4UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJoZzoyMjBvUjFkMTAyNFIyYWQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDM4NGQ4OTZkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDI1NmQzODRkMjU2ZDg5NmQzODRkODk2aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEwN29SMWQxMDI0UjJhZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQyNTZkMTI4ZDI1NmQ1MTJkMzg0ZDUxMmQzODRkMzg0ZDY0MGQzODRkNjQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkMzg0ZDY0MGQzODRkNzY4ZDUxMmQ3NjhkNTEyZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMjU2ZDg5NmQyNTZkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTA3UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxOW9SMWQxMDI0UjJhZDI1NmQyNTdkMjU2ZDg5NmQzODRkODk2ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMTlSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMDZvUjFkMTAyNFIyYWQzODRkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMGQxMDI0ZDEyOGQxMDI0ZDEyOGQzODRkMzg0ZDM4NGQzODRkMTAyNGQyNTZkMTAyNGQyNTZkMTE1MmQwZDExNTJkMGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxMDZSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmhnOjIxOG9SMWQxMDI0UjJhZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQyNTZkMzg1ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTVkMzg0ZDI1NmQzODVoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIxOFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTA1b1IxZDEwMjRSMmFkMjU2ZDI1NmQwZDI1NmQwZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMGQxMDI0ZDBkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0aFIzZDM4NFI0ZDI1NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxMDVSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJoZzoyMTdvUjFkMTAyNFIyYWQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTVkMzg0ZDI1NmQzODVkMjU2ZDg5NmQzODRkODk2ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjE3UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTA0b1IxZDEwMjRSMmFkMzg0ZDEwMjRkMzg0ZDUxMmQyNTZkNTEyZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQyNTZkMTI4ZDI1NmQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEwNFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxNm9SMWQxMDI0UjJhZDI1NmQyNTZkMjU2ZDUxMmQzODRkNTEyZDM4NGQzODRkNTEyZDM4NGQ1MTJkMjU2ZDI1NmQyNTZkNTEyZDY0MGQzODRkNjQwZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDUxMmQ4OTZkNTEyZDY0MGQxMjhkMTI4ZDc2OGQxMjhkNzY4ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDBkMTAyNGQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIxNlIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaGc6MTAzb1IxZDEwMjRSMmFkMjU2ZDc2OGQzODRkNzY4ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNzY4ZDEyOGQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMTI4ZDg5NmQxMjhkNzY4ZDBkNzY4ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ2NDBkMzg0ZDY0MGQxMDI0ZDUxMmQxMDI0ZDUxMmQxMTUyZDEyOGQxMTUyZDEyOGQxMDI0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMDNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxNW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkyMTVSMTJkMFIxM2QzODRSMTRhaGc6MTAyb1IxZDEwMjRSMmFkMzg0ZDM4NGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDEwMjRkMGQxMDI0ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEwMlIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIxNG9SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkNTEyZDg5NmQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDY0MGQzODRkNjQwZDUxMmQ3NjhkNTEyZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjE0UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTAxb1IxZDEwMjRSMmFkMjU2ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDY0MGQ1MTJkNjQwZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkMFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpMTAxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMTNvUjFkMTAyNFIyYWQ2NDBkMTI4ZDc2OGQxMjhkNzY4ZDI1NmQ2NDBkMjU2ZDY0MGQxMjhkNTEyZDg5NmQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQ1MTJkNzY4ZDUxMmQ3NjhkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDg5NlI0ZDc2OFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMTNSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEwMG9SMWQxMDI0UjJhZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDUxMmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQzODRkMzg0ZDM4NGQxMjhkNjQwZDEyOGQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTAwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjEyb1IxZDEwMjRSMmFkNTEyZDg5NmQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDI1NmQyNTdkMjU2ZDM4NGQ1MTJkMzg0ZDUxMmQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQzODRkNzY4ZDM4NGQ3NjhkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDg5NlI0ZDc2OFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMTJSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6OTlvUjFkMTAyNFIyYWQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZoUjNkNjQwUjRkNTEyUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTk5UjEyZDBSMTNkNjQwUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjExb1IxZDEwMjRSMmFkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDUxMmQ4OTZkNTEyZDUxMmQyNTZkNTEyZDI1NmQ4OTZkNTEyZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMzg0ZDI1NmQzODRkMzg0ZDY0MGQzODRkNjQwZDUxMmQ3NjhkNTEyZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjExUjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjk4b1IxZDEwMjRSMmFkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQzODRkNTEyZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQwZDEwMjRkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDUxMmQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTk4UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjEwb1IxZDEwMjRSMmFkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQ4OTZkNTEyZDUxMmQyNTZkNTEyZDI1NmQ4OTZkNTEyZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQzODRkMzg0ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDUxMmQ3NjhkNTEyZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjEwUjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjk3b1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ1MTJkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkMFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpOTdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwOW9SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQxMjhkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQzODRkNjQwZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOWQyNTZkMTI4ZDI1NWQxMjhkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkMTAyNGQ1MTJkMTAyNGQ1MTJkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDI1NmQxMjhkMjU2ZDEyOGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwOVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjk2b1IxZDEwMjRSMmFkMTI4ZDI1NmQwZDI1NmQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDEyOGQzODRkMTI4ZDI1NmhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkNjQwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk5NlIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJoZzoyMDhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMjA4UjEyZDBSMTNkMzg0UjE0YWhnOjk1b1IxZDEwMjRSMmFkMGQ4OTZkNzY4ZDg5NmQ3NjhkMTAyNGQwZDEwMjRkMGQ4OTZoUjNkNzY4UjRkNzY4UjVkMFI2ZDEyOFI3ZDBSOGQxMjhSOWQyNTZSMTBkMjU2UjExaTk1UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJoZzoyMDdvUjFkMTAyNFIyYWQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDBkMjU2ZDBkMTI4ZDEyOGQxMDI0ZDEyOGQzODRkMzg0ZDM4NGQzODRkMTAyNGQxMjhkMTAyNGhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjA3UjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmhnOjk0b1IxZDEwMjRSMmFkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQzODRkMjU2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkMzg0ZDEyOGQzODRkMTI4ZDUxMmQwZDUxMmQwZDI1NmhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkNTEyUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk5NFIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwNm9SMWQxMDI0UjJhZDI1NmQzODRkMjU2ZDI1N2QyNTdkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQyNTZkMzg0ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQwZDEwMjRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMDZSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaGc6OTNvUjFkMTAyNFIyYWQzODRkMTE1MmQwZDExNTJkMGQxMDI0ZDEyOGQxMDI0ZDEyOGQyNTZkMGQyNTZkMGQxMjhkMzg0ZDEyOGQzODRkMTE1MmhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpOTNSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaGc6MjA1b1IxZDEwMjRSMmFkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDBkMTAyNGQwZDI1NmQxMjhkMjU2ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwNVIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJoZzo5Mm9SMWQxMDI0UjJhZDEyOGQ1MTJkMGQ1MTJkMGQxMjUuNWQxMjhkMTI1LjVkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkMTAyNGQyNTZkMTAyNGQyNTZkNzcwLjVkMTI4ZDc3MC41ZDEyOGQ1MTJoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5OC41UjdkMFI4ZDg5OC41UjlkMjU2UjEwZDI1NlIxMWk5MlIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwNG9SMWQxMDI0UjJhZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwNFIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJoZzo5MW9SMWQxMDI0UjJhZDBkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQxMDI0ZDM4NGQxMDI0ZDM4NGQxMTUyZDBkMTE1MmQwZDEyOGhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpOTFSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaGc6MjAzb1IxZDEwMjRSMmFkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkMTI4ZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMGQxMDI0ZDBkMzg0ZDY0MGQzODRkNjQwZDUxMmQyNTZkNTEyZDI1NmQ2NDBkNTEyZDY0MGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjAzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo5MG9SMWQxMDI0UjJhZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQ2NDBkMTI4ZDY0MGQxMjhkNTEyZDI1NmQ1MTJkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMGQyNTZkMGQxMjhkNjQwZDEyOGQ2NDBkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk5MFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMDJvUjFkMTAyNFIyYWQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMGQxMDI0ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTZkMjU2ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjAyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODlvUjFkMTAyNFIyYWQyNTZkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQwZDM4NGQwZDEyOGQyNTZkMTI4ZDI1NmQzODRkNTEyZDM4NGQ1MTJkMTI4ZDc2OGQxMjhkNzY4ZDM4NGQ2NDBkMzg0ZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkMTAyNGQyNTZkMTAyNGQyNTZkNTEyaFIzZDg5NlI0ZDc2OFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk4OVIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjAxb1IxZDEwMjRSMmFkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDUxMmQ2NDBkNTEyZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDUxMmQ2NDBoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIwMVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjg4b1IxZDEwMjRSMmFkMGQxMDI0ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQyNTZkNjQwZDI1NmQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMTI4ZDI1NmQxMjhkMjU2ZDM4NGQ1MTJkMzg0ZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkMzg0ZDY0MGQzODRkNjQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkNjQwZDY0MGQ2NDBkNzY4ZDc2OGQ3NjhkNzY4ZDEwMjRkNTEyZDEwMjRkNTEyZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODhSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIwMG9SMWQxMDI0UjJhZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMGQxMDI0ZDBkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ1MTJkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMDBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4N29SMWQxMDI0UjJhZDY0MGQxMjhkODk2ZDEyOGQ4OTZkNjQwZDc2OGQ2NDBkNzY4ZDEwMjRkNTEyZDEwMjRkNTEyZDg5NmQzODRkODk2ZDM4NGQxMDI0ZDEyOGQxMDI0ZDEyOGQ2NDBkMGQ2NDBkMGQxMjhkMjU2ZDEyOGQyNTZkNTEyZDM4NGQ1MTJkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTI4aFIzZDEwMjRSNGQ4OTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODdSMTJkMFIxM2QxMDI0UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5OW9SMWQxMDI0UjJhZDI1NmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDY0MGQxMjhkNjQwZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQzODRkMTAyNGQzODRkMTE1MmQyNTZkMTE1MmQyNTZkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTk5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4Nm9SMWQxMDI0UjJhZDI1NmQ3NjhkMTI4ZDc2OGQxMjhkNTEyZDBkNTEyZDBkMTI4ZDI1NmQxMjhkMjU2ZDUxMmQ1MTJkNTEyZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkNTEyZDY0MGQ1MTJkNjQwZDc2OGQ1MTJkNzY4ZDUxMmQxMDI0ZDI1NmQxMDI0ZDI1NmQ3NjhoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTg2UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxOThvUjFkMTAyNFIyYWQyNTZkNTEyZDM4NGQ1MTJkMzg0ZDM4NGQyNTZkMzg0ZDI1NmQ1MTJkMjU2ZDEyOGQ4OTZkMTI4ZDg5NmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDc2OGQ1MTJkNzY4ZDY0MGQ2NDBkNjQwZDY0MGQ4OTZkODk2ZDg5NmQ4OTZkMTAyNGQzODRkMTAyNGQzODRkNjQwZDI1NmQ2NDBkMjU2ZDEwMjRkMGQxMDI0ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTZkMjU2ZDI1NmQxMjhoUjNkMTAyNFI0ZDg5NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOThSMTJkMFIxM2QxMDI0UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4NW9SMWQxMDI0UjJhZDM4NGQ4OTZkMzg0ZDEyOGQ2NDBkMTI4ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMTI4ZDI1NmQxMjhkMjU2ZDg5NmQzODRkODk2aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk4NVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5N29SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQyNTZkMjU3ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODRvUjFkMTAyNFIyYWQ3NjhkMTI4ZDc2OGQyNTZkNTEyZDI1NmQ1MTJkMTAyNGQyNTZkMTAyNGQyNTZkMjU2ZDBkMjU2ZDBkMTI4ZDc2OGQxMjhoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTg0UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE5Nm9SMWQxMDI0UjJhZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTZSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4M29SMWQxMDI0UjJhZDBkODk2ZDI1NmQ4OTZkMjU2ZDY0MGQxMjhkNjQwZDEyOGQ1MTJkMGQ1MTJkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQyNTZkMjU2ZDI1NmQ1MTJkMzg0ZDUxMmQzODRkNjQwZDUxMmQ2NDBkNTEyZDg5NmQzODRkODk2ZDM4NGQxMDI0ZDBkMTAyNGQwZDg5NmhSM2Q2NDBSNGQ1MTJSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODNSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTk1b1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQxMjhkMjU3ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMGQzODRkMGQyNTZkMTI3ZDI1NmQxMjhkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo4Mm9SMWQxMDI0UjJhZDM4NGQ2NDBkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQ2NDBkMzg0ZDY0MGQ2NDBkODk2ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDY0MGQ1MTJkNjQwZDUxMmQ4OTZkNjQwZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODJSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5NG9SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQyNTZkMjU3ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTRSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODFvUjFkMTAyNFIyYWQzODRkODk2ZDM4NGQ3NjhkNTEyZDc2OGQ1MTJkMjU2ZDI1NmQyNTZkMjU2ZDg5NmQzODRkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDY0MGQxMjhkNjQwZDI1NmQ3NjhkMjU2ZDc2OGQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQ3NjhkMTAyNGQ3NjhkMTE1MmQ1MTJkMTE1MmQ1MTJkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODFSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTkzb1IxZDEwMjRSMmFkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQyNTZkMTAyNGQwZDEwMjRkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6ODBvUjFkMTAyNFIyYWQzODRkNjQwZDM4NGQyNTZkMjU2ZDI1NmQyNTZkNjQwZDM4NGQ2NDBkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDY0MGQ1MTJkNjQwZDUxMmQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQxMjhkNTEyZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpODBSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxOTJvUjFkMTAyNFIyYWQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDI1NmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQzODRkMTAyNGQzODRkNzY4ZDI1NmQ3NjhkMjU2ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE5MlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo3OW9SMWQxMDI0UjJhZDUxMmQ4OTZkNTEyZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkNTEyZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNzY4ZDI1NmQ3NjhkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTc5UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE5MW9SMWQxMDI0UjJhZDUxMmQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQyNTZkNjQwZDI1NmQzODRkNTEyZDM4NGQ1MTJkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxOTFSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzo3OG9SMWQxMDI0UjJhZDY0MGQxMDI0ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDUxMmQ1MTJkNTEyZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkMTAyNGQ2NDBkMTAyNGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNzhSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTkwb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE5MFIxMmQwUjEzZDM4NFIxNGFoZzo3N29SMWQxMDI0UjJhZDY0MGQ2NDBkNTEyZDY0MGQ1MTJkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDUxMmQ1MTJkNTEyZDUxMmQzODRkNjQwZDM4NGQ2NDBkMjU2ZDc2OGQyNTZkNzY4ZDEyOGQ4OTZkMTI4ZDg5NmQxMDI0ZDY0MGQxMDI0ZDY0MGQ2NDBoUjNkMTAyNFI0ZDg5NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk3N1IxMmQwUjEzZDEwMjRSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxODlvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTg5UjEyZDBSMTNkMzg0UjE0YWhnOjc2b1IxZDEwMjRSMmFkMGQxMjhkMjU2ZDEyOGQyNTZkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMGQxMDI0ZDBkMTI4aFIzZDY0MFI0ZDUxMlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk3NlIxMmQwUjEzZDY0MFIxNGFpMWkyaTJpMmkyaTJpMmhnOjE4OG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxODhSMTJkMFIxM2QzODRSMTRhaGc6NzVvUjFkMTAyNFIyYWQ1MTJkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQyNTZkMTI4ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDUxMmQyNTZkNTEyZDEyOGQ3NjhkMTI4ZDc2OGQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDUxMmQzODRkNTEyZDM4NGQ2NDBkNTEyZDY0MGQ1MTJkNzY4ZDY0MGQ3NjhkNjQwZDg5NmQ3NjhkODk2ZDc2OGQxMDI0ZDUxMmQxMDI0ZDUxMmQ4OTZoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTc1UjEyZDBSMTNkODk2UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxODdvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTg3UjEyZDBSMTNkMzg0UjE0YWhnOjc0b1IxZDEwMjRSMmFkMGQxMDI0ZDBkODk2ZDI1NmQ4OTZkMjU2ZDEyOGQ1MTJkMTI4ZDUxMmQ4OTZkMzg0ZDg5NmQzODRkMTAyNGQwZDEwMjRoUjNkNjQwUjRkNTEyUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTc0UjEyZDBSMTNkNjQwUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE4Nm9SMWQxMDI0UjJhZDI1NmQzODRkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQyNTZkMzg0ZDI1NmQzODRkMjU2ZDUxMmQxMjhkNTEyZDEyOGQzODRkMGQzODRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDI1NmQzODRkMGQ2NDBkMzg0ZDY0MGQzODRkNzY4ZDBkNzY4ZDBkNjQwaFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QyNTZSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE4NlIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMWkyaTJpMmkyaGc6NzNvUjFkMTAyNFIyYWQwZDEwMjRkMGQxMjhkMjU2ZDEyOGQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTczUjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJoZzoxODVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTg1UjEyZDBSMTNkMzg0UjE0YWhnOjcyb1IxZDEwMjRSMmFkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDM4NGQzODRkMzg0ZDEyOGQ2NDBkMTI4ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkMTAyNGQwZDEwMjRkMGQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTcyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTg0b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE4NFIxMmQwUjEzZDM4NFIxNGFoZzo3MW9SMWQxMDI0UjJhZDEyOGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDI1NmQyNTZkMjU2ZDg5NmQzODRkODk2ZDM4NGQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNzFSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTgzb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE4M1IxMmQwUjEzZDM4NFIxNGFoZzo3MG9SMWQxMDI0UjJhZDUxMmQzODRkNTEyZDUxMmQyNTZkNTEyZDI1NmQxMDI0ZDBkMTAyNGQwZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDUxMmQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTcwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxODJvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTgyUjEyZDBSMTNkMzg0UjE0YWhnOjY5b1IxZDEwMjRSMmFkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDBkMTAyNGQwZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDUxMmQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTgxb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE4MVIxMmQwUjEzZDM4NFIxNGFoZzo2OG9SMWQxMDI0UjJhZDM4NGQ4OTZkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkMzg0ZDg5NmQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMGQxMDI0ZDBkMTI4ZDUxMmQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY4UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJoZzoxODBvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTgwUjEyZDBSMTNkMzg0UjE0YWhnOjY3b1IxZDEwMjRSMmFkMTI4ZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkMjU2ZDI1NmQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY3UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTc5b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE3OVIxMmQwUjEzZDM4NFIxNGFoZzo2Nm9SMWQxMDI0UjJhZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDM4NGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQzODRkODk2ZDM4NGQ1MTJkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMGQxMDI0ZDBkMTI4ZDUxMmQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY2UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTc4UjEyZDBSMTNkMzg0UjE0YWhnOjY1b1IxZDEwMjRSMmFkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkMjU2ZDI1NmQ2NDBkMzg0ZDY0MGQzODRkMjU2ZDI1NmQyNTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTY1UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTFpMmkyaTJpMmhnOjE3N29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzdSMTJkMFIxM2QzODRSMTRhaGc6NjRvUjFkMTAyNFIyYWQyNTZkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQ3NjhkMjU2ZDUxMmQ1MTJkNTEyZDUxMmQzODRkMjU2ZDM4NGQyNTZkNTEyZDY0MGQxMDI0ZDY0MGQxMTUyZDEyOGQxMTUyZDEyOGQxMDI0ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDc2OGQzODRkNzY4ZDg5NmQyNTZkODk2ZDI1NmQxMDI0ZDY0MGQxMDI0aFIzZDg5NlI0ZDc2OFI1ZDBSNmQ3NjhSN2QtMTI4UjhkNzY4UjlkMjU2UjEwZDI1NlIxMWk2NFIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE3Nm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzZSMTJkMFIxM2QzODRSMTRhaGc6NjNvUjFkMTAyNFIyYWQxMjhkODk2ZDM4NGQ4OTZkMzg0ZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQxMjhkNTEyZDI1NmQ1MTJkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMGQyNTZkMGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkMzg0ZDUxMmQzODRkNzY4ZDEyOGQ3NjhkMTI4ZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNjNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTc1UjEyZDBSMTNkMzg0UjE0YWhnOjYyb1IxZDEwMjRSMmFkMTI4ZDc2OGQxMjhkNjQwZDI1NmQ2NDBkMjU2ZDUxMmQxMjhkNTEyZDEyOGQzODRkMGQzODRkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDI1NmQyNTZkMjU2ZDM4NGQzODRkMzg0ZDM4NGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMTI4ZDg5NmQxMjhkMTAyNGQwZDEwMjRkMGQ3NjhkMTI4ZDc2OGhSM2Q2NDBSNGQ1MTJSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNjJSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzRvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTc0UjEyZDBSMTNkMzg0UjE0YWhnOjYxb1IxZDEwMjRSMmFkMGQ4OTZkMGQ3NjhkNTEyZDc2OGQ1MTJkODk2ZDBkODk2ZDBkNjQwZDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQwZDY0MGhSM2Q2NDBSNGQ1MTJSNWQwUjZkNTEyUjdkMTI4UjhkNTEyUjlkMjU2UjEwZDI1NlIxMWk2MVIxMmQwUjEzZDY0MFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmhnOjE3M29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzNSMTJkMFIxM2QzODRSMTRhaGc6NjBvUjFkMTAyNFIyYWQ1MTJkNzY4ZDUxMmQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMjU2ZDg5NmQyNTZkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQwZDY0MGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQzODRkMzg0ZDM4NGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQzODRkNjQwZDM4NGQ3NjhkNTEyZDc2OGhSM2Q2NDBSNGQ1MTJSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNjBSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNzJvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTcyUjEyZDBSMTNkMzg0UjE0YWhnOjU5b1IxZDEwMjRSMmFkMGQ4OTZkMTI4ZDg5NmQxMjhkNzY4ZDI1NmQ3NjhkMjU2ZDEwMjRkMTI4ZDEwMjRkMTI4ZDExNTJkMGQxMTUyZDBkODk2ZDBkMzg0ZDI1NmQzODRkMjU2ZDY0MGQwZDY0MGQwZDM4NGhSM2QzODRSNGQyNTZSNWQwUjZkNjQwUjdkLTEyOFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpNTlSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTFpMmkyaTJpMmhnOjE3MW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNzFSMTJkMFIxM2QzODRSMTRhaGc6NThvUjFkMTAyNFIyYWQwZDM4NGQyNTZkMzg0ZDI1NmQ2NDBkMGQ2NDBkMGQzODRkMGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRkMGQ3NjhoUjNkMzg0UjRkMjU2UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTU4UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaGc6MTcwb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE3MFIxMmQwUjEzZDM4NFIxNGFoZzo1N29SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDY0MGQxMjhkMTAyNGQxMjhkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMGQ2NDBkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQ2NDBkMjU2ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNTdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjlvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTY5UjEyZDBSMTNkMzg0UjE0YWhnOjU2b1IxZDEwMjRSMmFkMzg0ZDUxMmQzODRkMjU2ZDI1NmQyNTZkMjU2ZDUxMmQzODRkNTEyZDM4NGQ4OTZkMzg0ZDY0MGQyNTZkNjQwZDI1NmQ4OTZkMzg0ZDg5NmQ2NDBkNjQwZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkNjQwZDY0MGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpNTZSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTY4UjEyZDBSMTNkMzg0UjE0YWhnOjU1b1IxZDEwMjRSMmFkMTI4ZDY0MGQyNTZkNjQwZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDBkMjU2ZDBkMTI4ZDY0MGQxMjhkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ2NDBkMzg0ZDY0MGQzODRkMTAyNGQxMjhkMTAyNGQxMjhkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk1NVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjdvUjFkMTAyNFIyYWQzODRkMjU3ZDM4NWQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDM4NGQzODRkMzg0ZDI1N2QxMjhkMTAyM2QxMjdkMTAyNGQwZDEwMjRkMGQ4OTZkMTI4ZDg5NmQxMjhkMTAyM2QyNTZkNzY4ZDM4NGQ3NjhkMzg0ZDY0MGQyNTZkNjQwZDI1NmQ3NjhkMjU2ZDUxMmQxMjhkNTEyZDEyOGQ2NDBkMjU2ZDY0MGQyNTZkNTEyZDM4NGQ1MTJkNTEyZDUxMmQ1MTJkMTAyNGQzODRkMTAyNGQzODRkMTE1MmQxMjhkMTE1MmQxMjhkMTAyNGQyNTZkMTAyNGQyNTZkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMzg0ZDEyOGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDM4NGQzODRkMzg0ZDM4NGQ1MTJoUjNkNjQwUjRkNTEyUjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE2N1IxMmQwUjEzZDY0MFIxNGFpMWkyaTJpMmkyaTJpMWkyaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjU0b1IxZDEwMjRSMmFkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDY0MGQ1MTJkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDUxMmQxMjhkNTEyZDI1NmQyNTZkMjU2ZDI1NmQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTU0UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTY2b1IxZDEwMjRSMmFkMGQxMjhkMjU2ZDEyOGQyNTZkMTE1MmQwZDExNTJkMGQxMjhoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE2NlIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaGc6NTNvUjFkMTAyNFIyYWQ2NDBkNTEyZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQwZDEwMjRkMGQ4OTZkMzg0ZDg5NmQzODRkNTEyZDBkNTEyZDBkMTI4ZDUxMmQxMjhkNTEyZDI1NmQxMjhkMjU2ZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNjVvUjFkMTAyNFIyYWQwZDY0MGQyNTZkNjQwZDI1NmQ1MTJkMGQ1MTJkMGQzODRkMTI4ZDM4NGQxMjhkMjU2ZDBkMjU2ZDBkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQ1MTJkMjU2ZDUxMmQxMjhkNzY4ZDEyOGQ3NjhkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ3NjhkMzg0ZDc2OGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDc2OGQ2NDBkNzY4ZDc2OGQ1MTJkNzY4ZDUxMmQxMDI0ZDI1NmQxMDI0ZDI1NmQ3NjhkMGQ3NjhkMGQ2NDBoUjNkODk2UjRkNzY4UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTE2NVIxMmQwUjEzZDg5NlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6NTJvUjFkMTAyNFIyYWQyNTZkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQ1MTJkMzg0ZDM4NGQyNTdkMzg0ZDI1NmQzODNkMjU2ZDI1NmQzODRkMjU2ZDM4NGQxMjhkNjQwZDEyOGQ2NDBkMTAyNGQzODRkMTAyNGQzODRkNzY4ZDBkNzY4ZDBkNTEyZDEyOGQ1MTJkMTI4ZDY0MGQzODRkNjQwZDM4NGQzODRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE2NG9SMWQxMDI0UjJhZDUxMmQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDI1NmQwZDg5NmQxMjhkODk2ZDEyOGQxMDI0ZDBkMTAyNGQwZDg5NmQzODRkNTEyZDI1NmQ1MTJkMjU2ZDc2OGQzODRkNzY4ZDM4NGQ1MTJkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyZDY0MGQ3NjhkNTEyZDc2OGQ1MTJkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkNTEyZDEwMjRkNTEyZDg5NmQxMjhkODk2ZDEyOGQ3NjhkMGQ3NjhkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMjU2aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ3NjhSN2QwUjhkNzY4UjlkMjU2UjEwZDI1NlIxMWkxNjRSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6NTFvUjFkMTAyNFIyYWQwZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQ2NDBkNjQwZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQwZDEwMjRkMGQ4OTZkMzg0ZDg5NmQzODRkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQzODRkNTEyZDM4NGQyNTZkMGQyNTZkMGQxMjhoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE2M29SMWQxMDI0UjJhZDBkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDY0MGQxMjhkNjQwZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDY0MGQxMjhkNjQwZDI1NmQzODRkMjU2ZDM4NGQ2NDBkNTEyZDY0MGQ1MTJkNzY4ZDM4NGQ3NjhkMzg0ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDBkMTAyNGQwZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTYzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjUwb1IxZDEwMjRSMmFkMGQ2NDBkMTI4ZDY0MGQxMjhkNTEyZDM4NGQ1MTJkMzg0ZDI1NmQwZDI1NmQwZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQyNTZkNjQwZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQ2NDBoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTUwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTYyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE2MlIxMmQwUjEzZDM4NFIxNGFoZzo0OW9SMWQxMDI0UjJhZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQxMDI0ZDEyOGQxMDI0ZDEyOGQzODRkMGQzODRkMGQyNTZoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTQ5UjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE2MW9SMWQxMDI0UjJhZDI1NmQyNTZkMGQyNTZkMGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDBkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0ZDBkMzg0aFIzZDM4NFI0ZDI1NlI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxNjFSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJoZzo0OG9SMWQxMDI0UjJhZDM4NGQ4OTZkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTQ4UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE2MG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNjBSMTJkMFIxM2QzODRSMTRhaGc6NDdvUjFkMTAyNFIyYWQyNTZkNzcwLjVkMTI4ZDc3MC41ZDEyOGQxMDI0ZDBkMTAyNGQwZDY0MGQxMjhkNjQwZDEyOGQzODRkMjU2ZDM4NGQyNTZkMTI1LjVkMzg0ZDEyNS41ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNzcwLjVoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5OC41UjdkMFI4ZDg5OC41UjlkMjU2UjEwZDI1NlIxMWk0N1IxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE1OW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTlSMTJkMFIxM2QzODRSMTRhaGc6NDZvUjFkMTAyNFIyYWQwZDc2OGQyNTZkNzY4ZDI1NmQxMDI0ZDBkMTAyNGQwZDc2OGhSM2QzODRSNGQyNTZSNWQwUjZkMjU2UjdkMFI4ZDI1NlI5ZDI1NlIxMGQyNTZSMTFpNDZSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmhnOjE1OG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNThSMTJkMFIxM2QzODRSMTRhaGc6NDVvUjFkMTAyNFIyYWQwZDY0MGQwZDUxMmQ1MTJkNTEyZDUxMmQ2NDBkMGQ2NDBoUjNkNjQwUjRkNTEyUjVkMFI2ZDUxMlI3ZDM4NFI4ZDUxMlI5ZDI1NlIxMGQyNTZSMTFpNDVSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmhnOjE1N29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTdSMTJkMFIxM2QzODRSMTRhaGc6NDRvUjFkMTAyNFIyYWQwZDg5NmQxMjhkODk2ZDEyOGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQxMjhkMTAyNGQxMjhkMTE1MmQwZDExNTJkMGQ4OTZoUjNkMzg0UjRkMjU2UjVkMFI2ZDI1NlI3ZC0xMjhSOGQyNTZSOWQyNTZSMTBkMjU2UjExaTQ0UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmhnOjE1Nm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTZSMTJkMFIxM2QzODRSMTRhaGc6NDNvUjFkMTAyNFIyYWQzODRkODk2ZDI1NmQ4OTZkMjU2ZDY0MGQwZDY0MGQwZDUxMmQyNTZkNTEyZDI1NmQyNTZkMzg0ZDI1NmQzODRkNTEyZDY0MGQ1MTJkNjQwZDY0MGQzODRkNjQwZDM4NGQ4OTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDc2OFI3ZDEyOFI4ZDc2OFI5ZDI1NlIxMGQyNTZSMTFpNDNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNTVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTU1UjEyZDBSMTNkMzg0UjE0YWhnOjQyb1IxZDEwMjRSMmFkNjQwZDY0MGQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDc2OGQzODRkNzY4ZDM4NGQxMDI0ZDI1NmQxMDI0ZDI1NmQ3NjhkMTI4ZDc2OGQxMjhkODk2ZDBkODk2ZDBkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDI1NmQxMjhkMjU2ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkNTEyZDUxMmQ1MTJkNTEyZDY0MGQ2NDBkNjQwaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWk0MlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTU0b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE1NFIxMmQwUjEzZDM4NFIxNGFoZzo0MW9SMWQxMDI0UjJhZDEyOGQxMDI0ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDg5NmQyNTZkODk2ZDI1NmQxMDI0ZDEyOGQxMDI0ZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDEyOGQxMDI0ZDEyOGQxMTUyZDBkMTE1MmQwZDEwMjRkMTI4ZDEwMjRoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTQxUjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaGc6MTUzb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE1M1IxMmQwUjEzZDM4NFIxNGFoZzo0MG9SMWQxMDI0UjJhZDM4NGQxMDI0ZDM4NGQxMTUyZDI1NmQxMTUyZDI1NmQxMDI0ZDM4NGQxMDI0ZDI1NmQxMjhkMzg0ZDEyOGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTZkMjU2ZDI1NmQxMDI0ZDEyOGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWk0MFIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmhnOjE1Mm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTJSMTJkMFIxM2QzODRSMTRhaGc6MzlvUjFkMTAyNFIyYWQwZDEyOGQxMjhkMTI4ZDEyOGQzODRkMGQzODRkMGQxMjhoUjNkMjU2UjRkMTI4UjVkMFI2ZDg5NlI3ZDY0MFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzlSMTJkMFIxM2QyNTZSMTRhaTFpMmkyaTJpMmhnOjE1MW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTFSMTJkMFIxM2QzODRSMTRhaGc6MzhvUjFkMTAyNFIyYWQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMzg0ZDM4NGQzODRkMzg0ZDg5NmQzODRkNjQwZDI1NmQ2NDBkMjU2ZDg5NmQzODRkODk2ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQwZDM4NGQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDY0MGQyNTZkNjQwZDM4NGQ1MTJkMzg0ZDUxMmQ2NDBkNjQwZDY0MGQ2NDBkNTEyZDc2OGQ1MTJkNzY4ZDEwMjRkNjQwZDEwMjRkNjQwZDg5NmhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzhSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjE1MG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNTBSMTJkMFIxM2QzODRSMTRhaGc6MzdvUjFkMTAyNFIyYWQ1MTJkMTAyNGQ1MTJkNzY4ZDc2OGQ3NjhkNzY4ZDEwMjRkNTEyZDEwMjRkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDBkMzg0ZDBkMTI4ZDUxMmQ2NDBkMzg0ZDY0MGQzODRkODk2ZDI1NmQ4OTZkMjU2ZDEwMjRkMTI4ZDEwMjRkMTI4ZDc2OGQyNTZkNzY4ZDI1NmQ1MTJkMzg0ZDUxMmQzODRkMjU2ZDUxMmQyNTZkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQzODYuNWQ1MTJkMzg2LjVkNTEyZDY0MGhSM2Q4OTZSNGQ3NjhSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzdSMTJkMFIxM2Q4OTZSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTQ5b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0OVIxMmQwUjEzZDM4NFIxNGFoZzozNm9SMWQxMDI0UjJhZDI1NmQ1MTJkMzg0ZDUxMmQzODRkMzg0ZDI1NmQzODRkMjU2ZDUxMmQyNTZkNzY4ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkNzY4ZDI1NmQ3NjhkMzg0ZDEwMjRkMjU2ZDEwMjRkMjU2ZDExNTJkMTI4ZDExNTJkMTI4ZDEwMjRkMGQxMDI0ZDBkODk2ZDEyOGQ4OTZkMTI4ZDY0MGQwZDY0MGQwZDM4NGQxMjhkMzg0ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmQ2NDBkMzg0ZDUxMmQzODRkNTEyZDY0MGQ2NDBkNjQwZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTE1MmQzODRkMTE1MmQzODRkMTAyNGhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkLTEyOFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzZSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTQ4b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0OFIxMmQwUjEzZDM4NFIxNGFoZzozNW9SMWQxMDI0UjJhZDI1NmQ2NDBkMzg0ZDY0MGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ2NDBkMjU2ZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDY0MGQ2NDBkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMjU2ZDg5NmQyNTZkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNjQwZDEyOGQ2NDBkMTI4ZDUxMmQwZDUxMmQwZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkNjQwZDI1NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNDdvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTQ3UjEyZDBSMTNkMzg0UjE0YWhnOjM0b1IxZDEwMjRSMmFkMjU2ZDEyOGQzODRkMTI4ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMTI4ZDBkMTI4ZDEyOGQxMjhkMTI4ZDM4NGQwZDM4NGQwZDEyOGhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkNjQwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkzNFIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmhnOjE0Nm9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNDZSMTJkMFIxM2QzODRSMTRhaGc6MzNvUjFkMTAyNFIyYWQwZDg5NmQyNTZkODk2ZDI1NmQxMDI0ZDBkMTAyNGQwZDg5NmQyNTZkNzY4ZDBkNzY4ZDBkMTI4ZDI1NmQxMjhkMjU2ZDc2OGhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMzNSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJoZzoxNDVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTQ1UjEyZDBSMTNkMzg0UjE0YWhnOjMyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTMyUjEyZDBSMTNkMzg0UjE0YWhnOjE0NG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNDRSMTJkMFIxM2QzODRSMTRhaGc6MTQzb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0M1IxMmQwUjEzZDM4NFIxNGFoZzoyNTVvUjFkMTAyNFIyYWQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDM4NGQ3NjhkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQxMDI0ZDUxMmQxMDI0ZDUxMmQxMTUyZDEyOGQxMTUyZDEyOGQxMDI0ZDM4NGQxMDI0ZDM4NGQ4OTZkMTI4ZDg5NmQxMjhkNzY4ZDBkNzY4ZDBkMzg0ZDI1NmQzODRkMjU2ZDc2OGQzODRkNzY4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyNTVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTQyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTE0MlIxMmQwUjEzZDM4NFIxNGFoZzoyNTRvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMjU0UjEyZDBSMTNkMzg0UjE0YWhnOjE0MW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxNDFSMTJkMFIxM2QzODRSMTRhaGc6MjUzb1IxZDEwMjRSMmFkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQzODRkNzY4ZDM4NGQzODRkNjQwZDM4NGQ2NDBkMTAyNGQ1MTJkMTAyNGQ1MTJkMTE1MmQxMjhkMTE1MmQxMjhkMTAyNGQzODRkMTAyNGQzODRkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDM4NGQyNTVkMzg0ZDI1NmQzODVkMjU2ZDc2OGQzODRkNzY4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyNTNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxNDBvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTQwUjEyZDBSMTNkMzg0UjE0YWhnOjI1Mm9SMWQxMDI0UjJhZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDUxMmQxMjhkNTEyZDI1NmQzODRkMjU2ZDM4NGQxMjhkMzg0ZDg5NmQzODRkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTZkMzg0ZDI1NmQ4OTZkMzg0ZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjUyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEzOW9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMzlSMTJkMFIxM2QzODRSMTRhaGc6MjUxb1IxZDEwMjRSMmFkMTI4ZDg5NmQwZDg5NmQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU1ZDI1NmQyNTZkMjU3ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjUxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzhvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTM4UjEyZDBSMTNkMzg0UjE0YWhnOjI1MG9SMWQxMDI0UjJhZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQyNTZkMzg1ZDI1NmQ4OTZkMzg0ZDg5NmQzODRkMzg0ZDI1NmQzODRkMjU2ZDI1NmQzODRkMjU2ZDM4NGQzODRkNjQwZDM4NGQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDI1NWQzODRkMjU2ZDM4NWhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjUwUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEzN29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMzdSMTJkMFIxM2QzODRSMTRhaGc6MjQ5b1IxZDEwMjRSMmFkMTI4ZDg5NmQwZDg5NmQwZDM4NGQyNTVkMzg0ZDI1NmQzODVkMjU2ZDg5NmQzODRkODk2ZDM4NGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMzg0ZDI1NmQzODRkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjQ5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzZvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTM2UjEyZDBSMTNkMzg0UjE0YWhnOjI0OG9SMWQxMDI0UjJhZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQzODRkNzY4ZDI1NmQ3NjhkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMTI4ZDUxMmQxMjhkMzg0ZDY0MGQzODRkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDBkMTAyNGQwZDUxMmQxMjhkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkyNDhSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJoZzoxMzVvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTM1UjEyZDBSMTNkMzg0UjE0YWhnOjI0N29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkyNDdSMTJkMFIxM2QzODRSMTRhaGc6MTM0b1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTEzNFIxMmQwUjEzZDM4NFIxNGFoZzoyNDZvUjFkMTAyNFIyYWQzODRkMTI4ZDUxMmQxMjhkNTEyZDI1NmQzODRkMjU2ZDM4NGQxMjhkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0NlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEzM29SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMzNSMTJkMFIxM2QzODRSMTRhaGc6MjQ1b1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDM4NGQ4OTZkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmQxMjhkMjU3ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMjU2ZDEyN2QyNTZkMTI4ZDI1N2hSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjQ1UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTMyb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTEzMlIxMmQwUjEzZDM4NFIxNGFoZzoyNDRvUjFkMTAyNFIyYWQzODRkODk2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDI1NmQyNTZkMjU2ZDI1NmQxMjhkMzg0ZDEyOGQzODRkMjU2ZDUxMmQyNTZkNTEyZDM4NGQ2NDBkMzg0ZDY0MGQ4OTZkNTEyZDg5NmQ1MTJkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTVkMjU2ZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0NFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzFvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTMxUjEyZDBSMTNkMzg0UjE0YWhnOjI0M29SMWQxMDI0UjJhZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQzODRkODk2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0M1IxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMzBvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTMwUjEyZDBSMTNkMzg0UjE0YWhnOjI0Mm9SMWQxMDI0UjJhZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkODk2ZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkODk2ZDM4NGQ4OTZkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkODk2ZDUxMmQ4OTZkNTEyZDEwMjRkMTI4ZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0MlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjlvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTI5UjEyZDBSMTNkMzg0UjE0YWhnOjI0MW9SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQxMjhkMjU3ZDEyOGQzODRkMjU2ZDM4NGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMzg0ZDEwMjRkMzg0ZDUxMmQyNTZkNTEyZDI1NmQxMDI0ZDBkMTAyNGQwZDI1NmQxMjdkMjU2ZDEyOGQyNTdoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTI0MVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjEyOG9SMWQxMDI0UjJhaFIzZDM4NFI0ZDBSNWQwUjZkMFI3ZDBSOGQwUjlkMjU2UjEwZDI1NlIxMWkxMjhSMTJkMFIxM2QzODRSMTRhaGc6MjQwb1IxZDEwMjRSMmFoUjNkMzg0UjRkMFI1ZDBSNmQwUjdkMFI4ZDBSOWQyNTZSMTBkMjU2UjExaTI0MFIxMmQwUjEzZDM4NFIxNGFoZzoxMjdvUjFkMTAyNFIyYWhSM2QzODRSNGQwUjVkMFI2ZDBSN2QwUjhkMFI5ZDI1NlIxMGQyNTZSMTFpMTI3UjEyZDBSMTNkMzg0UjE0YWhnOjIzOW9SMWQxMDI0UjJhZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQwZDEyOGQxMjhkMTI4ZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEwMjRkMTI4ZDM4NGQzODRkMzg0ZDM4NGQxMDI0ZDEyOGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMzlSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaGc6MTI2b1IxZDEwMjRSMmFkNTEyZDEyOGQ2NDBkMTI4ZDY0MGQyNTZkNTEyZDI1NmQ1MTJkMTI4ZDEyOGQzODRkMGQzODRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDEyOGQxMjhkMzg0ZDEyOGQzODRkMjU2ZDUxMmQyNTZkNTEyZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2Q2NDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEyNlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmhnOjIzOG9SMWQxMDI0UjJhZDI1NmQzODRkMjU2ZDI1N2QyNTdkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQyNTZkMzg0ZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQwZDEwMjRkMGQyNTZkMTI4ZDI1NmQxMjhkMzg0ZDI1NmQzODRkMjU2ZDEwMjRkMGQxMDI0aFIzZDUxMlI0ZDM4NFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMzhSMTJkMFIxM2Q1MTJSMTRhaTFpMmkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaGc6MTI1b1IxZDEwMjRSMmFkMzg0ZDExNTJkMGQxMTUyZDBkMTAyNGQxMjhkMTAyNGQxMjhkMjU2ZDBkMjU2ZDBkMTI4ZDM4NGQxMjhkMzg0ZDExNTJoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEyNVIxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJoZzoyMzdvUjFkMTAyNFIyYWQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMGQxMDI0ZDBkMjU2ZDEyOGQyNTZkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQxMDI0ZDBkMTAyNGhSM2QzODRSNGQyNTZSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjM3UjEyZDBSMTNkMzg0UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmhnOjEyNG9SMWQxMDI0UjJhZDBkMTI4ZDI1NmQxMjhkMjU2ZDExNTJkMGQxMTUyZDBkMTI4aFIzZDM4NFI0ZDI1NlI1ZDBSNmQ4OTZSN2QtMTI4UjhkODk2UjlkMjU2UjEwZDI1NlIxMWkxMjRSMTJkMFIxM2QzODRSMTRhaTFpMmkyaTJpMmhnOjIzNm9SMWQxMDI0UjJhZDEyOGQyNTZkMGQyNTZkMGQxMjhkMTI4ZDEyOGQxMjhkMjU2ZDBkMTAyNGQwZDM4NGQxMjhkMzg0ZDEyOGQyNTZkMjU2ZDI1NmQyNTZkMTAyNGQwZDEwMjRoUjNkMzg0UjRkMjU2UjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIzNlIxMmQwUjEzZDM4NFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJoZzoxMjNvUjFkMTAyNFIyYWQwZDEyOGQzODRkMTI4ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTAyNGQzODRkMTAyNGQzODRkMTE1MmQwZDExNTJkMGQxMjhoUjNkNTEyUjRkMzg0UjVkMFI2ZDg5NlI3ZC0xMjhSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTEyM1IxMmQwUjEzZDUxMlIxNGFpMWkyaTJpMmkyaTJpMmkyaTJoZzoyMzVvUjFkMTAyNFIyYWQzODRkMTI4ZDUxMmQxMjhkNTEyZDI1NmQzODRkMjU2ZDM4NGQxMjhkMjU2ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDEyOGQxMjhkMjU2ZDEyOGQyNTZkMjU2ZDEyOGQyNTZkMTI4ZDEyOGQ2NDBkNTEyZDY0MGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ4OTZkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDY0MGQ1MTJoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIzNVIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjJvUjFkMTAyNFIyYWQwZDM4NGQ2NDBkMzg0ZDY0MGQ1MTJkNTEyZDUxMmQ1MTJkNjQwZDM4NGQ2NDBkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQwZDEwMjRkMGQ3NjhkMTI4ZDc2OGQxMjhkNjQwZDI1NmQ2NDBkMjU2ZDUxMmQwZDUxMmQwZDM4NGhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkMFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpMTIyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjM0b1IxZDEwMjRSMmFkMjU2ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMjU2ZDUxMmQyNTZkNjQwZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkNzY4ZDI1NmQ3NjhkMjU2ZDg5NmQ2NDBkODk2ZDY0MGQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQzODRkMTI4ZDM4NGQxMjhkMjU2ZDI1NWQyNTZkMjU2ZDI1N2hSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjM0UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjFvUjFkMTAyNFIyYWQzODRkNzY4ZDM4NGQzODRkNjQwZDM4NGQ2NDBkMTAyNGQ1MTJkMTAyNGQ1MTJkMTE1MmQxMjhkMTE1MmQxMjhkMTAyNGQzODRkMTAyNGQzODRkODk2ZDEyOGQ4OTZkMTI4ZDc2OGQwZDc2OGQwZDM4NGQyNTZkMzg0ZDI1NmQ3NjhkMzg0ZDc2OGhSM2Q3NjhSNGQ2NDBSNWQwUjZkNjQwUjdkLTEyOFI4ZDY0MFI5ZDI1NlIxMGQyNTZSMTFpMTIxUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMzNvUjFkMTAyNFIyYWQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDY0MGQ1MTJkNjQwZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTMuNWQzODRkMjUzLjVkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjMzUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMjBvUjFkMTAyNFIyYWQwZDEwMjRkMGQ3NjhkMTI4ZDc2OGQxMjhkNjQwZDBkNjQwZDBkMzg0ZDI1NmQzODRkMjU2ZDY0MGQzODRkNjQwZDM4NGQzODRkNjQwZDM4NGQ2NDBkNjQwZDUxMmQ2NDBkNTEyZDc2OGQ2NDBkNzY4ZDY0MGQxMDI0ZDM4NGQxMDI0ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkMTAyNGQwZDEwMjRoUjNkNzY4UjRkNjQwUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTEyMFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMzJvUjFkMTAyNFIyYWQyNTZkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ2NDBkMTI4ZDEyOGQyNTZkMTI4ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDY0MGQ1MTJkNjQwZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkNjQwZDg5NmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTMuNWQzODRkMjUzLjVkMjU2ZDM4NGQyNTZkMzg0ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmhSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjMyUjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMTlvUjFkMTAyNFIyYWQ2NDBkMzg0ZDg5NmQzODRkODk2ZDc2OGQ3NjhkNzY4ZDc2OGQxMDI0ZDUxMmQxMDI0ZDUxMmQ4OTZkMzg0ZDg5NmQzODRkMTAyNGQxMjhkMTAyNGQxMjhkNzY4ZDBkNzY4ZDBkMzg0ZDI1NmQzODRkMjU2ZDc2OGQzODRkNzY4ZDM4NGQ1MTJkNTEyZDUxMmQ1MTJkNzY4ZDY0MGQ3NjhkNjQwZDM4NGhSM2QxMDI0UjRkODk2UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTExOVIxMmQwUjEzZDEwMjRSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjMxb1IxZDEwMjRSMmFkMjU2ZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDg5NmQ1MTJkODk2ZDUxMmQxMDI0ZDM4NGQxMDI0ZDM4NGQxMTUyZDI1NmQxMTUyZDI1NmQxMDI0aFIzZDY0MFI0ZDUxMlI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkyMzFSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExOG9SMWQxMDI0UjJhZDI1NmQ4OTZkMTI4ZDg5NmQxMjhkNjQwZDBkNjQwZDBkMzg0ZDI1NmQzODRkMjU2ZDY0MGQzODRkNjQwZDM4NGQzODRkNjQwZDM4NGQ2NDBkNjQwZDUxMmQ2NDBkNTEyZDg5NmQzODRkODk2ZDM4NGQxMDI0ZDI1NmQxMDI0ZDI1NmQ4OTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTExOFIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjMwb1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDY0MGQ2NDBkNzY4ZDY0MGQ3NjhkNTEzZDc2OWQ1MTJkODk2ZDUxMmQ4OTZkNzY4ZDY0MGQ3NjhkNjQwZDg5NmQ4OTZkODk2ZDg5NmQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQ3NjhkMTI4ZDc2OGQxMjhkNjQwZDM4NGQ2NDBkMzg0ZDUxMmQxMjhkNTEyZDEyOGQzODRkNzY4ZDM4NGQ3NjhkNTEyZDY0MGQ1MTJkNjQwZDY0MGhSM2QxMDI0UjRkODk2UjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTIzMFIxMmQwUjEzZDEwMjRSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExN29SMWQxMDI0UjJhZDEyOGQ4OTZkMGQ4OTZkMGQzODRkMjU2ZDM4NGQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDM4NGQ2NDBkMzg0ZDY0MGQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZoUjNkNzY4UjRkNjQwUjVkMFI2ZDY0MFI3ZDBSOGQ2NDBSOWQyNTZSMTBkMjU2UjExaTExN1IxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjI5b1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDI1NmQyNTdkMjU2ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQzODRkNjQwZDM4NGQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMTI4ZDUxMmQxMjhkMjU2ZDI1NWQyNTZkMjU2ZDI1N2hSM2Q3NjhSNGQ2NDBSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMjI5UjEyZDBSMTNkNzY4UjE0YWkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoxMTZvUjFkMTAyNFIyYWQzODRkODk2ZDM4NGQxMDI0ZDEyOGQxMDI0ZDEyOGQ4OTZkMGQ4OTZkMGQxMjhkMjU2ZDEyOGQyNTZkMzg0ZDM4NGQzODRkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ4OTZkMzg0ZDg5NmhSM2Q1MTJSNGQzODRSNWQwUjZkODk2UjdkMFI4ZDg5NlI5ZDI1NlIxMGQyNTZSMTFpMTE2UjEyZDBSMTNkNTEyUjE0YWkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MjI4b1IxZDEwMjRSMmFkMjU2ZDg5NmQzODRkODk2ZDM4NGQ3NjhkMjU2ZDc2OGQyNTZkODk2ZDM4NGQxMjhkNTEyZDEyOGQ1MTJkMjU2ZDM4NGQyNTZkMzg0ZDEyOGQxMjhkMTI4ZDI1NmQxMjhkMjU2ZDI1NmQxMjhkMjU2ZDEyOGQxMjhkMTI4ZDM4NGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMTI4ZDUxMmQxMjhkMzg0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjhSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTE1b1IxZDEwMjRSMmFkNTEyZDY0MGQ1MTJkODk2ZDM4NGQ4OTZkMzg0ZDEwMjRkMGQxMDI0ZDBkODk2ZDI1NmQ4OTZkMjU2ZDc2OGQwZDc2OGQwZDUxMmQxMjhkNTEyZDEyOGQzODRkNTEyZDM4NGQ1MTJkNTEyZDI1NmQ1MTJkMjU2ZDY0MGQ1MTJkNjQwaFIzZDY0MFI0ZDUxMlI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTVSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyN29SMWQxMDI0UjJhZDUxMmQxMjhkNjQwZDEyOGQ2NDBkMjU2ZDUxMmQyNTZkNTEyZDEyOGQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMTI4ZDI1NmQxMjhkMTI4ZDM4NGQxMjhkMzg0ZDI1NmQ1MTJkMjU2ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkMTAyNGQxMjhkMTAyNGQxMjhkODk2ZDBkODk2ZDBkNzY4ZDEyOGQ3NjhkMTI4ZDY0MGQzODRkNjQwZDM4NGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDBkMzg0ZDBkMjU2ZDEyN2QyNTZkMTI4ZDI1N2QxMjhkMzg0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjdSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaGc6MTE0b1IxZDEwMjRSMmFkMGQxMDI0ZDBkMzg0ZDI1NmQzODRkMjU2ZDUxMmQzODRkNTEyZDM4NGQzODRkNTEyZDM4NGQ1MTJkNjQwZDI1NmQ2NDBkMjU2ZDEwMjRkMGQxMDI0aFIzZDY0MFI0ZDUxMlI1ZDBSNmQ2NDBSN2QwUjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTRSMTJkMFIxM2Q2NDBSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjIyNm9SMWQxMDI0UjJhZDI1NmQ4OTZkMzg0ZDg5NmQzODRkNzY4ZDI1NmQ3NjhkMjU2ZDg5NmQyNTZkMjU3ZDI1NmQzODRkMzg0ZDM4NGQzODRkMjU2ZDI1NmQyNTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkMzg0ZDY0MGQzODRkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDBkNTEyZDBkMzg0ZDEyOGQzODRkMTI4ZDI1NmQyNTVkMjU2ZDI1NmQyNTdoUjNkNzY4UjRkNjQwUjVkMFI2ZDg5NlI3ZDBSOGQ4OTZSOWQyNTZSMTBkMjU2UjExaTIyNlIxMmQwUjEzZDc2OFIxNGFpMWkyaTJpMmkyaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExM29SMWQxMDI0UjJhZDY0MGQzODRkNjQwZDExNTJkMzg0ZDExNTJkMzg0ZDg5NmQxMjhkODk2ZDEyOGQ3NjhkMGQ3NjhkMGQ1MTJkMTI4ZDUxMmQxMjhkMzg0ZDY0MGQzODRkMzg0ZDc2OGQzODRkNTEyZDI1NmQ1MTJkMjU2ZDc2OGQzODRkNzY4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTNSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkyaTJpMmkyaTJpMmkxaTJpMmkyaTJoZzoyMjVvUjFkMTAyNFIyYWQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMzg0ZDEyOGQ1MTJkMTI4ZDUxMmQyNTZkMzg0ZDI1NmQzODRkMTI4ZDY0MGQ1MTJkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQyNTZkMzg0ZDI1NmQyNTZkMzg0ZDI1NmQzODRkMzg0ZDUxMmQzODRkNTEyZDUxMmQ2NDBkNTEyaFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjVSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMWkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnOjExMm9SMWQxMDI0UjJhZDM4NGQ3NjhkMzg0ZDUxMmQyNTZkNTEyZDI1NmQ3NjhkMzg0ZDc2OGQ1MTJkMzg0ZDUxMmQ1MTJkNjQwZDUxMmQ2NDBkNzY4ZDUxMmQ3NjhkNTEyZDg5NmQyNTZkODk2ZDI1NmQxMTUyZDBkMTE1MmQwZDM4NGQ1MTJkMzg0aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ2NDBSN2QtMTI4UjhkNjQwUjlkMjU2UjEwZDI1NlIxMWkxMTJSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJoZzoyMjRvUjFkMTAyNFIyYWQyNTZkODk2ZDM4NGQ4OTZkMzg0ZDc2OGQyNTZkNzY4ZDI1NmQ4OTZkMjU2ZDEyOGQzODRkMTI4ZDM4NGQyNTZkNTEyZDI1NmQ1MTJkNTEyZDY0MGQ1MTJkNjQwZDEwMjRkMTI4ZDEwMjRkMTI4ZDg5NmQwZDg5NmQwZDc2OGQxMjhkNzY4ZDEyOGQ2NDBkMzg0ZDY0MGQzODRkNTEyZDEyOGQ1MTJkMTI4ZDM4NGQzODRkMzg0ZDM4NGQyNTZkMjU2ZDI1NmQyNTZkMTI4aFIzZDc2OFI0ZDY0MFI1ZDBSNmQ4OTZSN2QwUjhkODk2UjlkMjU2UjEwZDI1NlIxMWkyMjRSMTJkMFIxM2Q3NjhSMTRhaTFpMmkyaTJpMmkxaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmkyaTJpMmhnaHk4OmZvbnROYW1leTMwOk5va2lhJTIwQ2VsbHBob25lJTIwRkMlMjBTbWFsbGc"},{ name : "__ASSET__:bitmap_flixel_tile_GraphicAutoAlt", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUlBQUFBQUlDQU1BQUFBR0F3ZE1BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBS1QybERRMUJRYUc5MGIzTm9iM0FnU1VORElIQnliMlpwYkdVQUFIamFuVk5uVkZQcEZqMzMzdlJDUzRpQWxFdHZVaFVJSUZKQ2k0QVVrU1lxSVFrUVNvZ2hvZGtWVWNFUlJVVUVHOGlnaUFPT2pvQ01GVkVzRElvSzJBZmtJYUtPZzZPSWlzcjc0WHVqYTlhODkrYk4vclhYUHVlczg1Mnp6d2ZBQ0F5V1NETlJOWUFNcVVJZUVlQ0R4OFRHNGVRdVFJRUtKSEFBRUFpelpDRnovU01CQVBoK1BEd3JJc0FIdmdBQmVOTUxDQURBVFp2QU1CeUgvdy9xUXBsY0FZQ0VBY0Iwa1RoTENJQVVBRUI2amtLbUFFQkdBWUNkbUNaVEFLQUVBR0RMWTJMakFGQXRBR0FuZitiVEFJQ2QrSmw3QVFCYmxDRVZBYUNSQUNBVFpZaEVBR2c3QUt6UFZvcEZBRmd3QUJSbVM4UTVBTmd0QURCSlYyWklBTEMzQU1ET0VBdXlBQWdNQURCUmlJVXBBQVI3QUdESUl5TjRBSVNaQUJSRzhsYzg4U3V1RU9jcUFBQjRtYkk4dVNRNVJZRmJDQzF4QjFkWExoNG96a2tYS3hRMllRSmhta0F1d25tWkdUS0JOQS9nODh3QUFLQ1JGUkhnZy9QOWVNNE9yczdPTm82MkRsOHQ2cjhHL3lKaVl1UCs1YytyY0VBQUFPRjBmdEgrTEMrekdvQTdCb0J0L3FJbDdnUm9YZ3VnZGZlTFpySVBRTFVBb09uYVYvTncrSDQ4UEVXaGtMbloyZVhrNU5oS3hFSmJZY3BYZmY1bndsL0FWLzFzK1g0OC9QZjE0TDdpSklFeVhZRkhCUGpnd3N6MFRLVWN6NUlKaEdMYzVvOUgvTGNMLy93ZDB5TEVTV0s1V0NvVTQxRVNjWTVFbW96ek1xVWlpVUtTS2NVbDB2OWs0dDhzK3dNKzN6VUFzR28rQVh1UkxhaGRZd1AyU3ljUVdIVEE0dmNBQVBLN2I4SFVLQWdEZ0dpRDRjOTMvKzgvL1VlZ0pRQ0Faa21TY1FBQVhrUWtMbFRLc3ovSENBQUFSS0NCS3JCQkcvVEJHQ3pBQmh6QkJkekJDL3hnTm9SQ0pNVENRaEJDQ21TQUhISmdLYXlDUWlpR3piQWRLbUF2MUVBZE5NQlJhSWFUY0E0dXdsVzREajF3RC9waENKN0JLTHlCQ1FSQnlBZ1RZU0hhaUFGaWlsZ2pqZ2dYbVlYNEljRklCQktMSkNESmlCUlJJa3VSTlVneFVvcFVJRlZJSGZJOWNnSTVoMXhHdXBFN3lBQXlndnlHdkVjeGxJR3lVVDNVRExWRHVhZzNHb1JHb2d2UVpIUXhtbzhXb0p2UWNyUWFQWXcyb2VmUXEyZ1AybzgrUThjd3dPZ1lCelBFYkRBdXhzTkNzVGdzQ1pOank3RWlyQXlyeGhxd1Zxd0R1NG4xWTgreGR3UVNnVVhBQ1RZRWQwSWdZUjVCU0ZoTVdFN1lTS2dnSENRMEVkb0pOd2tEaEZIQ0p5S1RxRXUwSnJvUitjUVlZakl4aDFoSUxDUFdFbzhUTHhCN2lFUEVOeVFTaVVNeUo3bVFBa214cEZUU0V0SkcwbTVTSStrc3FaczBTQm9qazhuYVpHdXlCem1VTENBcnlJWGtuZVRENURQa0crUWg4bHNLbldKQWNhVDRVK0lvVXNwcVNobmxFT1UwNVFabG1ESkJWYU9hVXQyb29WUVJOWTlhUXEyaHRsS3ZVWWVvRXpSMW1qbk5neFpKUzZXdG9wWFRHbWdYYVBkcHIraDB1aEhkbFI1T2w5Qlgwc3ZwUitpWDZBUDBkd3dOaGhXRHg0aG5LQm1iR0FjWVp4bDNHSytZVEtZWjA0c1p4MVF3TnpIcm1PZVpENWx2VlZncXRpcDhGWkhLQ3BWS2xTYVZHeW92VkttcXBxcmVxZ3RWODFYTFZJK3BYbE45cmtaVk0xUGpxUW5VbHF0VnFwMVE2MU1iVTJlcE82aUhxbWVvYjFRL3BINVovWWtHV2NOTXcwOURwRkdnc1YvanZNWWdDMk1aczNnc0lXc05xNFoxZ1RYRUpySE4yWHgyS3J1WS9SMjdpejJxcWFFNVF6TktNMWV6VXZPVVpqOEg0NWh4K0p4MFRnbm5LS2VYODM2SzNoVHZLZUlwRzZZMFRMa3haVnhycXBhWGxsaXJTS3RScTBmcnZUYXU3YWVkcHIxRnUxbjdnUTVCeDBvblhDZEhaNC9PQlozblU5bFQzYWNLcHhaTlBUcjFyaTZxYTZVYm9idEVkNzl1cCs2WW5yNWVnSjVNYjZmZWViM24raHg5TC8xVS9XMzZwL1ZIREZnR3N3d2tCdHNNemhnOHhUVnhiendkTDhmYjhWRkRYY05BUTZWaGxXR1g0WVNSdWRFOG85VkdqVVlQakduR1hPTWs0MjNHYmNhakpnWW1JU1pMVGVwTjdwcFNUYm1tS2FZN1REdE14ODNNemFMTjFwazFtejB4MXpMbm0rZWIxNXZmdDJCYWVGb3N0cWkydUdWSnN1UmFwbG51dHJ4dWhWbzVXYVZZVlZwZHMwYXRuYTBsMXJ1dHU2Y1JwN2xPazA2cm50Wm53N0R4dHNtMnFiY1pzT1hZQnR1dXRtMjJmV0ZuWWhkbnQ4V3V3KzZUdlpOOXVuMk4vVDBIRFlmWkRxc2RXaDErYzdSeUZEcFdPdDZhenB6dVAzM0Y5SmJwTDJkWXp4RFAyRFBqdGhQTEtjUnBuVk9iMDBkbkYyZTVjNFB6aUl1SlM0TExMcGMrTHBzYnh0M0l2ZVJLZFBWeFhlRjYwdldkbTdPYnd1Mm8yNi91TnU1cDdvZmNuOHcwbnltZVdUTnowTVBJUStCUjVkRS9DNStWTUd2ZnJINVBRMCtCWjdYbkl5OWpMNUZYcmRld3Q2VjNxdmRoN3hjKzlqNXluK00rNHp3MzNqTGVXVi9NTjhDM3lMZkxUOE52bmwrRjMwTi9JLzlrLzNyLzBRQ25nQ1VCWndPSmdVR0JXd0w3K0hwOEliK09QenJiWmZheTJlMUJqS0M1UVJWQmo0S3RndVhCclNGb3lPeVFyU0gzNTVqT2tjNXBEb1ZRZnVqVzBBZGg1bUdMdzM0TUo0V0hoVmVHUDQ1d2lGZ2EwVEdYTlhmUjNFTnozMFQ2UkpaRTNwdG5NVTg1cnkxS05TbytxaTVxUE5vM3VqUzZQOFl1WmxuTTFWaWRXRWxzU3h3NUxpcXVObTVzdnQvODdmT0g0cDNpQytON0Y1Z3Z5RjF3ZWFIT3d2U0ZweGFwTGhJc09wWkFUSWhPT0pUd1FSQXFxQmFNSmZJVGR5V09Dbm5DSGNKbklpL1JOdEdJMkVOY0toNU84a2dxVFhxUzdKRzhOWGtreFRPbExPVzVoQ2Vwa0x4TURVemRtenFlRnBwMklHMHlQVHE5TVlPU2taQnhRcW9oVFpPMlorcG41bVoyeTZ4bGhiTCt4VzZMdHk4ZWxRZkphN09RckFWWkxRcTJRcWJvVkZvbzF5b0hzbWRsVjJhL3pZbktPWmFybml2TjdjeXp5dHVRTjV6dm4vL3RFc0lTNFpLMnBZWkxWeTBkV09hOXJHbzVzanh4ZWRzSzR4VUZLNFpXQnF3OHVJcTJLbTNWVDZ2dFY1ZXVmcjBtZWsxcmdWN0J5b0xCdFFGcjZ3dFZDdVdGZmV2YzErMWRUMWd2V2QrMVlmcUduUnMrRlltS3JoVGJGNWNWZjlnbzNIamxHNGR2eXIrWjNKUzBxYXZFdVdUUFp0Sm02ZWJlTFo1YkRwYXFsK2FYRG00TjJkcTBEZDlXdE8zMTlrWGJMNWZOS051N2c3WkR1YU8vUExpOFphZkp6czA3UDFTa1ZQUlUrbFEyN3RMZHRXSFgrRzdSN2h0N3ZQWTA3TlhiVzd6My9UN0p2dHRWQVZWTjFXYlZaZnRKKzdQM1A2NkpxdW40bHZ0dFhhMU9iWEh0eHdQU0EvMEhJdzYyMTduVTFSM1NQVlJTajlZcjYwY094eCsrL3AzdmR5ME5OZzFWalp6RzRpTndSSG5rNmZjSjMvY2VEVHJhZG94N3JPRUgweDkySFdjZEwycENtdkthUnB0VG12dGJZbHU2VDh3KzBkYnEzbnI4UjlzZkQ1dzBQRmw1U3ZOVXlXbmE2WUxUazJmeXo0eWRsWjE5Zmk3NTNHRGJvclo3NTJQTzMyb1BiKys2RUhUaDBrWC9pK2M3dkR2T1hQSzRkUEt5MitVVFY3aFhtcTg2WDIzcWRPbzgvcFBUVDhlN25MdWFycmxjYTdudWVyMjFlMmIzNlJ1ZU44N2Q5TDE1OFJiLzF0V2VPVDNkdmZONmIvZkY5L1hmRnQxK2NpZjl6c3U3MlhjbjdxMjhUN3hmOUVEdFFkbEQzWWZWUDF2KzNOanYzSDlxd0hlZzg5SGNSL2NHaFlQUC9wSDFqdzlEQlkrWmo4dUdEWWJybmpnK09UbmlQM0w5NmZ5blE4OWt6eWFlRi82aS9zdXVGeFl2ZnZqVjY5Zk8wWmpSb1pmeWw1Ty9iWHlsL2VyQTZ4bXYyOGJDeGg2K3lYZ3pNVjcwVnZ2dHdYZmNkeDN2bzk4UFQrUjhJSDhvLzJqNXNmVlQwS2Y3a3htVGsvOEVBNWp6L0dNekxkc0FBQUFnWTBoU1RRQUFlaVVBQUlDREFBRDUvd0FBZ09rQUFIVXdBQURxWUFBQU9wZ0FBQmR2a2wvRlJnQUFBd0JRVEZSRkFBQUFYbDVlQUFBQUF3TURCQVFFQlFVRkJnWUdCd2NIQ0FnSUNRa0pDZ29LQ3dzTERBd01EUTBORGc0T0R3OFBFQkFRRVJFUkVoSVNFeE1URkJRVUZSVVZGaFlXRnhjWEdCZ1lHUmtaR2hvYUd4c2JIQndjSFIwZEhoNGVIeDhmSUNBZ0lTRWhJaUlpSXlNakpDUWtKU1VsSmlZbUp5Y25LQ2dvS1NrcEtpb3FLeXNyTEN3c0xTMHRMaTR1THk4dk1EQXdNVEV4TWpJeU16TXpORFEwTlRVMU5qWTJOemMzT0RnNE9UazVPam82T3pzN1BEdzhQVDA5UGo0K1B6OC9RRUJBUVVGQlFrSkNRME5EUkVSRVJVVkZSa1pHUjBkSFNFaElTVWxKU2twS1MwdExURXhNVFUxTlRrNU9UMDlQVUZCUVVWRlJVbEpTVTFOVFZGUlVWVlZWVmxaV1YxZFhXRmhZV1ZsWldscGFXMXRiWEZ4Y1hWMWRYbDVlWDE5ZllHQmdZV0ZoWW1KaVkyTmpaR1JrWldWbFptWm1aMmRuYUdob2FXbHBhbXBxYTJ0cmJHeHNiVzF0Ym01dWIyOXZjSEJ3Y1hGeGNuSnljM056ZEhSMGRYVjFkbloyZDNkM2VIaDRlWGw1ZW5wNmUzdDdmSHg4ZlgxOWZuNStmMzkvZ0lDQWdZR0Jnb0tDZzRPRGhJU0VoWVdGaG9hR2g0ZUhpSWlJaVltSmlvcUtpNHVMakl5TWpZMk5qbzZPajQrUGtKQ1FrWkdSa3BLU2s1T1RsSlNVbFpXVmxwYVdsNWVYbUppWW1abVptcHFhbTV1Ym5KeWNuWjJkbnA2ZW41K2ZvS0Nnb2FHaG9xS2lvNk9qcEtTa3BhV2xwcWFtcDZlbnFLaW9xYW1wcXFxcXE2dXJyS3lzcmEydHJxNnVyNit2c0xDd3NiR3hzckt5czdPenRMUzB0YlcxdHJhMnQ3ZTN1TGk0dWJtNXVycTZ1N3U3dkx5OHZiMjl2cjYrdjcrL3dNREF3Y0hCd3NMQ3c4UER4TVRFeGNYRnhzYkd4OGZIeU1qSXljbkp5c3JLeTh2THpNek16YzNOenM3T3o4L1AwTkRRMGRIUjB0TFMwOVBUMU5UVTFkWFYxdGJXMTlmWDJOalkyZG5aMnRyYTI5dmIzTnpjM2QzZDN0N2UzOS9mNE9EZzRlSGg0dUxpNCtQajVPVGs1ZVhsNXVibTUrZm42T2pvNmVucDZ1cnE2K3ZyN096czdlM3Q3dTd1NysvdjhQRHc4Zkh4OHZMeTgvUHo5UFQwOWZYMTl2YjI5L2YzK1BqNCtmbjUrdnI2Ky92Ny9QejgvZjM5L3Y3Ky8vLy9Ra3FmSXdBQUFBTjBVazVULy84QTE4b05RUUFBQUhaSlJFRlVlTnJzVTBrU3dDQUlTeGovLzJUcFFSaGJOZHBiTC9VQ1lRa09Dd3dBZ0JBQU9NZ0ViTkt3OG0rTk4vN1pYMnF6MVFNRlBaU0loNHRLbWU5UFhKVy9OTFdYWFJPNzBQZVJIV3Qrdzhmdi8wREorWENhRGw5TWZGNWRIblpDdGNER1RGdldvRDdUYlVjcGIrd0NBQUQvL3dNQXl5QVNLMkFhNkV3QUFBQUFTVVZPUks1Q1lJST0"},{ name : "__ASSET__:bitmap_flixel_system_debug__Window_GraphicCloseButton", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFnQUFBQUlDQVlBQUFERUQ3NkxBQUFBQkhOQ1NWUUlDQWdJZkFoa2lBQUFBQWx3U0ZsekFBQUFkZ0FBQUhZQlRuc21DQUFBQUJsMFJWaDBVMjltZEhkaGNtVUFkM2QzTG1sdWEzTmpZWEJsTG05eVo1dnVQQm9BQUFCL1NVUkJWQmlWVFkweENzSlFFQVhIYnlTZXdNdWxUV2R2YTZPbGxXSnBDQ0syaWsxT1krY3RRc1lpcS9rREM4dnM3bHZVU3UzVXBVcFdPN1ZDM1RqU3FXVU1EK0dldisxdGlKZDZ5dm95ajl3NzhWQVhLb21SR2JCaW9nY0dBTlNrTm5GNVY0L1IzOVNFMm9hNHF2TjRkdzUzS1lBMzBBRDFQeGJXUUFGOHZwYVlyTldBYU5WMEFBQUFBRWxGVGtTdVFtQ0M"},{ name : "__ASSET__:bitmap_flixel_system_debug__Window_GraphicWindowHandle", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFvQUFBQUtDQVlBQUFDTk1zKzlBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQUZCSlJFRlVlTnFNandFS0FDQUlBeFgyeWg3b055MmpRa3lwUWJUMGRFU3FTblllRXZoWE5zRE1ZblhlelZHNHdBME5OVlJaSGpLUEgyaDYvNWwxVzBPaXgzTlRFbDFDSjdxS0MvNExraTdBQUQ1WWZydllMZlJQQUFBQUFFbEZUa1N1UW1DQw"},{ name : "__ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoCorners", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUVBQUFBQkFDQVlBQUFDcWFYSGVBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQlkxSlJFRlVlTnJrV3d1eW16Z1FsR1Q4d1g1Sk52ZS9UUTYwdFhrdi9tRkFDNjRaMG01TEFwejFPaENxcHJEQnh1NmVuaGtKUnRZWTg2MnhkV1A3eG40MDloM3NIem4yMGRpeHNaTlkwZGlsc2JLeENxd0c4MkQ4M3NDZVg3ZWJoWDFyRHZacVdXTUwyUzhiV3dtT1RXTnZZbDhhKzlyWVg3TC9MTWZiejJ3Yk8yZHljQ2tBQ3JtZ0FTQkZ3QzZ5Ui9BZVNJZ0Jad0lZT0pPQVJDandSZUQ2K1BrTS9sc054OVlDZWlmN055VmdMeGQ5QjYrMzlyZnN2NHNLV2dXY3lmczFlVDRGT3VUOVBnSVFXRWdKQzFCQklZNjhpT20xVVNVWlhIZWhCSnprd0VHQUtoSHZRc0M3a0hRU0FpNEF1b29BcjhuTEtlQkRWR0FEUkRnaTRnSktacy9uNHZWYzNxL1VrVXFBRjVBZllrakNoNUNqM2k4SFNOMzBBQjlDZ0Uwb0FVbXdRa0JKdVVpUHJ5RG1jM205RkNJNkFpcngvZzhnUU1Hci9BdncvcEQ0N2dPYzh2eFFFcFNJQ3ZhbFhKc1Y4Q2J4bndNcFZTYmVMWUVBQkw2WDh5ZUsrMGRCRHdYK0tCRTFPQWdKVUd4YklzQm5VTmEwREI3azlSRkszeGtraGpFK3hMc2h3SDRrZUQrQUNFM0VXc1cwVkI0QW0xWUFMWmMyZzlwK0lQQUhxdmxWSk5iTlNFOC9vZ0QrYm93SXZMWVR4eDBCMTE0STJJZ3RNZ0NxSHp4Q3lWUFpsMVRxbmdteTcxcVdsR1poYjZqOEZZUnRUOGt3eXdUb2lZQVhFZkQxTDRKOGxCZzdrSFF2d0d2NDc1Y0F4b09RMEJHQTRNODB6T1doN2JNOVBsUUZzWE0xNUlRU0JrWWhFbFlaZ01haGJxeld2d0o4MzIvYWdBbzhPSzZDb1R1VFVDTUJPTkJoNzc4YThKakU2R2wwV29FS0NzQjYwaktJRTV3TGxic3hZL2ZmZ1FoV0ErYXVNa0NDeVFMU0x3Zkd2Zm5OeVdBVmxLU0VRc2NCUlVUNmZpS2VUeW1ocGx6QUpGd0pLQlAxZnFvSzRMQ3RZYUtFSkRoSDRLc1pTRDgwTnFnREpGd3R3emNrbWFtSGdROGt3NHBJV0RqeS90UVZFQ01pUmtMbElqYzFwK2oxUGdKOElDRldMbkZuMTgvTSsxWGdIdWFOQXVvQk56dW1Gdis5WWVBQ1NXL29sSGVxT2VER2hpcGc2dU9BS0JFdVVmYm1zREVKRlpQZ1RQcWh4bHhJQ0QybTZ3Z1krOGhxVHZuQXU1bDZQVFl6dkZPRCt3T2tINW9YZE9kY1l2dzg1ZEdnSHhvT3pveDdiaitYSE5BZGMyYittMDlNazQyYmFlSWJzbGtsd1A0cFlFUHZYZVFEcVMvUGFsTUZoR3lPS3Jqck8zSXpCODBLdm51czdoTGVueklwc2NmbmQ2cDNpVENZaStkakpEZ2t3TTI4SW9SYTdib2NNR2NWaE1CamE1M3JYZ1NJbUVNSkRMWGNJdVlGZGxzdUlpVE1EZnhObDZrTGdIZG1Yb21RUTBCYlp6c0N0SWRXRDA1OVlHUURCSEJ2c2JiUVpZN0FZM3hNT1JuYW52aS9VVUJHS3BoVFNXVHBZM2Q1aTNuWm5sanBtNTU4WUNlWStFS0xMQlRyQ2dsWXc0bU13c0JNWkdnY0d2bTVsUGVOdE1sZDI4YUZpQlVSNEdES1hKdGhEWXV2bnV2SEZJREFPd1VnQVdzS0IrNFB0aWJjbWhxN0RXVk11TkY1N08yc01mY2wrbGFWNE5xaXE3VUhOd0owQXlmTzhnVnNqMC9kWDdPSlAydi9ZKzhPbWVveStDVTRkdzFxdjRaQUxuOCtGK05HNlJBQi9oYzkrOHg1UG51ZFBhOXJCWElOQVNWZ0srQnpjN3MyQ0lIR1dtZTVXenNXTGo0U0Zxd2VQd0kwMzlwRHI3UGtOMkJyVkVDN3RZc0plRjBncnI3Z0xqSm53azlmWGxYdWVLaTdCTkNxN3EzNTJTNi9WUVZzNVlzS0h0dmxhMkFZMXduZVBXSXkvOCtUSkp1WTZOaEF0a2ZRT3lLZ2E1ZlBoVFgwUGk0OHhEc29xV2JLWnl1aER6eU84VlgyQ253WEljRXBBVXZ5UEpaQWpDdGRXZnFLbmlMYjQza3VkUnNCck10b1B4RUpMVzZMWlhCbjd0Y0xlQ0lnSXhYRXdpRkZRbXdNMFZmelkwdHBPZXVyOTNQQjlFbE1sYUR5YnovVExTc3pKdDR5YitCSGxrUlFUQWtwRXZ6STBoa2I0ckxzMmZ0YklPQU5iQXRWNExwZVlHZCtManIwZ2RLSGlhVnZQZEV6OGtIb2xyYUwxSHYydmtxL1hVWGVyaUQvVEdxb2NQSDB5ZHl2dXViWXFzejlpbTFWZ251Z01neXArVFl5ekkxTmNIQm1pM01aWFIxL3hLVCtyd0FEQUFKQmFpQW1tNXh3QUFBQUFFbEZUa1N1UW1DQw"},{ name : "__ASSET__:bitmap_flixel_ui__FlxTypedButton_GraphicButton", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUZBQUFBQThDQVlBQUFEeEp6Mk1BQUFBQVhOU1IwSUFyczRjNlFBQUFBUm5RVTFCQUFDeGp3djhZUVVBQUFBSmNFaFpjd0FBRHNNQUFBN0RBY2R2cUdRQUFBQWFkRVZZZEZOdlpuUjNZWEpsQUZCaGFXNTBMazVGVkNCMk15NDFMakV3TVBSeW9RQUFBWFpKUkVGVWVGN3RtMEVLZzBBTVJlZGVYc3M3ZUE0RjcrRUozSGdUdHk3U3BraWhNbU5tU0FjY2VFSUs3Y0xGNC84NHpUZEJSTUw3MGcrcWtNSEpMc2k2cmpKTkUxWEFRSm1kb2d2Uzk3MTBYWWNDTXhXb3JKVFpEMEQ5b3RlKzc5UU5BMldrcktJQWwyVVJ5bVlBUUtkUUFBaEEyMlkxV3hFS1JJRW9zT21uUFJiR3dsZ1lDOWM4Smp6OTN2VEFXajF3R0FhaGJBWlJCVExPeWg4b1I4ZForaU9WeitBN3ptS2tuNis4YSt6eFlRZEFKMENsU2laU25nZVJpV1RtSDdHMDhqWVRPWTVEcURTRDIweGsyemFoYkFiSmZ5TEFzK0VwSXdBNm5RWkFBT1paclZaTFFvRW9FQVUyZlZ6Q3dsZ1lDMlBoV2tlRUZ1NmI3SUh6UEF0bE15QVRjWXl5RkI2WnlCL3lIeklScHdyUGQ4ckpSRHo3TWV5SkZPeUZYUGRveUVRY0ZrNW1JdG9ZS1p0QjhodzRqcU5RTmdNQU9vVUNRQURhTnF2WmlsQWdDa1NCVFQvdHNUQVd4c0pZdU9ZeDRlbjNwZ2ZTQXgvWUE5a1R5WC9aUERyT1lveGxqN0d1akQ3VGJOWWM4cFVYMnhONUFRa0dlQlBxNStCakFBQUFBRWxGVGtTdVFtQ0M"},{ name : "__ASSET__:bitmap_flixel_input_mouse__FlxMouse_GraphicCursor", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUJnQUFBQWdDQVlBQUFBSVhyZzRBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQW1SSlJFRlVlTnEwbHM5ckUwRVV4Nzg3MllTZ0psVFNTaVdwVnZyRElxaEZVSUtnK0NlSUlncWVGRS9pVFJDOHBMUVhqeUwwNGc5Q29tWFRKSVcwT1ZVRU1UZEJSSWs1VzZXdGtLSlNiR25EcHNuNlprMlczVFFicytua3dkdVpuVm0rbjMwenczc2pCVUxCQ0lBcGRNbGMrL3orZDlScTVMbHVBT1JhTzhrZkR5ZW5XMGJ5YU9LZVl3RGpEMDNUZEFnSlJFUkhJTkVlYUpWS0ZZeEprQ1NKajAzWVJYTC85bVZib2Q2QmtIMEV1bWxTdlNjMEVnTnc1ZXAxakE2UENJY1lnQU0rUDU0OG5zYXh3VUdoRUdaKzJTaFZNSjlLNCtqQUVXRVFDMkM3cEVKakhpeWswd2dGZzBJZ3JIRmdhYm1vaTJkbWt6amMzNzlueUM3QW44MHQvRjdmMFBlQ1F3NzE5UmtRT29xUlBRTzRmVjBwNnUzdzBCQXl5U1FDZ1VESGtLYUE0czkxYkc2VjlQN3hrVkU5a29NOVBSMUJtTjNFVWkwS2JpZkd4akNuS1BEN2ZJNGh0b0RWNGkrbzVSM2ovZlRKVXdSSk9JYllBbmgrK3I2NlpoazdNejRPSlI2SDErdHRHOEphVFg3N3NZWkt0V29aQzU4OWg5U3JtYlloTFFHcXVxTXZWYU9kRDRjeEU0M0M0M2JEVkU4aWpnR05tMjIyU3hjdUl2Nzh4WDhoY2l2eFdTV0dmUDRUYmV4K0VtcitLVjhxdFZ3MlEyQ3U4YmFBVk9JbEZ1YlQvejZTWFdBdTF1N1J0MENhQXJJa25Na2t3UXVjTE11UW1PUTBReGlRWFlEWGkxa2thR2tZWTVEZExqNzBsdnhCaDhuVVl3SGtjbThRaXo0MUw4a2lMM1pVbzdjN3Jja0c0T09IOXlnVThuQVRzMWI4cytUWFNGd1ZVbkMrRkQ3VFh4czNpemtSNGtZRUx1c0o0ZUkzbTRuYkxZT1RWS0dRM3hEeDU1YUxWNjBmSTcvRDg1ekltMTA5Z21ma3QwU0wxMi9YdmRUZTdkYjEvYThBQXdDWlVNUU16UW9keXdBQUFBQkpSVTVFcmtKZ2dnPT0"},{ name : "__ASSET__:bitmap_flixel_system__FlxPreloader_GraphicLogoLight", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUVBQUFBQkFDQVlBQUFDcWFYSGVBQUFBR1hSRldIUlRiMlowZDJGeVpRQkJaRzlpWlNCSmJXRm5aVkpsWVdSNWNjbGxQQUFBQnE1SlJFRlVlTnJVVzR0dTR6WVE1TktVYzNmcHQvYWYrcE01MjVLNFJRQ3gySnZiRi8xSTJ3Q0VaRWQyTk1QWnQwTGx6Ny9LQzMvb1NkL0RyN3JCOXNXZzZVN0E5Q295MmhjQXB3ZStpNFB2NC84Q0FSUzhSM2VBbE5ld3VBNC9RNCtTMEw0SU9EMWdDcFM0RC81cUFpeEFsSHd2SW9PVHBQQ0VtcDVHQUUwQ0orTzZqQk5rQjlSVFRLSTlDTndDR0wwWDdUd0xnS3lBWlllSUtUVTg2Z1ExSXNaN1ZRRS9TNEE4NzQ0S1h1b0RNdktPVm5XVWdJQ3NSUWNKRkpBeFJVeDdFSHlGY3dSY0EySTg4QU5rRjY5SlVRWTdEalEwaDVZQWI1RkFEdUFxRnNGNWhvQU93UHZ4K1E0cTZBYjR0Qis0eHdscTREWGdKK1cxWmc3c0VERFdMc0NpQ1hqK0ljd1ZXbkwzU1pFK0FwWkFjVlZGRmFSNGRqN0FzZ0MrSDUvWndROGcwRzRvd1EyUjdRNnZYNVhkSHlBYkFHOEtHZmdkMnU0UDRKczR4OWZqZm5ieG5YMDJTclNKM2RkMi9pU09UUnkxZFlMcjBRZDBBRDhBeTRYa2FVUjRvZkkzTWxvaXhkWGlPMG9ld1M2d21xSUdWSUFrUUlKZWp6WCszbVlrUldnS2x2Ui9lZDBtS2poTi9pY0Q5RmtjeitMMzQ5b0t6cENGbzBQZ0RmeUk1ZUZaMmUzeWlBL3draHEwOHdVQXY4SDVJb2lRU2tCUExuZitKcFpHZ0JWQ2krSVV6YWpRa3BWZURhUXZ3WDg3UUkvMVRmeE9tb1NtQUFSL0ZZUlI0RGhMMER0SU9VRnliSitVVUllN1AwQi9QNERMOVNaSWtHYkFRSUFFdjRqZEw0cGlNR21xQWp3Wi9RVFZDVklpSDdETW9BRUJBL0FuQ1QrTzQzZEJ6aG5zZWhBZzdmNFQvRThnQ3NIdlNzSlVJVzBtbzcvSVVSZ2tKd3lpL1dzRWZBSitQd2dZUzVyRzRoRHdDZjRDU2lsR2xyZ2JaS0FTckVZclo0b2hMZDNGMEhkV0NQaHhrUEN1S0dFUkpFb0h1QjdnaDBwSUFhOGxSaWVSTVZZbFd6VHJnMHd4cEJFaGZjRWlTSkFFSUFudmdvQXpSQUpwLzJkbDUyVitzRUtJYk1mN0o1RU00YkljSWJWRTFXZWx2bG9PZ0k0UUNaQ21nQXBZaGRldjRzWXQ4R05wOVlaSHdpOUtpRExCNGhSQUo4TVJuc0VSRG4vd0J4Q3dnTk5hUWZvTXdHVmtXSlQwR2plcVo3ckhUUWtSTldoalJabmdHWlNBSmpITW9JRUNic0lrQnZnQi9BMXlDU3Uxcm80RDU0d1BvQ0FaaWtwZ0xTcThLZUZ4Z0tuQ0I4aW9JTUZmSUwxdWlWTGJhNzJGWVRBVEZTaHdqTTFSeGpDUlJlejRKbXI5TTZUTkMrUU5sdXk5QnF4cEJqTzFnQlVleVZBRGtxRVJVK0hHUmlSb3prNlRrNm5TN0N5eUpZWVRzeDNpQW0xeEN0cG94ZWtZUlUzVnUwQVh1TW1aMlI4N0ZSZzcvVDJyMVYyVWZvRDNXYTk5bmhtcjNhMEE3WTk3N1d4TVQzZFk2MEV3SmtJYnRMMnNuUDllOEdZWUpLZU5aTzF3VDdTeE1HbTVpci9KSWd6dVVQL2Z4R2MyY2R3VVFsQTkzc3pBRElQUkdKcVYzbDBQMmxpeXJKV2xMWW5QVk1nRHJzcTZBUUdhU3Rnd3lSSjFoVnBDTWw3ZkhuY2VnVjlFL0Vid0MrUUJzZ3orT0k2WFl3MHlWa1VORmhIZUlOWE5BNnkrR2twdGQzYitDbVZ0aGZSMmhZS25ReW44QVNSY3dUUlFBWmFQaUtLYW1ncVQ0Z09zY1pVbCtjWG81bGdWWDRmTTd3T1dSOFNtQUk4YzVUOEthY2FPRjRNRWRxUXZuVnd6cXJvVkNDQWdZQld5bCtDUmdCV1VnSW9vR1FjWW1ZQVg0anFFdEhiY21CeVdrTkx4dllGUGtBckFqdEJGVVlFa3dsSUFubk1tQ2hSbnlvbzl0azNKNkc3S0VGVHVyblJ5NkJUeEd1bEFmOExTRklBT2taMlErRnRWT0JNR05UVnNrUGRYQXp6dVBqWkZPNWpCVGV5MGpBWVhKVS9ZamR6QWNvUnVGR0NuZHU0d2t4dm5ZMngxVlZTek83dGZ3UVIyVUFIbUJSZHh0SnhnRDU0eWNVM0E2NkdqS2V4S3I2REF6ck1DQ25jZkJ5TmFQbkZUdlArcWhNTTlDSU4zT1VFckJTYVIxR3lKTWZkTk5FS3QyV0EzU0pESHEyUDdtZDNIOUQ1VkRHbFBjZlNnNVl4Z21taDV6VXlIVjZXbXNNQjNweVpJSzhDZHBSdkFOeU5ibEFTY2xLNU9FVTdRZXo1Z0Qyb0JiL2VuTTBFdkg3Q2V5Y0dFYVFCcHg4MWxtcGRlaldFOUtUSlRLdk1qaVZCSlBKT3p3WmdMbldBTituajRqSkJHUkUvbS96elRGR21KM2ZjYURkM0lGYW80N2tyTHF6Z0U0UENUamVaSWxQV0Z1NS90Q211NUFRNGdHRVpaVlF3cHZhZkROQ2ZibmVKTEE1d3BnKzl1aVZId1hsZUlRSDlnTlRpTEUyVllxZTZpZmlGUE5IZW5HaUxraEVRQ1U4RHFyMExPRUQwMm55R2lPS0dPWnh1aldSTW9Tbmkwd2lRcFQyaVEwNGttQnp3N3RRZ0hOcDhpWW1ZeTVEMTBxRDJwVGNiTWdCTmtsNENFakpON3lmOExjS0tEck8yOE5ZTG53QXk4bHJ5MzAwODFnZG5Ka1VXSU5YVGxoQkl5NzAwUFJlNGx3RXFPTEFkcDNTQWxBSEJ5V0hNWCtHY29nQnhpSWpJeWl1STdydmt5QWlJMXpONGtUeWpqS2VDZlFVQlcyc1dwS1NJbitCTGd6eVlnVXNXak4vNi8rdS94NkticDN3QnEvZnd0d0FDRGVkRE1KazlyRWdBQUFBQkpSVTVFcmtKZ2dnPT0"},{ name : "__ASSET__:bitmap_flixel_tile_GraphicAuto", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUlBQUFBQUlDQU1BQUFBR0F3ZE1BQUFBQ1hCSVdYTUFBQXNUQUFBTEV3RUFtcHdZQUFBS1QybERRMUJRYUc5MGIzTm9iM0FnU1VORElIQnliMlpwYkdVQUFIamFuVk5uVkZQcEZqMzMzdlJDUzRpQWxFdHZVaFVJSUZKQ2k0QVVrU1lxSVFrUVNvZ2hvZGtWVWNFUlJVVUVHOGlnaUFPT2pvQ01GVkVzRElvSzJBZmtJYUtPZzZPSWlzcjc0WHVqYTlhODkrYk4vclhYUHVlczg1Mnp6d2ZBQ0F5V1NETlJOWUFNcVVJZUVlQ0R4OFRHNGVRdVFJRUtKSEFBRUFpelpDRnovU01CQVBoK1BEd3JJc0FIdmdBQmVOTUxDQURBVFp2QU1CeUgvdy9xUXBsY0FZQ0VBY0Iwa1RoTENJQVVBRUI2amtLbUFFQkdBWUNkbUNaVEFLQUVBR0RMWTJMakFGQXRBR0FuZitiVEFJQ2QrSmw3QVFCYmxDRVZBYUNSQUNBVFpZaEVBR2c3QUt6UFZvcEZBRmd3QUJSbVM4UTVBTmd0QURCSlYyWklBTEMzQU1ET0VBdXlBQWdNQURCUmlJVXBBQVI3QUdESUl5TjRBSVNaQUJSRzhsYzg4U3V1RU9jcUFBQjRtYkk4dVNRNVJZRmJDQzF4QjFkWExoNG96a2tYS3hRMllRSmhta0F1d25tWkdUS0JOQS9nODh3QUFLQ1JGUkhnZy9QOWVNNE9yczdPTm82MkRsOHQ2cjhHL3lKaVl1UCs1YytyY0VBQUFPRjBmdEgrTEMrekdvQTdCb0J0L3FJbDdnUm9YZ3VnZGZlTFpySVBRTFVBb09uYVYvTncrSDQ4UEVXaGtMbloyZVhrNU5oS3hFSmJZY3BYZmY1bndsL0FWLzFzK1g0OC9QZjE0TDdpSklFeVhZRkhCUGpnd3N6MFRLVWN6NUlKaEdMYzVvOUgvTGNMLy93ZDB5TEVTV0s1V0NvVTQxRVNjWTVFbW96ek1xVWlpVUtTS2NVbDB2OWs0dDhzK3dNKzN6VUFzR28rQVh1UkxhaGRZd1AyU3ljUVdIVEE0dmNBQVBLN2I4SFVLQWdEZ0dpRDRjOTMvKzgvL1VlZ0pRQ0Faa21TY1FBQVhrUWtMbFRLc3ovSENBQUFSS0NCS3JCQkcvVEJHQ3pBQmh6QkJkekJDL3hnTm9SQ0pNVENRaEJDQ21TQUhISmdLYXlDUWlpR3piQWRLbUF2MUVBZE5NQlJhSWFUY0E0dXdsVzREajF3RC9waENKN0JLTHlCQ1FSQnlBZ1RZU0hhaUFGaWlsZ2pqZ2dYbVlYNEljRklCQktMSkNESmlCUlJJa3VSTlVneFVvcFVJRlZJSGZJOWNnSTVoMXhHdXBFN3lBQXlndnlHdkVjeGxJR3lVVDNVRExWRHVhZzNHb1JHb2d2UVpIUXhtbzhXb0p2UWNyUWFQWXcyb2VmUXEyZ1AybzgrUThjd3dPZ1lCelBFYkRBdXhzTkNzVGdzQ1pOank3RWlyQXlyeGhxd1Zxd0R1NG4xWTgreGR3UVNnVVhBQ1RZRWQwSWdZUjVCU0ZoTVdFN1lTS2dnSENRMEVkb0pOd2tEaEZIQ0p5S1RxRXUwSnJvUitjUVlZakl4aDFoSUxDUFdFbzhUTHhCN2lFUEVOeVFTaVVNeUo3bVFBa214cEZUU0V0SkcwbTVTSStrc3FaczBTQm9qazhuYVpHdXlCem1VTENBcnlJWGtuZVRENURQa0crUWg4bHNLbldKQWNhVDRVK0lvVXNwcVNobmxFT1UwNVFabG1ESkJWYU9hVXQyb29WUVJOWTlhUXEyaHRsS3ZVWWVvRXpSMW1qbk5neFpKUzZXdG9wWFRHbWdYYVBkcHIraDB1aEhkbFI1T2w5Qlgwc3ZwUitpWDZBUDBkd3dOaGhXRHg0aG5LQm1iR0FjWVp4bDNHSytZVEtZWjA0c1p4MVF3TnpIcm1PZVpENWx2VlZncXRpcDhGWkhLQ3BWS2xTYVZHeW92VkttcXBxcmVxZ3RWODFYTFZJK3BYbE45cmtaVk0xUGpxUW5VbHF0VnFwMVE2MU1iVTJlcE82aUhxbWVvYjFRL3BINVovWWtHV2NOTXcwOURwRkdnc1YvanZNWWdDMk1aczNnc0lXc05xNFoxZ1RYRUpySE4yWHgyS3J1WS9SMjdpejJxcWFFNVF6TktNMWV6VXZPVVpqOEg0NWh4K0p4MFRnbm5LS2VYODM2SzNoVHZLZUlwRzZZMFRMa3haVnhycXBhWGxsaXJTS3RScTBmcnZUYXU3YWVkcHIxRnUxbjdnUTVCeDBvblhDZEhaNC9PQlozblU5bFQzYWNLcHhaTlBUcjFyaTZxYTZVYm9idEVkNzl1cCs2WW5yNWVnSjVNYjZmZWViM24raHg5TC8xVS9XMzZwL1ZIREZnR3N3d2tCdHNNemhnOHhUVnhiendkTDhmYjhWRkRYY05BUTZWaGxXR1g0WVNSdWRFOG85VkdqVVlQakduR1hPTWs0MjNHYmNhakpnWW1JU1pMVGVwTjdwcFNUYm1tS2FZN1REdE14ODNNemFMTjFwazFtejB4MXpMbm0rZWIxNXZmdDJCYWVGb3N0cWkydUdWSnN1UmFwbG51dHJ4dWhWbzVXYVZZVlZwZHMwYXRuYTBsMXJ1dHU2Y1JwN2xPazA2cm50Wm53N0R4dHNtMnFiY1pzT1hZQnR1dXRtMjJmV0ZuWWhkbnQ4V3V3KzZUdlpOOXVuMk4vVDBIRFlmWkRxc2RXaDErYzdSeUZEcFdPdDZhenB6dVAzM0Y5SmJwTDJkWXp4RFAyRFBqdGhQTEtjUnBuVk9iMDBkbkYyZTVjNFB6aUl1SlM0TExMcGMrTHBzYnh0M0l2ZVJLZFBWeFhlRjYwdldkbTdPYnd1Mm8yNi91TnU1cDdvZmNuOHcwbnltZVdUTnowTVBJUStCUjVkRS9DNStWTUd2ZnJINVBRMCtCWjdYbkl5OWpMNUZYcmRld3Q2VjNxdmRoN3hjKzlqNXluK00rNHp3MzNqTGVXVi9NTjhDM3lMZkxUOE52bmwrRjMwTi9JLzlrLzNyLzBRQ25nQ1VCWndPSmdVR0JXd0w3K0hwOEliK09QenJiWmZheTJlMUJqS0M1UVJWQmo0S3RndVhCclNGb3lPeVFyU0gzNTVqT2tjNXBEb1ZRZnVqVzBBZGg1bUdMdzM0TUo0V0hoVmVHUDQ1d2lGZ2EwVEdYTlhmUjNFTnozMFQ2UkpaRTNwdG5NVTg1cnkxS05TbytxaTVxUE5vM3VqUzZQOFl1WmxuTTFWaWRXRWxzU3h3NUxpcXVObTVzdnQvODdmT0g0cDNpQytON0Y1Z3Z5RjF3ZWFIT3d2U0ZweGFwTGhJc09wWkFUSWhPT0pUd1FSQXFxQmFNSmZJVGR5V09Dbm5DSGNKbklpL1JOdEdJMkVOY0toNU84a2dxVFhxUzdKRzhOWGtreFRPbExPVzVoQ2Vwa0x4TURVemRtenFlRnBwMklHMHlQVHE5TVlPU2taQnhRcW9oVFpPMlorcG41bVoyeTZ4bGhiTCt4VzZMdHk4ZWxRZkphN09RckFWWkxRcTJRcWJvVkZvbzF5b0hzbWRsVjJhL3pZbktPWmFybml2TjdjeXp5dHVRTjV6dm4vL3RFc0lTNFpLMnBZWkxWeTBkV09hOXJHbzVzanh4ZWRzSzR4VUZLNFpXQnF3OHVJcTJLbTNWVDZ2dFY1ZXVmcjBtZWsxcmdWN0J5b0xCdFFGcjZ3dFZDdVdGZmV2YzErMWRUMWd2V2QrMVlmcUduUnMrRlltS3JoVGJGNWNWZjlnbzNIamxHNGR2eXIrWjNKUzBxYXZFdVdUUFp0Sm02ZWJlTFo1YkRwYXFsK2FYRG00TjJkcTBEZDlXdE8zMTlrWGJMNWZOS051N2c3WkR1YU8vUExpOFphZkp6czA3UDFTa1ZQUlUrbFEyN3RMZHRXSFgrRzdSN2h0N3ZQWTA3TlhiVzd6My9UN0p2dHRWQVZWTjFXYlZaZnRKKzdQM1A2NkpxdW40bHZ0dFhhMU9iWEh0eHdQU0EvMEhJdzYyMTduVTFSM1NQVlJTajlZcjYwY094eCsrL3AzdmR5ME5OZzFWalp6RzRpTndSSG5rNmZjSjMvY2VEVHJhZG94N3JPRUgweDkySFdjZEwycENtdkthUnB0VG12dGJZbHU2VDh3KzBkYnEzbnI4UjlzZkQ1dzBQRmw1U3ZOVXlXbmE2WUxUazJmeXo0eWRsWjE5Zmk3NTNHRGJvclo3NTJQTzMyb1BiKys2RUhUaDBrWC9pK2M3dkR2T1hQSzRkUEt5MitVVFY3aFhtcTg2WDIzcWRPbzgvcFBUVDhlN25MdWFycmxjYTdudWVyMjFlMmIzNlJ1ZU44N2Q5TDE1OFJiLzF0V2VPVDNkdmZONmIvZkY5L1hmRnQxK2NpZjl6c3U3MlhjbjdxMjhUN3hmOUVEdFFkbEQzWWZWUDF2KzNOanYzSDlxd0hlZzg5SGNSL2NHaFlQUC9wSDFqdzlEQlkrWmo4dUdEWWJybmpnK09UbmlQM0w5NmZ5blE4OWt6eWFlRi82aS9zdXVGeFl2ZnZqVjY5Zk8wWmpSb1pmeWw1Ty9iWHlsL2VyQTZ4bXYyOGJDeGg2K3lYZ3pNVjcwVnZ2dHdYZmNkeDN2bzk4UFQrUjhJSDhvLzJqNXNmVlQwS2Y3a3htVGsvOEVBNWp6L0dNekxkc0FBQUFnWTBoU1RRQUFlaVVBQUlDREFBRDUvd0FBZ09rQUFIVXdBQURxWUFBQU9wZ0FBQmR2a2wvRlJnQUFBd0JRVEZSRkFBQUFYbDVlQUFBQUF3TURCQVFFQlFVRkJnWUdCd2NIQ0FnSUNRa0pDZ29LQ3dzTERBd01EUTBORGc0T0R3OFBFQkFRRVJFUkVoSVNFeE1URkJRVUZSVVZGaFlXRnhjWEdCZ1lHUmtaR2hvYUd4c2JIQndjSFIwZEhoNGVIeDhmSUNBZ0lTRWhJaUlpSXlNakpDUWtKU1VsSmlZbUp5Y25LQ2dvS1NrcEtpb3FLeXNyTEN3c0xTMHRMaTR1THk4dk1EQXdNVEV4TWpJeU16TXpORFEwTlRVMU5qWTJOemMzT0RnNE9UazVPam82T3pzN1BEdzhQVDA5UGo0K1B6OC9RRUJBUVVGQlFrSkNRME5EUkVSRVJVVkZSa1pHUjBkSFNFaElTVWxKU2twS1MwdExURXhNVFUxTlRrNU9UMDlQVUZCUVVWRlJVbEpTVTFOVFZGUlVWVlZWVmxaV1YxZFhXRmhZV1ZsWldscGFXMXRiWEZ4Y1hWMWRYbDVlWDE5ZllHQmdZV0ZoWW1KaVkyTmpaR1JrWldWbFptWm1aMmRuYUdob2FXbHBhbXBxYTJ0cmJHeHNiVzF0Ym01dWIyOXZjSEJ3Y1hGeGNuSnljM056ZEhSMGRYVjFkbloyZDNkM2VIaDRlWGw1ZW5wNmUzdDdmSHg4ZlgxOWZuNStmMzkvZ0lDQWdZR0Jnb0tDZzRPRGhJU0VoWVdGaG9hR2g0ZUhpSWlJaVltSmlvcUtpNHVMakl5TWpZMk5qbzZPajQrUGtKQ1FrWkdSa3BLU2s1T1RsSlNVbFpXVmxwYVdsNWVYbUppWW1abVptcHFhbTV1Ym5KeWNuWjJkbnA2ZW41K2ZvS0Nnb2FHaG9xS2lvNk9qcEtTa3BhV2xwcWFtcDZlbnFLaW9xYW1wcXFxcXE2dXJyS3lzcmEydHJxNnVyNit2c0xDd3NiR3hzckt5czdPenRMUzB0YlcxdHJhMnQ3ZTN1TGk0dWJtNXVycTZ1N3U3dkx5OHZiMjl2cjYrdjcrL3dNREF3Y0hCd3NMQ3c4UER4TVRFeGNYRnhzYkd4OGZIeU1qSXljbkp5c3JLeTh2THpNek16YzNOenM3T3o4L1AwTkRRMGRIUjB0TFMwOVBUMU5UVTFkWFYxdGJXMTlmWDJOalkyZG5aMnRyYTI5dmIzTnpjM2QzZDN0N2UzOS9mNE9EZzRlSGg0dUxpNCtQajVPVGs1ZVhsNXVibTUrZm42T2pvNmVucDZ1cnE2K3ZyN096czdlM3Q3dTd1NysvdjhQRHc4Zkh4OHZMeTgvUHo5UFQwOWZYMTl2YjI5L2YzK1BqNCtmbjUrdnI2Ky92Ny9QejgvZjM5L3Y3Ky8vLy9Ra3FmSXdBQUFBTjBVazVULy84QTE4b05RUUFBQUcxSlJFRlVlTnJzazdFU3dDQUlRMS84LzQ5MlVEeUJWdHk2MUNVWEVnVTVvQUZBUXdCaWNnYUhTc2ZaZlBCT2x5UUpTekM1bHJmUWpWb0MrVUNwYncvdlNNQ0RuczFQdnp6b2Z3SGZGMkJENWxCKzJONExTUFp3eWdKc3pRS0dkYXM2UUxwMjI0RU9BQUQvL3dNQTlQY0E4YU9wY3lVQUFBQUFTVVZPUks1Q1lJST0"},{ name : "__ASSET__:bitmap_flixel__FlxSprite_GraphicDefault", data : "aVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUJBQUFBQVFDQVlBQUFBZjgvOWhBQUFBQkdkQlRVRUFBTEdPZlB0Umt3QUFBQ0JqU0ZKTkFBQ0hEd0FBakE4QUFQMVNBQUNCUUFBQWZYa0FBT21MQUFBODVRQUFHY3h6UElWM0FBQUtPV2xEUTFCUWFHOTBiM05vYjNBZ1NVTkRJSEJ5YjJacGJHVUFBRWpIblpaM1ZGVFhGb2ZQdlhkNm9jMHdBbEtHM3J2QUFOSjdrMTVGWVpnWllDZ0REak0wc1NHaUFoRkZSSm9pU0ZERWdORlFKRlpFc1JBVVZMQUhKQWdvTVJoRlZDeHZSdGFMcnF5ODkvTHkrK09zYisyejk3bjc3TDNQV2hjQWtxY3ZsNWNHU3dHUXloUHdnenljNlJHUlVYVHNBSUFCSG1DQUtRQk1Wa2E2WDdCN0NCREp5ODJGbmlGeUFsOEVBZkI2V0x3Q2NOUFFNNEJPQi8rZnBGbnBmSUhvbUFBUm03TTVHU3dSRjRnNEpVdVFMcmJQaXBnYWx5eG1HQ1ZtdmloQkVjdUpPV0dSRFQ3N0xMS2ptTm1wUExhSXhUbW5zMVBaWXU0VjhiWk1JVWZFaUsrSUN6TzVuQ3dSM3hLeFJvb3dsU3ZpTitMWVZBNHpBd0FVU1d3WGNGaUpJallSTVlrZkV1UWk0dVVBNEVnSlgzSGNWeXpnWkF2RWwzSkpTOC9oY3hNU0JYUWRsaTdkMU5xYVFmZmtaS1Z3QkFMREFDWXJtY2xuMDEzU1V0T1p2QndBRnUvOFdUTGkydEpGUmJZMHRiYTBORFF6TXYycVVQOTE4MjlLM050RmVobjR1V2NRcmYrTDdhLzgwaG9BWU15SmFyUHppeTJ1Q29ET0xRREkzZnRpMHpnQWdLU29ieDNYdjdvUFRUd3ZpUUpCdW8yeGNWWldsaEdYd3pJU0YvUVAvVStIdjZHdnZtY2tQdTZQOHRCZE9mRk1ZWXFBTHE0Ykt5MGxUY2luWjZReldSeTY0WitIK0I4SC9uVWVCa0djZUE2Znd4TkZoSW1tak10TEVMV2J4K1lLdUdrOE9wZjNuNXI0RDhQK3BNVzVGb25TK0JGUVk0eUExSFVxUUg3dEJ5Z0tFU0RSKzhWZC82TnZ2dmd3SUg1NTRTcVRpM1AvN3pmOVo4R2w0aVdEbS9BNXppVW9oTTRTOGpNWDk4VFBFcUFCQVVnQ0twQUh5a0FkNkFCRFlBYXNnQzF3Qkc3QUcvaURFQkFKVmdNV1NBU3BnQSt5UUI3WUJBcEJNZGdKOW9CcVVBY2FRVE5vQmNkQkp6Z0Z6b05MNEJxNEFXNkQrMkFVVElCbllCYThCZ3NRQkdFaE1rU0I1Q0VWU0JQU2g4d2dCbVFQdVVHK1VCQVVDY1ZDQ1JBUEVrSjUwR2FvR0NxRHFxRjZxQm42SGpvSm5ZZXVRSVBRWFdnTW1vWitoOTdCQ0V5Q3FiQVNyQVVid3d6WUNmYUJRK0JWY0FLOEJzNkZDK0FkY0NYY0FCK0ZPK0R6OERYNE5qd0tQNFBuRUlBUUVScWlpaGdpRE1RRjhVZWlrSGlFajZ4SGlwQUtwQUZwUmJxUlB1UW1Nb3JNSUc5UkdCUUZSVWNab214Um5xaFFGQXUxQnJVZVZZS3FSaDFHZGFCNlVUZFJZNmhaMUVjMEdhMkkxa2Zib0wzUUVlZ0VkQmE2RUYyQmJrSzNveStpYjZNbjBLOHhHQXdObzQyeHduaGlJakZKbUxXWUVzdytUQnZtSEdZUU00Nlp3Mkt4OGxoOXJCM1dIOHZFQ3JDRjJDcnNVZXhaN0JCMkF2c0dSOFNwNE14dzdyZ29IQStYajZ2QUhjR2R3UTNoSm5FTGVDbThKdDRHNzQ5bjQzUHdwZmhHZkRmK09uNEN2MENRSm1nVDdBZ2hoQ1RDSmtJbG9aVndrZkNBOEpKSUpLb1JyWW1CUkM1eEk3R1NlSXg0bVRoR2ZFdVNJZW1SWEVqUkpDRnBCK2tRNlJ6cEx1a2xtVXpXSWp1U284Z0M4ZzV5TS9rQytSSDVqUVJGd2tqQ1M0SXRzVUdpUnFKRFlraml1U1JlVWxQU1NYSzFaSzVraGVRSnlldVNNMUo0S1MwcEZ5bW0xSHFwR3FtVFVpTlNjOUlVYVZOcGYrbFU2UkxwSTlKWHBLZGtzREphTW00eWJKa0NtWU15RjJUR0tRaEZuZUpDWVZFMlV4b3BGeWtUVkF4Vm0rcEZUYUlXVTcrakRsQm5aV1ZrbDhtR3lXYkwxc2llbGgybElUUXRtaGN0aFZaS08wNGJwcjFib3JURWFRbG55ZllsclV1R2xzekxMWlZ6bE9QSUZjbTF5ZDJXZXlkUGwzZVRUNWJmSmQ4cC8xQUJwYUNuRUtpUXBiQmY0YUxDekZMcVV0dWxyS1ZGUzQ4dnZhY0lLK29wQmltdVZUeW8ySzg0cDZTczVLR1VybFNsZEVGcFJwbW03S2ljcEZ5dWZFWjVXb1dpWXEvQ1ZTbFhPYXZ5bEM1TGQ2S24wQ3ZwdmZSWlZVVlZUMVdoYXIzcWdPcUNtclphcUZxK1dwdmFRM1dDT2tNOVhyMWN2VWQ5VmtORncwOGpUNk5GNDU0bVhwT2htYWk1VjdOUGMxNUxXeXRjYTZ0V3A5YVV0cHkybDNhdWRvdjJBeDJ5am9QT0dwMEduVnU2R0YyR2JyTHVQdDBiZXJDZWhWNmlYbzNlZFgxWTMxS2ZxNzlQZjlBQWJXQnR3RE5vTUJneEpCazZHV1lhdGhpT0dkR01mSTN5alRxTm5odHJHRWNaN3pMdU0vNW9ZbUdTWXRKb2N0OVV4dFRiTk4rMDIvUjNNejB6bGxtTjJTMXpzcm03K1Fiekx2TVh5L1NYY1pidFgzYkhnbUxoWjdIVm9zZmlnNldWSmQreTFYTGFTc01xMXFyV2FvUkJaUVF3U2hpWHJkSFd6dFlickU5WnY3V3h0QkhZSExmNXpkYlFOdG4yaU8zVWN1M2xuT1dOeThmdDFPeVlkdlYyby9aMCsxajdBL2FqRHFvT1RJY0doOGVPNm81c3h5YkhTU2RkcHlTbm8wN1BuVTJjK2M3dHp2TXVOaTdyWE02NUlxNGVya1d1QTI0eWJxRnUxVzZQM05YY0U5eGIzR2M5TER6V2VwenpSSHY2ZU83eUhQRlM4bUo1Tlh2TmVsdDVyL1B1OVNINUJQdFUrenoyMWZQbCszYjd3WDdlZnJ2OUhxelFYTUZiMGVrUC9MMzhkL3MvRE5BT1dCUHdZeUFtTUNDd0p2QkprR2xRWGxCZk1DVTRKdmhJOE9zUTU1RFNrUHVoT3FIQzBKNHd5YkRvc09hdytYRFg4TEx3MFFqamlIVVIxeUlWSXJtUlhWSFlxTENvcHFpNWxXNHI5NnljaUxhSUxvd2VYcVc5S252VmxkVUtxMU5XbjQ2UmpHSEduSWhGeDRiSEhvbDl6L1JuTmpEbjRyemlhdU5tV1M2c3ZheG5iRWQyT1h1YVk4Y3A0MHpHMjhXWHhVOGwyQ1hzVHBoT2RFaXNTSnpodW5DcnVTK1NQSlBxa3VhVC9aTVBKWDlLQ1U5cFM4V2x4cWFlNU1ud2tubTlhY3BwMldtRDZmcnBoZW1qYTJ6VzdGa3p5L2ZoTjJWQUdhc3l1Z1JVMGM5VXYxQkh1RVU0bG1tZldaUDVKaXNzNjBTMmREWXZ1ejlITDJkN3ptU3VlKzYzYTFGcldXdDc4bFR6TnVXTnJYTmFWNzhlV2grM3ZtZUQrb2FDRFJNYlBUWWUza1RZbEx6cHAzeVQvTEw4VjV2RE4zY1hLQlZzTEJqZjRyR2xwVkNpa0Y4NHN0VjJhOTAyMURidXRvSHQ1dHVydG44c1loZGRMVFlwcmloK1g4SXF1ZnFONlRlVjMzemFFYjlqb05TeWRQOU96RTdlenVGZERyc09sMG1YNVphTjcvYmIzVkZPTHk4cWY3VW5acytWaW1VVmRYc0plNFY3Unl0OUs3dXFOS3AyVnIydlRxeStYZU5jMDFhcldMdTlkbjRmZTkvUWZzZjlyWFZLZGNWMTd3NXdEOXlwOTZqdmFOQnFxRGlJT1poNThFbGpXR1BmdDR4dm01c1Vtb3FiUGh6aUhSbzlISFM0dDltcXVmbUk0cEhTRnJoRjJESjlOUHJvamU5Y3YrdHFOV3l0YjZPMUZSOER4NFRIbm40ZisvM3djWi9qUFNjWUoxcC8wUHlodHAzU1h0UUJkZVIwekhZbWRvNTJSWFlObnZRKzJkTnQyOTMrbzlHUGgwNnBucW81TFh1NjlBemhUTUdaVDJkeno4NmRTejgzY3o3aC9IaFBUTS85Q3hFWGJ2VUc5ZzVjOUxsNCtaTDdwUXQ5VG4xbkw5dGRQblhGNXNySnE0eXJuZGNzcjNYMFcvUzMvMlR4VS91QTVVREhkYXZyWFRlc2IzUVBMaDg4TStRd2RQNm02ODFMdDd4dVhidTk0dmJnY09qd25aSG9rZEU3N0R0VGQxUHV2cmlYZVcvaC9zWUg2QWRGRDZVZVZqeFNmTlR3cys3UGJhT1dvNmZIWE1mNkh3Yy92ai9PR24vMlM4WXY3eWNLbnBDZlZFeXFURFpQbVUyZG1uYWZ2dkYwNWRPSlorblBGbVlLZjVYK3RmYTV6dk1mZm5QOHJYODJZbmJpQmYvRnA5OUxYc3EvUFBScTJhdWV1WUM1UjY5VFh5L01GNzJSZjNQNExlTnQzN3Z3ZDVNTFdlK3g3eXMvNkg3by91ano4Y0duMUUrZi9nVURtUFA4dXNUbzB3QUFBQWx3U0ZsekFBQU93Z0FBRHNJQkZTaEtnQUFBQUJwMFJWaDBVMjltZEhkaGNtVUFVR0ZwYm5RdVRrVlVJSFl6TGpVdU1UQXc5SEtoQUFBQjIwbEVRVlE0VDMzVHZVOFRZUURIOGVmbEFJbEpnN0hhOUtoS3IwSmJpb0FscGhyRWhNaE00dUtnTVVhZ0pjWEpRVWNUYzRZQllwZ2NpQTY0WUl3MnZnUmJyVkVQUnRERkR0VTQ5eDhncVFvTVA1N255blB0NVdxSFgyNzZmcDU3eVJGeldxL2tUQU5xajI2SDBPMXZBeUhFdFVPVVk3WXJqT2ZkNTV6ZDk4Y3FSSVpZVDdxMlhSakNmRWJIVVorR05rcHgzWGNDSmVNeXF0RkoxeVRXRkZEZzF0c0JQSndjOFlRS2Fnbjhzb2JSVXp5Tjlud0VLOWN1TlVWczRPbTlVNTVIK0NuaWtJakpSOE9lVm9oZytlYVlCMW5WQmRBYjZrQzFPT3dnUDZ3aEJJc1JKMVlJLzJEZzhhMkxMaVI3SkN4Zk5NRjhXcmVCa29nRFRXS0ZNSUVzemRTUXNqR0JUdkZsYk1CM21PUE5pemlPdFlnYmtZWFpVYVM3ZXRSbkptQ3NBMzFYWG9HL0cvVGN1Z29icit4ckJscHF2QTRFZ3RNWUhRZk8zTmdFWDB1MFJLaVZoZmF0Q3Y3a0N3aGxJUEwwa2ZPL2JVQXVNYlVCOXI2L0tVS3RPV2pmLzRydENXUVhORGtHRWdoT09iRkMrdE9mQkJKekliWDRUeTArR0RlZmdjUUdjaDVBUXZGTUVTeGZRNmgxcDM1eUk3RDQ4ditBUktMWk5iRFBkMFg4ejNXeWN3ZXRnR1NxRFAveHE2RFJzK0JMcjZGdDdYZ1FMb0dUWWJNaUg2TnhBVDBOeXRycnY3UDRJK25nQlRCekJUSlNZM01QS3Z0ZUJpU2RVNUVBV3dBQUFBQkpSVTVFcmtKZ2dnPT0"}];
 var this1;
 this1 = new Uint32Array(256);
 lime.math.color._RGBA.RGBA_Impl_.__alpha16 = this1;
@@ -54266,9 +50162,46 @@ openfl.ui.Multitouch.supportsGestureEvents = false;
 openfl.display.DisplayObject.__instanceCount = 0;
 openfl.display.DisplayObject.__worldRenderDirty = 0;
 openfl.display.DisplayObject.__worldTransformDirty = 0;
+AssetPaths.data_goes_here__txt = "assets/data/data-goes-here.txt";
+AssetPaths.HaxeFlixelTestLevel1__oel = "assets/data/HaxeFlixelTestLevel1.oel";
+AssetPaths.level_1_1_1__oel = "assets/data/level_1_1_1.oel";
+AssetPaths.level_1_1_1og2__oel = "assets/data/level_1_1_1og2.oel";
+AssetPaths.level_1_1_2__oel = "assets/data/level_1_1_2.oel";
+AssetPaths.level_1_1_3__oel = "assets/data/level_1_1_3.oel";
+AssetPaths.level_1_1_4__oel = "assets/data/level_1_1_4.oel";
+AssetPaths.level_1_2_1__oel = "assets/data/level_1_2_1.oel";
+AssetPaths.level_1_2_2__oel = "assets/data/level_1_2_2.oel";
+AssetPaths.level_1_2_3__oel = "assets/data/level_1_2_3.oel";
+AssetPaths.level_1_2_4__oel = "assets/data/level_1_2_4.oel";
+AssetPaths.level_1_3_1__oel = "assets/data/level_1_3_1.oel";
+AssetPaths.level_1_3_2__oel = "assets/data/level_1_3_2.oel";
+AssetPaths.level_1_3_3__oel = "assets/data/level_1_3_3.oel";
+AssetPaths.level_1_3_3og__oel = "assets/data/level_1_3_3og.oel";
+AssetPaths.level_1_3_4__oel = "assets/data/level_1_3_4.oel";
+AssetPaths.level_1_4_1__oel = "assets/data/level_1_4_1.oel";
+AssetPaths.level_1_4_2__oel = "assets/data/level_1_4_2.oel";
+AssetPaths.level_1_4_3__oel = "assets/data/level_1_4_3.oel";
+AssetPaths.level_1_4_4__oel = "assets/data/level_1_4_4.oel";
+AssetPaths.level_1_end_1__oel = "assets/data/level_1_end_1.oel";
+AssetPaths.level_1_end_2__oel = "assets/data/level_1_end_2.oel";
+AssetPaths.level_1_end_3__oel = "assets/data/level_1_end_3.oel";
+AssetPaths.level_1_end_4__oel = "assets/data/level_1_end_4.oel";
+AssetPaths.level_1_item_end_1__oel = "assets/data/level_1_item_end_1.oel";
+AssetPaths.level_1_item_end_2__oel = "assets/data/level_1_item_end_2.oel";
+AssetPaths.level_1_item_end_3__oel = "assets/data/level_1_item_end_3.oel";
+AssetPaths.level_1_item_end_4__oel = "assets/data/level_1_item_end_4.oel";
+AssetPaths.level_1_item_mid__oel = "assets/data/level_1_item_mid.oel";
+AssetPaths.level_1_item_start_1__oel = "assets/data/level_1_item_start_1.oel";
+AssetPaths.level_1_item_start_2__oel = "assets/data/level_1_item_start_2.oel";
+AssetPaths.level_1_item_start_3__oel = "assets/data/level_1_item_start_3.oel";
+AssetPaths.level_1_item_start_4__oel = "assets/data/level_1_item_start_4.oel";
+AssetPaths.level_1_start_1__oel = "assets/data/level_1_start_1.oel";
+AssetPaths.level_1_start_1woodman__oel = "assets/data/level_1_start_1woodman.oel";
+AssetPaths.level_1_start_2__oel = "assets/data/level_1_start_2.oel";
+AssetPaths.level_1_start_3__oel = "assets/data/level_1_start_3.oel";
+AssetPaths.level_1_start_3og__oel = "assets/data/level_1_start_3og.oel";
+AssetPaths.level_1_start_4__oel = "assets/data/level_1_start_4.oel";
 AssetPaths.ado__png = "assets/images/ado.png";
-AssetPaths.balun__png = "assets/images/balun.png";
-AssetPaths.bossdoor__png = "assets/images/bossdoor.png";
 AssetPaths.burd__png = "assets/images/burd.png";
 AssetPaths.burdegg__png = "assets/images/burdegg.png";
 AssetPaths.burdsmall__png = "assets/images/burdsmall.png";
@@ -54283,64 +50216,18 @@ AssetPaths.mc__png = "assets/images/mc.png";
 AssetPaths.mcbeck__png = "assets/images/mcbeck.png";
 AssetPaths.metool__png = "assets/images/metool.png";
 AssetPaths.mm__png = "assets/images/mm.png";
-AssetPaths.mush__png = "assets/images/mush.png";
 AssetPaths.nes_tiles__png = "assets/images/nes_tiles.png";
 AssetPaths.notey__png = "assets/images/notey.png";
+AssetPaths.ranger__png = "assets/images/ranger.png";
+AssetPaths.shakuhachiman__png = "assets/images/shakuhachiman.png";
 AssetPaths.snaake__png = "assets/images/snaake.png";
 AssetPaths.snobal__png = "assets/images/snobal.png";
 AssetPaths.spike__png = "assets/images/spike.png";
-AssetPaths.spore__png = "assets/images/spore.png";
 AssetPaths.tiles__png = "assets/images/tiles.png";
 AssetPaths.wood_tiles__png = "assets/images/wood_tiles.png";
 AssetPaths.wood_tiles2__png = "assets/images/wood_tiles2.png";
-AssetPaths.wood_tiles3__png = "assets/images/wood_tiles3.png";
-AssetPaths.data_goes_here__txt = "assets/levels/data-goes-here.txt";
-AssetPaths.HaxeFlixelTestLevel1__oel = "assets/levels/HaxeFlixelTestLevel1.oel";
-AssetPaths.level_1_1_1__oel = "assets/levels/level_1_1_1.oel";
-AssetPaths.level_1_1_1og2__oel = "assets/levels/level_1_1_1og2.oel";
-AssetPaths.level_1_1_2__oel = "assets/levels/level_1_1_2.oel";
-AssetPaths.level_1_1_3__oel = "assets/levels/level_1_1_3.oel";
-AssetPaths.level_1_1_4__oel = "assets/levels/level_1_1_4.oel";
-AssetPaths.level_1_2_1__oel = "assets/levels/level_1_2_1.oel";
-AssetPaths.level_1_2_2__oel = "assets/levels/level_1_2_2.oel";
-AssetPaths.level_1_2_3__oel = "assets/levels/level_1_2_3.oel";
-AssetPaths.level_1_2_4__oel = "assets/levels/level_1_2_4.oel";
-AssetPaths.level_1_3_1__oel = "assets/levels/level_1_3_1.oel";
-AssetPaths.level_1_3_2__oel = "assets/levels/level_1_3_2.oel";
-AssetPaths.level_1_3_3__oel = "assets/levels/level_1_3_3.oel";
-AssetPaths.level_1_3_3og__oel = "assets/levels/level_1_3_3og.oel";
-AssetPaths.level_1_3_4__oel = "assets/levels/level_1_3_4.oel";
-AssetPaths.level_1_4_1__oel = "assets/levels/level_1_4_1.oel";
-AssetPaths.level_1_4_2__oel = "assets/levels/level_1_4_2.oel";
-AssetPaths.level_1_4_3__oel = "assets/levels/level_1_4_3.oel";
-AssetPaths.level_1_4_4__oel = "assets/levels/level_1_4_4.oel";
-AssetPaths.level_1_end_1__oel = "assets/levels/level_1_end_1.oel";
-AssetPaths.level_1_end_2__oel = "assets/levels/level_1_end_2.oel";
-AssetPaths.level_1_end_3__oel = "assets/levels/level_1_end_3.oel";
-AssetPaths.level_1_end_4__oel = "assets/levels/level_1_end_4.oel";
-AssetPaths.level_1_item_end_1__oel = "assets/levels/level_1_item_end_1.oel";
-AssetPaths.level_1_item_end_2__oel = "assets/levels/level_1_item_end_2.oel";
-AssetPaths.level_1_item_end_3__oel = "assets/levels/level_1_item_end_3.oel";
-AssetPaths.level_1_item_end_4__oel = "assets/levels/level_1_item_end_4.oel";
-AssetPaths.level_1_item_mid__oel = "assets/levels/level_1_item_mid.oel";
-AssetPaths.level_1_item_start_1__oel = "assets/levels/level_1_item_start_1.oel";
-AssetPaths.level_1_item_start_2__oel = "assets/levels/level_1_item_start_2.oel";
-AssetPaths.level_1_item_start_3__oel = "assets/levels/level_1_item_start_3.oel";
-AssetPaths.level_1_item_start_4__oel = "assets/levels/level_1_item_start_4.oel";
-AssetPaths.level_1_shop_end_1__oel = "assets/levels/level_1_shop_end_1.oel";
-AssetPaths.level_1_shop_end_2__oel = "assets/levels/level_1_shop_end_2.oel";
-AssetPaths.level_1_shop_end_3__oel = "assets/levels/level_1_shop_end_3.oel";
-AssetPaths.level_1_shop_end_4__oel = "assets/levels/level_1_shop_end_4.oel";
-AssetPaths.level_1_start_1__oel = "assets/levels/level_1_start_1.oel";
-AssetPaths.level_1_start_1woodman__oel = "assets/levels/level_1_start_1woodman.oel";
-AssetPaths.level_1_start_2__oel = "assets/levels/level_1_start_2.oel";
-AssetPaths.level_1_start_3__oel = "assets/levels/level_1_start_3.oel";
-AssetPaths.level_1_start_3airman__oel = "assets/levels/level_1_start_3airman.oel";
-AssetPaths.level_1_start_4__oel = "assets/levels/level_1_start_4.oel";
 AssetPaths.music_goes_here__txt = "assets/music/music-goes-here.txt";
 AssetPaths.sounds_go_here__txt = "assets/sounds/sounds-go-here.txt";
-flixel.FlxBasic._ACTIVECOUNT = 0;
-flixel.FlxBasic._VISIBLECOUNT = 0;
 flixel.util.FlxRect._pool = new flixel.util.FlxPool(flixel.util.FlxRect);
 flixel.FlxObject.SEPARATE_BIAS = 4;
 flixel.FlxObject.LEFT = 1;
@@ -54355,12 +50242,6 @@ flixel.FlxObject.ANY = 4369;
 flixel.FlxObject._firstSeparateFlxRect = flixel.util.FlxRect.get(null,null,null,null);
 flixel.FlxObject._secondSeparateFlxRect = flixel.util.FlxRect.get(null,null,null,null);
 openfl.text.Font.__registeredFonts = new Array();
-Reg.levels = [];
-Reg.level = 0;
-Reg.scores = [];
-Reg.score = 0;
-Reg.saves = [];
-Reg.bullets = new flixel.group.FlxTypedGroup();
 flixel.FlxCamera.STYLE_LOCKON = 0;
 flixel.FlxCamera.STYLE_PLATFORMER = 1;
 flixel.FlxCamera.STYLE_TOPDOWN = 2;
@@ -54557,75 +50438,16 @@ flixel.system._FlxPreloader.GraphicLogoCorners.resourceName = "__ASSET__:bitmap_
 flixel.system.FlxQuadTree.A_LIST = 0;
 flixel.system.FlxQuadTree.B_LIST = 1;
 flixel.system.FlxQuadTree._NUM_CACHED_QUAD_TREES = 0;
-flixel.system.debug.Window.BG_COLOR = -580952225;
-flixel.system.debug.Window.HEADER_COLOR = -1157627904;
-flixel.system.debug.Window.HEADER_ALPHA = 0.8;
-flixel.system.debug.Window.HEADER_HEIGHT = 15;
-flixel.system.debug.Window.WINDOW_AMOUNT = 0;
-flixel.system.debug.Console._DEFAULT_TEXT = "(Click here / press [Tab] to enter command. Type 'help' for help.)";
-flixel.system.debug.Console._HISTORY_MAX = 25;
-flixel.system.debug._FlxDebugger.GraphicFlixel.resourceType = "image/png";
-flixel.system.debug._FlxDebugger.GraphicFlixel.resourceName = "__ASSET__:bitmap_flixel_system_debug__FlxDebugger_GraphicFlixel";
-flixel.system.debug._FlxDebugger.GraphicDrawDebug.resourceType = "image/png";
-flixel.system.debug._FlxDebugger.GraphicDrawDebug.resourceName = "__ASSET__:bitmap_flixel_system_debug__FlxDebugger_GraphicDrawDebug";
-flixel.system.debug.GraphicLog.resourceType = "image/png";
-flixel.system.debug.GraphicLog.resourceName = "__ASSET__:bitmap_flixel_system_debug_GraphicLog";
-flixel.system.debug.GraphicStats.resourceType = "image/png";
-flixel.system.debug.GraphicStats.resourceName = "__ASSET__:bitmap_flixel_system_debug_GraphicStats";
-flixel.system.debug.GraphicWatch.resourceType = "image/png";
-flixel.system.debug.GraphicWatch.resourceName = "__ASSET__:bitmap_flixel_system_debug_GraphicWatch";
-flixel.system.debug.GraphicBitmapLog.resourceType = "image/png";
-flixel.system.debug.GraphicBitmapLog.resourceName = "__ASSET__:bitmap_flixel_system_debug_GraphicBitmapLog";
-flixel.system.debug.GraphicConsole.resourceType = "image/png";
-flixel.system.debug.GraphicConsole.resourceName = "__ASSET__:bitmap_flixel_system_debug_GraphicConsole";
-flixel.system.debug.GraphicArrowLeft.resourceType = "image/png";
-flixel.system.debug.GraphicArrowLeft.resourceName = "__ASSET__:bitmap_flixel_system_debug_GraphicArrowLeft";
-flixel.system.debug.GraphicArrowRight.resourceType = "image/png";
-flixel.system.debug.GraphicArrowRight.resourceName = "__ASSET__:bitmap_flixel_system_debug_GraphicArrowRight";
-flixel.system.debug.FlxDebugger.GUTTER = 2;
-flixel.system.debug.FlxDebugger.TOP_HEIGHT = 20;
-flixel.system.debug.Log.MAX_LOG_LINES = 200;
-flixel.system.debug.Log.LINE_BREAK = "\n";
 flixel.system.debug.LogStyle.NORMAL = new flixel.system.debug.LogStyle();
 flixel.system.debug.LogStyle.WARNING = new flixel.system.debug.LogStyle("[WARNING] ","FFFF00",12,true,false,false,"assets/sounds/beep",true);
 flixel.system.debug.LogStyle.ERROR = new flixel.system.debug.LogStyle("[ERROR] ","FF0000",12,true,false,false,"assets/sounds/beep",true);
 flixel.system.debug.LogStyle.NOTICE = new flixel.system.debug.LogStyle("[NOTICE] ","008000",12,true);
 flixel.system.debug.LogStyle.CONSOLE = new flixel.system.debug.LogStyle("&#62; ","0000ff",12,true);
-flixel.system.debug._Stats.GraphicMinimizeButton.resourceType = "image/png";
-flixel.system.debug._Stats.GraphicMinimizeButton.resourceName = "__ASSET__:bitmap_flixel_system_debug__Stats_GraphicMinimizeButton";
-flixel.system.debug._Stats.GraphicMaximizeButton.resourceType = "image/png";
-flixel.system.debug._Stats.GraphicMaximizeButton.resourceName = "__ASSET__:bitmap_flixel_system_debug__Stats_GraphicMaximizeButton";
-flixel.system.debug.Stats.UPDATE_DELAY = 250;
-flixel.system.debug.Stats.INITIAL_WIDTH = 160;
-flixel.system.debug.Stats.MIN_HEIGHT = 180;
-flixel.system.debug.Stats.FPS_COLOR = -6881536;
-flixel.system.debug.Stats.MEMORY_COLOR = -16737025;
-flixel.system.debug.Stats.DRAW_TIME_COLOR = -4784128;
-flixel.system.debug.Stats.UPDATE_TIME_COLOR = -2305024;
-flixel.system.debug.Stats.LABEL_COLOR = -1426063361;
-flixel.system.debug.Stats.TEXT_SIZE = 11;
-flixel.system.debug.Stats.DECIMALS = 1;
-flixel.system.debug.StatsGraph.AXIS_COLOR = 16777215;
-flixel.system.debug.StatsGraph.AXIS_ALPHA = 0.5;
-flixel.system.debug.StatsGraph.HISTORY_MAX = 30;
-flixel.system.debug.Watch.MAX_LOG_LINES = 1024;
-flixel.system.debug.Watch.LINE_HEIGHT = 15;
-flixel.system.debug.Tracker.objectsBeingTracked = [];
-flixel.system.debug.Tracker._numTrackerWindows = 0;
-flixel.system.debug._VCR.GraphicOpen.resourceType = "image/png";
-flixel.system.debug._VCR.GraphicOpen.resourceName = "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicOpen";
-flixel.system.debug._VCR.GraphicPause.resourceType = "image/png";
-flixel.system.debug._VCR.GraphicPause.resourceName = "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicPause";
-flixel.system.debug._VCR.GraphicRecordOff.resourceType = "image/png";
-flixel.system.debug._VCR.GraphicRecordOff.resourceName = "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicRecordOff";
-flixel.system.debug._VCR.GraphicRecordOn.resourceType = "image/png";
-flixel.system.debug._VCR.GraphicRecordOn.resourceName = "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicRecordOn";
-flixel.system.debug._VCR.GraphicRestart.resourceType = "image/png";
-flixel.system.debug._VCR.GraphicRestart.resourceName = "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicRestart";
-flixel.system.debug._VCR.GraphicStep.resourceType = "image/png";
-flixel.system.debug._VCR.GraphicStep.resourceName = "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicStep";
-flixel.system.debug._VCR.GraphicStop.resourceType = "image/png";
-flixel.system.debug._VCR.GraphicStop.resourceName = "__ASSET__:bitmap_flixel_system_debug__VCR_GraphicStop";
+flixel.system.debug.Window.BG_COLOR = -580952225;
+flixel.system.debug.Window.HEADER_COLOR = -1157627904;
+flixel.system.debug.Window.HEADER_ALPHA = 0.8;
+flixel.system.debug.Window.HEADER_HEIGHT = 15;
+flixel.system.debug.Window.WINDOW_AMOUNT = 0;
 flixel.system.debug._Window.GraphicWindowHandle.resourceType = "image/png";
 flixel.system.debug._Window.GraphicWindowHandle.resourceName = "__ASSET__:bitmap_flixel_system_debug__Window_GraphicWindowHandle";
 flixel.system.debug._Window.GraphicCloseButton.resourceType = "image/png";
@@ -54679,19 +50501,6 @@ flixel.tweens.FlxEase.B5 = 0.81818181818181823;
 flixel.tweens.FlxEase.B6 = 0.95454545454545459;
 flixel.tweens.FlxEase.ELASTIC_AMPLITUDE = 1;
 flixel.tweens.FlxEase.ELASTIC_PERIOD = 0.4;
-flixel.ui.FlxBar.FILL_LEFT_TO_RIGHT = 1;
-flixel.ui.FlxBar.FILL_RIGHT_TO_LEFT = 2;
-flixel.ui.FlxBar.FILL_TOP_TO_BOTTOM = 3;
-flixel.ui.FlxBar.FILL_BOTTOM_TO_TOP = 4;
-flixel.ui.FlxBar.FILL_HORIZONTAL_INSIDE_OUT = 5;
-flixel.ui.FlxBar.FILL_HORIZONTAL_OUTSIDE_IN = 6;
-flixel.ui.FlxBar.FILL_VERTICAL_INSIDE_OUT = 7;
-flixel.ui.FlxBar.FILL_VERTICAL_OUTSIDE_IN = 8;
-flixel.ui.FlxBar.FRAMES_POSITION_HORIZONTAL = "horizontal";
-flixel.ui.FlxBar.FRAMES_POSITION_VERTICAL = "vertical";
-flixel.ui.FlxBar.BAR_FILLED = 1;
-flixel.ui.FlxBar.BAR_GRADIENT = 2;
-flixel.ui.FlxBar.BAR_IMAGE = 3;
 flixel.ui.FlxButton.NORMAL = 0;
 flixel.ui.FlxButton.HIGHLIGHT = 1;
 flixel.ui.FlxButton.PRESSED = 2;
@@ -55998,7 +51807,6 @@ openfl.net._URLRequestMethod.URLRequestMethod_Impl_.OPTIONS = "OPTIONS";
 openfl.net._URLRequestMethod.URLRequestMethod_Impl_.POST = "POST";
 openfl.net._URLRequestMethod.URLRequestMethod_Impl_.PUT = "PUT";
 openfl.system.SecurityDomain.currentDomain = new openfl.system.SecurityDomain();
-openfl.system.System.useCodePage = false;
 openfl.ui.GameInput.isSupported = true;
 openfl.ui.GameInput.numDevices = 0;
 openfl.ui.GameInput.__devices = new haxe.ds.ObjectMap();
@@ -56111,5 +51919,3 @@ openfl.ui.Keyboard.RIGHTBRACKET = 221;
 openfl.ui.Keyboard.QUOTE = 222;
 ApplicationMain.main();
 })(typeof window != "undefined" ? window : exports);
-
-//# sourceMappingURL=HaxeFlixelVlog.js.map

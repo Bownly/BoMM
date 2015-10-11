@@ -50,8 +50,6 @@ class AssetData {
 			type.set ("assets/images/metool.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/mm.png", "assets/images/mm.png");
 			type.set ("assets/images/mm.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/mmgurl.png", "assets/images/mmgurl.png");
-			type.set ("assets/images/mmgurl.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/mush.png", "assets/images/mush.png");
 			type.set ("assets/images/mush.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/nes_tiles.png", "assets/images/nes_tiles.png");
@@ -74,8 +72,6 @@ class AssetData {
 			type.set ("assets/images/wood_tiles2.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/wood_tiles3.png", "assets/images/wood_tiles3.png");
 			type.set ("assets/images/wood_tiles3.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/wood_tiles_persist.png", "assets/images/wood_tiles_persist.png");
-			type.set ("assets/images/wood_tiles_persist.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/levels/data-goes-here.txt", "assets/levels/data-goes-here.txt");
 			type.set ("assets/levels/data-goes-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/levels/HaxeFlixelTestLevel1.oel", "assets/levels/HaxeFlixelTestLevel1.oel");

@@ -30,8 +30,6 @@ import weapons.Bullet;
  */
 class PlayState extends FlxState
 {
-	var unlockableColor:Int = Reg.C;
-	
 	private var _grpPlayer:FlxGroup;
 	static private var player:Player;
 	//static private var _grpPlayer:FlxGroup;
@@ -75,14 +73,6 @@ class PlayState extends FlxState
 	private var _hud:HUD;
 	public var _score:Int = 0;
 	
-	
-	public function new(UnlockableColor:Int) 
-	{
-		unlockableColor = UnlockableColor;
-		super();
-	}
-	
-	
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
@@ -115,8 +105,26 @@ class PlayState extends FlxState
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		
-
-		_player = new Player(100, 100, playerBullets);
+	/*	if (Reg.player == null)
+		{
+			_player = new Player(100, 100, playerBullets);
+			Reg.player = _player;
+			trace("og stats: ");
+			trace("Reg.player: " + Reg.player);
+			trace("   _player: " + _player);
+			trace("reset stats: ");
+			
+		}
+		else
+		{
+			_player = Reg.player;
+			trace("Reg.player: " + Reg.player);
+			trace("   _player: " + _player);
+			trace("_player.hp: " + _player.hp);
+			
+		}
+		*/
+				_player = new Player(100, 100, playerBullets);
 
 		
 		dropsGroup = new FlxTypedGroup<Drops>();
@@ -147,15 +155,11 @@ class PlayState extends FlxState
 		_grpPlayer.add(_player);
 		_grpPlayer.add(playerBullets);
 		
-		trace("colorArray:    " + Reg.colorArray);
-		trace("globalPalette: " + Reg.globalPalette);
-		
 		
 		FlxG.mouse.visible = false;		
 		
 		//FlxG.camera.bgColor = 0x093930FF;
 		FlxG.camera.bgColor = 0xFF555555;
-		FlxG.camera.bgColor = 0x00000000;
 		
 		FlxG.camera.follow(_player,1);
 		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
@@ -193,7 +197,7 @@ class PlayState extends FlxState
 		
 		if (FlxG.keys.anyPressed(["R"])) 
 		{
-			FlxG.switchState(new PlayState(unlockableColor));
+			FlxG.switchState(new PlayState());
 		}
 		if (FlxG.keys.anyPressed(["T"])) 
 		{
@@ -223,20 +227,15 @@ class PlayState extends FlxState
 	 */
 	override public function destroy():Void
 	{
-		//Reg.player = _player;
-		//_player = null;
+		Reg.player = _player;
+		_player = null;
 		super.destroy();
 	}
 
 
 	public function gotoNextLevel():Void
 	{
-		if (Reg.colorArray.indexOf(unlockableColor) == -1)
-		{
-			Reg.colorArray.push(unlockableColor);
-			Reg.globalPalette += unlockableColor;
-		}
-		FlxG.switchState(new MenuState());
+		FlxG.switchState(new Level1());
 
 	}
 	
@@ -267,7 +266,7 @@ class PlayState extends FlxState
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...3) 
+		for (i in 1...2) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -414,13 +413,14 @@ class PlayState extends FlxState
 		P.setTouchingLadder(true);
 		
 		// make it so that you can stand on top of the ladder
-		if (L.top == true && (P.y < L.y - (P.height - 3)) && P.isClimbing == false)
+		if (L.top == true && (P.y < L.y - (P.height - 3)) && P.climbing == false)
 		{
 			L.immovable = true;
 			FlxG.collide(P, L);
 			
 			if (FlxG.keys.anyPressed(["DOWN", "S"]))
-				P.isClimbing = true;
+				P.climbing = true;
+			
 		}
 	}
 	private function playerTouchHazard(P:Player, S:Spike):Void
@@ -473,12 +473,6 @@ class PlayState extends FlxState
 		}
 		else if (entityName == "enemy")
 		{
-			
-			// put the code to determine the individual mob's color here
-			// something like a random # based on Reg.globalPallete
-			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
-			
-			
 			switch(entityData.get("name"))
 			{
 				case "snobal":
@@ -494,10 +488,9 @@ class PlayState extends FlxState
 				case "testboss":
 					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets, this));
 				case "balun":
-					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
+					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, 1));
 				case "mush":
-					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, Reg.colorArray[palette]));				
-			}
+					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, 1));			}
 		}
 	}
 	

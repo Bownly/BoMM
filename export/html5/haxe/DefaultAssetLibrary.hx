@@ -120,13 +120,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_fonts_arial_ttf);
 		
@@ -134,12 +127,86 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
+		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/data/HaxeFlixelTestLevel1.oel", __ASSET__assets_data_haxeflixeltestlevel1_oel);
+		type.set ("assets/data/HaxeFlixelTestLevel1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_1_1.oel", __ASSET__assets_data_level_1_1_1_oel);
+		type.set ("assets/data/level_1_1_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_1_1og2.oel", __ASSET__assets_data_level_1_1_1og2_oel);
+		type.set ("assets/data/level_1_1_1og2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_1_2.oel", __ASSET__assets_data_level_1_1_2_oel);
+		type.set ("assets/data/level_1_1_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_1_3.oel", __ASSET__assets_data_level_1_1_3_oel);
+		type.set ("assets/data/level_1_1_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_1_4.oel", __ASSET__assets_data_level_1_1_4_oel);
+		type.set ("assets/data/level_1_1_4.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_2_1.oel", __ASSET__assets_data_level_1_2_1_oel);
+		type.set ("assets/data/level_1_2_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_2_2.oel", __ASSET__assets_data_level_1_2_2_oel);
+		type.set ("assets/data/level_1_2_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_2_3.oel", __ASSET__assets_data_level_1_2_3_oel);
+		type.set ("assets/data/level_1_2_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_2_4.oel", __ASSET__assets_data_level_1_2_4_oel);
+		type.set ("assets/data/level_1_2_4.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_3_1.oel", __ASSET__assets_data_level_1_3_1_oel);
+		type.set ("assets/data/level_1_3_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_3_2.oel", __ASSET__assets_data_level_1_3_2_oel);
+		type.set ("assets/data/level_1_3_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_3_3.oel", __ASSET__assets_data_level_1_3_3_oel);
+		type.set ("assets/data/level_1_3_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_3_3og.oel", __ASSET__assets_data_level_1_3_3og_oel);
+		type.set ("assets/data/level_1_3_3og.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_3_4.oel", __ASSET__assets_data_level_1_3_4_oel);
+		type.set ("assets/data/level_1_3_4.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_4_1.oel", __ASSET__assets_data_level_1_4_1_oel);
+		type.set ("assets/data/level_1_4_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_4_2.oel", __ASSET__assets_data_level_1_4_2_oel);
+		type.set ("assets/data/level_1_4_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_4_3.oel", __ASSET__assets_data_level_1_4_3_oel);
+		type.set ("assets/data/level_1_4_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_4_4.oel", __ASSET__assets_data_level_1_4_4_oel);
+		type.set ("assets/data/level_1_4_4.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_end_1.oel", __ASSET__assets_data_level_1_end_1_oel);
+		type.set ("assets/data/level_1_end_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_end_2.oel", __ASSET__assets_data_level_1_end_2_oel);
+		type.set ("assets/data/level_1_end_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_end_3.oel", __ASSET__assets_data_level_1_end_3_oel);
+		type.set ("assets/data/level_1_end_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_end_4.oel", __ASSET__assets_data_level_1_end_4_oel);
+		type.set ("assets/data/level_1_end_4.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_end_1.oel", __ASSET__assets_data_level_1_item_end_1_oel);
+		type.set ("assets/data/level_1_item_end_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_end_2.oel", __ASSET__assets_data_level_1_item_end_2_oel);
+		type.set ("assets/data/level_1_item_end_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_end_3.oel", __ASSET__assets_data_level_1_item_end_3_oel);
+		type.set ("assets/data/level_1_item_end_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_end_4.oel", __ASSET__assets_data_level_1_item_end_4_oel);
+		type.set ("assets/data/level_1_item_end_4.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_mid.oel", __ASSET__assets_data_level_1_item_mid_oel);
+		type.set ("assets/data/level_1_item_mid.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_start_1.oel", __ASSET__assets_data_level_1_item_start_1_oel);
+		type.set ("assets/data/level_1_item_start_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_start_2.oel", __ASSET__assets_data_level_1_item_start_2_oel);
+		type.set ("assets/data/level_1_item_start_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_start_3.oel", __ASSET__assets_data_level_1_item_start_3_oel);
+		type.set ("assets/data/level_1_item_start_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_item_start_4.oel", __ASSET__assets_data_level_1_item_start_4_oel);
+		type.set ("assets/data/level_1_item_start_4.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_start_1.oel", __ASSET__assets_data_level_1_start_1_oel);
+		type.set ("assets/data/level_1_start_1.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_start_1woodman.oel", __ASSET__assets_data_level_1_start_1woodman_oel);
+		type.set ("assets/data/level_1_start_1woodman.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_start_2.oel", __ASSET__assets_data_level_1_start_2_oel);
+		type.set ("assets/data/level_1_start_2.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_start_3.oel", __ASSET__assets_data_level_1_start_3_oel);
+		type.set ("assets/data/level_1_start_3.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_start_3og.oel", __ASSET__assets_data_level_1_start_3og_oel);
+		type.set ("assets/data/level_1_start_3og.oel", AssetType.TEXT);
+		className.set ("assets/data/level_1_start_4.oel", __ASSET__assets_data_level_1_start_4_oel);
+		type.set ("assets/data/level_1_start_4.oel", AssetType.TEXT);
 		className.set ("assets/images/ado.png", __ASSET__assets_images_ado_png);
 		type.set ("assets/images/ado.png", AssetType.IMAGE);
-		className.set ("assets/images/balun.png", __ASSET__assets_images_balun_png);
-		type.set ("assets/images/balun.png", AssetType.IMAGE);
-		className.set ("assets/images/bossdoor.png", __ASSET__assets_images_bossdoor_png);
-		type.set ("assets/images/bossdoor.png", AssetType.IMAGE);
 		className.set ("assets/images/burd.png", __ASSET__assets_images_burd_png);
 		type.set ("assets/images/burd.png", AssetType.IMAGE);
 		className.set ("assets/images/burdegg.png", __ASSET__assets_images_burdegg_png);
@@ -168,114 +235,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/metool.png", AssetType.IMAGE);
 		className.set ("assets/images/mm.png", __ASSET__assets_images_mm_png);
 		type.set ("assets/images/mm.png", AssetType.IMAGE);
-		className.set ("assets/images/mush.png", __ASSET__assets_images_mush_png);
-		type.set ("assets/images/mush.png", AssetType.IMAGE);
 		className.set ("assets/images/nes_tiles.png", __ASSET__assets_images_nes_tiles_png);
 		type.set ("assets/images/nes_tiles.png", AssetType.IMAGE);
 		className.set ("assets/images/notey.png", __ASSET__assets_images_notey_png);
 		type.set ("assets/images/notey.png", AssetType.IMAGE);
+		className.set ("assets/images/ranger.png", __ASSET__assets_images_ranger_png);
+		type.set ("assets/images/ranger.png", AssetType.IMAGE);
+		className.set ("assets/images/shakuhachiman.png", __ASSET__assets_images_shakuhachiman_png);
+		type.set ("assets/images/shakuhachiman.png", AssetType.IMAGE);
 		className.set ("assets/images/snaake.png", __ASSET__assets_images_snaake_png);
 		type.set ("assets/images/snaake.png", AssetType.IMAGE);
 		className.set ("assets/images/snobal.png", __ASSET__assets_images_snobal_png);
 		type.set ("assets/images/snobal.png", AssetType.IMAGE);
 		className.set ("assets/images/spike.png", __ASSET__assets_images_spike_png);
 		type.set ("assets/images/spike.png", AssetType.IMAGE);
-		className.set ("assets/images/spore.png", __ASSET__assets_images_spore_png);
-		type.set ("assets/images/spore.png", AssetType.IMAGE);
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		className.set ("assets/images/wood_tiles.png", __ASSET__assets_images_wood_tiles_png);
 		type.set ("assets/images/wood_tiles.png", AssetType.IMAGE);
 		className.set ("assets/images/wood_tiles2.png", __ASSET__assets_images_wood_tiles2_png);
 		type.set ("assets/images/wood_tiles2.png", AssetType.IMAGE);
-		className.set ("assets/images/wood_tiles3.png", __ASSET__assets_images_wood_tiles3_png);
-		type.set ("assets/images/wood_tiles3.png", AssetType.IMAGE);
-		className.set ("assets/levels/data-goes-here.txt", __ASSET__assets_levels_data_goes_here_txt);
-		type.set ("assets/levels/data-goes-here.txt", AssetType.TEXT);
-		className.set ("assets/levels/HaxeFlixelTestLevel1.oel", __ASSET__assets_levels_haxeflixeltestlevel1_oel);
-		type.set ("assets/levels/HaxeFlixelTestLevel1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_1_1.oel", __ASSET__assets_levels_level_1_1_1_oel);
-		type.set ("assets/levels/level_1_1_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_1_1og2.oel", __ASSET__assets_levels_level_1_1_1og2_oel);
-		type.set ("assets/levels/level_1_1_1og2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_1_2.oel", __ASSET__assets_levels_level_1_1_2_oel);
-		type.set ("assets/levels/level_1_1_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_1_3.oel", __ASSET__assets_levels_level_1_1_3_oel);
-		type.set ("assets/levels/level_1_1_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_1_4.oel", __ASSET__assets_levels_level_1_1_4_oel);
-		type.set ("assets/levels/level_1_1_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_2_1.oel", __ASSET__assets_levels_level_1_2_1_oel);
-		type.set ("assets/levels/level_1_2_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_2_2.oel", __ASSET__assets_levels_level_1_2_2_oel);
-		type.set ("assets/levels/level_1_2_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_2_3.oel", __ASSET__assets_levels_level_1_2_3_oel);
-		type.set ("assets/levels/level_1_2_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_2_4.oel", __ASSET__assets_levels_level_1_2_4_oel);
-		type.set ("assets/levels/level_1_2_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_3_1.oel", __ASSET__assets_levels_level_1_3_1_oel);
-		type.set ("assets/levels/level_1_3_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_3_2.oel", __ASSET__assets_levels_level_1_3_2_oel);
-		type.set ("assets/levels/level_1_3_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_3_3.oel", __ASSET__assets_levels_level_1_3_3_oel);
-		type.set ("assets/levels/level_1_3_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_3_3og.oel", __ASSET__assets_levels_level_1_3_3og_oel);
-		type.set ("assets/levels/level_1_3_3og.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_3_4.oel", __ASSET__assets_levels_level_1_3_4_oel);
-		type.set ("assets/levels/level_1_3_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_4_1.oel", __ASSET__assets_levels_level_1_4_1_oel);
-		type.set ("assets/levels/level_1_4_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_4_2.oel", __ASSET__assets_levels_level_1_4_2_oel);
-		type.set ("assets/levels/level_1_4_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_4_3.oel", __ASSET__assets_levels_level_1_4_3_oel);
-		type.set ("assets/levels/level_1_4_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_4_4.oel", __ASSET__assets_levels_level_1_4_4_oel);
-		type.set ("assets/levels/level_1_4_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_end_1.oel", __ASSET__assets_levels_level_1_end_1_oel);
-		type.set ("assets/levels/level_1_end_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_end_2.oel", __ASSET__assets_levels_level_1_end_2_oel);
-		type.set ("assets/levels/level_1_end_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_end_3.oel", __ASSET__assets_levels_level_1_end_3_oel);
-		type.set ("assets/levels/level_1_end_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_end_4.oel", __ASSET__assets_levels_level_1_end_4_oel);
-		type.set ("assets/levels/level_1_end_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_end_1.oel", __ASSET__assets_levels_level_1_item_end_1_oel);
-		type.set ("assets/levels/level_1_item_end_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_end_2.oel", __ASSET__assets_levels_level_1_item_end_2_oel);
-		type.set ("assets/levels/level_1_item_end_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_end_3.oel", __ASSET__assets_levels_level_1_item_end_3_oel);
-		type.set ("assets/levels/level_1_item_end_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_end_4.oel", __ASSET__assets_levels_level_1_item_end_4_oel);
-		type.set ("assets/levels/level_1_item_end_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_mid.oel", __ASSET__assets_levels_level_1_item_mid_oel);
-		type.set ("assets/levels/level_1_item_mid.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_start_1.oel", __ASSET__assets_levels_level_1_item_start_1_oel);
-		type.set ("assets/levels/level_1_item_start_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_start_2.oel", __ASSET__assets_levels_level_1_item_start_2_oel);
-		type.set ("assets/levels/level_1_item_start_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_start_3.oel", __ASSET__assets_levels_level_1_item_start_3_oel);
-		type.set ("assets/levels/level_1_item_start_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_item_start_4.oel", __ASSET__assets_levels_level_1_item_start_4_oel);
-		type.set ("assets/levels/level_1_item_start_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_shop_end_1.oel", __ASSET__assets_levels_level_1_shop_end_1_oel);
-		type.set ("assets/levels/level_1_shop_end_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_shop_end_2.oel", __ASSET__assets_levels_level_1_shop_end_2_oel);
-		type.set ("assets/levels/level_1_shop_end_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_shop_end_3.oel", __ASSET__assets_levels_level_1_shop_end_3_oel);
-		type.set ("assets/levels/level_1_shop_end_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_shop_end_4.oel", __ASSET__assets_levels_level_1_shop_end_4_oel);
-		type.set ("assets/levels/level_1_shop_end_4.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_start_1.oel", __ASSET__assets_levels_level_1_start_1_oel);
-		type.set ("assets/levels/level_1_start_1.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_start_1woodman.oel", __ASSET__assets_levels_level_1_start_1woodman_oel);
-		type.set ("assets/levels/level_1_start_1woodman.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_start_2.oel", __ASSET__assets_levels_level_1_start_2_oel);
-		type.set ("assets/levels/level_1_start_2.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_start_3.oel", __ASSET__assets_levels_level_1_start_3_oel);
-		type.set ("assets/levels/level_1_start_3.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_start_3airman.oel", __ASSET__assets_levels_level_1_start_3airman_oel);
-		type.set ("assets/levels/level_1_start_3airman.oel", AssetType.TEXT);
-		className.set ("assets/levels/level_1_start_4.oel", __ASSET__assets_levels_level_1_start_4_oel);
-		type.set ("assets/levels/level_1_start_4.oel", AssetType.TEXT);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
@@ -297,15 +276,163 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/data/data-goes-here.txt";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/HaxeFlixelTestLevel1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_1_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_1_1og2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_1_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_1_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_1_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_2_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_2_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_2_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_2_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_3_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_3_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_3_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_3_3og.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_3_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_4_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_4_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_4_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_4_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_end_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_end_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_end_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_end_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_end_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_end_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_end_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_end_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_mid.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_start_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_start_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_start_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_item_start_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_start_1.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_start_1woodman.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_start_2.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_start_3.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_start_3og.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/level_1_start_4.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/images/ado.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "assets/images/balun.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "assets/images/bossdoor.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -365,15 +492,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/mush.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
 		id = "assets/images/nes_tiles.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/notey.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/ranger.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/shakuhachiman.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -389,10 +520,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/spore.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tiles.png";
 		path.set (id, id);
 		
@@ -405,182 +532,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/wood_tiles3.png";
-		path.set (id, id);
-		
-		type.set (id, AssetType.IMAGE);
-		id = "assets/levels/data-goes-here.txt";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/HaxeFlixelTestLevel1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_1_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_1_1og2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_1_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_1_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_1_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_2_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_2_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_2_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_2_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_3_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_3_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_3_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_3_3og.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_3_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_4_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_4_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_4_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_4_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_end_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_end_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_end_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_end_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_end_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_end_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_end_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_end_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_mid.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_start_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_start_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_start_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_item_start_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_shop_end_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_shop_end_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_shop_end_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_shop_end_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_start_1.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_start_1woodman.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_start_2.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_start_3.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_start_3airman.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "assets/levels/level_1_start_4.oel";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
 		id = "assets/music/music-goes-here.txt";
 		path.set (id, id);
 		
@@ -628,14 +579,125 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		var useManifest = false;
 		
+		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
+		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
+		
+		className.set ("assets/data/HaxeFlixelTestLevel1.oel", __ASSET__assets_data_haxeflixeltestlevel1_oel);
+		type.set ("assets/data/HaxeFlixelTestLevel1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_1_1.oel", __ASSET__assets_data_level_1_1_1_oel);
+		type.set ("assets/data/level_1_1_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_1_1og2.oel", __ASSET__assets_data_level_1_1_1og2_oel);
+		type.set ("assets/data/level_1_1_1og2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_1_2.oel", __ASSET__assets_data_level_1_1_2_oel);
+		type.set ("assets/data/level_1_1_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_1_3.oel", __ASSET__assets_data_level_1_1_3_oel);
+		type.set ("assets/data/level_1_1_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_1_4.oel", __ASSET__assets_data_level_1_1_4_oel);
+		type.set ("assets/data/level_1_1_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_2_1.oel", __ASSET__assets_data_level_1_2_1_oel);
+		type.set ("assets/data/level_1_2_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_2_2.oel", __ASSET__assets_data_level_1_2_2_oel);
+		type.set ("assets/data/level_1_2_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_2_3.oel", __ASSET__assets_data_level_1_2_3_oel);
+		type.set ("assets/data/level_1_2_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_2_4.oel", __ASSET__assets_data_level_1_2_4_oel);
+		type.set ("assets/data/level_1_2_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_3_1.oel", __ASSET__assets_data_level_1_3_1_oel);
+		type.set ("assets/data/level_1_3_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_3_2.oel", __ASSET__assets_data_level_1_3_2_oel);
+		type.set ("assets/data/level_1_3_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_3_3.oel", __ASSET__assets_data_level_1_3_3_oel);
+		type.set ("assets/data/level_1_3_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_3_3og.oel", __ASSET__assets_data_level_1_3_3og_oel);
+		type.set ("assets/data/level_1_3_3og.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_3_4.oel", __ASSET__assets_data_level_1_3_4_oel);
+		type.set ("assets/data/level_1_3_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_4_1.oel", __ASSET__assets_data_level_1_4_1_oel);
+		type.set ("assets/data/level_1_4_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_4_2.oel", __ASSET__assets_data_level_1_4_2_oel);
+		type.set ("assets/data/level_1_4_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_4_3.oel", __ASSET__assets_data_level_1_4_3_oel);
+		type.set ("assets/data/level_1_4_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_4_4.oel", __ASSET__assets_data_level_1_4_4_oel);
+		type.set ("assets/data/level_1_4_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_end_1.oel", __ASSET__assets_data_level_1_end_1_oel);
+		type.set ("assets/data/level_1_end_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_end_2.oel", __ASSET__assets_data_level_1_end_2_oel);
+		type.set ("assets/data/level_1_end_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_end_3.oel", __ASSET__assets_data_level_1_end_3_oel);
+		type.set ("assets/data/level_1_end_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_end_4.oel", __ASSET__assets_data_level_1_end_4_oel);
+		type.set ("assets/data/level_1_end_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_end_1.oel", __ASSET__assets_data_level_1_item_end_1_oel);
+		type.set ("assets/data/level_1_item_end_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_end_2.oel", __ASSET__assets_data_level_1_item_end_2_oel);
+		type.set ("assets/data/level_1_item_end_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_end_3.oel", __ASSET__assets_data_level_1_item_end_3_oel);
+		type.set ("assets/data/level_1_item_end_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_end_4.oel", __ASSET__assets_data_level_1_item_end_4_oel);
+		type.set ("assets/data/level_1_item_end_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_mid.oel", __ASSET__assets_data_level_1_item_mid_oel);
+		type.set ("assets/data/level_1_item_mid.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_start_1.oel", __ASSET__assets_data_level_1_item_start_1_oel);
+		type.set ("assets/data/level_1_item_start_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_start_2.oel", __ASSET__assets_data_level_1_item_start_2_oel);
+		type.set ("assets/data/level_1_item_start_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_start_3.oel", __ASSET__assets_data_level_1_item_start_3_oel);
+		type.set ("assets/data/level_1_item_start_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_item_start_4.oel", __ASSET__assets_data_level_1_item_start_4_oel);
+		type.set ("assets/data/level_1_item_start_4.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_start_1.oel", __ASSET__assets_data_level_1_start_1_oel);
+		type.set ("assets/data/level_1_start_1.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_start_1woodman.oel", __ASSET__assets_data_level_1_start_1woodman_oel);
+		type.set ("assets/data/level_1_start_1woodman.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_start_2.oel", __ASSET__assets_data_level_1_start_2_oel);
+		type.set ("assets/data/level_1_start_2.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_start_3.oel", __ASSET__assets_data_level_1_start_3_oel);
+		type.set ("assets/data/level_1_start_3.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_start_3og.oel", __ASSET__assets_data_level_1_start_3og_oel);
+		type.set ("assets/data/level_1_start_3og.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/level_1_start_4.oel", __ASSET__assets_data_level_1_start_4_oel);
+		type.set ("assets/data/level_1_start_4.oel", AssetType.TEXT);
+		
 		className.set ("assets/images/ado.png", __ASSET__assets_images_ado_png);
 		type.set ("assets/images/ado.png", AssetType.IMAGE);
-		
-		className.set ("assets/images/balun.png", __ASSET__assets_images_balun_png);
-		type.set ("assets/images/balun.png", AssetType.IMAGE);
-		
-		className.set ("assets/images/bossdoor.png", __ASSET__assets_images_bossdoor_png);
-		type.set ("assets/images/bossdoor.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/burd.png", __ASSET__assets_images_burd_png);
 		type.set ("assets/images/burd.png", AssetType.IMAGE);
@@ -679,14 +741,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/mm.png", __ASSET__assets_images_mm_png);
 		type.set ("assets/images/mm.png", AssetType.IMAGE);
 		
-		className.set ("assets/images/mush.png", __ASSET__assets_images_mush_png);
-		type.set ("assets/images/mush.png", AssetType.IMAGE);
-		
 		className.set ("assets/images/nes_tiles.png", __ASSET__assets_images_nes_tiles_png);
 		type.set ("assets/images/nes_tiles.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/notey.png", __ASSET__assets_images_notey_png);
 		type.set ("assets/images/notey.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/ranger.png", __ASSET__assets_images_ranger_png);
+		type.set ("assets/images/ranger.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/shakuhachiman.png", __ASSET__assets_images_shakuhachiman_png);
+		type.set ("assets/images/shakuhachiman.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/snaake.png", __ASSET__assets_images_snaake_png);
 		type.set ("assets/images/snaake.png", AssetType.IMAGE);
@@ -697,9 +762,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/spike.png", __ASSET__assets_images_spike_png);
 		type.set ("assets/images/spike.png", AssetType.IMAGE);
 		
-		className.set ("assets/images/spore.png", __ASSET__assets_images_spore_png);
-		type.set ("assets/images/spore.png", AssetType.IMAGE);
-		
 		className.set ("assets/images/tiles.png", __ASSET__assets_images_tiles_png);
 		type.set ("assets/images/tiles.png", AssetType.IMAGE);
 		
@@ -708,138 +770,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/wood_tiles2.png", __ASSET__assets_images_wood_tiles2_png);
 		type.set ("assets/images/wood_tiles2.png", AssetType.IMAGE);
-		
-		className.set ("assets/images/wood_tiles3.png", __ASSET__assets_images_wood_tiles3_png);
-		type.set ("assets/images/wood_tiles3.png", AssetType.IMAGE);
-		
-		className.set ("assets/levels/data-goes-here.txt", __ASSET__assets_levels_data_goes_here_txt);
-		type.set ("assets/levels/data-goes-here.txt", AssetType.TEXT);
-		
-		className.set ("assets/levels/HaxeFlixelTestLevel1.oel", __ASSET__assets_levels_haxeflixeltestlevel1_oel);
-		type.set ("assets/levels/HaxeFlixelTestLevel1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_1_1.oel", __ASSET__assets_levels_level_1_1_1_oel);
-		type.set ("assets/levels/level_1_1_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_1_1og2.oel", __ASSET__assets_levels_level_1_1_1og2_oel);
-		type.set ("assets/levels/level_1_1_1og2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_1_2.oel", __ASSET__assets_levels_level_1_1_2_oel);
-		type.set ("assets/levels/level_1_1_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_1_3.oel", __ASSET__assets_levels_level_1_1_3_oel);
-		type.set ("assets/levels/level_1_1_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_1_4.oel", __ASSET__assets_levels_level_1_1_4_oel);
-		type.set ("assets/levels/level_1_1_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_2_1.oel", __ASSET__assets_levels_level_1_2_1_oel);
-		type.set ("assets/levels/level_1_2_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_2_2.oel", __ASSET__assets_levels_level_1_2_2_oel);
-		type.set ("assets/levels/level_1_2_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_2_3.oel", __ASSET__assets_levels_level_1_2_3_oel);
-		type.set ("assets/levels/level_1_2_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_2_4.oel", __ASSET__assets_levels_level_1_2_4_oel);
-		type.set ("assets/levels/level_1_2_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_3_1.oel", __ASSET__assets_levels_level_1_3_1_oel);
-		type.set ("assets/levels/level_1_3_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_3_2.oel", __ASSET__assets_levels_level_1_3_2_oel);
-		type.set ("assets/levels/level_1_3_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_3_3.oel", __ASSET__assets_levels_level_1_3_3_oel);
-		type.set ("assets/levels/level_1_3_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_3_3og.oel", __ASSET__assets_levels_level_1_3_3og_oel);
-		type.set ("assets/levels/level_1_3_3og.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_3_4.oel", __ASSET__assets_levels_level_1_3_4_oel);
-		type.set ("assets/levels/level_1_3_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_4_1.oel", __ASSET__assets_levels_level_1_4_1_oel);
-		type.set ("assets/levels/level_1_4_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_4_2.oel", __ASSET__assets_levels_level_1_4_2_oel);
-		type.set ("assets/levels/level_1_4_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_4_3.oel", __ASSET__assets_levels_level_1_4_3_oel);
-		type.set ("assets/levels/level_1_4_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_4_4.oel", __ASSET__assets_levels_level_1_4_4_oel);
-		type.set ("assets/levels/level_1_4_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_end_1.oel", __ASSET__assets_levels_level_1_end_1_oel);
-		type.set ("assets/levels/level_1_end_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_end_2.oel", __ASSET__assets_levels_level_1_end_2_oel);
-		type.set ("assets/levels/level_1_end_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_end_3.oel", __ASSET__assets_levels_level_1_end_3_oel);
-		type.set ("assets/levels/level_1_end_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_end_4.oel", __ASSET__assets_levels_level_1_end_4_oel);
-		type.set ("assets/levels/level_1_end_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_end_1.oel", __ASSET__assets_levels_level_1_item_end_1_oel);
-		type.set ("assets/levels/level_1_item_end_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_end_2.oel", __ASSET__assets_levels_level_1_item_end_2_oel);
-		type.set ("assets/levels/level_1_item_end_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_end_3.oel", __ASSET__assets_levels_level_1_item_end_3_oel);
-		type.set ("assets/levels/level_1_item_end_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_end_4.oel", __ASSET__assets_levels_level_1_item_end_4_oel);
-		type.set ("assets/levels/level_1_item_end_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_mid.oel", __ASSET__assets_levels_level_1_item_mid_oel);
-		type.set ("assets/levels/level_1_item_mid.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_start_1.oel", __ASSET__assets_levels_level_1_item_start_1_oel);
-		type.set ("assets/levels/level_1_item_start_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_start_2.oel", __ASSET__assets_levels_level_1_item_start_2_oel);
-		type.set ("assets/levels/level_1_item_start_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_start_3.oel", __ASSET__assets_levels_level_1_item_start_3_oel);
-		type.set ("assets/levels/level_1_item_start_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_item_start_4.oel", __ASSET__assets_levels_level_1_item_start_4_oel);
-		type.set ("assets/levels/level_1_item_start_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_shop_end_1.oel", __ASSET__assets_levels_level_1_shop_end_1_oel);
-		type.set ("assets/levels/level_1_shop_end_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_shop_end_2.oel", __ASSET__assets_levels_level_1_shop_end_2_oel);
-		type.set ("assets/levels/level_1_shop_end_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_shop_end_3.oel", __ASSET__assets_levels_level_1_shop_end_3_oel);
-		type.set ("assets/levels/level_1_shop_end_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_shop_end_4.oel", __ASSET__assets_levels_level_1_shop_end_4_oel);
-		type.set ("assets/levels/level_1_shop_end_4.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_start_1.oel", __ASSET__assets_levels_level_1_start_1_oel);
-		type.set ("assets/levels/level_1_start_1.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_start_1woodman.oel", __ASSET__assets_levels_level_1_start_1woodman_oel);
-		type.set ("assets/levels/level_1_start_1woodman.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_start_2.oel", __ASSET__assets_levels_level_1_start_2_oel);
-		type.set ("assets/levels/level_1_start_2.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_start_3.oel", __ASSET__assets_levels_level_1_start_3_oel);
-		type.set ("assets/levels/level_1_start_3.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_start_3airman.oel", __ASSET__assets_levels_level_1_start_3airman_oel);
-		type.set ("assets/levels/level_1_start_3airman.oel", AssetType.TEXT);
-		
-		className.set ("assets/levels/level_1_start_4.oel", __ASSET__assets_levels_level_1_start_4_oel);
-		type.set ("assets/levels/level_1_start_4.oel", AssetType.TEXT);
 		
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
 		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
@@ -1555,9 +1485,46 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_haxeflixeltestlevel1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_1_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_1_1og2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_1_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_1_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_1_4_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_2_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_2_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_2_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_2_4_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_3_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_3_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_3_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_3_3og_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_3_4_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_4_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_4_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_4_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_4_4_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_end_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_end_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_end_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_end_4_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_end_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_end_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_end_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_end_4_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_mid_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_start_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_start_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_start_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_item_start_4_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_start_1_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_start_1woodman_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_start_2_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_start_3_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_start_3og_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_level_1_start_4_oel extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_ado_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_balun_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_bossdoor_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_burd_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_burdegg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_burdsmall_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1572,60 +1539,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_mcbeck_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_metool_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_mm_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_mush_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_nes_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_notey_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_ranger_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_shakuhachiman_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_snaake_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_snobal_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_spike_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_spore_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_wood_tiles_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_wood_tiles2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_wood_tiles3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_data_goes_here_txt extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_haxeflixeltestlevel1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_1_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_1_1og2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_1_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_1_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_1_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_2_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_2_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_2_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_2_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_3_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_3_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_3_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_3_3og_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_3_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_4_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_4_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_4_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_4_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_end_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_end_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_end_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_end_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_end_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_end_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_end_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_end_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_mid_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_start_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_start_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_start_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_item_start_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_shop_end_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_shop_end_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_shop_end_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_shop_end_4_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_start_1_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_start_1woodman_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_start_2_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_start_3_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_start_3airman_oel extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_levels_level_1_start_4_oel extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_beep_mp3 extends null { }
@@ -1708,13 +1631,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
-
-
-
-
-
-
-
 @:keep #if display private #end class __ASSET__assets_fonts_nokiafc22_ttf extends lime.text.Font { public function new () { super (); name = "Nokia Cellphone FC Small"; } } 
 @:keep #if display private #end class __ASSET__assets_fonts_arial_ttf extends lime.text.Font { public function new () { super (); name = "Arial"; } } 
 
@@ -1726,9 +1642,46 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux || cpp)
 
 
+@:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.ByteArray {}
+@:file("assets/data/HaxeFlixelTestLevel1.oel") #if display private #end class __ASSET__assets_data_haxeflixeltestlevel1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_1_1.oel") #if display private #end class __ASSET__assets_data_level_1_1_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_1_1og2.oel") #if display private #end class __ASSET__assets_data_level_1_1_1og2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_1_2.oel") #if display private #end class __ASSET__assets_data_level_1_1_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_1_3.oel") #if display private #end class __ASSET__assets_data_level_1_1_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_1_4.oel") #if display private #end class __ASSET__assets_data_level_1_1_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_2_1.oel") #if display private #end class __ASSET__assets_data_level_1_2_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_2_2.oel") #if display private #end class __ASSET__assets_data_level_1_2_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_2_3.oel") #if display private #end class __ASSET__assets_data_level_1_2_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_2_4.oel") #if display private #end class __ASSET__assets_data_level_1_2_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_3_1.oel") #if display private #end class __ASSET__assets_data_level_1_3_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_3_2.oel") #if display private #end class __ASSET__assets_data_level_1_3_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_3_3.oel") #if display private #end class __ASSET__assets_data_level_1_3_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_3_3og.oel") #if display private #end class __ASSET__assets_data_level_1_3_3og_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_3_4.oel") #if display private #end class __ASSET__assets_data_level_1_3_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_4_1.oel") #if display private #end class __ASSET__assets_data_level_1_4_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_4_2.oel") #if display private #end class __ASSET__assets_data_level_1_4_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_4_3.oel") #if display private #end class __ASSET__assets_data_level_1_4_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_4_4.oel") #if display private #end class __ASSET__assets_data_level_1_4_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_end_1.oel") #if display private #end class __ASSET__assets_data_level_1_end_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_end_2.oel") #if display private #end class __ASSET__assets_data_level_1_end_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_end_3.oel") #if display private #end class __ASSET__assets_data_level_1_end_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_end_4.oel") #if display private #end class __ASSET__assets_data_level_1_end_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_end_1.oel") #if display private #end class __ASSET__assets_data_level_1_item_end_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_end_2.oel") #if display private #end class __ASSET__assets_data_level_1_item_end_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_end_3.oel") #if display private #end class __ASSET__assets_data_level_1_item_end_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_end_4.oel") #if display private #end class __ASSET__assets_data_level_1_item_end_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_mid.oel") #if display private #end class __ASSET__assets_data_level_1_item_mid_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_start_1.oel") #if display private #end class __ASSET__assets_data_level_1_item_start_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_start_2.oel") #if display private #end class __ASSET__assets_data_level_1_item_start_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_start_3.oel") #if display private #end class __ASSET__assets_data_level_1_item_start_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_item_start_4.oel") #if display private #end class __ASSET__assets_data_level_1_item_start_4_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_start_1.oel") #if display private #end class __ASSET__assets_data_level_1_start_1_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_start_1woodman.oel") #if display private #end class __ASSET__assets_data_level_1_start_1woodman_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_start_2.oel") #if display private #end class __ASSET__assets_data_level_1_start_2_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_start_3.oel") #if display private #end class __ASSET__assets_data_level_1_start_3_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_start_3og.oel") #if display private #end class __ASSET__assets_data_level_1_start_3og_oel extends lime.utils.ByteArray {}
+@:file("assets/data/level_1_start_4.oel") #if display private #end class __ASSET__assets_data_level_1_start_4_oel extends lime.utils.ByteArray {}
 @:image("assets/images/ado.png") #if display private #end class __ASSET__assets_images_ado_png extends lime.graphics.Image {}
-@:image("assets/images/balun.png") #if display private #end class __ASSET__assets_images_balun_png extends lime.graphics.Image {}
-@:image("assets/images/bossdoor.png") #if display private #end class __ASSET__assets_images_bossdoor_png extends lime.graphics.Image {}
 @:image("assets/images/burd.png") #if display private #end class __ASSET__assets_images_burd_png extends lime.graphics.Image {}
 @:image("assets/images/burdegg.png") #if display private #end class __ASSET__assets_images_burdegg_png extends lime.graphics.Image {}
 @:image("assets/images/burdsmall.png") #if display private #end class __ASSET__assets_images_burdsmall_png extends lime.graphics.Image {}
@@ -1743,60 +1696,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/mcbeck.png") #if display private #end class __ASSET__assets_images_mcbeck_png extends lime.graphics.Image {}
 @:image("assets/images/metool.png") #if display private #end class __ASSET__assets_images_metool_png extends lime.graphics.Image {}
 @:image("assets/images/mm.png") #if display private #end class __ASSET__assets_images_mm_png extends lime.graphics.Image {}
-@:image("assets/images/mush.png") #if display private #end class __ASSET__assets_images_mush_png extends lime.graphics.Image {}
 @:image("assets/images/nes_tiles.png") #if display private #end class __ASSET__assets_images_nes_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/notey.png") #if display private #end class __ASSET__assets_images_notey_png extends lime.graphics.Image {}
+@:image("assets/images/ranger.png") #if display private #end class __ASSET__assets_images_ranger_png extends lime.graphics.Image {}
+@:image("assets/images/shakuhachiman.png") #if display private #end class __ASSET__assets_images_shakuhachiman_png extends lime.graphics.Image {}
 @:image("assets/images/snaake.png") #if display private #end class __ASSET__assets_images_snaake_png extends lime.graphics.Image {}
 @:image("assets/images/snobal.png") #if display private #end class __ASSET__assets_images_snobal_png extends lime.graphics.Image {}
 @:image("assets/images/spike.png") #if display private #end class __ASSET__assets_images_spike_png extends lime.graphics.Image {}
-@:image("assets/images/spore.png") #if display private #end class __ASSET__assets_images_spore_png extends lime.graphics.Image {}
 @:image("assets/images/tiles.png") #if display private #end class __ASSET__assets_images_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/wood_tiles.png") #if display private #end class __ASSET__assets_images_wood_tiles_png extends lime.graphics.Image {}
 @:image("assets/images/wood_tiles2.png") #if display private #end class __ASSET__assets_images_wood_tiles2_png extends lime.graphics.Image {}
-@:image("assets/images/wood_tiles3.png") #if display private #end class __ASSET__assets_images_wood_tiles3_png extends lime.graphics.Image {}
-@:file("assets/levels/data-goes-here.txt") #if display private #end class __ASSET__assets_levels_data_goes_here_txt extends lime.utils.ByteArray {}
-@:file("assets/levels/HaxeFlixelTestLevel1.oel") #if display private #end class __ASSET__assets_levels_haxeflixeltestlevel1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_1_1.oel") #if display private #end class __ASSET__assets_levels_level_1_1_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_1_1og2.oel") #if display private #end class __ASSET__assets_levels_level_1_1_1og2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_1_2.oel") #if display private #end class __ASSET__assets_levels_level_1_1_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_1_3.oel") #if display private #end class __ASSET__assets_levels_level_1_1_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_1_4.oel") #if display private #end class __ASSET__assets_levels_level_1_1_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_2_1.oel") #if display private #end class __ASSET__assets_levels_level_1_2_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_2_2.oel") #if display private #end class __ASSET__assets_levels_level_1_2_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_2_3.oel") #if display private #end class __ASSET__assets_levels_level_1_2_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_2_4.oel") #if display private #end class __ASSET__assets_levels_level_1_2_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_3_1.oel") #if display private #end class __ASSET__assets_levels_level_1_3_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_3_2.oel") #if display private #end class __ASSET__assets_levels_level_1_3_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_3_3.oel") #if display private #end class __ASSET__assets_levels_level_1_3_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_3_3og.oel") #if display private #end class __ASSET__assets_levels_level_1_3_3og_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_3_4.oel") #if display private #end class __ASSET__assets_levels_level_1_3_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_4_1.oel") #if display private #end class __ASSET__assets_levels_level_1_4_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_4_2.oel") #if display private #end class __ASSET__assets_levels_level_1_4_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_4_3.oel") #if display private #end class __ASSET__assets_levels_level_1_4_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_4_4.oel") #if display private #end class __ASSET__assets_levels_level_1_4_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_end_1.oel") #if display private #end class __ASSET__assets_levels_level_1_end_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_end_2.oel") #if display private #end class __ASSET__assets_levels_level_1_end_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_end_3.oel") #if display private #end class __ASSET__assets_levels_level_1_end_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_end_4.oel") #if display private #end class __ASSET__assets_levels_level_1_end_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_end_1.oel") #if display private #end class __ASSET__assets_levels_level_1_item_end_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_end_2.oel") #if display private #end class __ASSET__assets_levels_level_1_item_end_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_end_3.oel") #if display private #end class __ASSET__assets_levels_level_1_item_end_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_end_4.oel") #if display private #end class __ASSET__assets_levels_level_1_item_end_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_mid.oel") #if display private #end class __ASSET__assets_levels_level_1_item_mid_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_start_1.oel") #if display private #end class __ASSET__assets_levels_level_1_item_start_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_start_2.oel") #if display private #end class __ASSET__assets_levels_level_1_item_start_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_start_3.oel") #if display private #end class __ASSET__assets_levels_level_1_item_start_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_item_start_4.oel") #if display private #end class __ASSET__assets_levels_level_1_item_start_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_shop_end_1.oel") #if display private #end class __ASSET__assets_levels_level_1_shop_end_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_shop_end_2.oel") #if display private #end class __ASSET__assets_levels_level_1_shop_end_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_shop_end_3.oel") #if display private #end class __ASSET__assets_levels_level_1_shop_end_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_shop_end_4.oel") #if display private #end class __ASSET__assets_levels_level_1_shop_end_4_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_start_1.oel") #if display private #end class __ASSET__assets_levels_level_1_start_1_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_start_1woodman.oel") #if display private #end class __ASSET__assets_levels_level_1_start_1woodman_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_start_2.oel") #if display private #end class __ASSET__assets_levels_level_1_start_2_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_start_3.oel") #if display private #end class __ASSET__assets_levels_level_1_start_3_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_start_3airman.oel") #if display private #end class __ASSET__assets_levels_level_1_start_3airman_oel extends lime.utils.ByteArray {}
-@:file("assets/levels/level_1_start_4.oel") #if display private #end class __ASSET__assets_levels_level_1_start_4_oel extends lime.utils.ByteArray {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.ByteArray {}
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.ByteArray {}
 @:file("C:/HaxeToolkit/haxe/lib/flixel/3,3,11/assets/sounds/beep.mp3") #if display private #end class __ASSET__assets_sounds_beep_mp3 extends lime.utils.ByteArray {}

@@ -45,14 +45,14 @@ class Mush extends EnemyTemplate
 		facing = FlxObject.LEFT; 
 		flipX = true;	
 		
-		animation.add("walk" + Reg.G, [1, 0, 1, 2], 3, true);
-		animation.add("walk" + Reg.C, [5, 4, 5, 6], 3, true);
-		animation.add("walk" + Reg.M, [9, 8, 9, 10], 3, true);
-		animation.add("walk" + Reg.Y, [13, 12, 13, 14], 3, true);
-		animation.add("spore" + Reg.G, [1, 3, 3, 3, 3], 6, false);
-		animation.add("spore" + Reg.C, [5, 7, 7, 7, 7], 6, false);
-		animation.add("spore" + Reg.M, [9, 11, 11, 11, 11], 6, false);
-		animation.add("spore" + Reg.Y, [13, 15, 15, 15, 15], 6, false);
+		animation.add("walk0", [1, 0, 1, 2], 3, true);
+		animation.add("walk1", [5, 4, 5, 6], 3, true);
+		animation.add("walk2", [9, 8, 9, 10], 3, true);
+		animation.add("walk3", [13, 12, 13, 14], 3, true);
+		animation.add("spore0", [1, 3, 3, 3, 3], 6, false);
+		animation.add("spore1", [5, 7, 7, 7, 7], 6, false);
+		animation.add("spore2", [9, 11, 11, 11, 11], 6, false);
+		animation.add("spore3", [13, 15, 15, 15, 15], 6, false);
 		
 	}
 	

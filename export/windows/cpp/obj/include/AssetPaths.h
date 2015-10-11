@@ -30,7 +30,6 @@ class HXCPP_CLASS_ATTRIBUTES  AssetPaths_obj : public hx::Object{
 
 		static ::String ado__png;
 		static ::String balun__png;
-		static ::String bossdoor__png;
 		static ::String burd__png;
 		static ::String burdegg__png;
 		static ::String burdsmall__png;

@@ -53,14 +53,14 @@ class Balun extends EnemyTemplate
 		
 		switch(palette)
 		{
-			case Reg.G:
+			case 0:
 				colorString = "grey";
-			case Reg.C:
-				colorString = "cyan";
-			case Reg.M:
-				colorString = "magenta";
-			case Reg.Y:
+			case 1:
 				colorString = "yellow";
+			case 2:
+				colorString = "cyan";
+			case 3:
+				colorString = "magenta";
 			
 		}	
 		
@@ -84,35 +84,29 @@ class Balun extends EnemyTemplate
 			// This mess is just for testing
 			if (FlxG.keys.anyJustPressed(["C"])) 
 			{
-		
+				palette += 1;
+				if (palette > 3)
+					palette = 0;
 				switch(palette)
 				{
-					case Reg.G:
-					{
-						palette = Reg.C;
-						colorString = "cyan";
-					}
-					case Reg.C:
-					{
-						palette = Reg.M;
-						colorString = "magenta";
-					}
-					case Reg.M:
-					{
-						palette = Reg.Y;
-						colorString = "yellow";
-					}
-					case Reg.Y:
-					{
-						palette = Reg.G;
+					case 0:
 						colorString = "grey";
-					}
+					case 1:
+						colorString = "yellow";
+					case 2:
+						colorString = "cyan";
+					case 3:
+						colorString = "magenta";
 					
 				}
 			 
 			}
 			
-				
+			
+			
+			
+			
+			
 			
 			velocity.x = velocity.y = 0;
 			

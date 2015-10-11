@@ -4285,7 +4285,6 @@
    <depend name="include/flixel/interfaces/IFlxDestroyable.h"/>
   </file>
   <file name="src/PlayState.cpp">
-   <depend name="include/BossDoor.h"/>
    <depend name="include/Coin.h"/>
    <depend name="include/Door.h"/>
    <depend name="include/Drops.h"/>
@@ -4330,7 +4329,6 @@
    <depend name="include/flixel/util/FlxPoint.h"/>
    <depend name="include/flixel/util/FlxRandom.h"/>
    <depend name="include/flixel/util/FlxRect.h"/>
-   <depend name="include/haxe/Log.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
@@ -4525,18 +4523,6 @@
    <depend name="include/flixel/tweens/FlxEase.h"/>
    <depend name="include/flixel/tweens/FlxTween.h"/>
    <depend name="include/flixel/tweens/misc/VarTween.h"/>
-  </file>
-  <file name="src/BossDoor.cpp">
-   <depend name="include/BossDoor.h"/>
-   <depend name="include/IMap.h"/>
-   <depend name="include/flixel/FlxBasic.h"/>
-   <depend name="include/flixel/FlxObject.h"/>
-   <depend name="include/flixel/FlxSprite.h"/>
-   <depend name="include/flixel/animation/FlxAnimation.h"/>
-   <depend name="include/flixel/animation/FlxAnimationController.h"/>
-   <depend name="include/flixel/animation/FlxBaseAnimation.h"/>
-   <depend name="include/flixel/interfaces/IFlxDestroyable.h"/>
-   <depend name="include/haxe/ds/StringMap.h"/>
   </file>
   <file name="src/flixel/FlxSprite.cpp">
    <depend name="include/IMap.h"/>

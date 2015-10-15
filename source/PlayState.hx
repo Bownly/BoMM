@@ -33,8 +33,6 @@ class PlayState extends FlxState
 	var unlockableColor:Int = Reg.C;
 	
 	private var _grpPlayer:FlxGroup;
-	static private var player:Player;
-	//static private var _grpPlayer:FlxGroup;
 	private var _player:Player;
 	public var playerBullets:FlxTypedGroup<weapons.Bullet>;
 	
@@ -104,7 +102,7 @@ class PlayState extends FlxState
 		add(_grpEnemies);
 
 		
-		_door = new Door();
+		_door = new Door(0, 0, 1, Reg.door1Color);
 		add(_door);
 		_bossDoor = new BossDoor();
 		add(_bossDoor);
@@ -154,7 +152,7 @@ class PlayState extends FlxState
 		FlxG.mouse.visible = false;		
 		
 		//FlxG.camera.bgColor = 0x093930FF;
-		FlxG.camera.bgColor = 0xFF555555;
+		//FlxG.camera.bgColor = 0xFF555555;
 		FlxG.camera.bgColor = 0x00000000;
 		
 		FlxG.camera.follow(_player,1);
@@ -172,9 +170,9 @@ class PlayState extends FlxState
 	{
 
 		FlxG.collide(_grpWalls, _player);
+		FlxG.collide(_grpWalls, playerBullets);
 		FlxG.collide(_grpWalls, _grpEnemies);
 		FlxG.collide(_grpWalls, _grpBadBullets);
-		FlxG.collide(_grpWalls, playerBullets);
 		
 		FlxG.overlap(_player, _grpEnemies, touchEnemy);
 		FlxG.overlap(_player, _grpBadBullets, playerGetHit);
@@ -197,7 +195,7 @@ class PlayState extends FlxState
 		}
 		if (FlxG.keys.anyPressed(["T"])) 
 		{
-			FlxG.switchState(new MenuState());
+			FlxG.switchState(new HubState());
 		}
 		
 		if (FlxG.keys.anyJustPressed(["P"]))
@@ -216,7 +214,7 @@ class PlayState extends FlxState
 		
 		super.update();
 	}	
-		
+	
 	/**
 	 * Function that is called when this state is destroyed - you might want to 
 	 * consider setting all objects this state uses to null to help garbage collection.

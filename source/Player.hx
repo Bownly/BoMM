@@ -27,17 +27,24 @@ class Player extends FlxSprite
 	public var damage:Int = 1;
 	public var luck:Int = 5;	
 	
-	var GRAVITY:Int = 690;
-	var ySpeedJumping:Int = 2250;
+	var GRAVITY:Int = 25;
+	var ySpeedJumping:Int = 400;
 	var ySpeedClimbing:Int = 75;
 	var xSpeedWalking:Int = 138;
+	var xSpeedInching:Int = 20;
 	var xSpeedSliding:Int = 250;
 	var xSpeedHurt:Int = 50;
 	var remainingJumps:Int = 2;
+	
 	var isSliding:Bool = false;
 	var slideTimer:Float = 0;
 	var slideDuration:Float = .33;
 
+	var isInching:Bool = false;
+	var inchingTimer:Float = 0;
+	var inchingDuration:Float = .025;
+
+	
 	public var bulletArray:FlxTypedGroup<weapons.Bullet>;
 	public var maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
@@ -77,14 +84,6 @@ class Player extends FlxSprite
 		damage = Reg.pDamage;
 		luck = Reg.pLuck;
 		
-		/*weapon1 = new WeaponTemplate("pea", bulletArray);
-		weapon2 = new EightWayWeapon("cyan", bulletArray);
-		weapon3 = new YellowWeapon("yellow", bulletArray);
-		weapon4 = new MagentaWeapon("magenta", bulletArray);
-		
-		weaponArray = [weapon1, weapon2, weapon3, weapon4];
-		curWeaponLoc = 0;
-		*/
 		weaponArray = Reg.weaponArray;
 		curWeaponLoc = 0;
 		curWeapon = weaponArray[curWeaponLoc];
@@ -92,16 +91,17 @@ class Player extends FlxSprite
 		{
 			wpn.juice = wpn.juiceMax;
 		}
-		
 		bulletArray = Bullets;
+		
 		velocity.y = GRAVITY;
-		maxVelocity.set(200, 200);
-		drag.set(1600, 1600);
+		maxVelocity.set(200, 555500);
+		drag.set(0, 0);
 		
 		loadGraphic(AssetPaths.mmgurl__png, true, 32, 32);
+		loadGraphic(AssetPaths.mcgurlhair__png, true, 32, 32);
 		width = 14;
 		height = 22;
-		offset = new FlxPoint(9, 4);
+		offset = new FlxPoint(9, 6);
 		
 		
 		var offset = 18; // the amount of sprites in the sheet per color
@@ -124,24 +124,31 @@ class Player extends FlxSprite
 			animation.add("climb_" + i + "_shoot", [15 + o], 1, true);
 		}
 		
+		// these are for mcgurl.png
+		animation.add("idle_0", [0, 1], 3, true);
+		animation.add("walk_0", [3, 4, 5, 4], 8, true);
+		animation.add("inch_0", [2], 8, true);
+		animation.add("inch_0", [2], 8, true);
+		animation.add("walk_0_shoot", [8, 9, 10, 9], 8, true);
+		animation.add("inch_0_shoot", [2]);
+		
+		animation.add("jump_0", [2]);
+		animation.add("fall_0", [2]);
+		
+		
 	}
 	
 
 	/* General checklist
 	 * 
-	At this point in time it seems as though I have limited options without any actual art or
-	concrete concepts. I could work on:
 	1. bosses and/or a boss class/system
-	2. touch up on some stuff like BabyBurd collision and random spread (but it's not a final enemy, probably, so why bother?)
-	3. Title Screen?
+	3. Title Screen
 	4. Weapons / upgrades systems / stats 
 	6. movement tweaking with the mc (kinda pointless without overhauling all of my maps...)
 	7. ...which leads to making new levels...
-	8. What to heck else is there to even do? Oh god it's all dependent on the art and music. 
 	9. Adding powerups to treasure rooms, but then I'd have to make powerups first...
-	10. Overhaul ladders. Make them oneway collidible. ...but how?
+	10. Overhaul ladders. Make them oneway collidible, etc.
 	11. Redo / overhaul the map stiching. It really is pretty bad atm. :T
-	12. STORE!!!!
 	*/
 	
 
@@ -182,11 +189,14 @@ class Player extends FlxSprite
 	
 	override public function update():Void 
 	{
-		
-		velocity.x = 0;
-		
+	
 		if (!touchingLadder)
 			isClimbing = false;
+		
+		if (inchingTimer > 0)
+			inchingTimer -= FlxG.elapsed;		
+		else
+			isInching = false;
 		
 		if (hurtTimer > 0)  // todo, make immune time longer than forced move time, lol
 		{
@@ -212,7 +222,7 @@ class Player extends FlxSprite
 			if (isClimbing)
 				acceleration.y = 0;
 			else
-				acceleration.y = GRAVITY;
+				velocity.y += GRAVITY;
 			
 			if (this.isTouching(FlxObject.FLOOR))
 				remainingJumps = maxJumps;
@@ -261,9 +271,16 @@ class Player extends FlxSprite
 		//walking
 		if (FlxG.keys.anyPressed(["RIGHT", "D"]) && isClimbing == false) 
 		{
+			if (animation.name.substr(0, 4) == "idle") 
+			{
+				inchingTimer = inchingDuration;
+				isInching = true;
+			}
 			if (isSliding)
 				velocity.x = xSpeedSliding;
-			else
+			else if (isInching)
+				velocity.x = xSpeedInching;
+			else 
 				velocity.x = xSpeedWalking;
 			flipX = false;
 			facing = FlxObject.RIGHT;
@@ -271,14 +288,25 @@ class Player extends FlxSprite
 		}
 		else if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing == false) 
 		{
+			if (animation.name.substr(0, 4) == "idle") 
+			{
+				inchingTimer = inchingDuration;
+				isInching = true;
+			}
 			if (isSliding)
 				velocity.x = -xSpeedSliding;
+			else if (isInching)
+				velocity.x = -xSpeedInching;
 			else
 				velocity.x = -xSpeedWalking;
 			flipX = true;
 			facing = FlxObject.LEFT;
 			isClimbing = false;
 		} 
+		else
+			velocity.x = 0;
+		
+		
 		// move 1px. For debug/testing stuff
 		if (FlxG.keys.anyJustPressed(["H"]) && isClimbing == false) 
 		{
@@ -296,7 +324,6 @@ class Player extends FlxSprite
 		} 
 		
 		
-
 		// left/right movement while climbing
 		if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing) 
 		{
@@ -308,6 +335,7 @@ class Player extends FlxSprite
 			flipX = false;
 			facing = FlxObject.RIGHT;
 		}
+		
 		
 		// climbing up and down
 		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder) 
@@ -332,12 +360,14 @@ class Player extends FlxSprite
 			remainingJumps = maxJumps;
 		}
 		
+		
 		// slide
 		if (FlxG.keys.anyPressed(["DOWN", "S"]) && FlxG.keys.anyJustPressed(["J"]) && isTouching(FlxObject.FLOOR))
 		{
 			isSliding = true;
 			slideTimer = slideDuration;
 		}
+		
 		
 		// jump
 		if (FlxG.keys.anyJustPressed(["UP", "J"]) && remainingJumps > 0 && isSliding == false) 
@@ -346,7 +376,13 @@ class Player extends FlxSprite
 				velocity.y = -ySpeedJumping;
 			remainingJumps--;
 			isClimbing = false;
+			trace("butt");
 		} 	
+		else if (!FlxG.keys.anyPressed(["UP", "J"]) && velocity.y < -200)
+		{
+			trace("buttsss");
+			velocity.y = -100;
+		}
 		
 		if (FlxG.keys.anyJustPressed(["SPACE", "K"]))
 			shoot();
@@ -373,16 +409,18 @@ class Player extends FlxSprite
 			animation.play("climb_" + curWeaponLoc + shootingString);		
 			animation.pause(); 	
 		}
-		if (velocity.x != 0 && isSliding == false)
+		if (velocity.x != 0 && isSliding == false && isInching == false)
 			animation.play("walk_" + curWeaponLoc + shootingString);
+		else if (velocity.x != 0 && isSliding == false && isInching)
+			animation.play("inch_" + curWeaponLoc + shootingString);
 		else if (velocity.x != 0 && isSliding)
 			animation.play("slide_" + curWeaponLoc + shootingString);
 		
 		if (velocity.y != 0 && isClimbing) 
 			animation.play("climb_" + curWeaponLoc + shootingString);			
-		else if (velocity.y < 0) 
+		else if (velocity.y <= 0) 
 			animation.play("jump_" + curWeaponLoc + shootingString);
-		else if (velocity.y > 0) 
+		else if (velocity.y > 0 && !isTouching(FlxObject.FLOOR))
 		{
 			animation.play("fall_" + curWeaponLoc + shootingString);
 			// prevent player from having max jumps after walking off a platform

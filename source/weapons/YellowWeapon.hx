@@ -10,7 +10,7 @@ class YellowWeapon extends WeaponTemplate
 {
 
 
-	public function new(Name:String, Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
 		

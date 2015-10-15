@@ -8,8 +8,6 @@ Here's the deal so far:
 
 -I have plans to completely overhaul the level stitching code, so maybe just avoid that for now.
 
--Similarly, I'm thinking of possibly overhauling Ladder.hx to mirror the implementation found in that platform jumper tutorial. Maybe. That would require 2 maps for every map, which might get excessive. We'll see, probably when I overhaul the level stitching code.
-
 That's it for now. Holler if you have any questions or comments or concerns or cornucopias.
 
 
@@ -38,3 +36,60 @@ The second group of functions should be all the other functions for that class a
 
 Variable names:
 Nothing concrete yet. Open for suggestions.
+
+
+
+
+# TB Build Roadmap
+TB Build Roadmap
+
+
+:star: Oct 12 - Oct 18 (aka prototype week) :star: 
+ART 3 (5?) mc frames (jump, hurt, jump shoot, (fall/fallshoot)
+CODE ladders
+CODE weapons/equipment system
+CODE level select hubworld (incl assigning colors to levels)
+CODE movement (inching forward, variable jump height, crouch?)
+MEDIA set up accounts on twitter, tumblr, playfield, gamejolt
+SKYPE come up with a name for the game and or studio
+
+:star: Oct 19 - Oct 25 (aka design and social media week) :star: 
+ART 1 tileset (~25 tiles)
+ART 3 mc frames (climbing, ladder shooting, climbup)
+ART / CODE / DESIGN 1 enemy (~4 frames per color)
+ART / CODE / DESIGN 1 enemy (~4 frames per color)
+CODE player flashing when hurt and death sequence/game over
+CODE weapon/equipment x 5
+DESIGN ogmo rooms x 25
+MEDIA tweet x 7, /r/gamedev stuff, basic social media blasts
+SKYPE/DESIGN boss
+
+:star: Oct 26 - Nov 1 (aka meat and potatoes week) :star: 
+ART boss (~10 frames)
+ART / CODE / DESIGN 1 enemy (~4 frames per color)
+ART / CODE / DESIGN 1 enemy (~4 frames per color)
+CODE boss
+CODE weapon/equipment x 5
+CODE ~2 gimmicky platforms
+CODE enemies to respawn if off screen, but not dead
+CODE color picking for levels
+DESIGN ogmo rooms x 25
+MEDIA tweet x 7, /r/gamedev stuff, basic social media blasts
+
+:star: Nov 2 - Nov 8 (aka misc week) :star: 
+ART 3 mc frames (die frames)
+ART 1 tileset (~25 tiles)
+ART misc stuff (bullets, enemy death anim, hud hp bars, etc)
+ART title screen
+ART / CODE ~15 collectibles/powerups
+CODE beat-boss-get-weapon-endlevel
+CODE title screen
+CODE parallax
+MEDIA tweet x 7, /r/gamedev stuff, basic social media blasts
+
+:star: Nov 9 - Nov 14 (aka crunch week) :star: 
+CODE polish up the UI
+POLISH the entire game oh god wtf are you doing, hurry up!
+ART a trailer for the tb submission
+MEDIA tweet x 6, /r/gamedev stuff, basic social media blasts
+MEDIA fix up a good landing page for our game to submit to the tb contest

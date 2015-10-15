@@ -1,10 +1,12 @@
 package;
 
 import flixel.group.FlxTypedGroup;
+import flixel.util.FlxRandom;
 import flixel.util.FlxSave;
 import weapons.Bullet;
 import weapons.EightWayWeapon;
 import weapons.WeaponTemplate;
+import weapons.YellowWeapon;
 
 /**
  * Handy, pre-built Registry class that can be used to store 
@@ -72,6 +74,61 @@ class Reg
 	
 	public static var weapon1:WeaponTemplate = new WeaponTemplate("pea");
 	public static var weapon2:WeaponTemplate = new EightWayWeapon("cyan");
+	public static var weapon3:WeaponTemplate = new YellowWeapon("yellow");
 		
-	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2];
+	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3];
+
+	
+	
+	public static var door1Color:Int;
+	public static var door2Color:Int;
+	public static var door3Color:Int;
+	
+	public static function shuffleColors()
+	{
+		var randoor:Int;
+		randoor = FlxRandom.intRanged(1, 6);
+		switch (randoor)
+		{
+			case (1):
+			{
+				door1Color = C;
+				door2Color = M;
+				door3Color = Y;
+			}
+			case (2):
+			{
+				door1Color = C;
+				door2Color = Y;
+				door3Color = M;
+			}
+			case (3):
+			{
+				door1Color = M;
+				door2Color = C;
+				door3Color = Y;
+			}
+			case (4):
+			{
+				door1Color = M;
+				door2Color = Y;
+				door3Color = C;
+			}
+			case (5):
+			{
+				door1Color = Y;
+				door2Color = C;
+				door3Color = M;
+			}
+			case (6):
+			{
+				door1Color = Y;
+				door2Color = M;
+				door3Color = C;
+			}
+		
+		}
+	}
+	
+	
 }

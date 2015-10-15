@@ -17,8 +17,9 @@ class MenuState extends FlxState
 	
 	var colorDefault = 0xFA9FA9;
 	var colorSelected = 0x9AF9AF;
-	var selectedLevel = 1;
+	var selectedLevel = 0;
 	
+	private var txtLevel0:FlxText;
 	private var txtLevel1:FlxText;
 	private var txtLevel2:FlxText;
 	private var txtLevel3:FlxText;
@@ -34,18 +35,14 @@ class MenuState extends FlxState
 		//FlxG.camera.bgColor = 0xFFBADA55;
 		FlxG.camera.bgColor = 0xFA9FA9;
 		
-		//add(new FlxButton(0, 25, "Level 1", gotoLevel1));
-		//add(new FlxButton(0, 50, "Level 2", gotoLevel2));
-		//add(new FlxButton(0, 75, "Level 3", gotoLevel3));
-		
 		grpLevel = new FlxTypedGroup<FlxText>();
+		txtLevel0 = new FlxText(100, 25, 0, "hub", 8);
 		txtLevel1 = new FlxText(100, 50, 0, "Level1", 8);
 		txtLevel2 = new FlxText(100, 75, 0, "Level2", 8);
 		txtLevel3 = new FlxText(100, 100, 0, "Level3", 8);
 		
-		//txtLevel1.setFormat(8, 0xFA9FA9);
-		
 		add(grpLevel);
+		grpLevel.add(txtLevel0);
 		grpLevel.add(txtLevel1);
 		grpLevel.add(txtLevel2);
 		grpLevel.add(txtLevel3);
@@ -66,14 +63,16 @@ class MenuState extends FlxState
 			selectedLevel--;
 		}
 		if (selectedLevel >= 4)
-			selectedLevel = 1;
-		else if (selectedLevel <= 0)
+			selectedLevel = 0;
+		else if (selectedLevel < 0)
 			selectedLevel = 3;
 			
 		if (FlxG.keys.anyJustPressed(["ENTER", "J"]))
 		{
 			switch (selectedLevel)
 			{
+				case (0):
+					gotoLevel0();
 				case (1):
 					gotoLevel1();
 				case (2):
@@ -92,6 +91,8 @@ class MenuState extends FlxState
 			level.setFormat(8, 0x9AF9AF);
 		switch (selectedLevel)
 		{
+			case (0):
+				txtLevel0.setFormat(8, 0xFA9FA9);
 			case (1):
 				txtLevel1.setFormat(8, 0xFA9FA9);
 			case (2):
@@ -101,6 +102,10 @@ class MenuState extends FlxState
 		}
 	}
 	
+	function gotoLevel0():Void
+	{
+		FlxG.switchState(new HubState());
+	}	
 	function gotoLevel1():Void
 	{
 		FlxG.switchState(new Level1(Reg.C));

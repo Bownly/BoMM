@@ -94,7 +94,7 @@ class Player extends FlxSprite
 		bulletArray = Bullets;
 		
 		velocity.y = GRAVITY;
-		maxVelocity.set(200, 555500);
+		//maxVelocity.set(200, 500);
 		drag.set(0, 0);
 		
 		loadGraphic(AssetPaths.mmgurl__png, true, 32, 32);
@@ -378,17 +378,27 @@ class Player extends FlxSprite
 		
 		
 		// jump
-		if (FlxG.keys.anyJustPressed(["UP", "J"]) && remainingJumps > 0 && isSliding == false) 
+		if (FlxG.keys.anyJustPressed(["UP", "J"]) && isSliding == false) 
 		{
-			if (isClimbing == false)
+			if (remainingJumps > 0) 
+			{
+				if (isClimbing == false)
+					velocity.y = -ySpeedJumping;
+				remainingJumps--;
+				remainingJumps--;
+				isClimbing = false;
+			}
+			if (curWeapon.doubleJump && !isTouching(FlxObject.FLOOR) && curWeapon.isUsable())
+			{
+				curWeapon.juice -= curWeapon.juiceCost;
 				velocity.y = -ySpeedJumping;
-			remainingJumps--;
-			isClimbing = false;
+			}
 		} 	
 		else if (!FlxG.keys.anyPressed(["UP", "J"]) && velocity.y < -150)
 			velocity.y = -100;
 		
 		
+		//shoot
 		if (FlxG.keys.anyJustPressed(["SPACE", "K"]))
 			shoot();
 			

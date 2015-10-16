@@ -6,6 +6,7 @@ import flixel.util.FlxSave;
 import weapons.Bullet;
 import weapons.EightWayWeapon;
 import weapons.WeaponTemplate;
+import weapons.WingsEquipment;
 import weapons.YellowWeapon;
 
 /**
@@ -72,10 +73,10 @@ class Reg
 	public static var pDamage:Int = 1;
 	public static var pLuck:Int = 5;	
 	
-	public static var weapon1:WeaponTemplate = new WeaponTemplate("pea");
-	public static var weapon2:WeaponTemplate = new EightWayWeapon("cyan");
-	public static var weapon3:WeaponTemplate = new YellowWeapon("yellow");
-		
+	public static var weapon2:WeaponTemplate = new WeaponTemplate("pea");
+	public static var weapon1:WeaponTemplate = new WingsEquipment("wings");
+	public static var weapon3:WeaponTemplate = new EightWayWeapon("cyan");
+	
 	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3];
 
 	

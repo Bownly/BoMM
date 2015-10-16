@@ -21,6 +21,8 @@ class WeaponTemplate
 	public var maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
 	
+	public var doubleJump:Bool = false;
+	
 	public var palette:Int = 0;
 	public var unlocked:Bool = true;
 
@@ -28,6 +30,14 @@ class WeaponTemplate
 	{
 		name = Name;
 		bulletArray = Bullets;
+	}
+	
+	public function isUsable():Bool
+	{
+		if (juiceCost > juice)
+			return false;
+		else
+			return true;
 	}
 	
 	public function shoot(_player:Player)

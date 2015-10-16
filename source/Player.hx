@@ -27,8 +27,8 @@ class Player extends FlxSprite
 	public var damage:Int = 1;
 	public var luck:Int = 5;	
 	
-	var GRAVITY:Int = 25;
-	var ySpeedJumping:Int = 400;
+	var GRAVITY:Int = 15;
+	var ySpeedJumping:Int = 300;
 	var ySpeedClimbing:Int = 75;
 	var xSpeedWalking:Int = 138;
 	var xSpeedInching:Int = 20;
@@ -124,16 +124,19 @@ class Player extends FlxSprite
 			animation.add("climb_" + i + "_shoot", [15 + o], 1, true);
 		}
 		
-		// these are for mcgurl.png
+		// these are for mcgurl(hair).png
 		animation.add("idle_0", [0, 1], 3, true);
 		animation.add("walk_0", [3, 4, 5, 4], 8, true);
-		animation.add("inch_0", [2], 8, true);
-		animation.add("inch_0", [2], 8, true);
-		animation.add("walk_0_shoot", [8, 9, 10, 9], 8, true);
-		animation.add("inch_0_shoot", [2]);
+		animation.add("inch_0", [16], 8, true);
+		animation.add("jump_0", [11]);
+		animation.add("fall_0", [12]);
+		animation.add("hurt_0", [15]);
 		
-		animation.add("jump_0", [2]);
-		animation.add("fall_0", [2]);
+		animation.add("walk_0_shoot", [8, 9, 10, 9], 8, true);
+		animation.add("idle_0_shoot", [2]);
+		animation.add("inch_0_shoot", [2]);
+		animation.add("jump_0_shoot", [13]);
+		animation.add("fall_0_shoot", [14]);
 		
 		
 	}
@@ -200,6 +203,11 @@ class Player extends FlxSprite
 		
 		if (hurtTimer > 0)  // todo, make immune time longer than forced move time, lol
 		{
+			if (velocity.y < 0)
+				velocity.y = 0;
+			if (!isClimbing)
+				velocity.y += GRAVITY;
+				
 			canMove = false;
 			if (facing == FlxObject.RIGHT)
 				velocity.x = -xSpeedHurt;
@@ -220,7 +228,7 @@ class Player extends FlxSprite
 			
 			
 			if (isClimbing)
-				acceleration.y = 0;
+				velocity.y = 0;
 			else
 				velocity.y += GRAVITY;
 			
@@ -376,13 +384,10 @@ class Player extends FlxSprite
 				velocity.y = -ySpeedJumping;
 			remainingJumps--;
 			isClimbing = false;
-			trace("butt");
 		} 	
-		else if (!FlxG.keys.anyPressed(["UP", "J"]) && velocity.y < -200)
-		{
-			trace("buttsss");
+		else if (!FlxG.keys.anyPressed(["UP", "J"]) && velocity.y < -150)
 			velocity.y = -100;
-		}
+		
 		
 		if (FlxG.keys.anyJustPressed(["SPACE", "K"]))
 			shoot();

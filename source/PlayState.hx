@@ -418,9 +418,25 @@ class PlayState extends FlxState
 			FlxG.collide(P, L);
 			
 			if (FlxG.keys.anyPressed(["DOWN", "S"]))
+			{
 				P.isClimbing = true;
+				P.x = L.x;
+			}	
+			
+			if (FlxG.keys.anyPressed(["UP", "W"]) && P.velocity.y == 0) 
+				P.setTouchingLadder(false);	
 		}
-	}
+		
+		if (P.isClimbing)
+			P.x = L.x;
+			
+		if (L.top == true && (P.x == L.x) && ((P.y <= L.y) && (P.y >= L.y-20)))
+			P.isClimbingUp = true;
+		else
+			P.isClimbingUp = false;		
+
+	}	
+		
 	private function playerTouchHazard(P:Player, S:Spike):Void
 	{
 		P.takeDamage(S.dmg);

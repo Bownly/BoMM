@@ -114,5 +114,6 @@
     <coin id="93" x="416" y="288" />
     <ladder id="6" x="112" y="400" top="False" />
     <ladder id="7" x="112" y="400" top="False" />
+    <ladder id="9" x="112" y="320" top="True" />
   </entities>
 </level>

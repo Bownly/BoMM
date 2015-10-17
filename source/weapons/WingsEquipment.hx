@@ -12,6 +12,7 @@ class WingsEquipment extends WeaponTemplate
 		super(Name);
 		doubleJump = true;
 		juiceCost = 1;
+		isEquipment = true;
 	}
 	
 }

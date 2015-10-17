@@ -388,7 +388,7 @@ class Player extends FlxSprite
 				remainingJumps--;
 				isClimbing = false;
 			}
-			if (curWeapon.doubleJump && !isTouching(FlxObject.FLOOR) && curWeapon.isUsable())
+			else if (curWeapon.doubleJump && !isTouching(FlxObject.FLOOR) && curWeapon.isUsable())
 			{
 				curWeapon.juice -= curWeapon.juiceCost;
 				velocity.y = -ySpeedJumping;

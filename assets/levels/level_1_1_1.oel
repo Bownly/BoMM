@@ -32,7 +32,7 @@
   <entities>
     <entrance id="1" x="0" y="432" val="1" />
     <exit id="0" x="624" y="432" val="1" />
-    <ladder id="2" x="112" y="336" top="False" />
+    <ladder id="2" x="112" y="336" top="True" />
     <ladder id="3" x="112" y="352" top="False" />
     <ladder id="4" x="112" y="368" top="False" />
     <ladder id="5" x="112" y="384" top="False" />

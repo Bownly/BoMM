@@ -46,6 +46,23 @@ class EnemyTemplate extends FlxSprite
 		_drops = DropsGrp;
 	}
 	
+	override public function update():Void 
+	{
+		if (!isOnScreen())
+		{
+			alive = false;
+		}
+	/*	
+		if (isOnScreen)
+		{
+			respawn();
+		}*/
+		
+		
+		super.update();
+		
+	}
+	
 	public function takeDamage(damage:Int):Void
 	{
 		// TODO quick blinking effect

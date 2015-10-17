@@ -22,14 +22,16 @@ class WeaponTemplate
 	public var bulletCount:Int = 0;
 	
 	public var doubleJump:Bool = false;
+	public var isEquipment:Bool = false;
 	
 	public var palette:Int = 0;
 	public var unlocked:Bool = true;
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, ?Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		name = Name;
 		bulletArray = Bullets;
+		palette = Palette;
 	}
 	
 	public function isUsable():Bool
@@ -56,7 +58,8 @@ class WeaponTemplate
 				var newBullet = new Bullet(_player.x + 8, _player.y + 8, 500, FlxObject.RIGHT, _player.damage + damage, 256);
 				_player.bulletArray.add(newBullet);
 			}
-			juice -= juiceCost;
+			if (!isEquipment)
+				juice -= juiceCost;
 		}
 	}
 }

@@ -66,6 +66,7 @@ class Player extends FlxSprite
 	
 	private var touchingLadder:Bool = false;
 	public var isClimbing:Bool = false;
+	public var isClimbingUp:Bool = false;
 	
 	private var hurtTimer:Float = 0;
 	private var invincTimer:Float = 0;
@@ -361,6 +362,7 @@ class Player extends FlxSprite
 			isClimbing = true;
 			remainingJumps = maxJumps;
 		}
+
 		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && touchingLadder)
 		{
 			velocity.y = ySpeedClimbing;
@@ -388,7 +390,7 @@ class Player extends FlxSprite
 				remainingJumps--;
 				isClimbing = false;
 			}
-			if (curWeapon.doubleJump && !isTouching(FlxObject.FLOOR) && curWeapon.isUsable())
+			else if (curWeapon.doubleJump && !isTouching(FlxObject.FLOOR) && curWeapon.isUsable())
 			{
 				curWeapon.juice -= curWeapon.juiceCost;
 				velocity.y = -ySpeedJumping;
@@ -434,7 +436,9 @@ class Player extends FlxSprite
 		if (velocity.y != 0 && isClimbing) 
 			animation.play("climb_" + curWeaponLoc + shootingString);			
 		else if (velocity.y <= 0) 
+		{
 			animation.play("jump_" + curWeaponLoc + shootingString);
+		}
 		else if (velocity.y > 0 && !isTouching(FlxObject.FLOOR))
 		{
 			animation.play("fall_" + curWeaponLoc + shootingString);
@@ -442,7 +446,10 @@ class Player extends FlxSprite
 			if (remainingJumps == maxJumps)
 				remainingJumps--;
 		}
-		
+		if (isClimbingUp) 
+		{
+			animation.play("hurt_" + curWeaponLoc + shootingString);
+		}
 		if (hurtTimer > 0)
 		{
 			animation.play("hurt_" + curWeaponLoc);

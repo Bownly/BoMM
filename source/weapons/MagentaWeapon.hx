@@ -22,7 +22,7 @@ class MagentaWeapon extends WeaponTemplate
 	
 	public override function shoot(_player:Player)
 	{
-		if (_player.bulletArray.countLiving() < _player.maxBullets && juice >= juiceCost) 
+		if (_player.bulletArray.countLiving() < maxBullets && juice >= juiceCost) 
 		{
 			_player.postShotTimer = .33;
 			

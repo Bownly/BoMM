@@ -103,6 +103,7 @@ class Player extends FlxSprite
 		width = 14;
 		height = 22;
 		offset = new FlxPoint(9, 6);
+		offset = new FlxPoint(9, 5);
 		
 		
 		var offset = 18; // the amount of sprites in the sheet per color

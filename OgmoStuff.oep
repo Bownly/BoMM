@@ -55,7 +55,7 @@
   <Tilesets>
     <Tileset>
       <Name>cave_tiles</Name>
-      <FilePath>assets\images\cavetiles.png</FilePath>
+      <FilePath>assets\images\cave_tiles.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>

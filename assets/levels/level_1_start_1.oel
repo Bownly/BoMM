@@ -49,6 +49,8 @@
     <enemy id="16" x="288" y="400" name="mush" />
     <enemy id="17" x="304" y="416" name="mush" />
     <enemy id="18" x="320" y="432" name="mush" />
-    <enemy id="19" x="96" y="432" name="snobal" />
+    <enemy id="19" x="128" y="432" name="mush" />
+    <enemy id="20" x="272" y="416" name="mush" />
+    <enemy id="21" x="256" y="432" name="mush" />
   </entities>
 </level>

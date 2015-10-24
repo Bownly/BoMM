@@ -220,7 +220,7 @@ class PlayState extends FlxState
 		
 		
 		
-		Reg.player.curWeapon.stompTimer -= FlxG.elapsed;
+		//Reg.player.curWeapon.stompTimer -= FlxG.elapsed;
 
 		super.update();
 	}	

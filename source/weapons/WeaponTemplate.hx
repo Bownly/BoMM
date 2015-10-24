@@ -44,7 +44,7 @@ class WeaponTemplate
 	
 	public function shoot(_player:Player)
 	{
-		if (_player.bulletArray.countLiving() < maxBullets && juice > 0) 
+		if (_player.bulletArray.countLiving() < maxBullets && (isUsable() || isEquipment)) 
 		{
 			_player.postShotTimer = .33;
 			

@@ -45,10 +45,10 @@ class Mush extends EnemyTemplate
 		facing = FlxObject.LEFT; 
 		flipX = true;	
 		
-		animation.add("walk" + Reg.G, [1, 0, 1, 2], 3, true);
-		animation.add("walk" + Reg.C, [5, 4, 5, 6], 3, true);
-		animation.add("walk" + Reg.M, [9, 8, 9, 10], 3, true);
-		animation.add("walk" + Reg.Y, [13, 12, 13, 14], 3, true);
+		animation.add("walk" + Reg.G, [1, 0, 1, 2], 4, true);
+		animation.add("walk" + Reg.C, [5, 4, 5, 6], 4, true);
+		animation.add("walk" + Reg.M, [9, 8, 9, 10], 4, true);
+		animation.add("walk" + Reg.Y, [13, 12, 13, 14], 4, true);
 		animation.add("spore" + Reg.G, [1, 3, 3, 3, 3], 6, false);
 		animation.add("spore" + Reg.C, [5, 7, 7, 7, 7], 6, false);
 		animation.add("spore" + Reg.M, [9, 11, 11, 11, 11], 6, false);
@@ -98,7 +98,7 @@ class Mush extends EnemyTemplate
 		{	
 			switch(palette)
 			{
-				case 0:  // grey
+				case Reg.G:  // grey
 				{
 					// spores up
 					velocity.x = 0;  // case dependent
@@ -106,7 +106,7 @@ class Mush extends EnemyTemplate
 					var bullet = new weapons.Spore(x, y + 8, sporeSpeed, FlxObject.CEILING, 1, 256, 0);
 					_bullets.add(bullet);
 				}
-				case 1:  // cyan
+				case Reg.C:  // cyan
 				{
 					// spores forward
 					velocity.x = 0;  // case dependent
@@ -118,7 +118,7 @@ class Mush extends EnemyTemplate
 					_bullets.add(bullet2);
 					_bullets.add(bullet3);
 				}
-				case 2:  // magenta
+				case Reg.M:  // magenta
 				{
 					// spores up and to the sides
 					velocity.x = 0;  // case dependent
@@ -130,7 +130,7 @@ class Mush extends EnemyTemplate
 					_bullets.add(bullet2);
 					_bullets.add(bullet3);
 				}
-				case 3:  // yellow
+				case Reg.Y:  // yellow
 				{
 					// walks around and leaves a constant spore trail
 					var direction:Int;

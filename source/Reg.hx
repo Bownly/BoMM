@@ -57,8 +57,9 @@ class Reg
 
 	
 	//public static var colorArray:Array<Int> = [G, C, M, Y];
-	public static var colorArray:Array<Int> = [G];
-	
+	//public static var colorArray:Array<Int> = [G];
+	public static var colorArray:Array<Int> = [G, C, M, Y];
+
 	public static var globalPalette:Int = G;
 	
 	

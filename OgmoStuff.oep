@@ -54,6 +54,15 @@
   </LayerDefinitions>
   <Tilesets>
     <Tileset>
+      <Name>cave_tiles</Name>
+      <FilePath>assets\images\cavetiles.png</FilePath>
+      <TileSize>
+        <Width>16</Width>
+        <Height>16</Height>
+      </TileSize>
+      <TileSep>0</TileSep>
+    </Tileset>
+    <Tileset>
       <Name>wood</Name>
       <FilePath>assets\images\wood_tiles.png</FilePath>
       <TileSize>
@@ -73,7 +82,7 @@
     </Tileset>
     <Tileset>
       <Name>clouds</Name>
-      <FilePath>assets\images\cloudsnewbig.png</FilePath>
+      <FilePath>assets\images\clouds2.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>

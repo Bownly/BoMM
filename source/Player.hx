@@ -14,6 +14,7 @@ import weapons.MagentaWeapon;
 import weapons.WeaponTemplate;
 import weapons.YellowWeapon;
 
+
 /**
  * ...
  * @author: me
@@ -395,7 +396,8 @@ class Player extends FlxSprite
 			{
 				curWeapon.juice -= curWeapon.juiceCost;
 				velocity.y = -ySpeedJumping;
-			}
+			}		
+			
 		} 	
 		else if (!FlxG.keys.anyPressed(["UP", "J"]) && velocity.y < -150)
 			velocity.y = -100;

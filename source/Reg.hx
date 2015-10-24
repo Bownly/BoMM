@@ -3,8 +3,10 @@ package;
 import flixel.group.FlxTypedGroup;
 import flixel.util.FlxRandom;
 import flixel.util.FlxSave;
+import weapons.ArcWeapon;
 import weapons.Bullet;
 import weapons.EightWayWeapon;
+import weapons.StompEquipment;
 import weapons.WeaponTemplate;
 import weapons.WingsEquipment;
 import weapons.YellowWeapon;
@@ -74,9 +76,9 @@ class Reg
 	public static var pDamage:Int = 1;
 	public static var pLuck:Int = 5;	
 	
-	public static var weapon2:WeaponTemplate = new WeaponTemplate("pea");
+	public static var weapon2:WeaponTemplate = new ArcWeapon("arc");
 	public static var weapon1:WeaponTemplate = new WingsEquipment("wings");
-	public static var weapon3:WeaponTemplate = new EightWayWeapon("cyan");
+	public static var weapon3:WeaponTemplate = new StompEquipment("stomp");
 	
 	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3];
 

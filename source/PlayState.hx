@@ -24,6 +24,8 @@ import flixel.util.FlxPoint;
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.util.FlxRandom;
 import weapons.Bullet;
+import weapons.StompEquipment;
+import weapons.WeaponTemplate;
 
 /**
  * A FlxState which can be used for the actual gameplay.
@@ -211,7 +213,15 @@ class PlayState extends FlxState
 		// right now it's more convenient being in one place...
 		// could just make it a function unto itself, but whatever
 		_hud.updateHUD(_player.hp, _player.curWeapon.juice, _score, _player.curWeapon.name);	
+				
 		
+		
+		
+		
+		
+		
+		Reg.player.curWeapon.stompTimer -= FlxG.elapsed;
+
 		super.update();
 	}	
 	
@@ -331,11 +341,34 @@ class PlayState extends FlxState
 	
 	private function touchEnemy(P:Player, E:enemies.EnemyTemplate):Void 
 	{
-		if (E.alive == true)
+		
+		if (P.curWeapon.stomp && (P.y+E.height)<E.y && P.curWeapon.isUsable() && P.curWeapon.stompTimer <=0 )
+		//if (P.curWeapon.stomp && (P.isTouching(FlxObject.FLOOR)) )
 		{
-			P.takeDamage(1);
-			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
+			E.takeDamage(P.curWeapon.damage);
+			P.velocity.y = -150;
+			P.curWeapon.stompTimer = .1;
+			P.curWeapon.juice -= P.curWeapon.juiceCost;
 		}
+		else 
+		{
+					
+			if (E.alive == true)
+			{
+				P.takeDamage(1);
+			}
+		}
+		
+		if (E.alive == false)
+		{
+			_score++;
+			var health:Int;
+			health = _player.hp;
+			//_hud.updateHUD(health, _score, _player.curWeapon.name);	
+			
+			//_hud.updateHUD(_health, _money);	
+		}
+
 	}
 	private function playerGetHit(P:Player, B:weapons.Bullet):Void 
 	{

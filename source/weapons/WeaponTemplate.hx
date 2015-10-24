@@ -22,11 +22,16 @@ class WeaponTemplate
 	public var bulletCount:Int = 0;
 	
 	public var doubleJump:Bool = false;
+	public var stomp:Bool = false;
+
 	public var isEquipment:Bool = false;
 	
 	public var palette:Int = 0;
 	public var unlocked:Bool = true;
+	
+	public var stompTimer:Float = 0;
 
+	
 	public function new(Name:String, ?Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		name = Name;
@@ -44,7 +49,7 @@ class WeaponTemplate
 	
 	public function shoot(_player:Player)
 	{
-		if (_player.bulletArray.countLiving() < maxBullets && (isUsable() || isEquipment)) 
+		if (_player.bulletArray.countLiving() < maxBullets && (isUsable() || isEquipment))
 		{
 			_player.postShotTimer = .33;
 			

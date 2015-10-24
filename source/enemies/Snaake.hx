@@ -4,6 +4,7 @@ import flixel.FlxObject;
 import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxPoint;
 
 /**
  * ...
@@ -27,6 +28,7 @@ class Snaake extends enemies.EnemyTemplate
 		loadGraphic("assets/images/crawler.png", true, 16, 8);
 		width = 16;
 		height = 8;
+		offset = new FlxPoint(0, -2);
 		
 		facing = FlxObject.LEFT; 
 		//flipX = true;	

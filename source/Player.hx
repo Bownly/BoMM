@@ -45,7 +45,6 @@ class Player extends FlxSprite
 	var inchingTimer:Float = 0;
 	var inchingDuration:Float = .025;
 
-	
 	public var bulletArray:FlxTypedGroup<weapons.Bullet>;
 	public var maxBullets:Int = 3;
 	public var bulletCount:Int = 0;
@@ -71,6 +70,7 @@ class Player extends FlxSprite
 	
 	private var hurtTimer:Float = 0;
 	private var invincTimer:Float = 0;
+	public var stompTimer:Float = 0;
 	
 	private var canMove:Bool = true;
 	
@@ -196,6 +196,11 @@ class Player extends FlxSprite
 	override public function update():Void 
 	{
 	
+		
+		if (stompTimer > 0)
+		{
+			stompTimer -= FlxG.elapsed;
+		}	
 		if (!touchingLadder)
 			isClimbing = false;
 		

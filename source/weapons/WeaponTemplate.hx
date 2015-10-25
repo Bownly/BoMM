@@ -28,8 +28,6 @@ class WeaponTemplate
 	
 	public var palette:Int = 0;
 	public var unlocked:Bool = true;
-	
-	public var stompTimer:Float = 0;
 
 	
 	public function new(Name:String, ?Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 

@@ -176,7 +176,7 @@ class PlayState extends FlxState
 		FlxG.collide(_grpWalls, _grpEnemies);
 		FlxG.collide(_grpWalls, _grpBadBullets);
 		
-		FlxG.overlap(_player, _grpEnemies, touchEnemy);
+		FlxG.collide(_player, _grpEnemies, touchEnemy);
 		FlxG.overlap(_player, _grpBadBullets, playerGetHit);
 		FlxG.overlap(playerBullets, _grpEnemies, bulletTouchEnemy);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
@@ -215,12 +215,7 @@ class PlayState extends FlxState
 		_hud.updateHUD(_player.hp, _player.curWeapon.juice, _score, _player.curWeapon.name);	
 				
 		
-		
-		
-		
-		
-		
-		//Reg.player.curWeapon.stompTimer -= FlxG.elapsed;
+
 
 		super.update();
 	}	
@@ -338,17 +333,32 @@ class PlayState extends FlxState
 		_grpWalls.add(map);
 	} 
 	
-	
+		var test:Int = 0;
+
 	private function touchEnemy(P:Player, E:enemies.EnemyTemplate):Void 
 	{
 		
-		if (P.curWeapon.stomp && (P.y+E.height)<E.y && P.curWeapon.isUsable() && P.curWeapon.stompTimer <=0 )
-		//if (P.curWeapon.stomp && (P.isTouching(FlxObject.FLOOR)) )
+		/**
+		 * set E.immovable. No moving enemy!
+		 * 
+		 * if player is not stomping, somehow fallthrough
+		 */
+		
+		if (P.curWeapon.stomp && (P.y + E.height) <= E.y && P.curWeapon.isUsable() && P.stompTimer <= 0 && E.alive && P.velocity.y > 0)
 		{
+			
 			E.takeDamage(P.curWeapon.damage);
 			P.velocity.y = -150;
-			P.curWeapon.stompTimer = .1;
+			P.stompTimer = .1;
 			P.curWeapon.juice -= P.curWeapon.juiceCost;
+			trace('Stomp');
+		trace("P.h: " + P.height);
+		trace("P.y: " + P.y);
+		trace("E.h: " + E.height);
+		trace("P.y + E.height: " + (P.y + E.height));
+		trace("P.y + P.height: " + (P.y + P.height));
+		trace("E.y: " + E.y);
+		trace("");
 		}
 		else 
 		{

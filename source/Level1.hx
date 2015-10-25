@@ -14,7 +14,7 @@ class Level1 extends PlayState
 		levelId = "1";
 
 		tileName = "assets/images/wood_tiles_persist.png";
-		tileName = "assets/images/cave_tiles.png";
+		tileName = "assets/images/grass_tiles.png";
 	}
 	
 }

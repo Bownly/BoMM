@@ -95,13 +95,11 @@ class PlayState extends FlxState
 		_grpWalls = new FlxTypedGroup<FlxTilemap>();
 		
 		_grpLadders = new FlxTypedGroup<Ladder>();
-		add(_grpLadders);
 		
 		_grpHazards = new FlxTypedGroup<Spike>();
 		add(_grpHazards);
 		
 		_grpEnemies = new FlxGroup();
-		add(_grpEnemies);
 
 		
 		_door = new Door(0, 0, 1, Reg.door1Color);
@@ -115,9 +113,9 @@ class PlayState extends FlxState
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		
-
-		_player = new Player(100, 100, playerBullets);
-
+		
+		_player = new Player(0, 0, playerBullets);
+		
 		
 		dropsGroup = new FlxTypedGroup<Drops>();
 		add(dropsGroup);
@@ -134,12 +132,16 @@ class PlayState extends FlxState
 		
 		
 		_grpBadBullets = new FlxGroup();
-		add(_grpBadBullets);
 		miscGroup = new FlxGroup();
 		add(miscGroup);
 		
 		setUpLevel();		
 		add(_grpWalls);		
+		
+		add(_grpLadders);
+		add(_grpEnemies);
+		
+		add(_grpBadBullets);
 		
 		
 		_grpPlayer = new FlxGroup();
@@ -172,13 +174,14 @@ class PlayState extends FlxState
 	{
 
 		FlxG.collide(_grpWalls, _player);
-		FlxG.collide(_grpWalls, playerBullets);
+		FlxG.collide(_grpWalls, playerBullets, bulletTouchWall);
 		FlxG.collide(_grpWalls, _grpEnemies);
-		FlxG.collide(_grpWalls, _grpBadBullets);
+		FlxG.collide(_grpWalls, _grpBadBullets, bulletTouchWall);
 		
-		FlxG.collide(_player, _grpEnemies, touchEnemy);
+		FlxG.overlap(_player, _grpEnemies, touchEnemy);
 		FlxG.overlap(_player, _grpBadBullets, playerGetHit);
 		FlxG.overlap(playerBullets, _grpEnemies, bulletTouchEnemy);
+		FlxG.overlap(_grpBadBullets, _grpEnemies, badBulletTouchEnemy);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.overlap(_player, dropsGroup, playerTouchDrops);
 		FlxG.overlap(_player, _grpHazards, playerTouchHazard);
@@ -193,7 +196,7 @@ class PlayState extends FlxState
 		
 		if (FlxG.keys.anyPressed(["R"])) 
 		{
-			FlxG.switchState(new PlayState(unlockableColor));
+			FlxG.switchState(new Level1(unlockableColor));
 		}
 		if (FlxG.keys.anyPressed(["T"])) 
 		{
@@ -258,6 +261,11 @@ class PlayState extends FlxState
 		myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_start_" + _newEntrance + ".oel");
 		mTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 		
+		for (tile in 72...84)
+		{
+			mTileMap.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
+		}
+		
 		myOgmoLoader.loadEntities(placeEntities, "entities");
 		
 		_levelHeight += mTileMap.height;
@@ -302,6 +310,10 @@ class PlayState extends FlxState
 	
 	private function setUpMaps(ogmo:FlxOgmoLoader, map:FlxTilemap):Void
 	{
+		for (tile in 72...84)
+		{
+			map.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
+		}
 		
 		var previousWall:FlxTilemap = _grpWalls.members[_grpWalls.length - 1]; 
 		
@@ -332,8 +344,6 @@ class PlayState extends FlxState
 		
 		_grpWalls.add(map);
 	} 
-	
-		var test:Int = 0;
 
 	private function touchEnemy(P:Player, E:enemies.EnemyTemplate):Void 
 	{
@@ -346,7 +356,7 @@ class PlayState extends FlxState
 		
 		if (P.curWeapon.stomp && (P.y + E.height) <= E.y && P.curWeapon.isUsable() && P.stompTimer <= 0 && E.alive && P.velocity.y > 0)
 		{
-			
+			P.invincTimer = .1;
 			E.takeDamage(P.curWeapon.damage);
 			P.velocity.y = -150;
 			P.stompTimer = .1;
@@ -382,9 +392,12 @@ class PlayState extends FlxState
 	}
 	private function playerGetHit(P:Player, B:weapons.Bullet):Void 
 	{
-		if (B.alive == true)
+		if (B.alive == true && B.getDamage() != -1 )
 		{
+			if (P.hurtTimer <= 0)
+				B.onCollision();
 			P.takeDamage(B.getDamage());
+
 			//_hud.updateHUD(_player.hp, _score, _player.curWeapon.name);
 		}
 	}
@@ -393,7 +406,7 @@ class PlayState extends FlxState
 		if (B.alive && B.exists && E.alive && E.exists)
 		{
 			E.takeDamage(B.getDamage());
-				
+			B.kill();
 		}
 		if (E.alive == false)
 		{
@@ -404,6 +417,15 @@ class PlayState extends FlxState
 			
 			//_hud.updateHUD(_health, _money);	
 		}
+	}	
+	private function badBulletTouchEnemy(B:weapons.Bullet, E:enemies.EnemyTemplate):Void 
+	{
+		if (B.alive && B.exists && E.alive && E.exists)
+		{
+			E.collideBadBullet(B);
+		
+		}
+		
 	}
 	private function bulletTouchLadder(B:weapons.Bullet, L:Ladder):Void 
 	{
@@ -418,6 +440,15 @@ class PlayState extends FlxState
 		}
 		
 	}
+	private function bulletTouchWall(F:FlxTilemap, B:weapons.Bullet):Void 
+	{
+		if (B.alive && B.exists)
+		{
+			B.onCollision();
+		}
+		
+	}
+	
 	private function playerTouchBossDoor(P:Player, BD:BossDoor):Void
 	{
 		if (P.alive && P.exists && BD.alive && BD.exists)
@@ -553,7 +584,9 @@ class PlayState extends FlxState
 				case "balun":
 					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 				case "mush":
-					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, Reg.colorArray[palette]));				
+					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, Reg.colorArray[palette]));
+				case "bat":
+					_grpEnemies.add(new enemies.Bat(x, y, _player, dropsGroup, _grpBadBullets, Reg.colorArray[palette]));				
 			}
 		}
 	}

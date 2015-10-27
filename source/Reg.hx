@@ -73,7 +73,7 @@ class Reg
 	//public static var pHP:Int = 3;
 	public static var pMaxHP:Int = 3;
 	public static var pMaxJumps:Int = 2;
-	public static var pDamage:Int = 1;
+	public static var pDamage:Int = 0;
 	public static var pLuck:Int = 5;	
 	
 	public static var weapon2:WeaponTemplate = new ArcWeapon("arc");

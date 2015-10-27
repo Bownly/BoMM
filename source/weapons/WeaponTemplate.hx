@@ -12,7 +12,7 @@ class WeaponTemplate
 {
 	public var name:String;
 	private var bulletArray:FlxTypedGroup<Bullet>;
-	public var damage:Int = 1000;
+	public var damage:Int = 1;
 	
 	public var juice:Int = 9;
 	public var juiceMax:Int = 9;

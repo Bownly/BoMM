@@ -17,6 +17,7 @@ import flixel.util.FlxPoint;
  */
 class Bullet extends FlxSprite
 {
+	public var name:String = "pea";
     private var speed:Float;
     private var direction:Int;
     private var damage:Int;
@@ -24,6 +25,7 @@ class Bullet extends FlxSprite
 	private var ogY:Float;
 	private var RANGE:Int = 128;
 	
+	public var reflectable:Bool = false;
 	
 	/* Weapon ideas list
 	 * 
@@ -65,17 +67,12 @@ class Bullet extends FlxSprite
     override public function update():Void
     {
 		
-		
 		// If the bullet travels too far from its spawn point
 		if (Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE) 
 		{ 
 			kill(); 
 		} 
-		if (isTouching(FlxObject.ANY))  // doesn't work !!!
-		{
-			// We want the bullet to go away when it hits something, not just stop.
-			kill(); 
-		}
+	
 		super.update();
 
     }
@@ -123,6 +120,16 @@ class Bullet extends FlxSprite
 			velocity.x = speed * 0.707;
 			velocity.y = -speed * 0.707;
 		}
+	}
+	
+	public function onCollision():Void
+	{
+		//if (isTouching(FlxObject.ANY)) 
+		//{
+			if (reflectable == false)
+				kill(); 
+
+		//}	
 	}
 	
 }

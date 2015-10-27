@@ -5,6 +5,7 @@ import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxRandom;
+import weapons.Bullet;
 
 /**
  * ...
@@ -88,8 +89,11 @@ class EnemyTemplate extends FlxSprite
 	
 	private function finishKill(_):Void
 	{
-
-		
 		exists = false;
+	}
+	
+	public function collideBadBullet(B:weapons.Bullet):Void
+	{
+		return;
 	}
 }

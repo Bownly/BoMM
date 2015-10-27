@@ -1,5 +1,6 @@
 package;
 import flixel.addons.effects.FlxGlitchSprite;
+import flixel.effects.FlxFlicker;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
@@ -13,7 +14,7 @@ import weapons.EightWayWeapon;
 import weapons.MagentaWeapon;
 import weapons.WeaponTemplate;
 import weapons.YellowWeapon;
-
+using flixel.util.FlxSpriteUtil;
 
 /**
  * ...
@@ -25,7 +26,7 @@ class Player extends FlxSprite
 	public var hp:Int = 3;
 	public var maxHP:Int = 3;
 	public var maxJumps:Int = 2;
-	public var damage:Int = 1;
+	public var damage:Int = 0;
 	public var luck:Int = 5;	
 	
 	var GRAVITY:Int = 15;
@@ -34,7 +35,7 @@ class Player extends FlxSprite
 	var xSpeedWalking:Int = 138;
 	var xSpeedInching:Int = 20;
 	var xSpeedSliding:Int = 250;
-	var xSpeedHurt:Int = 50;
+	var xSpeedHurt:Int = 20;
 	var remainingJumps:Int = 2;
 	
 	var isSliding:Bool = false;
@@ -68,8 +69,8 @@ class Player extends FlxSprite
 	public var isClimbing:Bool = false;
 	public var isClimbingUp:Bool = false;
 	
-	private var hurtTimer:Float = 0;
-	private var invincTimer:Float = 0;
+	public var hurtTimer:Float = 0;
+	public var invincTimer:Float = 0;
 	public var stompTimer:Float = 0;
 	
 	private var canMove:Bool = true;
@@ -104,7 +105,7 @@ class Player extends FlxSprite
 		width = 14;
 		height = 22;
 		offset = new FlxPoint(9, 6);
-		offset = new FlxPoint(9, 3);
+		offset = new FlxPoint(9, 6);
 		
 		
 		var offset = 18; // the amount of sprites in the sheet per color
@@ -128,34 +129,24 @@ class Player extends FlxSprite
 		}
 		
 		// these are for mcgurl(hair).png
-		animation.add("idle_0", [0, 1], 3, true);
-		animation.add("walk_0", [3, 4, 5, 4], 8, true);
-		animation.add("inch_0", [16], 8, true);
-		animation.add("jump_0", [11]);
-		animation.add("fall_0", [12]);
-		animation.add("hurt_0", [15]);
-		
-		animation.add("walk_0_shoot", [8, 9, 10, 9], 8, true);
-		animation.add("idle_0_shoot", [2]);
-		animation.add("inch_0_shoot", [2]);
-		animation.add("jump_0_shoot", [13]);
-		animation.add("fall_0_shoot", [14]);
-		
+		for (i in 0...3) 
+		{
+			animation.add("idle_" + i, [0, 1], 3, true);
+			animation.add("walk_" + i, [3, 4, 5, 4], 8, true);
+			animation.add("inch_" + i, [16], 8, true);
+			animation.add("jump_" + i, [11]);
+			animation.add("fall_" + i, [12]);
+			animation.add("hurt_" + i, [15]);
+			animation.add("climb_" + i, [17, 18], 7, true); 
+			
+			animation.add("walk_" + i + "_shoot", [8, 9, 10, 9], 8, true);
+			animation.add("idle_" + i + "_shoot", [2]);
+			animation.add("inch_" + i + "_shoot", [2]);
+			animation.add("jump_" + i + "_shoot", [13]);
+			animation.add("fall_" + i + "_shoot", [14]);
+		}
 		
 	}
-	
-
-	/* General checklist
-	 * 
-	1. bosses and/or a boss class/system
-	3. Title Screen
-	4. Weapons / upgrades systems / stats 
-	6. movement tweaking with the mc (kinda pointless without overhauling all of my maps...)
-	7. ...which leads to making new levels...
-	9. Adding powerups to treasure rooms, but then I'd have to make powerups first...
-	10. Overhaul ladders. Make them oneway collidible, etc.
-	11. Redo / overhaul the map stiching. It really is pretty bad atm. :T
-	*/
 	
 
 	/* Boss musings
@@ -442,7 +433,9 @@ class Player extends FlxSprite
 			animation.play("slide_" + curWeaponLoc + shootingString);
 		
 		if (velocity.y != 0 && isClimbing) 
-			animation.play("climb_" + curWeaponLoc + shootingString);			
+			animation.play("climb_" + curWeaponLoc + shootingString);	
+		else if (velocity.y == 0 && isClimbing)
+			animation.pause();
 		else if (velocity.y <= 0) 
 		{
 			animation.play("jump_" + curWeaponLoc + shootingString);
@@ -493,8 +486,10 @@ class Player extends FlxSprite
 	{
 		if (invincTimer <= 0)
 		{
-			hurtTimer = 1;
-			invincTimer = 2;
+//			this.flicker();
+			FlxFlicker.flicker(this, 1.5, .1, true, false, null, null);
+			hurtTimer = .75;
+			invincTimer = 1.5;
 			hp -= dmg;
 			animation.play("hurt_" + curWeaponLoc);
 		}		

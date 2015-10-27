@@ -20,10 +20,10 @@ class Mush extends EnemyTemplate
 	private var GRAVITY:Int = 9800;
 	private var GUN_DELAY:Float = 3;
 	private var BULLET_SPEED:Int = 100;
-	private var _HP:Int = 2;
+	private var _HP:Int = 6;
 	private var _bullets:FlxGroup;
 	private var _cooldown:Float;	
-	public var rangeX:Int = 64;
+	public var rangeX:Int = 32;
 	public var ogX:Float;
 	public var postShotTimer:Float = 0;
 	private var palette:Int = 0;	
@@ -69,7 +69,7 @@ class Mush extends EnemyTemplate
 			}
 			shoot();
 			
-			changeColor();
+			changeColor(); // just for testing
 			
 			if (palette == 3)
 				GUN_DELAY = .67;
@@ -145,7 +145,7 @@ class Mush extends EnemyTemplate
 			}
 			// reset the shot clock
 			_cooldown = 0; 
-			if (palette != 3)
+			if (palette != Reg.Y)
 				postShotTimer = .67;
 		}
 		_cooldown += FlxG.elapsed;

@@ -16,7 +16,7 @@
     <Width>5120</Width>
     <Height>5120</Height>
   </LevelMaximumSize>
-  <Filename>C:\Users\Mario\Documents\GitHub\BoMM\OgmoStuff.oep</Filename>
+  <Filename>C:\Project\HaxeFlixel\BoMM\OgmoStuff.oep</Filename>
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>false</CameraEnabled>
   <CameraSize>
@@ -55,7 +55,7 @@
   <Tilesets>
     <Tileset>
       <Name>cave_tiles</Name>
-      <FilePath>assets\images\cave_tiles.png</FilePath>
+      <FilePath>assets\images\cave_grass_tiles.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>

@@ -110,6 +110,19 @@ class Bullet extends FlxSprite
 			velocity.x = -speed * 0.707;
 			velocity.y = -speed * 0.707;
 		}
+		
+		if (direction == FlxObject.LEFT + FlxObject.CEILING + FlxObject.LEFT)
+		{
+			velocity.x = -speed * 0.966;
+			velocity.y = speed * 0.259;
+		}
+		
+		if (direction == FlxObject.LEFT + FlxObject.FLOOR + FlxObject.LEFT)
+		{
+			velocity.x = -speed * 0.966;
+			velocity.y = -speed * 0.259;
+		}	
+		
 		if (direction == FlxObject.RIGHT + FlxObject.FLOOR)
 		{
 			velocity.x = speed * 0.707;
@@ -120,6 +133,19 @@ class Bullet extends FlxSprite
 			velocity.x = speed * 0.707;
 			velocity.y = -speed * 0.707;
 		}
+		
+		if (direction == FlxObject.RIGHT + FlxObject.CEILING + FlxObject.RIGHT)
+		{
+			velocity.x = speed * 0.966;
+			velocity.y = speed * 0.259;
+		}
+		
+		if (direction == FlxObject.RIGHT + FlxObject.FLOOR + FlxObject.RIGHT)
+		{
+			velocity.x = speed * 0.966;
+			velocity.y = -speed * 0.259;
+		}			
+
 	}
 	
 	public function onCollision():Void

@@ -126,7 +126,7 @@ class Player extends FlxSprite
 		}
 		
 		// these are for mcgurl(hair).png
-		for (i in 0...3) 
+		for (i in 0...4) 
 		{
 			animation.add("idle_" + i, [0, 1], 3, true);
 			animation.add("walk_" + i, [3, 4, 5, 4], 8, true);

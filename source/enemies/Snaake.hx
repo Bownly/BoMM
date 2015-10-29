@@ -15,25 +15,39 @@ import flixel.util.FlxPoint;
  
 class Snaake extends enemies.EnemyTemplate
 {
-	//private var XSPEED:Int = 25;
 	private var XSPEED:Int = 50;
+	private var XSPEED1:Int = 50;
 	private var XSPEED2:Int = 100;
-	private var GRAVITY:Int = 9800;
+	private var GRAVITY:Int = 200;
 	private var _HP:Int = 1;
-	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>) 
+	private var palette:Int = Reg.G;	
+
+	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Palette:Int) 
 	{
 		super(X, Y, ThePlayer, _HP, DropsGrp);
-		//loadGraphic("assets/images/notey.png", true, 16, 16);
 		loadGraphic("assets/images/crawler.png", true, 16, 8);
 		width = 16;
 		height = 8;
 		offset = new FlxPoint(0, -2);
 		
+		palette = Palette;
+		
 		facing = FlxObject.LEFT; 
 		//flipX = true;	
 		
-		animation.add("walk", [0, 1], 8, true);
+		var o = 2; // the amount of sprites in the sheet per color
+		switch (palette)
+		{
+			case(Reg.G):
+				o *= 0;
+			case(Reg.C):
+				o *= 1;
+			case(Reg.M):
+				o *= 2;
+			case(Reg.Y):
+				o *= 3;
+		}
+		animation.add("walk", [0 + o, 1 + o], 8, true);
 		
 	}
 	
@@ -44,15 +58,43 @@ class Snaake extends enemies.EnemyTemplate
 			velocity.x = XSPEED;
 			
 			animation.play("walk");
-			acceleration.y = GRAVITY;
+			if (!isTouching(FlxObject.FLOOR))
+				acceleration.y = GRAVITY;
+
 			
-			if (isTouching(FlxObject.WALL))
+			if (isTouching(FlxObject.WALL) || velocity.y > 0)
 				turnAround();
 				
-			if ((_player.y + _player.height) == (y + height))
-				XSPEED = 150;
-			else
-				XSPEED = 50;
+				
+				
+			switch (palette)
+			{
+				case Reg.G:
+				{
+					XSPEED = XSPEED1;
+				}
+				case Reg.C:
+				{
+					if ((_player.y + _player.height) == (y + height))
+						XSPEED = XSPEED2;
+					else
+						XSPEED = XSPEED1;
+				}
+				case Reg.M:
+				{
+					XSPEED = XSPEED2;
+					//if (isTouching(FlxObject.FLOOR))
+						//velocity.y = -100;	
+				}
+				case Reg.Y:
+				{
+					if ((_player.y + _player.height) == (y + height))
+						XSPEED = XSPEED1;
+					else
+						XSPEED = XSPEED2;
+				}
+					
+			}
 			
 			if (flipX == true)
 				XSPEED *= -1;

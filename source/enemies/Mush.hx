@@ -26,7 +26,7 @@ class Mush extends EnemyTemplate
 	public var rangeX:Int = 32;
 	public var ogX:Float;
 	public var postShotTimer:Float = 0;
-	private var palette:Int = 0;	
+	private var palette:Int = Reg.G;	
 	private var sporeSpeed:Int = 40;
 	
 	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Palette:Int) 

@@ -257,7 +257,7 @@ class PlayState extends FlxState
 		 * */
 		
 		// stuff for the start room
-		_newEntrance = FlxRandom.intRanged(1, 1);
+		_newEntrance = FlxRandom.intRanged(1, 2);
 		myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_start_" + _newEntrance + ".oel");
 		mTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 		
@@ -274,11 +274,11 @@ class PlayState extends FlxState
 		
 		
 		var itemRoomPos:Int;
-		itemRoomPos = FlxRandom.intRanged(1, 1);  // Same bounds as the for loop right below, but max is one less than below's. 
+		itemRoomPos = FlxRandom.intRanged(1, 1000);  // Same bounds as the for loop right below, but max is one less than below's. 
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...3) 
+		for (i in 1...4) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -295,7 +295,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 1);
+			id = FlxRandom.intRanged(1, 2);
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -572,7 +572,7 @@ class PlayState extends FlxState
 				case "snobal":
 					_grpEnemies.add(new enemies.Snobal(x, y, _player, dropsGroup));
 				case "snaake":
-					_grpEnemies.add(new enemies.Snaake(x, y, _player, dropsGroup));
+					_grpEnemies.add(new enemies.Snaake(x, y, _player, dropsGroup, Reg.colorArray[palette]));
 				case "metool":
 					_grpEnemies.add(new enemies.Metool(x, y, _player, dropsGroup, _grpBadBullets));
 				case "burd":

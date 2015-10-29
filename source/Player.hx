@@ -35,7 +35,7 @@ class Player extends FlxSprite
 	var xSpeedWalking:Int = 138;
 	var xSpeedInching:Int = 20;
 	var xSpeedSliding:Int = 250;
-	var xSpeedHurt:Int = 20;
+	var xSpeedHurt:Int = 0;
 	var remainingJumps:Int = 2;
 	
 	var isSliding:Bool = false;
@@ -59,11 +59,9 @@ class Player extends FlxSprite
 	public var weapon4:WeaponTemplate;
 	public var weaponArray:Array<WeaponTemplate>;
 	
-	
 	public var shootingString:String = "";
 	public var postShotTimer:Float = 0;
 	public var cooldown:Float;
-
 	
 	private var touchingLadder:Bool = false;
 	public var isClimbing:Bool = false;
@@ -97,7 +95,6 @@ class Player extends FlxSprite
 		bulletArray = Bullets;
 		
 		velocity.y = GRAVITY;
-		//maxVelocity.set(200, 500);
 		drag.set(0, 0);
 		
 		loadGraphic(AssetPaths.mmgurl__png, true, 32, 32);
@@ -486,10 +483,12 @@ class Player extends FlxSprite
 	{
 		if (invincTimer <= 0)
 		{
-//			this.flicker();
-			FlxFlicker.flicker(this, 1.5, .1, true, false, null, null);
-			hurtTimer = .75;
-			invincTimer = 1.5;
+			hurtTimer = .5;
+			if (dmg != 0)
+			{
+				invincTimer = 1.5;
+				FlxFlicker.flicker(this, 1.5, .1, true, false, null, null);
+			}
 			hp -= dmg;
 			animation.play("hurt_" + curWeaponLoc);
 		}		

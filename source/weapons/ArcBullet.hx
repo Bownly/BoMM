@@ -12,7 +12,7 @@ class ArcBullet extends Bullet
 	{
 		super(X, Y, Speed, Direction, Damage, Range);
 		
-		velocity.y = -150;		
+		velocity.y = -120;		
 		acceleration.y = -gravity;
 	}
 	

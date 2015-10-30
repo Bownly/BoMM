@@ -106,5 +106,7 @@
     <coin id="60" x="272" y="304" />
     <coin id="74" x="272" y="288" />
     <door id="0" x="576" y="368" />
+	<exit id="75" x="32" y="464" val="1" />
+
   </entities>
 </level>

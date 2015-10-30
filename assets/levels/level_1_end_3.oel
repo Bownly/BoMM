@@ -110,6 +110,7 @@
     <coin id="75" x="32" y="240" />
     <coin id="78" x="64" y="272" />
     <entrance id="79" x="32" y="0" val="1" />
-    <door id="80" x="576" y="368" />
+    <exit id="75" x="32" y="464" val="1" />
+	<door id="80" x="576" y="368" />
   </entities>
 </level>

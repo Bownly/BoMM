@@ -1,5 +1,6 @@
 package enemies;
 import enemies.EnemyTemplate;
+import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
@@ -64,8 +65,6 @@ class Snaake extends enemies.EnemyTemplate
 			
 			if (isTouching(FlxObject.WALL) || velocity.y > 0)
 				turnAround();
-				
-				
 				
 			switch (palette)
 			{

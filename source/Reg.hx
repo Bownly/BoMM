@@ -82,10 +82,10 @@ class Reg
 	
 	public static var weapon1:WeaponTemplate = new WingsEquipment("wings");
 	public static var weapon2:WeaponTemplate = new ClusterWeapon("cluster");
-	public static var weapon3:WeaponTemplate = new ExWeapon("X");
+	public static var weapon3:WeaponTemplate = new EightWayWeapon("eightway");
 	public static var weapon4:WeaponTemplate = new PlusWeapon("plus");
 	
-	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3, weapon4];
+	 public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3, weapon4];
 
 	
 	

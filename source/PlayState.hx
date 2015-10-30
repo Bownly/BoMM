@@ -2,6 +2,7 @@ package;
 
 import enemies.Balun;
 import enemies.Burd;
+import enemies.EnemySpawner;
 import enemies.EnemyTemplate;
 import enemies.Metool;
 import enemies.Notey;
@@ -49,8 +50,8 @@ class PlayState extends FlxState
 	private var _bossDoor:BossDoor;
 	
 	private var _grpWalls:FlxTypedGroup<FlxTilemap>;
-	private var _levelWidth:Float;
-	private var _levelHeight:Float;
+	private var _levelWidth:Float = 0;
+	private var _levelHeight:Float = 0;
 	
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
@@ -68,7 +69,9 @@ class PlayState extends FlxState
 	private var miscGroup:FlxGroup;
 	
 	private var _newEntrance:Int;
-	
+	var _oldRoomEndY:Int = 0;
+	var _newRoomStartY:Int = 0;
+
 	private var _curMapX:Float = 0;
 	private var _curMapY:Float = 0;
 	
@@ -120,7 +123,7 @@ class PlayState extends FlxState
 		dropsGroup = new FlxTypedGroup<Drops>();
 		add(dropsGroup);
 		
-		var drop = new Drops(320, 320, 0, _player, true);
+		/*var drop = new Drops(320, 320, 0, _player, true);
 		var drop2 = new Drops(340, 320, 2, _player, true);
 		var drop4 = new Drops(360, 320, 4, _player, true);
 		var drop6 = new Drops(380, 320, 6, _player, true);
@@ -129,13 +132,16 @@ class PlayState extends FlxState
 		dropsGroup.add(drop2);
 		dropsGroup.add(drop4);
 		dropsGroup.add(drop6);
-		
+		*/
 		
 		_grpBadBullets = new FlxGroup();
 		miscGroup = new FlxGroup();
 		add(miscGroup);
 		
-		setUpLevel();		
+		
+		setUpLevel();	
+		
+		
 		add(_grpWalls);		
 		
 		add(_grpLadders);
@@ -149,14 +155,9 @@ class PlayState extends FlxState
 		_grpPlayer.add(_player);
 		_grpPlayer.add(playerBullets);
 		
-		trace("colorArray:    " + Reg.colorArray);
-		trace("globalPalette: " + Reg.globalPalette);
-		
 		
 		FlxG.mouse.visible = false;		
-		
-		//FlxG.camera.bgColor = 0x093930FF;
-		//FlxG.camera.bgColor = 0xFF555555;
+
 		FlxG.camera.bgColor = 0x00000000;
 		
 		FlxG.camera.follow(_player,1);
@@ -256,17 +257,30 @@ class PlayState extends FlxState
 		 * ...and... yeah, stuff...
 		 * */
 		
+		 
+		 /*
+		 
+		 
+		 */
+		 
+		 
+		 
+		 
+		 
 		// stuff for the start room
-		_newEntrance = FlxRandom.intRanged(1, 2);
+		_newEntrance = FlxRandom.intRanged(1, 1);
 		myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_start_" + _newEntrance + ".oel");
 		mTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 		
-		for (tile in 72...84)
+		for (tile in 72...84)  // tile collision settings
 		{
 			mTileMap.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
 		}
 		
 		myOgmoLoader.loadEntities(placeEntities, "entities");
+		
+		myOgmoLoader.loadEntities(getExitHeight, "entities");
+		
 		
 		_levelHeight += mTileMap.height;
 		_levelWidth += mTileMap.width;		
@@ -278,7 +292,7 @@ class PlayState extends FlxState
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...4) 
+		for (i in 1...2) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -295,7 +309,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 2);
+			id = FlxRandom.intRanged(4, 4);
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -310,17 +324,19 @@ class PlayState extends FlxState
 	
 	private function setUpMaps(ogmo:FlxOgmoLoader, map:FlxTilemap):Void
 	{
-		for (tile in 72...84)
+		for (tile in 72...84)  // tile collision settings
 		{
 			map.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
 		}
 		
 		var previousWall:FlxTilemap = _grpWalls.members[_grpWalls.length - 1]; 
 		
-		if (_newEntrance == 1 || _newEntrance == 2)
+		if (_newEntrance == 1)
 		{
 			map.x += previousWall.x + previousWall.width;
-			map.y += previousWall.y;
+			ogmo.loadEntities(getEntryHeight, "entities");
+			map.y += previousWall.y + (_oldRoomEndY - _newRoomStartY);
+			
 		}
 		else if (_newEntrance == 3)
 		{
@@ -338,7 +354,8 @@ class PlayState extends FlxState
 		
 		ogmo.loadEntities(placeEntities, "entities");
 		ogmo.loadEntities(getExit, "entities");
-		
+		ogmo.loadEntities(getExitHeight, "entities");
+
 		_levelHeight += map.height;
 		_levelWidth += map.width;
 		
@@ -444,6 +461,7 @@ class PlayState extends FlxState
 	{
 		if (B.alive && B.exists)
 		{
+			trace ("stuff");
 			B.onCollision();
 		}
 		
@@ -522,7 +540,10 @@ class PlayState extends FlxState
 		var x:Float = Std.parseFloat(entityData.get("x"));
 		var y:Float = Std.parseFloat(entityData.get("y"));
 		x += _curMapX;
+		trace("og locY: " + y);
 		y += _curMapY;
+		trace("curmapY: " + _curMapY);
+		trace("local Y: " + y);
 	
 		if (entityName == "player")
 		{
@@ -574,7 +595,7 @@ class PlayState extends FlxState
 				case "snaake":
 					_grpEnemies.add(new enemies.Snaake(x, y, _player, dropsGroup, Reg.colorArray[palette]));
 				case "metool":
-					_grpEnemies.add(new enemies.Metool(x, y, _player, dropsGroup, _grpBadBullets));
+					_grpEnemies.add(new enemies.EnemySpawner(x, y, "metool", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 				case "burd":
 					_grpEnemies.add(new enemies.Burd(x, y, _player, dropsGroup, _grpEnemies));
 				case "notey":
@@ -605,6 +626,23 @@ class PlayState extends FlxState
 		{
 			_newEntrance = Std.parseInt(entityData.get("val"));
 			
+		}
+	}
+	
+	private function getEntryHeight(entityName:String, entityData:Xml):Void
+	{
+		if (entityName == "entrance")
+		{
+			_newRoomStartY = Std.parseInt(entityData.get("y"));
+			
+		}
+	}
+	
+	private function getExitHeight(entityName:String, entityData:Xml):Void
+	{
+		if (entityName == "exit")
+		{
+			_oldRoomEndY = Std.parseInt(entityData.get("y"));			
 		}
 	}
 	

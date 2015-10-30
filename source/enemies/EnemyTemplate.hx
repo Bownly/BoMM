@@ -30,6 +30,7 @@ class EnemyTemplate extends FlxSprite
 	private var _player:Player;
 	private var _health:Int = 2;
 	private var _drops:FlxTypedGroup<Drops>;
+	public var _killed:Bool = false;
 	
 	private var GREY:Int = 0;
 	private var CYAN:Int = 1;
@@ -40,6 +41,8 @@ class EnemyTemplate extends FlxSprite
 	public function new(X:Float, Y:Float, ThePlayer:Player, Health:Int, DropsGrp:FlxTypedGroup<Drops>) 
 	{
 		super(X, Y);
+		x = X;
+		y = Y;
 		_startx = X;
 		_starty = Y;
 		_player = ThePlayer;
@@ -52,7 +55,10 @@ class EnemyTemplate extends FlxSprite
 		if (!isOnScreen())
 		{
 			alive = false;
+			exists = false;
 		}
+	
+		
 	/*	
 		if (isOnScreen)
 		{
@@ -76,6 +82,7 @@ class EnemyTemplate extends FlxSprite
 	
 	override public function kill():Void
 	{
+		
 		var dropChance = FlxRandom.intRanged(0, 1);
 		var dropChance = 1;
 		var dropID = FlxRandom.intRanged(0, 3) * 2;
@@ -83,6 +90,7 @@ class EnemyTemplate extends FlxSprite
 		var newDrop = new Drops(this.x, this.y, dropID, _player, true);
 		_drops.add(newDrop);
 		
+		_killed = true;
 		alive = false;
 		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, complete:finishKill } );
 	}

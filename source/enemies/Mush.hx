@@ -45,14 +45,20 @@ class Mush extends EnemyTemplate
 		facing = FlxObject.LEFT; 
 		flipX = true;	
 		
-		animation.add("walk" + Reg.G, [1, 0, 1, 2], 4, true);
-		animation.add("walk" + Reg.C, [5, 4, 5, 6], 4, true);
-		animation.add("walk" + Reg.M, [9, 8, 9, 10], 4, true);
-		animation.add("walk" + Reg.Y, [13, 12, 13, 14], 4, true);
-		animation.add("spore" + Reg.G, [1, 3, 3, 3, 3], 6, false);
-		animation.add("spore" + Reg.C, [5, 7, 7, 7, 7], 6, false);
-		animation.add("spore" + Reg.M, [9, 11, 11, 11, 11], 6, false);
-		animation.add("spore" + Reg.Y, [13, 15, 15, 15, 15], 6, false);
+		var o = 4; // the amount of sprites in the sheet per color
+		switch (palette)
+		{
+			case(Reg.G):
+				o *= 0;
+			case(Reg.C):
+				o *= 1;
+			case(Reg.M):
+				o *= 2;
+			case(Reg.Y):
+				o *= 3;
+		}
+		animation.add("walk", [1 + o, 0 + o, 1 + o, 2 + o], 4, true);
+		animation.add("spor", [1 + o, 3 + o, 3 + o, 3 + o, 3 + o], 6, false);
 		
 	}
 	
@@ -63,7 +69,7 @@ class Mush extends EnemyTemplate
 			if (postShotTimer <= 0)
 			{
 				velocity.x = XSPEED;			
-				animation.play("walk" + palette);
+				animation.play("walk");
 				if (isTouching(FlxObject.WALL) || (Math.abs(ogX - x) >= rangeX))
 					turnAround();
 			}
@@ -75,8 +81,9 @@ class Mush extends EnemyTemplate
 				GUN_DELAY = .67;
 			else
 				GUN_DELAY = 3;
-			super.update();
 		}
+		super.update();
+
 	}
 	
 
@@ -102,7 +109,7 @@ class Mush extends EnemyTemplate
 				{
 					// spores up
 					velocity.x = 0;  // case dependent
-					animation.play("spore" + palette);  // case dependent
+					animation.play("spore");  // case dependent
 					var bullet = new weapons.Spore(x, y + 8, sporeSpeed, FlxObject.CEILING, 1, 256, 0);
 					_bullets.add(bullet);
 				}
@@ -110,7 +117,7 @@ class Mush extends EnemyTemplate
 				{
 					// spores forward
 					velocity.x = 0;  // case dependent
-					animation.play("spore" + palette);  // case dependent
+					animation.play("spore");  // case dependent
 					var bullet = new weapons.Spore(x, y, sporeSpeed * 0.5, FlxObject.CEILING + facing, 1, 256, 1);
 					var bullet2 = new weapons.Spore(x, y, sporeSpeed * 0.75, FlxObject.CEILING + facing, 1, 256, 1);
 					var bullet3 = new weapons.Spore(x, y, sporeSpeed * 1, FlxObject.CEILING + facing, 1, 256, 1);
@@ -122,7 +129,7 @@ class Mush extends EnemyTemplate
 				{
 					// spores up and to the sides
 					velocity.x = 0;  // case dependent
-					animation.play("spore" + palette);  // case dependent
+					animation.play("spore");  // case dependent
 					var bullet = new weapons.Spore(x, y, sporeSpeed, FlxObject.CEILING + FlxObject.LEFT, 1, 256, 2);
 					var bullet2 = new weapons.Spore(x, y, sporeSpeed, FlxObject.CEILING + FlxObject.RIGHT, 1, 256, 2);
 					var bullet3 = new weapons.Spore(x, y + 8, sporeSpeed, FlxObject.CEILING, 1, 256, 2);

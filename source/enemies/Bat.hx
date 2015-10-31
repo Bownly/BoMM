@@ -128,12 +128,13 @@ class Bat extends EnemyTemplate
 				trace("newY:  " + newY);*/
 			}
 				
-			if (palette == Reg.Y && animation.name == "flap")
+//			if (palette == Reg.Y && animation.name == "flap")
+			if (palette == Reg.Y && animation.name == "flap" && 100 > 1000)  // todo: this is broked
 			{
 				// todo: fix up this movement, dude
-				if (y > newY - 10)
+				if (y > (newY - 10))
 					velocity.y = -40;
-				else if (y < newY + 10)
+				else if (y < (newY + 10))
 					velocity.y = 40;
 				else
 					velocity.y = 0;

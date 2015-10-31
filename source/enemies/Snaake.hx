@@ -98,8 +98,8 @@ class Snaake extends enemies.EnemyTemplate
 			if (flipX == true)
 				XSPEED *= -1;
 				
-			super.update();
 		}
+			super.update();
 	}
 	
 	public function turnAround():Void

@@ -37,7 +37,7 @@ class MenuState extends FlxState
 		
 		grpLevel = new FlxTypedGroup<FlxText>();
 		txtLevel0 = new FlxText(100, 25, 0, "hub", 8);
-		txtLevel1 = new FlxText(100, 50, 0, "Level1", 8);
+		txtLevel1 = new FlxText(100, 50, 0, "Cave", 8);
 		txtLevel2 = new FlxText(100, 75, 0, "Level2", 8);
 		txtLevel3 = new FlxText(100, 100, 0, "Level3", 8);
 		

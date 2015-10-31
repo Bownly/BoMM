@@ -64,6 +64,7 @@ class Mush extends EnemyTemplate
 	
 	public override function update():Void
 	{
+
 		if (isOnScreen()) 
 		{
 			if (postShotTimer <= 0)
@@ -109,7 +110,7 @@ class Mush extends EnemyTemplate
 				{
 					// spores up
 					velocity.x = 0;  // case dependent
-					animation.play("spore");  // case dependent
+					animation.play("spor");  // case dependent
 					var bullet = new weapons.Spore(x, y + 8, sporeSpeed, FlxObject.CEILING, 1, 256, 0);
 					_bullets.add(bullet);
 				}
@@ -117,7 +118,7 @@ class Mush extends EnemyTemplate
 				{
 					// spores forward
 					velocity.x = 0;  // case dependent
-					animation.play("spore");  // case dependent
+					animation.play("spor");  // case dependent
 					var bullet = new weapons.Spore(x, y, sporeSpeed * 0.5, FlxObject.CEILING + facing, 1, 256, 1);
 					var bullet2 = new weapons.Spore(x, y, sporeSpeed * 0.75, FlxObject.CEILING + facing, 1, 256, 1);
 					var bullet3 = new weapons.Spore(x, y, sporeSpeed * 1, FlxObject.CEILING + facing, 1, 256, 1);
@@ -129,7 +130,7 @@ class Mush extends EnemyTemplate
 				{
 					// spores up and to the sides
 					velocity.x = 0;  // case dependent
-					animation.play("spore");  // case dependent
+					animation.play("spor");  // case dependent
 					var bullet = new weapons.Spore(x, y, sporeSpeed, FlxObject.CEILING + FlxObject.LEFT, 1, 256, 2);
 					var bullet2 = new weapons.Spore(x, y, sporeSpeed, FlxObject.CEILING + FlxObject.RIGHT, 1, 256, 2);
 					var bullet3 = new weapons.Spore(x, y + 8, sporeSpeed, FlxObject.CEILING, 1, 256, 2);

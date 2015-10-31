@@ -272,7 +272,7 @@ class PlayState extends FlxState
 		myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_start_" + _newEntrance + ".oel");
 		mTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 		
-		for (tile in 72...84)  // tile collision settings
+		for (tile in 6...7)  // tile collision settings
 		{
 			mTileMap.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
 		}
@@ -292,7 +292,7 @@ class PlayState extends FlxState
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...2) 
+		for (i in 1...17) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -309,7 +309,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(4, 4);
+			id = FlxRandom.intRanged(1, 4);
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -324,7 +324,7 @@ class PlayState extends FlxState
 	
 	private function setUpMaps(ogmo:FlxOgmoLoader, map:FlxTilemap):Void
 	{
-		for (tile in 72...84)  // tile collision settings
+		for (tile in 6...7)  // tile collision settings
 		{
 			map.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
 		}
@@ -378,14 +378,6 @@ class PlayState extends FlxState
 			P.velocity.y = -150;
 			P.stompTimer = .1;
 			P.curWeapon.juice -= P.curWeapon.juiceCost;
-			trace('Stomp');
-		trace("P.h: " + P.height);
-		trace("P.y: " + P.y);
-		trace("E.h: " + E.height);
-		trace("P.y + E.height: " + (P.y + E.height));
-		trace("P.y + P.height: " + (P.y + P.height));
-		trace("E.y: " + E.y);
-		trace("");
 		}
 		else 
 		{
@@ -461,7 +453,6 @@ class PlayState extends FlxState
 	{
 		if (B.alive && B.exists)
 		{
-			trace ("stuff");
 			B.onCollision();
 		}
 		
@@ -540,10 +531,7 @@ class PlayState extends FlxState
 		var x:Float = Std.parseFloat(entityData.get("x"));
 		var y:Float = Std.parseFloat(entityData.get("y"));
 		x += _curMapX;
-		trace("og locY: " + y);
 		y += _curMapY;
-		trace("curmapY: " + _curMapY);
-		trace("local Y: " + y);
 	
 		if (entityName == "player")
 		{
@@ -593,7 +581,7 @@ class PlayState extends FlxState
 				case "snobal":
 					_grpEnemies.add(new enemies.Snobal(x, y, _player, dropsGroup));
 				case "snaake":
-					_grpEnemies.add(new enemies.Snaake(x, y, _player, dropsGroup, Reg.colorArray[palette]));
+					_grpEnemies.add(new enemies.EnemySpawner(x, y, "snaake", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 				case "metool":
 					_grpEnemies.add(new enemies.EnemySpawner(x, y, "metool", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 				case "burd":
@@ -603,11 +591,11 @@ class PlayState extends FlxState
 				case "testboss":
 					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets, this));
 				case "balun":
-					_grpEnemies.add(new Balun(x, y, _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
+					_grpEnemies.add(new enemies.EnemySpawner(x, y, "balun", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 				case "mush":
-					_grpEnemies.add(new enemies.Mush(x, y, _player, dropsGroup, _grpBadBullets, Reg.colorArray[palette]));
+					_grpEnemies.add(new enemies.EnemySpawner(x, y, "metool", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 				case "bat":
-					_grpEnemies.add(new enemies.Bat(x, y, _player, dropsGroup, _grpBadBullets, Reg.colorArray[palette]));				
+					_grpEnemies.add(new enemies.EnemySpawner(x, y, "bat", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
 			}
 		}
 	}

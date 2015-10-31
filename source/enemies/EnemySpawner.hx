@@ -56,8 +56,6 @@ class EnemySpawner extends FlxSprite
 	override public function update():Void
 	{
 		
-		FlxG.watch.add(_enemy, "exists");
-		
 		if (_enemy != null && _enemy._killed == true)
 		{
 			_isEnemyDead = true;
@@ -68,13 +66,11 @@ class EnemySpawner extends FlxSprite
 		if (isOnScreen() && _isEnemyDead == false && _wasOffScreen)
 		{
 			spawnEnemy();
-			trace("enemy spawn");
 
 		}
 		
 		if (!isOnScreen())
 		{
-			trace("off screen spawner");
 			_canSpawnEnemy = false;
 			_wasOffScreen = true;
 		}
@@ -86,7 +82,6 @@ class EnemySpawner extends FlxSprite
 	{
 		_canSpawnEnemy = false;
 		_wasOffScreen = false;
-		var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
 		
 		_enemy = null;	
 		
@@ -96,7 +91,7 @@ class EnemySpawner extends FlxSprite
 				_enemy = new enemies.Snaake(x, y, _player, _grpDrops, _palette);
 			case "metool":
 			//	_enemy = new enemies.Metool(x, y, _player, _grpDrops, _grpBadBullets);
-				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, palette);
+				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette);
 			case "balun":
 				_enemy = new Balun(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "mush":
@@ -109,4 +104,4 @@ class EnemySpawner extends FlxSprite
 			_grpEnemies.add(_enemy);
 		
 	}
-}
+}  

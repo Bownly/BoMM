@@ -191,13 +191,10 @@ class Bat extends EnemyTemplate
 				}
 				case Reg.Y:  // yellow
 				{
-					if (!hasBeenHit)
-					{
-						var bullet = new weapons.Echo(x + 4, y, echoSpeed, perchDirection, 1, 256, flipY);
-						_bullets.add(bullet);
-						echoTimer = 0;
-						
-					}
+					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, perchDirection, 1, 256);
+					_bullets.add(bullet);
+					_cooldown = 0; 
+					postShotTimer = .67;
 				}
 				
 			}

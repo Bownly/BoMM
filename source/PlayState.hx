@@ -66,6 +66,7 @@ class PlayState extends FlxState
 	
 	private var dropsGroup:FlxTypedGroup<Drops>;
 	
+	private var decorationGroup:FlxGroup;
 	private var miscGroup:FlxGroup;
 	
 	private var _newEntrance:Int;
@@ -135,8 +136,10 @@ class PlayState extends FlxState
 		*/
 		
 		_grpBadBullets = new FlxGroup();
+		decorationGroup = new FlxGroup();
 		miscGroup = new FlxGroup();
 		add(miscGroup);
+		add(decorationGroup);
 		
 		
 		setUpLevel();	
@@ -567,6 +570,17 @@ class PlayState extends FlxState
 		else if (entityName == "storePodium")
 		{
 			add(new ShopPodium(x, y, _player, dropsGroup, miscGroup));
+		}
+		else if (entityName == "decoration")
+		{
+			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
+			
+			switch(entityData.get("name"))
+			{
+				case "crystal":
+					decorationGroup.add(new Decoration(x, y, 0));
+					
+			}
 		}
 		else if (entityName == "enemy")
 		{

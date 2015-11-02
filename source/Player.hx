@@ -128,19 +128,21 @@ class Player extends FlxSprite
 		// these are for mcgurl(hair).png
 		for (i in 0...4) 
 		{
-			animation.add("idle_" + i, [0, 1], 3, true);
-			animation.add("walk_" + i, [3, 4, 5, 4], 8, true);
-			animation.add("inch_" + i, [16], 8, true);
-			animation.add("jump_" + i, [11]);
-			animation.add("fall_" + i, [12]);
-			animation.add("hurt_" + i, [15]);
-			animation.add("climb_" + i, [17, 18], 7, true); 
+			var o = 24 * i;
 			
-			animation.add("walk_" + i + "_shoot", [8, 9, 10, 9], 8, true);
-			animation.add("idle_" + i + "_shoot", [2]);
-			animation.add("inch_" + i + "_shoot", [2]);
-			animation.add("jump_" + i + "_shoot", [13]);
-			animation.add("fall_" + i + "_shoot", [14]);
+			animation.add("idle_" + i, [0 + o, 1 + o], 3, true);
+			animation.add("walk_" + i, [3 + o, 4 + o, 5 + o, 4 + o], 8, true);
+			animation.add("inch_" + i, [16 + o], 8, true);
+			animation.add("jump_" + i, [11 + o]);
+			animation.add("fall_" + i, [12 + o]);
+			animation.add("hurt_" + i, [15 + o]);
+			animation.add("climb_" + i, [17 + o, 18 + o], 7, true); 
+			
+			animation.add("walk_" + i + "_shoot", [8 + o, 9 + o, 10 + o, 9 + o], 8, true);
+			animation.add("idle_" + i + "_shoot", [2 + o]);
+			animation.add("inch_" + i + "_shoot", [2 + o]);
+			animation.add("jump_" + i + "_shoot", [13 + o]);
+			animation.add("fall_" + i + "_shoot", [14 + o]);
 		}
 		
 	}

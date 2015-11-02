@@ -21,7 +21,7 @@ class EnemySpawner extends FlxSprite
 	var _palette:Int;
 	
 	var _enemy:EnemyTemplate;
-	var _isEnemyDead:Bool = false;
+	var _wasEnemyKilled:Bool = false;
 	var _canSpawnEnemy:Bool = true;
 	var _notFirstSpawn:Bool = true;
 	var _wasOffScreen:Bool = true;
@@ -55,25 +55,31 @@ class EnemySpawner extends FlxSprite
 	
 	override public function update():Void
 	{
-		
-		if (_enemy != null && _enemy._killed == true)
+		if (_enemy != null)
 		{
-			_isEnemyDead = true;
-			_canSpawnEnemy = false; 
-		}
-
+			if (_enemy != null && _enemy._killed == true)
+			{
+				_wasEnemyKilled = true;
+				_canSpawnEnemy = false; 
+			}
 			
-		if (isOnScreen() && _isEnemyDead == false && _wasOffScreen)
-		{
+			if (isOnScreen() && _wasOffScreen)
+				_canSpawnEnemy = true;
+				
+			if (isOnScreen() && _enemy.exists == false && _wasEnemyKilled == false && _canSpawnEnemy)
+			{
+				spawnEnemy();
+			
+			}
+			
+			if (!isOnScreen())
+			{
+				_canSpawnEnemy = false;
+				_wasOffScreen = true;
+			}
+		}
+		else if (isOnScreen())
 			spawnEnemy();
-
-		}
-		
-		if (!isOnScreen())
-		{
-			_canSpawnEnemy = false;
-			_wasOffScreen = true;
-		}
 		
 		super.update();
 	}

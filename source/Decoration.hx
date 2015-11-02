@@ -20,7 +20,7 @@ class Decoration extends FlxSprite
 	 * 36 = Tiny tree
 	 */
 	
-	public function new(X:Float=0, Y:Float=0, Index:Int) 
+	public function new(X:Float=0, Y:Float=0, Index:Int, ?SpeciesCount:Int=1) 
 	{
 		super(X, Y);
 		loadGraphic(AssetPaths.decorations__png, false, 16, 16);

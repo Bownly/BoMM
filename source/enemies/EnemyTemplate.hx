@@ -57,14 +57,6 @@ class EnemyTemplate extends FlxSprite
 			alive = false;
 			exists = false;
 		}
-	
-		
-	/*	
-		if (isOnScreen)
-		{
-			respawn();
-		}*/
-		
 		
 		super.update();
 		

@@ -24,6 +24,7 @@ import flixel.util.FlxMath;
 import flixel.util.FlxPoint;
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.util.FlxRandom;
+import flixel.util.FlxRect;
 import weapons.Bullet;
 import weapons.StompEquipment;
 import weapons.WeaponTemplate;
@@ -163,13 +164,15 @@ class PlayState extends FlxState
 
 		FlxG.camera.bgColor = 0x00000000;
 		
-		FlxG.camera.follow(_player,1);
-		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
+//		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
+		FlxG.camera.follow(_player, FlxCamera.STYLE_SCREEN_BY_SCREEN, .1);
+		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN_TIGHT);
+		FlxG.camera.deadzone = FlxRect.get((240) * .4, (240) * .3, (240) * .4, (240) * .4);
 		FlxG.camera.setBounds(0, -_levelHeight, _levelWidth, _levelHeight*2);
 		FlxG.worldBounds.set(0, -_levelHeight, _levelWidth, _levelHeight*2);
 		
 		_hud = new HUD();
-		add(_hud);
+		//add(_hud);
 		
 		super.create();
 	}
@@ -221,8 +224,14 @@ class PlayState extends FlxState
 		// could just make it a function unto itself, but whatever
 		_hud.updateHUD(_player.hp, _player.curWeapon.juice, _score, _player.curWeapon.name);	
 				
-		
 
+		var increment = 0;
+		for (wall in _grpWalls)
+		{
+			increment++;
+			FlxG.watch.add(wall.height, "map " + increment);
+		//trace("wall: " + wall.height);
+		}
 
 		super.update();
 	}	
@@ -259,16 +268,7 @@ class PlayState extends FlxState
 		 * Limited verticality perhaps...
 		 * ...and... yeah, stuff...
 		 * */
-		
-		 
-		 /*
-		 
-		 
-		 */
-		 
-		 
-		 
-		 
+
 		 
 		// stuff for the start room
 		_newEntrance = FlxRandom.intRanged(1, 1);
@@ -295,7 +295,7 @@ class PlayState extends FlxState
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...17) 
+		for (i in 1...22) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -312,7 +312,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 4);
+			id = FlxRandom.intRanged(1, 5);  // number of rooms
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -579,6 +579,10 @@ class PlayState extends FlxState
 			{
 				case "crystal":
 					decorationGroup.add(new Decoration(x, y, 0));
+				case "fossil":
+					decorationGroup.add(new Decoration(x, y, 12));					
+				case "grass":
+					decorationGroup.add(new Decoration(x, y, 24));
 					
 			}
 		}

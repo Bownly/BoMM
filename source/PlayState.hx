@@ -152,8 +152,8 @@ class PlayState extends FlxState
 		
 		_grpPlayer = new FlxGroup();
 		add(_grpPlayer);
-		_grpPlayer.add(_player);
 		_grpPlayer.add(playerBullets);
+		_grpPlayer.add(_player);
 		
 		
 		FlxG.mouse.visible = false;		

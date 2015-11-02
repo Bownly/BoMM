@@ -6,7 +6,7 @@ import flixel.group.FlxTypedGroup;
  * ...
  * @author me
  */
-class ArcWeapon extends WeaponTemplate
+class BounceWeapon extends WeaponTemplate
 {
 
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
@@ -27,13 +27,13 @@ class ArcWeapon extends WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new ArcBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256);
+				var newBullet = new BounceBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2) , FlxObject.CEILING + _player.facing, _player.damage + damage, 256, _player, 0, -200);
 
 				_player.bulletArray.add(newBullet);
 			}
 			else
 			{
-				var newBullet = new ArcBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256);
+				var newBullet = new BounceBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2) , FlxObject.CEILING + _player.facing, _player.damage + damage, 256, _player, 0, -200);
 
 				_player.bulletArray.add(newBullet);
 			}

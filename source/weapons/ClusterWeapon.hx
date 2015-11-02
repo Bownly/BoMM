@@ -14,7 +14,7 @@ class ClusterWeapon extends WeaponTemplate
 	{
 		super(Name, Bullets);
 		
-		damage = 5;
+		damage = 1;
 		juice = 9;
 		juiceMax = 9;
 		juiceCost = 1;

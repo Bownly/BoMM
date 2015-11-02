@@ -14,7 +14,7 @@ class SpreadWeapon extends WeaponTemplate
 	{
 		super(Name, Bullets);
 		
-		damage = 5;
+		damage = 3;
 		juice = 9;
 		juiceMax = 9;
 		juiceCost = 1;
@@ -29,8 +29,8 @@ class SpreadWeapon extends WeaponTemplate
 			if (_player.flipX)
 			{	
 				var newBullet = new Bullet(_player.x - 8, _player.y + 8, 200, FlxObject.LEFT, _player.damage + damage, 80);
-				var newBullet1 = new Bullet(_player.x + 2, _player.y + 8, 200, FlxObject.LEFT + FlxObject.CEILING + FlxObject.LEFT, _player.damage + damage, 80);
-				var newBullet2 = new Bullet(_player.x + 2, _player.y + 8, 200, FlxObject.LEFT + FlxObject.FLOOR + FlxObject.LEFT, _player.damage + damage, 80);
+				var newBullet1 = new Bullet(_player.x - 2, _player.y + 8, 200, FlxObject.LEFT + FlxObject.CEILING + FlxObject.LEFT, _player.damage + damage, 80);
+				var newBullet2 = new Bullet(_player.x - 2, _player.y + 8, 200, FlxObject.LEFT + FlxObject.FLOOR + FlxObject.LEFT, _player.damage + damage, 80);
 				
 				_player.bulletArray.add(newBullet);
 				_player.bulletArray.add(newBullet1);

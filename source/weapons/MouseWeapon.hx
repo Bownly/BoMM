@@ -5,8 +5,12 @@ import flixel.group.FlxTypedGroup;
 /**
  * ...
  * @author me
+ * Issues:
+ * -bullet wont despawn (new bullet is made each time)
+ * -bullet cannot travel down walls
+ * -bullet cannot travel under walls
  */
-class ArcWeapon extends WeaponTemplate
+class MouseWeapon extends WeaponTemplate
 {
 
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
@@ -27,13 +31,13 @@ class ArcWeapon extends WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new ArcBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256);
+				var newBullet = new MouseBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2) , FlxObject.LEFT, _player.damage + damage, 256, _player);
 
 				_player.bulletArray.add(newBullet);
 			}
 			else
 			{
-				var newBullet = new ArcBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256);
+				var newBullet = new MouseBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2) , FlxObject.RIGHT, _player.damage + damage, 256, _player);
 
 				_player.bulletArray.add(newBullet);
 			}

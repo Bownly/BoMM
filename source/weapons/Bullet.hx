@@ -114,13 +114,13 @@ class Bullet extends FlxSprite
 		if (direction == FlxObject.LEFT + FlxObject.CEILING + FlxObject.LEFT)
 		{
 			velocity.x = -speed * 0.966;
-			velocity.y = speed * 0.259;
+			velocity.y = speed * 0.2;
 		}
 		
 		if (direction == FlxObject.LEFT + FlxObject.FLOOR + FlxObject.LEFT)
 		{
 			velocity.x = -speed * 0.966;
-			velocity.y = -speed * 0.259;
+			velocity.y = -speed * 0.2;
 		}	
 		
 		if (direction == FlxObject.RIGHT + FlxObject.FLOOR)
@@ -137,13 +137,13 @@ class Bullet extends FlxSprite
 		if (direction == FlxObject.RIGHT + FlxObject.CEILING + FlxObject.RIGHT)
 		{
 			velocity.x = speed * 0.966;
-			velocity.y = speed * 0.259;
+			velocity.y = speed * 0.2;
 		}
 		
 		if (direction == FlxObject.RIGHT + FlxObject.FLOOR + FlxObject.RIGHT)
 		{
 			velocity.x = speed * 0.966;
-			velocity.y = -speed * 0.259;
+			velocity.y = -speed * 0.2;
 		}			
 
 	}

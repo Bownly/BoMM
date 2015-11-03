@@ -53,6 +53,7 @@ class PlayState extends FlxState
 	private var _grpWalls:FlxTypedGroup<FlxTilemap>;
 	private var _levelWidth:Float = 0;
 	private var _levelHeight:Float = 0;
+	var _numRooms:Int = 7;
 	
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
@@ -123,7 +124,6 @@ class PlayState extends FlxState
 		
 		
 		dropsGroup = new FlxTypedGroup<Drops>();
-		add(dropsGroup);
 		
 		/*var drop = new Drops(320, 320, 0, _player, true);
 		var drop2 = new Drops(340, 320, 2, _player, true);
@@ -141,16 +141,15 @@ class PlayState extends FlxState
 		miscGroup = new FlxGroup();
 		add(miscGroup);
 		add(decorationGroup);
+		add(dropsGroup);
 		
 		
 		setUpLevel();	
 		
 		
 		add(_grpWalls);		
-		
 		add(_grpLadders);
 		add(_grpEnemies);
-		
 		add(_grpBadBullets);
 		
 		
@@ -172,7 +171,7 @@ class PlayState extends FlxState
 		FlxG.worldBounds.set(0, -_levelHeight, _levelWidth, _levelHeight*2);
 		
 		_hud = new HUD();
-		//add(_hud);
+		add(_hud);
 		
 		super.create();
 	}
@@ -291,11 +290,11 @@ class PlayState extends FlxState
 		
 		
 		var itemRoomPos:Int;
-		itemRoomPos = FlxRandom.intRanged(1, 1000);  // Same bounds as the for loop right below, but max is one less than below's. 
+		itemRoomPos = FlxRandom.intRanged(1, 8);  // Same bounds as the for loop right below, but max is one less than below's. 
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...22) 
+		for (i in 1...10) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -312,7 +311,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, 5);  // number of rooms
+			id = FlxRandom.intRanged(1, _numRooms);  // number of rooms
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -508,9 +507,15 @@ class PlayState extends FlxState
 				P.isClimbing = true;
 				P.x = L.x;
 			}	
+	
 			
 			if (FlxG.keys.anyPressed(["UP", "W"]) && P.velocity.y == 0) 
 				P.setTouchingLadder(false);	
+		}
+		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && P.isTouching(FlxObject.FLOOR) && P.isClimbing)
+		{
+					P.velocity.y = 0;
+			P.isClimbing = false;
 		}
 		
 		if (P.isClimbing)
@@ -578,11 +583,11 @@ class PlayState extends FlxState
 			switch(entityData.get("name"))
 			{
 				case "crystal":
-					decorationGroup.add(new Decoration(x, y, 0));
+					decorationGroup.add(new Decoration(x, y, 0, 3, 1, 1));
 				case "fossil":
-					decorationGroup.add(new Decoration(x, y, 12));					
-				case "grass":
-					decorationGroup.add(new Decoration(x, y, 24));
+					decorationGroup.add(new Decoration(x, y, 12, 3, 1, 1));					
+				case "torch":
+					decorationGroup.add(new Decoration(x, y, 72, 1, 3, 3));
 					
 			}
 		}

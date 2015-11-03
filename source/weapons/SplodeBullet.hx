@@ -23,7 +23,7 @@ class SplodeBullet extends Bullet
 	
 	override public function update():Void
     {
-		if ((Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE) || (FlxG.keys.anyJustReleased(["SPACE"]))) 
+		if ((Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE) || (FlxG.keys.anyJustReleased(["SPACE", "K"]))) 
 		{ 
 			kill(); 
 				var newBullet = new Bullet(x,  y, 100, FlxObject.LEFT, current_p.damage + damage, 20);

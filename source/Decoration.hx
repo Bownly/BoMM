@@ -14,37 +14,40 @@ class Decoration extends FlxSprite
 	public var free:Bool = true;
 	
 	/* Legend for drops:
-	 * 0 = Crystal
-	 * 12 = Fossil
-	 * 24 = Grass
-	 * 36 = Tiny tree
+	 * Crystal:      id = 000, species = 3, size = 16 x 16, frames = 1
+	 * Fossil:       id = 012, species = 3, size = 16 x 16, frames = 1
+	 * Big rock:     id = 024, species = 1, size = 32 x 32, frames = 1
+	 * Cave dirt 1:  id = 032, species = 1, size = 16 x 16, frames = 1
+	 * Cave dirt 2:  id = 044, species = 1, size = 16 x 16, frames = 1
+	 * Cave torch:   id = 072, species = 1, size = 48 x 48, frames = 3
+	 * 
 	 */
 	
-	public function new(X:Float=0, Y:Float=0, Index:Int, ?SpeciesCount:Int=1) 
+	public function new(X:Float=0, Y:Float=0, Index:Int, SpeciesCount:Int=3, Size:Int=1, Frames:Int=1) 
 	{
 		super(X, Y);
-		loadGraphic(AssetPaths.decorations__png, false, 16, 16);
+		
+		
+		loadGraphic(AssetPaths.cave_decorations__png, false, 16*Size, 16*Size);
 		
 		x = X;
 		y = Y;
-		id = Index;
+		id = Std.int(Index / (Size * Size));
 		
 		var color_offset = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
-		var style_offset = FlxRandom.intRanged(0, 2);
+		var species_offset = FlxRandom.intRanged(0, SpeciesCount -1);
 		
-		id = id + (4 * style_offset) + color_offset;
-		animation.add("idle", [id], 5, true);
-		
-		
-	}
-	
-	public override function update():Void
-	{
-		if (isOnScreen())
+		id = id + (4 * species_offset) + (color_offset * Frames);
+		var framesArray:Array<Int> = [];
+		for (f in 0...(Frames))
 		{
-			animation.play("idle");
-			super.update();
+			framesArray.push(id + f);
 		}
+		
+		animation.add("idle", framesArray, 5, true);
+		
+		animation.play("idle");
+			
 	}
 	
 }

@@ -32,7 +32,7 @@ class Player extends FlxSprite
 	var GRAVITY:Int = 15;
 	var ySpeedJumping:Int = 300;
 	var ySpeedClimbing:Int = 75;
-	var xSpeedWalking:Int = 138;
+	var xSpeedWalking:Int = 125;
 	var xSpeedInching:Int = 20;
 	var xSpeedSliding:Int = 250;
 	var xSpeedHurt:Int = 0;
@@ -360,12 +360,13 @@ class Player extends FlxSprite
 			remainingJumps = maxJumps;
 		}
 
-		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && touchingLadder)
+		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && isClimbing)
 		{
 			velocity.y = ySpeedClimbing;
 			isClimbing = true;
 			remainingJumps = maxJumps;
 		}
+
 		
 		
 		// slide
@@ -379,7 +380,7 @@ class Player extends FlxSprite
 		// jump
 		if (FlxG.keys.anyJustPressed(["UP", "J"]) && isSliding == false) 
 		{
-			if (remainingJumps > 0) 
+			if (remainingJumps > 0 && (isTouching(FlxObject.FLOOR) || isClimbing)) 
 			{
 				if (isClimbing == false)
 					velocity.y = -ySpeedJumping;

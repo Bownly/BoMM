@@ -31,7 +31,7 @@ class MenuState extends FlxState
 	override public function create():Void
 	{
 		super.create();
-		add(new FlxText(6, 9, 200, "Level Select (lol)"));
+		add(new FlxText(6, 9, 200, "Dev Cheat Hacks Level Select"));
 		//FlxG.camera.bgColor = 0xFFBADA55;
 		FlxG.camera.bgColor = 0xFA9FA9;
 		

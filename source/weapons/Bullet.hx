@@ -100,52 +100,60 @@ class Bullet extends FlxSprite
             velocity.y = speed;     
         if (direction == FlxObject.CEILING)
             velocity.y = -speed;     
-		if (direction == FlxObject.LEFT + FlxObject.FLOOR)
-		{
-			velocity.x = -speed * 0.707;
-			velocity.y = speed * 0.707;
-		}
+		
 		if (direction == FlxObject.LEFT + FlxObject.CEILING)
 		{
 			velocity.x = -speed * 0.707;
 			velocity.y = -speed * 0.707;
 		}
-		
-		if (direction == FlxObject.LEFT + FlxObject.CEILING + FlxObject.LEFT)
+		if (direction == FlxObject.LEFT + FlxObject.FLOOR)
+		{
+			velocity.x = -speed * 0.707;
+			velocity.y = speed * 0.707;
+		}
+		if (direction == FlxObject.LEFT * 2 + FlxObject.CEILING)
 		{
 			velocity.x = -speed * 0.966;
 			velocity.y = speed * 0.2;
 		}
-		
-		if (direction == FlxObject.LEFT + FlxObject.FLOOR + FlxObject.LEFT)
+		if (direction == FlxObject.LEFT * 2 + FlxObject.FLOOR)
 		{
 			velocity.x = -speed * 0.966;
 			velocity.y = -speed * 0.2;
 		}	
 		
-		if (direction == FlxObject.RIGHT + FlxObject.FLOOR)
-		{
-			velocity.x = speed * 0.707;
-			velocity.y = speed * 0.707;
-		}
 		if (direction == FlxObject.RIGHT + FlxObject.CEILING)
 		{
 			velocity.x = speed * 0.707;
 			velocity.y = -speed * 0.707;
 		}
-		
-		if (direction == FlxObject.RIGHT + FlxObject.CEILING + FlxObject.RIGHT)
+		if (direction == FlxObject.RIGHT + FlxObject.FLOOR)
+		{
+			velocity.x = speed * 0.707;
+			velocity.y = speed * 0.707;
+		}
+		if (direction == FlxObject.RIGHT * 2 + FlxObject.CEILING)
 		{
 			velocity.x = speed * 0.966;
 			velocity.y = speed * 0.2;
-		}
-		
-		if (direction == FlxObject.RIGHT + FlxObject.FLOOR + FlxObject.RIGHT)
+		}	
+		if (direction == FlxObject.RIGHT * 2 + FlxObject.FLOOR)
 		{
 			velocity.x = speed * 0.966;
 			velocity.y = -speed * 0.2;
 		}			
 
+		if (direction == FlxObject.FLOOR * 8 + FlxObject.LEFT)
+		{
+			velocity.x = -speed * 0.173;
+			velocity.y = speed * 0.985;
+		}		
+		if (direction == FlxObject.FLOOR * 8 + FlxObject.RIGHT)
+		{
+			velocity.x = speed * 0.173;
+			velocity.y = speed * 0.985;
+		}
+		
 	}
 	
 	public function onCollision():Void

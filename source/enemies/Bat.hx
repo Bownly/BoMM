@@ -5,6 +5,7 @@ import flixel.FlxObject;
 import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
 import flixel.util.FlxPoint;
+import flixel.util.FlxRandom;
 import weapons.Bullet;
 
 /**
@@ -14,7 +15,7 @@ import weapons.Bullet;
 class Bat extends EnemyTemplate
 {
 	private var XSPEED:Int = -30;
-	private var GUN_DELAY:Float = 3;
+	private var GUN_DELAY:Float = 1;
 	private var BULLET_SPEED:Int = 100;
 	private var _HP:Int = 2;
 	private var _bullets:FlxGroup;
@@ -22,7 +23,7 @@ class Bat extends EnemyTemplate
 	public var rangeX:Int = 64;
 	public var postShotTimer:Float = 0;
 	private var palette:Int = 0;	
-	private var echoSpeed:Int = 200;
+	private var echoSpeed:Int = 300;
 	private var perchDirection:Int = FlxObject.NONE;
 	var ogY:Float;
 	var newY:Float;
@@ -65,7 +66,7 @@ class Bat extends EnemyTemplate
 		animation.add("flap", [2 + o, 3 + o, 4 + o, 3 + o], 9, true);
 		
 		velocity.y = -1;
-		GUN_DELAY = 2.5;
+		GUN_DELAY = 2;
 
 	}
 	
@@ -168,13 +169,13 @@ class Bat extends EnemyTemplate
 					// okay, so this isn't technically shooting. So sue me
 					if (perchDirection == FlxObject.CEILING)
 					{
-						velocity.y = echoSpeed * -0.5;
+						velocity.y = echoSpeed * -0.33;
 						flipY = false;
 						perchDirection = FlxObject.NONE;
 					}
 					else
 					{
-						velocity.y = echoSpeed;
+						velocity.y = echoSpeed * 0.67;
 						flipY = false;
 					}
 
@@ -191,7 +192,15 @@ class Bat extends EnemyTemplate
 				}
 				case Reg.Y:  // yellow
 				{
-					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, perchDirection, 1, 256);
+					var shotDir = FlxRandom.intRanged(0, 4);
+					if (shotDir == 0)
+						shotDir = FlxObject.RIGHT + FlxObject.FLOOR * 8;
+					else if (shotDir == 1)
+						shotDir = FlxObject.LEFT + FlxObject.FLOOR * 8;
+					else
+						shotDir = FlxObject.FLOOR;
+						
+					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, shotDir, 1, 256);
 					_bullets.add(bullet);
 					_cooldown = 0; 
 					postShotTimer = .67;
@@ -226,7 +235,7 @@ class Bat extends EnemyTemplate
 				perchDirection = FlxObject.NONE;
 				if (flipY)
 					flipY = false;
-				velocity.y = B.velocity.y * -0.5;
+				velocity.y = B.velocity.y * -0.33;
 			}
 			
 		}

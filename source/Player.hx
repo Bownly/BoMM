@@ -143,6 +143,7 @@ class Player extends FlxSprite
 			animation.add("inch_" + i + "_shoot", [2 + o]);
 			animation.add("jump_" + i + "_shoot", [13 + o]);
 			animation.add("fall_" + i + "_shoot", [14 + o]);
+			animation.add("climb_" + i + "_shoot", [20 + o], 7, true); 
 		}
 		
 	}

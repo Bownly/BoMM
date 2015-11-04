@@ -53,13 +53,14 @@ class PlayState extends FlxState
 	private var _grpWalls:FlxTypedGroup<FlxTilemap>;
 	private var _levelWidth:Float = 0;
 	private var _levelHeight:Float = 0;
-	var _numRooms:Int = 7;
+	var _numRooms:Int = 9;
 	
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
 	
 	private var levelId:String = "1";
 	private var tileName:String = "assets/images/wood_tiles.png";
+	var nonCollidableTiles:Array<Int> = [21, 33, 45, 43, 47];
 	
 	private var loader:FlxOgmoLoader;
 	private var midgroundMap:FlxTilemap;
@@ -77,6 +78,7 @@ class PlayState extends FlxState
 
 	private var _curMapX:Float = 0;
 	private var _curMapY:Float = 0;
+	var _curMap:FlxTilemap;
 	
 	private var _hud:HUD;
 	public var _score:Int = 0;
@@ -273,15 +275,16 @@ class PlayState extends FlxState
 		_newEntrance = FlxRandom.intRanged(1, 1);
 		myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_start_" + _newEntrance + ".oel");
 		mTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
+		_curMap = mTileMap;
 		
-		for (tile in 6...7)  // tile collision settings
+		for (tile in nonCollidableTiles)  // tile collision settings
 		{
 			mTileMap.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
 		}
 		
 		myOgmoLoader.loadEntities(placeEntities, "entities");
-		
 		myOgmoLoader.loadEntities(getExitHeight, "entities");
+		
 		
 		
 		_levelHeight += mTileMap.height;
@@ -315,6 +318,7 @@ class PlayState extends FlxState
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
+			_curMap = myTileMap;
 			setUpMaps(myOgmoLoader, myTileMap);
 		}
 		
@@ -326,7 +330,7 @@ class PlayState extends FlxState
 	
 	private function setUpMaps(ogmo:FlxOgmoLoader, map:FlxTilemap):Void
 	{
-		for (tile in 6...7)  // tile collision settings
+		for (tile in nonCollidableTiles)  // tile collision settings
 		{
 			map.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
 		}
@@ -599,27 +603,7 @@ class PlayState extends FlxState
 			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
 			
 			
-			switch(entityData.get("name"))
-			{
-				case "snobal":
-					_grpEnemies.add(new enemies.Snobal(x, y, _player, dropsGroup));
-				case "snaake":
-					_grpEnemies.add(new enemies.EnemySpawner(x, y, "snaake", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
-				case "metool":
-					_grpEnemies.add(new enemies.EnemySpawner(x, y, "metool", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
-				case "burd":
-					_grpEnemies.add(new enemies.Burd(x, y, _player, dropsGroup, _grpEnemies));
-				case "notey":
-					_grpEnemies.add(new enemies.Notey(x, y, _player, dropsGroup));
-				case "testboss":
-					_grpEnemies.add(new Testboss(x, y, _player, dropsGroup, _grpBadBullets, this));
-				case "balun":
-					_grpEnemies.add(new enemies.EnemySpawner(x, y, "balun", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
-				case "mush":
-					_grpEnemies.add(new enemies.EnemySpawner(x, y, "metool", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
-				case "bat":
-					_grpEnemies.add(new enemies.EnemySpawner(x, y, "bat", _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette]));
-			}
+			_grpEnemies.add(new enemies.EnemySpawner(x, y, entityData.get("name"), _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette], _curMap));
 		}
 	}
 	

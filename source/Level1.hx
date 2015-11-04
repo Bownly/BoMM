@@ -7,9 +7,9 @@ package;
 class Level1 extends PlayState
 {
 
-	public function new(clr:Int) 
+	public function new(Color:Int) 
 	{
-		super(clr);
+		super(Color);
 		
 		levelId = "1";
 

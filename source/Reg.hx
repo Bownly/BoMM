@@ -54,6 +54,8 @@ class Reg
 	public static var saves:Array<FlxSave> = [];
 	
 
+	public static var TILESIZE = 16;
+	
 	// color constants
 	public static inline var G:Int = 0x1000;
 	public static inline var C:Int = 0x0100;
@@ -66,8 +68,6 @@ class Reg
 	public static inline var CMY:Int = 0x111;
 
 
-	
-	//public static var colorArray:Array<Int> = [G, C, M, Y];
 	//public static var colorArray:Array<Int> = [G];
 	public static var colorArray:Array<Int> = [G, C, M, Y];
 

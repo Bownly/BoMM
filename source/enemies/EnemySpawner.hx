@@ -5,6 +5,7 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
+import flixel.tile.FlxTilemap;
 import flixel.util.FlxRandom;
 
 /**
@@ -19,6 +20,7 @@ class EnemySpawner extends FlxSprite
 	var _grpEnemies:FlxGroup;
 	var _grpBadBullets:FlxGroup;
 	var _palette:Int;
+	var _map:FlxTilemap;
 	
 	var _enemy:EnemyTemplate;
 	var _wasEnemyKilled:Bool = false;
@@ -35,7 +37,7 @@ class EnemySpawner extends FlxSprite
 	 * ...if it walks off the screen when its spawner is still on screen. */
 	
 	public function new(X:Float = 0, Y:Float = 0, EnemyName:String, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>,
-		Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int) 
+		Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int, Room:FlxTilemap) 
 	{
 		super(X, Y);
 		loadGraphic("assets/images/spike.png", true, 16, 16);
@@ -50,6 +52,7 @@ class EnemySpawner extends FlxSprite
 		_grpEnemies = Enemies;
 		_grpBadBullets = Bullets;
 		_palette = Palette;
+		_map = Room;
 		
 	}
 	
@@ -94,16 +97,22 @@ class EnemySpawner extends FlxSprite
 		switch(_enemyName)
 		{
 			case "snaake":
-				_enemy = new enemies.Snaake(x, y, _player, _grpDrops, _palette);
+				_enemy = new enemies.Snaake(x, y, _player, _grpDrops, _palette, _map);
 			case "metool":
 			//	_enemy = new enemies.Metool(x, y, _player, _grpDrops, _grpBadBullets);
-				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette);
+				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette, _map);
 			case "balun":
 				_enemy = new Balun(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "mush":
-				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette);
+				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette, _map);
 			case "bat":
-				_enemy = new enemies.Bat(x, y, _player, _grpDrops, _grpBadBullets, _palette);				
+				_enemy = new enemies.Bat(x, y, _player, _grpDrops, _grpBadBullets, _palette);	
+			case "stalagmite":
+				_enemy = new enemies.Stalagmite(x, y, _player, _grpDrops);
+			case "stalactyke":
+				_enemy = new enemies.Stalactyke(x, y, _player, _grpDrops);
+			case "hydra":
+				_enemy = new enemies.BossHydra(x, y, _player, _grpDrops);
 		}
 
 			_notFirstSpawn = false;

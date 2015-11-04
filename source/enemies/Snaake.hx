@@ -3,6 +3,7 @@ import enemies.EnemyTemplate;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxTypedGroup;
+import flixel.tile.FlxTilemap;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxPoint;
@@ -22,8 +23,9 @@ class Snaake extends enemies.EnemyTemplate
 	private var GRAVITY:Int = 200;
 	private var _HP:Int = 1;
 	private var palette:Int = Reg.G;	
+	private var map:FlxTilemap;
 
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Palette:Int) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Palette:Int, Room:FlxTilemap) 
 	{
 		super(X, Y, ThePlayer, _HP, DropsGrp);
 		loadGraphic("assets/images/crawler.png", true, 16, 8);
@@ -32,6 +34,7 @@ class Snaake extends enemies.EnemyTemplate
 		offset = new FlxPoint(0, -2);
 		
 		palette = Palette;
+		map = Room;
 		
 		facing = FlxObject.LEFT; 
 		//flipX = true;	
@@ -63,9 +66,11 @@ class Snaake extends enemies.EnemyTemplate
 				acceleration.y = GRAVITY;
 
 			
-			if (isTouching(FlxObject.WALL) || velocity.y > 0)
-				turnAround();
-				
+//			if (isTouching(FlxObject.WALL) || velocity.y > 0)
+//				turnAround();
+			
+			horizontalMovement();
+			
 			switch (palette)
 			{
 				case Reg.G:
@@ -120,4 +125,17 @@ class Snaake extends enemies.EnemyTemplate
 		}
 		return;
 	}
+
+	public function horizontalMovement():Void
+	{
+		if (!flipX && (isTouching(FlxObject.RIGHT) || map.getTile( Math.floor((x + width - map.x) / Reg.TILESIZE ), Math.floor((y + height - map.y) / Reg.TILESIZE )) == -1 ))
+		{
+			turnAround();
+		}		
+		if (flipX && (isTouching(FlxObject.LEFT) || map.getTile( Math.floor((x - map.x) / Reg.TILESIZE ), Math.floor((y + height - map.y) / Reg.TILESIZE )) == -1 ))
+		{
+			turnAround();
+		}
+	}
+	
 }

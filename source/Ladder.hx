@@ -28,7 +28,7 @@ class Ladder extends FlxSprite
 	{
 		super(X, Y);
 		loadGraphic(AssetPaths.ladder__png, false, 16, 16);
-		
+		visible = false;
 		top = Top;
 		
 		allowCollisions = FlxObject.CEILING;

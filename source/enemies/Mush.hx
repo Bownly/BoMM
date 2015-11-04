@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
+import flixel.tile.FlxTilemap;
 import weapons.Spore;
 
 /**
@@ -17,7 +18,7 @@ import weapons.Spore;
 class Mush extends EnemyTemplate
 {
 	private var XSPEED:Int = -30;
-	private var GRAVITY:Int = 9800;
+	private var GRAVITY:Int = 200;
 	private var GUN_DELAY:Float = 3;
 	private var BULLET_SPEED:Int = 100;
 	private var _HP:Int = 6;
@@ -27,9 +28,10 @@ class Mush extends EnemyTemplate
 	public var ogX:Float;
 	public var postShotTimer:Float = 0;
 	private var palette:Int = Reg.G;	
+	private var map:FlxTilemap;
 	private var sporeSpeed:Int = 40;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Palette:Int) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Palette:Int, Room:FlxTilemap) 
 	{
 		super(X, Y, ThePlayer, _HP, DropsGrp);
 		loadGraphic("assets/images/mush.png", true, 16, 16);
@@ -37,6 +39,7 @@ class Mush extends EnemyTemplate
 		height = 16;
 		
 		palette = Palette;
+		map = Room;
 		
 		ogX = X;
 		_bullets = Bullets;
@@ -59,7 +62,16 @@ class Mush extends EnemyTemplate
 		}
 		animation.add("walk", [1 + o, 0 + o, 1 + o, 2 + o], 4, true);
 		animation.add("spor", [1 + o, 3 + o, 3 + o, 3 + o, 3 + o], 6, false);
-		
+				
+		if (palette == Reg.Y)
+		{
+			sporeSpeed = 20;
+			GUN_DELAY = .67;
+		}
+		else
+		{
+			GUN_DELAY = 2;
+		}
 	}
 	
 	public override function update():Void
@@ -67,21 +79,21 @@ class Mush extends EnemyTemplate
 
 		if (isOnScreen()) 
 		{
+			if (!isTouching(FlxObject.FLOOR))
+				acceleration.y = GRAVITY;
+				
 			if (postShotTimer <= 0)
 			{
 				velocity.x = XSPEED;			
 				animation.play("walk");
-				if (isTouching(FlxObject.WALL) || (Math.abs(ogX - x) >= rangeX))
-					turnAround();
+				//if (isTouching(FlxObject.WALL) || (Math.abs(ogX - x) >= rangeX))
+					//turnAround();
+				horizontalMovement();
 			}
 			shoot();
 			
 			changeColor(); // just for testing
-			
-			if (palette == 3)
-				GUN_DELAY = .67;
-			else
-				GUN_DELAY = 3;
+
 		}
 		super.update();
 
@@ -146,7 +158,7 @@ class Mush extends EnemyTemplate
 						direction = FlxObject.LEFT;
 					else
 						direction = FlxObject.RIGHT;
-					var bullet = new weapons.Spore(x - 8, y, sporeSpeed, FlxObject.CEILING + direction, 1, 256, 3);
+					var bullet = new weapons.Spore(x, y, sporeSpeed, FlxObject.CEILING + direction, 1, 256, 3);
 					_bullets.add(bullet);
 				}
 				
@@ -178,4 +190,18 @@ class Mush extends EnemyTemplate
 		}
 		return;
 	}
+
+	public function horizontalMovement():Void
+	{
+
+		if (!flipX && (isTouching(FlxObject.RIGHT) || map.getTile( Math.floor((x + width - map.x) / Reg.TILESIZE ), Math.floor((y + height - map.y) / Reg.TILESIZE )) == -1 ))
+		{
+			turnAround();
+		}		
+		if (flipX && (isTouching(FlxObject.LEFT) || map.getTile( Math.floor((x - map.x) / Reg.TILESIZE ), Math.floor((y + height - map.y) / Reg.TILESIZE )) == -1 ))
+		{
+			turnAround();
+		}
+	}
+	
 }

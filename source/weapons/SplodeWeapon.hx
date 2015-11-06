@@ -13,7 +13,8 @@ class SplodeWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
-		
+		weaponID = 10;
+			
 		damage = 10;
 		juice = 5;
 		juiceMax = 5;

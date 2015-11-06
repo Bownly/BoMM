@@ -12,6 +12,7 @@ class ArcWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
+		weaponID = 1;
 		
 		damage = 1;
 		juice = 9;

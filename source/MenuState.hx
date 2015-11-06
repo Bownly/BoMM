@@ -35,6 +35,10 @@ class MenuState extends FlxState
 		//FlxG.camera.bgColor = 0xFFBADA55;
 		FlxG.camera.bgColor = 0xFA9FA9;
 		
+		
+		FlxG.fullscreen = true;
+		
+		
 		grpLevel = new FlxTypedGroup<FlxText>();
 		txtLevel0 = new FlxText(100, 25, 0, "hub", 8);
 		txtLevel1 = new FlxText(100, 50, 0, "Cave", 8);

@@ -6,12 +6,13 @@ import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxPoint;
 
 /**
  * ...
  * @author ...
  */
-class Metool extends enemies.EnemyTemplate
+class Bombox extends enemies.EnemyTemplate
 {
 	//private var XSPEED:Int = 25;
 	private var XSPEED:Int = 0;
@@ -22,19 +23,37 @@ class Metool extends enemies.EnemyTemplate
 
 	private var _bullets:FlxGroup;
 	private var _cooldown:Float;
+	var palette:Int;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int) 
 	{
 		super(X, Y, ThePlayer, _HP, DropsGrp);
-		loadGraphic("assets/images/metool.png", true, 16, 16);
-		width = 16;
-		height = 16;
+		loadGraphic("assets/images/bombox.png", true, 32, 32);
+		width = 18;
+		height = 17;
+		offset = new FlxPoint(7, 15);
 		
+		palette = Palette;
 		_bullets = Bullets;
 		_cooldown = 0;
 		
-		animation.add("hide", [0]);
-		animation.add("open", [1]);		
+		flipX = true;
+		
+		var o = 2; // the amount of sprites in the sheet per color
+		switch (palette)
+		{
+			case(Reg.G):
+				o *= 0;
+			case(Reg.C):
+				o *= 1;
+			case(Reg.M):
+				o *= 2;
+			case(Reg.Y):
+				o *= 3;
+		}
+		
+		animation.add("hide", [0 + o]);
+		animation.add("open", [1 + o]);		
 	}
 	
 	public override function update():Void

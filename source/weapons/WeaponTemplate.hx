@@ -28,7 +28,27 @@ class WeaponTemplate
 	
 	public var palette:Int = 0;
 	public var unlocked:Bool = true;
+	
+	public var weaponID:Int = 0;
 
+	
+	/* Weapon ID legend:
+	 * 0  =  pea
+	 * 1  =  arc
+	 * 2  =  bounce
+	 * 3  =  cluster
+	 * 4  =  8 way
+	 * 5  =  x shot
+	 * 6  =  follow
+	 * 7  =  mouse
+	 * 8  =  plus
+	 * 9  =  slash
+	 * 10 =  splode
+	 * 11 =  spread
+	 * 12 =  stomp
+	 * 13 =  string
+	 * 14 =  wings
+	*/
 	
 	public function new(Name:String, ?Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{

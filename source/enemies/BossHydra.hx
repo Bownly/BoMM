@@ -26,8 +26,8 @@ class BossHydra extends EnemyTemplate
 		
 		ogY = Y;
 		
-		animation.add("idle", [0]);
-
+		animation.add("idle", [0, 1 , 2, 3, 4, 5], 7, true);
+		animation.play("idle");
 	}
 
 	

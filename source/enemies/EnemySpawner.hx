@@ -98,15 +98,18 @@ class EnemySpawner extends FlxSprite
 		{
 			case "snaake":
 				_enemy = new enemies.Snaake(x, y, _player, _grpDrops, _palette, _map);
-			case "metool":
-			//	_enemy = new enemies.Metool(x, y, _player, _grpDrops, _grpBadBullets);
-				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette, _map);
 			case "balun":
 				_enemy = new Balun(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
+			case "bee":
+				_enemy = new enemies.Bee(x, y, _player, _grpDrops, _grpEnemies, _palette);
+			case "bombox":
+				_enemy = new Bombox(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "mush":
 				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette, _map);
 			case "bat":
 				_enemy = new enemies.Bat(x, y, _player, _grpDrops, _grpBadBullets, _palette);	
+			case "snale":
+				_enemy = new enemies.Snale(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "stalagmite":
 				_enemy = new enemies.Stalagmite(x, y, _player, _grpDrops);
 			case "stalactyke":

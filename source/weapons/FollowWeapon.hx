@@ -12,6 +12,7 @@ class FollowWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
+		weaponID = 6;
 		
 		damage = 1;
 		juice = 9;

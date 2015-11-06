@@ -15,6 +15,7 @@ class FollowBullet extends Bullet
 	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int, P:Player) 
 	{
 		super(X, Y, Speed, Direction, Damage, Range);
+		
 		current_p = P;		
 		current_d = Direction;
 		

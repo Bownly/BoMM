@@ -12,7 +12,8 @@ class BounceWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
-		
+		weaponID = 2;
+
 		damage = 1;
 		juice = 9;
 		juiceMax = 9;

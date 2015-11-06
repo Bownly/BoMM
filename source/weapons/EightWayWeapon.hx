@@ -14,6 +14,7 @@ class EightWayWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
+		weaponID = 4;
 		
 		damage = 5;
 		juice = 9;

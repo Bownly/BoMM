@@ -1,10 +1,10 @@
 package;
 
 import enemies.Balun;
-import enemies.Burd;
+import enemies.Bee;
 import enemies.EnemySpawner;
 import enemies.EnemyTemplate;
-import enemies.Metool;
+import enemies.Bombox;
 import enemies.Notey;
 import enemies.Snaake;
 import enemies.Snobal;
@@ -53,7 +53,8 @@ class PlayState extends FlxState
 	private var _grpWalls:FlxTypedGroup<FlxTilemap>;
 	private var _levelWidth:Float = 0;
 	private var _levelHeight:Float = 0;
-	var _numRooms:Int = 9;
+	var _numRooms:Int = 10;
+	var _numUniqueRooms:Int = 13;
 	
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
@@ -97,6 +98,7 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		
+		
 		_levelHeight = _levelWidth = 0;
 		
 		
@@ -108,7 +110,7 @@ class PlayState extends FlxState
 		add(_grpHazards);
 		
 		_grpEnemies = new FlxGroup();
-
+		
 		
 		_door = new Door(0, 0, 1, Reg.door1Color);
 		add(_door);
@@ -172,7 +174,7 @@ class PlayState extends FlxState
 		FlxG.camera.setBounds(0, -_levelHeight, _levelWidth, _levelHeight*2);
 		FlxG.worldBounds.set(0, -_levelHeight, _levelWidth, _levelHeight*2);
 		
-		_hud = new HUD();
+		_hud = new HUD(_player);
 		add(_hud);
 		
 		super.create();
@@ -209,6 +211,15 @@ class PlayState extends FlxState
 		if (FlxG.keys.anyPressed(["T"])) 
 		{
 			FlxG.switchState(new HubState());
+		}
+		
+		if (FlxG.keys.anyPressed(["F"])) 
+		{
+			if (FlxG.fullscreen)
+				FlxG.fullscreen = false;
+			else
+				FlxG.fullscreen = true;
+			
 		}
 		
 		if (FlxG.keys.anyJustPressed(["P"]))
@@ -297,7 +308,7 @@ class PlayState extends FlxState
 		// TODO Should make those numbers less magic later
 		
 		// stuff for the middle rooms
-		for (i in 1...10) 
+		for (i in 1..._numRooms) 
 		{
 			if (i == itemRoomPos)
 			{
@@ -314,7 +325,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, _numRooms);  // number of rooms
+			id = FlxRandom.intRanged(1, _numUniqueRooms);  // number of rooms
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -511,14 +522,14 @@ class PlayState extends FlxState
 				P.isClimbing = true;
 				P.x = L.x;
 			}	
-	
+			
 			
 			if (FlxG.keys.anyPressed(["UP", "W"]) && P.velocity.y == 0) 
 				P.setTouchingLadder(false);	
 		}
 		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && P.isTouching(FlxObject.FLOOR) && P.isClimbing)
 		{
-					P.velocity.y = 0;
+			P.velocity.y = 0;
 			P.isClimbing = false;
 		}
 		

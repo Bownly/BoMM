@@ -16,6 +16,7 @@ class MouseWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
+		weaponID = 7;
 		
 		damage = 1;
 		juice = 9;

@@ -8,7 +8,7 @@ import flixel.group.FlxTypedGroup;
  * ...
  * @author ...
  */
-class Burd extends enemies.EnemyTemplate
+class Bee extends enemies.EnemyTemplate
 {
 	//private var XSPEED:Int = 25;
 	private var XSPEED:Int = -75;
@@ -17,15 +17,31 @@ class Burd extends enemies.EnemyTemplate
 
 	private var haveEgg:Bool = false;
 	private var egg:enemies.Egg;
+	var palette:Int;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Palette:Int) 
 	{
 		super(X, Y, ThePlayer, _HP, DropsGrp);
-		loadGraphic("assets/images/burd.png", true, 16, 16);
+		loadGraphic("assets/images/bee.png", true, 16, 16);
 		width = 16;
 		height = 16;
 		
-		animation.add("flap", [0, 1], 5, true);
+		palette = Palette;
+		
+		var o = 4; // the amount of sprites in the sheet per color
+		switch (palette)
+		{
+			case(Reg.G):
+				o *= 0;
+			case(Reg.C):
+				o *= 1;
+			case(Reg.M):
+				o *= 2;
+			case(Reg.Y):
+				o *= 3;
+		}
+		
+		animation.add("flap", [0 + o, 1 + o], 5, true);
 		
 		egg = new enemies.Egg(x, y + height, ThePlayer, _drops, XSPEED, Enemies);
 		Enemies.add(egg);

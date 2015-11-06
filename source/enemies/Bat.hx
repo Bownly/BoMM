@@ -15,7 +15,7 @@ import weapons.Bullet;
 class Bat extends EnemyTemplate
 {
 	private var XSPEED:Int = -30;
-	private var GUN_DELAY:Float = 1;
+	private var GUN_DELAY:Float = .4;
 	private var BULLET_SPEED:Int = 100;
 	private var _HP:Int = 2;
 	private var _bullets:FlxGroup;

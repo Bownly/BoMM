@@ -11,7 +11,6 @@ import flixel.util.FlxPoint;
 import flixel.util.FlxPoint;
 import weapons.Bullet;
 import weapons.EightWayWeapon;
-import weapons.MagentaWeapon;
 import weapons.WeaponTemplate;
 import weapons.YellowWeapon;
 using flixel.util.FlxSpriteUtil;
@@ -97,11 +96,9 @@ class Player extends FlxSprite
 		velocity.y = GRAVITY;
 		drag.set(0, 0);
 		
-		loadGraphic(AssetPaths.mmgurl__png, true, 32, 32);
 		loadGraphic(AssetPaths.mcgurlhair__png, true, 32, 32);
 		width = 14;
 		height = 22;
-		offset = new FlxPoint(9, 6);
 		offset = new FlxPoint(9, 6);
 		
 		
@@ -149,18 +146,6 @@ class Player extends FlxSprite
 	}
 	
 
-	/* Boss musings
-	 * 
-	 * Is there any good reason why I would make a boss template class instead of just using enemyTemplate?
-	 * I can't quite think of any. 
-	 * Well what does a boss need that a normal enemy doesn't?
-	 * An on death trigger to goto the next stage
-	 * An on death trigger to unlock a new weapon for the player
-	 * A health bar
-	 * That... That's it I'm pretty sure. A health bar can be done in the level and I can always override kill()...
-	 * But then again, I'd be writing essentially the same code each time. Hmm... I dunno.
-	 * I'm leaning towards no BossTemplate class right now.
-	 * */
 	
 	/* Moving tiles:
 	 make them ogmo entities, but one for each square, or one entity per platform, and use a value thing for length?
@@ -292,6 +277,8 @@ class Player extends FlxSprite
 			flipX = false;
 			facing = FlxObject.RIGHT;
 			isClimbing = false;
+			
+			postShotTimer = 0;
 		}
 		else if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing == false) 
 		{
@@ -309,6 +296,8 @@ class Player extends FlxSprite
 			flipX = true;
 			facing = FlxObject.LEFT;
 			isClimbing = false;
+			
+			postShotTimer = 0;
 		} 
 		else
 			velocity.x = 0;
@@ -336,31 +325,25 @@ class Player extends FlxSprite
 		{
 			flipX = true;
 			facing = FlxObject.LEFT;
+			
+			postShotTimer = 0;
 		}
 		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && isClimbing) 
 		{
 			flipX = false;
 			facing = FlxObject.RIGHT;
+			
+			postShotTimer = 0;
 		}
 		
 		
 		// climbing up and down
 		if (FlxG.keys.anyPressed(["UP", "W"]) && touchingLadder) 
 		{
-			/* Mario TODO
-			 * ladder improvements:
-			 * 1 jump x pos to ladder's x
-			 * 2 do the little climbup animation thing
-			 * 
-			*/
-			
-			
-			
 			velocity.y = -ySpeedClimbing;
 			isClimbing = true;
 			remainingJumps = maxJumps;
 		}
-
 		else if (FlxG.keys.anyPressed(["DOWN", "S"]) && isClimbing)
 		{
 			velocity.y = ySpeedClimbing;

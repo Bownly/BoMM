@@ -13,6 +13,7 @@ class SpreadWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
+		weaponID = 11;
 		
 		damage = 3;
 		juice = 9;

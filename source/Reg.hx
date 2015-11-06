@@ -85,6 +85,7 @@ class Reg
 	public static var pDamage:Int = 0;
 	public static var pLuck:Int = 5;	
 	
+	public static var weaponCount:Int = 16;
 	public static var weapon1:WeaponTemplate = new WingsEquipment("wings");
 	public static var weapon2:WeaponTemplate = new ClusterWeapon("cluster");
 	public static var weapon3:WeaponTemplate = new SplodeWeapon ("splode");

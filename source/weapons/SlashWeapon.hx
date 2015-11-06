@@ -12,6 +12,7 @@ class SlashWeapon extends WeaponTemplate
 	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		super(Name, Bullets);
+		weaponID = 9;
 		
 		damage = 10;
 		juice = 9;

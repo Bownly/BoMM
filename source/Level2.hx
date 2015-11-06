@@ -11,9 +11,11 @@ class Level2 extends PlayState
 	{
 		super(clr);
 		
-		levelId = "1";
-		tileName = "assets/images/wood_tiles3.png";
-		
+		levelId = "2";
+		tileName = "assets/images/forest_tiles.png";
+		nonCollidableTiles = [6, 18, 19, 20, 21, 22, 23, 30, 33, 42, 45];
+		_numRooms = 1;
+
 	}
 	
 }

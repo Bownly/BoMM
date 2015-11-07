@@ -53,8 +53,8 @@ class PlayState extends FlxState
 	private var _grpWalls:FlxTypedGroup<FlxTilemap>;
 	private var _levelWidth:Float = 0;
 	private var _levelHeight:Float = 0;
-	var _numRooms:Int = 10;
-	var _numUniqueRooms:Int = 13;
+	var _numRooms:Int = 20;
+	var _numUniqueRooms:Int = 17;
 	
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
@@ -303,8 +303,8 @@ class PlayState extends FlxState
 		
 		
 		var itemRoomPos:Int;
-		itemRoomPos = FlxRandom.intRanged(1, 8);  // Same bounds as the for loop right below, but max is one less than below's. 
-		// TODO Should make those numbers less magic later
+		itemRoomPos = FlxRandom.intRanged(1, _numRooms - 1);
+	
 		
 		// stuff for the middle rooms
 		for (i in 1..._numRooms) 

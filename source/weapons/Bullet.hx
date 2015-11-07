@@ -68,7 +68,7 @@ class Bullet extends FlxSprite
     {
 		
 		// If the bullet travels too far from its spawn point
-		if (Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE) 
+		if (Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE || !isOnScreen()) 
 		{ 
 			kill(); 
 		} 

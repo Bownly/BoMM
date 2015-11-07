@@ -64,7 +64,7 @@ class HubState extends FlxState
 	override public function create():Void
 	{
 		// TODO: kill this line when you add a start game menu. Shuffle colors on newgame start.
-		if (Reg.door1Color == null)
+		if (Reg.door1Color == -1)
 			Reg.shuffleColors();
 		
 		

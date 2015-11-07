@@ -17,9 +17,9 @@ class Snobal extends enemies.EnemyTemplate
 	private var _HP:Int = 1;
 
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/snobal.png", true, 16, 16);
 		width = 16;
 		height = 16;

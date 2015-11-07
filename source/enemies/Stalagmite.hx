@@ -16,9 +16,9 @@ class Stalagmite extends EnemyTemplate
 	var ogY:Float;
 	var activated:Bool = false;
 
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/stalagmite.png", true, 16, 16);
 		width = 14;
 		height = 16;

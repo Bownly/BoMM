@@ -31,9 +31,9 @@ class Mush extends EnemyTemplate
 	private var map:FlxTilemap;
 	private var sporeSpeed:Int = 40;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Palette:Int, Room:FlxTilemap) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Palette:Int, Room:FlxTilemap) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/mush.png", true, 16, 16);
 		width = 16;
 		height = 16;
@@ -77,8 +77,7 @@ class Mush extends EnemyTemplate
 	public override function update():Void
 	{
 
-		if (isOnScreen()) 
-		{
+
 			if (!isTouching(FlxObject.FLOOR))
 				acceleration.y = GRAVITY;
 				
@@ -94,7 +93,7 @@ class Mush extends EnemyTemplate
 			
 			changeColor(); // just for testing
 
-		}
+		
 		super.update();
 
 	}

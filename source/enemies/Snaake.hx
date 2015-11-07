@@ -25,9 +25,9 @@ class Snaake extends enemies.EnemyTemplate
 	private var palette:Int = Reg.G;	
 	private var map:FlxTilemap;
 
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Palette:Int, Room:FlxTilemap) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Palette:Int, Room:FlxTilemap) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/crawler.png", true, 16, 8);
 		width = 16;
 		height = 8;
@@ -57,8 +57,7 @@ class Snaake extends enemies.EnemyTemplate
 	
 	public override function update():Void
 	{
-		if (isOnScreen()) 
-		{			
+		
 			velocity.x = XSPEED;
 			
 			animation.play("walk");
@@ -103,7 +102,7 @@ class Snaake extends enemies.EnemyTemplate
 			if (flipX == true)
 				XSPEED *= -1;
 				
-		}
+		
 			super.update();
 	}
 	

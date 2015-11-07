@@ -16,9 +16,9 @@ class BabyBurd extends enemies.EnemyTemplate
 	private var YSPEED:Int = 25;
 	private var _HP:Int = 1;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		YSPEED = FlxRandom.intRanged( -10, 10);
 		velocity.y = YSPEED;
 		

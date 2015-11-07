@@ -14,9 +14,9 @@ class BalunString extends EnemyTemplate
 	public var _moving:Int;
 	private var _HP:Int = 9999;
 
-	public function new(X:Float=0, Y:Float=0, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>) 
+	public function new(X:Float=0, Y:Float=0, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/balun.png", true, 16, 16);
 		width = 0;
 		height = 0;

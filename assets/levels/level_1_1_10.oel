@@ -39,5 +39,7 @@
     <spike id="11" x="448" y="256" damage="100" />
     <spike id="12" x="464" y="256" damage="100" />
     <decoration id="13" x="128" y="128" name="fossil" />
+    <enemy id="14" x="128" y="224" name="snale" />
+    <enemy id="15" x="240" y="224" name="snale" />
   </entities>
 </level>

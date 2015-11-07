@@ -25,9 +25,9 @@ class Bombox extends enemies.EnemyTemplate
 	private var _cooldown:Float;
 	var palette:Int;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/bombox.png", true, 32, 32);
 		width = 18;
 		height = 17;

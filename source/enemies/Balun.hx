@@ -37,12 +37,12 @@ class Balun extends EnemyTemplate
 	
 	private var tail:BalunString;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Bullets:FlxGroup, Color:Int) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Bullets:FlxGroup, Color:Int) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		
 		palette = Color;
-		tail = new BalunString(x, y + 16, ThePlayer, DropsGrp);
+		tail = new BalunString(x, y + 16, ThePlayer, Spawner, DropsGrp);
 		Enemies.add(tail);
 		
 		loadGraphic("assets/images/balun.png", true, 16, 16);

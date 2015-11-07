@@ -31,6 +31,7 @@ class EnemyTemplate extends FlxSprite
 	private var _health:Int = 2;
 	private var _drops:FlxTypedGroup<Drops>;
 	public var _killed:Bool = false;
+	private var _spawner:EnemySpawner;
 	
 	private var GREY:Int = 0;
 	private var CYAN:Int = 1;
@@ -38,7 +39,7 @@ class EnemyTemplate extends FlxSprite
 	private var YELLOW:Int = 3;
 
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, Health:Int, DropsGrp:FlxTypedGroup<Drops>) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, Health:Int, DropsGrp:FlxTypedGroup<Drops>) 
 	{
 		super(X, Y);
 		x = X;
@@ -48,11 +49,12 @@ class EnemyTemplate extends FlxSprite
 		_player = ThePlayer;
 		_health = Health;
 		_drops = DropsGrp;
+		_spawner = Spawner;
 	}
 	
 	override public function update():Void 
 	{
-		if (!isOnScreen())
+		if (!isOnScreen() && !_spawner.isOnScreen())
 		{
 			alive = false;
 			exists = false;

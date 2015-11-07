@@ -19,9 +19,9 @@ class Bee extends enemies.EnemyTemplate
 	private var egg:enemies.Egg;
 	var palette:Int;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Palette:Int) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Palette:Int) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/bee.png", true, 16, 16);
 		width = 16;
 		height = 16;
@@ -43,7 +43,7 @@ class Bee extends enemies.EnemyTemplate
 		
 		animation.add("flap", [0 + o, 1 + o], 5, true);
 		
-		egg = new enemies.Egg(x, y + height, ThePlayer, _drops, XSPEED, Enemies);
+		egg = new enemies.Egg(x, y + height, ThePlayer, _spawner, _drops, XSPEED, Enemies);
 		Enemies.add(egg);
 		haveEgg = true;
 	}

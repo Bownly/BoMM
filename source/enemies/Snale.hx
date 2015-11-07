@@ -16,28 +16,56 @@ class Snale extends enemies.EnemyTemplate
 {
 	//private var XSPEED:Int = 25;
 	private var XSPEED:Int = 0;
-	private var GRAVITY:Int = 9800;
-	private var GUN_DELAY:Float = 1.5;
+	private var GRAVITY:Int = 98;
+	private var GUN_DELAY:Float = .5;
 	private var BULLET_SPEED:Int = 100;
 	private var _HP:Int = 2;
 
+	var _bulletDmg:Int = 1;
+	var _bulletXVel:Int = 200;
 	private var _bullets:FlxGroup;
 	private var _cooldown:Float;
+	var shotCount:Int = 0;
+	var shotCountMax:Int = 2;
+	
 	var palette:Int;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int) 
+	var isHiding:Bool = true;
+	var hideTimer:Float = 5;
+	var hideDuration:Float = 2;
+	
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/snale.png", true, 16, 16);
-		width = 18;
-		height = 17;
-		offset = new FlxPoint(7, 15);
+		width = 12;
+		height = 11;
+		offset = new FlxPoint(2, 5);
 		
 		palette = Palette;
 		_bullets = Bullets;
 		_cooldown = 0;
 		
 		//flipX = true;
+		velocity.y = GRAVITY;
+		
+		if (palette == Reg.G)
+		{
+			GUN_DELAY = 1;
+			shotCountMax = 1;
+		}
+		else if (palette == Reg.C)
+		{
+			GUN_DELAY = .33;
+			shotCountMax = 3;
+		}
+		
+		else if (palette == Reg.M)
+		{
+			_bulletDmg = 3;
+			_bulletXVel = 75;
+			GUN_DELAY = 1;
+		}
 		
 		var o = 6; // the amount of sprites in the sheet per color
 		switch (palette)
@@ -52,50 +80,56 @@ class Snale extends enemies.EnemyTemplate
 				o *= 3;
 		}
 		
-		animation.add("hide", [5 + o]);
-		animation.add("open", [4 + o, 3 + o, 2 + o, 1 + o, 0 + o], 5, false);		
+		animation.add("hide", [0 + o, 1 + o, 2 + o, 3 + o, 4 + o, 5 + o], 15, false);
+		animation.add("open", [5 + o, 4 + o, 3 + o, 2 + o, 1 + o, 0 + o], 15, false);		
 	}
 	
 	public override function update():Void
 	{
-		if (isOnScreen()) 
+		if (alive)
 		{
-			velocity.x = velocity.y = 0;
-			
-			var xdistance:Float = _player.x - x;
-			var ydistance:Float = _player.y - y; 
-			var distancesquared:Float = xdistance * xdistance + ydistance * ydistance; 
-			acceleration.y = GRAVITY;
-			
-			if (distancesquared < 16000) 
+			// controls when snale hides and opens
+			if (hideTimer >= hideDuration) 
 			{
-				if (_player.x < x)
+				if (isHiding)
 				{
-					// The sprite is facing the opposite direction than flixel is expecting, so hack it into the right direction
-					
-					facing = FlxObject.RIGHT; 
-					flipX = false;
-					velocity.x = -XSPEED;
-				}
-				else if (_player.x > x)
-				{
-					facing = FlxObject.LEFT;
-					flipX = true;
-					velocity.x = XSPEED;
-				}
-				if (_player.facing == FlxObject.RIGHT)
-					animation.play("hide"); 
-				else
 					animation.play("open");
-			}		
-			else 
-			{
-				animation.play("open");
-				shoot(_player);
+					isHiding = false;
+					hideTimer = 0;
+				}
+				else
+				{
+					animation.play("hide");
+					isHiding = true;
+					if (palette != Reg.Y)
+						hideTimer = 0;
+					else
+						hideTimer = -2;
+					shotCount = 0;
+				}
 			}
-			_cooldown += FlxG.elapsed;
-			super.update();
+			
+			// controls which direction snail faces
+			if (_player.x > x)
+			{					
+				facing = FlxObject.RIGHT; 
+				flipX = true;
+			}
+			else if (_player.x < x)
+			{
+				facing = FlxObject.LEFT;
+				flipX = false;
+			}
+			
+			if (!isHiding)
+			{
+				shoot(_player);
+				_cooldown += FlxG.elapsed;
+			}
+			hideTimer += FlxG.elapsed;
 		}
+		super.update();
+		
 	}
 	
 	private function shoot(P:Player):Void 
@@ -104,12 +138,11 @@ class Snale extends enemies.EnemyTemplate
 		var bulletX:Int = Math.floor(x);
 		var bulletY:Int = Math.floor(y + 4);
 		
-		if (_cooldown > GUN_DELAY)
+		if (_cooldown > GUN_DELAY && shotCount < shotCountMax)
 		{	
-			var bullet = new weapons.Bullet(x - 8, y + 8, 500, FlxObject.LEFT, 1, 256);
+			var bullet = new weapons.Bullet(x + 8, y, _bulletXVel, facing, _bulletDmg, 256);
 			_bullets.add(bullet);
-			
-			
+			shotCount++;
 			// reset the shot clock
 			_cooldown = 0; 
 		}

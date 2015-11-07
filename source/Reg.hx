@@ -81,6 +81,7 @@ class Reg
 	
 	//public static var pHP:Int = 3;
 	public static var pMaxHP:Int = 3;
+	public static var pMaxMaxHP:Int = 3;
 	public static var pMaxJumps:Int = 2;
 	public static var pDamage:Int = 0;
 	public static var pLuck:Int = 5;	
@@ -88,14 +89,13 @@ class Reg
 	public static var weaponCount:Int = 16;
 	public static var weapon1:WeaponTemplate = new WingsEquipment("wings");
 	public static var weapon2:WeaponTemplate = new ClusterWeapon("cluster");
-	public static var weapon3:WeaponTemplate = new SplodeWeapon ("splode");
-	public static var weapon4:WeaponTemplate = new StompEquipment("stomp");
+	public static var weapon3:WeaponTemplate = new SplodeWeapon("splode");
+	public static var weapon4:WeaponTemplate = new SlashWeapon("stomp");
 	
 	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3, weapon4];
 
 	
-	
-	public static var door1Color:Int;
+	public static var door1Color:Int = -1;
 	public static var door2Color:Int;
 	public static var door3Color:Int;
 	

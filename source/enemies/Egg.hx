@@ -28,9 +28,9 @@ class Egg extends enemies.EnemyTemplate
 	private var burdArray:FlxTypedGroup<enemies.BabyBurd>;
 	private var enemArray:FlxGroup;
 
-	public function new(X:Float=0, Y:Float=0, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>, XVel:Int, Enemies:FlxGroup) 
+	public function new(X:Float=0, Y:Float=0, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, XVel:Int, Enemies:FlxGroup) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		XSPEED = XVel;
 		
 		loadGraphic("assets/images/burdegg.png", true, 16, 8);
@@ -73,10 +73,10 @@ class Egg extends enemies.EnemyTemplate
 	
 	private function spawnBirds():Void
 	{
-		babby = new enemies.BabyBurd(x, y, _player, _drops);
-		babby2 = new enemies.BabyBurd(x, y - 10, _player, _drops);
-		babby3 = new enemies.BabyBurd(x + 10, y - 10 + height, _player, _drops);
-		babby4 = new enemies.BabyBurd(x - 10, y - 10 + height, _player, _drops);
+		babby = new enemies.BabyBurd(x, y, _player, _spawner, _drops);
+		babby2 = new enemies.BabyBurd(x, y - 10, _player, _spawner, _drops);
+		babby3 = new enemies.BabyBurd(x + 10, y - 10 + height, _player, _spawner, _drops);
+		babby4 = new enemies.BabyBurd(x - 10, y - 10 + height, _player, _spawner, _drops);
 		
 		burdArray.add(babby);
 		burdArray.add(babby2);

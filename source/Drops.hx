@@ -87,7 +87,7 @@ class Drops extends FlxSprite
 				case 0:  // do Mushroom stuff
 					playerHeal(10);
 				case 2:  // do Butterfly stuff
-					playerHeal(20);
+					playerIncreaseMaxHP(5);
 				case 4:  // do Juice goblet stuff
 					playerJuiceRestore(5);
 				case 6:  // do sword in stone stuff
@@ -109,15 +109,17 @@ class Drops extends FlxSprite
 	
 	private function playerHeal(Val:Int):Void
 	{
-		_player.hp += Val;
+		_player.restoreHP(Val);
+		
 	}
-	
+	private function playerIncreaseMaxHP(Val:Int):Void
+	{
+		_player.increaseMaxHP(Val);
+		
+	}	
 	private function playerJuiceRestore(Val:Int):Void
 	{
-		if (_player.curWeapon.juice + Val > _player.curWeapon.juiceMax)
-			_player.curWeapon.juice = _player.curWeapon.juiceMax;
-		else
-			_player.curWeapon.juice += Val;
+		_player.restoreJuice(Val);
 	}
 	
 	private function weaponStrengthUp(Val:Int):Void

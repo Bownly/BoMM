@@ -112,8 +112,7 @@ class PlayState extends FlxState
 		_grpEnemies = new FlxGroup();
 		
 		
-		_door = new Door(0, 0, 1, Reg.door1Color);
-		add(_door);
+	
 		_bossDoor = new BossDoor();
 		add(_bossDoor);
 		

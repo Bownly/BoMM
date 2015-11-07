@@ -14,9 +14,9 @@ class Notey extends enemies.EnemyTemplate
 	private var GRAVITY:Int = 9800;
 	private var _HP:Int = 1;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>) 
 	{
-		super(X, Y, ThePlayer, _HP, DropsGrp);
+		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/notey.png", true, 16, 16);
 		//loadGraphic("assets/images/shakuhachiman.png", true, 16, 16);
 		width = 16;

@@ -14,8 +14,8 @@ class WeaponTemplate
 	private var bulletArray:FlxTypedGroup<Bullet>;
 	public var damage:Int = 1;
 	
-	public var juice:Int = 9;
-	public var juiceMax:Int = 9;
+	public var juice:Int = 12;
+	public var juiceMax:Int =12;
 	public var juiceCost:Int = 0;
 	
 	public var maxBullets:Int = 3;

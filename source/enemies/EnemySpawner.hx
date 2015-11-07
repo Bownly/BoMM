@@ -10,7 +10,7 @@ import flixel.util.FlxRandom;
 
 /**
  * ...
- * @author ...
+ * @author Me
  */
 class EnemySpawner extends FlxSprite
 {
@@ -97,25 +97,25 @@ class EnemySpawner extends FlxSprite
 		switch(_enemyName)
 		{
 			case "snaake":
-				_enemy = new enemies.Snaake(x, y, _player, _grpDrops, _palette, _map);
+				_enemy = new enemies.Snaake(x, y, _player, this, _grpDrops, _palette, _map);
 			case "balun":
-				_enemy = new Balun(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
+				_enemy = new Balun(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "bee":
-				_enemy = new enemies.Bee(x, y, _player, _grpDrops, _grpEnemies, _palette);
+				_enemy = new enemies.Bee(x, y, _player, this, _grpDrops, _grpEnemies, _palette);
 			case "bombox":
-				_enemy = new Bombox(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
+				_enemy = new Bombox(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "mush":
-				_enemy = new enemies.Mush(x, y, _player, _grpDrops, _grpBadBullets, _palette, _map);
+				_enemy = new enemies.Mush(x, y, _player, this, _grpDrops, _grpBadBullets, _palette, _map);
 			case "bat":
-				_enemy = new enemies.Bat(x, y, _player, _grpDrops, _grpBadBullets, _palette);	
+				_enemy = new enemies.Bat(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);	
 			case "snale":
-				_enemy = new enemies.Snale(x, y, _player, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
+				_enemy = new enemies.Snale(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "stalagmite":
-				_enemy = new enemies.Stalagmite(x, y, _player, _grpDrops);
+				_enemy = new enemies.Stalagmite(x, y, _player, this, _grpDrops);
 			case "stalactyke":
-				_enemy = new enemies.Stalactyke(x, y, _player, _grpDrops);
+				_enemy = new enemies.Stalactyke(x, y, _player, this, _grpDrops);
 			case "hydra":
-				_enemy = new enemies.BossHydra(x, y, _player, _grpDrops);
+				_enemy = new enemies.BossHydra(x, y, _player, this, _grpDrops);
 		}
 
 			_notFirstSpawn = false;

@@ -24,6 +24,7 @@ class Player extends FlxSprite
 	// vars from Reg.hx
 	public var hp:Int = 3;
 	public var maxHP:Int = 3;
+	public var maxMaxHP:Int = 12;
 	public var maxJumps:Int = 2;
 	public var damage:Int = 0;
 	public var luck:Int = 5;	
@@ -171,7 +172,6 @@ class Player extends FlxSprite
 	
 	override public function update():Void 
 	{
-	
 		
 		if (stompTimer > 0)
 		{
@@ -248,14 +248,27 @@ class Player extends FlxSprite
 		Reg.pDamage = damage;
 		Reg.pLuck = luck;*/
 		
+		Reg.pMaxHP = maxHP;
+		Reg.pMaxMaxHP = maxMaxHP;
+		
+		
 		super.destroy();
 	}
+	
 	
 	public function enterBossDoor():Void
 	{
 		canMove = false;
 		x += 32;
 		canMove = true;
+	}
+	
+	public function increaseMaxHP(Val:Int):Void
+	{
+		maxHP += Val;
+		if (maxHP > maxMaxHP)
+			maxHP = maxMaxHP;
+		hp = maxHP;
 	}
 	
 	private function playerInputs():Void
@@ -278,7 +291,6 @@ class Player extends FlxSprite
 			facing = FlxObject.RIGHT;
 			isClimbing = false;
 			
-			postShotTimer = 0;
 		}
 		else if (FlxG.keys.anyPressed(["LEFT", "A"]) && isClimbing == false) 
 		{
@@ -297,7 +309,6 @@ class Player extends FlxSprite
 			facing = FlxObject.LEFT;
 			isClimbing = false;
 			
-			postShotTimer = 0;
 		} 
 		else
 			velocity.x = 0;
@@ -326,14 +337,12 @@ class Player extends FlxSprite
 			flipX = true;
 			facing = FlxObject.LEFT;
 			
-			postShotTimer = 0;
 		}
 		else if (FlxG.keys.anyPressed(["RIGHT", "D"]) && isClimbing) 
 		{
 			flipX = false;
 			facing = FlxObject.RIGHT;
 			
-			postShotTimer = 0;
 		}
 		
 		
@@ -441,7 +450,19 @@ class Player extends FlxSprite
 		}
 		
 	}
-	
+	public function restoreJuice(Val:Int):Void
+	{
+		curWeapon.juice += Val;
+		if (curWeapon.juice > curWeapon.juiceMax)
+			curWeapon.juice = curWeapon.juiceMax;
+	}
+	public function restoreHP(Val:Int):Void
+	{
+		hp += Val;
+		if (hp > maxHP)
+			hp = maxHP;
+	}
+
 	public function setTouchingLadder(bool:Bool):Void
 	{
 		touchingLadder = bool;
@@ -477,6 +498,8 @@ class Player extends FlxSprite
 				FlxFlicker.flicker(this, 1.5, .1, true, false, null, null);
 			}
 			hp -= dmg;
+			if (hp < 0)
+				hp = 0;
 			animation.play("hurt_" + curWeaponLoc);
 		}		
 	}	

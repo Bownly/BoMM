@@ -399,7 +399,6 @@ class Player extends FlxSprite
 		if (FlxG.keys.anyJustPressed(["L"]))
 			switchWeapon();
 	}
-	
 	private function resolveAnimations():Void
 	{
 		if (postShotTimer > 0)

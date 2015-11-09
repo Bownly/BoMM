@@ -41,6 +41,7 @@ class PlayState extends FlxState
 	public var playerBullets:FlxTypedGroup<weapons.Bullet>;
 	
 	private var _grpEnemies:FlxGroup;
+	private var _grpSVNoClipEnemies:FlxGroup;
 	private var _grpBadBullets:FlxGroup;
 	
 	private var _grpCoins:FlxTypedGroup<Coin>;
@@ -110,9 +111,9 @@ class PlayState extends FlxState
 		add(_grpHazards);
 		
 		_grpEnemies = new FlxGroup();
+		_grpSVNoClipEnemies = new FlxGroup();
 		
 		
-	
 		_bossDoor = new BossDoor();
 		add(_bossDoor);
 		
@@ -153,6 +154,8 @@ class PlayState extends FlxState
 		add(_grpWalls);		
 		add(_grpLadders);
 		add(_grpEnemies);
+		add(_grpSVNoClipEnemies);
+		//_grpSVNoClipEnemies.add(_grpEnemies);
 		add(_grpBadBullets);
 		
 		
@@ -188,9 +191,12 @@ class PlayState extends FlxState
 		FlxG.collide(_grpWalls, _grpBadBullets, bulletTouchWall);
 		
 		FlxG.overlap(_player, _grpEnemies, touchEnemy);
+		FlxG.overlap(_player, _grpSVNoClipEnemies, touchEnemy);
 		FlxG.overlap(_player, _grpBadBullets, playerGetHit);
+		FlxG.overlap(playerBullets, _grpSVNoClipEnemies, bulletTouchEnemy);
 		FlxG.overlap(playerBullets, _grpEnemies, bulletTouchEnemy);
 		FlxG.overlap(_grpBadBullets, _grpEnemies, badBulletTouchEnemy);
+		//FlxG.overlap(_grpBadBullets, _grpSVNoClipEnemies, badBulletTouchEnemy);
 		FlxG.overlap(_player, _grpCoins, playerTouchCoin);
 		FlxG.overlap(_player, dropsGroup, playerTouchDrops);
 		FlxG.overlap(_player, _grpHazards, playerTouchHazard);
@@ -613,7 +619,7 @@ class PlayState extends FlxState
 			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
 			
 			
-			_grpEnemies.add(new enemies.EnemySpawner(x, y, entityData.get("name"), _player, dropsGroup, _grpEnemies, _grpBadBullets, Reg.colorArray[palette], _curMap));
+			_grpEnemies.add(new enemies.EnemySpawner(x, y, entityData.get("name"), _player, dropsGroup, _grpEnemies, _grpSVNoClipEnemies, _grpBadBullets, Reg.colorArray[palette], _curMap));
 		}
 	}
 	

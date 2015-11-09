@@ -1,5 +1,5 @@
 package enemies;
-import enemies.Egg;
+import enemies.Beehive;
 import enemies.EnemyTemplate;
 import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
@@ -11,15 +11,15 @@ import flixel.group.FlxTypedGroup;
 class Bee extends enemies.EnemyTemplate
 {
 	//private var XSPEED:Int = 25;
-	private var XSPEED:Int = -75;
+	private var XSPEED:Int = -50;
 	private var GRAVITY:Int = 9800;
 	private var _HP:Int = 1;
 
 	private var haveEgg:Bool = false;
-	private var egg:enemies.Egg;
+	private var egg:enemies.Beehive;
 	var palette:Int;
 	
-	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, Palette:Int) 
+	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Enemies:FlxGroup, SVNoClipEnemies:FlxGroup, Palette:Int) 
 	{
 		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/bee.png", true, 16, 16);
@@ -43,7 +43,7 @@ class Bee extends enemies.EnemyTemplate
 		
 		animation.add("flap", [0 + o, 1 + o], 5, true);
 		
-		egg = new enemies.Egg(x, y + height, ThePlayer, _spawner, _drops, XSPEED, Enemies);
+		egg = new enemies.Beehive(x, y + height, ThePlayer, _spawner, _drops, XSPEED, SVNoClipEnemies, palette);
 		Enemies.add(egg);
 		haveEgg = true;
 	}
@@ -57,11 +57,9 @@ class Bee extends enemies.EnemyTemplate
 			
 			animation.play("flap");
 			
-			var xdistance:Float = _player.x - x;
-			var ydistance:Float = _player.y - y; 
-			var distancesquared:Float = xdistance * xdistance + ydistance * ydistance; 
+			var xdistance:Float = Math.abs(_player.x - x);
 			
-			if (distancesquared < 24000 && haveEgg) 
+			if (xdistance < 80 && haveEgg) 
 			{	
 				dropEgg();
 			}

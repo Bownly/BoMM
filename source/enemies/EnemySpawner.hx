@@ -18,6 +18,7 @@ class EnemySpawner extends FlxSprite
 	var _player:Player;
 	var _grpDrops:FlxTypedGroup<Drops>;
 	var _grpEnemies:FlxGroup;
+	var _grpSVNoClipEnemies:FlxGroup;
 	var _grpBadBullets:FlxGroup;
 	var _palette:Int;
 	var _map:FlxTilemap;
@@ -37,7 +38,7 @@ class EnemySpawner extends FlxSprite
 	 * ...if it walks off the screen when its spawner is still on screen. */
 	
 	public function new(X:Float = 0, Y:Float = 0, EnemyName:String, ThePlayer:Player, DropsGrp:FlxTypedGroup<Drops>,
-		Enemies:FlxGroup, Bullets:FlxGroup, Palette:Int, Room:FlxTilemap) 
+		Enemies:FlxGroup, SVNoClipEnemies:FlxGroup, Bullets:FlxGroup, Palette:Int, Room:FlxTilemap) 
 	{
 		super(X, Y);
 		loadGraphic("assets/images/spike.png", true, 16, 16);
@@ -50,6 +51,7 @@ class EnemySpawner extends FlxSprite
 		_player = ThePlayer;
 		_grpDrops = DropsGrp;
 		_grpEnemies = Enemies;
+		_grpSVNoClipEnemies = SVNoClipEnemies;
 		_grpBadBullets = Bullets;
 		_palette = Palette;
 		_map = Room;
@@ -101,7 +103,7 @@ class EnemySpawner extends FlxSprite
 			case "bat":
 				_enemy = new enemies.Bat(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);	
 			case "bee":
-				_enemy = new enemies.Bee(x, y, _player, this, _grpDrops, _grpEnemies, _palette);
+				_enemy = new enemies.Bee(x, y, _player, this, _grpDrops, _grpEnemies, _grpSVNoClipEnemies, _palette);
 			case "bombox":
 				//_enemy = new Bombox(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 				_enemy = new enemies.Snale(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);

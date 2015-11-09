@@ -35,6 +35,6 @@
     <decoration id="13" x="208" y="176" name="fossil" />
     <decoration id="14" x="112" y="304" name="fossil" />
     <decoration id="15" x="48" y="240" name="fossil" />
-    <enemy id="2" x="112" y="160" name="bombox" />
+    <enemy id="16" x="208" y="48" name="bee" />
   </entities>
 </level>

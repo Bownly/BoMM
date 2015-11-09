@@ -150,7 +150,7 @@ class Snale extends enemies.EnemyTemplate
 	
 	public override function takeDamage(damage:Int):Void
 	{
-		if (animation.name == "open")
+		if (animation.frameIndex != 5)
 		{
 			// TODO quick blinking effect
 			// TODO sound of being hurt

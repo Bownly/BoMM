@@ -35,7 +35,8 @@ class Beehive extends enemies.EnemyTemplate
 		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		XSPEED = XVel;
 		
-		loadGraphic("assets/images/burdegg.png", true, 16, 8);
+	//	loadGraphic("assets/images/burdegg.png", true, 16, 8);
+		loadGraphic("assets/images/beehive.png", true, 16, 16);
 		width = 16;
 		height = 8;
 		

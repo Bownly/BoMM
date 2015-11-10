@@ -103,7 +103,11 @@ class EnemySpawner extends FlxSprite
 			case "bat":
 				_enemy = new enemies.Bat(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);	
 			case "bee":
-				_enemy = new enemies.Bee(x, y, _player, this, _grpDrops, _grpEnemies, _grpSVNoClipEnemies, _palette);
+				{
+					_enemy = new enemies.Bee(x, y, _player, this, _grpDrops, _grpEnemies, _grpSVNoClipEnemies, _palette);
+					_grpSVNoClipEnemies.add(_enemy);
+					return;
+				}
 			case "bombox":
 				//_enemy = new Bombox(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 				_enemy = new enemies.Snale(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);

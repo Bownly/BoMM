@@ -143,16 +143,14 @@ class PlayState extends FlxState
 		_grpBadBullets = new FlxGroup();
 		decorationGroup = new FlxGroup();
 		miscGroup = new FlxGroup();
-		add(miscGroup);
-		add(decorationGroup);
-		add(dropsGroup);
-		
 		
 		setUpLevel();	
 		
-		
+		add(miscGroup);
+		add(decorationGroup);
 		add(_grpWalls);		
 		add(_grpLadders);
+		add(dropsGroup);
 		add(_grpEnemies);
 		add(_grpSVNoClipEnemies);
 		//_grpSVNoClipEnemies.add(_grpEnemies);
@@ -211,7 +209,7 @@ class PlayState extends FlxState
 		
 		if (FlxG.keys.anyPressed(["R"])) 
 		{
-			FlxG.switchState(new Level1(unlockableColor));
+			FlxG.switchState(new Level2(unlockableColor));
 		}
 		if (FlxG.keys.anyPressed(["T"])) 
 		{
@@ -524,8 +522,9 @@ class PlayState extends FlxState
 			
 			if (FlxG.keys.anyPressed(["DOWN", "S"]))
 			{
+				P.y = L.y - 12;
 				P.isClimbing = true;
-				P.x = L.x;
+				P.x = L.x + 1;
 			}	
 			
 			
@@ -539,10 +538,16 @@ class PlayState extends FlxState
 		}
 		
 		if (P.isClimbing)
-			P.x = L.x;
+			P.x = L.x + 1;
 			
-		if (L.top == true && (P.x == L.x) && ((P.y <= L.y) && (P.y >= L.y-20)))
+		if (L.top == true && P.isClimbing && ((P.y <= L.y - 9) && (P.y >= L.y - 12)))
 			P.isClimbingUp = true;
+		else if (L.top && P.isClimbing && P.y < L.y - 12)
+		{
+			P.isClimbing = false;
+			P.isClimbingUp = false;
+			P.y = L.y - P.height - 1;
+		}
 		else
 			P.isClimbingUp = false;		
 
@@ -598,16 +603,29 @@ class PlayState extends FlxState
 		}
 		else if (entityName == "decoration")
 		{
-			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
+		// var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
 			
 			switch(entityData.get("name"))
 			{
+				// cave
 				case "crystal":
-					decorationGroup.add(new Decoration(x, y, 0, 3, 1, 1));
+					decorationGroup.add(new Decoration("cave", x, y, 0, 3, 1, 1, 1));
 				case "fossil":
-					decorationGroup.add(new Decoration(x, y, 12, 3, 1, 1));					
+					decorationGroup.add(new Decoration("cave", x, y, 12, 3, 1, 1, 1));
+				case "boulder":
+					decorationGroup.add(new Decoration("cave", x, y, 24, 1, 2, 2, 1));
 				case "torch":
-					decorationGroup.add(new Decoration(x, y, 72, 1, 3, 3));
+					decorationGroup.add(new Decoration("cave", x, y, 72, 1, 3, 3, 3));
+					
+				// forest
+				case "flower":
+					decorationGroup.add(new Decoration("forest", x, y, 0, 4, 1, 2, 1));
+				case "tinytree":
+					decorationGroup.add(new Decoration("forest", x, y, 32, 2, 2, 2, 1));
+				case "grass":
+					decorationGroup.add(new Decoration("forest", x, y, 64, 4, 1, 1, 1));
+				case "bigtree":
+					decorationGroup.add(new Decoration("forest", x, y, 80, 2, 4, 5, 1));
 					
 			}
 		}

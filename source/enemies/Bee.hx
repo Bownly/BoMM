@@ -43,6 +43,13 @@ class Bee extends enemies.EnemyTemplate
 		
 		animation.add("flap", [0 + o, 1 + o], 5, true);
 		
+		if (x < ThePlayer.x)
+		{
+			flipX = true;
+			XSPEED = -XSPEED;
+		}
+		
+		
 		egg = new enemies.Beehive(x, y + height, ThePlayer, _spawner, _drops, XSPEED, SVNoClipEnemies, palette);
 		Enemies.add(egg);
 		haveEgg = true;
@@ -50,21 +57,19 @@ class Bee extends enemies.EnemyTemplate
 	
 	public override function update():Void
 	{
-		if (isOnScreen()) 
-		{
-			velocity.x = XSPEED;
-			velocity.y = 0;
-			
-			animation.play("flap");
-			
-			var xdistance:Float = Math.abs(_player.x - x);
-			
-			if (xdistance < 80 && haveEgg) 
-			{	
-				dropEgg();
-			}
-			super.update();
+
+		velocity.x = XSPEED;
+		velocity.y = 0;
+		
+		animation.play("flap");
+		
+		var xdistance:Float = Math.abs(_player.x - x);
+		
+		if (xdistance < 80 && haveEgg) 
+		{	
+			dropEgg();
 		}
+		super.update();
 	}
 	
 	public function dropEgg()

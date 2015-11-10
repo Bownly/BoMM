@@ -36,6 +36,7 @@ class Snaake extends enemies.EnemyTemplate
 		palette = Palette;
 		map = Room;
 		
+		y += 8;
 		facing = FlxObject.LEFT; 
 		//flipX = true;	
 		
@@ -61,8 +62,7 @@ class Snaake extends enemies.EnemyTemplate
 			velocity.x = XSPEED;
 			
 			animation.play("walk");
-			if (!isTouching(FlxObject.FLOOR))
-				acceleration.y = GRAVITY;
+
 
 			
 //			if (isTouching(FlxObject.WALL) || velocity.y > 0)

@@ -135,6 +135,7 @@ class Player extends FlxSprite
 			animation.add("fall_" + i, [12 + o]);
 			animation.add("hurt_" + i, [15 + o]);
 			animation.add("climb_" + i, [17 + o, 18 + o], 7, true); 
+			animation.add("climbup_" + i, [21 + o], 7, true); 
 			
 			animation.add("walk_" + i + "_shoot", [8 + o, 9 + o, 10 + o, 9 + o], 8, true);
 			animation.add("idle_" + i + "_shoot", [2 + o]);
@@ -422,7 +423,7 @@ class Player extends FlxSprite
 		else if (velocity.x != 0 && isSliding == false && isInching)
 			animation.play("inch_" + curWeaponLoc + shootingString);
 		else if (velocity.x != 0 && isSliding)
-			animation.play("slide_" + curWeaponLoc + shootingString);
+			animation.play("slide_" + curWeaponLoc);
 		
 		if (velocity.y != 0 && isClimbing) 
 			animation.play("climb_" + curWeaponLoc + shootingString);	
@@ -441,7 +442,7 @@ class Player extends FlxSprite
 		}
 		if (isClimbingUp) 
 		{
-			animation.play("hurt_" + curWeaponLoc + shootingString);
+			animation.play("climbup_" + curWeaponLoc);
 		}
 		if (hurtTimer > 0)
 		{

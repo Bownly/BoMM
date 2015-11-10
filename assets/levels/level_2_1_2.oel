@@ -1,0 +1,69 @@
+<level width="240" height="320" room="0">
+  <walls tileset="forest_tiles" exportMode="CSV">-1,-1,-1,0,0,0,0,0,0,-1,-1,-1,-1,-1,-1
+-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+-1,26,-1,26,-1,26,-1,26,-1,26,-1,26,-1,26,-1
+-1,6,-1,6,-1,6,-1,6,-1,6,-1,6,-1,18,-1
+-1,18,-1,18,-1,18,-1,18,-1,18,-1,18,-1,42,-1
+-1,30,-1,30,-1,30,-1,18,-1,18,-1,42,-1,-1,12
+-1,42,-1,18,-1,42,-1,30,-1,42,-1,-1,-1,-1,36
+-1,18,-1,18,-1,18,-1,42,-1,-1,-1,-1,-1,-1,36
+-1,30,-1,30,-1,42,-1,-1,-1,-1,-1,-1,-1,-1,36
+-1,30,-1,42,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,36
+12,42,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24
+36,42,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,36
+24,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24
+36,-1,-1,44,-1,32,-1,32,-1,44,-1,32,-1,-1,36
+36,49,50,51,52,51,52,50,51,52,51,52,50,53,36
+24,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24
+24,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24
+36,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,36
+36,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24
+24,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,24</walls>
+  <entities>
+    <entrance id="0" x="0" y="144" val="1" />
+    <exit id="1" x="224" y="64" val="1" />
+    <ladder id="2" x="16" y="176" top="False" />
+    <ladder id="3" x="16" y="160" top="False" />
+    <ladder id="4" x="16" y="144" top="False" />
+    <ladder id="5" x="16" y="128" top="False" />
+    <ladder id="6" x="16" y="112" top="False" />
+    <ladder id="7" x="16" y="96" top="False" />
+    <ladder id="8" x="16" y="80" top="False" />
+    <ladder id="9" x="16" y="64" top="False" />
+    <ladder id="10" x="48" y="144" top="False" />
+    <ladder id="11" x="48" y="112" top="False" />
+    <ladder id="12" x="48" y="128" top="False" />
+    <ladder id="13" x="48" y="96" top="False" />
+    <ladder id="14" x="48" y="80" top="False" />
+    <ladder id="15" x="48" y="64" top="False" />
+    <ladder id="16" x="80" y="128" top="False" />
+    <ladder id="17" x="80" y="112" top="False" />
+    <ladder id="18" x="80" y="96" top="False" />
+    <ladder id="19" x="80" y="80" top="False" />
+    <ladder id="20" x="80" y="64" top="False" />
+    <ladder id="22" x="112" y="112" top="False" />
+    <ladder id="23" x="112" y="96" top="False" />
+    <ladder id="24" x="112" y="80" top="False" />
+    <ladder id="25" x="112" y="64" top="False" />
+    <ladder id="27" x="144" y="96" top="False" />
+    <ladder id="28" x="144" y="80" top="False" />
+    <ladder id="29" x="144" y="64" top="False" />
+    <ladder id="32" x="176" y="80" top="False" />
+    <ladder id="33" x="176" y="64" top="False" />
+    <ladder id="35" x="208" y="64" top="False" />
+    <ladder id="36" x="16" y="48" top="True" />
+    <ladder id="37" x="48" y="48" top="True" />
+    <ladder id="38" x="80" y="48" top="True" />
+    <ladder id="39" x="112" y="48" top="True" />
+    <ladder id="40" x="144" y="48" top="True" />
+    <ladder id="41" x="176" y="48" top="True" />
+    <ladder id="42" x="208" y="48" top="True" />
+    <decoration id="26" x="0" y="144" name="flower" />
+    <enemy id="21" x="128" y="0" name="bee" />
+    <spike id="30" x="48" y="208" damage="100" />
+    <spike id="31" x="80" y="208" damage="100" />
+    <spike id="34" x="112" y="208" damage="100" />
+    <spike id="43" x="144" y="208" damage="100" />
+    <spike id="44" x="176" y="208" damage="100" />
+  </entities>
+</level>

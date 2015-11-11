@@ -12,7 +12,7 @@ class Echo extends Bullet
 	
 	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int, YFlip:Bool) 
 	{
-		super(X, Y, Speed, Direction, Damage, Range);
+		super(X, Y, Speed, Direction, Damage, Range, -1, -1);
 		loadGraphic("assets/images/echo.png", true, 8, 8, true);
 	
 		damage = 0;

@@ -24,6 +24,8 @@ class Bullet extends FlxSprite
 	private var ogX:Float;
 	private var ogY:Float;
 	private var RANGE:Int = 128;
+	private var palette:Int;
+	private var frameID:Int;
 	
 	public var reflectable:Bool = false;
 	
@@ -36,21 +38,17 @@ class Bullet extends FlxSprite
 	 * reflector
 		
      * horizontal both directions
-	 * 8 direction
 		
 	 * charge
-	 * grenade
 	 * melee
 	 * ricochet
 	 * homing
-	 * spread
 	 * boomerang
-	 * ground hugger
 	 * anti-air
 	 
 	 * */
 	
-	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int)
+	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int, Palette:Int, FaceDir:Int)
     {
         super(X, Y);
 		ogX = X;
@@ -59,11 +57,71 @@ class Bullet extends FlxSprite
         direction = Direction;
         damage = Damage;
 		RANGE = Range;
-        loadGraphic("assets/images/coin.png", true, 6, 6, true, "bullet");
+		palette = Palette;
+		frameID = FaceDir;
+		
+		resolveAnimations();
+		
+		
 		resolveVelocity();
 		
     }
  
+	public function resolveAnimations():Void
+	{
+		switch(frameID)
+		{
+			case FlxObject.RIGHT:
+				frameID = 0;
+			case FlxObject.LEFT:
+			{
+				frameID = 0;
+				flipX = true;
+			}
+			case FlxObject.UP:
+				frameID = 1;
+			case FlxObject.DOWN:
+			{
+				frameID = 1;
+				flipY = true;
+			}
+			// DOWN = x1000, UP = x0100, RIGHT = x0010, LEFT = x0001
+			case (0x1010):  
+				frameID = 2;
+			case (0x1001):
+			{
+				frameID = 2;
+				flipX = true;
+			}
+			case (0x0110):
+				frameID = 3;	
+			case (0x0101):
+			{
+				frameID = 3;
+				flipX = true;
+			}				
+		}
+		frameID *= 4;
+		var o = 4; // the amount of sprites in the sheet per color
+		switch (palette)
+		{
+			case(Reg.G):
+				o = 0;
+			case(Reg.C):
+				o = 1;
+			case(Reg.M):
+				o = 2;
+			case(Reg.Y):
+				o = 3;
+		}
+		
+		loadGraphic("assets/images/bullet.png", true, 6, 6);
+		width = 6;
+		height = 6;
+		animation.add("bullet", [frameID + o]);
+		animation.play("bullet");
+	}
+	
     override public function update():Void
     {
 		

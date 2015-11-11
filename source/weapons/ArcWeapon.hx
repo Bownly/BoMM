@@ -9,9 +9,9 @@ import flixel.group.FlxTypedGroup;
 class ArcWeapon extends WeaponTemplate
 {
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 1;
 		
 		damage = 1;
@@ -28,13 +28,13 @@ class ArcWeapon extends WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new ArcBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256);
+				var newBullet = new ArcBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256, palette);
 
 				_player.bulletArray.add(newBullet);
 			}
 			else
 			{
-				var newBullet = new ArcBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256);
+				var newBullet = new ArcBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2), FlxObject.CEILING + _player.facing, _player.damage + damage, 256, palette);
 
 				_player.bulletArray.add(newBullet);
 			}

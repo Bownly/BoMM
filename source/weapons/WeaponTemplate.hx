@@ -26,7 +26,7 @@ class WeaponTemplate
 
 	public var isEquipment:Bool = false;
 	
-	public var palette:Int = 0;
+	public var palette:Int;
 	public var unlocked:Bool = true;
 	
 	public var weaponID:Int = 0;
@@ -50,7 +50,7 @@ class WeaponTemplate
 	 * 14 =  wings
 	*/
 	
-	public function new(Name:String, ?Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
 		name = Name;
 		bulletArray = Bullets;
@@ -73,12 +73,12 @@ class WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new Bullet(_player.x - 8, _player.y + 8, 500, FlxObject.LEFT, _player.damage + damage, 256);
+				var newBullet = new Bullet(_player.x - 8, _player.y + 8, 500, FlxObject.LEFT, _player.damage + damage, 256, palette, FlxObject.LEFT);
 				_player.bulletArray.add(newBullet);
 			}
 			else
 			{
-				var newBullet = new Bullet(_player.x + 8, _player.y + 8, 500, FlxObject.RIGHT, _player.damage + damage, 256);
+				var newBullet = new Bullet(_player.x + 8, _player.y + 8, 500, FlxObject.RIGHT, _player.damage + damage, 256, palette, FlxObject.RIGHT);
 				_player.bulletArray.add(newBullet);
 			}
 			if (!isEquipment)

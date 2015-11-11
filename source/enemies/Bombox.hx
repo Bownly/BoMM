@@ -106,7 +106,7 @@ class Bombox extends enemies.EnemyTemplate
 		
 		if (_cooldown > GUN_DELAY)
 		{	
-			var bullet = new weapons.Bullet(x - 8, y + 8, 500, FlxObject.LEFT, 1, 256);
+			var bullet = new weapons.Bullet(x - 8, y + 8, 500, FlxObject.LEFT, 1, 256, palette, facing);
 			_bullets.add(bullet);
 			
 			

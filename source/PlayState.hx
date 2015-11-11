@@ -228,16 +228,15 @@ class PlayState extends FlxState
 		if (FlxG.keys.anyJustPressed(["P"]))
 		{
 			var sub = new PauseState();
-			//var sub = new FlxSubState(0xFFFFAAAA);
 			this.openSubState(sub);
 		}
 		
 		
 		
-		// possible todo: Call this only when something changes, and not every frame
+		// possible optimization todo: Call this only when something changes, and not every frame
 		// right now it's more convenient being in one place...
 		// could just make it a function unto itself, but whatever
-		_hud.updateHUD(_player.hp, _player.curWeapon.juice, _score, _player.curWeapon.name);	
+		_hud.updateHUD(_player.hp, _player.curWeapon.juice, Reg.pDosh, _player.curWeapon.name);	
 				
 
 		var increment = 0;
@@ -437,15 +436,7 @@ class PlayState extends FlxState
 			E.takeDamage(B.getDamage());
 			B.kill();
 		}
-		if (E.alive == false)
-		{
-			_score++;
-			var health:Int;
-			health = _player.hp;
-			//_hud.updateHUD(health, _score, _player.curWeapon.name);	
-			
-			//_hud.updateHUD(_health, _money);	
-		}
+
 	}	
 	private function badBulletTouchEnemy(B:weapons.Bullet, E:enemies.EnemyTemplate):Void 
 	{

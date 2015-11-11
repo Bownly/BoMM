@@ -234,18 +234,18 @@ class Balun extends EnemyTemplate
 			{
 				if (P.x < x)
 				{
-					var bullet = new weapons.Bullet(x + 8, y + 8, 500, FlxObject.LEFT, 1, 256);
+					var bullet = new weapons.Bullet(x + 8, y + 8, 500, FlxObject.LEFT, 1, 256, palette, facing);
 					_bullets.add(bullet);			
 				}
 				else
 				{
-					var bullet = new weapons.Bullet(x + 8, y + 8, 500, FlxObject.RIGHT, 1, 256);
+					var bullet = new weapons.Bullet(x + 8, y + 8, 500, FlxObject.RIGHT, 1, 256, palette, facing);
 					_bullets.add(bullet);			
 				}
 			}
 			else if (colorString == "magenta")
 			{
-				var bullet = new weapons.Bullet(x + 8, y + 8, 500, FlxObject.DOWN, 1, 256);
+				var bullet = new weapons.Bullet(x + 8, y + 8, 500, FlxObject.DOWN, 1, 256, palette, facing);
 				_bullets.add(bullet);	
 			}
 			

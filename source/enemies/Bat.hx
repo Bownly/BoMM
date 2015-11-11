@@ -142,7 +142,7 @@ class Bat extends EnemyTemplate
 				
 				if (_cooldown > GUN_DELAY)
 				{
-					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, facing, 1, 256);
+					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, facing, 1, 256, palette, perchDirection);
 					_bullets.add(bullet);
 					_cooldown = 0; 
 					postShotTimer = .67;
@@ -200,7 +200,7 @@ class Bat extends EnemyTemplate
 					else
 						shotDir = FlxObject.FLOOR;
 						
-					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, shotDir, 1, 256);
+					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, shotDir, 1, 256, palette, perchDirection);
 					_bullets.add(bullet);
 					_cooldown = 0; 
 					postShotTimer = .67;
@@ -225,7 +225,7 @@ class Bat extends EnemyTemplate
 			if (palette == Reg.C)
 			{
 				//shootShot();
-				var bullet = new weapons.Bullet(x + 4, y, echoSpeed, perchDirection, 1, 256);
+				var bullet = new weapons.Bullet(x + 4, y, echoSpeed, perchDirection, 1, 256, palette, perchDirection);
 				_bullets.add(bullet);
 				_cooldown = 0; 
 				postShotTimer = .67;

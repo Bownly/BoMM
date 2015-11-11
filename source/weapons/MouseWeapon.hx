@@ -13,9 +13,9 @@ import flixel.group.FlxTypedGroup;
 class MouseWeapon extends WeaponTemplate
 {
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 7;
 		
 		damage = 1;
@@ -32,13 +32,13 @@ class MouseWeapon extends WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new MouseBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2) , FlxObject.LEFT, _player.damage + damage, 256, _player);
+				var newBullet = new MouseBullet(_player.x - 8, _player.y + 8, 80-(_player.velocity.x/2) , FlxObject.LEFT, _player.damage + damage, 256, _player, palette);
 
 				_player.bulletArray.add(newBullet);
 			}
 			else
 			{
-				var newBullet = new MouseBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2) , FlxObject.RIGHT, _player.damage + damage, 256, _player);
+				var newBullet = new MouseBullet(_player.x + 8, _player.y + 8, 80+(_player.velocity.x/2) , FlxObject.RIGHT, _player.damage + damage, 256, _player, palette);
 
 				_player.bulletArray.add(newBullet);
 			}

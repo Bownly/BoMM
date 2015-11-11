@@ -62,8 +62,7 @@ package;
 		_palette = _player.curWeaponLoc;
 		
 		// setting up the health and health tictacs
-        _sprHealth = new FlxSprite(1, 1, AssetPaths.heart__png);
-		
+        _sprHealth = new FlxSprite(1, 1, AssetPaths.icon_heart__png);
 		var sprWidth = 5;
 		_grpHealth = new FlxTypedGroup<FlxSprite>();
 		for (i in 0...12)
@@ -82,10 +81,9 @@ package;
 		
 		// setting up the weapon icon and ammo tictacs
 		_sprWeapon = new FlxSprite(_sprHealth.x, _sprHealth.y + _sprHealth.height + 2);
-		_sprWeapon.loadGraphic(AssetPaths.weapon_icons__png, true, 16, 16);
+		_sprWeapon.loadGraphic(AssetPaths.icon_weapons__png, true, 16, 16);
 		var o:Int;
 		var id:Int;
-		
 		for (o in 0...4)
 		{
 			for (id in 0...Reg.weaponCount)
@@ -94,7 +92,6 @@ package;
 				_sprWeapon.animation.add(id + "+" + o, [frameNum]);
 			}
 		}	
-		
 		_grpWeapon = new FlxTypedGroup<FlxSprite>();
 		for (i in 0...12)
 		{
@@ -111,15 +108,18 @@ package;
 		}
 		
 		
-		/*_txtMoney = new FlxText(0, 2, 0, "0", 8);
-        _txtMoney.setBorderStyle(FlxText.BORDER_SHADOW, FlxColor.GRAY, 1, 1);
-        _sprMoney = new FlxSprite(FlxG.width - 12, _txtMoney.y + (_txtMoney.height/2)  - 4, AssetPaths.coin__png);
+		// setting up the dosh icon and text
+		_sprMoney = new FlxSprite(_sprWeapon.x, _sprWeapon.y + _sprWeapon.height + 2, AssetPaths.icon_dosh__png);
+
+		_txtMoney = new FlxText(_sprMoney.x + _sprMoney.width + 2, _sprMoney.y - 3, "x 0", 8);
+        //_txtMoney.setBorderStyle(FlxText.BORDER_SHADOW, FlxColor.GRAY, 1, 1);
         _txtMoney.alignment = "right";
-        _txtMoney.x = _sprMoney.x - _txtMoney.width - 4;*/
+        //_txtMoney.x = _sprMoney.x - _txtMoney.width - 4;
         
         add(_sprHealth);
-       // add(_sprMoney);
-		add(_sprJuice);
+        add(_sprMoney);
+        add(_txtMoney);
+		//add(_sprJuice);
 		add(_sprWeapon);
 		
         forEach(function(spr:FlxSprite) {
@@ -131,8 +131,8 @@ package;
     public function updateHUD(Health:Int = 0, Juice:Int = 0, Money:Int = 0, Weapon:String):Void
     {
 
-       // _txtMoney.text = Std.string(Money);
-       // _txtMoney.x = _sprMoney.x - _txtMoney.width - 4;
+        _txtMoney.text = "x " + Std.string(Money);
+        //_txtMoney.x = _sprMoney.x - _txtMoney.width - 4;
 		
 		for (i in 0..._player.hp)
 		{
@@ -165,7 +165,6 @@ package;
 		{
 			_grpWeapon.members[i].visible = false;
 		}
-		//_txtJuice.text = "";
-		//_txtWeapon.text = "Cur Weapon: " + Weapon;
+
     }
  }	

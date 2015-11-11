@@ -9,9 +9,9 @@ import flixel.group.FlxTypedGroup;
 class StringWeapon extends WeaponTemplate
 {
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 13;
 		
 		damage = 1;
@@ -28,9 +28,9 @@ if (_player.bulletArray.countLiving() < maxBullets && juice >= juiceCost)
 			
 			if (_player.flipX)
 			{	
-				var newBullet = new Bullet(_player.x - 16, _player.y + 8, 250, FlxObject.LEFT, _player.damage + damage, 256);
-				var newBullet1 = new Bullet(_player.x - 8, _player.y + 8, 250, FlxObject.LEFT, _player.damage + damage, 256);
-				var newBullet2 = new Bullet(_player.x, _player.y + 8, 250, FlxObject.LEFT, _player.damage + damage, 256);
+				var newBullet = new Bullet(_player.x - 16, _player.y + 8, 250, FlxObject.LEFT, _player.damage + damage, 256, palette, FlxObject.LEFT);
+				var newBullet1 = new Bullet(_player.x - 8, _player.y + 8, 250, FlxObject.LEFT, _player.damage + damage, 256, palette, FlxObject.LEFT);
+				var newBullet2 = new Bullet(_player.x, _player.y + 8, 250, FlxObject.LEFT, _player.damage + damage, 256, palette, FlxObject.LEFT);
 				
 				_player.bulletArray.add(newBullet);
 				_player.bulletArray.add(newBullet1);
@@ -38,9 +38,9 @@ if (_player.bulletArray.countLiving() < maxBullets && juice >= juiceCost)
 			}	
 			else
 			{
-				var newBullet = new Bullet(_player.x + 16, _player.y + 8, 250, FlxObject.RIGHT, _player.damage + damage, 256);
-				var newBullet1 = new Bullet(_player.x + 8, _player.y + 8, 250, FlxObject.RIGHT, _player.damage + damage, 256);
-				var newBullet2 = new Bullet(_player.x, _player.y + 8, 250, FlxObject.RIGHT, _player.damage + damage, 256);
+				var newBullet = new Bullet(_player.x + 16, _player.y + 8, 250, FlxObject.RIGHT, _player.damage + damage, 256, palette, FlxObject.RIGHT);
+				var newBullet1 = new Bullet(_player.x + 8, _player.y + 8, 250, FlxObject.RIGHT, _player.damage + damage, 256, palette, FlxObject.RIGHT);
+				var newBullet2 = new Bullet(_player.x, _player.y + 8, 250, FlxObject.RIGHT, _player.damage + damage, 256, palette, FlxObject.RIGHT);
 				
 				_player.bulletArray.add(newBullet);
 				_player.bulletArray.add(newBullet1);

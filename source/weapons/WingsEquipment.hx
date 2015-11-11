@@ -7,9 +7,9 @@ package weapons;
 class WingsEquipment extends WeaponTemplate
 {
 
-	public function new(Name:String) 
+	public function new(Name:String, Palette:Int) 
 	{
-		super(Name);
+		super(Name, Palette);
 		weaponID = 14;
 		
 		doubleJump = true;

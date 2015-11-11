@@ -10,9 +10,9 @@ class YellowWeapon extends WeaponTemplate
 {
 
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		
 		damage = 5;
 		juice = 9;
@@ -26,21 +26,7 @@ class YellowWeapon extends WeaponTemplate
 		if (_player.bulletArray.countLiving() < maxBullets && juice >= juiceCost) 
 		{
 			_player.postShotTimer = .33;
-			
-			if (_player.flipX)
-			{
-				var newBullet = new Bullet(_player.x - 8, _player.y + 8, 500, FlxObject.LEFT, _player.damage + damage, 256);
-				var newBullet2 = new Bullet(_player.x - 8, _player.y + 16, 500, FlxObject.LEFT, _player.damage + damage, 256);
-				_player.bulletArray.add(newBullet);
-				_player.bulletArray.add(newBullet2);
-			}
-			else
-			{
-				var newBullet = new Bullet(_player.x + 8, _player.y + 8, 500, FlxObject.RIGHT, _player.damage + damage, 256);
-				var newBullet2 = new Bullet(_player.x + 8, _player.y + 16, 500, FlxObject.RIGHT, _player.damage + damage, 256);
-				_player.bulletArray.add(newBullet);
-				_player.bulletArray.add(newBullet2);
-			}
+
 			juice -= juiceCost;
 		}
 	}

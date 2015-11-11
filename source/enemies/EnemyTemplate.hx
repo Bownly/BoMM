@@ -77,12 +77,37 @@ class EnemyTemplate extends FlxSprite
 	override public function kill():Void
 	{
 		
-		var dropChance = FlxRandom.intRanged(0, 1);
-		var dropChance = 1;
-		var dropID = FlxRandom.intRanged(0, 3) * 2;
+		var dropChance = FlxRandom.intRanged(0, 265 - _player.luck * 10);
+		//var dropChance = 1;
 		
-		var newDrop = new Drops(this.x, this.y, dropID, _player, true);
-		_drops.add(newDrop);
+		/* Drop table
+		 * name         | id| rarity| fraction|    index|
+		 * small hp:    |  0|    15%|   38/256|  000-037|
+		 * large hp:    |  2|     5%|   13/256|  038-050|
+		 * small juice: |  4|    15%|   38/256|  051-088|
+		 * large juice: |  6|     5%|   13/256|  089-101|
+		 * small dosh:  |  8|    15%|   38/256|  102-139|
+		 * large dosh:  | 10|     5%|   13/256|  140-152|
+		*/
+		var dropID:Int = -1;
+		if (dropChance <= 37)
+			dropID = 0;
+		else if (dropChance <= 50)
+			dropID = 2;
+		else if (dropChance <= 88)
+			dropID = 4;
+		else if (dropChance <= 101)
+			dropID = 6;
+		else if (dropChance <= 139)
+			dropID = 8;
+		else if (dropChance <= 152)
+			dropID = 10;
+		
+		if (dropID != -1)
+		{
+			var newDrop = new Drops(this.x, this.y, dropID, _player, true);
+			_drops.add(newDrop);
+		}
 		
 		_killed = true;
 		alive = false;

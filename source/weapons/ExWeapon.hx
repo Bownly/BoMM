@@ -10,9 +10,9 @@ class ExWeapon extends WeaponTemplate
 {
 
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 5;
 		
 		damage = 5;
@@ -29,10 +29,10 @@ class ExWeapon extends WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new Bullet(_player.x,  _player.y + 8, 200 - _player.velocity.x, FlxObject.LEFT + FlxObject.CEILING, _player.damage + damage, 256);
-				var newBullet1 = new Bullet(_player.x, _player.y + 8, 200 - _player.velocity.x, FlxObject.RIGHT + FlxObject.CEILING, _player.damage + damage, 256);
-				var newBullet2 = new Bullet(_player.x, _player.y + 8, 200 - _player.velocity.x, FlxObject.LEFT + FlxObject.FLOOR, _player.damage + damage, 256);		
-				var newBullet3 = new Bullet(_player.x, _player.y + 8, 200 - _player.velocity.x, FlxObject.RIGHT + FlxObject.FLOOR, _player.damage + damage, 256);		
+				var newBullet = new Bullet(_player.x,  _player.y + 8, 200 - _player.velocity.x, FlxObject.LEFT + FlxObject.CEILING, _player.damage + damage, 256, palette, FlxObject.LEFT + FlxObject.CEILING);
+				var newBullet1 = new Bullet(_player.x, _player.y + 8, 200 - _player.velocity.x, FlxObject.RIGHT + FlxObject.CEILING, _player.damage + damage, 256, palette, FlxObject.RIGHT + FlxObject.CEILING);
+				var newBullet2 = new Bullet(_player.x, _player.y + 8, 200 - _player.velocity.x, FlxObject.LEFT + FlxObject.FLOOR, _player.damage + damage, 256, palette,FlxObject.LEFT + FlxObject.FLOOR);		
+				var newBullet3 = new Bullet(_player.x, _player.y + 8, 200 - _player.velocity.x, FlxObject.RIGHT + FlxObject.FLOOR, _player.damage + damage, 256, palette, FlxObject.RIGHT + FlxObject.FLOOR);		
 				_player.bulletArray.add(newBullet);
 				_player.bulletArray.add(newBullet1);
 				_player.bulletArray.add(newBullet2);
@@ -41,10 +41,10 @@ class ExWeapon extends WeaponTemplate
 				}
 			else
 			{
-				var newBullet = new Bullet(_player.x,  _player.y + 8, 200 + _player.velocity.x, FlxObject.LEFT + FlxObject.CEILING, _player.damage + damage, 256);
-				var newBullet1 = new Bullet(_player.x, _player.y + 8, 200 + _player.velocity.x, FlxObject.RIGHT + FlxObject.CEILING, _player.damage + damage, 256);
-				var newBullet2 = new Bullet(_player.x, _player.y + 8, 200 + _player.velocity.x, FlxObject.LEFT + FlxObject.FLOOR, _player.damage + damage, 256);		
-				var newBullet3 = new Bullet(_player.x, _player.y + 8, 200 + _player.velocity.x, FlxObject.RIGHT + FlxObject.FLOOR, _player.damage + damage, 256);		
+				var newBullet = new Bullet(_player.x,  _player.y + 8, 200 + _player.velocity.x, FlxObject.LEFT + FlxObject.CEILING, _player.damage + damage, 256, palette, FlxObject.LEFT + FlxObject.CEILING);
+				var newBullet1 = new Bullet(_player.x, _player.y + 8, 200 + _player.velocity.x, FlxObject.RIGHT + FlxObject.CEILING, _player.damage + damage, 256, palette, FlxObject.RIGHT + FlxObject.CEILING);
+				var newBullet2 = new Bullet(_player.x, _player.y + 8, 200 + _player.velocity.x, FlxObject.LEFT + FlxObject.FLOOR, _player.damage + damage, 256, palette,FlxObject.LEFT + FlxObject.FLOOR);		
+				var newBullet3 = new Bullet(_player.x, _player.y + 8, 200 + _player.velocity.x, FlxObject.RIGHT + FlxObject.FLOOR, _player.damage + damage, 256, palette, FlxObject.RIGHT + FlxObject.FLOOR);		
 				_player.bulletArray.add(newBullet);
 				_player.bulletArray.add(newBullet1);
 				_player.bulletArray.add(newBullet2);

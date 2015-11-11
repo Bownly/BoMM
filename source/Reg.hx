@@ -18,7 +18,6 @@ import weapons.StompEquipment;
 import weapons.StringWeapon;
 import weapons.WeaponTemplate;
 import weapons.WingsEquipment;
-import weapons.YellowWeapon;
 
 /**
  * Handy, pre-built Registry class that can be used to store 
@@ -84,13 +83,14 @@ class Reg
 	public static var pMaxMaxHP:Int = 3;
 	public static var pMaxJumps:Int = 2;
 	public static var pDamage:Int = 0;
-	public static var pLuck:Int = 5;	
+	public static var pLuck:Int = 1;	
+	public static var pDosh:Int = 0;
 	
 	public static var weaponCount:Int = 16;
-	public static var weapon1:WeaponTemplate = new WingsEquipment("wings");
-	public static var weapon2:WeaponTemplate = new ClusterWeapon("cluster");
-	public static var weapon3:WeaponTemplate = new SplodeWeapon("splode");
-	public static var weapon4:WeaponTemplate = new SlashWeapon("stomp");
+	public static var weapon1:WeaponTemplate = new WingsEquipment("wings", Reg.G);
+	public static var weapon2:WeaponTemplate = new ClusterWeapon("cluster", Reg.C);
+	public static var weapon3:WeaponTemplate = new SplodeWeapon("splode", Reg.M);
+	public static var weapon4:WeaponTemplate = new SlashWeapon("stomp", Reg.Y);
 	
 	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3, weapon4];
 

@@ -10,9 +10,9 @@ class PlusWeapon extends WeaponTemplate
 {
 
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 8;
 		
 		damage = 5;
@@ -27,10 +27,10 @@ class PlusWeapon extends WeaponTemplate
 		{
 			_player.postShotTimer = .33;
 	
-				var newBullet = new Bullet(_player.x,  _player.y + 8, 200, FlxObject.LEFT, _player.damage + damage, 256);
-				var newBullet1 = new Bullet(_player.x, _player.y + 8, 200, FlxObject.RIGHT, _player.damage + damage, 256);
-				var newBullet2 = new Bullet(_player.x, _player.y + 8, 200, FlxObject.CEILING, _player.damage + damage, 256);		
-				var newBullet3 = new Bullet(_player.x, _player.y + 8, 200, FlxObject.FLOOR, _player.damage + damage, 256);		
+				var newBullet = new Bullet(_player.x,  _player.y + 8, 200, FlxObject.LEFT, _player.damage + damage, 256, palette, FlxObject.UP);
+				var newBullet1 = new Bullet(_player.x, _player.y + 8, 200, FlxObject.RIGHT, _player.damage + damage, 256, palette, FlxObject.DOWN);
+				var newBullet2 = new Bullet(_player.x, _player.y + 8, 200, FlxObject.CEILING, _player.damage + damage, 256, palette, FlxObject.LEFT);		
+				var newBullet3 = new Bullet(_player.x, _player.y + 8, 200, FlxObject.FLOOR, _player.damage + damage, 256, palette, FlxObject.RIGHT);		
 				
 				_player.bulletArray.add(newBullet);
 				_player.bulletArray.add(newBullet1);

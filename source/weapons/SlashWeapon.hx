@@ -9,9 +9,9 @@ import flixel.group.FlxTypedGroup;
 class SlashWeapon extends WeaponTemplate
 {
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 9;
 		
 		damage = 10;
@@ -28,14 +28,12 @@ class SlashWeapon extends WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new SlashBullet(_player.x - 16, _player.y + 16, 200, FlxObject.CEILING + FlxObject.LEFT, _player.damage + damage, 256, _player);
-
+				var newBullet = new SlashBullet(_player.x - 16, _player.y + 16, 200, FlxObject.CEILING + FlxObject.LEFT, _player.damage + damage, 256, _player, palette);
 				_player.bulletArray.add(newBullet);
 			}
 			else
 			{
-				var newBullet = new SlashBullet(_player.x + 16, _player.y + 16, 200, FlxObject.CEILING + FlxObject.RIGHT, _player.damage + damage, 256, _player);
-
+				var newBullet = new SlashBullet(_player.x + 16, _player.y + 16, 200, FlxObject.CEILING + FlxObject.RIGHT, _player.damage + damage, 256, _player, palette);
 				_player.bulletArray.add(newBullet);
 			}
 			juice -= juiceCost;

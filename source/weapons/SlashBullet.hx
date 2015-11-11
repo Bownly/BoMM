@@ -10,9 +10,9 @@ class SlashBullet extends Bullet
 	var current_p:Player;
 	
 	
-	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int, P:Player) 
+	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int, P:Player, Palette:Int) 
 	{
-		super(X, Y, Speed, Direction, Damage, Range);
+		super(X, Y, Speed, Direction, Damage, Range, Palette, 4);
 		current_p = P;
 	}
 	

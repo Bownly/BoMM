@@ -112,15 +112,15 @@ class MenuState extends FlxState
 	}	
 	function gotoLevel1():Void
 	{
-		FlxG.switchState(new Level1(Reg.C));
+		FlxG.switchState(new Level1(Reg.door1Color));
 	}
 	function gotoLevel2():Void
 	{
-		FlxG.switchState(new Level2(Reg.M));
+		FlxG.switchState(new Level2(Reg.door2Color));
 	}
 	function gotoLevel3():Void
 	{
-		FlxG.switchState(new PlayState(Reg.Y));
+		FlxG.switchState(new Level3(Reg.door3Color));
 	}
 	
 

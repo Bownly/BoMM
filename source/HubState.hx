@@ -12,6 +12,7 @@ import flixel.tile.FlxTilemap;
 import flixel.ui.FlxButton;
 import flixel.util.FlxMath;
 import flixel.util.FlxRandom;
+import weapons.Bullet;
 
 /**
  * A FlxState which can be used for the game's menu.
@@ -117,14 +118,13 @@ class HubState extends FlxState
 		
 		FlxG.mouse.visible = false;		
 		
-	
 		
 		FlxG.camera.follow(_player,1);
 		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
 		FlxG.camera.setBounds(0, 0, _levelWidth, _levelHeight*2);
 		FlxG.worldBounds.set(0, 0, _levelWidth, _levelHeight*2);
 		
-	/*	_hud = new HUD();
+		/*_hud = new HUD();
 		add(_hud);*/
 		
 		super.create();
@@ -133,7 +133,7 @@ class HubState extends FlxState
 	override public function update():Void
 	{
 		FlxG.collide(_grpWalls, _player);
-		FlxG.collide(_grpWalls, playerBullets);
+		FlxG.collide(_grpWalls, playerBullets, bulletTouchWall);
 		FlxG.overlap(_player, _grpDoors, playerTouchDoor);
 		
 		if (FlxG.keys.anyPressed(["R"])) 
@@ -166,6 +166,15 @@ class HubState extends FlxState
 		
 	}
 
+	private function bulletTouchWall(F:FlxTilemap, B:weapons.Bullet):Void 
+	{
+		if (B.alive && B.exists)
+		{
+			B.onCollision();
+		}
+		
+	}
+	
 	function gotoLevel1():Void
 	{
 		FlxG.switchState(new Level1(Reg.door1Color));
@@ -176,7 +185,7 @@ class HubState extends FlxState
 	}
 	function gotoLevel3():Void
 	{
-		FlxG.switchState(new PlayState(Reg.door3Color));
+		FlxG.switchState(new Level3(Reg.door3Color));
 	}
 	
 private function placeEntities(entityName:String, entityData:Xml):Void
@@ -225,10 +234,6 @@ private function placeEntities(entityName:String, entityData:Xml):Void
 
 	}
 	
-	/**
-	 * Function that is called when this state is destroyed - you might want to 
-	 * consider setting all objects this state uses to null to help garbage collection.
-	 */
 	override public function destroy():Void
 	{
 		super.destroy();

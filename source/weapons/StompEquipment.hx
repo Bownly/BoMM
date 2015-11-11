@@ -8,9 +8,9 @@ import flixel.FlxG;
 class StompEquipment extends WeaponTemplate
 {
 
-	public function new(Name:String) 
+	public function new(Name:String, Palette:Int) 
 	{
-		super(Name);
+		super(Name, Palette);
 		weaponID = 12;
 		
 		stomp = true;

@@ -140,7 +140,7 @@ class Snale extends enemies.EnemyTemplate
 		
 		if (_cooldown > GUN_DELAY && shotCount < shotCountMax)
 		{	
-			var bullet = new weapons.Bullet(x + 8, y, _bulletXVel, facing, _bulletDmg, 256);
+			var bullet = new weapons.Bullet(x + 8, y, _bulletXVel, facing, _bulletDmg, 256, palette, facing);
 			_bullets.add(bullet);
 			shotCount++;
 			// reset the shot clock

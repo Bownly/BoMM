@@ -17,10 +17,12 @@ class Drops extends FlxSprite
 	public var free:Bool = true;
 	
 	/* Legend for drops:
-	 * 0 = Mushroom
-	 * 2 = Butterfly
-	 * 4 = Juice goblet
-	 * 6 = Sword in stone
+	 *  0 = small hp
+	 *  2 = large hp
+	 *  4 = small juice
+	 *  6 = large juice
+	 *  8 = small dosh
+	 * 10 = large dosh
 	 */
 	
 	public function new(X:Float=0, Y:Float=0, Index:Int, ThePlayer:Player, Free:Bool) 
@@ -91,7 +93,11 @@ class Drops extends FlxSprite
 				case 4:  // do Juice goblet stuff
 					playerJuiceRestore(5);
 				case 6:  // do sword in stone stuff
-					weaponStrengthUp(1);
+					weaponStrengthUp(12);
+				case 8:
+					increaseDosh(1);
+				case 10:
+					increaseDosh(5);
 			}
 			if (free == true)
 			{
@@ -107,6 +113,10 @@ class Drops extends FlxSprite
 		return 0;
 	}
 	
+	private function increaseDosh(Val:Int):Void
+	{
+		Reg.pDosh += Val;
+	}
 	private function playerHeal(Val:Int):Void
 	{
 		_player.restoreHP(Val);
@@ -121,7 +131,6 @@ class Drops extends FlxSprite
 	{
 		_player.restoreJuice(Val);
 	}
-	
 	private function weaponStrengthUp(Val:Int):Void
 	{
 		_player.curWeapon.damage += Val;

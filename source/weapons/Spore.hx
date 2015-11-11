@@ -10,7 +10,7 @@ class Spore extends Bullet
 	
 	public function new(X:Float, Y:Float, Speed:Float, Direction:Int, Damage:Int, Range:Int, Palette:Int) 
 	{
-		super(X, Y, Speed, Direction, Damage, Range);
+		super(X, Y, Speed, Direction, Damage, Range, Palette, 0);
 		loadGraphic("assets/images/spore.png", true, 16, 16, true);
 		acceleration.y = -gravity;
 		

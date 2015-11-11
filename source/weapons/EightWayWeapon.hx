@@ -11,9 +11,9 @@ class EightWayWeapon extends WeaponTemplate
 {
 
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 4;
 		
 		damage = 5;
@@ -44,7 +44,7 @@ class EightWayWeapon extends WeaponTemplate
 			{
 				direction = _player.facing;
 			}
-			var newBullet = new Bullet(_player.x + 8, _player.y + 8, 500, direction, _player.damage + damage, 256);
+			var newBullet = new Bullet(_player.x + 8, _player.y + 8, 500, direction, _player.damage + damage, 256, palette, direction);
 			_player.bulletArray.add(newBullet);
 			
 			

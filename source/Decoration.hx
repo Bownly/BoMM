@@ -21,13 +21,16 @@ class Decoration extends FlxSprite
 	 * Boulder:      id = 024, species = 1, size = 32 x 32, frames = 1
 	 * Cave dirt 1:  id = 032, species = 1, size = 16 x 16, frames = 1
 	 * Cave dirt 2:  id = 044, species = 1, size = 16 x 16, frames = 1
+	 * Forest mush:  id = 048, species = 3, size = 16 x 16, frames = 1
 	 * Cave torch:   id = 072, species = 1, size = 48 x 48, frames = 3
+	 * 
 	 * 
 	 * Forest:
 	 * Flower:       id = 000, species = 4, size = 16 x 32, frames = 1
 	 * TinyTree:     id = 032, species = 2, size = 32 x 32, frames = 1
 	 * Grass:        id = 064, species = 4, size = 16 x 16, frames = 1
 	 * BigTree:      id = 080, species = 2, size = 64 x 80, frames = 1
+	 * Cave mush:    id = 180, species = 3, size = 16 x 16, frames = 1
 	 */
 	
 	public function new(SheetName:String = "cave", X:Float = 0, Y:Float = 0, 

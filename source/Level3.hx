@@ -14,8 +14,8 @@ class Level3 extends PlayState
 		levelId = "3";
 		tileName = "assets/images/sky_tiles.png";
 		nonCollidableTiles = [14];
-		_numRooms = 2;
-		_numUniqueRooms = 1;
+		_numRooms = 5;
+		_numUniqueRooms = 2;
 
 
 	}

@@ -9,9 +9,9 @@ import flixel.group.FlxTypedGroup;
 class FollowWeapon extends WeaponTemplate
 {
 
-	public function new(Name:String, ?Bullets:FlxTypedGroup<Bullet>) 
+	public function new(Name:String, Palette:Int, ?Bullets:FlxTypedGroup<Bullet>) 
 	{
-		super(Name, Bullets);
+		super(Name, Palette, Bullets);
 		weaponID = 6;
 		
 		damage = 1;
@@ -28,20 +28,20 @@ class FollowWeapon extends WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new MouseBullet(_player.x - 20, _player.y + 8, 0 , FlxObject.LEFT, _player.damage + damage, 256, _player);
-				var newBullet2 = new MouseBullet(_player.x + 20, _player.y + 8, 0 , FlxObject.RIGHT, _player.damage + damage, 256, _player);
+				var newBullet = new FollowBullet(_player.x-10, _player.y + 8, 0 , FlxObject.LEFT, _player.damage + damage, 256, _player, palette);
+				//var newBullet2 = new FollowBullet(_player.x + 20, _player.y + 8, 50 , FlxObject.RIGHT, _player.damage + damage, 256, _player);
 
 				_player.bulletArray.add(newBullet);
-				_player.bulletArray.add(newBullet2);
+				//_player.bulletArray.add(newBullet2);
 				
 			}
 			else
 			{
-				var newBullet = new MouseBullet(_player.x - 20, _player.y + 8, 0 , FlxObject.LEFT, _player.damage + damage, 256, _player);
-				var newBullet2 = new MouseBullet(_player.x + 20, _player.y + 8, 0 , FlxObject.RIGHT, _player.damage + damage, 256, _player);
+				var newBullet = new FollowBullet(_player.x+10, _player.y + 8, 0 , FlxObject.RIGHT, _player.damage + damage, 256, _player, palette);
+				//var newBullet2 = new FollowBullet(_player.x + 20, _player.y + 8, 50 , FlxObject.RIGHT, _player.damage + damage, 256, _player);
 
 				_player.bulletArray.add(newBullet);
-				_player.bulletArray.add(newBullet2);
+				//_player.bulletArray.add(newBullet2);
 			}
 			juice -= juiceCost;
 		}

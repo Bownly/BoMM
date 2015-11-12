@@ -30,12 +30,13 @@ class Player extends FlxSprite
 	public var luck:Int = 5;	
 	
 	var GRAVITY:Int = 15;
-	var ySpeedJumping:Int = 300;
-	var ySpeedClimbing:Int = 75;
-	var xSpeedWalking:Int = 125;
-	var xSpeedInching:Int = 20;
-	var xSpeedSliding:Int = 250;
-	var xSpeedHurt:Int = 0;
+	var ySpeedJumping:Int =  300;
+	var ySpeedClimbing:Int =  75;
+	var xSpeedWalking:Int =  120;
+	var xSpeedInAir:Int =    110;
+	var xSpeedInching:Int =   20;
+	var xSpeedSliding:Int =  250;
+	var xSpeedHurt:Int =       0;
 	var remainingJumps:Int = 2;
 	
 	var isSliding:Bool = false;
@@ -286,6 +287,8 @@ class Player extends FlxSprite
 				velocity.x = xSpeedSliding;
 			else if (isInching)
 				velocity.x = xSpeedInching;
+			else if (!isTouching(FlxObject.FLOOR))
+				velocity.x = xSpeedInAir;
 			else 
 				velocity.x = xSpeedWalking;
 			flipX = false;
@@ -304,6 +307,8 @@ class Player extends FlxSprite
 				velocity.x = -xSpeedSliding;
 			else if (isInching)
 				velocity.x = -xSpeedInching;
+			else if (!isTouching(FlxObject.FLOOR))
+				velocity.x = -xSpeedInAir;
 			else
 				velocity.x = -xSpeedWalking;
 			flipX = true;

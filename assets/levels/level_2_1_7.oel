@@ -28,8 +28,9 @@
     <decoration id="5" x="192" y="144" name="flower" />
     <decoration id="6" x="144" y="144" name="flower" />
     <decoration id="7" x="160" y="144" name="flower" />
-    <enemy id="8" x="144" y="160" name="mush" />
     <entrance id="9" x="0" y="160" val="1" />
     <exit id="10" x="304" y="160" val="1" />
+    <enemy id="8" x="128" y="160" name="flowerguy" />
+    <enemy id="11" x="176" y="160" name="flowerguy" />
   </entities>
 </level>

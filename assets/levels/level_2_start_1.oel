@@ -39,5 +39,6 @@
     <ladder id="7" x="80" y="160" top="False" />
     <decoration id="2" x="0" y="48" name="bigtree" />
     <decoration id="11" x="96" y="48" name="bigtree" />
+    <enemy id="5" x="192" y="160" name="flowerguy" />
   </entities>
 </level>

@@ -32,6 +32,7 @@ class EnemyTemplate extends FlxSprite
 	private var _drops:FlxTypedGroup<Drops>;
 	public var _killed:Bool = false;
 	private var _spawner:EnemySpawner;
+	private var _palette:Int;
 	
 	private var GREY:Int = 0;
 	private var CYAN:Int = 1;

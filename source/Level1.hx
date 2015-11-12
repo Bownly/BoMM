@@ -12,10 +12,10 @@ class Level1 extends PlayState
 		super(Color);
 		
 		levelId = "1";
-
-		tileName = "assets/images/wood_tiles_persist.png";
-		tileName = "assets/images/cave_grass_tiles.png";
 		tileName = "assets/images/cave_tiles.png";
+		nonCollidableTiles = [21, 33, 45, 43, 47];
+		_numRooms = 20;
+		_numUniqueRooms = 20;
 	}
 	
 }

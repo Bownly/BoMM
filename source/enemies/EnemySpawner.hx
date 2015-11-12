@@ -101,29 +101,33 @@ class EnemySpawner extends FlxSprite
 			case "balun":
 				_enemy = new Balun(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "bat":
-				_enemy = new enemies.Bat(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);	
+				_enemy = new Bat(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);	
 			case "bee":
 				{
-					_enemy = new enemies.Bee(x, y, _player, this, _grpDrops, _grpEnemies, _grpSVNoClipEnemies, _palette);
+					_enemy = new Bee(x, y, _player, this, _grpDrops, _grpEnemies, _grpSVNoClipEnemies, _palette);
 					_grpSVNoClipEnemies.add(_enemy);
 					return;
 				}
 			case "bombox":
 				//_enemy = new Bombox(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
-				_enemy = new enemies.Snale(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
+				_enemy = new Snale(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
+			case "coolsun":
+				_enemy = new CoolSun(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);
+			case "flowerguy":
+				_enemy = new Flowerguy(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);
 			case "mush":
-				_enemy = new enemies.Mush(x, y, _player, this, _grpDrops, _grpBadBullets, _palette, _map);
+				_enemy = new Mush(x, y, _player, this, _grpDrops, _grpBadBullets, _palette, _map);
 			case "snaake":
-				_enemy = new enemies.Snaake(x, y, _player, this, _grpDrops, _palette, _map);
+				_enemy = new Snaake(x, y, _player, this, _grpDrops, _palette, _map);
 			case "snale":
-				_enemy = new enemies.Snale(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
+				_enemy = new Snale(x, y, _player, this, _grpDrops, _grpEnemies, _grpBadBullets, _palette);
 			case "stalagmite":
-				_enemy = new enemies.Stalagmite(x, y, _player, this, _grpDrops);
+				_enemy = new Stalagmite(x, y, _player, this, _grpDrops);
 			case "stalactyke":
-				_enemy = new enemies.Stalactyke(x, y, _player, this, _grpDrops);
+				_enemy = new Stalactyke(x, y, _player, this, _grpDrops);
 			
 			case "hydra":
-				_enemy = new enemies.BossHydra(x, y, _player, this, _grpDrops);
+				_enemy = new BossHydra(x, y, _player, this, _grpDrops);
 		}
 
 			_notFirstSpawn = false;

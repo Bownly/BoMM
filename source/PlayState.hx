@@ -54,15 +54,15 @@ class PlayState extends FlxState
 	private var _grpWalls:FlxTypedGroup<FlxTilemap>;
 	private var _levelWidth:Float = 0;
 	private var _levelHeight:Float = 0;
-	var _numRooms:Int = 20;
-	var _numUniqueRooms:Int = 17;
+	var _numRooms:Int;
+	var _numUniqueRooms:Int;
 	
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
 	
-	private var levelId:String = "1";
-	private var tileName:String = "assets/images/wood_tiles.png";
-	var nonCollidableTiles:Array<Int> = [21, 33, 45, 43, 47];
+	private var levelId:String;
+	private var tileName:String;
+	var nonCollidableTiles:Array<Int>;
 	
 	private var loader:FlxOgmoLoader;
 	private var midgroundMap:FlxTilemap;

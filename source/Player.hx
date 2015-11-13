@@ -4,6 +4,7 @@ import flixel.effects.FlxFlicker;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
+import flixel.FlxState;
 import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
@@ -74,10 +75,13 @@ class Player extends FlxSprite
 	
 	private var canMove:Bool = true;
 	
+	var state:FlxState;
 	
-	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>) 
+	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>, ?State:FlxState) 
 	{
 		super(inX, inY);
+		
+		state = State;
 		
 		// sets up player's stats etc from Reg.hx values
 		maxHP = Reg.pMaxHP;
@@ -209,8 +213,7 @@ class Player extends FlxSprite
 			
 		if (canMove == true) 
 		{
-			if (hp <= 0)
-				FlxTween.tween(this, { alpha:0 }, .33, { ease:FlxEase.circOut } );
+//				FlxTween.tween(this, { alpha:0 }, .33, { ease:FlxEase.circOut } );
 			
 			
 			if (isClimbing)
@@ -271,6 +274,14 @@ class Player extends FlxSprite
 		if (maxHP > maxMaxHP)
 			maxHP = maxMaxHP;
 		hp = maxHP;
+	}
+	
+	private function killed():Void
+	{
+		//open dead state
+		visible = false;
+		var sub = new DeadState(this);
+		state.openSubState(sub);
 	}
 	
 	private function playerInputs():Void
@@ -497,14 +508,18 @@ class Player extends FlxSprite
 		if (invincTimer <= 0)
 		{
 			hurtTimer = .5;
-			if (dmg != 0)
+			hp -= dmg;
+			if (dmg != 0 && hp > 0)
 			{
 				invincTimer = 1.5;
 				FlxFlicker.flicker(this, 1.5, .1, true, false, null, null);
 			}
-			hp -= dmg;
-			if (hp < 0)
+			if (hp <= 0)
+			{
 				hp = 0;
+				killed();
+				//FlxG.switchState(new MenuState());
+			}
 			animation.play("hurt_" + curWeaponLoc);
 		}		
 	}	

@@ -3,6 +3,7 @@ package;
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.FlxCamera;
 import flixel.FlxG;
+import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxGroup;
@@ -47,10 +48,8 @@ class HubState extends FlxState
 	private var _door2:Door;
 	private var _door3:Door;
 	private var _grpDoors:FlxTypedGroup<Door>;
-	
-	private var _curMapX:Float = 0;
-	private var _curMapY:Float = 0;
-		private var _grpLadders:FlxTypedGroup<Ladder>;
+
+	private var _grpLadders:FlxTypedGroup<Ladder>;
 	
 	
 	public function new(?Palette:Int):Void
@@ -63,15 +62,10 @@ class HubState extends FlxState
 	 * Function that is called up when to state is created to set it up. 
 	 */
 	override public function create():Void
-	{
-		// TODO: kill this line when you add a start game menu. Shuffle colors on newgame start.
-		if (Reg.door1Color == -1)
-			Reg.shuffleColors();
-		
-		
-		
+	{	
+				trace("color array: " + Reg.colorArray);
+
 		super.create();
-		add(new FlxText(6, 9, 200, "Hub world (lol)"));
 		FlxG.camera.bgColor = 0x000000;
 		
 		_levelHeight = _levelWidth = 0;
@@ -82,7 +76,6 @@ class HubState extends FlxState
 		add(_grpLadders);
 		
 		_grpDoors = new FlxTypedGroup<Door>();
-		add(_grpDoors);
 		
 		// this sets the doors to a random color each time. This code is for testing only atm. Move it to Reg and maybe make it less offensive
 		_door1 = new Door(0, 0, 1, Reg.door1Color);
@@ -98,18 +91,35 @@ class HubState extends FlxState
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		
-		_player = new Player(100, 100, playerBullets);
+		_player = new Player(0, 0, playerBullets);
 		
 		
 		// TODO: This whole paragraph is a mess and also make the tileset reactive to the palette. ;)
+		var nonCollidableTiles:Array<Int> = [3, 7, 11, 12, 13, 14, 15, 19, 23, 27, 28, 29, 30, 31, 34, 39, 43, 44, 45, 46, 47];
 		myOgmoLoader = new FlxOgmoLoader("assets/levels/hubworld.oel");
-		mTileMap = myOgmoLoader.loadTilemap("assets/images/wood_tiles_persist.png", 16, 16, "walls");
+		mTileMap = myOgmoLoader.loadTilemap("assets/images/hub_tiles.png", 16, 16, "walls");
+		for (tile in nonCollidableTiles)  // tile collision settings
+		{
+			mTileMap.setTileProperties(tile, FlxObject.NONE); // misc walkthroughable tiles
+		}
 		_grpWalls.add(mTileMap);
+		
+		mTileMap = myOgmoLoader.loadTilemap("assets/images/cave_tiles.png", 16, 16, "walls2");
+		_grpWalls.add(mTileMap);
+		
+		mTileMap = myOgmoLoader.loadTilemap("assets/images/forest_tiles.png", 16, 16, "walls3");
+		_grpWalls.add(mTileMap);
+		
+		mTileMap = myOgmoLoader.loadTilemap("assets/images/sky_tiles.png", 16, 16, "walls4");
+		_grpWalls.add(mTileMap);
+		
+		
+		
 		_levelHeight += mTileMap.height;
 		_levelWidth += mTileMap.width;	
 		myOgmoLoader.loadEntities(placeEntities, "entities");
 		add(_grpWalls);	
-		
+		add(_grpDoors);
 		
 		_grpPlayer = new FlxGroup();
 		add(_grpPlayer);
@@ -138,12 +148,9 @@ class HubState extends FlxState
 		
 		if (FlxG.keys.anyPressed(["R"])) 
 		{
-			FlxG.switchState(new HubState());
+			FlxG.switchState(new MenuState());
 		}
-		if (FlxG.keys.anyPressed(["Z"])) 
-		{
-			Reg.shuffleColors();
-		}
+
 		
 		super.update();
 	}	
@@ -192,8 +199,6 @@ private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		var x:Float = Std.parseFloat(entityData.get("x"));
 		var y:Float = Std.parseFloat(entityData.get("y"));
-		x += _curMapX;
-		y += _curMapY;
 	
 		if (entityName == "player")
 		{

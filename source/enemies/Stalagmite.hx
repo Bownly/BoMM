@@ -49,8 +49,8 @@ class Stalagmite extends EnemyTemplate
 			
 			resolveAnimations();
 			
-			super.update();
 		}
+			super.update();
 	}
 
 	public function resolveAnimations():Void

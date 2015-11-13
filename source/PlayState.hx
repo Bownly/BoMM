@@ -98,7 +98,8 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
-		
+		trace("unlockable color: " + unlockableColor);
+		trace("color array: " + Reg.colorArray);
 		
 		_levelHeight = _levelWidth = 0;
 		
@@ -124,7 +125,7 @@ class PlayState extends FlxState
 		add(playerBullets);
 		
 		
-		_player = new Player(0, 0, playerBullets);
+		_player = new Player(0, 0, playerBullets, this);
 		
 		
 		dropsGroup = new FlxTypedGroup<Drops>();
@@ -256,8 +257,9 @@ class PlayState extends FlxState
 	 */
 	override public function destroy():Void
 	{
-		//Reg.player = _player;
-		//_player = null;
+		// TODO: Kill these lines when you add level transitions post-boss kill
+		if (Reg.colorArray.indexOf(unlockableColor) == -1)
+			Reg.colorArray.push(unlockableColor);
 		super.destroy();
 	}
 
@@ -543,7 +545,7 @@ class PlayState extends FlxState
 			P.isClimbingUp = false;		
 
 	}	
-		
+	
 	private function playerTouchHazard(P:Player, S:Spike):Void
 	{
 		P.takeDamage(S.dmg);
@@ -556,7 +558,7 @@ class PlayState extends FlxState
 		var y:Float = Std.parseFloat(entityData.get("y"));
 		x += _curMapX;
 		y += _curMapY;
-	
+		
 		if (entityName == "player")
 		{
 			_player.x = x;
@@ -626,7 +628,6 @@ class PlayState extends FlxState
 			// put the code to determine the individual mob's color here
 			// something like a random # based on Reg.globalPallete
 			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
-			
 			
 			_grpEnemies.add(new enemies.EnemySpawner(x, y, entityData.get("name"), _player, dropsGroup, _grpEnemies, _grpSVNoClipEnemies, _grpBadBullets, Reg.colorArray[palette], _curMap));
 		}

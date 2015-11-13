@@ -38,7 +38,7 @@ class Bat extends EnemyTemplate
 		width = 16;
 		height = 8;
 		offset = new FlxPoint(0, 4);
-		
+		perchDirection = FlxObject.FLOOR;
 		ogY = Y;
 		palette = Palette;
 		
@@ -47,7 +47,7 @@ class Bat extends EnemyTemplate
 		
 		facing = FlxObject.LEFT; 
 		flipX = true;	
-		y -= 4;
+	//	y -= 4;
 		
 		var o = 6; // the amount of sprites in the sheet per color
 		switch (palette)
@@ -65,7 +65,7 @@ class Bat extends EnemyTemplate
 		animation.add("echo", [1 + o]);
 		animation.add("flap", [2 + o, 3 + o, 4 + o, 3 + o], 9, true);
 		
-		velocity.y = -1;
+	//	velocity.y = -1;
 		GUN_DELAY = 2;
 
 	}
@@ -148,10 +148,10 @@ class Bat extends EnemyTemplate
 					postShotTimer = .67;
 				}
 			}
-			
+					_cooldown += FlxG.elapsed;
+
 		}
 		
-		_cooldown += FlxG.elapsed;
 		
 		super.update();
 	}

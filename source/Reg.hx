@@ -67,8 +67,8 @@ class Reg
 	public static inline var CMY:Int = 0x111;
 
 
-	//public static var colorArray:Array<Int> = [G];
-	public static var colorArray:Array<Int> = [G, C, M, Y];
+	public static var colorArray:Array<Int> = [G];
+	//public static var colorArray:Array<Int> = [G, C, M, Y];
 
 	public static var globalPalette:Int = G;
 	
@@ -76,9 +76,7 @@ class Reg
 	public static var bullets:FlxTypedGroup<weapons.Bullet> = new FlxTypedGroup<weapons.Bullet>();
 	
 	public static var player:Player;
-	//public static var player:Player = new Player(0, 0, bullets);
 	
-	//public static var pHP:Int = 3;
 	public static var pMaxHP:Int = 3;
 	public static var pMaxMaxHP:Int = 3;
 	public static var pMaxJumps:Int = 2;
@@ -98,6 +96,37 @@ class Reg
 	public static var door1Color:Int = -1;
 	public static var door2Color:Int;
 	public static var door3Color:Int;
+	
+	// called when you start a new game
+	public static function resetValues()
+	{
+		colorArray = [G];
+
+		globalPalette= G;
+		
+		
+		bullets= new FlxTypedGroup<weapons.Bullet>();
+		
+		pMaxHP = 3;
+		pMaxMaxHP = 3;
+		pMaxJumps = 2;
+		pDamage = 0;
+		pLuck = 1;	
+		pDosh = 0;
+		
+		weapon1 = new WingsEquipment("wings", Reg.G);
+		weapon2 = new ClusterWeapon("cluster", Reg.C);
+		weapon3 = new SplodeWeapon("splode", Reg.M);
+		weapon4 = new SlashWeapon("stomp", Reg.Y);
+		
+		weaponArray = [weapon1, weapon2, weapon3, weapon4];
+
+		
+		door1Color;
+		door2Color;
+		door3Color;
+
+	}
 	
 	public static function shuffleColors()
 	{

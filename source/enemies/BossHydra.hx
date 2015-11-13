@@ -20,13 +20,15 @@ class BossHydra extends EnemyTemplate
 	{
 		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/hydra.png", true, 80, 64);
+		loadGraphic("assets/images/boss_hydra_rightside.png", true, 32, 64);
 		width = 14;
 		height = 64;
 		offset = new FlxPoint(0, -8);
 		
 		ogY = Y;
 		
-		animation.add("idle", [0, 1 , 2, 3, 4, 5], 7, true);
+		animation.add("idle", [0, 1, 2, 3, 4, 5], 7, true);
+		animation.add("idle", [0, 1, 2, 4, 5, 6], 7, true);
 		animation.play("idle");
 	}
 

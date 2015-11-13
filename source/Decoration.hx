@@ -45,7 +45,20 @@ class Decoration extends FlxSprite
 		y = Y;
 		id = Std.int(Index / (Xsize * Ysize));
 		
-		var color_offset = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
+		var _palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
+		_palette = Reg.colorArray[_palette];
+		var color_offset:Int = 0;
+		switch (_palette)
+		{
+			case(Reg.G):
+				color_offset = 0;
+			case(Reg.C):
+				color_offset = 1;
+			case(Reg.M):
+				color_offset = 2;
+			case(Reg.Y):
+				color_offset = 3;
+		}
 		var species_offset = FlxRandom.intRanged(0, SpeciesCount -1);
 		
 		id = id + (4 * species_offset) + (color_offset * Frames);

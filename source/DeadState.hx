@@ -37,6 +37,7 @@ class DeadState extends FlxSubState
 		fakePlayer.animation.play("hurt");
 		add(fakePlayer);
 		
+		
 		if (!P.flipX)
 			circle = new FlxSprite(P.x - 18, P.y - 16);
 		else

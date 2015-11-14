@@ -115,6 +115,9 @@ class EnemySpawner extends FlxSprite
 				_enemy = new CoolSun(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);
 			case "flowerguy":
 				_enemy = new Flowerguy(x, y, _player, this, _grpDrops, _grpBadBullets, _palette);
+			case "lightning":
+				_enemy = new Lightning(x, y, _player, this, _grpDrops, _palette);
+			
 			case "mush":
 				_enemy = new Mush(x, y, _player, this, _grpDrops, _grpBadBullets, _palette, _map);
 			case "snaake":

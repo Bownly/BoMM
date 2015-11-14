@@ -1,7 +1,9 @@
 package enemies;
 
+import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxTypedGroup;
+import flixel.system.FlxSound;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxRandom;
@@ -12,14 +14,6 @@ import weapons.Bullet;
  * @author me
  */
 
-/*
-
-	
-	
-	Sticking enemy.
-	
-  * 
-  * */
  
  
  
@@ -39,6 +33,7 @@ class EnemyTemplate extends FlxSprite
 	private var MAGENTA:Int = 2;
 	private var YELLOW:Int = 3;
 
+	private var _sndHit:FlxSound;
 	
 	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, Health:Int, DropsGrp:FlxTypedGroup<Drops>) 
 	{
@@ -51,6 +46,8 @@ class EnemyTemplate extends FlxSprite
 		_health = Health;
 		_drops = DropsGrp;
 		_spawner = Spawner;
+		
+		_sndHit = FlxG.sound.load(AssetPaths.enemy_hit__wav);
 	}
 	
 	override public function update():Void 
@@ -70,9 +67,15 @@ class EnemyTemplate extends FlxSprite
 		// TODO quick blinking effect
 		// TODO sound of being hurt
 		_health -= damage;
+		playSound();
 		
 		if (_health <= 0)
 			kill();
+	}
+	
+	public function playSound():Void
+	{
+		_sndHit.play(true);
 	}
 	
 	override public function kill():Void

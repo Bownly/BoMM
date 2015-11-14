@@ -174,11 +174,12 @@ class PlayState extends FlxState
 		FlxG.camera.bgColor = 0x00000000;
 		
 //		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
-		FlxG.camera.follow(_player, FlxCamera.STYLE_SCREEN_BY_SCREEN, .1);
 		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN_TIGHT);
 		FlxG.camera.deadzone = FlxRect.get((240) * .4, (240) * .3, (240) * .4, (240) * .4);
 		FlxG.camera.setBounds(0, -_levelHeight, _levelWidth, _levelHeight*2);
 		FlxG.worldBounds.set(0, -_levelHeight, _levelWidth, _levelHeight*2);
+		FlxG.camera.setBounds(0, -_levelHeight * .5, _levelWidth, _levelHeight*2);
+		FlxG.worldBounds.set(0, -_levelHeight * .5, _levelWidth, _levelHeight*2);
 		
 		_hud = new HUD(_player);
 		add(_hud);
@@ -194,7 +195,7 @@ class PlayState extends FlxState
 		FlxG.collide(_grpWalls, _grpEnemies);
 		FlxG.collide(_grpWalls, _grpBadBullets, bulletTouchWall);
 		
-		FlxG.collide(_player, _grpMovingPlatforms, playerOnMovingPlatform);
+		FlxG.collide(_player, _grpMovingPlatforms);
 		
 		FlxG.overlap(_player, _grpEnemies, touchEnemy);
 		FlxG.overlap(_player, _grpSVNoClipEnemies, touchEnemy);
@@ -547,18 +548,11 @@ class PlayState extends FlxState
 	}	
 	private function playerTouchHazard(P:Player, S:Spike):Void
 	{
+		
 		P.takeDamage(S.dmg);
 		//_hud.updateHUD(_player.hp, _score, _player.weaponArray[_player.curWeaponLoc].name);
 	}
-	private function playerOnMovingPlatform(P:Player, MP:MovingPlatforms):Void
-	{
-		
-/*		trace("P.xspeedBonus: " + P.xSpeedBonus);
-		P.xSpeedBonus = MP.velocity.x;
-		trace("MP.velocity.x: " + MP.velocity.x);
-		trace("nigger");*/
-		return;
-	}
+
 	
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
@@ -596,7 +590,7 @@ class PlayState extends FlxState
 		else if (entityName == "spike")
 		{
 			var dmg:Int = Std.parseInt(entityData.get("damage"));
-			_grpHazards.add(new Spike(x, y, dmg));
+			_grpHazards.add(new Spike(x + 3, y + 3, dmg));
 		}
 		else if (entityName == "storePodium")
 		{

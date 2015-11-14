@@ -155,6 +155,7 @@ class Snale extends enemies.EnemyTemplate
 			// TODO quick blinking effect
 			// TODO sound of being hurt
 			_health -= damage;
+			_sndHit.play(true);
 			
 			if (_health <= 0)
 				kill();

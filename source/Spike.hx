@@ -15,14 +15,19 @@ class Spike extends FlxSprite
 	public function new(X:Float=0, Y:Float=0, Damage:Int) 
 	{
 		super(X, Y);
-
-		loadGraphic(AssetPaths.spike__png, false, 16, 16);
-		width = 16;
-		height = 15;
-		offset = new FlxPoint(0, 1);
 		
+		loadGraphic(AssetPaths.spike__png, false, 12, 12);
+		//width = 5;
+		//height = 5;
+		//offset = new FlxPoint(9, 6);
 		
+		animation.add("stupid", [0]);
+		animation.play("stupid");
 		dmg = Damage;
 	}
 	
+	public override function update():Void
+	{
+		super.update();
+	}
 }

@@ -22,9 +22,13 @@ class Stalagmite extends EnemyTemplate
 	{
 		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
 		loadGraphic("assets/images/stalagmite.png", true, 16, 16);
-		width = 14;
-		height = 16;
-		offset = new FlxPoint(0, 0);
+		width = 12;
+		height = 14;
+		offset = new FlxPoint(2, 1);
+		
+		// ghetto offset
+		x += 2;
+		y += 1;
 		
 		ogY = Y;
 		
@@ -51,7 +55,7 @@ class Stalagmite extends EnemyTemplate
 				jumpTimer = 0;
 			}		
 			
-			if ( y == ogY)
+			if ( y >= ogY)
 				jumpTimer += FlxG.elapsed;
 				
 			resolveAnimations();

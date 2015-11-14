@@ -215,8 +215,7 @@ class Player extends FlxSprite
 			
 		if (canMove == true) 
 		{
-//				FlxTween.tween(this, { alpha:0 }, .33, { ease:FlxEase.circOut } );
-			
+
 			
 			if (isClimbing)
 				velocity.y = 0;

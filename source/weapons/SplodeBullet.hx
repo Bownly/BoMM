@@ -72,6 +72,8 @@ class SplodeBullet extends Bullet
 				current_p.bulletArray.add(newBullet5);	
 				current_p.bulletArray.add(newBullet6);	
 				current_p.bulletArray.add(newBullet7);		
+				
+				super.onCollision();
 		}	
 		
 	}

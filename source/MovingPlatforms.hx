@@ -45,9 +45,13 @@ class MovingPlatforms extends FlxSprite
 		switch(Size)
 		{
 			case 2:
-				frame = 4 * (Std.parseInt(Level.levelId) - 1);
+				frame = 2 + 3 * (Std.parseInt(Level.levelId) - 1);
 			case 3:
-				frame = 1 + 2 * (Std.parseInt(Level.levelId) - 1);
+				frame = 2 + 3 * (Std.parseInt(Level.levelId) - 1);
+				
+			case 4:
+				frame = 0 + 2 * (Std.parseInt(Level.levelId) - 1);	
+				
 		}
 		animation.add("move", [frame]);		
 		animation.play("move");		

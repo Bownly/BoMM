@@ -3,7 +3,7 @@ package enemies;
 import flixel.FlxObject;
 import flixel.group.FlxTypedGroup;
 import flixel.util.FlxPoint;
-
+import flixel.FlxG;
 /**
  * ...
  * @author ...
@@ -11,11 +11,13 @@ import flixel.util.FlxPoint;
 class Stalagmite extends EnemyTemplate
 {
 	private var GRAVITY:Int = 700;
-	private var _HP:Int = 1;
+	private var _HP:Int = 20;
 	private var palette:Int = Reg.G;	
 	var ogY:Float;
 	var activated:Bool = false;
-
+	var jumpTimer:Float = 1;
+	var jumpDuration:Float = 0.5;
+	
 	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>) 
 	{
 		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
@@ -41,12 +43,17 @@ class Stalagmite extends EnemyTemplate
 			var xdistance:Float = Math.abs(_player.x - x);
 			acceleration.y = GRAVITY;
 			
-			if (xdistance < 24 && y >= ogY) 
+			//jump
+			if (xdistance < 24 && y >= ogY && jumpTimer >= jumpDuration) 
 			{
 				activated = true;
 				velocity.y = -400;
+				jumpTimer = 0;
 			}		
 			
+			if ( y == ogY)
+				jumpTimer += FlxG.elapsed;
+				
 			resolveAnimations();
 			
 		}

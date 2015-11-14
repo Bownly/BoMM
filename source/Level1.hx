@@ -14,8 +14,8 @@ class Level1 extends PlayState
 		levelId = "1";
 		tileName = "assets/images/cave_tiles.png";
 		nonCollidableTiles = [21, 33, 45, 43, 47];
-		_numRooms = 0;
-		_numUniqueRooms = 20;
+		_numRooms = 20;
+		_numUniqueRooms = 26;
 		_numEarliestRoom = 1;
 	}
 	

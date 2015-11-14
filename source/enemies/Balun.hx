@@ -28,7 +28,7 @@ class Balun extends EnemyTemplate
 	private var idealY:Float;
 	private var XSPEED:Int = 35;
 	private var GRAVITY:Int = 0;
-	private var _HP:Int = 20;
+	private var _HP:Int = 3;
 	
 	private var GUN_DELAY:Float = 1.5;
 	private var BULLET_SPEED:Int = 100;
@@ -194,9 +194,9 @@ class Balun extends EnemyTemplate
 					idealY = _player.y - 40;
 					
 				if (y > idealY)
-					y -= 1;
+					y -= 0.5;
 				else if (y < idealY)
-					y += 1;
+					y += 0.5;
 
 				/*if (y > idealY)
 					velocity.y = -XSPEED;

@@ -47,6 +47,7 @@ class PlayState extends FlxState
 	private var _grpCoins:FlxTypedGroup<Coin>;
 	private var _grpLadders:FlxTypedGroup<Ladder>;
 	private var _grpHazards:FlxTypedGroup<Spike>;
+	var _grpMovingPlatforms:FlxTypedGroup<MovingPlatforms>;
 	
 	private var _door:Door;
 	private var _bossDoor:BossDoor;
@@ -61,7 +62,7 @@ class PlayState extends FlxState
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
 	
-	private var levelId:String;
+	public var levelId:String;
 	private var tileName:String;
 	var nonCollidableTiles:Array<Int>;
 	
@@ -108,21 +109,24 @@ class PlayState extends FlxState
 		_grpWalls = new FlxTypedGroup<FlxTilemap>();
 		
 		_grpLadders = new FlxTypedGroup<Ladder>();
+		_grpMovingPlatforms = new FlxTypedGroup<MovingPlatforms>();
 		
 		_grpHazards = new FlxTypedGroup<Spike>();
-		add(_grpHazards);
+
 		
 		_grpEnemies = new FlxGroup();
-		_grpSVNoClipEnemies = new FlxGroup();
 		
 		
 		_bossDoor = new BossDoor();
-		add(_bossDoor);
 		
 		_grpCoins = new FlxTypedGroup<Coin>();
-		add(_grpCoins);
 		
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
+		add(_grpMovingPlatforms);
+		add(_grpHazards);
+		_grpSVNoClipEnemies = new FlxGroup();
+		add(_bossDoor);
+		add(_grpCoins);
 		add(playerBullets);
 		
 		
@@ -189,6 +193,8 @@ class PlayState extends FlxState
 		FlxG.collide(_grpWalls, playerBullets, bulletTouchWall);
 		FlxG.collide(_grpWalls, _grpEnemies);
 		FlxG.collide(_grpWalls, _grpBadBullets, bulletTouchWall);
+		
+		FlxG.collide(_player, _grpMovingPlatforms, playerOnMovingPlatform);
 		
 		FlxG.overlap(_player, _grpEnemies, touchEnemy);
 		FlxG.overlap(_player, _grpSVNoClipEnemies, touchEnemy);
@@ -539,13 +545,21 @@ class PlayState extends FlxState
 			P.isClimbingUp = false;		
 
 	}	
-	
 	private function playerTouchHazard(P:Player, S:Spike):Void
 	{
 		P.takeDamage(S.dmg);
 		//_hud.updateHUD(_player.hp, _score, _player.weaponArray[_player.curWeaponLoc].name);
 	}
-
+	private function playerOnMovingPlatform(P:Player, MP:MovingPlatforms):Void
+	{
+		
+/*		trace("P.xspeedBonus: " + P.xSpeedBonus);
+		P.xSpeedBonus = MP.velocity.x;
+		trace("MP.velocity.x: " + MP.velocity.x);
+		trace("nigger");*/
+		return;
+	}
+	
 	private function placeEntities(entityName:String, entityData:Xml):Void
 	{
 		var x:Float = Std.parseFloat(entityData.get("x"));
@@ -588,6 +602,12 @@ class PlayState extends FlxState
 		{
 			add(new ShopPodium(x, y, _player, dropsGroup, miscGroup));
 		}
+		else if (entityName == "movingPlatform")
+		{
+			_grpMovingPlatforms.add(new MovingPlatforms(x, y, Std.parseInt(entityData.get("size")), 
+				Std.parseFloat(entityData.get("xdist")), Std.parseFloat(entityData.get("ydist")), 
+				Std.parseInt(entityData.get("speed")), this));
+		}	
 		else if (entityName == "decoration")
 		{
 		// var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);

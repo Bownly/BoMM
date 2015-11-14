@@ -10,13 +10,13 @@ import flixel.util.FlxPoint;
  */
 class CoolSun extends EnemyTemplate
 {
-	private var _HP:Int = 2;
+	private var _HP:Int = 5;
 
 	var _sinTimer:Float = 0;
 	var _sinSpeed:Float = .05;
 	var _cosTimer:Float = 0;
 	var _cosSpeed:Float = .25;
-	var _numBlocksTravelled:Float = 5;
+	var _numBlocksTravelled:Float = 7;
 	//var hideDuration:Float = 2;
 	
 	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Palette:Int) 
@@ -58,9 +58,9 @@ class CoolSun extends EnemyTemplate
 		{
 			_sinTimer += _sinSpeed;
 			if (_palette == Reg.C)
-				y += Math.sin(_sinTimer) * _numBlocksTravelled / 1.5;
+				y += Math.cos(_sinTimer) * _numBlocksTravelled / 1.5;
 			else
-				y += Math.sin(_sinTimer) * _numBlocksTravelled / 3;
+				y += Math.cos(_sinTimer) * _numBlocksTravelled / 3;
 			
 			_cosTimer += _cosSpeed;
 			if (_palette == Reg.Y)

@@ -56,6 +56,7 @@ class PlayState extends FlxState
 	private var _levelHeight:Float = 0;
 	var _numRooms:Int;
 	var _numUniqueRooms:Int;
+	var _numEarliestRoom:Int = 1;
 	
 	var myOgmoLoader:FlxOgmoLoader;
 	var mTileMap:FlxTilemap;
@@ -238,15 +239,8 @@ class PlayState extends FlxState
 		// right now it's more convenient being in one place...
 		// could just make it a function unto itself, but whatever
 		_hud.updateHUD(_player.hp, _player.curWeapon.juice, Reg.pDosh, _player.curWeapon.name);	
-				
+		
 
-		var increment = 0;
-		for (wall in _grpWalls)
-		{
-			increment++;
-			FlxG.watch.add(wall.height, "map " + increment);
-		//trace("wall: " + wall.height);
-		}
 
 		super.update();
 	}	
@@ -329,7 +323,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(1, _numUniqueRooms);  // number of rooms
+			id = FlxRandom.intRanged(_numEarliestRoom, _numUniqueRooms);  // number of rooms
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");

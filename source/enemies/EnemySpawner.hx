@@ -127,7 +127,13 @@ class EnemySpawner extends FlxSprite
 				_enemy = new Stalactyke(x, y, _player, this, _grpDrops);
 			
 			case "hydra":
-				_enemy = new BossHydra(x, y, _player, this, _grpDrops);
+				{
+					var _enemy2 = new BossHydraA(x, y, _player, this, _grpDrops);
+					 _enemy = new BossHydraB(x, y, _player, this, _grpDrops);
+					var _enemy3 = new BossHydraC(x + 32, y, _player, this, _grpDrops);
+					_grpEnemies.add(_enemy2);
+					_grpEnemies.add(_enemy3);
+				}
 		}
 
 			_notFirstSpawn = false;

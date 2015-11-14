@@ -91,7 +91,7 @@ class HubState extends FlxState
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(playerBullets);
 		
-		_player = new Player(0, 0, playerBullets);
+		_player = new Player(0, 0, playerBullets, this);
 		
 		
 		// TODO: This whole paragraph is a mess and also make the tileset reactive to the palette. ;)
@@ -131,8 +131,8 @@ class HubState extends FlxState
 		
 		FlxG.camera.follow(_player,1);
 		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
-		FlxG.camera.setBounds(0, 0, _levelWidth, _levelHeight*2);
-		FlxG.worldBounds.set(0, 0, _levelWidth, _levelHeight*2);
+		FlxG.camera.setBounds(0, 0, _levelWidth, _levelHeight);
+		FlxG.worldBounds.set(0, 0, _levelWidth, _levelHeight);
 		
 		/*_hud = new HUD();
 		add(_hud);*/
@@ -150,7 +150,8 @@ class HubState extends FlxState
 		{
 			FlxG.switchState(new MenuState());
 		}
-
+		
+		//_hud.updateHUD(_player.hp, _player.curWeapon.juice, Reg.pDosh, _player.curWeapon.name);	
 		
 		super.update();
 	}	

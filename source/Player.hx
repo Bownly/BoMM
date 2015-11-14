@@ -376,7 +376,6 @@ class Player extends FlxSprite
 			isClimbing = true;
 			remainingJumps = maxJumps;
 		}
-
 		
 		
 		// slide
@@ -397,11 +396,13 @@ class Player extends FlxSprite
 				remainingJumps--;
 				remainingJumps--;
 				isClimbing = false;
+				state.add(new JumpPuff(x - 1, y + height - 16, curWeaponLoc)); // the "6" is the height of the jumppuff sprite
 			}
 			else if (curWeapon.doubleJump && !isTouching(FlxObject.FLOOR) && curWeapon.isUsable())
 			{
 				curWeapon.juice -= curWeapon.juiceCost;
 				velocity.y = -ySpeedJumping;
+				state.add(new JumpPuff(x, y + height - 6, curWeaponLoc));
 			}		
 			
 		} 	

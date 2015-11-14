@@ -73,12 +73,12 @@ class WeaponTemplate
 			
 			if (_player.flipX)
 			{
-				var newBullet = new Bullet(_player.x - 8, _player.y + 8, 500, FlxObject.LEFT, _player.damage + damage, 256, palette, FlxObject.LEFT);
+				var newBullet = new Bullet(_player.x - 8, _player.y + 8, 200, FlxObject.LEFT, _player.damage + damage, 256, palette, FlxObject.LEFT);
 				_player.bulletArray.add(newBullet);
 			}
 			else
 			{
-				var newBullet = new Bullet(_player.x + 8, _player.y + 8, 500, FlxObject.RIGHT, _player.damage + damage, 256, palette, FlxObject.RIGHT);
+				var newBullet = new Bullet(_player.x + 8, _player.y + 8, 200, FlxObject.RIGHT, _player.damage + damage, 256, palette, FlxObject.RIGHT);
 				_player.bulletArray.add(newBullet);
 			}
 			if (!isEquipment)

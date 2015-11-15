@@ -13,7 +13,7 @@ class BossDoor extends FlxSprite
 	public function new(X:Float=0, Y:Float=0) 
 	{
 		super(X, Y);
-		loadGraphic(AssetPaths.bossdoor__png, false, 16, 32);
+		loadGraphic(AssetPaths.bossdoor__png, false, 16, 48);
 		
 		animation.add("open", [0, 1, 2, 3, 4, 3, 2, 1, 0], 15, false);
 		animation.add("shut", [4, 3, 2, 1, 0], 5, false);

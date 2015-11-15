@@ -12,6 +12,7 @@ class Decoration extends FlxSprite
 	public var id:Int = 0;
 	public var price:Int = 0;
 	public var free:Bool = true;
+	public var _palette:Int = 0;
 	
 /* Legend for drops:
 	 * 
@@ -45,7 +46,11 @@ class Decoration extends FlxSprite
 		y = Y;
 		id = Std.int(Index / (Xsize * Ysize));
 		
-		var _palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
+		if (Reg.colorArray.length > 1)
+		{
+			trace("length: " + Reg.colorArray.length + ", " + Reg.colorArray);
+			_palette = FlxRandom.intRanged(1, Reg.colorArray.length - 1);
+		}
 		_palette = Reg.colorArray[_palette];
 		var color_offset:Int = 0;
 		switch (_palette)

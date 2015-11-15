@@ -3,6 +3,7 @@ package;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxSubState;
+import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.util.FlxPoint;
@@ -23,6 +24,9 @@ class DeadState extends FlxSubState
 	var orbYSpeed:Int;
 	var _player:Player;
 	
+	private var _sndDie:FlxSound;
+
+	
 	public function new(BGColor:Int=FlxColor.TRANSPARENT, P:Player) 
 	{
 		super(BGColor);
@@ -37,7 +41,8 @@ class DeadState extends FlxSubState
 		fakePlayer.animation.play("hurt");
 		add(fakePlayer);
 		
-		
+		_sndDie = FlxG.sound.load(AssetPaths.death_sound__wav, .2);
+
 		if (!P.flipX)
 			circle = new FlxSprite(P.x - 18, P.y - 16);
 		else
@@ -51,17 +56,14 @@ class DeadState extends FlxSubState
 	
 	public override function update()
 	{
-		if (FlxG.keys.anyJustReleased(["P"]))
-		{
-			//this.destroy();
-			this.close();
-		}
+
 		if (circle.animation.frameIndex == 7)
 		{
 			fakePlayer.visible = false;
 		}
 		if (circle.animation.finished && orb1 == null)
 		{
+			_sndDie.play();
 			circle.visible = false;
 			var colorOffset:Int = 0;
 			
@@ -115,12 +117,15 @@ class DeadState extends FlxSubState
 			
 		}
 		
-		if (orb1 != null && !orb1.isOnScreen() && !orb2.isOnScreen() && !orb3.isOnScreen() && !orb4.isOnScreen())
-		{
-			FlxG.switchState(new MenuState());
-		}
+		if (circle.animation.finished && _sndDie.playing == false)
+			gameOver();
+		
 		
 		super.update();
 	}
 	
+	public function gameOver()
+	{
+		FlxG.switchState(new MenuState());
+	}
 }

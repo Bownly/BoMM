@@ -30,7 +30,7 @@ class MenuState extends FlxState
 	override public function create():Void
 	{
 		super.create();
-		add(new FlxText(6, 9, 200, "title screen art goes here"));
+	//	add(new FlxText(6, 9, 200, "title screen art goes here"));
 		FlxG.camera.bgColor = 0xFA9FA9;
 		
 		
@@ -40,7 +40,7 @@ class MenuState extends FlxState
 		grpSelections = new FlxTypedGroup<FlxText>();
 		txtSelection0 = new FlxText(100, 25, 0, "New Game", 8);
 		txtSelection1 = new FlxText(100, 50, 0, "Settings", 8);
-		txtSelection2 = new FlxText(100, 75, 0, "Extras", 8);
+		txtSelection2 = new FlxText(100, 75, 0, "Credits", 8);
 		
 		add(grpSelections);
 		grpSelections.add(txtSelection0);

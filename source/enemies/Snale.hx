@@ -29,6 +29,7 @@ class Snale extends enemies.EnemyTemplate
 	var shotCountMax:Int = 2;
 	
 	var palette:Int;
+	var o = 6; // the amount of sprites in the sheet per color
 	
 	var isHiding:Bool = true;
 	var hideTimer:Float = 5;
@@ -46,7 +47,9 @@ class Snale extends enemies.EnemyTemplate
 		_bullets = Bullets;
 		_cooldown = 0;
 		
-		//flipX = true;
+		flipX = false;
+		facing = FlxObject.LEFT;
+		
 		velocity.y = GRAVITY;
 		
 		if (palette == Reg.G)
@@ -67,7 +70,6 @@ class Snale extends enemies.EnemyTemplate
 			GUN_DELAY = 1;
 		}
 		
-		var o = 6; // the amount of sprites in the sheet per color
 		switch (palette)
 		{
 			case(Reg.G):
@@ -110,18 +112,18 @@ class Snale extends enemies.EnemyTemplate
 			}
 			
 			// controls which direction snail faces
-			if (_player.x > x)
+			if (_player.x > x && isHiding && animation.frameIndex == (5 + o))
 			{					
 				facing = FlxObject.RIGHT; 
 				flipX = true;
 			}
-			else if (_player.x < x)
+			else if (_player.x < x && isHiding && animation.frameIndex == (5 + o))
 			{
 				facing = FlxObject.LEFT;
 				flipX = false;
 			}
 			
-			if (!isHiding)
+			if (!isHiding && animation.frameIndex <= (4 + o))
 			{
 				shoot(_player);
 				_cooldown += FlxG.elapsed;
@@ -137,9 +139,10 @@ class Snale extends enemies.EnemyTemplate
 		// Bullet code will go here
 		var bulletX:Int = Math.floor(x);
 		var bulletY:Int = Math.floor(y + 4);
-		
+
 		if (_cooldown > GUN_DELAY && shotCount < shotCountMax)
 		{	
+			playShootSound();
 			var bullet = new weapons.Bullet(x + 8, y, _bulletXVel, facing, _bulletDmg, 256, palette, facing);
 			_bullets.add(bullet);
 			shotCount++;
@@ -150,7 +153,7 @@ class Snale extends enemies.EnemyTemplate
 	
 	public override function takeDamage(damage:Int):Void
 	{
-		if (animation.frameIndex != 5)
+		if (animation.frameIndex != (5 + o))
 		{
 			// TODO quick blinking effect
 			// TODO sound of being hurt

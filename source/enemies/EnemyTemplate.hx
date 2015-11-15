@@ -1,5 +1,6 @@
 package enemies;
 
+import flixel.effects.FlxFlicker;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxTypedGroup;
@@ -34,6 +35,7 @@ class EnemyTemplate extends FlxSprite
 	private var YELLOW:Int = 3;
 
 	private var _sndHit:FlxSound;
+	private var _sndShoot:FlxSound;
 	
 	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, Health:Int, DropsGrp:FlxTypedGroup<Drops>) 
 	{
@@ -47,7 +49,8 @@ class EnemyTemplate extends FlxSprite
 		_drops = DropsGrp;
 		_spawner = Spawner;
 		
-		_sndHit = FlxG.sound.load(AssetPaths.enemy_hit__wav);
+		_sndHit = FlxG.sound.load(AssetPaths.enemy_hit__wav, .2);
+		_sndShoot = FlxG.sound.load(AssetPaths.enemy_shoot__wav, .2);
 	}
 	
 	override public function update():Void 
@@ -65,17 +68,22 @@ class EnemyTemplate extends FlxSprite
 	public function takeDamage(damage:Int):Void
 	{
 		// TODO quick blinking effect
-		// TODO sound of being hurt
 		_health -= damage;
-		playSound();
+		
+		FlxTween.tween(this, { alpha:0}, .2, { ease:FlxEase.circOut, type:FlxTween.BACKWARD} );
+		playHitSound();
 		
 		if (_health <= 0)
 			kill();
 	}
 	
-	public function playSound():Void
+	public function playHitSound():Void
 	{
 		_sndHit.play(true);
+	}
+	public function playShootSound():Void
+	{
+		_sndShoot.play(true);
 	}
 	
 	override public function kill():Void
@@ -115,7 +123,7 @@ class EnemyTemplate extends FlxSprite
 		
 		_killed = true;
 		alive = false;
-		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, complete:finishKill } );
+		FlxTween.tween(this, { alpha:0}, .33, { ease:FlxEase.circOut, complete:finishKill } );
 	}
 	
 	private function finishKill(_):Void

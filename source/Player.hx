@@ -6,10 +6,13 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxTypedGroup;
+import flixel.system.FlxSound;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxPoint;
 import flixel.util.FlxPoint;
+import flixel.util.FlxRandom;
+import neko.Random;
 import weapons.Bullet;
 import weapons.EightWayWeapon;
 import weapons.WeaponTemplate;
@@ -78,7 +81,13 @@ class Player extends FlxSprite
 	private var canMove:Bool = true;
 	
 	var state:FlxState;
-	
+
+	var _sndArray:Array<FlxSound>;
+	private var _sndShoot:FlxSound;
+	private var _sndGetHit:FlxSound;	
+	private var _sndStep:FlxSound;
+	private var _sndJump:FlxSound;
+ 
 	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>, ?State:FlxState) 
 	{
 		super(inX, inY);
@@ -108,6 +117,17 @@ class Player extends FlxSprite
 		width = 14;
 		height = 22;
 		offset = new FlxPoint(9, 6);
+		
+		
+		_sndShoot = FlxG.sound.load(AssetPaths.player_shoot__wav, 2);
+		_sndGetHit = FlxG.sound.load(AssetPaths.player_hit__wav, 2);
+		_sndJump = FlxG.sound.load(AssetPaths.player_jump__wav, .33);
+		//_sndArray = new Array<FlxSound>();
+		/*for (i in 1...11)
+		{
+			_sndStep = FlxG.sound.load("assets/sounds/forest_run_" + i + ".wav", .1);
+			_sndArray.push(_sndStep);
+		}*/
 		
 		
 		var offset = 18; // the amount of sprites in the sheet per color
@@ -156,28 +176,6 @@ class Player extends FlxSprite
 	
 
 	
-	/* Moving tiles:
-	 make them ogmo entities, but one for each square, or one entity per platform, and use a value thing for length?
-	 I like the latter option more.
-	 Oh shoot, can I make them the same class as falling platforms? 
-	 Yes, I think I can
-	 So, as entities, I have 2 params: direction and speed? At least direction...
-	 Well at that point, what do the two have in common? They both move in one direction (or two!) following a trigger
-	 The horizontal ones' trigger is spawning and the falling ones' trigger is the player steping on them. 
-	 Well that's not too similar actually. Other than the fact that they are collidable objects...
-	 
-	 params(ish):
-	 speed?
-	 distance
-	 direction
-	 placement
-	 size/length
-	 
-	 Eh, maybe these are too complicated for right now. No doubt I could ghetto-rig some implementation, 
-	 but it would probably be a bad one.
-	 
-	*/
-	
 	override public function update():Void 
 	{
 		
@@ -193,7 +191,7 @@ class Player extends FlxSprite
 		else
 			isInching = false;
 		
-		if (hurtTimer > 0)  // todo, make immune time longer than forced move time, lol
+		if (hurtTimer > 0) 
 		{
 			if (velocity.y < 0)
 				velocity.y = 0;
@@ -213,10 +211,16 @@ class Player extends FlxSprite
 		if (invincTimer > 0)
 			invincTimer -= FlxG.elapsed;
 			
-		if (canMove == true) 
+		// walking sound
+		/*if ((velocity.x != 0 ) && touching == FlxObject.FLOOR)
 		{
-
-			
+			var id = FlxRandom.intRanged(0, _sndArray.length - 1);
+			_sndArray[id].play();
+		}*/
+		
+		
+		if (canMove == true) 
+		{			
 			if (isClimbing)
 				velocity.y = 0;
 			else
@@ -402,12 +406,14 @@ class Player extends FlxSprite
 				remainingJumps--;
 				isClimbing = false;
 				state.add(new JumpPuff(x - 1, y + height - 16, curWeaponLoc)); // the "6" is the height of the jumppuff sprite
+				_sndJump.play();
 			}
 			else if (curWeapon.doubleJump && !isTouching(FlxObject.FLOOR) && curWeapon.isUsable())
 			{
 				curWeapon.juice -= curWeapon.juiceCost;
 				velocity.y = -ySpeedJumping;
 				state.add(new JumpPuff(x, y + height - 6, curWeaponLoc));
+				_sndJump.play();
 			}		
 			
 		} 	
@@ -493,7 +499,7 @@ class Player extends FlxSprite
 	private function shoot():Void
 	{
 		curWeapon.shoot(this);
-		
+		_sndShoot.play(true);
     }
 	
 	private function switchWeapon():Void
@@ -513,6 +519,7 @@ class Player extends FlxSprite
 	{
 		if (invincTimer <= 0)
 		{
+			_sndGetHit.play();
 			hurtTimer = .5;
 			hp -= dmg;
 			if (dmg != 0 && hp > 0)

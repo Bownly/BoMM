@@ -229,7 +229,7 @@ class Balun extends EnemyTemplate
 		
 		if (_cooldown > GUN_DELAY)
 		{
-			
+			playShootSound();
 			if (colorString == "cyan")
 			{
 				if (P.x < x)

@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxGroup;
 import flixel.group.FlxTypedGroup;
+import flixel.system.FlxSound;
 import flixel.util.FlxPoint;
 import flixel.util.FlxRandom;
 import weapons.Bullet;
@@ -31,6 +32,8 @@ class Bat extends EnemyTemplate
 	var echoTimer:Float = -1;
 	var hasBeenHit:Bool = false;
 	
+	private var _sndSonar:FlxSound;
+
 	public function new(X:Float, Y:Float, ThePlayer:Player, Spawner:EnemySpawner, DropsGrp:FlxTypedGroup<Drops>, Bullets:FlxGroup, Palette:Int) 
 	{
 		super(X, Y, ThePlayer, Spawner, _HP, DropsGrp);
@@ -65,9 +68,10 @@ class Bat extends EnemyTemplate
 		animation.add("echo", [1 + o]);
 		animation.add("flap", [2 + o, 3 + o, 4 + o, 3 + o], 9, true);
 		
-	//	velocity.y = -1;
 		GUN_DELAY = 2;
-
+		
+		_sndSonar = FlxG.sound.load(AssetPaths.bat_sonar__wav, .1);
+		
 	}
 	
 	
@@ -182,11 +186,13 @@ class Bat extends EnemyTemplate
 				}
 				case Reg.C:  // cyan
 				{
+					_sndSonar.play();
 					var bullet = new weapons.Echo(x + 4, y, echoSpeed, perchDirection, 1, 256, flipY);
 					_bullets.add(bullet);
 				}
 				case Reg.M:  // magenta
 				{
+					_sndSonar.play();
 					var bullet = new weapons.Echo(x + 4, y, echoSpeed, perchDirection, 1, 256, flipY);
 					_bullets.add(bullet);
 				}
@@ -200,6 +206,7 @@ class Bat extends EnemyTemplate
 					else
 						shotDir = FlxObject.FLOOR;
 						
+					playShootSound();
 					var bullet = new weapons.Bullet(x + 4, y, echoSpeed, shotDir, 1, 256, palette, perchDirection);
 					_bullets.add(bullet);
 					_cooldown = 0; 
@@ -224,7 +231,7 @@ class Bat extends EnemyTemplate
 			B.kill();
 			if (palette == Reg.C)
 			{
-				//shootShot();
+				playShootSound();
 				var bullet = new weapons.Bullet(x + 4, y, echoSpeed, perchDirection, 1, 256, palette, perchDirection);
 				_bullets.add(bullet);
 				_cooldown = 0; 

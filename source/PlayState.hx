@@ -26,6 +26,7 @@ import flixel.addons.editors.ogmo.FlxOgmoLoader;
 import flixel.util.FlxRandom;
 import flixel.util.FlxRect;
 import weapons.Bullet;
+import weapons.BulletAfterimage;
 import weapons.StompEquipment;
 import weapons.WeaponTemplate;
 
@@ -182,7 +183,7 @@ class PlayState extends FlxState
 		FlxG.worldBounds.set(0, -_levelHeight * .5, _levelWidth, _levelHeight*2);
 		
 		_hud = new HUD(_player);
-		add(_hud);
+		//add(_hud);
 		
 		super.create();
 	}
@@ -438,6 +439,7 @@ class PlayState extends FlxState
 		{
 			E.takeDamage(B.getDamage());
 			B.kill();
+			add(new BulletAfterimage(B.x, B.y));
 		}
 
 	}	
@@ -617,7 +619,7 @@ class PlayState extends FlxState
 					decorationGroup.add(new Decoration("cave", x, y, 24, 1, 2, 2, 1));
 				case "torch":
 					decorationGroup.add(new Decoration("cave", x, y, 72, 1, 3, 3, 3));
-					
+				
 				// forest
 				case "flower":
 					decorationGroup.add(new Decoration("forest", x, y, 0, 4, 1, 2, 1));
@@ -627,7 +629,7 @@ class PlayState extends FlxState
 					decorationGroup.add(new Decoration("forest", x, y, 64, 4, 1, 1, 1));
 				case "bigtree":
 					decorationGroup.add(new Decoration("forest", x, y, 80, 2, 4, 5, 1));
-					
+				
 			}
 		}
 		else if (entityName == "enemy")

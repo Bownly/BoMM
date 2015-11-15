@@ -72,7 +72,7 @@ class Beehive extends enemies.EnemyTemplate
 			else
 				animation.play("open");
 				
-			if (isTouching(FlxObject.FLOOR))
+			if (isTouching(FlxObject.FLOOR) && alive)
 			{
 				spawnBirds();
 				_cracked = true;

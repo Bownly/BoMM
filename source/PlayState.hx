@@ -183,7 +183,7 @@ class PlayState extends FlxState
 		FlxG.worldBounds.set(0, -_levelHeight * .5, _levelWidth, _levelHeight*2);
 		
 		_hud = new HUD(_player);
-		//add(_hud);
+		add(_hud);
 		
 		super.create();
 	}

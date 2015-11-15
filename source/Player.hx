@@ -87,6 +87,7 @@ class Player extends FlxSprite
 	private var _sndGetHit:FlxSound;	
 	private var _sndStep:FlxSound;
 	private var _sndJump:FlxSound;
+	private var _sndSwitch:FlxSound;
  
 	public function new(inX:Int=0, inY:Int=0, Bullets:FlxTypedGroup<weapons.Bullet>, ?State:FlxState) 
 	{
@@ -122,6 +123,7 @@ class Player extends FlxSprite
 		_sndShoot = FlxG.sound.load(AssetPaths.player_shoot__wav, 2);
 		_sndGetHit = FlxG.sound.load(AssetPaths.player_hit__wav, 2);
 		_sndJump = FlxG.sound.load(AssetPaths.player_jump__wav, .33);
+		_sndSwitch = FlxG.sound.load(AssetPaths.switch_weapon__wav, .1);
 		//_sndArray = new Array<FlxSound>();
 		/*for (i in 1...11)
 		{
@@ -511,6 +513,7 @@ class Player extends FlxSprite
 				curWeaponLoc = 0;
 		}
 		while (weaponArray[curWeaponLoc].unlocked == false);
+		_sndSwitch.play(true);
 		
 		curWeapon = weaponArray[curWeaponLoc];
 	}

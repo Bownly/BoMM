@@ -49,8 +49,8 @@ class EnemyTemplate extends FlxSprite
 		_drops = DropsGrp;
 		_spawner = Spawner;
 		
-		_sndHit = FlxG.sound.load(AssetPaths.enemy_hit__wav, .2);
-		_sndShoot = FlxG.sound.load(AssetPaths.enemy_shoot__wav, .2);
+		_sndHit = FlxG.sound.load(AssetPaths.enemy_hit__wav, .06);
+		_sndShoot = FlxG.sound.load(AssetPaths.enemy_shoot__wav, .07);
 	}
 	
 	override public function update():Void 

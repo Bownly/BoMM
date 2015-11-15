@@ -120,10 +120,10 @@ class Player extends FlxSprite
 		offset = new FlxPoint(9, 6);
 		
 		
-		_sndShoot = FlxG.sound.load(AssetPaths.player_shoot__wav, 2);
-		_sndGetHit = FlxG.sound.load(AssetPaths.player_hit__wav, 2);
-		_sndJump = FlxG.sound.load(AssetPaths.player_jump__wav, .33);
-		_sndSwitch = FlxG.sound.load(AssetPaths.switch_weapon__wav, .1);
+		_sndShoot = FlxG.sound.load(AssetPaths.player_shoot__wav, .7);
+		_sndGetHit = FlxG.sound.load(AssetPaths.player_hit__wav, .33);
+		_sndJump = FlxG.sound.load(AssetPaths.player_jump__wav, .2);
+		_sndSwitch = FlxG.sound.load(AssetPaths.switch_weapon__wav, .15);
 		//_sndArray = new Array<FlxSound>();
 		/*for (i in 1...11)
 		{

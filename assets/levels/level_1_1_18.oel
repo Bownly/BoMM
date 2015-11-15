@@ -92,10 +92,6 @@
 37,38,39,38,39,38,38,39,38,38,38,38,39,38,38,39,38,39,38,38,38,38,39,38,41
 -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1</walls>
   <entities>
-    <ladder id="1" x="16" y="176" top="False" />
-    <ladder id="2" x="16" y="192" top="False" />
-    <ladder id="3" x="16" y="208" top="False" />
-    <ladder id="4" x="16" y="224" top="False" />
     <ladder id="5" x="16" y="240" top="False" />
     <ladder id="6" x="16" y="272" top="False" />
     <ladder id="7" x="16" y="256" top="False" />
@@ -112,8 +108,6 @@
     <exit id="34" x="384" y="128" val="1" />
     <ladder id="16" x="368" y="160" top="False" />
     <ladder id="28" x="368" y="144" top="True" />
-    <ladder id="29" x="16" y="160" top="False" />
-    <ladder id="30" x="16" y="144" top="True" />
     <enemy id="8" x="80" y="288" name="stalagmite" />
     <enemy id="9" x="96" y="288" name="stalagmite" />
     <enemy id="10" x="112" y="288" name="stalagmite" />
@@ -127,7 +121,11 @@
     <enemy id="27" x="320" y="288" name="stalagmite" />
     <spike id="31" x="240" y="304" damage="100" />
     <spike id="32" x="144" y="304" damage="100" />
-    <enemy id="35" x="128" y="176" name="bat" />
-    <enemy id="36" x="256" y="176" name="bat" />
+    <ladder id="1" x="16" y="176" top="False" />
+    <ladder id="2" x="16" y="192" top="False" />
+    <ladder id="3" x="16" y="208" top="False" />
+    <ladder id="4" x="16" y="224" top="False" />
+    <ladder id="29" x="16" y="160" top="False" />
+    <ladder id="30" x="16" y="144" top="True" />
   </entities>
 </level>

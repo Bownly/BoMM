@@ -13,7 +13,7 @@ class WingsEquipment extends WeaponTemplate
 		weaponID = 14;
 		
 		doubleJump = true;
-		juiceCost = 1;
+		juiceCost = 0;
 		isEquipment = true;
 	}
 	

@@ -85,10 +85,10 @@ class Reg
 	public static var pDosh:Int = 0;
 	
 	public static var weaponCount:Int = 16;
-	public static var weapon1:WeaponTemplate = new WingsEquipment("wings", Reg.G);
-	public static var weapon2:WeaponTemplate = new ClusterWeapon("cluster", Reg.C);
+	public static var weapon1:WeaponTemplate = new WeaponTemplate("pea", Reg.G);
+	public static var weapon2:WeaponTemplate = new WingsEquipment("wings", Reg.C);
 	public static var weapon3:WeaponTemplate = new SplodeWeapon("splode", Reg.M);
-	public static var weapon4:WeaponTemplate = new SlashWeapon("stomp", Reg.Y);
+	public static var weapon4:WeaponTemplate = new SpreadWeapon("stomp", Reg.Y);
 	
 	public static var weaponArray:Array<WeaponTemplate> = [weapon1, weapon2, weapon3, weapon4];
 
@@ -114,10 +114,10 @@ class Reg
 		pLuck = 1;	
 		pDosh = 0;
 		
-		weapon1 = new WingsEquipment("wings", Reg.G);
-		weapon2 = new ClusterWeapon("cluster", Reg.C);
+		weapon1 = new WeaponTemplate("pea", Reg.G);
+		weapon2 = new WingsEquipment("wings", Reg.C);
 		weapon3 = new SplodeWeapon("splode", Reg.M);
-		weapon4 = new SlashWeapon("stomp", Reg.Y);
+		weapon4 = new SpreadWeapon("stomp", Reg.Y);
 		
 		weaponArray = [weapon1, weapon2, weapon3, weapon4];
 

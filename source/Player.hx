@@ -111,7 +111,9 @@ class Player extends FlxSprite
 		}
 		bulletArray = Bullets;
 		
-		velocity.y = GRAVITY;
+		//velocity.y = GRAVITY;
+		visible = false;
+		
 		drag.set(0, 0);
 		
 		loadGraphic(AssetPaths.mcgurlhair__png, true, 32, 32);

@@ -16,7 +16,7 @@ class Level3 extends PlayState
 		nonCollidableTiles = [14];
 		_numRooms = 5;
 		_numUniqueRooms = 4;
-		_numEarliestRoom = 4;
+		_numEarliestRoom = 1;
 
 	}
 	

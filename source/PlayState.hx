@@ -101,6 +101,9 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
+		
+		
+		
 		trace("unlockable color: " + unlockableColor);
 		trace("color array: " + Reg.colorArray);
 		

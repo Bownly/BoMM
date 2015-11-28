@@ -15,7 +15,7 @@ class WeaponTemplate
 	public var damage:Int = 1;
 	
 	public var juice:Int = 12;
-	public var juiceMax:Int =12;
+	public var juiceMax:Int = 0;
 	public var juiceCost:Int = 0;
 	
 	public var maxBullets:Int = 3;

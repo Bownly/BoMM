@@ -11,9 +11,9 @@ class WingsEquipment extends WeaponTemplate
 	{
 		super(Name, Palette);
 		weaponID = 14;
-		
+		juiceMax = 6;
 		doubleJump = true;
-		juiceCost = 0;
+		juiceCost = 1;
 		isEquipment = true;
 	}
 	

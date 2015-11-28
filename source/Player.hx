@@ -111,8 +111,7 @@ class Player extends FlxSprite
 		}
 		bulletArray = Bullets;
 		
-		//velocity.y = GRAVITY;
-		visible = false;
+		velocity.y = GRAVITY;
 		
 		drag.set(0, 0);
 		

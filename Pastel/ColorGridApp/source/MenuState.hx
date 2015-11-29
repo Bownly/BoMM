@@ -14,16 +14,25 @@ class MenuState extends FlxState
 {
 	
 	var _btnNewGame:FlxButton;
+	var _txtTitle:FlxText;
+	
+	var sub:GameOverSubState;  // kill me before syncing
 	
 	/**
 	 * Function that is called up when to state is created to set it up. 
 	 */
 	override public function create():Void
 	{
-		_btnNewGame = new FlxButton(50, 50, "New Game", onNewGameTrigger);
-//		_btnNewGame.loadGraphic("assets/images/mctest.png", false, 160, 16);
+		_btnNewGame = new FlxButton(50, 50, Strings.newGame, onNewGameTrigger);
+		_btnNewGame.loadGraphic("assets/images/button.png", 128, 16);
+		_btnNewGame.x = FlxG.width / 2 - _btnNewGame.width / 2;
+		_btnNewGame.y = FlxG.height * .6;
+		
+		_txtTitle = new FlxText(0, FlxG.height * .25, FlxG.width, Strings.title, 24);
+		_txtTitle.alignment = "center";
 		
 		add(_btnNewGame);
+		add(_txtTitle);		
 		super.create();
 	}
 	
@@ -48,7 +57,9 @@ class MenuState extends FlxState
 	
 	private function onNewGameTrigger():Void
 	{
-		FlxG.switchState(new PlayState());
+		sub = new GameOverSubState(69);
+		this.openSubState(sub);
+		//FlxG.switchState(new PlayState());
 
 	}
 	

@@ -20,7 +20,7 @@ class BossDoor extends FlxSprite
 		
 	}
 	
-	override public function update():Void 
+	override public function update(elapsed:Float):Void 
 	{	
 		if (status == 1)
 		{
@@ -30,7 +30,7 @@ class BossDoor extends FlxSprite
 		
 		if (animation.getByName("open").finished)
 			status = 0;
-		super.update();
+		super.update(elapsed);
 	}
 	
 	public function open()

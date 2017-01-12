@@ -1,18 +1,17 @@
 package;
-import flixel.addons.effects.FlxGlitchSprite;
+// import flixel.addons.effects.FlxGlitchSprite;
 import flixel.effects.FlxFlicker;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 import flixel.system.FlxSound;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxPoint;
-import flixel.util.FlxPoint;
-import flixel.util.FlxRandom;
-import neko.Random;
+import flixel.math.FlxPoint;
+// import flixel.math.FlxRandom;
+// import neko.Random;
 import weapons.Bullet;
 import weapons.EightWayWeapon;
 import weapons.WeaponTemplate;
@@ -179,7 +178,7 @@ class Player extends FlxSprite
 	
 
 	
-	override public function update():Void 
+	override public function update(elapsed:Float):Void 
 	{
 		
 		if (stompTimer > 0)
@@ -253,8 +252,7 @@ class Player extends FlxSprite
 		velocity.x += xSpeedBonus;
 		velocity.y += ySpeedBonus;
 		
-		
-		super.update();
+		super.update(elapsed);
 	}
 
 	override public function destroy():Void

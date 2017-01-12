@@ -1,7 +1,7 @@
 package enemies;
 
-import flixel.group.FlxTypedGroup;
-import flixel.util.FlxPoint;
+import flixel.group.FlxGroup;
+import flixel.math.FlxPoint;
 
 /**
  * ...

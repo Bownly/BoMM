@@ -2,7 +2,7 @@ package enemies;
 
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 
 /**
  * ...
@@ -28,7 +28,7 @@ class BalunString extends EnemyTemplate
 		animation.add("right", [12, 13], 6, true);		
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (alive == true)
 		{
@@ -42,7 +42,7 @@ class BalunString extends EnemyTemplate
 			{
 				animation.play("right");
 			}
-			super.update();
+			super.update(elapsed);
 		}
 	}
 }

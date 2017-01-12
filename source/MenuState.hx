@@ -4,10 +4,9 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
-import flixel.util.FlxMath;
+import flixel.math.FlxMath;
 
 /**
  * A FlxState which can be used for the game's menu.
@@ -50,7 +49,7 @@ class MenuState extends FlxState
 	}
 	
 
-	override public function update():Void
+	override public function update(elapsed:Float):Void
 	{
 		colorize();
 		
@@ -79,7 +78,7 @@ class MenuState extends FlxState
 					gotoExtras();
 			}
 		}
-		super.update();
+		super.update(elapsed);
 	}	
 	
 	

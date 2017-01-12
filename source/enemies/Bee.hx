@@ -2,7 +2,6 @@ package enemies;
 import enemies.Beehive;
 import enemies.EnemyTemplate;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 
 /**
  * ...
@@ -55,7 +54,7 @@ class Bee extends enemies.EnemyTemplate
 		haveEgg = true;
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 
 		velocity.x = XSPEED;
@@ -69,7 +68,7 @@ class Bee extends enemies.EnemyTemplate
 		{	
 			dropEgg();
 		}
-		super.update();
+		super.update(elapsed);
 	}
 	
 	public function dropEgg()

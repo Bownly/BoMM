@@ -3,7 +3,6 @@ package enemies;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.tile.FlxTilemap;
 import weapons.Spore;
 
@@ -74,7 +73,7 @@ class Mush extends EnemyTemplate
 		}
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 
 
@@ -94,7 +93,7 @@ class Mush extends EnemyTemplate
 			changeColor(); // just for testing
 
 		
-		super.update();
+		super.update(elapsed);
 
 	}
 	

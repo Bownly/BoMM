@@ -2,7 +2,7 @@ package enemies;
 import enemies.EnemyTemplate;
 import flixel.FlxG;
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 
 /**
  * ...
@@ -29,7 +29,7 @@ class Notey extends enemies.EnemyTemplate
 		
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (isOnScreen()) 
 		{			
@@ -41,7 +41,7 @@ class Notey extends enemies.EnemyTemplate
 			if (isTouching(FlxObject.WALL))
 				turnAround();
 			
-			super.update();
+			super.update(elapsed);
 		}
 	}
 	

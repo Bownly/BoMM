@@ -4,7 +4,6 @@ package;
  import flixel.FlxG;
  import flixel.FlxSprite;
  import flixel.group.FlxGroup;
- import flixel.group.FlxTypedGroup;
  import flixel.text.FlxText;
  import flixel.util.FlxColor;
  using flixel.util.FlxSpriteUtil;

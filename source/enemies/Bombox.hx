@@ -3,10 +3,9 @@ import enemies.EnemyTemplate;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxPoint;
+import flixel.math.FlxPoint;
 
 /**
  * ...
@@ -56,7 +55,7 @@ class Bombox extends enemies.EnemyTemplate
 		animation.add("open", [1 + o]);		
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (isOnScreen()) 
 		{
@@ -94,7 +93,7 @@ class Bombox extends enemies.EnemyTemplate
 				shoot(_player);
 			}
 			_cooldown += FlxG.elapsed;
-			super.update();
+			super.update(elapsed);
 		}
 	}
 	

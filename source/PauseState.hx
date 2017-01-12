@@ -22,14 +22,14 @@ class PauseState extends FlxSubState
 		add(text);
 	}
 	
-	public override function update()
+	public override function update(elapsed:Float)
 	{
 		if (FlxG.keys.anyJustReleased(["P"]))
 		{
 			//this.destroy();
 			this.close();
 		}
-		super.update();
+		super.update(elapsed);
 	}
 	
 }

@@ -4,9 +4,8 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.tile.FlxTilemap;
-import flixel.util.FlxRandom;
+import flixel.math.FlxRandom;
 
 /**
  * ...
@@ -58,7 +57,7 @@ class EnemySpawner extends FlxSprite
 		
 	}
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
 	{
 		if (_enemy != null)
 		{
@@ -86,7 +85,7 @@ class EnemySpawner extends FlxSprite
 		else if (isOnScreen())
 			spawnEnemy();
 		
-		super.update();
+		super.update(elapsed);
 	}
 	
 	private function spawnEnemy():Void

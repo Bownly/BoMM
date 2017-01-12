@@ -6,7 +6,7 @@ import flixel.FlxSubState;
 import flixel.system.FlxSound;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-import flixel.util.FlxPoint;
+import flixel.math.FlxPoint;
 
 /**
  * ...
@@ -54,7 +54,7 @@ class DeadState extends FlxSubState
 		
 	}
 	
-	public override function update()
+	public override function update(elapsed:Float)
 	{
 
 		if (circle.animation.frameIndex == 7)
@@ -121,7 +121,7 @@ class DeadState extends FlxSubState
 			gameOver();
 		
 		
-		super.update();
+		super.update(elapsed);
 	}
 	
 	public function gameOver()

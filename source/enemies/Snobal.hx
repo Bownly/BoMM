@@ -1,10 +1,10 @@
 package enemies;
 import enemies.EnemyTemplate;
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxPoint;
+import flixel.math.FlxPoint;
 
 /**
  * ...
@@ -30,7 +30,7 @@ class Snobal extends enemies.EnemyTemplate
 		
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		velocity.x = velocity.y = 0;
 		
@@ -67,7 +67,7 @@ class Snobal extends enemies.EnemyTemplate
 			animation.play("roll");
 		}
 		
-		super.update();
+		super.update(elapsed);
 	}
 	
 	

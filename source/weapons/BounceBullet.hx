@@ -1,6 +1,6 @@
 package weapons;
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 
 /**
  * ...
@@ -28,9 +28,9 @@ class BounceBullet extends Bullet
 		
 	}
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
     {
-		super.update();
+		super.update(elapsed);
     }
 			
 	

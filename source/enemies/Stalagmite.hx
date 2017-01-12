@@ -1,8 +1,8 @@
 package enemies;
 
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
-import flixel.util.FlxPoint;
+import flixel.group.FlxGroup;
+import flixel.math.FlxPoint;
 import flixel.FlxG;
 /**
  * ...
@@ -38,7 +38,7 @@ class Stalagmite extends EnemyTemplate
 		animation.add("fall", [6]);
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (isOnScreen()) 
 		{
@@ -61,7 +61,7 @@ class Stalagmite extends EnemyTemplate
 			resolveAnimations();
 			
 		}
-			super.update();
+			super.update(elapsed);
 	}
 
 	public function resolveAnimations():Void

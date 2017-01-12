@@ -23,9 +23,9 @@ class JumpPuff extends FlxSprite
 	}
 	
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
-		super.update();
+		super.update(elapsed);
 //		FlxG.watch.add(animation.getFrameIndex, "?" + animation.name);
 		if (animation.finished)
 			this.destroy();

@@ -6,10 +6,9 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxRandom;
+import flixel.math.FlxRandom;
 
 /**
  * ...
@@ -61,7 +60,7 @@ class Beehive extends enemies.EnemyTemplate
 		animation.add("open", [1 + o]);
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (isOnScreen())
 		{
@@ -79,7 +78,7 @@ class Beehive extends enemies.EnemyTemplate
 				animation.play("open");	
 				kill();
 			}
-			super.update();
+			super.update(elapsed);
 		}
 	}
 	
@@ -92,8 +91,8 @@ class Beehive extends enemies.EnemyTemplate
 	{
 		for (i in 0...6)
 		{
-			var babbyX = FlxRandom.intRanged(Math.floor(x) - 8, Math.floor(x) + 24);
-			var babbyY = FlxRandom.intRanged(Math.floor(y - 16), Math.floor(y) + 16);
+			var babbyX = FlxG.random.int(Math.floor(x) - 8, Math.floor(x) + 24);
+			var babbyY = FlxG.random.int(Math.floor(y - 16), Math.floor(y) + 16);
 			babby = new enemies.BeeBabby(babbyX, babbyY, _player, _spawner, _drops, palette);
 			burdArray.add(babby);
 		}

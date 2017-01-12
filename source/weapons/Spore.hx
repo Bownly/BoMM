@@ -22,9 +22,9 @@ class Spore extends Bullet
 	}
 	
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
     {
         animation.play("spore");
-		super.update();
+		super.update(elapsed);
     }
 }

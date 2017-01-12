@@ -3,11 +3,11 @@ package enemies;
 import flixel.effects.FlxFlicker;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 import flixel.system.FlxSound;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxRandom;
+import flixel.math.FlxRandom;
 import weapons.Bullet;
 
 /**
@@ -53,7 +53,7 @@ class EnemyTemplate extends FlxSprite
 		_sndShoot = FlxG.sound.load(AssetPaths.enemy_shoot__wav, .07);
 	}
 	
-	override public function update():Void 
+	override public function update(elapsed:Float):Void 
 	{
 		if (!isOnScreen() && !_spawner.isOnScreen())
 		{
@@ -61,7 +61,7 @@ class EnemyTemplate extends FlxSprite
 			exists = false;
 		}
 		
-		super.update();
+		super.update(elapsed);
 		
 	}
 	
@@ -89,7 +89,7 @@ class EnemyTemplate extends FlxSprite
 	override public function kill():Void
 	{
 		
-		var dropChance = FlxRandom.intRanged(0, 265 - _player.luck * 10);
+		var dropChance = FlxG.random.int(0, 265 - _player.luck * 10);
 		//var dropChance = 1;
 		
 		/* Drop table
@@ -123,7 +123,7 @@ class EnemyTemplate extends FlxSprite
 		
 		_killed = true;
 		alive = false;
-		FlxTween.tween(this, { alpha:0}, .33, { ease:FlxEase.circOut, complete:finishKill } );
+		FlxTween.tween(this, { alpha:0}, .33, { ease:FlxEase.circOut, onComplete:finishKill } );
 	}
 	
 	private function finishKill(_):Void

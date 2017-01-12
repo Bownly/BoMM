@@ -2,7 +2,7 @@ package weapons;
 
 import flixel.FlxObject;
 import flixel.FlxSprite;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 
 /**
  * ...

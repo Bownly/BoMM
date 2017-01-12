@@ -3,10 +3,9 @@ package enemies;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.system.FlxSound;
-import flixel.util.FlxPoint;
-import flixel.util.FlxRandom;
+import flixel.math.FlxPoint;
+import flixel.math.FlxRandom;
 import weapons.Bullet;
 
 /**
@@ -75,7 +74,7 @@ class Bat extends EnemyTemplate
 	}
 	
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (isOnScreen()) 
 		{
@@ -157,7 +156,7 @@ class Bat extends EnemyTemplate
 		}
 		
 		
-		super.update();
+		super.update(elapsed);
 	}
 	
 	
@@ -198,7 +197,7 @@ class Bat extends EnemyTemplate
 				}
 				case Reg.Y:  // yellow
 				{
-					var shotDir = FlxRandom.intRanged(0, 4);
+					var shotDir = FlxG.random.int(0, 4);
 					if (shotDir == 0)
 						shotDir = FlxObject.RIGHT + FlxObject.FLOOR * 8;
 					else if (shotDir == 1)

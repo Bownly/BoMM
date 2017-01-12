@@ -7,12 +7,11 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.tile.FlxTilemap;
 import flixel.ui.FlxButton;
-import flixel.util.FlxMath;
-import flixel.util.FlxRandom;
+import flixel.math.FlxMath;
+import flixel.math.FlxRandom;
 import weapons.Bullet;
 
 /**
@@ -130,8 +129,8 @@ class HubState extends FlxState
 		
 		
 		FlxG.camera.follow(_player,1);
-		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
-		FlxG.camera.setBounds(0, 0, _levelWidth, _levelHeight);
+		FlxG.camera.style = FlxCameraFollowStyle.PLATFORMER;
+		FlxG.camera.setScrollBoundsRect(0, 0, _levelWidth, _levelHeight);
 		FlxG.worldBounds.set(0, 0, _levelWidth, _levelHeight);
 		
 		/*_hud = new HUD();
@@ -140,7 +139,7 @@ class HubState extends FlxState
 		super.create();
 	}
 
-	override public function update():Void
+	override public function update(elapsed:Float):Void
 	{
 		FlxG.collide(_grpWalls, _player);
 		FlxG.collide(_grpWalls, playerBullets, bulletTouchWall);
@@ -153,7 +152,7 @@ class HubState extends FlxState
 		
 		//_hud.updateHUD(_player.hp, _player.curWeapon.juice, Reg.pDosh, _player.curWeapon.name);	
 		
-		super.update();
+		super.update(elapsed);
 	}	
 	
 	private function playerTouchDoor(P:Player, D:Door):Void 

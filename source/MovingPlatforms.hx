@@ -58,7 +58,7 @@ class MovingPlatforms extends FlxSprite
 	}
 	
 	
-	override public function update():Void 
+	override public function update(elapsed:Float):Void 
 	{
 		
 		if (x > _ogX + 16 * _xDist)
@@ -71,6 +71,6 @@ class MovingPlatforms extends FlxSprite
 			velocity.y *= -1;
 			
 			
-		super.update();
+		super.update(elapsed);
 	}
 }

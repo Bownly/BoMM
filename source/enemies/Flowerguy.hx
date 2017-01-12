@@ -1,7 +1,6 @@
 package enemies;
 
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 
 /**
  * ...
@@ -29,7 +28,6 @@ class Flowerguy extends EnemyTemplate
 			case(Reg.Y):
 				o *= 3;
 		}
-		trace("palette for flowerguy: " + _palette);
 
 		animation.add("idle", [3 + o, 1 + o, 3 + o, 2 + o], 4, true);
 		animation.play("idle");

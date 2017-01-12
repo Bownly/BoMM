@@ -1,7 +1,7 @@
 package;
 
 import flixel.FlxSprite;
-import flixel.util.FlxPoint;
+import flixel.math.FlxPoint;
 
 /**
  * ...
@@ -26,8 +26,8 @@ class Spike extends FlxSprite
 		dmg = Damage;
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
-		super.update();
+		super.update(elapsed);
 	}
 }

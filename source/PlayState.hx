@@ -16,15 +16,14 @@ import flixel.FlxState;
 import flixel.FlxSubState;
 import flixel.group.FlxGroup;
 import flixel.group.FlxSpriteGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.text.FlxText;
 import flixel.tile.FlxTilemap;
 import flixel.ui.FlxButton;
-import flixel.util.FlxMath;
-import flixel.util.FlxPoint;
+import flixel.math.FlxMath;
+import flixel.math.FlxPoint;
 import flixel.addons.editors.ogmo.FlxOgmoLoader;
-import flixel.util.FlxRandom;
-import flixel.util.FlxRect;
+import flixel.math.FlxRandom;
+import flixel.math.FlxRect;
 import weapons.Bullet;
 import weapons.BulletAfterimage;
 import weapons.StompEquipment;
@@ -101,30 +100,18 @@ class PlayState extends FlxState
 	 */
 	override public function create():Void
 	{
-		
-		
-		
-		trace("unlockable color: " + unlockableColor);
-		trace("color array: " + Reg.colorArray);
+		// trace("unlockable color: " + unlockableColor);
+		// trace("color array: " + Reg.colorArray);
 		
 		_levelHeight = _levelWidth = 0;
 		
-		
 		_grpWalls = new FlxTypedGroup<FlxTilemap>();
-		
 		_grpLadders = new FlxTypedGroup<Ladder>();
 		_grpMovingPlatforms = new FlxTypedGroup<MovingPlatforms>();
-		
 		_grpHazards = new FlxTypedGroup<Spike>();
-
-		
 		_grpEnemies = new FlxGroup();
-		
-		
 		_bossDoor = new BossDoor();
-		
 		_grpCoins = new FlxTypedGroup<Coin>();
-		
 		playerBullets = new FlxTypedGroup<weapons.Bullet>();
 		add(_grpMovingPlatforms);
 		add(_grpHazards);
@@ -133,9 +120,7 @@ class PlayState extends FlxState
 		add(_grpCoins);
 		add(playerBullets);
 		
-		
 		_player = new Player(0, 0, playerBullets, this);
-		
 		
 		dropsGroup = new FlxTypedGroup<Drops>();
 		
@@ -178,11 +163,11 @@ class PlayState extends FlxState
 		FlxG.camera.bgColor = 0x00000000;
 		
 //		FlxG.camera.style = FlxCamera.STYLE_PLATFORMER;
-		FlxG.camera.follow(_player, FlxCamera.STYLE_TOPDOWN_TIGHT);
+		FlxG.camera.follow(_player, FlxCameraFollowStyle.TOPDOWN_TIGHT);
 		FlxG.camera.deadzone = FlxRect.get((240) * .4, (240) * .3, (240) * .4, (240) * .4);
-		FlxG.camera.setBounds(0, -_levelHeight, _levelWidth, _levelHeight*2);
+		FlxG.camera.setScrollBoundsRect(0, -_levelHeight, _levelWidth, _levelHeight*2);
 		FlxG.worldBounds.set(0, -_levelHeight, _levelWidth, _levelHeight*2);
-		FlxG.camera.setBounds(0, -_levelHeight * .5, _levelWidth, _levelHeight*2);
+		FlxG.camera.setScrollBoundsRect(0, -_levelHeight * .5, _levelWidth, _levelHeight*2);
 		FlxG.worldBounds.set(0, -_levelHeight * .5, _levelWidth, _levelHeight*2);
 		
 		_hud = new HUD(_player);
@@ -191,7 +176,7 @@ class PlayState extends FlxState
 		super.create();
 	}
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
 	{
 
 		FlxG.collide(_grpWalls, _player);
@@ -253,7 +238,7 @@ class PlayState extends FlxState
 		
 
 
-		super.update();
+		super.update(elapsed);
 	}	
 	
 	/**
@@ -292,7 +277,7 @@ class PlayState extends FlxState
 
 		 
 		// stuff for the start room
-		_newEntrance = FlxRandom.intRanged(1, 1);
+		_newEntrance = FlxG.random.int(1, 1);
 		myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_start_" + _newEntrance + ".oel");
 		mTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 		_curMap = mTileMap;
@@ -313,7 +298,7 @@ class PlayState extends FlxState
 		
 		
 		var itemRoomPos:Int;
-		itemRoomPos = FlxRandom.intRanged(1, _numRooms - 1);
+		itemRoomPos = FlxG.random.int(1, _numRooms - 1);
 	
 		
 		// stuff for the middle rooms
@@ -326,7 +311,7 @@ class PlayState extends FlxState
 				var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
 				setUpMaps(myOgmoLoader, myTileMap);
 				
-				var endId:Int = FlxRandom.intRanged(1, 1);
+				var endId:Int = FlxG.random.int(1, 1);
 				//myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_item_end_" + endId + ".oel");
 				myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_shop_end_" + endId + ".oel");
 				myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -334,7 +319,7 @@ class PlayState extends FlxState
 			}	
 			
 			var id:Int;
-			id = FlxRandom.intRanged(_numEarliestRoom, _numUniqueRooms);  // number of rooms
+			id = FlxG.random.int(_numEarliestRoom, _numUniqueRooms);  // number of rooms
 			
 			var myOgmoLoader = new FlxOgmoLoader("assets/levels/level_" + levelId + "_" + _newEntrance + "_" + id + ".oel");
 			var myTileMap = myOgmoLoader.loadTilemap(tileName, 16, 16, "walls");
@@ -609,8 +594,6 @@ class PlayState extends FlxState
 		}	
 		else if (entityName == "decoration")
 		{
-		// var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
-			
 			switch(entityData.get("name"))
 			{
 				// cave
@@ -640,7 +623,7 @@ class PlayState extends FlxState
 			
 			// put the code to determine the individual mob's color here
 			// something like a random # based on Reg.globalPallete
-			var palette = FlxRandom.intRanged(0, Reg.colorArray.length - 1);
+			var palette = FlxG.random.int(0, Reg.colorArray.length - 1);
 			
 			_grpEnemies.add(new enemies.EnemySpawner(x, y, entityData.get("name"), _player, dropsGroup, _grpEnemies, _grpSVNoClipEnemies, _grpBadBullets, Reg.colorArray[palette], _curMap));
 		}

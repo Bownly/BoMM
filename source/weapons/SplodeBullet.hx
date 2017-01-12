@@ -2,7 +2,7 @@ package weapons;
 import flixel.FlxG;
 
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 /**
  * ...
  * @author ...
@@ -21,7 +21,7 @@ class SplodeBullet extends Bullet
 		acceleration.y = -gravity;
 	}
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
     {
 		if ((Math.abs(x - ogX) > RANGE || Math.abs(y - ogY) > RANGE) || (FlxG.keys.anyJustReleased(["SPACE", "K"]))) 
 		{ 
@@ -45,7 +45,7 @@ class SplodeBullet extends Bullet
 				current_p.bulletArray.add(newBullet6);	
 				current_p.bulletArray.add(newBullet7);		
 		}
-		super.update();
+		super.update(elapsed);
 	}
 			
 	

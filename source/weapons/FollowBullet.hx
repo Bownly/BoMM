@@ -1,6 +1,6 @@
 package weapons;
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 import flixel.util.FlxAngle;
 import flixel.util.FlxPoint;
 
@@ -34,7 +34,7 @@ class FollowBullet extends Bullet
 
 	}
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
     {	
 		if (current_d == FlxObject.LEFT)
 			a -= 10;
@@ -48,7 +48,7 @@ class FollowBullet extends Bullet
 
 		current_x = (current_p.x + (current_p.width / 2));
 		current_y = (current_p.y + (current_p.height / 2));
-		super.update();
+		super.update(elapsed);
     }
 			
 		

@@ -1,8 +1,7 @@
 package enemies;
 
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
-import flixel.util.FlxPoint;
+import flixel.math.FlxPoint;
 
 /**
  * ...
@@ -52,7 +51,7 @@ class CoolSun extends EnemyTemplate
 	}
 
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (alive)
 		{
@@ -67,7 +66,7 @@ class CoolSun extends EnemyTemplate
 				x -= Math.cos(_cosTimer) * 1.5;
 			
 		}
-		super.update();
+		super.update(elapsed);
 		
 	}
 	

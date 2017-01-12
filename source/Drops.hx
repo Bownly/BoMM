@@ -28,7 +28,7 @@ class Drops extends FlxSprite
 	public function new(X:Float=0, Y:Float=0, Index:Int, ThePlayer:Player, Free:Bool) 
 	{
 		super(X, Y);
-		loadGraphic(AssetPaths.drops__png, false, 8, 8);
+		loadGraphic(AssetPaths.drops__png, true, 8, 8);
 		width = 8;
 		height = 8;
 		
@@ -37,25 +37,26 @@ class Drops extends FlxSprite
 		_player = ThePlayer;
 		id = Index;
 		
+		// animation.add("idle", [0, 1], 5, true);
 		animation.add("idle", [id, id+1], 5, true);
 		
 		price = allocatePrices();
 		
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (isOnScreen())
 		{
 			animation.play("idle");
-			super.update();
+			super.update(elapsed);
 		}
 	}
 
 	override public function kill():Void
 	{
 		alive = false;
-		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, complete:finishKill } );
+		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, onComplete:finishKill } );
 	}
 	
 	private function finishKill(_):Void

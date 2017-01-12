@@ -1,7 +1,7 @@
 package;
 
-import flixel.group.FlxTypedGroup;
-import flixel.util.FlxRandom;
+import flixel.FlxG;
+import flixel.group.FlxGroup;
 import flixel.util.FlxSave;
 import weapons.ArcWeapon;
 import weapons.BounceWeapon;
@@ -131,7 +131,8 @@ class Reg
 	public static function shuffleColors()
 	{
 		var randoor:Int;
-		randoor = FlxRandom.intRanged(1, 6);
+		randoor = FlxG.random.int(1, 6);
+
 		switch (randoor)
 		{
 			case (1):

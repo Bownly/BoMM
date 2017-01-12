@@ -4,7 +4,6 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 
 /**
  * ...
@@ -74,17 +73,13 @@ class Balun extends EnemyTemplate
 		animation.add("magenta2", [7]);
 	}
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
 	{
 		if (isOnScreen()) 
 		{
-			
-			
-			
 			// This mess is just for testing
 			if (FlxG.keys.anyJustPressed(["C"])) 
 			{
-		
 				switch(palette)
 				{
 					case Reg.G:
@@ -107,12 +102,8 @@ class Balun extends EnemyTemplate
 						palette = Reg.G;
 						colorString = "grey";
 					}
-					
 				}
-			 
 			}
-			
-				
 			
 			velocity.x = velocity.y = 0;
 			
@@ -217,7 +208,7 @@ class Balun extends EnemyTemplate
 				tail.y = this.y + 16;
 			}
 			
-			super.update();
+			super.update(elapsed);
 		}
 	}
 	

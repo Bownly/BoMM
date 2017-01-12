@@ -3,10 +3,9 @@ import enemies.EnemyTemplate;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.group.FlxGroup;
-import flixel.group.FlxTypedGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxPoint;
+import flixel.math.FlxPoint;
 
 /**
  * ...
@@ -86,7 +85,7 @@ class Snale extends enemies.EnemyTemplate
 		animation.add("open", [5 + o, 4 + o, 3 + o, 2 + o, 1 + o, 0 + o], 15, false);		
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{
 		if (alive)
 		{
@@ -130,7 +129,7 @@ class Snale extends enemies.EnemyTemplate
 			}
 			hideTimer += FlxG.elapsed;
 		}
-		super.update();
+		super.update(elapsed);
 		
 	}
 	

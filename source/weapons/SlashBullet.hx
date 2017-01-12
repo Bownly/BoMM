@@ -1,6 +1,6 @@
 package weapons;
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 /**
  * ...
  * @author ...
@@ -16,13 +16,13 @@ class SlashBullet extends Bullet
 		current_p = P;
 	}
 	
-	override public function update():Void
+	override public function update(elapsed:Float):Void
     {
 		if(x == (current_p.x - 20))
 			direction = FlxObject.CEILING + FlxObject.LEFT;
 		else	
 			direction = FlxObject.CEILING + FlxObject.RIGHT;
 			
-		super.update();
+		super.update(elapsed);
     }
 }

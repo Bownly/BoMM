@@ -27,7 +27,7 @@ class Ladder extends FlxSprite
 	override public function kill():Void
 	{
 		alive = false;
-		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, complete:finishKill } );
+		FlxTween.tween(this, { alpha:0, y:y - 16 }, .33, { ease:FlxEase.circOut, onComplete:finishKill } );
 		
 	}
 	

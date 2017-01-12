@@ -1,9 +1,10 @@
 package enemies;
+import flixel.FlxG;
 import flixel.FlxObject;
-import flixel.group.FlxTypedGroup;
+import flixel.group.FlxGroup;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxRandom;
+import flixel.math.FlxRandom;
 
 /**
  * ...
@@ -26,7 +27,7 @@ class BeeBabby extends enemies.EnemyTemplate
 		var ydistance:Float = Math.abs(_player.y - y);
 		var angle:Float = Math.atan(ydistance / xdistance);
 		
-		var _randSpeedFactor:Float = FlxRandom.floatRanged(.9, 1.1);
+		var _randSpeedFactor:Float = FlxG.random.float(.9, 1.1);
 		XSPEED = Math.floor(SPEED * Math.cos(angle) * _randSpeedFactor);
 		YSPEED = Math.floor(SPEED * Math.sin(angle) * _randSpeedFactor);
 		
@@ -74,11 +75,11 @@ class BeeBabby extends enemies.EnemyTemplate
 			velocity.y = YSPEED;
 	}
 	
-	public override function update():Void
+	public override function update(elapsed:Float):Void
 	{	
 		animation.play("flap");
 		
-		super.update();
+		super.update(elapsed);
 	}
 
 }

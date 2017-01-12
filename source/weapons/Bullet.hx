@@ -3,9 +3,9 @@ package weapons;
 import flixel.FlxSprite;
 import flixel.FlxG;
 import flixel.FlxObject;
-import flixel.util.FlxVelocity;
-import flixel.util.FlxAngle;
-import flixel.util.FlxPoint;
+// import flixel.util.FlxVelocity;
+// import flixel.util.FlxAngle;
+// import flixel.util.FlxPoint;
 
 /**
  * ...
@@ -122,7 +122,7 @@ class Bullet extends FlxSprite
 		animation.play("bullet");
 	}
 	
-    override public function update():Void
+    override public function update(elapsed:Float):Void
     {
 		
 		// If the bullet travels too far from its spawn point
@@ -131,7 +131,7 @@ class Bullet extends FlxSprite
 			kill(); 
 		} 
 	
-		super.update();
+		super.update(elapsed);
 
     }
  	

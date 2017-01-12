@@ -1,7 +1,7 @@
 package;
 
+import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.util.FlxRandom;
 
 /**
  * ...
@@ -40,17 +40,14 @@ class Decoration extends FlxSprite
 		super(X, Y);
 		
 		
-		loadGraphic("assets/images/" + SheetName + "_decorations.png", false, 16*Xsize, 16*Ysize);
+		loadGraphic("assets/images/" + SheetName + "_decorations.png", true, 16*Xsize, 16*Ysize);
 		
 		x = X;
 		y = Y;
 		id = Std.int(Index / (Xsize * Ysize));
 		
 		if (Reg.colorArray.length > 1)
-		{
-			trace("length: " + Reg.colorArray.length + ", " + Reg.colorArray);
-			_palette = FlxRandom.intRanged(1, Reg.colorArray.length - 1);
-		}
+			_palette = FlxG.random.int(1, Reg.colorArray.length - 1);
 		_palette = Reg.colorArray[_palette];
 		var color_offset:Int = 0;
 		switch (_palette)
@@ -64,7 +61,7 @@ class Decoration extends FlxSprite
 			case(Reg.Y):
 				color_offset = 3;
 		}
-		var species_offset = FlxRandom.intRanged(0, SpeciesCount -1);
+		var species_offset = FlxG.random.int(0, SpeciesCount -1);
 		
 		id = id + (4 * species_offset) + (color_offset * Frames);
 		var framesArray:Array<Int> = [];
